@@ -13,34 +13,23 @@
 
 	<div class="mobile-menu-wrapper mobile-menu-fullscreen">
             <div class="mobile-menu-container">
-                <ul id="menu-main-menu" class="menu"><li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="https://demo.kaliumtheme.com/travel/destinations/">Inicio</a></li>
-                    <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://demo.kaliumtheme.com/travel/travel-tours/">Acerca</a></li>
-                    <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="https://demo.kaliumtheme.com/travel/news/">Plan</a></li>
-                    <li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-93"><a href="https://demo.kaliumtheme.com/travel/tickets/">Contacto</a>
-                    <ul  class="sub-menu">
-                            <li id="menu-item-678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-678"><a href="https://demo.kaliumtheme.com/travel/tickets/#flights">Flights</a></li>
-                            <li id="menu-item-679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-679"><a href="https://demo.kaliumtheme.com/travel/tickets/#cruises">Cruises</a></li>
-                            <li id="menu-item-680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-680"><a href="https://demo.kaliumtheme.com/travel/tickets/#buses">Buses</a></li>
-                            <li id="menu-item-681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-681"><a href="https://demo.kaliumtheme.com/travel/tickets/#rent-a-car">Rent a Car</a></li>
-                    </ul>
+                <ul id="menu-main-menu-1" class="menu">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
+                        <a href=""><span>Inicio</span></a>
                     </li>
-                    <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="https://demo.kaliumtheme.com/travel/bookings/">Login</a></li>
-                    <li id="menu-item-673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-673"><a target="_blank" href="https://themeforest.net/item/kalium-creative-theme-for-professionals/10860525?ref=Laborator">Buy Now!</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
+                        <a href=""><span>Acerca</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
+                        <a href=""><span>Plan</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-93">
+                        <a href=""><span>Contacto</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
+                        <a href=""><span>Login</span></a>
+                    </li>
                 </ul>		
-                                    <form role="search" method="get" class="search-form" action="https://demo.kaliumtheme.com/travel/">
-                            <input type="search" class="search-field" placeholder="Search site..." value="" name="s" id="search_mobile_inp" />
-
-                            <label for="search_mobile_inp">
-                                    <i class="fa fa-search"></i>
-                            </label>
-
-                            <input type="submit" class="search-submit" value="Go" />
-                    </form>
-
-                                    <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light">
-                                            <span class="ham"></span>
-                                    </a>
-
             </div>
         </div>
 
@@ -71,7 +60,7 @@
 <ul>	<!-- SLIDE  -->
 	<li data-index="rs-12" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="2000"  data-thumb="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/C5gsPJq-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Greece" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
-		<img src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="C5gsPJq"  width="1920" height="1200" data-lazyload="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/C5gsPJq.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="C5gsPJq"  width="1920" height="1200" data-lazyload="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/C5gsPJq.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 1 -->
@@ -138,7 +127,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 7; white-space: nowrap; letter-spacing: 3px;">EXPLORING GREECE </div>
+                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?php echo replace_vocales_voculeshtml("Sé parte de los pioneros y ten un asombroso estilo de vida.");?></div>
 
 		<!-- LAYER NR. 4 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
@@ -161,8 +150,8 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 8; white-space: nowrap; letter-spacing: px;">Santorini,<br/>
-Cyclades Islands </div>
+			style="z-index: 8; white-space: nowrap;">Asombroso Estilo De Vida<br/>
+                </div>
 
 		<!-- LAYER NR. 5 -->
 		<div class="tp-caption tp-shape tp-shapewrapper " 
@@ -195,7 +184,7 @@ Cyclades Islands </div>
 			data-whitespace="nowrap"
  
 			data-type="button" 
-			data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"registro\/","delay":""}]'
 			data-responsive_offset="on" 
 			data-responsive="off"
 			data-frames='[{"delay":3850,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","ease":"Power1.easeIn"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(255,204,0);bc:transparent;"}]'
@@ -205,12 +194,12 @@ Cyclades Islands </div>
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
 
-			style="z-index: 10; white-space: nowrap; letter-spacing: px;border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">VIEW TOURS </div>
+			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
 	</li>
 	<!-- SLIDE  -->
 	<li data-index="rs-15" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/roma-1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="City Break" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
-		<img src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="roma"  width="1440" height="814" data-lazyload="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/roma-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+		<img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="roma"  width="1440" height="814" data-lazyload="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/roma-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 7 -->
@@ -277,7 +266,7 @@ Cyclades Islands </div>
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 7; white-space: nowrap; letter-spacing: 3px;">CITY BREAKS </div>
+			style="z-index: 7; white-space: nowrap; letter-spacing: 3px;">Ten un estilo de vida distinto, empieza a viajar, entrenarte y convertirte en un profesional del trading.</div>
 
 		<!-- LAYER NR. 10 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
@@ -300,8 +289,8 @@ Cyclades Islands </div>
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 8; white-space: nowrap; letter-spacing: px;">Rome Wasn't<br/>
-Built In a Day </div>
+			style="z-index: 8; white-space: nowrap;">Training Travel Trade<br/>
+                </div>
 
 		<!-- LAYER NR. 11 -->
 		<div class="tp-caption tp-shape tp-shapewrapper " 
@@ -334,7 +323,7 @@ Built In a Day </div>
 			data-whitespace="nowrap"
  
 			data-type="button" 
-			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"destinations\/","delay":""}]'
+			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"registro\/","delay":""}]'
 			data-responsive_offset="on" 
 			data-responsive="off"
 			data-frames='[{"delay":3850,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","ease":"Power1.easeIn"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(255,204,0);bc:transparent;"}]'
@@ -344,12 +333,12 @@ Built In a Day </div>
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
 
-			style="z-index: 10; white-space: nowrap; letter-spacing: px;border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">TOURS & HOTELS </div>
+			style="z-index: 10; white-space: nowrap; letter-spacing: px;border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
 	</li>
 	<!-- SLIDE  -->
 	<li data-index="rs-16" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="2000"  data-thumb="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/dubrovnik-1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Croatia" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
-		<img src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="dubrovnik"  width="1440" height="960" data-lazyload="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/dubrovnik-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="dubrovnik"  width="1440" height="960" data-lazyload="<?php echo site_url().'static/page_front/images/cidem_seminarios.jpg';?>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 13 -->
@@ -416,7 +405,7 @@ Built In a Day </div>
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 7; white-space: nowrap; letter-spacing: 3px;">DALMATIAN COAST </div>
+                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?php echo replace_vocales_voculeshtml("Primera multiplataforma peruana con servicios y productos en los rubros de viaje, desarrollo personal y comercio.");?></div>
 
 		<!-- LAYER NR. 16 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
@@ -439,8 +428,7 @@ Built In a Day </div>
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 8; white-space: nowrap; letter-spacing: px;text-align:center;">Walking Through<br/>
-Dubrovnik Walls </div>
+			style="z-index: 8; white-space: nowrap; ;text-align:center;">3T - Inicia <br/>Sé parte de una revolución <br/></div>
 
 		<!-- LAYER NR. 17 -->
 		<div class="tp-caption tp-shape tp-shapewrapper " 
@@ -473,7 +461,7 @@ Dubrovnik Walls </div>
 			data-whitespace="nowrap"
  
 			data-type="button" 
-			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"walking-through-ancient-walls-of-dubrovnik\/","delay":""}]'
+			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"registro\/","delay":""}]'
 			data-responsive_offset="on" 
 			data-responsive="off"
 			data-frames='[{"delay":3850,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","ease":"Power1.easeIn"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(255,204,0);bc:transparent;"}]'
@@ -483,7 +471,7 @@ Dubrovnik Walls </div>
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
 
-			style="z-index: 10; white-space: nowrap; letter-spacing: px;border-color:rgba(255,255,255,0.75);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">EXPLORE DUBROVNIK </div>
+			style="z-index: 10; white-space: nowrap;border-color:rgba(255,255,255,0.75);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
 	</li>
 </ul>
 <script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
