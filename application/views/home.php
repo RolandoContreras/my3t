@@ -608,7 +608,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
                                 <figure class="wpb_wrapper vc_figure">
                                         <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                            <img width="128" height="128" src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sun-umbrella-1.png" class="vc_single_image-img attachment-full" alt="" />
+                                            <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/equipo.png';?>" class="vc_single_image-img attachment-full" alt="" />
                                         </div>
                                 </figure>
                         </div>
@@ -627,7 +627,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center  retina-icon">
                                 <figure class="wpb_wrapper vc_figure">
                                         <div class="vc_single_image-wrapper vc_box_border_grey">
-                                            <img width="128" height="128" src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/departures-1.png" class="vc_single_image-img attachment-full" alt="" />
+                                            <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/calidad.png';?>" class="vc_single_image-img attachment-full" alt="" />
                                         </div>
                                 </figure>
                         </div>
@@ -647,7 +647,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
                             <figure class="wpb_wrapper vc_figure">
                                 <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                    <img width="128" height="128" src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/map-1-1.png" class="vc_single_image-img attachment-full" alt="" />
+                                    <img src="<?php echo site_url().'static/page_front/icon/moneda.png';?>" alt="" />
                                 </div>
                             </figure>
                         </div>
@@ -666,7 +666,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
                             <figure class="wpb_wrapper vc_figure">
                                 <div class="vc_single_image-wrapper vc_box_border_grey">
-                                    <img width="128" height="128" src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/cruise-1.png" class="vc_single_image-img attachment-full" alt="" />
+                                    <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/avion.png';?>" class="vc_single_image-img attachment-full" alt="" />
                                 </div>
                             </figure>
                         </div>
@@ -689,7 +689,7 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner vc_custom_1498573592424">
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
-                                <H2>My3T ES</H2>
+                                <H2>3T ES</H2>
                                 <p><?php echo replace_vocales_voculeshtml("Multiplataforma virtual que brinda distintos servicios y productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.");?></p>
                         </div>
                     </div>
