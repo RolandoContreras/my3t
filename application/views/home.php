@@ -902,9 +902,9 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner vc_custom_1498573592424">
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
-                                <H2>Discover the canals of Amsterdam!</H2>
-                                <p>From <b>April</b> to <b>October</b> is the best time to visit Europe.<br />
-                                See our hotel deals below for that time!</p>
+                                <H2>Descubre todos los beneficios que 3T trae para ti</H2>
+                                <p>De <b>Octubre</b> a <b>Diciembre</b> tendremos promociones por ser parte de 3T.<br />
+                                No pierdas esta oportunidad y únete.</p>
                         </div>
                     </div>
                 </div>
@@ -912,153 +912,10 @@ tpj(document).ready(function() {
         </div>
         <div class="vc_row-full-width vc_clearfix"></div>
     </div>
-<div class="vc-parent-row row-stretch_row vc_custom_1497021477671"><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid booking-widget vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1498573588407"><div class="wpb_wrapper"><div  class="wpb_widgetised_column wpb_content_element blog-sidebar shop-sidebar widget-area widget-area--skin-background-fill">
-		<div class="wpb_wrapper">
-			
-			<div id="bos_searchbox_widget_class-2" class="widget bos_searchbox_widget_class">
-
-<div id="flexi_searchbox" style="background-color:#fbce00;color:#ffffff;" data-ver="2.0" >
-
-    <div id="b_searchboxInc">
-        <h3 class="search-box-title-1"  style="color:#ffffff;">Find the best deals in Europe...</h3>
-         <form id="b_frm" action="//www.booking.com/searchresults.html" method="get" target="_blank" onsubmit="return sp.validation.validSearch();">
-            <div id="searchBox_error_msg" class="b_error b_external_searchbox" style="display: none;"></div>
-            <div id="b_frmInner">
-                
-                
-                <input type="hidden" name="si" value="ai,co,ci,re,di" />
-                <input type="hidden" name="utm_campaign" value="search_box" /> 
-                <input type="hidden" name="utm_medium" value="sp" /> 
-                
-                <input type="hidden" name="aid" value="382821" /><input type="hidden" name="label" value="wp-searchbox-widget-382821" /><input type="hidden" name="utm_term" value="wp-searchbox-widget-382821" /><input type="hidden" name="error_url" value="//www.booking.com/searchresults.html?aid=382821;" />             
-
-                            
-            
-
-
-                <div id="b_searchDest">
-                    <h4 id="b_destination_h4" style="color:#ffffff;">Which city?</h4>
-                    
-                    <input type="text" id="b_destination" name="ss" placeholder="e.g. city, region, district or specific hotel" title="e.g. city, region, district or specific hotel" />                    
-                </div><!-- #b_searchDest -->
-
-                <div id="searchBox_dates_error_msg" class="b_error b_external_searchbox" style="display: none ;"></div>
-
-
-                 <div id="b_searchCheckInDate" class="en_US"><h4 id="checkInDate_h4" style="color:#ffffff;">Arriving</h4><div class="b_searchDatesInner"><select name="checkin_monthday" id="b_checkin_day" onchange="checkDateOrder('b_frm', 'b_checkin_day', 'b_checkin_month', 'b_checkout_day', 'b_checkout_month');"><option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select><select name="checkin_year_month"  id="b_checkin_month"  onchange="checkDateOrder('b_frm', 'b_checkin_day', 'b_checkin_month', 'b_checkout_day', 'b_checkout_month');"><option  value='2017-10'>Oct&nbsp;2017</option>
-<option  value='2017-11'>Nov&nbsp;2017</option>
-<option  value='2017-12'>Dec&nbsp;2017</option>
-<option value='2018-1'>Jan&nbsp;2018</option>
-<option value='2018-2'>Feb&nbsp;2018</option>
-<option value='2018-3'>Mar&nbsp;2018</option>
-<option value='2018-4'>Apr&nbsp;2018</option>
-<option value='2018-5'>May&nbsp;2018</option>
-<option value='2018-6'>Jun&nbsp;2018</option>
-<option value='2018-7'>Jul&nbsp;2018</option>
-<option value='2018-8'>Aug&nbsp;2018</option>
-<option value='2018-9'>Sept&nbsp;2018</option>
-</select></div></div><div id="b_searchCheckOutDate" class="en_US"><h4 id="checkOutDate_h4" style="color:#ffffff;">Leaving</h4><div class="b_searchDatesInner"><select name="checkout_monthday" id="b_checkout_day"><option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select><select name="checkout_year_month"  id="b_checkout_month"><option  value='2017-10'>Oct&nbsp;2017</option>
-<option  value='2017-11'>Nov&nbsp;2017</option>
-<option  value='2017-12'>Dec&nbsp;2017</option>
-<option value='2018-1'>Jan&nbsp;2018</option>
-<option value='2018-2'>Feb&nbsp;2018</option>
-<option value='2018-3'>Mar&nbsp;2018</option>
-<option value='2018-4'>Apr&nbsp;2018</option>
-<option value='2018-5'>May&nbsp;2018</option>
-<option value='2018-6'>Jun&nbsp;2018</option>
-<option value='2018-7'>Jul&nbsp;2018</option>
-<option value='2018-8'>Aug&nbsp;2018</option>
-<option value='2018-9'>Sept&nbsp;2018</option>
-</select></div></div>
-                <div class="b_avail">
-                    <input type="hidden" value="on" name="do_availability_check" />
-                </div><!-- .b_submitButton_wrapper-->
-                
-                
-                                
-                <div class="b_submitButton_wrapper" style="text-align:right">
-                    <input class="b_submitButton" type="submit" value="Search" style="background-color:#4484ce;color:#FFFFFF;border-color:#4484ce;"/>
-                </div><!-- .b_submitButton_wrapper-->
-                
-                <div id="b_logo" style="text-align:right;" ><img src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/bookingcom-official-searchbox/images/booking_logotype_blue_150x25.png" alt="Booking.com"></div>                
-                <!-- #b_logo" -->                        
-                
-
-            </div><!-- #b_frmInner -->
-         </form>
-    </div><!-- #b_searchboxInc -->
-
-
-    <div id="b_calendarPopup" class="b_popup">
-        <div id="b_calendarInner" class="b_popupInner "></div>
-    </div>
-
-</div><!-- #flexi_searchbox --></div>
-		</div>
-	</div>
-</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div></div><div class="vc-parent-row row-stretch_row vc_custom_1498222083293"><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid homepage-news vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1498573584830"><div class="wpb_wrapper"><div class="section-title ">
+    
+    
+        <div class="vc-parent-row row-stretch_row vc_custom_1497021477671">
+    <div class="vc-parent-row row-stretch_row vc_custom_1498222083293"><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid homepage-news vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1498573584830"><div class="wpb_wrapper"><div class="section-title ">
 	<H2>News on travelling</H2>
 	<p>Editorials of our staff members traveling through the world, share your experience and be part of our news portal.</p>
 </div><div id="blogposts-200059dac55833a8b" class="row lab-blog-posts posts-layout-top" >
