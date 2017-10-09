@@ -23,7 +23,7 @@
 |
 */
 //$config['base_url'] = 'http://criptowin.com';
-$config['base_url'] = 'http://localhost/criptowin';
+$config['base_url'] = 'http://localhost/my3t';
 
 /*
 |--------------------------------------------------------------------------

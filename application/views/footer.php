@@ -1,96 +1,81 @@
-<footer class="main-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 social-icons">
-                                            <img src="<?php echo site_url().'static/page_front/images/logo.png';?>" alt="Logo Criptowin" width="150">
-                                                <p><?php echo replace_vocales_voculeshtml("Grupo de analistas de la reconocida firma Empire Capital Holdings;");?></p>
-						<ul>
-							<li>
-								<a href="https://www.facebook.com/CRIPTOWIN/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							</li>
-							</li>
-							<li>
-								<a href="" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-							</li>
-							<li>
-								<a href="https://www.youtube.com/channel/UCmz-4XW8Fk--7Lxx9SPuq0w" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-3 services">
-                                            <h3 style="font-size: 16px !important;">Nuestros Servicios</h3>
-						<ul>
-                                                    <li><a href="<?php echo site_url().'referred';?>"><?php echo replace_vocales_voculeshtml("Rentabilidad de Inversión");?></a></li>
-						</ul>
-						<ul>
-                                                    <li><a href="<?php echo site_url().'bets';?>">Apuestas en Vivo</a></li>
-						</ul>
-                                                <ul>
-                                                    <li><a>+200 Instrumentos</a></li>
-						</ul>
-                                                <ul>
-                                                    <li><a><?php echo replace_vocales_voculeshtml("Análisis de Mercado");?></a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 news">
-                                            <h3 style="font-size: 16px !important;"><?php echo replace_vocales_voculeshtml("Cómo soy parte de CW");?></h3>
-						<ul>
-							<li>
-								<i class="fa fa-address-card" aria-hidden="true"></i> <?php echo replace_vocales_voculeshtml("Regístrese");?>							</li>
-							<li>
-								<i class="fa fa-money" aria-hidden="true"></i> <?php echo replace_vocales_voculeshtml("Haga un Depósito");?>
-							</li>
-                                                        <li>
-								<i class="fa fa-bar-chart" aria-hidden="true"></i> Obtenga Ganancias
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-3 get-in-touch">
-                                            <h3 style="font-size: 16px !important;"><?php echo replace_vocales_voculeshtml("Manténgase en contacto")?></h3>
-						<ul>
-							<li>
-								<i class="fa fa-map-marker" aria-hidden="true"></i>384 5th Ave, New York, NY 10018, USA
-							</li>
-							<li>
-								<i class="fa fa-clock-o" aria-hidden="true"></i>Mon to Fri - 08:00 to 16:30
-							</li>
-							<li>
-								<i class="fa fa-envelope-o" aria-hidden="true"></i>info@criptowin.com
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<section class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<div class="pull-left">
-						<p>
-							Copyright © CriptoWin 2017. All rights reserved.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<a class="scroll-top" href="#"><i class="fa fa-angle-up"></i> </a>
-		<!-- Scripts -->
+<footer id="footer" role="contentinfo" class="site-footer main-footer footer-bottom-horizontal">
+    <div class="container">
+	<div class="footer-widgets footer-collapsed-mobile">
+            <a href="#" class="footer-collapse-link">
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </a>
+			
+		<div class="footer--widgets widget-area widgets--columned-layout widgets--columns-5" role="complementary">
+			
+			<div id="nav_menu-2" class="widget widget_nav_menu"><h2 class="widgettitle">Links</h2>
+<div class="menu-basic-container"><ul id="menu-basic" class="menu"><li id="menu-item-692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-692"><a href="https://demo.kaliumtheme.com/travel/destinations/">Destinations</a></li>
+<li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695"><a href="https://demo.kaliumtheme.com/travel/travel-tours/">Tours</a></li>
+<li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="https://demo.kaliumtheme.com/travel/bookings/">Bookings</a></li>
+<li id="menu-item-694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-694"><a href="https://demo.kaliumtheme.com/travel/tickets/">Tickets</a></li>
+<li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693"><a href="https://demo.kaliumtheme.com/travel/news/">News</a></li>
+</ul></div></div><div id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widgettitle">Destinations</h2>
+<div class="menu-destinations-container"><ul id="menu-destinations" class="menu"><li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142"><a href="#">Greece</a></li>
+<li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="#">Mexico</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="#">Croatia</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="#">Spain</a></li>
+<li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="#">Thailand</a></li>
+</ul></div></div><div id="nav_menu-4" class="widget widget_nav_menu"><h2 class="widgettitle">Tickets</h2>
+<div class="menu-tickets-container"><ul id="menu-tickets" class="menu"><li id="menu-item-147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"><a href="#">Flights</a></li>
+<li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="#">Bus lines</a></li>
+<li id="menu-item-148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"><a href="#">Cruises</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"><a href="#">Railways</a></li>
+<li id="menu-item-149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149"><a href="#">Ferries</a></li>
+</ul></div></div><div id="nav_menu-5" class="widget widget_nav_menu"><h2 class="widgettitle">Tourism</h2>
+<div class="menu-tourism-container"><ul id="menu-tourism" class="menu"><li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="#">Adventures</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="#">Beaches</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="#">Family</a></li>
+<li id="menu-item-154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-154"><a href="#">Skiing</a></li>
+<li id="menu-item-153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153"><a href="#">Wildlife</a></li>
+</ul></div></div><div id="nav_menu-6" class="widget widget_nav_menu"><h2 class="widgettitle">Information</h2>
+<div class="menu-information-container"><ul id="menu-information" class="menu"><li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="#">Insurance</a></li>
+<li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="#">Visas</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-160"><a href="#">Documents</a></li>
+<li id="menu-item-161" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-161"><a href="#">Privacy Policy</a></li>
+<li id="menu-item-162" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-162"><a href="#">Careers</a></li>
+</ul></div></div>			
+		</div>
+	
+	</div>
+	
+	<hr>
+	
+</div>
+		
+	<div class="footer-bottom">
+		
+		<div class="container">
 
-    <script src="<?php echo site_url().'static/page_front/js/jquery.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/bootstrap.min.js';?>"></script>
-    <script type="text/javascript" src="<?php echo site_url().'static/page_front/js/jquery.fancybox.pack.js';?>"></script>
-    <script type="text/javascript" src="<?php echo site_url().'static/page_front/js/jquery.fancybox-media.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/wow.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/jquery.countTo.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/owl.carousel.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/map-helper.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/jquery.mixitup.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/bootstrap-select.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/Chart.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/jquery.validate.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/waypoints.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/jquery.counterup.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/theme.js';?>"></script>
-    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
-    <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
+			<div class="footer-bottom-content">
+				
+								
+					<div class="footer-content-right">
+							<ul class="social-networks rounded colored"><li><a href="https://facebook.com/laboratorcreative" target="_blank" class="facebook" title="Facebook"><i class="fa fa-facebook"></i><span class="name">Facebook</span></a></li><li><a href="http://twitter.com/thelaborator" target="_blank" class="twitter" title="Twitter"><i class="fa fa-twitter"></i><span class="name">Twitter</span></a></li><li><a href="http://instagram.com/laboratorcreative/" target="_blank" class="instagram" title="Instagram"><i class="fa fa-instagram"></i><span class="name">Instagram</span></a></li><li><a href="" target="_blank" class="youtube" title="YouTube"><i class="fa fa-youtube-play"></i><span class="name">YouTube</span></a></li></ul>							
+					</div>
+					
+				
+								
+					<div class="footer-content-left">
+						
+						<div class="copyrights site-info">
+							
+							<p>© Copyright 2017. All Rights Reserved</p>
+							
+						</div>
+						
+					</div>
+				
+							</div>
+
+		</div>
+		
+	</div>
+	
+	
+</footer>
