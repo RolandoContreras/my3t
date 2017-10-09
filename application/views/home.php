@@ -58,9 +58,9 @@
 <!-- START REVOLUTION SLIDER 5.4.6 fullscreen mode -->
 	<div id="rev_slider_4_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.6">
 <ul>	<!-- SLIDE  -->
-	<li data-index="rs-12" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="2000"  data-thumb="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/C5gsPJq-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Greece" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+	<li data-index="rs-12" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="2000"  data-thumb="<?php echo site_url().'static/page_front/images/atenas.jpg';?>"  data-rotate="0"  data-saveperformance="off"  data-title="Greece" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
-                <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="C5gsPJq"  width="1920" height="1200" data-lazyload="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/C5gsPJq.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="Atenas" title="C5gsPJq"  width="1920" height="1200" data-lazyload="<?php echo site_url().'static/page_front/images/atenas.jpg';?>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 1 -->
@@ -197,9 +197,9 @@
 			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
 	</li>
 	<!-- SLIDE  -->
-	<li data-index="rs-15" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/roma-1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="City Break" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+	<li data-index="rs-15" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo site_url().'static/page_front/images/roma-1.jpg';?>"  data-rotate="0"  data-saveperformance="off"  data-title="City Break" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
-		<img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="roma"  width="1440" height="814" data-lazyload="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/roma-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+                <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="roma"  width="1440" height="814" data-lazyload="<?php echo site_url().'static/page_front/images/roma-1.jpg';?>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 7 -->
@@ -333,10 +333,10 @@
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
 
-			style="z-index: 10; white-space: nowrap; letter-spacing: px;border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
+			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
 	</li>
 	<!-- SLIDE  -->
-	<li data-index="rs-16" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="2000"  data-thumb="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/dubrovnik-1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Croatia" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+        <li data-index="rs-16" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="2000"  data-thumb="<?php echo site_url().'static/page_front/images/cidem_seminarios.jpg';?>"  data-rotate="0"  data-saveperformance="off"  data-title="Croatia" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 		<!-- MAIN IMAGE -->
                 <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="dubrovnik"  width="1440" height="960" data-lazyload="<?php echo site_url().'static/page_front/images/cidem_seminarios.jpg';?>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
@@ -698,318 +698,190 @@ tpj(document).ready(function() {
         </div>
         <div class="vc_row-full-width vc_clearfix"></div>
     </div>
-    
-    <div class="vc-parent-row row-stretch_row_content_no_spaces"><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid feature-block vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill"><div class="vc_column-inner vc_custom_1497016783071"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element  text-block post-formatting " >
-            <div class="wpb_wrapper">
-                <h2>Navagio, Greece</h2>
-                        <h2>Chosen as the beach of the year.</h2>
-                        <p>Enclosed by cliffs and facing out over azure waters, Navagio Beach in Greece is so picturesque it even comes with its own shipwreck.</p>
-                        <p>The strip of beach is accessed only by boat. Regular tours to the beach depart from Porto Vromi to the south, and from Agios Nikolaos and Cape Skinari to the north-east. Boats also arrive from the harbour of <strong>Zakynthos</strong> city.</p>
+    <!--START VISION Y MISION--> 
+    <div class="vc-parent-row row-stretch_row_content_no_spaces">
+        <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid feature-block vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+            <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill">
+                <div class="vc_column-inner vc_custom_1497016783071">
+                    <div class="wpb_wrapper">
+                        <div class="wpb_text_column wpb_content_element  text-block post-formatting " >
+                            <div class="wpb_wrapper">
+                                <h2><?php echo replace_vocales_voculeshtml("Propósito 3T")?></h2><br/>
+                                <h3><?php echo replace_vocales_voculeshtml("Visión");?></h3>
+                                        <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser la primera compañía de productos y servicios que trabaja bajo una plataforma virtual dónde reemplacemos la forma cotidiana de compra y venta presencial por una virtual, que en consecuencia, logremos un upgrade integral en la vida de las personas, a través de los servicios de nuestra multiplataforma.")?></p>
+                                <h3><?php echo replace_vocales_voculeshtml("Misión");?></h3>
+                                <p><?php echo replace_vocales_voculeshtml("Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del mundo virtual.");?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
-	<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497270039282">
-		
-		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1440" height="960" src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily.jpg 1440w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily-300x200.jpg 300w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily-768x512.jpg 768w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily-1024x683.jpg 1024w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily-1116x744.jpg 1116w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily-806x537.jpg 806w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily-558x372.jpg 558w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sicily-655x437.jpg 655w" sizes="(max-width: 1440px) 100vw, 1440px" /></div>
-		</figure>
-	</div>
-</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div></div><div class="vc-parent-row row-stretch_row_content_no_spaces"><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid feature-block vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
-	<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497271089392">
-		
-		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1440" height="960" src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris.jpg 1440w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-300x200.jpg 300w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-768x512.jpg 768w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1024x683.jpg 1024w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1116x744.jpg 1116w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-806x537.jpg 806w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-558x372.jpg 558w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-655x437.jpg 655w" sizes="(max-width: 1440px) 100vw, 1440px" /></div>
-		</figure>
-	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill"><div class="vc_column-inner vc_custom_1497016783071"><div class="wpb_wrapper">
-	<div class="wpb_text_column wpb_content_element  text-block post-formatting " >
-		<div class="wpb_wrapper">
-			<h2>Magnificent Paris</h2>
-<h2>Our all time favorite city.</h2>
-<p>Paris can be seen as the most interesting city of Europe and probably even as one of the most amazing city’s worldwide. People from all over the world travel to Paris to discover and experience this fairy-like city.</p>
-<p>Paris is the city of love, inspiration, art and fashion. The night scene, the Eiffel tower and the warm atmosphere will make you feel directly at home. Paris has a lot of interesting architecture and museums to offer, and is also a Walhalla for shopaholics.</p>
-
-		</div>
-	</div>
-</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div></div><div class="vc-parent-row row-default"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="section-title  homepage-destinations-title vc_custom_1497274905763">
-	<H2>Popular Destinations</H2>
-	<p>Places which our agency focuses more on, these are our main destinations.</p>
-</div><div id="tours-1-container" class="lab-portfolio-items portfolio-container-and-title  homepage-destinations portfolio-loop-layout-type-2">
-	
-	<div class="portfolio-title-holder">
-	
-	</div>	
-	<div class="row">
-		
-				
-		<div id="tours-1" class="portfolio-holder portfolio-type-2 sort-by-js is-masonry-layout">
-			<div class="portfolio-item portfolio-item-type-3 has-padding w3 post-435 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-beaches" data-portfolio-item-id="435" data-terms="beaches">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/magical-hvar-island/" class="item-link">
-					    		Magical Hvar Island					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/beaches/" data-term="beaches">
-			Beaches		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/magical-hvar-island/" class="item-link">
-					<style>.img-456 {
-background-color: #484848;
-
-}</style>	<span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/hvar-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="portfolio-item portfolio-item-type-2 has-padding w3 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/mountainous-bolzano/" class="item-link">
-					    		Mountainous Bolzano					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/nature/" data-term="nature">
-			Nature		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/mountainous-bolzano/" class="item-link">
-					<style>.img-454 {
-background-color: #304830;
-
-}</style>	<span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/bolzano-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="portfolio-item portfolio-item-type-5 has-padding w3 post-443 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="443" data-terms="nature">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/aix-en-provence/" class="item-link">
-					    		Aix-en-Provence					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/nature/" data-term="nature">
-			Nature		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/aix-en-provence/" class="item-link">
-					<style>.img-453 {
-background-color: #a86090;
-
-}</style>	<span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/aixenprovence-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="portfolio-item portfolio-item-type-1 has-padding w3 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/island-of-malta/" class="item-link">
-					    		Island of Malta					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/nature/" data-term="nature">
-			Nature		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/island-of-malta/" class="item-link">
-					<style>.img-459 {
-background-color: #004878;
-
-}</style>	<span class="image-placeholder img-459" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/malta1-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="portfolio-item portfolio-item-type-4 has-padding w3 post-86 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-city-break portfolio_category-history" data-portfolio-item-id="86" data-terms="city-break history">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/prague/" class="item-link">
-					    		Bridges of Prague					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/city-break/" data-term="city-break">
-			City Break		</a>, <a href="https://demo.kaliumtheme.com/travel/tours/history/" data-term="history">
-			History		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/prague/" class="item-link">
-					<style>.img-405 {
-background-color: #f0d8f0;
-
-}</style>	<span class="image-placeholder img-405" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/praha-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="portfolio-item portfolio-item-type-1 has-padding w3 post-441 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-beaches" data-portfolio-item-id="441" data-terms="beaches">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/san-sebastian/" class="item-link">
-					    		San Sebastian					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/beaches/" data-term="beaches">
-			Beaches		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/san-sebastian/" class="item-link">
-					<style>.img-450 {
-background-color: #f0d8c0;
-
-}</style>	<span class="image-placeholder img-450" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/sansebastian-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="portfolio-item portfolio-item-type-2 has-padding w3 post-427 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-history" data-portfolio-item-id="427" data-terms="history">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/berlin-the-divided-city/" class="item-link">
-					    		Berlin the divided city					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/history/" data-term="history">
-			History		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/berlin-the-divided-city/" class="item-link">
-					<style>.img-461 {
-background-color: #306090;
-
-}</style>	<span class="image-placeholder img-461" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/berlin-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-<div class="portfolio-item portfolio-item-type-2 has-padding w3 post-82 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-history" data-portfolio-item-id="82" data-terms="history">
-	
-	
-		
-	
-	<div class="item-box-container">
-		<div class="item-box wow fadeInLab">
-	    	<div class="thumb">
-		    		    		<div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-	
-		    			
-		    		<div class="info">
-			    		<h3>
-				    		<a href="https://demo.kaliumtheme.com/travel/tours/istanbul/" class="item-link">
-					    		Istanbul					    	</a>
-				    	</h3>
-			    		<p class="terms"><a href="https://demo.kaliumtheme.com/travel/tours/history/" data-term="history">
-			History		</a></p>			    	</div>
-			    </div>
-			    	
-								<a href="https://demo.kaliumtheme.com/travel/tours/istanbul/" class="item-link">
-					<style>.img-409 {
-background-color: #a8c0a8;
-
-}</style>	<span class="image-placeholder img-409" style="padding-bottom: 83.20610687%">
-	<img width="655" height="545" class="lazyload" alt="" data-src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/istanbull-655x545.jpg" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-					</a>
-							</div>
-		</div>
-	</div>
-	
-	
-</div>
-		</div>
+            <div class="wpb_column vc_column_container vc_col-sm-6">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497270039282">
+                            <figure class="wpb_wrapper vc_figure">
+                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                        <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/empresa.jpeg';?>" class="vc_single_image-img attachment-full" alt="empresa" srcset="<?php echo site_url().'static/page_front/images/empresa.jpeg';?> 1440w, <?php echo site_url().'static/page_front/images/empresa.jpeg';?> 300w, <?php echo site_url().'static/page_front/images/empresa.jpeg';?> 768w, <?php echo site_url().'static/page_front/images/empresa.jpeg';?> 1024w, <?php echo site_url().'static/page_front/images/empresa.jpeg';?> 1116w, <?php echo site_url().'static/page_front/images/empresa.jpeg';?> 806w, <?php echo site_url().'static/page_front/images/empresa.jpeg';?> 558w, <?php echo site_url().'static/page_front/images/empresa.jpeg';?> 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
+                                    </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+    </div>
+    <div class="vc-parent-row row-stretch_row_content_no_spaces">
+        <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid feature-block vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+            <div class="wpb_column vc_column_container vc_col-sm-6">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497271089392">
+                            <figure class="wpb_wrapper vc_figure">
+                                <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                    <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/paris.jpg';?>" class="vc_single_image-img attachment-full" alt="paris" srcset="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris.jpg 1440w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-300x200.jpg 300w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-768x512.jpg 768w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1024x683.jpg 1024w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1116x744.jpg 1116w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-806x537.jpg 806w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-558x372.jpg 558w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-655x437.jpg 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill">
+                <div class="vc_column-inner vc_custom_1497016783071">
+                    <div class="wpb_wrapper">
+                        <div class="wpb_text_column wpb_content_element  text-block post-formatting " >
+                            <div class="wpb_wrapper">
+                                <h2>TRAINING - TRAVEL - TRADE</h2>
+                                    <h3>Los 3 rubros del momento</h3><br/>
+                                    <h4>Viajes</h4>
+                                    <p><?php echo replace_vocales_voculeshtml("Te damos la oportunidad de no solo viajar con nosotros sino también de adquirir una franquicia con el respaldo de 3T y Magic Vacation, empresa con más de 15 años en el mercado de viajes.");?></p>
+                                    <h4>Entramiento</h4>
+                                    <p><?php echo replace_vocales_voculeshtml("Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de Frank García coach internacional con más de 15 años en el rubro con resultado únicos; levantando más de 15 millonarios en su carrera.");?></p>
+                                    <h4>Forex</h4>
+                                    <p><?php echo replace_vocales_voculeshtml("Aprenderás como manejar y hacer operaciones en el mercado secundario en Forex al lado de expertos trader que trabajan con nosotros, lo cual te dará nuevas herramientas para tu crecimiento financiero.");?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix"></div>
+    </div>
+    <!--END VISION AND MISION--> 
+    <!--START PAQUETES-->
+    <div class="vc-parent-row row-default">
+        <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-15">
+                <div class="vc_column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="section-title  homepage-destinations-title vc_custom_1497274905763">
+                                <H2>Paquetes 3T</H2>
+                                <p><?php echo replace_vocales_voculeshtml("Sé parte de la revolución, y no te quedes fuera.")?></p>
+                        </div>
+                        <div id="tours-1-container" class="lab-portfolio-items portfolio-container-and-title  homepage-destinations portfolio-loop-layout-type-2">
+                            <!--START PAQUETE BASIC-->
+                            <div class="portfolio-title-holder"></div>	
+                                <div class="row">
+                                    <div id="tours-1" class="portfolio-holder portfolio-type-2 sort-by-js is-masonry-layout">
+                                        <div class="portfolio-item portfolio-item-type-3 has-padding w3 post-435 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-beaches" data-portfolio-item-id="435" data-terms="beaches">
+                                            <div class="item-box-container">
+                                                <div class="item-box wow fadeInLab">
+                                                    <div class="thumb">
+                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
+                                                            <div class="info">
+                                                                <h3>
+                                                                    <a href="<?php echo site_url().'paquete/basic'?>" class="item-link">BASIC</a>
+                                                                </h3>
+                                                                <p class="terms">
+                                                                    <a href="<?php echo site_url().'paquete/basic'?>" data-term="basic">$125</a>
+                                                                </p>	    	
+                                                            </div>
+                                                        </div>
+								<a href="<?php echo site_url().'paquete/basic'?>" class="item-link">
+                                                                <style>.img-456 {background-color: #484848;}</style>	
+                                                                    <span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
+                                                                        <img width="655" height="545" class="lazyload" alt="paquete basic" data-src="<?php echo site_url().'static/page_front/images/plan/basic.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
+                                                                    </span>
+                                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--START PAQUETE EXECUTIVE-->
+                                        <div class="portfolio-item portfolio-item-type-12 has-padding w3 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
+                                            <div class="item-box-container">
+                                                <div class="item-box wow fadeInLab">
+                                                    <div class="thumb">
+                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
+                                                            <div class="info">
+                                                                <h3>
+                                                                    <a href="<?php echo site_url().'paquete/executive'?>" class="item-link">EXECUTIVE</a>
+                                                                </h3>
+                                                                    <p class="terms">
+                                                                        <a href="<?php echo site_url().'paquete/executive'?>" data-term="nature">$250</a>
+                                                                    </p>			    	
+                                                            </div>
+                                                        </div>
+								<a href="<?php echo site_url().'paquete/executive'?>" class="item-link">
+                                                                <style>.img-454 {background-color: #304830;}</style>	
+                                                                <span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
+                                                                        <img width="655" height="545" class="lazyload" alt="paquete executive" data-src="<?php echo site_url().'static/page_front/images/plan/executive.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
+                                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--START PAQUETE BUSINESS-->
+                                        <div class="portfolio-item portfolio-item-type-5 has-padding w3 post-443 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="443" data-terms="nature">
+                                            <div class="item-box-container">
+                                                <div class="item-box wow fadeInLab">
+                                                    <div class="thumb">
+                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
+                                                            <div class="info">
+                                                                <h3>
+                                                                    <a href="<?php echo site_url().'paquete/business'?>" class="item-link">BUSINESS</a>
+                                                                </h3>
+                                                                    <p class="terms">
+                                                                        <a href="<?php echo site_url().'paquete/business'?>" data-term="nature">$1000</a>
+                                                                    </p>			    	
+                                                            </div>
+                                                        </div>
+								<a href="<?php echo site_url().'paquete/business'?>" class="item-link">
+                                                                <style>.img-453 {background-color: #a86090;}</style>	
+                                                                <span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
+                                                                    <img width="655" height="545" class="lazyload" alt="paquete business" data-src="<?php echo site_url().'static/page_front/images/plan/business.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
+                                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div
+                                        <!--START PAQUETE MASTER-->
+                                        <div class="portfolio-item portfolio-item-type-1 has-padding w3 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
+                                            <div class="item-box-container">
+                                                <div class="item-box wow fadeInLab">
+                                                    <div class="thumb">
+                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
+                                                            <div class="info">
+                                                                <h3>
+                                                                    <a href="<?php echo site_url().'paquete/master'?>" class="item-link">MASTER</a>
+                                                                </h3>
+                                                                <p class="terms">
+                                                                    <a href="<?php echo site_url().'paquete/master'?>" data-term="master">$3000</a>
+                                                                </p>			    	
+                                                            </div>
+                                                        </div>
+                                                            <a href="<?php echo site_url().'paquete/master'?>" class="item-link">
+                                                                <style>.img-459 {background-color: #004878;}</style>	
+                                                                <span class="image-placeholder img-459" style="padding-bottom: 83.20610687%">
+                                                                    <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/master.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
+                                                            </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 		
 			<script type="text/javascript">
 	var portfolioContainers = portfolioContainers || [];
