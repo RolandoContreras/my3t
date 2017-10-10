@@ -10,28 +10,28 @@
 <!--END HEAD-->
 
 <body class="home page-template-default page page-id-21 wpb-js-composer js-comp-ver-5.3 vc_responsive header-absolute">
-
 	<div class="mobile-menu-wrapper mobile-menu-fullscreen">
-            <div class="mobile-menu-container">
-                <ul id="menu-main-menu-1" class="menu">
+    	<div class="mobile-menu-container">
+		<ul id="menu-main-menu-1" class="menu">
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href=""><span>Inicio</span></a>
+                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
                         <a href=""><span>Acerca</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href=""><span>Plan</span></a>
+                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-93">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
                         <a href=""><span>Contacto</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
                         <a href=""><span>Login</span></a>
                     </li>
-                </ul>		
-            </div>
-        </div>
+                </ul>	
+            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
+	</div>
+    </div>
 
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">

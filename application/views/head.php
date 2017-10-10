@@ -24,7 +24,7 @@
         </style>
         
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
-<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.6' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='<?php echo site_url().'static/page_front/css/settings.css?ver=5.4.6'?>' type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 #rs-demo-id {}
 </style>

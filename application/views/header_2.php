@@ -8,7 +8,7 @@
                                 </a>
                             </div>
 			<div class="menu-column">
-                            <div class="menu-items-blocks standard-menu-container menu-skin-light reveal-from-top">
+                            <div class="menu-items-blocks standard-menu-container menu-skin-dark reveal-from-top">
                                 <?php $this->load->view("nav");?>
                                 <a class="menu-bar menu-skin-dark menu-bar-hidden-desktop" href="#">
                                     <span class="ham"></span>
