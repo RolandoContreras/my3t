@@ -1001,27 +1001,25 @@ tpj(document).ready(function() {
                                                 </div>
 					</div>
                                     </div>
-                                    
-                                    
                                     <div class="clear"></div>	
-</div>
-	
-	
-<div class="more-link ">
-	<div class="show-more">
-		<div class="reveal-button">
-			<a href="#" target="" class="btn btn-white">
-				<?php echo replace_vocales_voculeshtml("Ver Más");?>
-                        </a>
-		</div>
-	</div>
-</div>
-
-</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div></div>
-</div>
-<style>.homepage-city-break {
-    background-attachment: fixed;
-}</style>
+                            </div>
+                            <div class="more-link ">
+                                    <div class="show-more">
+                                            <div class="reveal-button">
+                                                    <a href="#" target="" class="btn btn-white">
+                                                            <?php echo replace_vocales_voculeshtml("Ver Más");?>
+                                                    </a>
+                                            </div>
+                                    </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix"></div>
+            </div>
+        </div>
+<style>.homepage-city-break {background-attachment: fixed;}</style>
 	</div>	
 <!--START FOOTER-->
     <?php $this->load->view("footer");?>
@@ -1044,10 +1042,10 @@ tpj(document).ready(function() {
 var objectL10n = {"destinationErrorMsg":"Sorry, we need at least part of the name to start searching.","tooManyDays":"Your check-out date is more than 30 nights after your check-in date. Bookings can only be made for a maximum period of 30 nights. Please enter alternative dates and try again.","dateInThePast":"Your check-in date is in the past. Please check your dates and try again.","cObeforeCI":"Please check your dates, the check-out date appears to be earlier than the check-in date.","calendar_nextMonth":"Next month","calendar_prevMonth":"Prev month","calendar_closeCalendar":"Close calendar","january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December","mo":"Mo","tu":"Tu","we":"We","th":"Th","fr":"Fr","sa":"Sa","su":"Su","updating":"Updating...","close":"Close","placeholder":"e.g. city, region, district or specific hotel","aid":"382821","dest_type":"select","calendar":"0","month_format":"short","flexible_dates":"0","logodim":"blue_150x25","logopos":"left","buttonpos":"right","bgcolor":"#FEBA02","textcolor":"#003580","submit_bgcolor":"#0896FF","submit_bordercolor":"#0896FF","submit_textcolor":"#FFFFFF","aid_starts_with_four":"affiliate ID is different from partner ID: should start with a 1, 3, 8 or 9. Please change it.","images_js_path":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/bookingcom-official-searchbox\/images"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/bookingcom-official-searchbox/js/bos_date.js?ver=1.0'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/themes/kalium/assets/js/main.min.js?ver=2.1.3'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
