@@ -44,10 +44,10 @@ var ajaxurl = ajaxurl || 'https://demo.kaliumtheme.com/travel/wp-admin/admin-aja
 <link rel="canonical" href="<?php echo site_url();?>"/>
 <link rel='shortlink' href='<?php echo site_url();?>'/>
 	
-<link rel="shortcut icon" href="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/favicon.png">
-<link rel="apple-touch-icon-precomposed" href="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/apple-touch-icon.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/apple-touch-icon.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/apple-touch-icon.png">
+<link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
+<link rel="apple-touch-icon-precomposed" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
 <meta name="theme-color" content="#4484ce">
 <script>var mobile_menu_breakpoint = 769;</script><style>@media screen and (min-width:770px) { .mobile-menu-wrapper,.mobile-menu-overlay,.standard-menu-container .menu-bar-hidden-desktop {
 display: none;

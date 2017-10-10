@@ -3,11 +3,10 @@
                         <div class="logo-and-menu-container">
                             <div itemscope itemtype="http://schema.org/Organization" class="logo-column">
 				<style>.header-logo.logo-image {
-                                    width: 150px;
-                                     height: 24.069319640565px;
+                                    width: 90px;
                                     }</style>
-                                <a itemprop="url" href="https://demo.kaliumtheme.com/travel" class="header-logo logo-image">
-                                    <img itemprop="logo" src="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/logotravel-white.png" width="779" height="125" class="main-logo" alt="kalium-travel" />
+                                <a itemprop="url" href="<?php echo site_url();?>" class="header-logo logo-image">
+                                    <img itemprop="logo" src="<?php echo site_url().'static/page_front/images/logo/logo_small.png'?>" height="125" class="main-logo" alt="kalium-travel" />
                                 </a>
                             </div>
                                     <div class="menu-column">
