@@ -24,7 +24,7 @@ $today = date("Y-m-d");
                         <div class="panel-body">
                             <div role="alert" class="alert alert-info">
                                 <strong>Nota:</strong><br>
-                            <?php echo replace_vocales_voculeshtml("El monto mínimo para solicitar el pago es de $10.");?><br><?php echo replace_vocales_voculeshtml("Los pedidos de cobro se efectúan de lunes a sábado.");?><br><?php echo replace_vocales_voculeshtml("Los pagos por rentabilidad efectuarán después de 07 días de la fecha de activación.");?>
+                            <?php echo replace_vocales_voculeshtml("Los pedidos de cobro se efectúan de lunes a sábado.");?><br>
                             </div><br/>
                             <div class="form-inline" >
                                 <p class="lead">

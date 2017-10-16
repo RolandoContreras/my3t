@@ -88,7 +88,7 @@ display: none;
             }
         }
 ?>
-
-
-
+                    <script type="text/javascript">
+                    var site = '<?php echo site_url();?>';
+                </script>
 </head>

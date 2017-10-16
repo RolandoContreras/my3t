@@ -218,7 +218,7 @@ class Register extends CI_Controller {
 
                 $data = array(
                     'parents_id' => $parent_id,
-                    'franchise_id' => 7,
+                    'franchise_id' => 6,
                     'username' => $usuario,
                     'email' => $email,
                     'position' => $position,
