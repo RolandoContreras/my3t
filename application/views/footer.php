@@ -15,7 +15,7 @@
                                     <li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695"><a href="#">Acerca</a></li>
                                     <li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="<?php echo site_url().'plan';?>">Plan</a></li>
                                     <li id="menu-item-694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-694"><a href="<?php echo site_url().'contact';?>">Contacto</a></li>
-                                    <li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693"><a href="#">Login</a></li>
+                                    <li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693"><a href="<?php echo site_url().'login';?>">Login</a></li>
                                 </ul>
                             </div>
                         </div>
