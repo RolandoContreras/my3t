@@ -89,19 +89,19 @@
                                                                         <div class="col-sm-12">
                                                                             <div class="form-group labeled-input-row">
                                                                                 <label for="el_59e451473f27d_name">Usuario:</label>
-                                                                                <input name="name" id="el_59e451473f27d_name" type="text" placeholder="" data-label="Name">
+                                                                                <input name="username" id="username" type="text" placeholder="Ingrese Usuario">
                                                                             </div>
                                                                         </div>
                                                                             <div class="col-sm-12">
                                                                                 <div class="form-group labeled-input-row">
                                                                                     <label for="el_59e451473f27d_subject"><?php echo replace_vocales_voculeshtml("Contraseña:");?></label>
-                                                                                    <input name="subject" id="el_59e451473f27d_subject" type="text" placeholder="" data-label="Destination">
+                                                                                    <input name="password" id="password" type="password" placeholder="<?php echo replace_vocales_voculeshtml("Ingrese Contraseña");?>">
                                                                                 </div>
                                                                             </div>
                                                                     </div> <!-- row -->
-                                                                    <button type="submit" name="send" class="button">
+                                                                    <button onclick="send_login();" name="send" class="button">
                                                                         <span class="pre-submit"><?php echo replace_vocales_voculeshtml("Iniciar de Sesión");?></span>
-                                                                            <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
+                                                                            <span class="success-msg"><?php echo replace_vocales_voculeshtml("Iniciar de Sesión");?></span>
                                                                             <span class="loading-bar">
                                                                                     <span></span>
                                                                             </span>
@@ -130,6 +130,13 @@
         </div>
     </div>
     <div class="vc_row-full-width vc_clearfix"></div>
+        <script src="<?php echo site_url().'static/page_front/js/login.js';?>"></script>
+        <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
+        <script src="<?php echo site_url().'static/page_front/js/jquery.min.js';?>"></script>
+        <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
+        <div id="spinner"></div>
+        
         
 </div>
 </div>
@@ -141,246 +148,17 @@
 	    <!--START FOOTER-->
             <?php $this->load->view("footer");?>
             <!--END FOOTER-->
-<link rel='stylesheet' id='vc_tta_style-css'  href='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/js_composer/assets/css/js_composer_tta.min.css?ver=5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='vc_material-css'  href='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/js_composer/assets/css/lib/vc-material/vc_material.min.css?ver=5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='nf-display-css'  href='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/ninja-forms/assets/css/display-structure.css?ver=4.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='pikaday-responsive-css'  href='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/ninja-forms/assets/css/pikaday-package.css?ver=4.8.2' type='text/css' media='all' />
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/bookingcom-official-searchbox/js/bos_main.js?ver=1.2'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var objectL10n = {"destinationErrorMsg":"Sorry, we need at least part of the name to start searching.","tooManyDays":"Your check-out date is more than 30 nights after your check-in date. Bookings can only be made for a maximum period of 30 nights. Please enter alternative dates and try again.","dateInThePast":"Your check-in date is in the past. Please check your dates and try again.","cObeforeCI":"Please check your dates, the check-out date appears to be earlier than the check-in date.","calendar_nextMonth":"Next month","calendar_prevMonth":"Prev month","calendar_closeCalendar":"Close calendar","january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December","mo":"Mo","tu":"Tu","we":"We","th":"Th","fr":"Fr","sa":"Sa","su":"Su","updating":"Updating...","close":"Close","placeholder":"e.g. city, region, district or specific hotel","aid":"382821","dest_type":"select","calendar":"0","month_format":"short","flexible_dates":"0","logodim":"blue_150x25","logopos":"left","buttonpos":"right","bgcolor":"#FEBA02","textcolor":"#003580","submit_bgcolor":"#0896FF","submit_bordercolor":"#0896FF","submit_textcolor":"#FFFFFF","aid_starts_with_four":"affiliate ID is different from partner ID: should start with a 1, 3, 8 or 9. Please change it.","images_js_path":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/bookingcom-official-searchbox\/images"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/bookingcom-official-searchbox/js/bos_date.js?ver=1.0'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/js_composer/assets/lib/vc_accordion/vc-accordion.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/js_composer/assets/lib/vc-tta-autoplay/vc-tta-autoplay.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/js_composer/assets/lib/vc_tabs/vc-tabs.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/ninja-forms/assets/js/min/front-end--datepicker.min.js?ver=3.2.2'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-includes/js/backbone.min.js?ver=1.2.3'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/ninja-forms/assets/js/min/front-end-deps.js?ver=3.2.2'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of"};
-var nfFrontEnd = {"ajaxNonce":"fa93b7594b","adminAjax":"https:\/\/demo.kaliumtheme.com\/travel\/wp-admin\/admin-ajax.php","requireBaseUrl":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":""};
-var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of"};
-var nfFrontEnd = {"ajaxNonce":"fa93b7594b","adminAjax":"https:\/\/demo.kaliumtheme.com\/travel\/wp-admin\/admin-ajax.php","requireBaseUrl":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":""};
-var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of"};
-var nfFrontEnd = {"ajaxNonce":"fa93b7594b","adminAjax":"https:\/\/demo.kaliumtheme.com\/travel\/wp-admin\/admin-ajax.php","requireBaseUrl":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":""};
-var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of"};
-var nfFrontEnd = {"ajaxNonce":"fa93b7594b","adminAjax":"https:\/\/demo.kaliumtheme.com\/travel\/wp-admin\/admin-ajax.php","requireBaseUrl":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/ninja-forms/assets/js/min/front-end.js?ver=3.2.2'></script>
-<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/themes/kalium/assets/js/main.min.js?ver=2.1.3'></script>
-<script id="tmpl-nf-layout" type="text/template">
-	<span id="nf-form-title-{{{ data.id }}}" class="nf-form-title">
-		{{{ ( 1 == data.settings.show_title ) ? '<h3>' + data.settings.title + '</h3>' : '' }}}
-	</span>
-	<div class="nf-form-wrap ninja-forms-form-wrap">
-		<div class="nf-response-msg"></div>
-		<div class="nf-debug-msg"></div>
-		<div class="nf-before-form"></div>
-		<div class="nf-form-layout"></div>
-		<div class="nf-after-form"></div>
-	</div>
-</script>
-
-<script id="tmpl-nf-empty" type="text/template">
-
-</script>
-<script id="tmpl-nf-before-form" type="text/template">
-	{{{ data.beforeForm }}}
-</script><script id="tmpl-nf-after-form" type="text/template">
-	{{{ data.afterForm }}}
-</script><script id="tmpl-nf-before-fields" type="text/template">
-    <div class="nf-form-fields-required">{{{ data.renderFieldsMarkedRequired() }}}</div>
-    {{{ data.beforeFields }}}
-</script><script id="tmpl-nf-after-fields" type="text/template">
-    {{{ data.afterFields }}}
-    <div id="nf-form-errors-{{{ data.id }}}" class="nf-form-errors" role="alert"></div>
-    <div class="nf-form-hp"></div>
-</script>
-<script id="tmpl-nf-before-field" type="text/template">
-    {{{ data.beforeField }}}
-</script><script id="tmpl-nf-after-field" type="text/template">
-    {{{ data.afterField }}}
-</script><script id="tmpl-nf-form-layout" type="text/template">
-	<div>
-		<div class="nf-before-form-content"></div>
-		<div class="nf-form-content {{{ data.element_class }}}"></div>
-		<div class="nf-after-form-content"></div>
-	</div>
-</script><script id="tmpl-nf-form-hp" type="text/template">
-	<label for="nf-field-hp-{{{ data.id }}}" aria-hidden="true">
-		{{{ nfi18n.formHoneypot }}}
-		<input id="nf-field-hp-{{{ data.id }}}" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value=""/>
-	</label>
-</script>
-<script id="tmpl-nf-field-layout" type="text/template">
-    <div id="nf-field-{{{ data.id }}}-container" class="nf-field-container {{{ data.type }}}-container {{{ data.renderContainerClass() }}}">
-        <div class="nf-before-field"></div>
-        <div class="nf-field"></div>
-        <div class="nf-after-field"></div>
-    </div>
-</script>
-<script id="tmpl-nf-field-before" type="text/template">
-    {{{ data.beforeField }}}
-</script><script id="tmpl-nf-field-after" type="text/template">
-    <#
-    /*
-     * Render our input limit section if that setting exists.
-     */
-    #>
-    <div class="nf-input-limit"></div>
-    <#
-    /*
-     * Render our error section if we have an error.
-     */
-    #>
-    <div id="nf-error-{{{ data.id }}}" class="nf-error-wrap nf-error" role="alert"></div>
-    <#
-    /*
-     * Render any custom HTML after our field.
-     */
-    #>
-    {{{ data.afterField }}}
-</script>
-<script id="tmpl-nf-field-wrap" type="text/template">
-	<div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
-		<#
-		/*
-		 * This is our main field template. It's called for every field type.
-		 * Note that must have ONE top-level, wrapping element. i.e. a div/span/etc that wraps all of the template.
-		 *
-		 * <div>
-		 * 	 <div>
-		 *   	Cool Stuff
-		 * 	 </div>
-		 *   <span>
-		 * 		Hello World!
-		 *   </span>
-		 * </div>
-		 *
-		 * is OK.
-		 *
-		 * <div>
-		 * 		Cool Stuff
-		 * </div>
-		 * <span>
-		 * 		Hello World!
-		 * </span>
-		 *
-		 * is NOT ok because each of those items is on the top-level.
-		 */
-        #>
-		<#
-		/*
-		 * Render our label.
-		 */
-        #>
-		{{{ data.renderLabel() }}}
-		<#
-		/*
-		 * Render our field element. Uses the template for the field being rendered.
-		 */
-        #>
-		<div class="nf-field-element">{{{ data.renderElement() }}}</div>
-		<#
-		/*
-		 * Render our Description Text.
-		 */
-        #>
-		{{{ data.renderDescText() }}}
-	</div>
-</script>
-<script id="tmpl-nf-field-wrap-no-label" type="text/template">
-    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
-        <div class="nf-field-label"></div>
-        <div class="nf-field-element">{{{ data.renderElement() }}}</div>
-        <div class="nf-error-wrap"></div>
-    </div>
-</script>
-<script id="tmpl-nf-field-wrap-no-container" type="text/template">
-
-        {{{ data.renderElement() }}}
-
-        <div class="nf-error-wrap"></div>
-</script>
-<script id="tmpl-nf-field-label" type="text/template">
-	<div class="nf-field-label"><label for="nf-field-{{{ data.id }}}" class="{{{ data.renderLabelClasses() }}}">{{{ data.label }}} {{{ ( 'undefined' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*</span>' : '' }}} {{{ data.maybeRenderHelp() }}}</label></div>
-</script>
-<script id="tmpl-nf-field-error" type="text/template">
-	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
-</script><script id="tmpl-nf-form-error" type="text/template">
-	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
-</script><script id="tmpl-nf-field-input-limit" type="text/template">
-    {{{ data.currentCount() }}} {{{ nfi18n.of }}} {{{ data.input_limit }}} {{{ data.input_limit_msg }}}
-</script><script id="nf-tmpl-field-null" type="text/template">
-</script><script id="tmpl-nf-field-listselect" type="text/template">
-    <select id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" {{{ data.renderOtherAttributes() }}}>
-        {{{ data.renderOptions() }}}
-    </select>
-    <div for="nf-field-{{{ data.id }}}"></div>
-</script>
-
-<script id="tmpl-nf-field-listselect-option" type="text/template">
-	<# if ( ! data.visible ) { return ''; } #>
-	<option value="{{{ data.value }}}" {{{ ( 1 == data.selected ) ? 'selected="selected"' : '' }}} >{{{ data.label }}}</option>
-</script>
-<script id='tmpl-nf-field-input' type='text/template'>
-    <input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}}>
-</script>
-<script id="tmpl-nf-field-date" type="text/template">
-	<input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element datepicker" type="date" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}}>
-</script>
-<script id="tmpl-nf-field-textbox" type="text/template">
-	<input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}} {{{ data.maybeDisableAutocomplete() }}} {{{ data.maybeInputLimit() }}}>
-</script>
-<script id="tmpl-nf-field-listradio" type="text/template">
-    <ul aria-describedby="nf-error-{{{ data.id }}}">
-        {{{ data.renderOptions() }}}
-    </ul>
-</script>
-
-<script id='tmpl-nf-field-listradio-option' type='text/template'>
-    <# if ( ! data.visible ) { return '' } #>
-    <li>
-        <input type="radio" id="nf-field-{{{ data.fieldID }}}-{{{ data.index }}}" name="nf-field-{{{ data.fieldID }}}" class="{{{ data.classes }}} nf-element {{{ ( data.value == data.currentValue  || 1 == data.selected ) ? 'nf-checked' : '' }}}" value="{{{ data.value }}}" {{{ ( data.value == data.currentValue  || 1 == data.selected ) ? 'checked="checked"' : '' }}}> <label for="nf-field-{{{ data.fieldID }}}-{{{ data.index }}}" class="{{{ ( data.value == data.currentValue  || 1 == data.selected ) ? 'nf-checked-label' : '' }}}">{{{ data.label }}}</label>
-    </li>
-</script>
-
-<script id='tmpl-nf-field-listradio-other' type='text/template'>
-    <li>
-        <input type="radio" name="nf-field-{{{ data.fieldID }}}" class="{{{ data.classes }}} nf-element" value="nf-other" {{{ ( ! data.valueFound ) ? 'checked="checked"' : '' }}}> <label>Other {{{ data.renderOtherText() }}}</label>
-    </li>
-</script>
-
-<script id='tmpl-nf-field-listradio-other-text' type='text/template'>
-    <input type="text" name="nf-field-{{{ data.fieldID }}}" class="nf-element" value="{{{ data.currentValue }}}">
-</script>
-<script id="tmpl-nf-field-submit" type="text/template">
-	<input id="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element " type="button" value="{{{ data.label }}}" {{{ ( data.disabled ) ? 'disabled' : '' }}}>
-</script><script id='tmpl-nf-field-button' type='text/template'>
-    <button id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.classes }}} nf-element">
-        {{{ data.label }}}
-    </button>
-</script>        <script>
+<link rel='stylesheet' id='vc_tta_style-css'  href='<?php echo site_url().'static/page_front/css/js_composer_tta.min.css?ver=5.3';?>' type='text/css' media='all' />
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
+<script>
             var post_max_size = '8';
             var upload_max_filesize = '256';
             var wp_memory_limit = '40';
         </script>
-<!-- Google Code for Click Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 991533214;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 <style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
 <noscript>
