@@ -50,6 +50,9 @@ $route['backoffice/upgrade'] = "b_upgrade";
 $route['backoffice/binario'] = "b_binario";
 $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
 
+$route['backoffice/unilevel'] = "b_unilevel";
+$route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
+
 $route['backoffice/comisiones'] = "b_comissions";
 //$route['backoffice/comisiones/consultar'] = "b_comissions/consultar";
 $route['backoffice/comisiones/pay_dialy'] = "b_comissions/index/$1";

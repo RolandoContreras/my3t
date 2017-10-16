@@ -89,6 +89,7 @@
                                     $url = explode("/",uri_string()); 
                                     $style_inicio = "";
                                     $style_misdatos = "";
+                                    $style_unilevel = "";
                                     $style_upgrade = "";
                                     $style_comisiones = "";
                                     $style_mired = "";
@@ -106,8 +107,8 @@
                                                     case "upgrade":
                                                         $style_upgrade = "a_active";
                                                         break;
-                                                    case "binario":
-                                                        $style_mired = "a_active";
+                                                    case "unilevel":
+                                                        $style_unilevel = "a_active";
                                                         break;
                                                     case "comisiones":
                                                         $style_comisiones = "a_active";
@@ -130,7 +131,7 @@
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
                         <li class="has-sub"><a href="#" class="<?php echo $infoproductos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title">Productos</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/upgrade'?>" class="<?php echo $style_upgrade;?>"><i class="fa fa-arrow-up fa-lg"></i><span class="title">Upgrade</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_mired;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Unilevel</span></a></li>
+			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_unilevel;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Unilevel</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title">Mis Comisiones</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title">Billetera</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/cobros'?>" class="<?php echo $style_pagos;?>"><i class="fa fa-university fa-lg"></i><span class="title">Cobros</span></a></li>
