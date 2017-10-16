@@ -7972,12 +7972,14 @@ pre > code {
   height: 100%; }
 
 .section-heading {
-  background-image: url(../../../../static/backoffice/images/banner_btc.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../../../../static/backoffice/images/fondo-geometrico-vector.jpg);
+/*  background-repeat: no-repeat;*/
   background-size: cover;
-  min-height: 150px; }
+  min-height: 200px; 
+}
   .section-heading .title {
-    color: white;
+    color: whitesmoke;
+    border: 2px;
     margin: 0;
     padding-top: 35px;
     padding-left: 15px; }
@@ -9306,7 +9308,7 @@ form[name="redeem"] .form-group {
 .panel-tab-box {
   margin-top: 0; }
   .panel-tab-box .panel-body {
-    background-image: url(../../../../static/backoffice/images/one/fondo-geometrico-vector.jpg);
+    background-image: url(../../../../static/backoffice/images/one/fondo.jpeg);
     background-repeat: repeat;
     background-position: left top;
     color: #fff;
