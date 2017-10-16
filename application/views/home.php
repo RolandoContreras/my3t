@@ -289,7 +289,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 8; white-space: nowrap;">Training Travel Trade<br/>
+			style="z-index: 8; white-space: nowrap;">Travel Training Trade<br/>
                 </div>
 
 		<!-- LAYER NR. 11 -->
