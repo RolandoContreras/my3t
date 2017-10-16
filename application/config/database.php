@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['username'] = 'my3tadmin';
+$db['default']['password'] = 'Dni45887343';
 $db['default']['database'] = 'my3t';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
