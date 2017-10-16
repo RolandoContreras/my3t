@@ -11,10 +11,10 @@
                             <h2 class="widgettitle">Mapa</h2>
                             <div class="menu-basic-container">
                                 <ul id="menu-basic" class="menu">
-                                    <li id="menu-item-692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-692"><a href="<?php echo site_url();?>">Inicio</a></li>
+                                    <li id="menu-item-692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-692"><a href="<?php echo site_url().'home';?>">Inicio</a></li>
                                     <li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695"><a href="#">Acerca</a></li>
-                                    <li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="#">Plan</a></li>
-                                    <li id="menu-item-694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-694"><a href="#">Contacto</a></li>
+                                    <li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="<?php echo site_url().'plan';?>">Plan</a></li>
+                                    <li id="menu-item-694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-694"><a href="<?php echo site_url().'contact';?>">Contacto</a></li>
                                     <li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693"><a href="#">Login</a></li>
                                 </ul>
                             </div>
