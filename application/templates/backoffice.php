@@ -4,14 +4,16 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Somos un grupo de analistas del mercado bursátil que laboraban para la reconocida firma estadounidense Empire Capital Holdings; con la visión de ayudar a las personas su horizonte de inversión en el mercado existente.">
-<meta name="keywords" content="criptowin,mlm,bitcoin,mercado bursatil,bolsa de valores,forex,inversión,redes de mercadeo,multinivel,binario,dinero,millones,educacion,futuro">
-<title>CRIPTOWIN | Back Office</title>
+<meta name="description" content="Empresa 100% peruana que brinda distintos servicios e info-productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
+<meta name="keywords" content="3T,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
+<title>Travel - Training- Trade</title>
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
 
 <!-- Site favicon -->
-<link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>" type="image/x-icon">
-<link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
+<link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
 <!-- /site favicon -->
 <!-- Entypo font stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/entypo.css';?>" rel="stylesheet">
@@ -57,7 +59,7 @@
 		<header class="site-header">
 		  <div class="site-logo">
                       <a href="<?php echo site_url().'backoffice';?>">
-                          <img style="margin-left: -20% !important" src="<?php echo site_url().'static/page_front/images/logo_assest_2.png';?>" width="200px" alt="Logo Criptowin">
+                          <img style="margin-left: -20% !important" src="<?php echo site_url().'static/page_front/images/logo/logo_small.png';?>" width="115px" alt="Logo Criptowin">
                       </a>
                   </div>
 		  <div class="sidebar-collapse hidden-xs">
@@ -126,8 +128,9 @@
                         <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title">Dashboard</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
+                        <li class="has-sub"><a href="#" class="<?php echo $infoproductos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title">Productos</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/upgrade'?>" class="<?php echo $style_upgrade;?>"><i class="fa fa-arrow-up fa-lg"></i><span class="title">Upgrade</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/binario'?>" class="<?php echo $style_mired;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Binario</span></a></li>
+			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_mired;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Unilevel</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title">Mis Comisiones</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title">Billetera</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/cobros'?>" class="<?php echo $style_pagos;?>"><i class="fa fa-university fa-lg"></i><span class="title">Cobros</span></a></li>
@@ -179,18 +182,20 @@
                                             <i class="icon-mail"></i><span class="badge badge-secondary">1</span></a>
 					<ul class="dropdown-menu pull-right">
 						<li class="first">
-							<div class="dropdown-content-header"><i class="fa fa-pencil-square-o pull-right"></i> Mensajes</div>
+							<div class="dropdown-content-header">Mensajes</div>
 						</li>
 						<li>
 							<ul class="media-list">
 								<li class="media">
-									<div class="media-left"><img alt="" class="img-circle img-sm" src="images/domnic-brown.png"></div>
+									<div class="media-left">
+                                                                            <i class="fa fa-comments" aria-hidden="true"></i>
+                                                                        </div>
 									<div class="media-body">
 										<a class="media-heading" href="#">
-											<span class="text-semibold">Criptowin</span>
+											<span class="text-semibold">Bienvenido</span>
 											<span class="media-annotation pull-right">Tue</span>
 										</a>
-										<span class="text-muted">Bienvenido a Criptowin, te deseamos éxito...</span>
+										<span class="text-muted">Bienvenido a 3T, te deseamos éxito...</span>
 									</div>
 								</li>
 							</ul>
@@ -212,7 +217,7 @@
             <?php echo $body;?> 
       <!--START FOOTER-->
       <footer class="footer-main"> 
-			&copy; 2017 <strong>CRIPTOWIN</strong>
+			© Copyright 2017. All Rights Reserved  -<strong> 3T Company</strong>
       </footer>	
   <!-- /main container -->
   
