@@ -64,64 +64,73 @@
             <div class="panel panel-default panel-tab-box">
                 <div class="panel-body">
                     <div class="flex-container fix-box-height">
-                        <a href="<?php echo site_url('backoffice/binario');?>" class="col-flex box-height">
+                        <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Calificación Binario")?></h5>
-                                <strong><?php if($obj_customer->calification==1){echo "Calificado";}else{echo "No Calificado";}?></strong>
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Rango")?></h5>
+                                <strong>Sin Rango</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-tree fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
                         
-                        <a href="<?php echo site_url('backoffice/binario');?>" class="col-flex box-height">
+                        <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos de Calificación Izquierda");?></h5>
-                                <strong><?php if($obj_customer->point_calification_left==0){echo "Calificado";}else{echo $obj_customer->point_calification_left." "."PTS";}?></strong>
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Próximo Rango")?></h5>
+                                <strong>Start</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntaje Mensual");?></h5>
+                                <strong>0 PTS</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
                                    
                                 </div>
                             </div>
                         </a>
                             
-                        <a href="<?php echo site_url('backoffice/binario');?>" class="col-flex box-height">
+                        <a href="#" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos de Calificación Derecha");?></h5>
-                                <strong><?php if($obj_customer->point_calification_rigth==0){echo "Calificado";}else{echo $obj_customer->point_calification_rigth." "."PTS";}?></strong>
+                                <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntaje Semanal");?></h5>
+                                <strong>0 PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
-                        
-                        <a href="<?php echo site_url('backoffice/binario');?>" class="col-flex box-height">
+                        <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                <h5 class="media-heading">Puntos Izquierda</h5>
-                                <strong><?php echo $points_left." "."PTS";?></strong>
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Promoción");?></h5>
+                                <strong>Ninguna</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-suitcase fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
-                        
-                        <a href="<?php echo site_url('backoffice/binario');?>" class="col-flex box-height">
+                        <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                <h5 class="media-heading">Puntos Derecha</h5>
-                                <strong><?php echo $points_rigth." "."PTS";?></strong>
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Miles");?></h5>
+                                <strong>0 PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i>
-                                    
+                                    <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -150,31 +159,6 @@
                         <a href="<?php echo site_url('backoffice/misdatos');?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Inicio de Pago");?></h5>
-                                    <strong><?php if(formato_fecha_barras($obj_customer->date_stand_by)== '00/00/0000'){ echo "-----";}else{echo formato_fecha_barras($obj_customer->date_stand_by);}?></strong>
-                                </div>
-                                <div class="media-right media-middle">
-                                   <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
-
-
-                        <a href="<?php echo site_url('backoffice/misdatos');?>" class="col-flex box-height">
-                            <div class="media">
-                                <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Termino");?></h5>
-                                <strong><?php if(formato_fecha_barras($obj_customer->date_end)== '00/00/0000'){ echo "-----";}else{echo formato_fecha_barras($obj_customer->date_end);}?></strong>
-                                </div>
-                                <div class="media-right media-middle">
-                                    <i class="fa fa-stop fa-3x" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="<?php echo site_url('backoffice/misdatos');?>" class="col-flex box-height">
-                            <div class="media">
-                                <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Creación");?></h5>
                                 <strong><?php echo formato_fecha_barras($obj_customer->created_at);?></strong>
                                 </div>
@@ -198,13 +182,13 @@
                     <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">BEGINNER</h5>
-                            <p class="title">$50.00</p>
-                            <p>50 PUNTOS</p>
+                            <h5 class="media-heading text-uppercase title-small">BASIC</h5>
+                            <p class="title">$125</p>
+                            <p>93 PTS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/beginner.png";?>" alt="Paquete Beginner"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Paquete Basic"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
@@ -214,13 +198,13 @@
                     <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">START</h5>
-                            <p class="title">$100.00</p>
-                            <p>100 PUNTOS</p>
+                            <h5 class="media-heading text-uppercase title-small">EXECUTIVE</h5>
+                            <p class="title">$250</p>
+                            <p>187 PTS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/start.png";?>" alt="Paquete Start"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Paquete Executive"/>
                         </div>
                         </div>
                            <div class="media-body media-middle">
@@ -230,13 +214,13 @@
                     <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">GENERAL</h5>
-                            <p class="title">$300.00</p>
-                            <p>300 PUNTOS</p>
+                            <h5 class="media-heading text-uppercase title-small">INVESTOR</h5>
+                            <p class="title">$500</p>
+                            <p>375 PTS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/general.png";?>" alt="Paquete General"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Paquete Investor"/>
                         </div>
                         </div>
                            <div class="media-body media-middle">
@@ -246,13 +230,13 @@
                     <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">VIP</h5>
-                            <p class="title">$500.00</p>
-                            <p>500 PUNTOS</p>
+                            <h5 class="media-heading text-uppercase title-small">BUSINESS</h5>
+                            <p class="title">$1000</p>
+                            <p>750 PTS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/vip.png";?>" alt="Paquete VIP"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Paquete Business"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
@@ -262,25 +246,9 @@
                     <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">PREMIUM</h5>
-                            <p class="title">$1,000.00</p>
-                            <p>1000 PUNTOS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/premium.png";?>" alt="Paquete Premium"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div> 
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">MASTER</h5>
-                            <p class="title">$5,000.00</p>
-                            <p>5000 PUNTOS</p>
+                            <p class="title">$3,000</p>
+                            <p>2250 PUNTOS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
@@ -288,7 +256,7 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('6');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                 </div>
@@ -316,30 +284,26 @@
                                     <?php
                                     switch ($obj_customer->franchise_id) {
                                         case 1:
-                                            $amount = "50 USD";?>
-                                             <img src="<?php echo site_url()."static/backoffice/images/beginner.png";?>" alt="Cuenta Beginner" height="120" width="130"/>
+                                            $amount = "$125";?>
+                                             <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
                                           <?php  break;
                                         case 2:
-                                            $amount = "100 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/start.png";?>" alt="Cuenta Start" height="120" width="130"/>
+                                            $amount = "$250"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
                                             <?php break;
                                         case 3:
-                                            $amount = "300 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/general.png";?>" alt="Cuenta General" height="120" width="130"/>
+                                            $amount = "$500"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Cuenta Investor" height="120" width="130"/>
                                             <?php break;
                                         case 4:
-                                            $amount = "500 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/vip.png";?>" alt="Cuenta VIP" height="120" width="130"/>
+                                            $amount = "$1000"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Cuenta Business" height="120" width="130"/>
                                             <?php break;
                                         case 5:
-                                            $amount = "1000 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/premium.png";?>" alt="Cuenta Premium" height="120" width="130"/>
-                                            <?php break;
-                                        case 6:
-                                            $amount = "5000 USD"?>
+                                            $amount = "$3000"?>
                                             <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
-                                        <?php break;
-                                        case 7: 
+                                            <?php break;
+                                        case 6: 
                                             $amount = "0 USD";?>
                                              <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
                                           <?php  break;
@@ -352,7 +316,7 @@
                     <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
                         <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("MODO DE ACTIVACIÓN");?></p>
                         <div class="small">
-                            <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo $amount;?></a></b> a la siguiente dirección de bitcoin: <b>1PZT316a1c7EvZoMrLKPZpETsZSg9MSw9G</b><br/> enviando un mensaje a su patrocinador indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p>
+                            <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo $amount;?></a></b> a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b><br/> enviando un mensaje a su patrocinador indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p>
                         </div>
                     </div>
                 </div>
@@ -381,7 +345,7 @@
                     <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
                         <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("LINK DE PATROCINIO");?></p>
                         <div class="small">
-                            <p>Estimado usuario usted tiene un enlace para patrocinar a nuevos asociados en CRIPTOWIN debajo de su organización. <br>•	Link de patrocinio: <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>Compartiendo este enlace podrá patrocinar a más personas.<br><b><?php echo replace_vocales_voculeshtml("¿Cómo activar a sus patrocinados?")?> </b><br>•	Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: <b>1PZT316a1c7EvZoMrLKPZpETsZSg9MSw9G</b></p>
+                            <p>Estimado usuario usted tiene un enlace para patrocinar a nuevos asociados en 3T debajo de su organización. <br>•	Link de patrocinio: <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>Compartiendo este enlace podrá patrocinar a más personas.<br><b><?php echo replace_vocales_voculeshtml("¿Cómo activar a sus patrocinados?")?> </b><br>•	Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b></p>
                         </div>
                     </div>
                 </div>

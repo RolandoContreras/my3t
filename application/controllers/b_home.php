@@ -77,32 +77,28 @@ class B_home extends CI_Controller {
               
                 switch ($obj_customer->franchise_id) {
                     case 1:
-                        $images_franchise = "beginner.png";
-                        $text_franchise = "Beginner";
+                        $images_franchise = "basic.png";
+                        $text_franchise = "BASIC";
                         break;
                     case 2:
-                        $images_franchise = "start.png";
-                        $text_franchise = "Start";
+                        $images_franchise = "executive.png";
+                        $text_franchise = "EXECUTIVE";
                         break;
                     case 3:
-                        $images_franchise = "general.png";
-                        $text_franchise = "General";
+                        $images_franchise = "investor.png";
+                        $text_franchise = "INVESTOR";
                         break;
                     case 4:
-                        $images_franchise = "vip.png";
-                        $text_franchise = "VIP";
+                        $images_franchise = "business.png";
+                        $text_franchise = "BUSINESS";
                         break;
                     case 5:
-                        $text_franchise = "Premium";
-                        $images_franchise = "premium.png";
+                        $images_franchise = "master.png";
+                        $text_franchise = "MASTER";
                         break;
                     case 6:
-                        $text_franchise = "Master";
-                        $images_franchise = "master.png";
-                        break;
-                    case 7:
                         $images_franchise = "membership.png";
-                        $text_franchise = "Membership";
+                        $text_franchise = "MEMBERSHIP";
                         break;
                 }
               
