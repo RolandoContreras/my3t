@@ -259,17 +259,17 @@ class Register extends CI_Controller {
                 $_SESSION['customer'] = $data_customer_session;
                 
 //                SEND MESSAGES
-                $images = "static/page_front/images/bienvenido1.jpg";
+                $images = "static/page_front/images/bienvenido.jpg";
                 $img_path = "<img src='".site_url().'/'.$images."' alt='Bievenido' height='800' width='800'/>";
                 
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                $mensaje = wordwrap("<html><body><h1>Bienvenido a CRIPTOWIN</h1><p>Bienvenido ahora eres parte de la revolución CRIPTOWIN estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para poyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $usuario</h3><h3>Contraseña: $clave</h3><p>$img_path</p></body></html>", 70, "\n", true);
+                $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $usuario</h3><h3>Contraseña: $clave</h3><p>$img_path</p></body></html>", 70, "\n", true);
                 //Titulo
-                $titulo = "Bienvenido a Criptowin";
+                $titulo = "Bienvenido a 3T Company";
                 //cabecera
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                $headers .= "From: CRIPTOWIN - The best Investment < noreplay@criptowin.com >\r\n";
+                $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
                 //Enviamos el mensaje a tu_dirección_email 
                 $bool = mail("$email",$titulo,$mensaje,$headers);
                 
