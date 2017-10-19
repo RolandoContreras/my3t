@@ -22,10 +22,10 @@
                         <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href=""><span>Contacto</span></a>
+                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href=""><span>Login</span></a>
+                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
                     </li>
                 </ul>
             <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>

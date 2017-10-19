@@ -47,21 +47,17 @@
 	<div class="page-container">
             <div class="single-portfolio-holder portfolio-type-3 alt-four">
 		<div class="title section-title">
-                    <h1>PAQUETE EXECUTIVE</h1>
+                    <h1>PAQUETE INVESTOR</h1>
                 </div>
     		<div class="details row">
                     <div class="col-sm-12">
                         <div class="project-description">
                             <div class="post-formatting">
-                                <p><?php echo replace_vocales_voculeshtml("El paquete EXECUTIVE tiene un costo de $250 dólares americanos y te otorgan 187 puntos para el plan de ganancias.");?></p>
+                                <p><?php echo replace_vocales_voculeshtml("El paquete INVESTOR tiene un costo de $500 dólares americanos y te otorgan 375 puntos para el plan de ganancias.");?></p>
                                             <p><b>Recibes:</b></p>
-                                            <p><b>UN ECO CRUCERO Y TEN UNA GRAN EXPERIENCIA.</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Los pasos 3 y 4 del  sistema de 9 pasos desarrollado por Frank García. Formador de más de 30 millonarios, autor del libro “De balsero a millonario”, ¿Por qué fracasa la gente? entre otros.");?></p>
-                                            <p><b>Paso 3:</b><br/>- Mi primer mes en redes de mercadeo.<br/>- Deseo ardiente.</p>
-                                            <p><b>Paso 4:</b><br/><?php echo replace_vocales_voculeshtml("- El secreto está en las preguntas.");?><br/>- Importancia del sistema educativo.<br/><?php echo replace_vocales_voculeshtml("- Diamante en 90 días.");?></p>
-                                            <p><b>Objetivo:</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Le muestra a la persona los pasos claros y simples de que hacer el primer mes, de la importancia del tener un sistema educativo y  como tener éxito en los primeros 90 días de iniciar su negocio.");?></p>
-                                            <p><b><?php echo replace_vocales_voculeshtml("RECIBE CURSOS DE FOREX NIVEL BÁSICO EN NUESTRA ACADEMIA “3T ACADEMY”.");?></b></p>
+                                            <p><b>LA FRANQUICIA DE MAGIC VACATION Y 3T</b></p>
+                                            <p><?php echo replace_vocales_voculeshtml("La franquicia y software exclusivo de MAGIC VACATION y 3T con respaldo en USA, México y PERÚ  pagando mensualidad de $35 y ten tu propia agencia mayorista por 3 años.");?></p>
+                                            <p><?php echo replace_vocales_voculeshtml("MAGIC VACATION MEMBERS empresa con más de 15 años en el rubro de viajes te otorga un soporte 24/7 para que puedas gestionar y desarrollar franquicia con tranquilidad.");?></p>
                             </div>
                         </div>
                     </div>
@@ -72,9 +68,9 @@
                             <style>.gallery-item-0 {max-width: 1139px;}</style>				
                             <style>.img-456 {background-color: #484848;}</style>	
                                     <span class="image-placeholder img-456" style="padding-bottom:56.18055556%">
-                                        <img width="1440" height="809" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/executive.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/executive.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/executivex300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/executivex768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/executivex1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/executivex1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/executivex806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/executivex558.jpg'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/executivex655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                        <img width="1440" height="809" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/investor.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/investor.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/investorx300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/investorx768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/investorx1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/investorx1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/investorx806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/investorx558.jpg'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/investorx655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                     </span>
-                                    <div class="caption">$250</div>
+                                    <div class="caption">$500</div>
 			</div>
                     </div>
                     <div class="row">
