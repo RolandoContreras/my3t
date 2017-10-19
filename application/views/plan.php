@@ -65,9 +65,9 @@
                             </div>
                             <div class="info">
                                 <h3>
-                                    <a href="<?php echo site_url().'paquete/basic'?>" class="item-link">BASIC</a>
+                                    <a href="<?php echo site_url().'plan/basic'?>" class="item-link">BASIC</a>
                                 </h3>
-                                    <p class="terms"><a href="<?php echo site_url().'paquete/basic'?>" data-term="beaches">$125</a></p>		
+                                    <p class="terms"><a href="<?php echo site_url().'plan/basic'?>" data-term="beaches">$125</a></p>		
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                     <div class="portfolio-item portfolio-item-type-3 has-padding w4 post-435 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-beaches" data-portfolio-item-id="435" data-terms="beaches">
                         <div class="item-box wow fadeInLab">
                             <div class="photo">
-                                <a href="<?php echo site_url().'paquete/executive'?>" class="item-link">
+                                <a href="<?php echo site_url().'plan/executive'?>" class="item-link">
                                     <style>.img-456 {background-color: #484848;}</style>	
                                     <span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/executive655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
@@ -89,16 +89,16 @@
                             </div>
                             <div class="info">
                                 <h3>
-                                    <a href="<?php echo site_url().'paquete/executive'?>" class="item-link">EXECUTIVE</a>
+                                    <a href="<?php echo site_url().'plan/executive'?>" class="item-link">EXECUTIVE</a>
                                 </h3>
-                                    <p class="terms"><a href="<?php echo site_url().'paquete/executive'?>" data-term="beaches">$250</a></p>		
+                                    <p class="terms"><a href="<?php echo site_url().'plan/executive'?>" data-term="beaches">$250</a></p>		
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-item portfolio-item-type-5 has-padding w4 post-443 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="443" data-terms="nature">
                         <div class="item-box wow fadeInLab">
                             <div class="photo">
-                                <a href="<?php echo site_url().'paquete/investor'?>" class="item-link">
+                                <a href="<?php echo site_url().'plan/investor'?>" class="item-link">
                                     <style>.img-453 {background-color: #a86090;}</style>	
                                     <span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/investor655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
@@ -112,10 +112,10 @@
                             </div>
                             <div class="info">
                                 <h3>
-                                    <a href="<?php echo site_url().'paquete/investor'?>" class="item-link">INVESTOR - FRANQUICIA</a>
+                                    <a href="<?php echo site_url().'plan/investor'?>" class="item-link">INVESTOR - FRANQUICIA</a>
                                 </h3>
                             <p class="terms">
-                                <a href="<?php echo site_url().'paquete/investor'?>" data-term="nature">$500</a>
+                                <a href="<?php echo site_url().'plan/investor'?>" data-term="nature">$500</a>
                             </p>		
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                     <div class="portfolio-item portfolio-item-type-1 has-padding w4 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
                         <div class="item-box wow fadeInLab">
                             <div class="photo">
-                                <a href="<?php echo site_url().'paquete/business'?>" class="item-link">
+                                <a href="<?php echo site_url().'plan/business'?>" class="item-link">
 				<style>.img-459 {background-color: #004878;}</style>	
                                     <span class="image-placeholder img-459" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/business655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
@@ -137,10 +137,10 @@
                             </div>
                             <div class="info">
                                 <h3>
-                                    <a href="<?php echo site_url().'paquete/business'?>" class="item-link">BUSINESS</a>
+                                    <a href="<?php echo site_url().'plan/business'?>" class="item-link">BUSINESS</a>
                                 </h3>
                                     <p class="terms">
-                                        <a href="<?php echo site_url().'paquete/business'?>" data-term="nature">$1000</a>
+                                        <a href="<?php echo site_url().'plan/business'?>" data-term="nature">$1000</a>
                                     </p>		
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                     <div class="portfolio-item portfolio-item-type-4 has-padding w4 post-86 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-city-break portfolio_category-history" data-portfolio-item-id="86" data-terms="city-break history">
                         <div class="item-box wow fadeInLab">
                             <div class="photo">
-                                <a href="<?php echo site_url().'paquete/master'?>" class="item-link">
+                                <a href="<?php echo site_url().'plan/master'?>" class="item-link">
 				<style>.img-405 {background-color: #f0d8f0;}</style>	
                                 <span class="image-placeholder img-405" style="padding-bottom: 83.20610687%">
                                     <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/master655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
@@ -162,10 +162,10 @@
                             </div>
                             <div class="info">
                                 <h3>
-                                    <a href="<?php echo site_url().'paquete/master'?>" class="item-link">MASTER</a>
+                                    <a href="<?php echo site_url().'plan/master'?>" class="item-link">MASTER</a>
                                 </h3>
                                 <p class="terms">
-                                    <a href="<?php echo site_url().'paquete/master'?>" data-term="city-break">$3000</a>
+                                    <a href="<?php echo site_url().'plan/master'?>" data-term="city-break">$3000</a>
                                 </p>		
                             </div>
                         </div>
