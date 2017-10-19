@@ -249,11 +249,11 @@ labVcMaps.push({
                 <div class="vc_column-inner vc_custom_1498222572351">
                     <div class="wpb_wrapper">
                         <div class="section-title ">
-                        <H2><?php echo replace_vocales_voculeshtml("Registro");?></H2>
+                        <H2><?php echo replace_vocales_voculeshtml("Formulario de Registro");?></H2>
                         </div>
                         <div class="vc-parent-row row-default">
                             <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                                <div class="wpb_column vc_column_container vc_col-sm-8">
+                                <div class="wpb_column vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">
                                             <div class="lab-contact-form contact-form ">
@@ -263,7 +263,7 @@ labVcMaps.push({
                                                 <?php if(isset($obj_customer)){ ?>
                                                     <div class="col-md-12">
                                                                 <div class="form-grp">
-                                                                    <label>Patrocinador</label>
+                                                                    <label><b>PATROCINADOR</b></label>
                                                                         <input type="text"  readonly="readonly" value="<?php  
                                                                         if(isset($obj_customer->username)){
                                                                             echo $obj_customer->username;
@@ -297,73 +297,73 @@ labVcMaps.push({
 
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label>Usuario</label>
+                                                  <label><b>USUARIO</b></label>
                                                 <input onblur="validate_username(this.value);" id="usuario" type="text" name="usuario">
                                                 <span class="alert-0"></span>
                                               </div>
                                             </div>
                                           <div class="col-md-12">
                                           <div class="form-grp">
-                                              <label><?php echo replace_vocales_voculeshtml("Contraseña");?></label>
+                                              <label><b><?php echo replace_vocales_voculeshtml("CONTRASEÑA");?></b></label>
                                               <input id="clave" type="password" name="clave">
                                           </div>
                                         </div>
                                         <div class="col-md-12">
                                           <div class="form-grp">
-                                            <label><?php echo replace_vocales_voculeshtml("Repetir Contraseña");?></label>
+                                            <label><b><?php echo replace_vocales_voculeshtml("REPETIR CONTRASEÑA");?></b></label>
                                             <input id="repita_clave" onblur="validate_2passwordr(this.value);" type="password" name="repita_clave">
                                             <span class="alert-1"></span>
                                           </div>
                                         </div> 
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label>Nombres</label>
+                                                <label>NOMBRES</label>
                                                 <input id="name" type="text" name="name">
                                               </div>
                                             </div>
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label>Apellidos</label>
+                                                <label>APELLIDOS</label>
                                                 <input id="last_name" type="text" name="last_name">
                                               </div>
                                             </div>
 
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("Dirección");?></label>
+                                                <label><?php echo replace_vocales_voculeshtml("DIRECCIÓN");?></label>
                                                 <input id="address" type="text" name="address">
                                               </div>
                                             </div>
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("Teléfono");?></label>
+                                                <label><?php echo replace_vocales_voculeshtml("TELÉFONO");?></label>
                                                 <input id="telefono" type="text" name="telefono">
                                               </div>
                                             </div>
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("DNI");?></label>
+                                                <label><?php echo replace_vocales_voculeshtml("DNI / CEDULA");?></label>
                                                 <input id="dni" type="text" name="dni">
                                               </div>
                                             </div>
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("Correo Electrónico");?></label>
+                                                <label><?php echo replace_vocales_voculeshtml("CORREO ELECTRÓNICO");?></label>
                                                 <input id="email" type="text" name="email">
                                               </div>
                                             </div>
                                             <div class="col-md-4">
                                               <div class="form-grp">
-                                                  <label><b><?php echo replace_vocales_voculeshtml("Fecha de Nacimiento");?></b></label>
+                                                  <label><b><?php echo replace_vocales_voculeshtml("FECHA DE NACIMIENTO");?></b></label>
                                                 <select  name="dia" id="dia">
-                                                    <option value=""><?php echo replace_vocales_voculeshtml("Día")?></option>
+                                                    <option value=""><?php echo replace_vocales_voculeshtml("DÍA")?></option>
                                                         <?php  for ($x = 1; $x <= 31; $x++) {  ?>
                                                             <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                         <?php } ?>
                                                 </select>
 
                                                 <select iname="mes" id="mes">
-                                                    <option value="">Mes</option>
+                                                    <option value="">MES</option>
                                                             <option value="01">Enero</option>
                                                             <option value="02">Febrero</option>
                                                             <option value="03">Marzo</option>
@@ -378,7 +378,7 @@ labVcMaps.push({
                                                             <option value="12">Diciembre</option>
                                                 </select>
                                                 <select  name="ano" id="ano" class="password_text" >
-                                                            <option selected="selected" value="">A&ntilde;o</option>
+                                                    <option selected="selected" value=""><?php echo replace_vocales_voculeshtml("AÑO");?></option>
                                                                 <?php  for ($x = 1950; $x <= 2016; $x++) {  ?>
                                                                     <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                                 <?php } ?>
@@ -388,7 +388,7 @@ labVcMaps.push({
                                             <div class="col-md-12">
                                               <div class="form-grp">
                                                  <select class="password_text" onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
-                                                    <option  selected value=""><?php echo replace_vocales_voculeshtml("País");?></option>
+                                                    <option  selected value=""><?php echo replace_vocales_voculeshtml("PAÍS");?></option>
                                                         <?php  foreach ($obj_paises as $key => $value) { ?>
                                                                <option  value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
                                                         <?php } ?>
@@ -399,46 +399,19 @@ labVcMaps.push({
                                             </div>
                                             <div class="col-md-12">
                                               <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("Ciudad");?></label>
+                                                <label><?php echo replace_vocales_voculeshtml("CIUDAD");?></label>
                                                 <input id="city" type="text" name="city">
                                               </div>
                                             </div>
                                           </div>
                                                         <button onclick="crear_registro();" class="button">
-                                                                <span class="pre-submit">Crear</span>
+                                                                <span class="pre-submit">CREAR CUENTA</span>
                                                                 <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
                                                                 <span class="loading-bar">
                                                                         <span></span>
                                                                 </span>
                                                         </button>
                                                 </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-1 vc_hidden-sm vc_hidden-xs">
-                                    <div class="vc_column-inner ">
-                                        <div class="wpb_wrapper"></div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="wpb_text_column wpb_content_element  post-formatting " >
-                                                <div class="wpb_wrapper">
-                                                    <p><span style="color: #222222;"><strong>Visítanos:</strong></span></p>
-                                                        <p>Av. La Encalada # 1171</p>
-                                                        <p>Monterrico - Santiago de surco</p>
-                                                        <p><?php echo replace_vocales_voculeshtml("Lima, Perú");?></p>
-                                                        <p>&nbsp;</p>
-                                                        <p><span style="color: #222222;"><strong>Horario de Trabajo</strong>:</span></p>
-                                                        <p>Lunes — Viernes (<span style="color: #222222;"><strong>08:00 — 17:00</strong></span>)</p>
-                                                        <p>Sabados (<span style="color: #222222;"><strong>09:00 — 15:00</strong></span>)</p>
-                                                        <p>&nbsp;</p>
-                            <!--                            <p><span style="color: #222222;"><strong>Or ring our phones:</strong></span></p>
-                                                        <p><a href="tel:+44 20 3457 5495">+44 20 3457 5495</a> (UK)</p>
-                                                        <p><a href="tel:+353 1 878 3944">+353 1 878 3944</a> (Ireland)</p>-->
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

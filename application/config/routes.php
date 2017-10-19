@@ -43,6 +43,7 @@ $route['404_override'] = '';
 
 $route['home'] = 'home';
 $route['login'] = 'login';
+$route['plan/([0-9a-z_-]+)'] = "plan/packages";
 
 $route['backoffice'] = "b_home";
 $route['backoffice/profile'] = "b_data";
@@ -67,10 +68,6 @@ $route['logout'] = "b_home/logout";
 $route['backoffice/misdatos'] = "b_data";
 
 $route['register/afiliate/([0-9a-z_-]+)'] = "register/index/$1";
-
-$route['referred'] = "plan";
-$route['binary'] = "plan";
-$route['bets'] = "plan";
 
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";

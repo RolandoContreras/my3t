@@ -21,27 +21,33 @@ class Plan extends CI_Controller {
 	public function index()
 	{
         //  GET LINK URL
-        $url = explode("/", uri_string());
-            if (isset($url[0])) {
-                $plan = $url[0];
-
+            $this->load->view('plan');
+//		$this->load->view('plan');
+	}
+        public function packages(){
+            $url = explode("/", uri_string());
+            if (isset($url[1])) {
+                $plan = $url[1];
                 switch ($plan) {
-                    case "plan":
-                        $this->load->view('plan');
+                    case "basic":
+                        $this->load->view('basic');
                         break;
-                    case "binary":
-                        $this->load->view('binary');
+                    case "executive":
+                        $this->load->view('executive');
                         break;
-                    case "referred":
-                        $this->load->view('referred');
+                    case "investor":
+                        $this->load->view('investor');
                         break;
-                    case "bets":
-                        $this->load->view('bets');
+                    case "business":
+                        $this->load->view('business');
+                        break;
+                    case "master":
+                        $this->load->view('master');
                         break;
                 }
 
                 //Select params
             }
-//		$this->load->view('plan');
-	}
+            
+        }
 }

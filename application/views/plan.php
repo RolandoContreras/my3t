@@ -22,10 +22,10 @@
                         <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href=""><span>Contacto</span></a>
+                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href=""><span>Login</span></a>
+                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
                     </li>
                 </ul>
             <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
@@ -51,7 +51,7 @@
                     <div class="portfolio-item portfolio-item-type-3 has-padding w4 post-435 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-beaches" data-portfolio-item-id="435" data-terms="beaches">
                         <div class="item-box wow fadeInLab">
                             <div class="photo">
-                                <a href="" class="item-link">
+                                <a href="<?php echo site_url().'plan/basic';?>" class="item-link">
                                     <style>.img-456 {background-color: #484848;}</style>	
                                     <span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/basic655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	

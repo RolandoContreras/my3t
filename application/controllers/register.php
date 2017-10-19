@@ -28,7 +28,6 @@ class Register extends CI_Controller {
 	{
 		//SELECT URL IF ISSET USERNAME
             $url = explode("/", uri_string());
-
             if (isset($url[2])) {
                 $username = $url[2];
                 //Select params
@@ -86,6 +85,7 @@ class Register extends CI_Controller {
     
     public function crear_registro() {
         if ($this->input->is_ajax_request()) {
+            
             //SET TIMEZONE AMERICA
             date_default_timezone_set('America/Lima');
             
@@ -260,7 +260,7 @@ class Register extends CI_Controller {
                 
 //                SEND MESSAGES
                 $images = "static/page_front/images/bienvenido.jpg";
-                $img_path = "<img src='".site_url().'/'.$images."' alt='Bievenido' height='800' width='800'/>";
+                $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
                 
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                 $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $usuario</h3><h3>Contraseña: $clave</h3><p>$img_path</p></body></html>", 70, "\n", true);
