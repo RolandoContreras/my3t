@@ -12,7 +12,7 @@
                             <div class="menu-basic-container">
                                 <ul id="menu-basic" class="menu">
                                     <li id="menu-item-692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-692"><a href="<?php echo site_url().'home';?>">Inicio</a></li>
-                                    <li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695"><a href="#">Acerca</a></li>
+                                    <li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695"><a href="<?php echo site_url().'about';?>">Acerca</a></li>
                                     <li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="<?php echo site_url().'plan';?>">Plan</a></li>
                                     <li id="menu-item-694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-694"><a href="<?php echo site_url().'contact';?>">Contacto</a></li>
                                     <li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693"><a href="<?php echo site_url().'login';?>">Login</a></li>
@@ -45,7 +45,7 @@
                         <h2 class="widgettitle">Acerca</h2>
                             <div class="menu-tourism-container">
                                 <ul id="menu-tourism" class="menu">
-                                    <li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="#"><?php echo corta_texto(replace_vocales_voculeshtml('Multiplataforma virtual que brinda distintos servicios y productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.'),120);?></a></li>
+                                    <li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="<?php echo site_url().'about';?>"><?php echo corta_texto(replace_vocales_voculeshtml('Multiplataforma virtual que brinda distintos servicios y productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.'),120);?></a></li>
                                 </ul>
                             </div>
                     </div>
@@ -53,10 +53,10 @@
                         <h2 class="widgettitle"><?php echo replace_vocales_voculeshtml("Información");?></h2>
                             <div class="menu-information-container">
                                 <ul id="menu-information" class="menu">
-                                    <li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="#"><?php echo replace_vocales_voculeshtml("Visión");?></a></li>
-                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="#"><?php echo replace_vocales_voculeshtml("Misión");?></a></li>
-                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="#"><?php echo replace_vocales_voculeshtml("¿Porqué Nosotros?");?></a></li>
-                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="#"><?php echo replace_vocales_voculeshtml("Momento");?></a></li>
+                                    <li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Visión");?></a></li>
+                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Misión");?></a></li>
+                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("¿Porqué Nosotros?");?></a></li>
+                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Momento");?></a></li>
                                 </ul>
                             </div>
                     </div>			
