@@ -23,10 +23,11 @@
                         <h2 class="widgettitle">Plan</h2>
                             <div class="menu-destinations-container">
                                 <ul id="menu-destinations" class="menu">
-                                    <li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="#">Basic</a></li>
-                                    <li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="#">Executive</a></li>
-                                    <li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="#">Business</a></li>
-                                    <li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="#">Master</a></li>
+                                    <li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="<?php echo site_url().'plan/basic';?>">Basic</a></li>
+                                    <li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="<?php echo site_url().'plan/executive';?>">Executive</a></li>
+                                    <li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="<?php echo site_url().'plan/investor';?>">Investor</a></li>
+                                    <li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="<?php echo site_url().'plan/business';?>">Business</a></li>
+                                    <li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="<?php echo site_url().'plan/master';?>">Master</a></li>
                                 </ul>
                             </div>
                     </div>
