@@ -1,7 +1,7 @@
 <section>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-            <h1 class="title text-uppercase">Tablero</h1>
+            <h1 class="title text-uppercase">PRODUCTOS</h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
             <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
@@ -12,68 +12,23 @@
         <div class="row fix-box-height package-box-fix mt-30">
             <div class="col-lg-6">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">TOTAL PAGADO</h5>
-                            <p class="title"><?php if(count($obj_total)>0){echo "$".number_format($obj_total,'2','.',',');}else{echo "$0.00";}?></p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <i class="fa fa-btc fa-4x" aria-hidden="true"></i>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">BALANCE POR DISPONER</h5>
-                            <p class="title"><?php if(count($obj_balance)>0){echo "$".number_format($obj_balance,'2','.',',');}else{echo "$0.00";}?></p>
-                            <div class="mt-10">
-                            </div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <i class="fa fa-credit-card-alt fa-3x" aria-hidden="true"></i>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="well media media-badges box box-height">
-                <div class="row">
-                    <div class="col-sm-8">
-                        
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">PAQUETE ACTUAL</h5>
-                            <p class="title"><?php echo $text_franchise;?></p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 120px" src="<?php echo site_url()."static/backoffice/images/$images_franchise";?>" alt="<?php echo $text_franchise;?>"/>
-                        </div>
-                        </div>
+                    <div class="col-md-12"> 
+					<div class="panel panel-info">
+						<div class="panel-heading clearfix"> 
+                                                    <div class="panel-title"><?php echo replace_vocales_voculeshtml("Información - Productos");?></div> 
+						</div> 
+						<!-- panel body --> 
+						<div class="panel-body"> 
+                                                    <p><?php echo replace_vocales_voculeshtml("Bienvenido Rolando Contreas. En esta sección le daremos toda la información para que pueda operar correctamente los servicios comprando en 3T. Recuerde que son 3 los rubros que tenemos dentro de la empresa");?></p>
+                                                    <p><?php echo replace_vocales_voculeshtml("1. VIAJES:  Todos los paquetes con excepción del paquete BASIC tienen un viaje integrado.");?></p>
+                                                    <p><?php echo replace_vocales_voculeshtml("2. ENTRENAMIENTOS:  Dependiendo del paquete comprado obtienes los pasos del sistema de 9 pasos creado por nuestro Coach Frank García.");?></p>
+                                                    <p><?php echo replace_vocales_voculeshtml("3. Comercio:  Aprende el mundo de forex en nuestra academia. Los cursos están divididos en 3 módulos (básico, intermedio y avanzando) dependiendo de tu paquete te entregaremos la información correspondiente.");?></p>
+						</div> 
+					</div> 
+				</div>
                     
                 </div>
-                </div>
             </div>
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-md-12"> 
-                                <div class="panel panel-success">
-                                        <div class="panel-heading clearfix"> 
-                                            <div class="panel-title">Mensaje: <b>Inicio de Actividades</b></div> 
-                                        </div> 
-                                        <!-- panel body --> 
-                                        <div class="panel-body"> 
-                                            <p><?php echo replace_vocales_voculeshtml("Del 24 de Octubre el 31 de Octubre del 2017 se considera tiempo de pre apertura, durante este periodo de tiempo pueden ir desarrollando el negocio con total normalidad hasta empezar las actividades el 1 de Noviembre. Las comisiones generadas durante el tiempo de pre apertura serán procesadas con normalidad. El día miércoles 01 de noviembre del 2017, empezamos actividades de 3T Company contando con los servicios de viajes, educación, forex y todas las áreas al 100%.");?></p> 
-                                            <p><?php echo replace_vocales_voculeshtml("Desde la fecha de inicio (1 Noviembre) ya se empezará a hacer los respectivos re consumos cada quince días para que se mantenga activa su respectiva cuenta.");?></p> 
-                                        </div> 
-                                </div> 
-                        </div>
-                    </div>
-            </div>
-            
              
     <div class="row">
         <div class="col-sm-12 mb-25">
@@ -188,96 +143,7 @@
             </div>
         </div>
     </div>
-        <?php if($obj_customer->active == 0){ ?>
-            <div class="media-body media-middle">
-             <h4 class="media-heading text-uppercase">Selecciona tu Paquete</h4>
-             </div>
-             <div class="row fix-box-height package-box-fix mt-30">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">BASIC</h5>
-                            <p class="title">$125</p>
-                            <p>93 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Paquete Basic"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('1');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">EXECUTIVE</h5>
-                            <p class="title">$250</p>
-                            <p>187 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Paquete Executive"/>
-                        </div>
-                        </div>
-                           <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div>                        
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">INVESTOR</h5>
-                            <p class="title">$500</p>
-                            <p>375 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Paquete Investor"/>
-                        </div>
-                        </div>
-                           <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div>                        
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">BUSINESS</h5>
-                            <p class="title">$1000</p>
-                            <p>750 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Paquete Business"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div> 
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">MASTER</h5>
-                            <p class="title">$3,000</p>
-                            <p>2250 PUNTOS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Paquete Master"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
+             
     <br/><br/>
              
     <div class="row fix-box-height-byrow">
@@ -340,9 +206,6 @@
         </div>
     </div>
            
-      <?php  } ?>            
-              
-              
     <div class="row fix-box-height-byrow">
         <div class="col-lg-12">
             <div class="well media media-badges">

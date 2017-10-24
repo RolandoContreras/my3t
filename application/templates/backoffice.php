@@ -89,6 +89,7 @@
                                     $url = explode("/",uri_string()); 
                                     $style_inicio = "";
                                     $style_misdatos = "";
+                                    $style_productos = "";
                                     $style_unilevel = "";
                                     $style_upgrade = "";
                                     $style_comisiones = "";
@@ -100,9 +101,6 @@
                                             ////////
                                                     case "profile":
                                                         $style_misdatos = "a_active";
-                                                        break;
-                                                    case "info-productos":
-                                                        $infoproductos = "a_active";
                                                         break;
                                                     case "upgrade":
                                                         $style_upgrade = "a_active";
@@ -119,6 +117,9 @@
                                                     case "cobros":
                                                         $style_pagos = "a_active";
                                                         break;
+                                                    case "productos":
+                                                        $style_productos = "a_active";
+                                                        break;
                                                     default:
                                                          $title = "Inicio";
                                             }
@@ -129,7 +130,7 @@
                         <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title">Dashboard</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
-                        <li class="has-sub"><a href="#" class="<?php echo $infoproductos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title">Productos</span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/productos'?>" class="<?php echo $style_productos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title">Productos</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/upgrade'?>" class="<?php echo $style_upgrade;?>"><i class="fa fa-arrow-up fa-lg"></i><span class="title">Upgrade</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_unilevel;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Unilevel</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title">Mis Comisiones</span></a></li>

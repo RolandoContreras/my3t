@@ -46,6 +46,7 @@ $route['login'] = 'login';
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 
 $route['backoffice'] = "b_home";
+$route['backoffice/productos'] = "b_product";
 $route['backoffice/profile'] = "b_data";
 $route['backoffice/upgrade'] = "b_upgrade";
 $route['backoffice/binario'] = "b_binario";
