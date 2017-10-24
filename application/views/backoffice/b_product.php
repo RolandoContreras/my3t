@@ -46,8 +46,9 @@
 						<!-- panel body --> 
 						<div class="panel-body"> 
                                                     <p><?php echo replace_vocales_voculeshtml("Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros simplemente por ser parte de la empresa.")?></p><br/>
+                                                    <p><b><?php echo replace_vocales_voculeshtml("$travel")?></b></p><br/>
                                                     <br/>
-                                                    <a><button class="btn btn-success btn-block" type="button">VER DETALLE</button></a>
+                                                    <a><button class="btn btn-success btn-block" type="button">VER DETALLE DEL VIAJE</button></a>
 						</div> 
 					</div> 
 				</div>
@@ -73,6 +74,7 @@
 						<!-- panel body --> 
 						<div class="panel-body"> 
                                                     <p><?php echo replace_vocales_voculeshtml("Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de Frank García. El sistema de 9 pasos, su creador Frank García formador de más de 30 millonarios, coach de talla mundial, autor del libro “De Balsero a Millonario”, ¿Por qué fracasa la gente? Entre otros.")?></p><br/>
+                                                    <p><b><?php echo replace_vocales_voculeshtml("$education")?></b></p>
                                                     <br/>
                                                     <a href="http://sistemadenuevepasos.com/miembros/" target="_blank"><button class="btn btn-success btn-block" type="button">IR AL SISTEMA</button></a>
 						</div> 
@@ -99,6 +101,7 @@
 						<!-- panel body --> 
 						<div class="panel-body"> 
                                                     <p><?php echo replace_vocales_voculeshtml("Aprenderás como manejar y hacer operaciones en el mercado secundario en Forex al lado de expertos trader que trabajan con nosotros, lo cual te dará nuevas herramientas para tu crecimiento financiero.")?></p><br/>
+                                                    <p><b><?php echo replace_vocales_voculeshtml("$forex")?></b></p>
                                                     <br/>
                                                     <a><button class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
 						</div> 
@@ -126,8 +129,9 @@
 						</div> 
 						<!-- panel body --> 
 						<div class="panel-body"> 
-                                                    <p><?php echo replace_vocales_voculeshtml("Obteniendo la franquicia de 3T y MAGIC VACATION MEMBER tendrás tu propia agencia mayorista de viaje con respaldo de la corporación, firmaras un contrato exclusivo con nosotros por un contrato de 3 años y podrás usar nuestro software altamente exclusivo para poder operar como agencia y tener ganancias hasta el 5000% por día.")?></p><br/>
-                                                    <p><?php echo replace_vocales_voculeshtml("MAGIC VACATION MEMBERS, empresa con más de 15 años en el rubro de viajes turísticos, es una agencia mayorista de viaje que viene desarrollando un trabajo único y exclusivo en estos 3 países. Actualmente es parte del holding de empresa de 3T y da respaldo a la corporación.")?></p>
+                                                    <p><?php echo replace_vocales_voculeshtml("Obteniendo la franquicia de 3T y MAGIC VACATION MEMBER tendrás tu propia agencia mayorista de viaje con respaldo de la corporación, firmaras un contrato exclusivo con nosotros por un contrato de 3 años y podrás usar nuestro software altamente exclusivo para poder operar como agencia y tener ganancias hasta el 5000% por día.")?></p>
+                                                    <p><?php echo replace_vocales_voculeshtml("MAGIC VACATION MEMBERS, empresa con más de 15 años en el rubro de viajes turísticos, es una agencia mayorista de viaje que viene desarrollando un trabajo único y exclusivo en estos 3 países. Actualmente es parte del holding de empresa de 3T y da respaldo a la corporación.")?></p><br/>
+                                                    <p><b><?php echo replace_vocales_voculeshtml("$magic_franchise_text")?></b></p>
                                                     <br/>
                                                     <a href="http://www.magicvacationsmembers.com/" target="_blank"><button class="btn btn-success btn-block" type="button">IR A LA FRANQUICIA</button></a>
 						</div> 

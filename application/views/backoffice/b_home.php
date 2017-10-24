@@ -342,33 +342,34 @@
            
       <?php  } ?>            
               
-              
-    <div class="row fix-box-height-byrow">
-        <div class="col-lg-12">
-            <div class="well media media-badges">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-4 box-height-byrow text-center-md flex-items-center mb-xs-30">
-                        <div class="row">
-                            <div class="col-md-8 col-xs-12 pull-left">
-                                <div class="media-body media-middle">
-                                    <div class="mb-20">
-                                    </div>
-                                    <img src="<?php echo site_url()."static/backoffice/images/share.png";?>" alt="Compartir" height="140" width="140" class="text-center"/>
-                                </div>
-                            </div>
-                        </div>
+    
+    
+    <div class="row">
+                                <div class="col-md-3"> 
+				    <div class="panel panel-default">
+						<!-- panel body --> 
+						<div class="panel-body"> 
+							<p>
+                                                            <img src="<?php echo site_url().'static/backoffice/images/share.jpg';?>" alt="share"/>
+                                                        </p>
+						</div> 
+					</div> 
+				</div>
+                                <div class="col-md-9"> 
+					<div class="panel panel-default">
+						<div class="panel-heading clearfix"> 
+                                                    <div class="panel-title"><b>LINK DE PATROCINIO</b></div> 
+						</div> 
+						<!-- panel body --> 
+						<div class="panel-body"> 
+                                                    <p>Estimado usuario usted tiene un enlace para patrocinar a nuevos asociados en 3T debajo de su organización. <br>•	Link de patrocinio: <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>Compartiendo este enlace podrá patrocinar a más personas.<br><b><?php echo replace_vocales_voculeshtml("¿Cómo activar a sus patrocinados?")?> </b><br>•	Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b></p>
+                                                    <br/>
+                                                    <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" target="_blank"><button class="btn btn-success btn-block" type="button">COMPARTIR ENLACE</button></a>
+						</div> 
+					</div> 
+				</div>
                     </div>
-                    <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
-                        <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("LINK DE PATROCINIO");?></p>
-                        <div class="small">
-                            <p>Estimado usuario usted tiene un enlace para patrocinar a nuevos asociados en 3T debajo de su organización. <br>•	Link de patrocinio: <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>Compartiendo este enlace podrá patrocinar a más personas.<br><b><?php echo replace_vocales_voculeshtml("¿Cómo activar a sus patrocinados?")?> </b><br>•	Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b></p>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-       </div> 
-    </div>
     </div>
    </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
