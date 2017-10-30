@@ -3,9 +3,12 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>CRIPTOWIN CMS Admin</title>
+        <title>Travel - Training- Trade</title>
         <base href="<?php echo site_url();?>">
-        <link rel="shortcut icon" href="<?php echo site_url().'static/images/icon.ico';?>">
+        <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
+        <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -44,7 +47,8 @@
     <div id="header" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="<?php echo site_url();?>dashboard/panel">CRIPTOWIN</a> 
+                <a class="brand" href="<?php echo site_url();?>dashboard/panel">
+                    <img src="<?php echo site_url().'static/page_front/images/logo/logo_small.png'?>" alt="logo" width="50"></a>
                 <div class="btn-toolbar pull-right">                        
                 <!-- /btn-group -->
                     <div class="btn-group">
@@ -80,6 +84,7 @@
                                         <ul class="nav nav-list">
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/mesaje_global";?>"><i class="icon-large icon-th"></i>Mensajes</a></li>
                                             <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
                                             <?php } ?>
@@ -104,22 +109,6 @@
                                         </div>
                                     </div>
                             </div>
-                        
-                            <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#pagos">
-                                        Pagos Diarios
-                                        </a>
-                                    </div>
-                                    <div id="pagos" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/pagos_diarios";?>"><i class="icon-large icon-th"></i>Pagos Diarios</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                        
                         <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#cobros">

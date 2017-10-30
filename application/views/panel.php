@@ -12,7 +12,7 @@
                             <div class="navbar navbar-static navbar_as_heading">
                                     <div class="navbar-inner">
                                             <div class="container" style="width: auto;">
-                                                    <a class="brand">Vista Rápida</a>
+                                                <a class="brand"><?php echo replace_vocales_voculeshtml("Vista Rápida");?></a>
                                             </div>
                                     </div>
                             </div>
@@ -156,7 +156,7 @@
                         </div>
                 </div>
 
-                <div id="popular_posts" class="widget_container">
+<!--                <div id="popular_posts" class="widget_container">
                         <div class="well">
                                 <div class="navbar navbar-static navbar_as_heading">
                                         <div class="navbar-inner">
@@ -197,7 +197,7 @@
                                 </table>
                                 <a href="#" class="btn btn-duadua">View More</a>
                         </div>
-                </div>
+                </div>-->
         </div>
 </div>
 <script src="static/cms/js/panel.js"></script>
