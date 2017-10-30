@@ -189,187 +189,136 @@
         </div>
     </div>
         <?php if($obj_customer->active == 0){ ?>
-            <div class="media-body media-middle">
-             <h4 class="media-heading text-uppercase">Selecciona tu Paquete</h4>
-             </div>
-             <div class="row fix-box-height package-box-fix mt-30">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">BASIC</h5>
-                            <p class="title">$125</p>
-                            <p>93 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Paquete Basic"/>
+             <!--PAKAGE SELECTED-->
+        <div class="col-md-12"> 
+            <div class="panel panel-primary">
+                    <div class="panel-heading clearfix"> 
+                            <div class="panel-title">SELECCIONA TU PAQUETE</div> 
+                    </div> 
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2"> 
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/basic.jpg";?>" alt="Paquete Basic"/></p>
+                            <p><button type="button" onclick="make_pedido('1');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
+                       <div class="col-md-2"> 
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/executive.jpg";?>" alt="Paquete Executive"/></p>
+                            <p><button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('1');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                        <div class="col-md-2"> 
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/investor.png";?>" alt="Paquete Investor"/></p>
+                            <p><button type="button" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">EXECUTIVE</h5>
-                            <p class="title">$250</p>
-                            <p>187 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Paquete Executive"/>
+                        <div class="col-md-2"> 
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/business.jpg";?>" alt="Paquete Business"/></p>
+                            <p><button type="button" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
+                        <div class="col-md-2"> 
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/master.jpg";?>" alt="Paquete Master"/></p>
+                            <p><button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
-                           <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div>                        
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">INVESTOR</h5>
-                            <p class="title">$500</p>
-                            <p>375 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Paquete Investor"/>
-                        </div>
-                        </div>
-                           <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div>                        
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">BUSINESS</h5>
-                            <p class="title">$1000</p>
-                            <p>750 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Paquete Business"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div> 
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">MASTER</h5>
-                            <p class="title">$3,000</p>
-                            <p>2250 PUNTOS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Paquete Master"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div> 
-                    </div>
-                </div>
-            </div>
+                        <div class="col-md-1"></div>
+                </div> 
         </div>
     <br/><br/>
-             
-    <div class="row fix-box-height-byrow">
-        <div class="col-lg-12">
-            <div class="well media media-badges">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-4 box-height-byrow text-center-md flex-items-center mb-xs-30">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-12 pull-right-lg text-center">
-                                <div class="media-middle">
-                                <div class="status-frozen"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-8 col-xs-12 pull-left">
-                                <div class="media-body media-middle">
-                                    <div class="mb-20">
-                                    <p class="uppercase ralewaybold22px lh-1 mb-15">CUENTA SELECCIONADA</p>
-                                    </div>
-                                    <?php
-                                    switch ($obj_customer->franchise_id) {
-                                        case 1:
-                                            $amount = "$125";?>
-                                             <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
-                                          <?php  break;
-                                        case 2:
-                                            $amount = "$250"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
-                                            <?php break;
-                                        case 3:
-                                            $amount = "$500"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Cuenta Investor" height="120" width="130"/>
-                                            <?php break;
-                                        case 4:
-                                            $amount = "$1000"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Cuenta Business" height="120" width="130"/>
-                                            <?php break;
-                                        case 5:
-                                            $amount = "$3000"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
-                                            <?php break;
-                                        case 6: 
-                                            $amount = "0 USD";?>
-                                             <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
-                                          <?php  break;
-                                    }?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="spinner"></div>
-                    <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
-                        <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("MODO DE ACTIVACIÓN");?></p>
-                        <div class="small">
-                            <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo $amount;?></a></b> a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b><br/> enviando un mensaje a su patrocinador indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p>
-                        </div>
-                    </div>
-                </div>
+   
+    <!--SEPARATE SECCION-->
+    <div class="row">
+        <div class="col-sm-12 mb-25">
+            <div class="panel panel-default panel-tab-box">
+                <div class="panel-body"></div>
             </div>
         </div>
     </div>
-           
-      <?php  } ?>            
-              
-    
-    
-    <div class="row">
-                                <div class="col-md-3"> 
-				    <div class="panel panel-default">
-						<!-- panel body --> 
-						<div class="panel-body"> 
-							<p>
-                                                            <img src="<?php echo site_url().'static/backoffice/images/share.jpg';?>" alt="share"/>
-                                                        </p>
-						</div> 
-					</div> 
-				</div>
-                                <div class="col-md-9"> 
-					<div class="panel panel-default">
-						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>LINK DE PATROCINIO</b></div> 
-						</div> 
-						<!-- panel body --> 
-						<div class="panel-body"> 
-                                                    <p>Estimado usuario usted tiene un enlace para patrocinar a nuevos asociados en 3T debajo de su organización. <br>•	Link de patrocinio: <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>Compartiendo este enlace podrá patrocinar a más personas.<br><b><?php echo replace_vocales_voculeshtml("¿Cómo activar a sus patrocinados?")?> </b><br>•	Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b></p>
-                                                    <br/>
-                                                    <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" target="_blank"><button class="btn btn-success btn-block" type="button">COMPARTIR ENLACE</button></a>
-						</div> 
-					</div> 
-				</div>
+    <!--END SEPARATE SECCION-->
+   
+    <!--PAKAGE SELECTED-->
+        <div class="col-md-12"> 
+            <div class="panel panel-info">
+                    <div class="panel-heading clearfix"> 
+                            <div class="panel-title">CUENTA SELECCIONADA</div> 
+                    </div> 
+                        <div class="col-md-3"> 
+                            <div class="panel panel-default">
+                                        <!-- panel body --> 
+                                        <div class="panel-body" style="vertical-align: central !important; margin-left: 20%"> 
+                                                <p>
+                                                     <?php
+                                                        switch ($obj_customer->franchise_id) {
+                                                            case 1:
+                                                                $amount = "$125";?>
+                                                                 <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
+                                                              <?php  break;
+                                                            case 2:
+                                                                $amount = "$250"?>
+                                                                <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
+                                                                <?php break;
+                                                            case 3:
+                                                                $amount = "$500"?>
+                                                                <img src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Cuenta Investor" height="120" width="130"/>
+                                                                <?php break;
+                                                            case 4:
+                                                                $amount = "$1000"?>
+                                                                <img src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Cuenta Business" height="120" width="130"/>
+                                                                <?php break;
+                                                            case 5:
+                                                                $amount = "$3000"?>
+                                                                <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
+                                                                <?php break;
+                                                            case 6: 
+                                                                $amount = "0 USD";?>
+                                                                 <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
+                                                              <?php  break;
+                                                        }?>
+                                                </p>
+                                        </div> 
+                                </div> 
+                        </div>
+                        <div class="col-md-9"> 
+                                <div class="panel panel-default">
+                                        <div class="panel-heading clearfix"> 
+                                            <div class="panel-title"><b><?php echo replace_vocales_voculeshtml("MODO DE ACTIVACIÓN");?></b></div> 
+                                        </div> 
+                                        <!-- panel body --> 
+                                        <div id="spinner"></div>
+                                        <div class="panel-body"> 
+                                             <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo $amount;?></a></b> a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b><br/> Envia un mensaje dando click en el boton de abajo indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p><br/>
+                                             <div class="bs-example">
+                                                <button type="button" class="btn btn-black btn-block"><i class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">Enviar Mensaje de Confirmación</span></button>
+                                            </div>
+                                        </div> 
+                                </div> 
+                        </div>
+                </div> 
+        </div>
+      <?php  } ?>         
+     
+    <!--LINK OF SPONSOR-->
+            <!--<div class="row">-->
+                    <div class="col-md-3"> 
+                        <div class="panel panel-default">
+                                    <!-- panel body --> 
+                                    <div class="panel-body"> 
+                                            <p>
+                                                <img src="<?php echo site_url().'static/backoffice/images/share.jpg';?>" alt="share"/>
+                                            </p>
+                                    </div> 
+                            </div> 
                     </div>
-            </div>
+                    <div class="col-md-9"> 
+                            <div class="panel panel-default">
+                                    <div class="panel-heading clearfix"> 
+                                        <div class="panel-title"><b>LINK DE PATROCINIO</b></div> 
+                                    </div> 
+                                    <!-- panel body --> 
+                                    <div class="panel-body"> 
+                                        <p>Estimado usuario usted tiene un enlace para patrocinar a nuevos asociados en 3T debajo de su organización. <br>•	Link de patrocinio: <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>Compartiendo este enlace podrá patrocinar a más personas.<br><b><?php echo replace_vocales_voculeshtml("¿Cómo activar a sus patrocinados?")?> </b><br>•	Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b></p>
+                                        <br/>
+                                        <a href="<?php echo site_url().'register/afiliate/'.str_to_minuscula($obj_customer->username);?>" target="_blank"><button class="btn btn-success btn-block" type="button">COMPARTIR ENLACE</button></a>
+                                    </div> 
+                            </div> 
+                    </div>
+            <!--</div>-->
+        </div>
     </div>
    </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
