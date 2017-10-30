@@ -29,7 +29,6 @@
                                 <th>E-MAIL</th>
                                 <th>PAQUETE</th>
                                 <th>ACTIVACIÓN</th> 
-                                <th>CALIFICACIÓN BINARIO</th> 
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
                             </tr>
@@ -53,16 +52,6 @@
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
                                 <td align="center">
-                                    <?php if ($value->calification == 0) {
-                                        $valor = "Inactivo";
-                                        $stilo = "label label-important";
-                                    }else{
-                                        $valor = "Activo";
-                                        $stilo = "label label-success";
-                                    } ?>
-                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
-                                </td>
-                                <td align="center">
                                     <?php if ($value->status_value == 0) {
                                         $valor = "Inactivo";
                                         $stilo = "label label-important";
@@ -75,12 +64,7 @@
                                 <td>
                                     <div class="operation">
                                             <div class="btn-group">
-                                                <?php if ($value->calification == 0) { ?>
-                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Activar Binario</button>
-                                                <?php }else{ ?>
-                                                    <button class="btn btn-small" onclick="no_active('<?php echo $value->customer_id;?>');">Desactivar Binario</button>
-                                                <?php } ?>
-                                                    &nbsp;<button class="btn btn-small" onclick="edit_customer('<?php echo $value->customer_id;?>');">Editar</button>
+                                                <button class="btn btn-small" onclick="edit_customer('<?php echo $value->customer_id;?>');">Editar</button>
                                           </div>
                                     </div>
                                 </td>

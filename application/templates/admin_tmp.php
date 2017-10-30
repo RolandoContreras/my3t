@@ -3,7 +3,7 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>Travel - Training- Trade</title>
+        <title>CMS - 3T - Travel - Training- Trade</title>
         <base href="<?php echo site_url();?>">
         <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
         <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">

@@ -19,7 +19,6 @@ class D_customer extends CI_Controller{
                                     customer.first_name,
                                     customer.email,
                                     customer.last_name,
-                                    customer.calification,
                                     customer.created_at,
                                     customer.active,
                                     franchise.name as franchise,
@@ -85,14 +84,14 @@ class D_customer extends CI_Controller{
         //fecha inicio de pago
         $date_start =  $this->input->post('date_start');
         //fecha final de pago
-        $date_end =  $this->input->post('date_end');
+//        $date_end =  $this->input->post('date_end');
         //financiada
         $financy =  $this->input->post('financy');
         //position temporal
         $position_temporal =  $this->input->post('position_temporal');
         //activo o pagado
-        $point_calification_left =  $this->input->post('point_calification_left');
-        $point_calification_rigth =  $this->input->post('point_calification_rigth');
+//        $point_calification_left =  $this->input->post('point_calification_left');
+//        $point_calification_rigth =  $this->input->post('point_calification_rigth');
         $identificador =  $this->input->post('identificador');
         //puntos izquierda
         $point_left =  $this->input->post('point_left');
@@ -119,16 +118,16 @@ class D_customer extends CI_Controller{
                 'date_end' => $date_end,  
                 'financy' => $financy,  
                 'position_temporal' => $position_temporal,  
-                'point_calification_left' => $point_calification_left,  
-                'point_calification_rigth' => $point_calification_rigth,  
+//                'point_calification_left' => $point_calification_left,  
+//                'point_calification_rigth' => $point_calification_rigth,  
                 'identificador' => $identificador,  
                 'point_left' => $point_left,  
                 'point_rigth' => $point_rigth,  
                 'birth_date' => $this->input->post('fecha_de_nacimiento'),  
                 'phone' => $this->input->post('phone'),
-                'bank_name' => $this->input->post('bank_name'),
-                'titular_name' => $this->input->post('titular_name'),
-                'bank_account' => $this->input->post('bank_account'),
+//                'bank_name' => $this->input->post('bank_name'),
+//                'titular_name' => $this->input->post('titular_name'),
+//                'bank_account' => $this->input->post('bank_account'),
                 'country' => $this->input->post('pais'),
                 'region' => $this->input->post('region'),
                 'franchise_id' => $franchise,
@@ -136,7 +135,7 @@ class D_customer extends CI_Controller{
                 'address' => $this->input->post('address'),
                 'btc_address' => $this->input->post('btc_address'),
                 'city' => $this->input->post('city'),
-                'calification' => $this->input->post('calification'),
+//                'calification' => $this->input->post('calification'),
                 'status_value' => $this->input->post('status_value'),
                 'updated_at' => date("Y-m-d H:i:s"),
                 'updated_by' => $_SESSION['usercms']['user_id']
@@ -144,52 +143,52 @@ class D_customer extends CI_Controller{
             //SAVE DATA IN TABLE    
             $this->obj_customer->update($customer_id, $data);
             
-            if($franchise == 2){
-            //CHANGE TO BASIC
-             $data = array(
-                        'point_calification_left' => 100,
-                        'point_calification_rigth' => 100,
-                        'updated_by' => $customer_id,
-                        'updated_at' => date("Y-m-d H:i:s")
-                    ); 
-                    $this->obj_customer->update($customer_id,$data);
-            }elseif($franchise == 3){
-                //CHANGE TO PLATINIUM
-                 $data = array(
-                            'point_calification_left' => 250,
-                            'point_calification_rigth' => 250,
-                            'updated_by' => $customer_id,
-                            'updated_at' => date("Y-m-d H:i:s")
-                        ); 
-                        $this->obj_customer->update($customer_id,$data);
-            }elseif($franchise == 4){
-                //CHANGE TO GOLD
-                 $data = array(
-                            'point_calification_left' => 500,
-                            'point_calification_rigth' => 500,
-                            'updated_by' => $customer_id,
-                            'updated_at' => date("Y-m-d H:i:s")
-                        ); 
-                        $this->obj_customer->update($customer_id,$data);
-            }elseif($franchise == 5){
-                //CHANGE TO VIP
-                 $data = array(
-                            'point_calification_left' => 1000,
-                            'point_calification_rigth' => 1000,
-                            'updated_by' => $customer_id,
-                            'updated_at' => date("Y-m-d H:i:s")
-                        ); 
-                        $this->obj_customer->update($customer_id,$data);
-            }elseif($franchise == 6){
-                //CHANGE TO MEMBERSHIP
-                 $data = array(
-                            'point_calification_left' => 0,
-                            'point_calification_rigth' => 0,
-                            'updated_by' => $customer_id,
-                            'updated_at' => date("Y-m-d H:i:s")
-                        ); 
-                        $this->obj_customer->update($customer_id,$data);
-            }
+//            if($franchise == 2){
+//            //CHANGE TO BASIC
+//             $data = array(
+//                        'point_calification_left' => 100,
+//                        'point_calification_rigth' => 100,
+//                        'updated_by' => $customer_id,
+//                        'updated_at' => date("Y-m-d H:i:s")
+//                    ); 
+//                    $this->obj_customer->update($customer_id,$data);
+//            }elseif($franchise == 3){
+//                //CHANGE TO PLATINIUM
+//                 $data = array(
+//                            'point_calification_left' => 250,
+//                            'point_calification_rigth' => 250,
+//                            'updated_by' => $customer_id,
+//                            'updated_at' => date("Y-m-d H:i:s")
+//                        ); 
+//                        $this->obj_customer->update($customer_id,$data);
+//            }elseif($franchise == 4){
+//                //CHANGE TO GOLD
+//                 $data = array(
+//                            'point_calification_left' => 500,
+//                            'point_calification_rigth' => 500,
+//                            'updated_by' => $customer_id,
+//                            'updated_at' => date("Y-m-d H:i:s")
+//                        ); 
+//                        $this->obj_customer->update($customer_id,$data);
+//            }elseif($franchise == 5){
+//                //CHANGE TO VIP
+//                 $data = array(
+//                            'point_calification_left' => 1000,
+//                            'point_calification_rigth' => 1000,
+//                            'updated_by' => $customer_id,
+//                            'updated_at' => date("Y-m-d H:i:s")
+//                        ); 
+//                        $this->obj_customer->update($customer_id,$data);
+//            }elseif($franchise == 6){
+//                //CHANGE TO MEMBERSHIP
+//                 $data = array(
+//                            'point_calification_left' => 0,
+//                            'point_calification_rigth' => 0,
+//                            'updated_by' => $customer_id,
+//                            'updated_at' => date("Y-m-d H:i:s")
+//                        ); 
+//                        $this->obj_customer->update($customer_id,$data);
+//            }
             
             
         redirect(site_url()."dashboard/clientes");

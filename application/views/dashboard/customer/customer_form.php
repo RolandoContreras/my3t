@@ -114,27 +114,27 @@
               <br><br>
               <strong>Telefono:</strong><br>
               <input type="text" id="phone" name="phone" class="input-small-fluid" placeholder="Telefono" value="<?php echo isset($obj_customer->phone)?$obj_customer->phone:"";?>">
-              <br><br><hr>
-              <strong>Nombre del Banco:</strong><br>
+              <!--<br><br><hr>-->
+<!--              <strong>Nombre del Banco:</strong><br>
               <input type="text" id="bank_name" name="bank_name" class="input-small-fluid" placeholder="Nombre del Banco" value="<?php echo isset($obj_customer->bank_name)?$obj_customer->bank_name:"";?>">
               <br><br>
               <strong>Nombre del Títular:</strong><br>
               <input type="text" id="titular_name" name="titular_name" class="input-small-fluid" placeholder="Nombre del Títular" value="<?php echo isset($obj_customer->titular_name)?$obj_customer->titular_name:"";?>">
               <br><br>
               <strong># Cuenta Bancaria:</strong><br>
-              <textarea name="bank_account" id="bank_account" placeholder="Cuenta Bancaria ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->bank_account)?$obj_customer->bank_account:"";?></textarea>
+              <textarea name="bank_account" id="bank_account" placeholder="Cuenta Bancaria ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->bank_account)?$obj_customer->bank_account:"";?></textarea>-->
               
-              <br><br><hr>
-              <strong>Fecha Inicio de Pagos:</strong><br>
-              <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="Fecha de Inicio" value="<?php echo isset($obj_customer->date_start)?$obj_customer->date_start:"";?>">
-              <br><br>
-              <strong>Fecha Termino de Pagos:</strong><br>
-              <input type="text" id="date_end" name="date_end" class="input-small-fluid" placeholder="Fecha de Termino" value="<?php echo isset($obj_customer->date_end)?$obj_customer->date_end:"";?>">
+<!--              <br><hr>
+              <strong><?php echo replace_vocales_voculeshtml("Fecha de Creación:");?></strong><br>
+              <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="Fecha de Inicio" value="<?php echo isset($obj_customer->created_at)?  formato_fecha_barras($obj_customer->created_at):"";?>">
+              --><br><br>
+              <strong><?php echo replace_vocales_voculeshtml("Fecha de Activación:");?></strong><br>
+              <input type="text" id="date_end" name="date_end" class="input-small-fluid" placeholder="Fecha de Termino" value="<?php echo isset($obj_customer->date_start)?$obj_customer->date_start:"";?>">
               <br><br>
               
               <div class="inner">
                         <strong>Financiada:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <select name="financy" id="financy" disabled="">
+                        <select name="financy" id="financy">
                                     <option value="">[ Seleccionar ]</option>
                                     <option value="1" <?php if(isset($obj_customer)){
                                         if($obj_customer->financy == 1){ echo "selected";}
@@ -180,7 +180,7 @@
               <br><br>
               <strong>Dirección de BTC:</strong><br>
               <input type="text" id="btc_address" name="btc_address" class="input-xlarge-fluid" placeholder="Direccion de BitCoin" value="<?php echo isset($obj_customer->btc_address)?$obj_customer->btc_address:"";?>">
-                <br><br>
+<!--                <br><br>
                 <div class="well nomargin" style="width: 200px;">
                     <div class="inner">
                         <strong>Calificado para Binario:</strong>
@@ -194,7 +194,7 @@
                                     }else{echo "";} ?>>Activo</option>
                         </select>
                     </div>
-                </div>
+                </div>-->
                 <br><br>
                 <div class="well nomargin" style="width: 200px;">
                     <div class="inner">
@@ -211,12 +211,12 @@
                     </div>
                 </div>
                 <br><br>
-                <strong>Puntos Calificación Izquierda:</strong><br>
+<!--                <strong>Puntos Calificación Izquierda:</strong><br>
                 <input type="text" id="point_calification_left" name="point_calification_left" class="input-small-fluid" placeholder="Puntos Calificar Izquierda" value="<?php echo isset($obj_customer->point_calification_left)?$obj_customer->point_calification_left:"";?>">
                 <br><br>
                 <strong>Puntos Calificación Derecha:</strong><br>
                 <input type="text" id="point_calification_rigth" name="point_calification_rigth" class="input-small-fluid" placeholder="Puntos Calificar Derecha" value="<?php echo isset($obj_customer->point_calification_rigth)?$obj_customer->point_calification_rigth:"";?>">
-                <br><br>
+                <br><br>-->
                 <strong>Indicador Posición:</strong><br>
                 <textarea name="identificador" id="identificador" placeholder="Identificador ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->identificador)?$obj_customer->identificador:"";?></textarea>
                 <br><br>
