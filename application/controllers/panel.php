@@ -41,10 +41,16 @@ class Panel extends CI_Controller{
         //TOTAL CUSTOMER
         $obj_customer = $obj_customer->customer_id;
         
+        //GET BTC PRICE
+        $params = array("select" =>"otros_id, precio_btc as bitcoin");
+        $obj_btc = $this->obj_otros->get_search_row($params);
+        $bitcoin = $obj_btc->bitcoin;
+        
         $modulos ='Home'; 
         $link_modulo =  site_url().$modulos; 
         $seccion = 'Vista global';        
 
+        $this->tmp_mastercms->set('bitcoin',$bitcoin);
         $this->tmp_mastercms->set('obj_financiado',$obj_financiado);
         $this->tmp_mastercms->set('obj_customer',$obj_customer);
         $this->tmp_mastercms->set('obj_last_comment',$obj_last_comment);
