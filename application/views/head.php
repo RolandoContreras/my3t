@@ -83,7 +83,7 @@ display: none;
             switch ($link) {
                     case "login": ?>
                     <style type="text/css" data-type="vc_shortcodes-custom-css">
-                        .vc_custom_1497446612800{margin-bottom: 0px !important;background-image: url(static/page_front/images/ciudad.jpeg?id=370) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1498222750047{padding-top: 0px !important;}.vc_custom_1498743833540{margin-bottom: 0px !important;}.vc_custom_1497012475617{margin-bottom: 0px !important;}</style>
+                        .vc_custom_1497446612800{margin-bottom: 0px !important;background-image: url(static/page_front/images/ciudad.jpg?id=370) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1498222750047{padding-top: 0px !important;}.vc_custom_1498743833540{margin-bottom: 0px !important;}.vc_custom_1497012475617{margin-bottom: 0px !important;}</style>
                     <?php break;
             }
         }
