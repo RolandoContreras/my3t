@@ -13,7 +13,7 @@
             <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-93">
-            <a href="#"><span><?php echo replace_vocales_voculeshtml("¡Regístrate!");?></span></a>
+            <a href="<?php echo site_url().'register';?>"><span><?php echo replace_vocales_voculeshtml("¡Regístrate!");?></span></a>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
             <a href="<?php echo site_url().'login';?>"><span>Login</span></a>

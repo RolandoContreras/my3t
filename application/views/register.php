@@ -275,7 +275,7 @@ labVcMaps.push({
                                                         </div>    
                                                     </div>
                                             <?php }else{ ?>
-                                                <input type="hidden"  readonly="readonly" id="customer_id" name="customer_id" value="1"/>
+                                                <input type="hidden"  readonly="readonly" id="customer_id" name="customer_id" value="3"/>
                                                 <input type="hidden"  readonly="readonly" id="pierna_customer"  name="pierna_customer" value="1"/>
                                             <?php } ?>
                                             <div class="col-md-12">&nbsp;</div>   

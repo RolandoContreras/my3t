@@ -158,7 +158,7 @@
 			style="z-index: 9;background-color:rgb(255,255,255);"> </div>
 
                         
-                        <!--data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"registro\/","delay":""}]'-->
+                        
                         
                         
 		<!-- LAYER NR. 6 -->
@@ -171,7 +171,7 @@
 			data-whitespace="nowrap"
  
 			data-type="button" 
-			data-actions=''
+			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"register\/","delay":""}]'
 			data-responsive_offset="on" 
 			data-responsive="off"
 			data-frames='[{"delay":3850,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","ease":"Power1.easeIn"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(255,204,0);bc:transparent;"}]'
@@ -310,7 +310,7 @@
 			data-whitespace="nowrap"
  
 			data-type="button" 
-			data-actions=''
+			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"register\/","delay":""}]'
 			data-responsive_offset="on" 
 			data-responsive="off"
 			data-frames='[{"delay":3850,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","ease":"Power1.easeIn"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(255,204,0);bc:transparent;"}]'
@@ -448,7 +448,7 @@
 			data-whitespace="nowrap"
  
 			data-type="button" 
-			data-actions=''
+			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"register\/","delay":""}]'
 			data-responsive_offset="on" 
 			data-responsive="off"
 			data-frames='[{"delay":3850,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","ease":"Power1.easeIn"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(255,204,0);bc:transparent;"}]'
