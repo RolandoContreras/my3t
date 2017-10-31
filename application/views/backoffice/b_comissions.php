@@ -27,9 +27,12 @@
                                           <div class="col-lg-9">
                                              <select class="form-control" name="concepto" id="concepto" required>
                                                 <option value="">***Seleccione***</option>
-                                                <option value="1" <?php if($bonus_id==1){echo "selected";}?>>Bono Referido Directo</option>
-                                                <option value="2" <?php if($bonus_id==2){echo "selected";}?>>Bono Rentabilidad</option>
-                                                <option value="3" <?php if($bonus_id==3){echo "selected";}?>>Bono Binario</option>
+                                                <option value="1" <?php if($bonus_id==1){echo "selected";}?>>Bono Patrocinio</option>
+                                                <option value="2" <?php if($bonus_id==2){echo "selected";}?>>Bono Team Builder</option>
+                                                <option value="3" <?php if($bonus_id==3){echo "selected";}?>>Bono Productor</option>
+                                                <option value="4" <?php if($bonus_id==4){echo "selected";}?>>Bono Rendimiento</option>
+                                                <option value="5" <?php if($bonus_id==5){echo "selected";}?>>Bono Unilevel</option>
+                                                <option value="5" <?php if($bonus_id==5){echo "selected";}?>>Bono Global</option> 
                                              </select>
                                           </div>
                                        </div>
