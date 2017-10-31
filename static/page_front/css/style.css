@@ -10,8 +10,8 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: kalium
 */
 .text-danger{
-    color: red;
+    color: red !important;
 }
 .text-success{
-    color: green;
+    color: green !important;
 }

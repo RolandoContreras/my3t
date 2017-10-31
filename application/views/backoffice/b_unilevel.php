@@ -16,10 +16,12 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default network-tree-panel">
                            <div class="cont-arbol">
-                               <div class="alert alert-inverse pull-left" style="opacity: 0.7;" aria-label="Right Align"></div>
+                               <div class="alert alert-inverse pull-left" style="opacity: 0.7;" aria-label="Right Align">
+                                   <a href="<?php echo site_url().'backoffice/unilevel';?>"><button class="btn btn-success btn-outline" type="button">Volver Al Inicio</button></a>
+                                   <a href="javascript:history.back(1)"><button class="btn btn-success btn-outline" type="button"><?php echo replace_vocales_voculeshtml("Volver Atrás");?></button></a>
+                               </div>
                                <div class="alert alert-inverse pull-right" style="opacity: 0.7;" aria-label="Right Align">
-                                        <b>Patrocinios Directos</b>
-                                         <span class="label label-primary"><?php echo $obj_customer->direct;?></span>
+                                   <button class="btn btn-success btn-outline" type="button">Patrocinios Directos: <?php echo $obj_customer->direct;?></button>
                                 </div>
                             <div class="tree" style="width: 1000%;"> 
                                 <div class="col-lg-12"><hr class="style-2"></div>
@@ -68,15 +70,11 @@
                                                   <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="paquete" width="150">
                                               </div>
                                             </div>
-                                            <div class="col-sm-2" style="padding: 0;">
-                                              <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                  <?php if($obj_customer->active == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
-                                                <span class="<?php echo $style;?>"></span>
-                                              </span>
-                                            </div>
+                                                  <?php if($obj_customer->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                           </div>
                                           </a>
-                                            <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$obj_customer->customer_id;?>"><?php echo $obj_customer->username;?></a></span>
+                                        <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$obj_customer->customer_id;?>"><?php echo $obj_customer->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                            
                                                 </span>
                             <!--BEGIN SECOND LEVEL-->
                             <?php 
@@ -128,15 +126,10 @@
                                             <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="paquete" width="150">
                                               </div>
                                             </div>
-                                            <div class="col-sm-2" style="padding: 0;">
-                                              <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                  <?php if($value->active == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
-                                                <span class="<?php echo $style;?>"></span>
-                                              </span>
-                                            </div>
                                           </div>
                                           </a>
-                                            <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value->customer_id;?>"><?php echo $value->username;?></a></span>
+                                            <?php if($value->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
+                                            <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value->customer_id;?>"><?php echo $value->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
                                             <br><br><br>
                                         </li>
                                         
@@ -159,7 +152,6 @@
 </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 $('[data-toggle="popover"]').popover({ html : true });
@@ -167,3 +159,4 @@ $('[data-toggle="popover"]').popover({ html : true });
 });
 </script>
 <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
+<link rel="stylesheet" href="<?php echo site_url().'static/page_front/css/style.css';?>" id="style-css">
