@@ -103,6 +103,25 @@
                             </div>
                             <div class="title section-title">
                                     <p>&nbsp;</p>
+                                    <h2><?php echo replace_vocales_voculeshtml("STAFF FOREX");?></h2>
+                            </div>
+                            <div class="project-description">
+                                    <div class="post-formatting">
+                                        <h4><?php echo replace_vocales_voculeshtml("Felipe Arguedas");?></h4>
+                                        <p><?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Fue analista financiero para la firma europea X-Trade Brokers (XTB) y lideró el equipo comercial en sus oficinas de Perú. Posteriormente, se desempeñó como Research Analyst para Golden Capital FX, estando a la cabeza del análisis de mercado de la empresa.");?></p>
+                                        <p>&nbsp;</p>
+                                        <p><?php echo replace_vocales_voculeshtml("En los últimos 4 años, se ha desempeñado como analista de derivados para mercados americanos, europeos y asiáticos. Al mismo tiempo, ha impartido cursos de formación bursátil para Metodotrading.com y El Instituto de la Moneda de Lima. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio, América Noticias, Canal N e Investing.com.");?></p>
+                                        <p>&nbsp;</p>
+                                        <h4><?php echo replace_vocales_voculeshtml("Gabriel Gutiérrez");?></h4>
+                                        <p><?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Ejerció durante 4 años como trader para el X-Trader Brokers (XTB). En los últimos años, se ha desempeñado como asesor de inversiones bursátiles para Sudamérica y Europa. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio y RPP Noticias. Además, ha impartido cursos de formación bursátil para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura en Perú.");?></p>
+                                        <p>&nbsp;</p>
+                                        <h4><?php echo replace_vocales_voculeshtml("Oscar Fernandez");?></h4>
+                                        <p><?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Analista de Inversiones bursátiles para diferentes brókers de mercados financieros líderes en el Perú y Latinoamérica, como analista ha desarrollado diferentes alternativas de inversión y ha dictado distintos seminarios de bolsa de valores, tanto en el MBA de finanzas de la UPC y en las compañías donde ha trabajado, ha escrito informes de mercado de valores y economía para distintos medios de comunicación a nivel nacional.");?></p>
+                                        
+                                    </div>
+                            </div>
+                            <div class="title section-title">
+                                    <p>&nbsp;</p>
                                     <h2><?php echo replace_vocales_voculeshtml("OFICINA");?></h2>
                             </div>
                             <div class="project-description">
@@ -123,7 +142,7 @@
 					<a data-lightbox-gallery="post-gallery">
                                             <style>.img-459 {background-color: #004878;}</style>	
                                                  <span class="image-placeholder img-459" style="padding-bottom:56.25000000%">
-                                                     <img width="1440" height="810" class="lazyload" alt="" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/3t.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/3t.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/3tx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/3tx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/3tx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/3tx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/3tx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/3tx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/3tx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                                     <img width="1440" height="810" class="lazyload" alt="Empresa" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/3t.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/3t.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/3tx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/3tx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/3tx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/3tx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/3tx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/3tx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/3tx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                                  </span>
 					</a>
 					<div class="caption">3T Company</div>
@@ -135,7 +154,7 @@
                                             <a title="Magic Vacations" data-lightbox-gallery="post-gallery-1">
                                                 <style>.img-942 {background-color: #483048;}</style>	
                                                 <span class="image-placeholder img-942" style="padding-bottom:66.66666667%">
-                                                    <img width="1440" height="960" class="lazyload" alt="" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/magic.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/magic.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/magicx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/magicx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/magicx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/magicx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/magicx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/magicx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/magicx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                                    <img width="1440" height="960" class="lazyload" alt="Magic Vacation" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/magic.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/magic.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/magicx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/magicx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/magicx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/magicx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/magicx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/magicx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/magicx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                                 </span>
                                             </a>
 					</div>
@@ -147,7 +166,7 @@
                                             <a title="Productos" data-lightbox-gallery="post-gallery-1">
                                                 <style>.img-942 {background-color: #483048;}</style>	
                                                 <span class="image-placeholder img-942" style="padding-bottom:66.66666667%">
-                                                    <img width="1440" height="960" class="lazyload" alt="" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/producto.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/producto.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/productox300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/productox768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/productox1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/productox1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/productox806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/productox558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/productox655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                                    <img width="1440" height="960" class="lazyload" alt="Prodcutos" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/producto.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/producto.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/productox300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/productox768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/productox1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/productox1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/productox806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/productox558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/productox655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                                 </span>
                                             </a>
 					</div>
@@ -158,7 +177,7 @@
                                         <a data-lightbox-gallery="post-gallery">
                                             <style>.img-452 {background-color: #d8a878;}</style>	
                                             <span class="image-placeholder img-452" style="padding-bottom:62.50000000%">
-                                                <img width="1440" height="960" class="lazyload" alt="" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/frank.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/frank.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/frankx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/frankx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/frankx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/frankx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/frnkx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/frankx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/frankx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                                <img width="1440" height="960" class="lazyload" alt="Frank Garcia" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/frank.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/frank.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/frankx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/frankx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/frankx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/frankx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/frnkx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/frankx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/frankx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                             </span>
                                         </a>
                                         <div class="caption">Frank Garcia</div>
@@ -167,12 +186,23 @@
                                 <div class="col-xs-12">
                                     <div class="photo wow fadeInLab">
                                     	<a data-lightbox-gallery="post-gallery">
-                                            <style>.img-941 {background-color: #1860d8;}</style>	
+                                            <style>.img-942 {background-color: #1860d8;}</style>	
                                             <span class="image-placeholder img-941" style="padding-bottom:66.14285714%">
-                                                <img width="1440" height="960" class="lazyload" alt="" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/sile.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/sile.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/silex300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/silex768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/silex1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/silex1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/silex806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/silex558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/silex655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                                <img width="1440" height="960" class="lazyload" alt="Silene Carrasco" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/sile.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/sile.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/silex300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/silex768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/silex1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/silex1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/silex806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/silex558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/silex655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                             </span>
                                         </a>
                                         <div class="caption">Silene Carrasco Cruz</div>
+                                    </div>
+				</div>
+                                <div class="col-xs-12">
+                                    <div class="photo wow fadeInLab">
+                                        <a data-lightbox-gallery="post-gallery">
+                                            <style>.img-942 {background-color: #d8a878;}</style>	
+                                            <span class="image-placeholder img-452" style="padding-bottom:62.50000000%">
+                                                <img width="1440" height="960" class="lazyload" alt="forex" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/staff_forex.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/staff_forex.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/staff_forexx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/staff_forexx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/staff_forexx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/staff_forexx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/staff_forex806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/staff_forexx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/staff_forexx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                            </span>
+                                        </a>
+                                        <div class="caption">STAFF FOREX</div>
                                     </div>
 				</div>
                             </div>
