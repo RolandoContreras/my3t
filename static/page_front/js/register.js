@@ -18,9 +18,9 @@ function validate_2passwordr(password2) {
         var password1 = document.getElementById("clave").value;
         var password2 = document.getElementById("repita_clave").value;
         if(password1 == password2){
-            $(".alert-1").removeClass('text-danger').addClass('text-success').html("las contrase&ntilde;as coinciden");
+            $(".alert-1").removeClass('text-danger').addClass('text-success').html("Las contrase&ntilde;as coinciden <i class='fa fa-check-square-o' aria-hidden='true'></i>");
         }else{
-            $(".alert-1").removeClass('text-danger').addClass('text-danger').html("las contrase&ntilde;as no coinciden");
+            $(".alert-1").removeClass('text-success').addClass('text-danger').html("Las contrase&ntilde;as no coinciden <i class='fa fa-times-circle-o' aria-hidden='true'></i>");
         }
 }
 

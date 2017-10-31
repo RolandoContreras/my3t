@@ -10,26 +10,9 @@
 <!--END HEAD-->
 <body class="page-template-default page page-id-12 wpb-js-composer js-comp-ver-5.3 vc_responsive header-absolute">
     <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<div class="mobile-menu-container">
-		<ul id="menu-main-menu-1" class="menu">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
-                        <a href=""><span>Acerca</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href=""><span>Contacto</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href=""><span>Login</span></a>
-                    </li>
-                </ul>
-            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
-	</div>
+    	<!--GET NAV MOBILE-->
+           <?php $this->load->view("nav_mobile");?>
+           <!--END GET NAV MOBILE-->
     </div>
 
 <div class="mobile-menu-overlay"></div>
@@ -249,7 +232,7 @@ labVcMaps.push({
                 <div class="vc_column-inner vc_custom_1498222572351">
                     <div class="wpb_wrapper">
                         <div class="section-title ">
-                        <H2><?php echo replace_vocales_voculeshtml("Formulario de Registro");?></H2>
+                        <h1><?php echo replace_vocales_voculeshtml("Formulario de Registro");?></h1>
                         </div>
                         <div class="vc-parent-row row-default">
                             <div class="vc_row wpb_row vc_inner vc_row-fluid">
@@ -262,9 +245,11 @@ labVcMaps.push({
                                                         <div class="row">
                                                 <?php if(isset($obj_customer)){ ?>
                                                     <div class="col-md-12">
-                                                                <div class="form-grp">
-                                                                    <label><b>PATROCINADOR</b></label>
-                                                                        <input type="text"  readonly="readonly" value="<?php  
+                                                        <div class="col-md-3">
+                                                            <label>PATROCINADOR</label>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input type="text" style="border-style: outset !important; width:100% !important" readonly="readonly" value="<?php  
                                                                         if(isset($obj_customer->username)){
                                                                             echo $obj_customer->username;
                                                                         }?>" placeholder="<?php 
@@ -287,130 +272,183 @@ labVcMaps.push({
                                                                         if(isset($obj_customer->position_temporal)){
                                                                             echo $obj_customer->position_temporal;
                                                                         }?>"/>
-                                                                </div>
-                                                            </div>
+                                                        </div>    
+                                                    </div>
                                             <?php }else{ ?>
                                                 <input type="hidden"  readonly="readonly" id="customer_id" name="customer_id" value="1"/>
                                                 <input type="hidden"  readonly="readonly" id="pierna_customer"  name="pierna_customer" value="1"/>
                                             <?php } ?>
-
-
+                                            <div class="col-md-12">&nbsp;</div>   
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                  <label><b>USUARIO</b></label>
-                                                <input onblur="validate_username(this.value);" id="usuario" type="text" name="usuario">
-                                                <span class="alert-0"></span>
-                                              </div>
+                                                  <div class="col-md-3">
+                                                      <label>USUARIO</label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input onblur="validate_username(this.value);" id="usuario" type="text" name="usuario" style="border-style: outset !important; width:100% !important">
+                                                      <span class="alert-0"></span>
+                                                      <!--<span class="success-msg1">Usuario Disponible! <i class="fa fa-check-square-o" aria-hidden="true"></i></span>-->
+                                                      <!--<span class="alert-0"></span>-->
+                                                  </div>    
                                             </div>
-                                          <div class="col-md-12">
-                                          <div class="form-grp">
-                                              <label><b><?php echo replace_vocales_voculeshtml("CONTRASEÑA");?></b></label>
-                                              <input id="clave" type="password" name="clave">
-                                          </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                          <div class="form-grp">
-                                            <label><b><?php echo replace_vocales_voculeshtml("REPETIR CONTRASEÑA");?></b></label>
-                                            <input id="repita_clave" onblur="validate_2passwordr(this.value);" type="password" name="repita_clave">
-                                            <span class="alert-1"></span>
-                                          </div>
-                                        </div> 
+                                                
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                <label>NOMBRES</label>
-                                                <input id="name" type="text" name="name">
-                                              </div>
+                                                  <div class="col-md-3">
+                                                      <label><?php echo replace_vocales_voculeshtml("CONTRASEÑA");?></label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="clave" type="password" name="clave" style="border-style: outset !important; width:100% !important">
+                                                  </div>    
                                             </div>
+                                          
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                <label>APELLIDOS</label>
-                                                <input id="last_name" type="text" name="last_name">
-                                              </div>
+                                                  <div class="col-md-3">
+                                                      <label><?php echo replace_vocales_voculeshtml("REPETIR CONTRASEÑA");?></label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="repita_clave" onblur="validate_2passwordr(this.value);" type="password" name="repita_clave" style="border-style: outset !important; width:100% !important">
+                                                      <span class="alert-1"></span>
+                                                  </div>    
                                             </div>
-
+                                                
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("DIRECCIÓN");?></label>
-                                                <input id="address" type="text" name="address">
-                                              </div>
+                                                  <div class="col-md-3">
+                                                      <label>NOMBRES</label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="name" type="text" name="name" style="border-style: outset !important; width:100% !important">
+                                                  </div>    
                                             </div>
+                                                
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("TELÉFONO");?></label>
-                                                <input id="telefono" type="text" name="telefono">
-                                              </div>
+                                                  <div class="col-md-3">
+                                                      <label>APELLIDOS</label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="last_name" type="text" name="last_name" style="border-style: outset !important; width:100% !important">
+                                                  </div>    
                                             </div>
+                                                
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("DNI / CEDULA");?></label>
-                                                <input id="dni" type="text" name="dni">
-                                              </div>
+                                                  <div class="col-md-3">
+                                                      <label><?php echo replace_vocales_voculeshtml("DIRECCIÓN");?></label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="address" type="text" name="address" style="border-style: outset !important; width:100% !important">
+                                                  </div>    
                                             </div>
+                                           
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("CORREO ELECTRÓNICO");?></label>
-                                                <input id="email" type="text" name="email">
-                                              </div>
+                                                  <div class="col-md-3">
+                                                      <label><?php echo replace_vocales_voculeshtml("TELÉFONO");?></label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="telefono" type="text" name="telefono" style="border-style: outset !important; width:100% !important">
+                                                  </div>    
                                             </div>
-                                            <div class="col-md-4">
-                                              <div class="form-grp">
-                                                  <label><b><?php echo replace_vocales_voculeshtml("FECHA DE NACIMIENTO");?></b></label>
-                                                <select  name="dia" id="dia">
-                                                    <option value=""><?php echo replace_vocales_voculeshtml("DÍA")?></option>
+                                                
+                                            <div class="col-md-12">
+                                                  <div class="col-md-3">
+                                                      <label><?php echo replace_vocales_voculeshtml("DNI / CEDULA");?></label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="dni" type="text" name="dni" style="border-style: outset !important; width:100% !important" >
+                                                  </div>    
+                                            </div>    
+                                                
+                                            <div class="col-md-12">
+                                                  <div class="col-md-3">
+                                                      <label><?php echo replace_vocales_voculeshtml("CORREO ELECTRÓNICO");?></label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="email" type="text" name="email" style="border-style:outset !important;width:100% !important">
+                                                  </div>    
+                                            </div>  
+                                            <div class="col-md-12">
+                                                  <div class="col-md-12">
+                                                      <label><?php echo replace_vocales_voculeshtml("FECHA DE NACIMIENTO");?></label>
+                                                  </div>
+                                            </div>  
+                                             <div class="col-md-12">
+                                                  <div class="col-md-12">
+                                                      <select  name="dia" id="dia">
+                                                            <option value=""><?php echo replace_vocales_voculeshtml("DÍA")?></option>
                                                         <?php  for ($x = 1; $x <= 31; $x++) {  ?>
                                                             <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                         <?php } ?>
-                                                </select>
-
-                                                <select iname="mes" id="mes">
-                                                    <option value="">MES</option>
-                                                            <option value="01">Enero</option>
-                                                            <option value="02">Febrero</option>
-                                                            <option value="03">Marzo</option>
-                                                            <option value="04">Abril</option>
-                                                            <option value="05">Mayo</option>
-                                                            <option value="06">Junio</option>
-                                                            <option value="07">Julio</option>
-                                                            <option value="08">Agosto</option>
-                                                            <option value="09">Setiembre</option>
-                                                            <option value="10">Octubre</option>
-                                                            <option value="11">Noviembre</option>
-                                                            <option value="12">Diciembre</option>
-                                                </select>
-                                                <select  name="ano" id="ano" class="password_text" >
-                                                    <option selected="selected" value=""><?php echo replace_vocales_voculeshtml("AÑO");?></option>
+                                                      </select>
+                                                  </div>
+                                            </div>   
+                                                
+                                             <div class="col-md-12">
+                                                  <div class="col-md-12">
+                                                      <select iname="mes" id="mes">
+                                                            <option value="">MES</option>
+                                                                    <option value="01">Enero</option>
+                                                                    <option value="02">Febrero</option>
+                                                                    <option value="03">Marzo</option>
+                                                                    <option value="04">Abril</option>
+                                                                    <option value="05">Mayo</option>
+                                                                    <option value="06">Junio</option>
+                                                                    <option value="07">Julio</option>
+                                                                    <option value="08">Agosto</option>
+                                                                    <option value="09">Setiembre</option>
+                                                                    <option value="10">Octubre</option>
+                                                                    <option value="11">Noviembre</option>
+                                                                    <option value="12">Diciembre</option>
+                                                        </select>
+                                                  </div>
+                                            </div>   
+                                                
+                                             <div class="col-md-12">
+                                                  <div class="col-md-12">
+                                                      <select  name="ano" id="ano" class="password_text" >
+                                                            <option selected="selected" value=""><?php echo replace_vocales_voculeshtml("AÑO");?></option>
                                                                 <?php  for ($x = 1950; $x <= 2016; $x++) {  ?>
                                                                     <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                                 <?php } ?>
-                                                </select> 
-                                              </div>
-                                            </div>  
+                                                    </select> 
+                                                  </div>
+                                            </div>   
+                                                
+                                                <div class="col-md-12">&nbsp;</div>    
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                 <select class="password_text" onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
-                                                    <option  selected value=""><?php echo replace_vocales_voculeshtml("PAÍS");?></option>
-                                                        <?php  foreach ($obj_paises as $key => $value) { ?>
-                                                               <option  value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
-                                                        <?php } ?>
-                                                </select>
-                                                <select  name="region" id="region" class="password_text">
-                                                </select>
-                                              </div>
-                                            </div>
+                                                  <div class="col-md-12">
+                                                      <select class="password_text" onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
+                                                        <option  selected value=""><?php echo replace_vocales_voculeshtml("PAÍS");?></option>
+                                                            <?php  foreach ($obj_paises as $key => $value) { ?>
+                                                                   <option style="border-style: solid !important" value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
+                                                            <?php } ?>
+                                                      </select>
+                                                  </div>
+                                            </div>   
                                             <div class="col-md-12">
-                                              <div class="form-grp">
-                                                <label><?php echo replace_vocales_voculeshtml("CIUDAD");?></label>
-                                                <input id="city" type="text" name="city">
-                                              </div>
+                                                  <div class="col-md-12">
+                                                      <select  name="region" id="region" class="password_text">
+                                                          <option  selected="selected" value=""><?php echo replace_vocales_voculeshtml("REGIÓN");?></option>
+                                                      </select>
+                                                  </div>
+                                            </div> 
+                                             
+                                             <div class="col-md-12">
+                                                  <div class="col-md-3">
+                                                      <label><?php echo replace_vocales_voculeshtml("CIUDAD");?></label>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <input id="city" type="text" name="city" style="border-style: outset !important;width:100% !important">
+                                                  </div>    
                                             </div>
                                           </div>
-                                                        <button onclick="crear_registro();" class="button">
+                                            <div class="col-md-12">&nbsp;</div>    
+                                            <div class="col-md-12">
+                                                <button onclick="crear_registro();" class="button btn_block">
                                                                 <span class="pre-submit">CREAR CUENTA</span>
-                                                                <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
-                                                                <span class="loading-bar">
+                                                                <!--<span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>-->
+<!--                                                                <span class="loading-bar">
                                                                         <span></span>
-                                                                </span>
+                                                                </span>-->
                                                         </button>
+                                                
+                                            </div>
                                                 </form>
                                             </div>
                                         </div>
