@@ -316,37 +316,51 @@ labVcMaps.push({
                                                 <form action="#" class="contact-form" id="el_59e451473f27d" data-alerts="1" data-alerts-msg="Please fill &quot;%&quot; field." data-check="de6962edc5" data-use-subject="1" novalidate>
                                                         <input type="hidden" name="request" value="rlWhLJ1yK3EcqTkyVwbvGzSgMGbvYPWyoJScoS90nKEfMFV6VxIgLJyfBvVfVaA1LzcyL3EsqTy0oTHvBvWRMKA0nJ5uqTyiowbvYPWgMKAmLJqyK3EcqTkyVwbvGJImp2SaMGbvYPWmnT93K3A1LzcyL3EsMzyyoTDvBvW5MKZvYPWmqJWgnKEsqTy0oTHvBvWGMJ5xVR1yp3AuM2HvYPWmqJWgnKEsp3IwL2ImplV6VyEbLJ5eVUyiqFNwYPOgMKAmLJqyVUAyoaDuVvjvLJkypaEsMKWlo3WmVwbvrJImVvjvp3IvnzIwqS9znJIfMS9up19yoJScoS9mqJWdMJA0VwbvrJImVvjvMJ1unJkspzIwMJy2MKVvBvVvYPWyoS9woTSmplV6VvVfVzAmplV6VvW9" />
                                                         <div class="row">
-                                                            <div class="col-sm-6">
+                                                            <div class="col-sm-12">
                                                                 <div class="form-group labeled-input-row">
-                                                                    <label for="el_59e451473f27d_name">Nombre:</label>
-                                                                    <input name="name" id="el_59e451473f27d_name" type="text" placeholder="" data-label="Name">
-                                                                </div>
-                                                            </div>
-                                                                <div class="col-sm-6">
-                                                                        <div class="form-group labeled-input-row">
-                                                                            <label for="el_59e451473f27d_email">Correo:</label>
-                                                                            <input name="email" id="el_59e451473f27d_email" type="email" placeholder="" data-label="Email">
-                                                                        </div>
-                                                                </div>
-                                                                <div class="col-sm-12">
-                                                                    <div class="form-group labeled-input-row">
-                                                                        <label for="el_59e451473f27d_subject">Asunto:</label>
-                                                                        <input name="subject" id="el_59e451473f27d_subject" type="text" placeholder="" data-label="Destination">
+                                                                    <div class="col-md-4">
+                                                                        <label>Nombre:</label>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <input name="name" id="name" type="text" data-label="Name" style="border-style: outset !important; width:100% !important">
                                                                     </div>
                                                                 </div>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group labeled-input-row">
+                                                                    <div class="col-md-4">
+                                                                        <label>Correo:</label>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                          <input name="email" id="email" type="email" data-label="Email" style="border-style: outset !important; width:100% !important">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group labeled-input-row">
+                                                                    <div class="col-md-4">
+                                                                        <label>Asunto:</label>
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                          <input name="subject" id="subject" type="text" data-label="Destination" style="border-style: outset !important;width:100% !important">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                                 <div class="col-sm-12">
                                                                     <div class="form-group labeled-textarea-row">
-                                                                        <label for="el_59e451473f27d_message">Mensaje:</label>
-                                                                        <textarea name="message" id="el_59e451473f27d_message" placeholder="" data-label="Message"></textarea>
+                                                                        <div class="col-md-12">
+                                                                            <label>Mensaje:</label>
+                                                                        </div>
+                                                                        <textarea name="message" id="message" data-label="Message" style="border-style: outset !important;"></textarea>
                                                                     </div>
                                                                 </div>
                                                         </div> <!-- row -->
-                                                        <button type="submit" name="send" class="button">
+                                                        <button onclick="send_messages();" class="button">
                                                                 <span class="pre-submit">Enviar Mensaje</span>
-                                                                <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
+<!--                                                                <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
                                                                 <span class="loading-bar">
                                                                         <span></span>
-                                                                </span>
+                                                                </span>-->
                                                         </button>
                                                 </form>
                                             </div>
@@ -389,6 +403,11 @@ labVcMaps.push({
         <div class="vc_row-full-width vc_clearfix"></div>
     </div>
 </div>
+    <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
+    <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
+    <script src="<?php echo site_url().'static/page_front/js/jquery.min.js';?>"></script>
+    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
 <style>.contact-form input, 
 .contact-form textarea {
  	background: #FFF;
