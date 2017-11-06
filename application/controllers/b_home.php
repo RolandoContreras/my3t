@@ -7,6 +7,7 @@ class B_home extends CI_Controller {
         $this->load->model("commissions_model","obj_commissions");
         $this->load->model("otros_model","obj_otros");
         $this->load->model("franchise_model","obj_franchise");
+        $this->load->model("post_model","obj_post");
     }
 
     public function index()
@@ -59,6 +60,16 @@ class B_home extends CI_Controller {
                     );
              $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
              
+             
+              //GET POST (NEWS)
+            $params_post = array(
+                                    "select" =>"*",
+                                     "where" => "status_value = 1",
+                                     "order" => "date DESC",
+                                     "limit" => "3");
+                
+           $obj_post = $this->obj_post->search($params_post);
+             
              //GET PRICE BTC
             $params_price_btc = array(
                                     "select" =>"",
@@ -101,7 +112,8 @@ class B_home extends CI_Controller {
                         $text_franchise = "MEMBERSHIP";
                         break;
                 }
-              
+                
+                $this->tmp_backoffice->set("obj_post",$obj_post);
                 $this->tmp_backoffice->set("text_franchise",$text_franchise);
                 $this->tmp_backoffice->set("images_franchise",$images_franchise);
                 $this->tmp_backoffice->set("price_btc",$price_btc);
