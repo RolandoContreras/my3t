@@ -65,6 +65,9 @@ $route['backoffice/billetera'] = "b_wallet";
 $route['backoffice/cobros'] = "b_pay";
 $route['backoffice/pagos/validar'] = "b_pay/validate";
 
+$route['backoffice/message_confirmation'] = "b_message_confirmation";
+$route['backoffice/message_confirmation/upload'] = "b_message_confirmation/upload";
+
 $route['logout'] = "b_home/logout";
 $route['backoffice/misdatos'] = "b_data";
 
