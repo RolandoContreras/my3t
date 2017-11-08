@@ -103,7 +103,7 @@
                                                     <p><?php echo replace_vocales_voculeshtml("Aprenderás como manejar y hacer operaciones en el mercado secundario en Forex al lado de expertos trader que trabajan con nosotros, lo cual te dará nuevas herramientas para tu crecimiento financiero.")?></p><br/>
                                                     <p><b><?php echo replace_vocales_voculeshtml("$forex")?></b></p>
                                                     <br/>
-                                                    <a><button class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
+                                                    <a href="<?php echo site_url().'backoffice/academy';?>"><button class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
 						</div> 
 					</div> 
 				</div>

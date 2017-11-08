@@ -145,7 +145,7 @@ $(document).ready(function(){
             $("#uploaded_image").html('<div class="alert alert-danger" style="text-align: center">Debe seleccionar la imagen</div>  ');
         }else{
             if($('#message').val() == ''){
-                $("#uploaded_image").html('<div class="alert alert-danger">Debe llenar el campo Mensaje</div>  ');
+                $("#uploaded_image").html('<div class="alert alert-danger" style="text-align: center">Debe llenar el campo Mensaje</div>  ');
             }else{
                 $.ajax({
                 url : "<?php echo site_url().'backoffice/message_confirmation/upload'?>",

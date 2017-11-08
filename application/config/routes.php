@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "home";
-$route['404_override'] = '';
+$route['404_override'] = 'errors/error_404';
 
 $route['home'] = 'home';
 $route['login'] = 'login';
@@ -51,6 +51,9 @@ $route['backoffice/profile'] = "b_data";
 $route['backoffice/upgrade'] = "b_upgrade";
 $route['backoffice/binario'] = "b_binario";
 $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
+
+$route['backoffice/academy'] = "b_academy";
+
 
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";

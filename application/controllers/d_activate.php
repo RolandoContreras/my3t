@@ -85,19 +85,12 @@ class D_activate extends CI_Controller{
                 
                 //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
-                $today_7 = strtotime ( '+7 day' , strtotime ( $today ) ) ;
-                $today_7 = date ( 'Y-m-j' , $today_7 );
-                
-                $today_75 = strtotime ( '+75 day' , strtotime ( $today_7 ) ) ;
-                $today_75 = date ( 'Y-m-j' , $today_75 );
                 
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
                 if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
                         'date_start' => $today,
-                        'date_stand_by' => $today_7,
-                        'date_end' => $today_75,
                         'financy' => 1,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
