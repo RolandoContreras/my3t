@@ -120,6 +120,12 @@
                                                     case "productos":
                                                         $style_productos = "a_active";
                                                         break;
+                                                    case "academy":
+                                                        $style_productos = "a_active";
+                                                        break;
+                                                    case "message_confirmation":
+                                                        $style_inicio = "a_active";
+                                                        break;
                                                     default:
                                                          $title = "Inicio";
                                             }

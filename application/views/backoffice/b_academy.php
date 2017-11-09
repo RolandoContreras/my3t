@@ -1,7 +1,21 @@
 <section>
-    <div class="section-heading row">
+    <?php 
+    $url = explode("/",uri_string()); 
+        if(isset($url[1])){
+            switch ($url[1]) {
+                ////////
+                        case "academy":
+                            $style = "section-heading-2";
+                            break;
+                        default:
+                            $style = "section-heading";
+                            break;
+                }
+        }
+    ?>
+    <div class="<?php echo $style;?> row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-            <h1 class="title text-uppercase">PRODUCTOS</h1>
+            <h1 class="title text-uppercase">ACADEMY - FOREX</h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
             <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
@@ -12,17 +26,22 @@
     <div class="content-wrapper">
         <div class="row fix-box-height package-box-fix mt-30">
             
-        
-    
-    
-<div class="col-sm-9">
+          
 
+        <div class="col-md-12"> 
+                <div class="panel panel-default">
+                        <div class="panel-heading clearfix"> 
+                            <div class="panel-title" style="text-align: center !important"><b>CONOZCA EL STAFF DE FOREX</b></div> 
+                        </div> 
+                </div> 
+        </div>  
+    
+        <div class="col-sm-9">
 		<div class="well padding-10">
-
 			<div class="row">
 				<div class="col-md-4">
-					<img src="img/superbox/superbox-full-15.jpg" class="img-responsive" alt="img">
-					<ul class="list-inline padding-10">
+                                    <img src="<?php echo site_url().'static/backoffice/images/academy/felipe.jpg';?>" class="img-responsive" alt="Felipe Arguedas">
+<!--					<ul class="list-inline padding-10">
 						<li>
 							<i class="fa fa-calendar"></i>
 							<a href="javascript:void(0);"> March 12, 2015 </a>
@@ -31,116 +50,147 @@
 							<i class="fa fa-comments"></i>
 							<a href="javascript:void(0);"> 38 Comments </a>
 						</li>
-					</ul>
+					</ul>-->
 				</div>
 				<div class="col-md-8 padding-left-0">
-					<h3 class="margin-top-0"><a href="javascript:void(0);"> Why Should You Make A Separate Mobile Website for your Business? </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
+					<h3 class="margin-top-0"><a href="javascript:void(0);">Admr. Felipe Arguedas</a><br>
+                                            <!--<small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small>-->
+                                        </h3>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
-
-						<br><br>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
-						<br><br>
+						<?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Ejerció durante 4 años como trader para el X-Trader Brokers (XTB). En los últimos años, se ha desempeñado como asesor de inversiones bursátiles para Sudamérica y Europa. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio y RPP Noticias en el país de Perú. Además, ha impartido cursos de formación bursátil para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura.");?>
+						<br>Podemos encontrar algunas de sus entrevistas en los siguientes enlaces:<br/>
+                                                <br><a href="https://gestion.pe/mercados/subira-fed-su-tasa-interes-xdirect-analiza-posibles-escenarios-2161812">Diario Gestión - Subirá fed su tasa interes analiza posibles escenarios </a>
+                                                <br><a href="https://www.youtube.com/watch?v=wi4FCWmh9ck&feature=youtu.be">Canal 4 - América Noticias </a>
+                                                <br><a href="http://rpp.pe/economia/economia/bolsa-de-lima-seguira-volatil-por-evaluacion-de-indices-de-msci-afirman-noticia-827436">RPP - Radio Programa del Perú</a>
+                                                <br><a href="https://elcomercio.pe/economia/personal/cuatro-opciones-rentabilizar-gratificacion-julio-170674">El Comercio - Diario mas visto del Perú</a><br>
 					</p>
-					<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
-					<a class="btn btn-warning" href="javascript:void(0);"> Edit </a>
-					<a class="btn btn-success" href="javascript:void(0);"> Publish </a>
 				</div>
 			</div>
 			<hr>
-
-			<div class="row">
+                        <div class="row">
 				<div class="col-md-4">
-					<img src="img/superbox/superbox-full-19.jpg" class="img-responsive" alt="img">
-					<ul class="list-inline padding-10">
-						<li>
-							<i class="fa fa-calendar"></i>
-							<a href="javascript:void(0);"> March 12, 2015 </a>
-						</li>
-						<li>
-							<i class="fa fa-comments"></i>
-							<a href="javascript:void(0);"> 38 Comments </a>
-						</li>
-					</ul>
+                                    <img src="<?php echo site_url().'static/backoffice/images/academy/oscar.jpg';?>" class="img-responsive" alt="<?php echo replace_vocales_voculeshtml("Oscar Fernandez");?>">
 				</div>
 				<div class="col-md-8 padding-left-0">
-					<h3 class="margin-top-0"><a href="javascript:void(0);"> Mums favorite shopping malls in USA </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
+                                    <h3 class="margin-top-0"><a href="javascript:void(0);"><?php echo replace_vocales_voculeshtml("Admr. Oscar Fernandez");?></a>
+                                        <!--<br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small>-->
+                                    </h3>
 					<p>
-						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
-
-						<br><br>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
-						<br><br>
+						<?php echo replace_vocales_voculeshtml("Administrador en Negocios Internacionales por el instituto San Ignacio de Loyola. Administrador en Gerencia por la Universidad Peruana de Ciencias Aplicadas.");?><br/>
+                                                <?php echo replace_vocales_voculeshtml("Analista de Inversiones bursátiles para diferentes brókers de mercados financieros líderes en el Perú y Latinoamérica, como analista ha desarrollado diferentes alternativas de inversión y ha dictado distintos seminarios de bolsa de valores, tanto en el MBA de finanzas de la UPC y en las compañías donde ha trabajado, ha escrito informes de mercado de valores y economía para distintos medios de comunicación a nivel nacional.")?><br/>
 					</p>
-					<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
+					<!--<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>-->
+				</div>
+			</div>
+                        <hr/>
+			<div class="row">
+				<div class="col-md-4">
+                                    <img src="<?php echo site_url().'static/backoffice/images/academy/gabriel.jpg';?>" class="img-responsive" alt="<?php echo replace_vocales_voculeshtml("Gabriel Gutiérrez");?>">
+				</div>
+				<div class="col-md-8 padding-left-0">
+                                    <h3 class="margin-top-0"><a href="javascript:void(0);"><?php echo replace_vocales_voculeshtml("Admr. Gabriel Gutiérrez López");?></a>
+                                        <!--<br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small>-->
+                                    </h3>
+					<p>
+						<?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Llevó a cabo sus estudios en la Universidad Peruana de Ciencias Aplicadas (UPC), en la ciudad de Lima, Perú. Luego se especializó en finanzas en la Universidad Nacional de San Marcos.");?><br/>
+                                                <?php echo replace_vocales_voculeshtml("Ejerció durante 4 años como trader para el X-Trader Brokers (XTB). En los últimos años, se ha desempeñado como asesor de inversiones bursátiles para Sudamérica y Europa. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio y RPP Noticias. Además, ha impartido cursos de formación bursátil para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura en Perú.")?><br/>
+                                                <?php echo replace_vocales_voculeshtml("Recientemente fue director de la academia de trading de Quantum Club y actualmente está a cargo de los portafolios de largo plazo en Blu-Trading.")?>Podemos encontrar algunas de sus entrevistas en los siguientes enlaces:<br/>
+                                                <br><a href="https://elcomercio.pe/economia/peru/xdirect-dolar-tomara-impulso-primeros-meses-2017-231161"><?php echo replace_vocales_voculeshtml("El Comercio - Dolar tomará impulso los primeros meses del 2017")?></a>
+                                                <br><a href="https://gestion.pe/tu-dinero/consejos-rentabilizar-su-grati-2150946"><?php echo replace_vocales_voculeshtml("Diario Gestión - Consejos para rentabilizar su gratificación")?></a>
+                                                <br><a href="https://gestion.pe/tu-dinero/gratificaciones-entre-ahorrar-invertir-gastar-excedentes-2150566"><?php echo replace_vocales_voculeshtml("Diario Gestión - Gratificaciones entre ahorrar e invertir")?></a>
+					</p>
+					<!--<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>-->
 				</div>
 			</div>
 			<hr>
-
-			<div class="row">
-				<div class="col-md-4">
-					<img src="img/superbox/superbox-full-24.jpg" class="img-responsive" alt="img">
-					<ul class="list-inline padding-10">
-						<li>
-							<i class="fa fa-calendar"></i>
-							<a href="javascript:void(0);"> March 12, 2015 </a>
-						</li>
-						<li>
-							<i class="fa fa-comments"></i>
-							<a href="javascript:void(0);"> 38 Comments </a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-8 padding-left-0">
-					<h3 class="margin-top-0"><a href="javascript:void(0);"> Best (and Basic) Practices of Mobile Web Design </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
-					<p>
-						With the plethora of smartphones, mobile phones, and tablets available on the market today, research suggests that mobile devices will soon overtake PCs and laptops in a year. More and more,different platforms are made available for all types of consumers to access the web, even including TVs and gaming consoles. 
-
-						<br><br>
-
-						And all this in rapid-fire turnover—new models and technologies quickly coming and going like fashion trends. So much so that any website that is not mobile friendly cannot claim to be user-friendly anymore. Increasingly, web developers and designers utilize fluid layouts allowing users to browse across different platforms.
-
-						<br><br>
-					</p>
-					<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
-				</div>
-			</div>
-
-			<hr>
-
-			<div class="row">
-				<div class="col-md-4">
-					<img src="img/superbox/superbox-full-7.jpg" class="img-responsive" alt="img">
-					<ul class="list-inline padding-10">
-						<li>
-							<i class="fa fa-calendar"></i>
-							<a href="javascript:void(0);"> March 12, 2015 </a>
-						</li>
-						<li>
-							<i class="fa fa-comments"></i>
-							<a href="javascript:void(0);"> 38 Comments </a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-8 padding-left-0">
-					<h3 class="margin-top-0"><a href="javascript:void(0);"> Responsive Design: Best Practices for Designing a Website </a><br><small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small></h3>
-					<p>
-						The term Responsive design means developing a website in a way that adapts all the computer screen resolutions. Particularly this concept allows a 4 column layout that is 1292px wide, on 1025px wide screen that is divided into 2 columns automatically. It is adaptable for android phones and tablet screens. This designing method is known as “responsive web design”
-
-						<br><br>
-						
-						Responsive designing is a different concept from traditional web designing, so the question arises how you should build a good responsive website. Here is a general practices that can help you to build a responsive website design.
-
-						<br><br>
-					</p>
-					<a class="btn btn-primary" href="javascript:void(0);"> Read more </a>
-				</div>
-			</div>	
-
+                        <a><button class="btn btn-success btn-block" type="button">VER CURSOS</button></a>
 		</div>
+	</div>
+        <div class="col-sm-3">
+		<div class="well padding-10">
+			<h5 class="margin-top-0"><i class="fa fa-search"></i>Search...</h5>
+			<div class="input-group">
+				<input class="form-control" type="text">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<i class="fa fa-search"></i>
+					</button> </span>
+			</div>
+			<!-- /input-group -->
+		</div>
+		<!-- /well -->
+		<div class="well padding-10">
+			<h5 class="margin-top-0"><i class="fa fa-thumbs-o-up"></i> Siguenos!</h5>
+			<ul class="no-padding no-margin">
+				<p class="no-margin">
+					<a title="Facebook" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a>
+                                        <a title="Youtube" target="_blank" href="https://www.youtube.com/channel/UCiAZcGdgGlrY2gv3igqdEMw/featured"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x"></i></span></a>
+                                        <a title="Imstagram" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x"></i></span></a>
+				</p>
+			</ul>
+		</div>
+		<!-- /well -->
+		<!-- /well -->
+<!--		<div class="well padding-10">
+			<h5 class="margin-top-0"><i class="fa fa-fire"></i> Popular Posts:</h5>
+			<ul class="no-padding list-unstyled">
+				<li>
+					<a href="javascript:void(0);" class="margin-top-0">WPF vs. Windows Forms-Which is better?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="padding-top-5 display-block">How to create responsive website with Bootstrap?</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="margin-top-5">The best Joomla! templates 2014</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="margin-top-5">ASP .NET cms list</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="margin-top-5">C# Hello, World! program</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="margin-top-5">Java random generator</a>
+				</li>
+			</ul>
+		</div>-->
+		<!-- /well -->
+
+		<!-- /well -->
+<!--		<div class="well padding-10">
+			<h5 class="margin-top-0"><i class="fa fa-video-camera"></i> Featured Videos:</h5>
+			<div class="row">
+
+				<div class="col-lg-12">
+
+					<ul class="list-group no-margin">
+						<li class="list-group-item">
+							<a href=""> <span class="badge pull-right">15</span> Photograph </a>
+						</li>
+						<li class="list-group-item">
+							<a href=""> <span class="badge pull-right">30</span> Life style </a>
+						</li>
+						<li class="list-group-item">
+							<a href=""> <span class="badge pull-right">9</span> Food </a>
+						</li>
+						<li class="list-group-item">
+							<a href=""> <span class="badge pull-right">4</span> Travel world </a>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="col-lg-12">
+					<div class="margin-top-10">
+						<img src="img/demo/video.png" alt="smartgirl" class="img-responsive">
+					</div>
+				</div>
+			</div>
+
+		</div>-->
+		<!-- /well -->
 
 	</div>
-    <div class="col-sm-3">
-        
-    </div>
             </div>
         </div>
     </section>
