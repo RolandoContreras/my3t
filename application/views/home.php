@@ -727,7 +727,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497271089392">
                             <figure class="wpb_wrapper vc_figure">
                                 <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                    <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/paris.jpg';?>" class="vc_single_image-img attachment-full" alt="paris" srcset="https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris.jpg 1440w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-300x200.jpg 300w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-768x512.jpg 768w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1024x683.jpg 1024w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1116x744.jpg 1116w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-806x537.jpg 806w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-558x372.jpg 558w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-655x437.jpg 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
+                                    <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/paris.jpg';?>" class="vc_single_image-img attachment-full" alt="paris" srcset="<?php echo site_url().'static/page_front/images/paris.jpg';?> 1440w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-300x200.jpg 300w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-768x512.jpg 768w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1024x683.jpg 1024w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-1116x744.jpg 1116w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-806x537.jpg 806w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-558x372.jpg 558w, https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/uploads/2017/06/paris-655x437.jpg 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
                                 </div>
                             </figure>
                         </div>
@@ -1023,7 +1023,7 @@ tpj(document).ready(function() {
 						jQuery(sliderID).show().html(errorMessage);
 				}
 			</script>
-			<script type='text/javascript' src='https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/bookingcom-official-searchbox/js/bos_main.js?ver=1.2'></script>
+                        <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var objectL10n = {"destinationErrorMsg":"Sorry, we need at least part of the name to start searching.","tooManyDays":"Your check-out date is more than 30 nights after your check-in date. Bookings can only be made for a maximum period of 30 nights. Please enter alternative dates and try again.","dateInThePast":"Your check-in date is in the past. Please check your dates and try again.","cObeforeCI":"Please check your dates, the check-out date appears to be earlier than the check-in date.","calendar_nextMonth":"Next month","calendar_prevMonth":"Prev month","calendar_closeCalendar":"Close calendar","january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December","mo":"Mo","tu":"Tu","we":"We","th":"Th","fr":"Fr","sa":"Sa","su":"Su","updating":"Updating...","close":"Close","placeholder":"e.g. city, region, district or specific hotel","aid":"382821","dest_type":"select","calendar":"0","month_format":"short","flexible_dates":"0","logodim":"blue_150x25","logopos":"left","buttonpos":"right","bgcolor":"#FEBA02","textcolor":"#003580","submit_bgcolor":"#0896FF","submit_bordercolor":"#0896FF","submit_textcolor":"#FFFFFF","aid_starts_with_four":"affiliate ID is different from partner ID: should start with a 1, 3, 8 or 9. Please change it.","images_js_path":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/bookingcom-official-searchbox\/images"};
@@ -1033,16 +1033,6 @@ var objectL10n = {"destinationErrorMsg":"Sorry, we need at least part of the nam
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-28991003-11', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 <!-- Google Code for Click Conversion Page -->
 <script type="text/javascript">
@@ -1052,6 +1042,7 @@ var google_custom_params = window.google_tag_params;
 var google_remarketing_only = true;
 /* ]]> */
 </script>
+
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 <style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
 <noscript>
