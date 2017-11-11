@@ -497,7 +497,7 @@ tpj(document).ready(function() {
 	}else{
 		revapi4 = tpj("#rev_slider_4_1").show().revolution({
 			sliderType:"standard",
-			jsFileLocation:"<?php echo site_url().'static/page_front/js/';?>",
+			jsFileLocation:"https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/public/assets/js/",
 //                        jsFileLocation:"https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/public/assets/js/';?>",
                         
 			sliderLayout:"fullscreen",
@@ -747,7 +747,6 @@ tpj(document).ready(function() {
                         <div class="wpb_text_column wpb_content_element  text-block post-formatting " >
                             <div class="wpb_wrapper">
                                 <h2>TRAINING - TRAVEL - TRADE</h2>
-                                    <!--<h3>Los 3 rubros del momento</h3><br/>-->
                                     <h4>Viajes</h4>
                                     <p><?php echo replace_vocales_voculeshtml("Te damos la oportunidad de no solo viajar con nosotros sino también de adquirir una franquicia con el respaldo de 3T y Magic Vacation Members.");?></p>
                                     <h4>Entramiento</h4>
