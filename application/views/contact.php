@@ -313,8 +313,7 @@ labVcMaps.push({
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">
                                             <div class="lab-contact-form contact-form ">
-                                                <form action="#" class="contact-form" id="el_59e451473f27d" data-alerts="1" data-alerts-msg="Please fill &quot;%&quot; field." data-check="de6962edc5" data-use-subject="1" novalidate>
-                                                        <input type="hidden" name="request" value="rlWhLJ1yK3EcqTkyVwbvGzSgMGbvYPWyoJScoS90nKEfMFV6VxIgLJyfBvVfVaA1LzcyL3EsqTy0oTHvBvWRMKA0nJ5uqTyiowbvYPWgMKAmLJqyK3EcqTkyVwbvGJImp2SaMGbvYPWmnT93K3A1LzcyL3EsMzyyoTDvBvW5MKZvYPWmqJWgnKEsqTy0oTHvBvWGMJ5xVR1yp3AuM2HvYPWmqJWgnKEsp3IwL2ImplV6VyEbLJ5eVUyiqFNwYPOgMKAmLJqyVUAyoaDuVvjvLJkypaEsMKWlo3WmVwbvrJImVvjvp3IvnzIwqS9znJIfMS9up19yoJScoS9mqJWdMJA0VwbvrJImVvjvMJ1unJkspzIwMJy2MKVvBvVvYPWyoS9woTSmplV6VvVfVzAmplV6VvW9" />
+                                                <form class="contact-form">
                                                         <div class="row">
                                                             <div class="col-sm-12">
                                                                 <div class="form-group labeled-input-row">
@@ -355,13 +354,13 @@ labVcMaps.push({
                                                                     </div>
                                                                 </div>
                                                         </div> <!-- row -->
-                                                        <button onclick="send_messages();" class="button">
+                                                        <a href="javascript:void(0);" onclick="send_messages();" class="button">
                                                                 <span class="pre-submit">Enviar Mensaje</span>
 <!--                                                                <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
                                                                 <span class="loading-bar">
                                                                         <span></span>
                                                                 </span>-->
-                                                        </button>
+                                                        </a>
                                                 </form>
                                             </div>
                                         </div>
