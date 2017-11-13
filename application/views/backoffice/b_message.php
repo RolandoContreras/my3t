@@ -1,4 +1,4 @@
-    <section>
+<section>
           <div class="section-heading row">
             <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
                 <h1 class="title text-uppercase"><?php echo replace_vocales_voculeshtml("Mensajes");?></h1>
@@ -55,349 +55,40 @@
                                                             //GET TYPE MESSAGE
                                                             switch ($value->type) {
                                                             case 1:
-                                                                $style =  "fa fa-circle text-purple m-r-150";
+                                                                //BONUS
+                                                                $style =  "fa fa-circle text-purple m-r-15";
                                                                 break;
                                                             case 2:
-                                                                $style =  "";
+                                                                //SUPPORT
+                                                                $style =  "fa fa-circle text-danger m-r-15";
                                                                 break;
                                                             case 3:
-                                                                $style =  "";
+                                                                //SOCIAL
+                                                                $style =  "fa fa-circle text-primary m-r-15";
                                                                 break;
                                                             }    
                                                             ?>
                                                             <tr class="unread">
                                                                     <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox1" checked="checked"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
+                                                                        <div class="form-checkbox">
+                                                                            <input type="checkbox" id="checkbox1" checked="checked"> <span class="check"><i class="fa fa-check"></i></span>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
                                                                             <i class="fa fa-star text-warning"></i>
                                                                     </td>
                                                                     <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-purple m-r-15"></i> Google Inc</a>
+                                                                        <a href="#"><i class="<?php echo $style;?>"></i> <?php echo replace_vocales_voculeshtml("$value->label");?></a>
                                                                     </td>
                                                                     <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
+                                                                        <a href="#"><?php echo replace_vocales_voculeshtml("$value->subject");?></a>
                                                                     </td>
                                                                     <td>
                                                                             <i class="fa fa-paperclip"></i>
                                                                     </td>
-                                                                    <td class="text-right">
-                                                                            07:23 AM
-                                                                    </td>
+                                                                    <td class="text-right"><?php echo formato_fecha_barras($value->date)?></td>
                                                             </tr>
-                                                            
                                                         <?php } ?>
-                                                            
-                                                            <tr class="unread">
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox2" checked="checked"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-warning m-r-15"></i> John Smith</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Hello, hope you having a great day ahead.</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            06:18 AM
-                                                                    </td>
-                                                            </tr>
-                                                            <tr class="unread">
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox3"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-warning"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-danger m-r-15"></i> Manager</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            04:23 PM
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox4"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-primary m-r-15"></i> Facebook</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            16 Aug
-                                                                    </td>
-                                                            </tr>
-                                                            <tr class="unread">
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox5" checked="checked"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-purple m-r-15"></i> LinkedIn</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            26 Jul
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox6"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-warning"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-info m-r-15"></i> Google Inc</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            12 Jul
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox7"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-warning m-r-15"></i> John Smith</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Hello, hope you having a great day ahead.</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            24 Jun
-                                                                    </td>
-                                                            </tr>
-                                                            <tr class="unread">
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox8" checked="checked"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-danger m-r-15"></i> Manager</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            15 May
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox9"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-primary m-r-15"></i> Facebook</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            12 May
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox10"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-warning"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-purple m-r-15"></i> LinkedIn</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            28 Apr
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox11"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-info m-r-15"></i> Google Inc</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            16 Apr
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox12"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-warning m-r-15"></i> John Smith</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Hello, hope you having a great day ahead.</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            12 Apr
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox14" checked="checked"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-warning"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-danger m-r-15"></i> Manager</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            12 Mar
-                                                                    </td>
-                                                            </tr>
-                                                            <tr class="unread">
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox15"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-warning"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-primary m-r-15"></i> Facebook</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            16 Feb
-                                                                    </td>
-                                                            </tr>
-                                                            <tr>
-                                                                    <td class="mail-select">
-                                                                            <div class="form-checkbox">
-                                                                                    <input type="checkbox" id="checkbox16"> <span class="check"><i class="fa fa-check"></i></span>
-                                                                            </div>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-star text-muted"></i>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html"><i class="fa fa-circle text-purple m-r-15"></i> LinkedIn</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <a href="mail-read.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
-                                                                    </td>
-                                                                    <td>
-                                                                            <i class="fa fa-paperclip"></i>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                            26 Jan
-                                                                    </td>
-                                                            </tr>
                                                     </tbody>
                                             </table>
                                     </div>

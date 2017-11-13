@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/my3t/static/backoffice/js/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js</file>
             <file>file:/C:/xampp/htdocs/my3t/application/views/backoffice/b_message.php</file>
             <file>file:/C:/xampp/htdocs/my3t/application/controllers/b_messages.php</file>
             <file>file:/C:/xampp/htdocs/my3t/application/templates/backoffice.php</file>
             <file>file:/C:/xampp/htdocs/my3t/application/config/routes.php</file>
-            <file>file:/C:/xampp/htdocs/my3t/static/backoffice/js/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js</file>
-            <file>file:/C:/xampp/htdocs/my3t/static/backoffice/css/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css</file>
             <file>file:/C:/xampp/htdocs/my3t/application/views/backoffice/b_compose_message.php</file>
-            <file>file:/C:/xampp/htdocs/my3t/application/models/messages_model.php</file>
         </group>
     </open-files>
 </project-private>

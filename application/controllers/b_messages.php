@@ -37,8 +37,8 @@ class B_messages extends CI_Controller {
                                     customer_id,
                                     date,
                                     subject,
+                                    label,
                                     messages,
-                                    type,
                                     type,
                                     type_send",
                         "where" => "customer_id = $customer_id and status_value = 1",
@@ -63,11 +63,11 @@ class B_messages extends CI_Controller {
          //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("price_btc",$price_btc);
          $this->tmp_backoffice->set("all_message",$all_message);
-         $this->tmp_backoffice->set("obj_customer",$obj_message);
+         $this->tmp_backoffice->set("obj_message",$obj_message);
          $this->tmp_backoffice->render("backoffice/b_message");
 	}
         
-        public function message_type($type)
+        public function message_type()
 	{
         
         //VERIFIRY GET SESSION    
@@ -99,6 +99,7 @@ class B_messages extends CI_Controller {
                         
                                         );
             $obj_message = $this->obj_messages->get_search_row($params);
+            
             //GET ALL MESSAGE   
             $all_message = $obj_message->total;
             
@@ -109,8 +110,8 @@ class B_messages extends CI_Controller {
                                     customer_id,
                                     date,
                                     subject,
+                                    label,
                                     messages,
-                                    type,
                                     type,
                                     type_send",
                         "where" => "customer_id = $customer_id and status_value = 1 and type = $type",
@@ -131,7 +132,76 @@ class B_messages extends CI_Controller {
          //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("price_btc",$price_btc);
          $this->tmp_backoffice->set("all_message",$all_message);
-         $this->tmp_backoffice->set("obj_customer",$obj_message);
+         $this->tmp_backoffice->set("obj_message",$obj_message);
+         $this->tmp_backoffice->render("backoffice/b_message");
+	}    
+        
+        public function view_message()
+	{
+        
+        //VERIFIRY GET SESSION    
+        $this->get_session();
+        /// VISTA
+        
+        $url = explode("/",uri_string());
+        $type =  $url['2'];
+        
+        switch ($type) {
+        case "bonus":
+            $type =  1;
+            break;
+        case "support":
+            $type =  2;
+            break;
+        case "social":
+            $type =  3;
+            break;
+        default :
+            $type =  1;
+        }
+        
+            //GET CUSTOMER_ID
+            $customer_id = $_SESSION['customer']['customer_id'];
+            $params = array(
+                        "select" =>"count(messages_id) as total",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        
+                                        );
+            $obj_message = $this->obj_messages->get_search_row($params);
+            
+            //GET ALL MESSAGE   
+            $all_message = $obj_message->total;
+            
+            //GET ALL MESAGGE OF TYPE (BONUS - SUPPORT - SOCIAL)
+            $params = array(
+                        "select" =>"(select count(messages_id) from messages where customer_id = $customer_id and status_value = 1) as total,
+                                    messages_id,
+                                    customer_id,
+                                    date,
+                                    subject,
+                                    label,
+                                    messages,
+                                    type,
+                                    type_send",
+                        "where" => "customer_id = $customer_id and status_value = 1 and type = $type",
+                        "order" => "date DESC",
+                        "limit" => "20",
+                                        );
+
+            $obj_message = $this->obj_messages->search($params);  
+            
+            //GET PRICE BTC
+            $params_price_btc = array(
+                                    "select" =>"",
+                                     "where" => "otros_id = 1");
+                
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = "$".number_format($obj_otros->precio_btc,2);
+         
+         //SEND DATA TO VIEW  
+         $this->tmp_backoffice->set("price_btc",$price_btc);
+         $this->tmp_backoffice->set("all_message",$all_message);
+         $this->tmp_backoffice->set("obj_message",$obj_message);
          $this->tmp_backoffice->render("backoffice/b_message");
 	}    
         
