@@ -6,6 +6,8 @@ class B_message_confirmation extends CI_Controller {
         $this->load->model("customer_model","obj_customer");
         $this->load->model("activation_message_model","obj_activation_message");
         $this->load->model("otros_model","obj_otros");
+        $this->load->model("commissions_model","obj_commissions");
+        $this->load->model("messages_model","obj_messages");
         
     }
 
@@ -15,6 +17,11 @@ class B_message_confirmation extends CI_Controller {
         $this->get_session();
         //GET CUSTOMER_ID 
         $customer_id = $_SESSION['customer']['customer_id'];
+        //GET TOTAL MESSAGE
+         $all_message = $this->get_total_messages($customer_id);
+         //GET TOTAL MESSAGE
+         $obj_message = $this->get_messages($customer_id);
+        
         //GET MESSAGE SEND FROM USER
         $param = array(
                         "select" =>"activation_message_id,
@@ -24,6 +31,16 @@ class B_message_confirmation extends CI_Controller {
                          );
          $obj_message_activate = $this->obj_activation_message->get_search_row($param);
          $messaje_active_count = count($obj_message_activate);
+         
+         //GET TOTAL AMOUNT
+                $params_total = array(
+                        "select" =>"sum(amount) as total,
+                                    (select sum(amount) FROM commissions WHERE status_value <= 2 and customer_id = $customer_id) as balance",
+                         "where" => "commissions.customer_id = $customer_id",
+                    );
+             $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
+             $obj_total = $obj_commissions->total;
+             $obj_balance = $obj_commissions->balance;
          
          //VERIFY IF ISSET MESSAGE
          if($messaje_active_count == 0){
@@ -51,7 +68,11 @@ class B_message_confirmation extends CI_Controller {
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);
-           
+            
+            $this->tmp_backoffice->set("obj_message",$obj_message);
+            $this->tmp_backoffice->set("all_message",$all_message); 
+            $this->tmp_backoffice->set("obj_total",$obj_total);
+            $this->tmp_backoffice->set("obj_balance",$obj_balance);
             $this->tmp_backoffice->set("messaje_active_count",$messaje_active_count);
             $this->tmp_backoffice->set("price_btc",$price_btc);
             $this->tmp_backoffice->render("backoffice/b_message_confirmation");
@@ -125,6 +146,34 @@ class B_message_confirmation extends CI_Controller {
         }else{
             redirect(site_url().'home');
         }
+    }
+    
+    public function get_total_messages($customer_id){
+        $params = array(
+                        "select" =>"count(messages_id) as total",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        
+                                        );
+            $obj_message = $this->obj_messages->get_search_row($params);
+            //GET TOTAL MESSAGE ACTIVE   
+            $all_message = $obj_message->total;
+            return $all_message;
+        }
+    
+    public function get_messages($customer_id){
+        $params = array(
+                    "select" =>"messages_id,
+                                date,
+                                subject,
+                                label,
+                                messages",
+                    "where" => "customer_id = $customer_id and status_value = 1",
+                    "order" => "date DESC",
+                    "limit" => "3",
+                                    );
+        $obj_message = $this->obj_messages->search($params); 
+        //GET ALL MESSAGE   
+        return $obj_message;
     }
 }
 

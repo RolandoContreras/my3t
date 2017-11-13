@@ -6,6 +6,7 @@ class B_product extends CI_Controller {
         $this->load->model("customer_model","obj_customer");
         $this->load->model("commissions_model","obj_commissions");
         $this->load->model("otros_model","obj_otros");
+        $this->load->model("messages_model","obj_messages");
         $this->load->model("franchise_model","obj_franchise");
     }
 
@@ -15,6 +16,10 @@ class B_product extends CI_Controller {
         $this->get_session();
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
+        //GET TOTAL MESSAGE
+        $all_message = $this->get_total_messages($customer_id);
+        //GET TOTAL MESSAGE
+        $obj_message = $this->get_messages($customer_id);
         
         $params = array(
                         "select" =>"customer.customer_id,
@@ -81,6 +86,18 @@ class B_product extends CI_Controller {
                     break;
             }
         
+            
+            //GET PRICE BTC
+            $params_price_btc = array(
+                                    "select" =>"",
+                                     "where" => "otros_id = 1");
+                
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = "$".number_format($obj_otros->precio_btc,2);
+            
+        $this->tmp_backoffice->set("obj_message",$obj_message);
+        $this->tmp_backoffice->set("all_message",$all_message);  
+        $this->tmp_backoffice->set("price_btc",$price_btc);
         $this->tmp_backoffice->set("magic_franchise",$magic_franchise);
         $this->tmp_backoffice->set("magic_franchise_text",$magic_franchise_text);
         $this->tmp_backoffice->set("travel",$travel);
@@ -100,6 +117,34 @@ class B_product extends CI_Controller {
         }else{
             redirect(site_url().'home');
         }
+    }
+    
+    public function get_total_messages($customer_id){
+        $params = array(
+                        "select" =>"count(messages_id) as total",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        
+                                        );
+            $obj_message = $this->obj_messages->get_search_row($params);
+            //GET TOTAL MESSAGE ACTIVE   
+            $all_message = $obj_message->total;
+            return $all_message;
+    }
+    
+    public function get_messages($customer_id){
+        $params = array(
+                        "select" =>"messages_id,
+                                    date,
+                                    subject,
+                                    label,
+                                    messages",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "order" => "date DESC",
+                        "limit" => "3",
+                                        );
+            $obj_message = $this->obj_messages->search($params); 
+            //GET ALL MESSAGE   
+            return $obj_message;
     }
 }
 

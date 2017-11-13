@@ -8,6 +8,7 @@ class B_pay extends CI_Controller {
         $this->load->model("pay_commission_model","obj_pay_commission");
         $this->load->model("pay_model","obj_pay");
         $this->load->model("otros_model","obj_otros");
+        $this->load->model("messages_model","obj_messages");
     }
 
 	/**
@@ -30,6 +31,11 @@ class B_pay extends CI_Controller {
          //GET CUSTOMER_ID $_SESSION   
          $customer_id = $_SESSION['customer']['customer_id'];
          date_default_timezone_set('America/Lima');
+         
+         //GET TOTAL MESSAGE
+         $all_message = $this->get_total_messages($customer_id);
+         //GET TOTAL MESSAGE
+         $obj_message = $this->get_messages($customer_id);
          
         //VERIFIRY GET SESSION    
          $this->get_session();
@@ -79,6 +85,8 @@ class B_pay extends CI_Controller {
         //SEND DATA OF DATA LIMIT TO PAY USUFRUCT
         $this->tmp_backoffice->set("date_limit_pay",$date_limit_pay);      
         //SEND DATA OF BITCOIN PRICE
+        $this->tmp_backoffice->set("obj_message",$obj_message);
+        $this->tmp_backoffice->set("all_message",$all_message); 
         $this->tmp_backoffice->set("price_btc",$price_btc);  
         $this->tmp_backoffice->set("obj_balance_red",$obj_balance_red);   
         $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible);   
@@ -188,4 +196,32 @@ class B_pay extends CI_Controller {
             redirect(site_url().'home');
         }
     }
+    
+        public function get_total_messages($customer_id){
+        $params = array(
+                        "select" =>"count(messages_id) as total",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        
+                                        );
+            $obj_message = $this->obj_messages->get_search_row($params);
+            //GET TOTAL MESSAGE ACTIVE   
+            $all_message = $obj_message->total;
+            return $all_message;
+        }
+    
+        public function get_messages($customer_id){
+            $params = array(
+                        "select" =>"messages_id,
+                                    date,
+                                    subject,
+                                    label,
+                                    messages",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "order" => "date DESC",
+                        "limit" => "3",
+                                        );
+            $obj_message = $this->obj_messages->search($params); 
+            //GET ALL MESSAGE   
+            return $obj_message;
+        }
 }

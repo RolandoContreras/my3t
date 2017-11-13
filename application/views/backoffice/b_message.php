@@ -40,7 +40,7 @@
                                                             <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
                                                     </div>
                                                 <a href="<?php echo site_url().'backoffice/messages';?>"><button title="Actualizar" data-placement="left" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> Actualizar</button></a>
-                                                <button title="Marcar Leido" data-placement="top" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-eye"></i><?php echo replace_vocales_voculeshtml("Marcar como Le�do");?></button>
+                                                <button title="Marcar Leido" data-placement="top" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-eye"></i><?php echo replace_vocales_voculeshtml("Marcar como Leído");?></button>
                                             </div>
                                     </div>
                                     <div class="table-responsive">

@@ -39,24 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="well media media-badges box box-height">
-                <div class="row">
-                    <div class="col-sm-8">
-                        
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">PAQUETE ACTUAL</h5>
-                            <p class="title"><?php echo $text_franchise;?></p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img style="max-width: 120px" src="<?php echo site_url()."static/backoffice/images/$images_franchise";?>" alt="<?php echo $text_franchise;?>"/>
-                        </div>
-                        </div>
-                    
-                </div>
-                </div>
-            </div>
+          
             <!--SEPARATE SECCION-->
             <div class="row">
                 <div class="col-sm-12 mb-25">

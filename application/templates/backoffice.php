@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Empresa 100% peruana que brinda distintos servicios e info-productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
 <meta name="keywords" content="3T,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
-<title>Travel - Training- Trade</title>
+<title>Backoffice | Travel - Training- Trade</title>
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
 
 <!-- Site favicon -->
@@ -195,28 +195,39 @@
 				  <!-- Messages -->
 				  <li class="notifications dropdown">
 					<a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                            <i class="icon-mail"></i><span class="badge badge-secondary">1</span></a>
+                                            <i class="icon-mail"></i><span class="badge badge-secondary"><?php echo $all_message;?></span></a>
 					<ul class="dropdown-menu pull-right">
 						<li class="first">
 							<div class="dropdown-content-header">Mensajes</div>
 						</li>
 						<li>
-							<ul class="media-list">
-								<li class="media">
-									<div class="media-left">
+                                                    <ul class="media-list">
+                                                        <?php 
+                                                            if($all_message == 0){ ?>
+                                                                <li>
+                                                                    <div class="media-body">
+                                                                            <span class="text-muted">No hay nuevos mensajes</span>
+                                                                        </div>
+                                                                </li>
+                                                            <?php }else{
+                                                                foreach ($obj_message as $value) { ?>
+                                                                <li class="media">
+                                                                        <div class="media-left">
                                                                             <i class="fa fa-comments" aria-hidden="true"></i>
                                                                         </div>
-									<div class="media-body">
-										<a class="media-heading" href="#">
-											<span class="text-semibold">Bienvenido</span>
-											<span class="media-annotation pull-right">Tue</span>
-										</a>
-										<span class="text-muted">Bienvenido a 3T, te deseamos éxito...</span>
-									</div>
-								</li>
-							</ul>
+                                                                        <div class="media-body">
+                                                                                <a class="media-heading" href="#">
+                                                                                    <span class="text-semibold"><?php $subject = replace_vocales_voculeshtml("$value->subject"); echo corta_texto($subject,40);?></span>
+                                                                                        <span class="media-annotation pull-right">Tue</span>
+                                                                                </a>
+                                                                            <span class="text-muted"><?php $message = replace_vocales_voculeshtml("$value->messages"); echo corta_texto($message,40);?></span>
+                                                                        </div>
+                                                                </li>
+                                                                <?php } ?>
+                                                           <?php } ?>
+                                                    </ul>
 						</li>
-                                                <li class="external-last"> <a class="danger" href="<?php echo site_url().'backoffice/messages';?>">Todos los Mensajes</a> </li>
+                                                <li class="external-last"> <a class="danger" href="<?php echo site_url().'backoffice/messages';?>"><i class="fa fa-comments" aria-hidden="true"></i> Todos los Mensajes</a> </li>
 					</ul>
 				  </li>
 				  <!-- /messages -->
