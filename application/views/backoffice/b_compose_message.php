@@ -14,31 +14,19 @@
 				<p><a class="btn btn-block btn-red" href="<?php echo site_url().'backoffice/compose_message';?>">Compose</a></p>
 				<ul class="list-unstyled mail-list">
 					<li>
-						<a href="mail-inbox.html"><i class="fa fa-inbox"></i> Inbox <b>(6)</b></a>
+                                            <a href="<?php echo site_url().'backoffice/messages';?>"><i class="fa fa-inbox"></i> Inbox <b>(<?php echo $all_message;?>)</b></a>
 					</li>
 					<li>
-						<a href="#/"><i class="fa fa-send-o"></i> Sent</a>
-					</li>
-					<li>
-						<a href="#/"><i class="fa fa-edit"></i> Drafts <b>(15)</b></a>
-					</li>
-					<li>
-						<a href="#/"><i class="fa fa-star-o"></i> Important</a>
-					</li>
-					<li>
-						<a href="#/"><i class="fa fa-trash-o"></i> Trash <b>(205)</b></a>
+						<a href="#/"><i class="fa fa-send-o"></i> Enviados</a>
 					</li>
 				</ul>
 				
 				<h3 class="title text-uppercase m-l-20">Labels</h3>
 				<ul class="list-unstyled category-list">
-					<li><a href="#"> <i class="fa fa-circle text-purple"></i> Work </a></li>
-					<li><a href="#"> <i class="fa fa-circle text-warning"></i> Clients</a></li>
-					<li><a href="#"> <i class="fa fa-circle text-danger"></i> Documents</a></li>
-					<li><a href="#"> <i class="fa fa-circle text-primary"></i> Social</a></li>
-					<li><a href="#"> <i class="fa fa-circle text-info"></i> Advertising</a></li>
-				</ul>
-				
+                                    <li><a href="<?php echo site_url().'backoffice/messages/bonus';?>"> <i class="fa fa-circle text-purple"></i>Bonos</a></li>
+                                    <li><a href="<?php echo site_url().'backoffice/messages/support';?>"> <i class="fa fa-circle text-danger"></i>Soporte</a></li>
+                                    <li><a href="<?php echo site_url().'backoffice/messages/social';?>"> <i class="fa fa-circle text-primary"></i>Social</a></li>
+                                </ul>
 			</div>
 			<div class="col-lg-9">
 			
@@ -46,26 +34,24 @@
 					<div class="mail-box-header clearfix">
 						<h3 class="mail-title">Compose mail</h3>
 						<div class="pull-right tooltip-demo">
-                                                    <a title="Descarte" data-placement="top" data-toggle="tooltip" class="btn btn-danger btn-sm" href="<?php echo site_url().'';?>" data-original-title="Descarte Mensaje"><i class="fa fa-times"></i> Descarte</a>
+                                                    <a title="Descarte" data-placement="top" data-toggle="tooltip" class="btn btn-danger btn-sm" href="<?php echo site_url().'backoffice/messages';?>" data-original-title="Descarte Mensaje"><i class="fa fa-times"></i> Descarte</a>
 						</div>
 					</div>
 					<div class="mail-body">
 						 <form>
 							<div class="form-group">
-								<input class="form-control" placeholder="To" type="email">
+                                                            <input class="form-control" placeholder="To" type="text" value="Soporte 3T" disabled="disabled">
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="Subject" type="text">
+								<input class="form-control" placeholder="Asunto" type="text">
 							</div>
 							<div class="form-group">
-                                                                            <textarea class="textarea wysihtml5 form-control" style="height: 200px;" placeholder="Message body"></textarea>
-
+                                                                            <textarea class="textarea wysihtml5 form-control" style="height: 200px;" placeholder="Mensaje..."></textarea>
 							</div>
 							<hr>
 							<div class="form-group text-right">
-								<a title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" href="#/" data-original-title="Send"><i class="fa fa-reply"></i> Send</a>
-								<a title="" data-placement="top" data-toggle="tooltip" class="btn btn-white" href="#/" data-original-title="Discard Email"><i class="fa fa-times"></i> Discard</a>
-								<a title="" data-placement="top" data-toggle="tooltip" class="btn btn-white" href="#/" data-original-title="Move to Draft"><i class="fa fa-pencil"></i> Draft</a>
+								<a title="" data-placement="top" data-toggle="tooltip" class="btn btn-primary" href="#" data-original-title="Send"><i class="fa fa-reply"></i> Enviar</a>
+								<a title="" data-placement="top" data-toggle="tooltip" class="btn btn-white" href="<?php echo site_url().'backoffice/messages';?>" data-original-title="Discard Email"><i class="fa fa-times"></i> Descarte</a>
 							</div>
 						</form>
 					</div>

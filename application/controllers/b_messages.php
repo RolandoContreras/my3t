@@ -170,6 +170,17 @@ class B_messages extends CI_Controller {
         //VERIFIRY GET SESSION    
         $this->get_session();
         
+        //GET CUSTOMER_ID
+        $customer_id = $_SESSION['customer']['customer_id'];
+        $params = array(
+                        "select" =>"count(messages_id) as total",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        
+                                        );
+        $obj_message = $this->obj_messages->get_search_row($params);
+        //GET ALL MESSAGE   
+        $all_message = $obj_message->total;
+        
         //GET PRICE BTC
             $params_price_btc = array(
                                     "select" =>"",
@@ -180,7 +191,7 @@ class B_messages extends CI_Controller {
            
            //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("price_btc",$price_btc);
-//         $this->tmp_backoffice->set("obj_customer",$obj_customer);
+         $this->tmp_backoffice->set("all_message",$all_message);
          $this->tmp_backoffice->render("backoffice/b_compose_message");
         
         }
