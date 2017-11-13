@@ -40,34 +40,41 @@
                                                             <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
                                                     </div>
                                                 <a href="<?php echo site_url().'backoffice/messages';?>"><button title="Actualizar" data-placement="left" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> Actualizar</button></a>
-                                                <button title="Marcar Leido" data-placement="top" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-eye"></i><?php echo replace_vocales_voculeshtml("Marcar como Leído");?></button>
+                                                <button title="Marcar Leido" data-placement="top" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-eye"></i><?php echo replace_vocales_voculeshtml("Marcar como Le�do");?></button>
                                             </div>
                                     </div>
                                     <div class="table-responsive">
                                             <table class="table table-hover table-mails">
                                                     <tbody>
                                                         <?php 
-                                                        
-
-                                                        
-                                                        
-                                                        foreach ($obj_message as $value) { 
+                                                        if($all_message == 0){ ?>
+                                                            <tr>
+                                                                <td colspan="5" style="text-align: center;">
+                                                                        No hay mensajes
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                        <?php }else{
+                                                            
+                                                            foreach ($obj_message as $value) { 
                                                             //GET TYPE MESSAGE
                                                             switch ($value->type) {
                                                             case 1:
                                                                 //BONUS
                                                                 $style =  "fa fa-circle text-purple m-r-15";
+                                                                $link =  "bonus";
                                                                 break;
                                                             case 2:
                                                                 //SUPPORT
                                                                 $style =  "fa fa-circle text-danger m-r-15";
+                                                                $link =  "support";
                                                                 break;
                                                             case 3:
                                                                 //SOCIAL
                                                                 $style =  "fa fa-circle text-primary m-r-15";
+                                                                $link =  "social";
                                                                 break;
-                                                            }    
-                                                            ?>
+                                                            } ?>
                                                             <tr class="unread">
                                                                     <td class="mail-select">
                                                                         <div class="form-checkbox">
@@ -78,10 +85,10 @@
                                                                             <i class="fa fa-star text-warning"></i>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="#"><i class="<?php echo $style;?>"></i> <?php echo replace_vocales_voculeshtml("$value->label");?></a>
+                                                                        <a href='<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>'><i class="<?php echo $style;?>"></i> <?php echo replace_vocales_voculeshtml("$value->label");?></a>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="#"><?php echo replace_vocales_voculeshtml("$value->subject");?></a>
+                                                                        <a href="<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>"><?php echo replace_vocales_voculeshtml("$value->subject");?></a>
                                                                     </td>
                                                                     <td>
                                                                             <i class="fa fa-paperclip"></i>
@@ -89,6 +96,7 @@
                                                                     <td class="text-right"><?php echo formato_fecha_barras($value->date)?></td>
                                                             </tr>
                                                         <?php } ?>
+                                                    <?php } ?>
                                                     </tbody>
                                             </table>
                                     </div>
