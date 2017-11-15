@@ -74,9 +74,6 @@ class B_wallet extends CI_Controller {
                     );
              $obj_report = $this->obj_commissions->get_search_row($params_total);
              
-//             var_dump($obj_report);
-//             die();
-             
              $obj_balance = $obj_report->total;
              $obj_balance_disponible = $obj_report->balance;
              
