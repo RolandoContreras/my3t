@@ -11,9 +11,51 @@
             <!-- Page content-->
     <div class="content-wrapper">
         <div class="row fix-box-height package-box-fix mt-30">
-            
           
+            
 
+                      
+          
+<div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="well well-sm well-light">
+			<div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+				<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+					<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-a" aria-labelledby="ui-id-24" aria-selected="false">
+						<a href="#tabs-a" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-24">First</a>
+					</li>
+					<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-b" aria-labelledby="ui-id-25" aria-selected="false">
+						<a href="#tabs-b" class="ui-tabs-anchor" id="intermedio" role="presentation" tabindex="-1" id="ui-id-25">Second</a>
+					</li>
+					<li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-c" aria-labelledby="ui-id-26" aria-selected="true">
+						<a href="#tabs-c" class="ui-tabs-anchor" id="avanzado" role="presentation" tabindex="-1" id="ui-id-26">Third</a>
+					</li>
+				</ul>
+				<div id="tabs-a" aria-labelledby="ui-id-24" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+				</div>
+				<div id="tabs-b" aria-labelledby="ui-id-25" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;" aria-expanded="false" aria-hidden="true">
+					<p>
+						Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.
+					</p>
+				</div>
+				<div id="tabs-c" aria-labelledby="ui-id-26" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" style="display: block;" aria-expanded="true" aria-hidden="false">
+					<p>
+						Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.
+					</p>
+				</div>
+			</div>
+
+			<!-- Demo -->
+			
+
+		</div>
+	</div>
+            
+            
+            
+            
         <div class="col-md-12"> 
                 <div class="panel panel-default">
                         <div class="panel-heading clearfix"> 
@@ -27,7 +69,7 @@
 			<div class="row">
 				<div class="col-md-4">
                                     <img src="<?php echo site_url().'static/backoffice/images/academy/felipe.jpg';?>" class="img-responsive" alt="Felipe Arguedas">
-<!--					<ul class="list-inline padding-10">
+					<ul class="list-inline padding-10">
 						<li>
 							<i class="fa fa-calendar"></i>
 							<a href="javascript:void(0);"> March 12, 2015 </a>
@@ -36,11 +78,11 @@
 							<i class="fa fa-comments"></i>
 							<a href="javascript:void(0);"> 38 Comments </a>
 						</li>
-					</ul>-->
+					</ul>
 				</div>
 				<div class="col-md-8 padding-left-0">
 					<h3 class="margin-top-0"><a href="javascript:void(0);">Admr. Felipe Arguedas</a><br>
-                                            <!--<small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small>-->
+                                            <small class="font-xs"><i>Published by <a href="javascript:void(0);">John Doe</a></i></small>
                                         </h3>
 					<p>
 						<?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesiÃ³n. EjerciÃ³ durante 4 aÃ±os como trader para el X-Trader Brokers (XTB). En los Ãºltimos aÃ±os, se ha desempeÃ±ado como asesor de inversiones bursÃ¡tiles para SudamÃ©rica y Europa. Ha realizado variadas publicaciones sobre economÃ­a global y local para El Diario GestiÃ³n, El Comercio y RPP Noticias en el paÃ­s de PerÃº. AdemÃ¡s, ha impartido cursos de formaciÃ³n bursÃ¡til para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura.");?>
@@ -89,7 +131,7 @@
 				</div>
 			</div>
 			<hr>
-                        <a href="<?php echo site_url().'backoffice/academy/courses';?>"><button class="btn btn-success btn-block" type="button">VER CURSOS</button></a>
+                        <a><button class="btn btn-success btn-block" type="button">VER CURSOS</button></a>
 		</div>
 	</div>
         <div class="col-sm-3">
@@ -115,68 +157,23 @@
 				</p>
 			</ul>
 		</div>
-		<!-- /well -->
-		<!-- /well -->
-<!--		<div class="well padding-10">
-			<h5 class="margin-top-0"><i class="fa fa-fire"></i> Popular Posts:</h5>
-			<ul class="no-padding list-unstyled">
-				<li>
-					<a href="javascript:void(0);" class="margin-top-0">WPF vs. Windows Forms-Which is better?</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="padding-top-5 display-block">How to create responsive website with Bootstrap?</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="margin-top-5">The best Joomla! templates 2014</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="margin-top-5">ASP .NET cms list</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="margin-top-5">C# Hello, World! program</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="margin-top-5">Java random generator</a>
-				</li>
-			</ul>
-		</div>-->
-		<!-- /well -->
-
-		<!-- /well -->
-<!--		<div class="well padding-10">
-			<h5 class="margin-top-0"><i class="fa fa-video-camera"></i> Featured Videos:</h5>
-			<div class="row">
-
-				<div class="col-lg-12">
-
-					<ul class="list-group no-margin">
-						<li class="list-group-item">
-							<a href=""> <span class="badge pull-right">15</span> Photograph </a>
-						</li>
-						<li class="list-group-item">
-							<a href=""> <span class="badge pull-right">30</span> Life style </a>
-						</li>
-						<li class="list-group-item">
-							<a href=""> <span class="badge pull-right">9</span> Food </a>
-						</li>
-						<li class="list-group-item">
-							<a href=""> <span class="badge pull-right">4</span> Travel world </a>
-						</li>
-					</ul>
-
-				</div>
-
-				<div class="col-lg-12">
-					<div class="margin-top-10">
-						<img src="img/demo/video.png" alt="smartgirl" class="img-responsive">
-					</div>
-				</div>
-			</div>
-
-		</div>-->
-		<!-- /well -->
-
-	</div>
             </div>
         </div>
+        </div>
     </section>
+
+<script>
+$(document).ready(function(){
+    $("#ui-id-24").click(function(){
+        $("#tabs_a").show();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+</script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

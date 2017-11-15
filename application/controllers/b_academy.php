@@ -6,6 +6,8 @@ class B_academy extends CI_Controller {
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
         $this->load->model("otros_model","obj_otros");
+        $this->load->model("messages_model","obj_messages");
+        $this->load->model("product_model","obj_product");
     }
 
 	/**
@@ -25,16 +27,14 @@ class B_academy extends CI_Controller {
 	 */
 	public function index()
 	{
-            
-        //SELECT URL    
-        $url = explode("/",uri_string());
-            
-        if(isset($url[2])){
-             $customer_id = $url[2];
-        }else{
-            //GET CUSTOMER_ID  FROM $_SESSION
-            $customer_id = $_SESSION['customer']['customer_id'];
-        }    
+        //GET CUSTOMER_ID  FROM $_SESSION
+        $customer_id = $_SESSION['customer']['customer_id'];
+        
+        //GET TOTAL MESSAGE
+         $all_message = $this->get_total_messages($customer_id);
+         //GET TOTAL MESSAGE
+         $obj_message = $this->get_messages($customer_id);
+
         
         //VERIFIRY GET SESSION    
          $this->get_session();
@@ -70,10 +70,6 @@ class B_academy extends CI_Controller {
                                             'franchise, customer.franchise_id = franchise.franchise_id')
                                             );
              $obj_customer = $this->obj_customer->get_search_row($params);  
-         
-             $identificator = $obj_customer->identificador;
-             $explode_identificator = explode(",", $identificator);
-             $count_explode = count($explode_identificator);
              
           //GET PRICE BTC
             $params_price_btc = array(
@@ -83,11 +79,58 @@ class B_academy extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);   
             
-        $this->tmp_backoffice->set("price_btc",$price_btc);    
+        $this->tmp_backoffice->set("price_btc",$price_btc);   
+        $this->tmp_backoffice->set("obj_message",$obj_message);
+        $this->tmp_backoffice->set("all_message",$all_message);    
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_academy");
 	}
+        
+        public function courses(){
+        
+         //VERIFIRY GET SESSION    
+         $this->get_session();
+            
+         //GET CUSTOMER_ID  FROM $_SESSION
+         $customer_id = $_SESSION['customer']['customer_id'];
+        
+         $params = array(
+                            "select" =>"product.name,
+                                        product.summary,
+                                        product.img,
+                                        product.author,
+                                        product.date,
+                                        ",
+                            "where" => "product.status_value = 1 and category.category_id = 1 ",
+                            "join" => array('category, product.category_id = category.category_id'),
+                            "order" => "product.date DESC"
+                                            );
+                            
+             $obj_product = $this->obj_product->search($params); 
+             
+        //GET TOTAL MESSAGE
+         $all_message = $this->get_total_messages($customer_id);
+         //GET TOTAL MESSAGE
+         $obj_message = $this->get_messages($customer_id);
 
+        
+         //GET PRICE BTC
+            $params_price_btc = array(
+                                    "select" =>"",
+                                     "where" => "otros_id = 1");
+                
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = "$".number_format($obj_otros->precio_btc,2);   
+            
+        $this->tmp_backoffice->set("price_btc",$price_btc);   
+        $this->tmp_backoffice->set("obj_message",$obj_message);
+        $this->tmp_backoffice->set("all_message",$all_message);    
+//        $this->tmp_backoffice->set("obj_customer",$obj_customer);
+        $this->tmp_backoffice->render("backoffice/b_academy_courses");
+        
+            
+        }
+        
         public function get_session(){          
         if (isset($_SESSION['customer'])){
             if($_SESSION['customer']['logged_customer']=="TRUE" && $_SESSION['customer']['status']=='1'){               
@@ -99,4 +142,32 @@ class B_academy extends CI_Controller {
             redirect(site_url().'home');
         }
     }
+    
+        public function get_total_messages($customer_id){
+        $params = array(
+                        "select" =>"count(messages_id) as total",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        
+                                        );
+            $obj_message = $this->obj_messages->get_search_row($params);
+            //GET TOTAL MESSAGE ACTIVE   
+            $all_message = $obj_message->total;
+            return $all_message;
+        }
+    
+        public function get_messages($customer_id){
+            $params = array(
+                        "select" =>"messages_id,
+                                    date,
+                                    subject,
+                                    label,
+                                    messages",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "order" => "date DESC",
+                        "limit" => "3",
+                                        );
+            $obj_message = $this->obj_messages->search($params); 
+            //GET ALL MESSAGE   
+            return $obj_message;
+        }
 }

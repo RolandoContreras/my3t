@@ -15,33 +15,10 @@ BITSHARE S.A.C
 * Fecha: 16/11/2016
 ****/
 
-class customer_model_atributos{	
-    var $customer_id='';
-    var $parents_id='';
-    var $franchise_id='';
-    var $username='';
-    var $email='';
-    var $position='';
-    var $position_temporal='';
-    var $password='';
-    var $first_name='';
-    var $last_name='';
-    var $dni='';
-    var $birth_date='';
-    var $point_left='';
-    var $point_rigth='';
-    var $identificador='';
-    var $address='';
-    var $btc_address='';
-    var $country='';
-    var $region='';
-    var $city='';
-    var $phone='';
-    var $active=''; 
-    var $active_product='';
-    var $calification='';
-    var $point_calification_left='';
-    var $point_calification_rigth='';
+class category_model_atributos{	
+    var $category_id='';
+    var $name='';
+    var $description='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -49,44 +26,21 @@ class customer_model_atributos{
     var $updated_by='';
 }
 
-class Customer_Model extends CI_Model{ 
+class Category_Model extends CI_Model{ 
 
     public function __construct() {
         parent::__construct();  
-        $this->table = 'customer';
-	$this->table_id = 'customer_id';
-        $this->customer_id='';
-        $this->parents_id='';
-        $this->franchise_id='';
-        $this->username='';
-	$this->email='';
-        $this->position='';
-        $this->position_temporal='';
-        $this->password='';
-	$this->first_name='';
-        $this->last_name='';
-        $this->dni='';
-        $this->birth_date='';
-        $this->address='';
-        $this->btc_address='';
-        $this->country='';
-        $this->point_left='';
-        $this->point_rigth='';
-        $this->identificador='';
-        $this->region='';
-        $this->city='';
-	$this->phone='';
-        $this->active='';
-        $this->active_product='';
-        $this->calification='';
-        $this->point_calification_left='';
-        $this->point_calification_rigth='';
+        $this->table = 'category';
+	$this->table_id = 'category_id';
+        $this->category_id='';
+        $this->name='';
+        $this->description='';
 	$this->status_value='';
-	$this->created_at='';
-	$this->created_by='';
-	$this->updated_at='';
-	$this->updated_by='';
-	$this->fields = new customer_model_atributos();
+        $this->created_at='';
+        $this->created_by='';
+        $this->updated_at='';
+        $this->updated_by='';
+	$this->fields = new category_model_atributos();
     }   
     
     public function fields(){
@@ -172,14 +126,5 @@ class Customer_Model extends CI_Model{
         $dato = $query->row();
         return $dato;       
   }
-  
-   public function verificar_username($username,$password){        
-        $this->db->where('$username',$username);
-        $this->db->where('password', $password);
-        $this->db->from($this->table);
-        $query = $this->db->get();                     
-        return $query->row();        
-   }
-  
 } //FIN DEL MODELO EXTENDIDO
 ?>

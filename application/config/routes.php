@@ -53,6 +53,8 @@ $route['backoffice/binario'] = "b_binario";
 $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
 
 $route['backoffice/academy'] = "b_academy";
+$route['backoffice/academy/courses'] = "b_academy/courses";
+
 $route['backoffice/messages'] = "b_messages";
 $route['backoffice/messages/bonus'] = "b_messages/message_type";
 $route['backoffice/messages/bonus/([0-9a-z_-]+)'] = "b_messages/message_type/$1";
