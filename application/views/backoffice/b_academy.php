@@ -103,7 +103,7 @@
 				</div>
 			</div>
 			<hr>
-                        <a><button class="btn btn-success btn-block" type="button">VER CURSOS</button></a>
+                        <a href="<?php echo site_url().'backoffice/academy/courses';?>"><button class="btn btn-success btn-block" type="button">VER CURSOS</button></a>
 		</div>
 	</div>
         <div class="col-sm-3">

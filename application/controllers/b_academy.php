@@ -122,7 +122,8 @@ class B_academy extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);   
             
-        $this->tmp_backoffice->set("price_btc",$price_btc);   
+        $this->tmp_backoffice->set("price_btc",$price_btc); 
+        $this->tmp_backoffice->set("obj_product",$obj_product); 
         $this->tmp_backoffice->set("obj_message",$obj_message);
         $this->tmp_backoffice->set("all_message",$all_message);    
 //        $this->tmp_backoffice->set("obj_customer",$obj_customer);
