@@ -94,4 +94,9 @@ display: none;
                     <script type="text/javascript">
                     var site = '<?php echo site_url();?>';
                 </script>
+<!--REPRODUCTOR VIDEO-->
+<link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
+<!-- If you'd like to support IE8 -->
+<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+                
 </head>

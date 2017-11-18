@@ -87,32 +87,45 @@ class B_academy extends CI_Controller {
 	}
         
         public function courses(){
+        //VERIFIRY GET SESSION    
+        $this->get_session();    
+        //GET CUSTOMER_ID  FROM $_SESSION
+        $customer_id = $_SESSION['customer']['customer_id'];
+        //GET TOTAL MESSAGE
+        $all_message = $this->get_total_messages($customer_id);
+        //GET TOTAL MESSAGE
+        $obj_message = $this->get_messages($customer_id);
+        //GET URL
+        $url = explode("/",uri_string());
+        //TEST ISSET PRODUCT_ID
+        $product_id = isset($url['3'])?$url['3']:"";
         
-         //VERIFIRY GET SESSION    
-         $this->get_session();
+            //SELECT WHERE AND TYPE GET ROW Y RENDER VIEW
+            if($product_id != ""){
+                $where = "product.product_id = $product_id and product.status_value = 1 and category.category_id = 1";
+                $type = "get_search_row";
+            }else{
+                $where = "product.status_value = 1 and category.category_id = 1";
+                $type = "search";
+            }
             
-         //GET CUSTOMER_ID  FROM $_SESSION
-         $customer_id = $_SESSION['customer']['customer_id'];
-        
          $params = array(
-                            "select" =>"product.name,
-                                        product.summary,
+                            "select" =>"product.product_id,
+                                        product.name,
                                         product.img,
+                                        product.summary,
+                                        product.description,
+                                        product.video,
                                         product.author,
                                         product.date,
                                         ",
-                            "where" => "product.status_value = 1 and category.category_id = 1 ",
+                            "where" => "$where",
                             "join" => array('category, product.category_id = category.category_id'),
                             "order" => "product.date DESC"
                                             );
                             
-             $obj_product = $this->obj_product->search($params); 
-             
-        //GET TOTAL MESSAGE
-         $all_message = $this->get_total_messages($customer_id);
-         //GET TOTAL MESSAGE
-         $obj_message = $this->get_messages($customer_id);
-
+        $obj_product = $this->obj_product->$type($params); 
+     
         
          //GET PRICE BTC
             $params_price_btc = array(
@@ -126,9 +139,7 @@ class B_academy extends CI_Controller {
         $this->tmp_backoffice->set("obj_product",$obj_product); 
         $this->tmp_backoffice->set("obj_message",$obj_message);
         $this->tmp_backoffice->set("all_message",$all_message);    
-//        $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_academy_courses");
-        
             
         }
         
