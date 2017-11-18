@@ -27,15 +27,14 @@
 						<div class="col-md-5 col-sm-12 col-xs-12 ">
 							<div class="product-image"> 
                                                             <div class="col-md-5">
-				<div class="embed-section">
-                                    <div id="instructions">
-                                        <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
-                                            controls preload="none" poster='<?php echo site_url()."static/product/academy/images/basic/$obj_product->img";?>'
-                                            data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
-                                            <source src="<?php echo site_url().'static/product/academy/videos/basic/video_1.mp4';?>" type='video/mp4' />
-                                        </video>
-                                    </div>
-				</div>
+                                                                <div class="embed-section">
+                                                                    <div id="instructions">
+                                                                        <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
+                                                                            controls preload="none" poster='<?php echo site_url()."static/product/academy/images/basic/$obj_product->img";?>' data-setup='{}'>
+                                                                            <source src="<?php echo site_url().'static/product/academy/videos/basic/video_1.mp4';?>" type='video/mp4' />
+                                                                        </video>
+                                                                    </div>
+                                                                </div>
                                 <style>
                                   #instructions { max-width: 640px;height: 300px}
                                   #instructions textarea { width: 100%; height: 100px; }
