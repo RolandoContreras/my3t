@@ -253,7 +253,7 @@
                                                                 <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
                                                                 <?php break;
                                                             case 3:
-                                                                $amount = "$500"?>
+                                                                $amount = "$700"?>
                                                                 <img src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Cuenta Investor" height="120" width="130"/>
                                                                 <?php break;
                                                             case 4:
