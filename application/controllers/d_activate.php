@@ -15,7 +15,6 @@ class D_activate extends CI_Controller{
     public function index(){  
         
            $this->get_session();
-           
            $params = array(
                         "select" =>"customer.customer_id,
                                     customer.username,
@@ -25,6 +24,7 @@ class D_activate extends CI_Controller{
                                     customer.parents_id,
                                     customer.created_at,
                                     franchise.price as price,
+                                    franchise.point as point,
                                     franchise.name as franchise,
                                     customer.status_value",
                         "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
@@ -107,30 +107,33 @@ class D_activate extends CI_Controller{
         if($this->input->is_ajax_request()){  
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
-                $price = $this->input->post("price");
+                $point = $this->input->post("point");
                 $parents_id = $this->input->post("parents_id");
                 
-                //GET BONUS DIRECT
-                $this->pay_directo($customer_id,$price,$parents_id);
+                //GET SPONSOR ACTIVE
+                    $params = array(
+                        "select" =>"customer.active",
+                        "where" => "customer_id = $parents_id and customer.status_value = 1"
+                    );
+                $obj_customer= $this->obj_customer->get_search_row($params);
+                $active = $obj_customer->active;
                 
-                //GET BONUS BINARY
-                $this->pay_binario($customer_id);
+                if($active > 0){
+                    //GET BONUS DIRECT
+                    $this->pay_directo($customer_id,$point,$parents_id);
+
+                    //GET BONUS BINARY
+                    $this->pay_binario($customer_id);
+                }
                 
                 //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
-                $today_7 = strtotime ( '+7 day' , strtotime ( $today ) ) ;
-                $today_7 = date ( 'Y-m-j' , $today_7 );
-                
-                $today_75 = strtotime ( '+75 day' , strtotime ( $today_7 ) ) ;
-                $today_75 = date ( 'Y-m-j' , $today_75 );
                 
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
                 if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
                         'date_start' => $today,
-                        'date_stand_by' => $today_7,
-                        'date_end' => $today_75,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
@@ -174,7 +177,7 @@ class D_activate extends CI_Controller{
             
     }
    
-    public function pay_directo($customer_id,$price,$parents_id){
+    public function pay_directo($customer_id,$point,$parents_id){
                 //GET PERCENT FROM BONUS
                 $params = array(
                         "select" =>"percent",
@@ -185,7 +188,7 @@ class D_activate extends CI_Controller{
                 $percet = $obj_bonus->percent;
                 
                 //CALCULE AMOUNT
-                $amount = ($price  * $percet) / 100;
+                $amount = ($point  * $percet) / 100;
                 
                 //INSERT COMMISSION TABLE
                 if(count($customer_id) > 0){

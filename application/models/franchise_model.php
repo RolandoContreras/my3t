@@ -19,6 +19,7 @@ class franchise_model_atributos{
     var $franchise_id='';
     var $name='';
     var $price='';
+    var $point='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -35,6 +36,7 @@ class Franchise_Model extends CI_Model{
         $this->customer_id='';
         $this->name='';
         $this->price='';
+        $this->point='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';

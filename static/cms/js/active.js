@@ -18,7 +18,7 @@ function active_financiada(customer_id){
         }
     ]);
 }
-function active(customer_id,price,parents_id){
+function active(customer_id,point,parents_id){
     bootbox.dialog("Confirma que desea activar la cuenta?", [        
         { "label" : "Cancelar"},
         {
@@ -30,8 +30,9 @@ function active(customer_id,price,parents_id){
                url: site+"dashboard/activaciones/active",
                dataType: "json",
                data: {customer_id : customer_id,
-                      parents_id : parents_id,
-                      price:price},
+                      point:point,
+                      parents_id : parents_id
+                      },
                success:function(data){                             
                location.reload();
                }         
