@@ -307,7 +307,7 @@ class B_data extends CI_Controller {
                                     label,
                                     messages",
                         "where" => "customer_id = $customer_id and status_value = 1",
-                        "order" => "date DESC",
+                        "order" => "messages_id DESC",
                         "limit" => "3",
                                         );
             $obj_message = $this->obj_messages->search($params); 
