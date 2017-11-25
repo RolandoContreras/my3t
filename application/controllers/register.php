@@ -7,6 +7,8 @@ class Register extends CI_Controller {
         $this->load->model("customer_model", "obj_customer");
         $this->load->model("paises_model", "obj_paises");
         $this->load->model("regiones_model", "obj_regiones");
+        $this->load->model("messages_model","obj_messages");
+        
     }
 
 	/**
@@ -226,7 +228,6 @@ class Register extends CI_Controller {
                         'point_rigth' => 0,
                         'calification' => 0,
                         'date_start' => "0000/00/00",
-                        'date_end' => "0000/00/00",
                         'identificador' => $identificator,
                         'position_temporal' => 1,
                         'password' => $clave,
@@ -246,6 +247,42 @@ class Register extends CI_Controller {
                     );
 
                     $customer_id = $this->obj_customer->insert($data);
+                    
+                    //CREATE MESSAGE WELCOME
+                    $name = ucwords("$name $last_name");
+                    $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T. Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
+                    
+                    $data_messages = array(
+                        'customer_id' => $customer_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Bienvenido a 3T",
+                        'messages' => $message,
+                        'type' => 2,
+                        'type_send' => 0,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);
+                    
+                    //CREATE MESSAGE DATA ACCESS
+                    $message = "Ususario: $usuario  Contraseña: $clave";
+                    $data_messages = array(
+                        'customer_id' => $customer_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Sus datos de acceso",
+                        'messages' => $message,
+                        'type' => 2,
+                        'type_send' => 0,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);
 
                     //ACTIVE SESSION
                     $data_customer_session['customer_id'] = $customer_id;
@@ -260,7 +297,7 @@ class Register extends CI_Controller {
 
     //                SEND MESSAGES
                     $images = "static/page_front/images/bienvenido.jpg";
-//                    $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
+                    $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
 
                     // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                     $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $usuario</h3><h3>Contraseña: $clave</h3><p>$img_path</p></body></html>", 70, "\n", true);
