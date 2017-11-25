@@ -33,7 +33,7 @@
 
                             <div class="mail-box">
                                     <div class="mail-box-header clearfix">
-                                            <h3 class="mail-title">Inbox <span class="count">(6)</span></h3>
+                                            <h3 class="mail-title">Inbox</h3>
                                             <div class="mail-tools clearfix">
                                                     <div class="btn-group pull-right">
                                                             <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
@@ -55,8 +55,9 @@
                                                             </tr>
                                                             
                                                         <?php }else{
-                                                            
-                                                            foreach ($obj_message as $value) { 
+                                                                if(count($obj_message) > 0){
+                                                                    
+                                                                    foreach ($obj_message as $value) { 
                                                             //GET TYPE MESSAGE
                                                             switch ($value->type) {
                                                             case 1:
@@ -95,7 +96,14 @@
                                                                     </td>
                                                                     <td class="text-right"><?php echo formato_fecha_barras($value->date)?></td>
                                                             </tr>
-                                                        <?php } ?>
+                                                        <?php } 
+                                                                }else{ ?>
+                                                                     <tr>
+                                                                        <td colspan="5" style="text-align: center;">
+                                                                                No hay mensajes
+                                                                        </td>
+                                                                    </tr>
+                                                                <?php } ?>
                                                     <?php } ?>
                                                     </tbody>
                                             </table>

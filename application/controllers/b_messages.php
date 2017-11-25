@@ -69,7 +69,7 @@ class B_messages extends CI_Controller {
         
         public function message_type()
 	{
-        
+            
         //VERIFIRY GET SESSION    
         $this->get_session();
         
@@ -158,7 +158,7 @@ class B_messages extends CI_Controller {
                         "limit" => "20",
                                         );
 
-            $obj_message = $this->obj_messages->search($params);  
+            $obj_message = $this->obj_messages->search($params); 
             
             //SEND DATA TO VIEW
             $this->tmp_backoffice->set("price_btc",$price_btc);
