@@ -210,13 +210,27 @@
                                                                         </div>
                                                                 </li>
                                                             <?php }else{
-                                                                foreach ($obj_message as $value) { ?>
+                                                                foreach ($obj_message as $value) { 
+                                                                    switch ($value->type) {
+                                                                        case 1:
+                                                                            //BONUS
+                                                                            $link =  "bonus";
+                                                                            break;
+                                                                        case 2:
+                                                                            //SUPPORT
+                                                                            $link =  "support";
+                                                                            break;
+                                                                        case 3:
+                                                                            //SOCIAL
+                                                                            $link =  "social";
+                                                                            break;
+                                                                } ?>
                                                                 <li class="media">
                                                                         <div class="media-left">
                                                                             <i class="fa fa-comments" aria-hidden="true"></i>
                                                                         </div>
                                                                         <div class="media-body">
-                                                                                <a class="media-heading" href="#">
+                                                                            <a class="media-heading" href="<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>">
                                                                                     <span class="text-semibold"><?php $subject = replace_vocales_voculeshtml("$value->subject"); echo corta_texto($subject,40);?></span>
                                                                                         <span class="media-annotation pull-right">Tue</span>
                                                                                 </a>
