@@ -175,6 +175,7 @@ class b_comissions extends CI_Controller {
                                     date,
                                     subject,
                                     label,
+                                    type,
                                     messages",
                         "where" => "customer_id = $customer_id and status_value = 1",
                         "order" => "messages_id DESC",

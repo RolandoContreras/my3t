@@ -166,6 +166,7 @@ class B_message_confirmation extends CI_Controller {
                                 date,
                                 subject,
                                 label,
+                                type,
                                 messages",
                     "where" => "customer_id = $customer_id and status_value = 1",
                     "order" => "date DESC",
