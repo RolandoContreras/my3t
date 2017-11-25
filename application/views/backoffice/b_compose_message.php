@@ -11,7 +11,7 @@
 		
 		<div class="row">
 			<div class="col-lg-3">
-				<p><a class="btn btn-block btn-red" href="<?php echo site_url().'backoffice/compose_message';?>">Compose</a></p>
+				<p><a class="btn btn-block btn-red" href="<?php echo site_url().'backoffice/compose_message';?>">Componer</a></p>
 				<ul class="list-unstyled mail-list">
 					<li>
                                             <a href="<?php echo site_url().'backoffice/messages';?>"><i class="fa fa-inbox"></i> Inbox <b>(<?php echo $all_message;?>)</b></a>

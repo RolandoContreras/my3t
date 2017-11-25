@@ -36,12 +36,12 @@
 							<a title="Regresar" data-placement="top" data-toggle="tooltip" class="btn btn-white btn-sm" href="<?php echo site_url().'backoffice/messages';?>" data-original-title="Reply"><i class="fa fa-reply"></i> Regresar</a>
 						</div>
 						<div class="mail-tools clearfix">
-                                                    <h4 class="title">Asunto: <?php echo replace_vocales_voculeshtml("$obj_message->subject");?></h4>
-                                                    <p><span class="pull-right"><?php echo formato_fecha_barras($obj_message->date);?></span><span>De: <?php echo $obj_message->label;?></span></p>
+                                                    <h4 class="title">Asunto: <?php echo replace_vocales_voculeshtml("$obj_get_message->subject");?></h4>
+                                                    <p><span class="pull-right"><?php echo formato_fecha_barras($obj_get_message->date);?></span><span>De: <?php echo $obj_get_message->label;?></span></p>
 						</div>
 					</div>
 					<div class="mail-body">
-                                                 <p><?php echo replace_vocales_voculeshtml("$obj_message->messages");?></p>
+                                                 <p><?php echo replace_vocales_voculeshtml("$obj_get_message->messages");?></p>
 						 <hr>
 					</div>
                                 </div>

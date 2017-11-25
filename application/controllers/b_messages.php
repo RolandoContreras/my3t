@@ -42,7 +42,7 @@ class B_messages extends CI_Controller {
                                     type,
                                     type_send",
                         "where" => "customer_id = $customer_id and status_value = 1",
-                        "order" => "date DESC",
+                        "order" => "messages_id DESC",
                         "limit" => "20",
                                         );
 
@@ -72,8 +72,8 @@ class B_messages extends CI_Controller {
         
         //VERIFIRY GET SESSION    
         $this->get_session();
-        /// VISTA
         
+        //GET URL
         $url = explode("/",uri_string());
         $type =  $url['2'];
         
@@ -91,7 +91,7 @@ class B_messages extends CI_Controller {
             $type =  1;
         }
         
-        
+
             //GET CUSTOMER_ID
             $customer_id = $_SESSION['customer']['customer_id'];
             $params = array(
@@ -111,11 +111,13 @@ class B_messages extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);
             
+           //GET TOTAL MESSAGE
+           $obj_message = $this->get_messages($customer_id);
             
             //IF ISSET MESSAGE_ID
             if(isset($url['3'])){
-                
-                //GET ALL MESAGGE OF TYPE (BONUS - SUPPORT - SOCIAL)
+                //GET ALL MESAGGE OF TYPE (BONUS - SUPPORT - SOCIAL) FROM MESSAGE_ID
+                $message_id = $url['3'];
                 $params = array(
                         "select" =>"messages_id,
                                     customer_id,
@@ -125,17 +127,18 @@ class B_messages extends CI_Controller {
                                     messages,
                                     type,
                                     type_send",
-                        "where" => "customer_id = $customer_id and status_value = 1 and type = $type",
+                        "where" => "customer_id = $customer_id and status_value = 1 and type = $type and messages_id = $message_id",
                         "order" => "date DESC",
                         "limit" => "20",
                                         );
 
-            $obj_message = $this->obj_messages->get_search_row($params);  
+            $obj_get_message = $this->obj_messages->get_search_row($params);  
             
             //SEND DATA TO VIEW  
+            $this->tmp_backoffice->set("obj_message",$obj_message);
             $this->tmp_backoffice->set("price_btc",$price_btc);
             $this->tmp_backoffice->set("all_message",$all_message);
-            $this->tmp_backoffice->set("obj_message",$obj_message);
+            $this->tmp_backoffice->set("obj_get_message",$obj_get_message);
             $this->tmp_backoffice->render("backoffice/b_view_message");
             
             }else{
@@ -206,5 +209,22 @@ class B_messages extends CI_Controller {
         }else{
             redirect(site_url().'home');
         }
+    }
+    
+           public function get_messages($customer_id){
+            $params = array(
+                        "select" =>"messages_id,
+                                    date,
+                                    subject,
+                                    label,
+                                    type,
+                                    messages",
+                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "order" => "messages_id DESC",
+                        "limit" => "3",
+                                        );
+            $obj_message = $this->obj_messages->search($params); 
+            //GET ALL MESSAGE   
+            return $obj_message;
     }
 }

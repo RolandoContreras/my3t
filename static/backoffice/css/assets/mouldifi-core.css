@@ -2170,7 +2170,7 @@ label {
 	background-color: #008a9b;
 }
 .badge-secondary {
-	background-color: #ef4040;
+	background-color: #ef4040 !important;
 }
 .badge-secondary[href]:hover, .badge-secondary[href]:focus {
 	background-color: #e91313;

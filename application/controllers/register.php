@@ -250,7 +250,7 @@ class Register extends CI_Controller {
                     
                     //CREATE MESSAGE WELCOME
                     $name = ucwords("$name $last_name");
-                    $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T. Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
+                    $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T. <br>Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
                     
                     $data_messages = array(
                         'customer_id' => $customer_id,
@@ -268,7 +268,7 @@ class Register extends CI_Controller {
                     $this->obj_messages->insert($data_messages);
                     
                     //CREATE MESSAGE DATA ACCESS
-                    $message = "Ususario: $usuario  Contraseña: $clave";
+                    $message = "Ususario: $usuario <br> Contraseña: $clave";
                     $data_messages = array(
                         'customer_id' => $customer_id,
                         'date' => date("Y-m-d H:i:s"),
