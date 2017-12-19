@@ -64,21 +64,21 @@
                             <div class="project-description">
                                     <div class="post-formatting">
                                         <h4><?php echo replace_vocales_voculeshtml("Travel (Viajes)");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros simplemente por ser parte de la empresa. Podrás tener una franquicia con respaldo de MAGIC VACATION y 3T con soporte en USA, México y Perú.");?></p>
+                                        <p><?php echo replace_vocales_voculeshtml("Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros simplemente por ser parte de la empresa. Podrás tener una franquicia con respaldo de AMAZING TRAVEL y 3T.");?></p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("MAGIC VACATION MEMBERS, empresa con más de 15 años en el rubro de viajes turísticos, es una agencia mayorista de viaje que viene desarrollando un trabajo único y exclusivo en estos 3 países. Actualmente es parte del holding de empresa de 3T y da respaldo a la corporación.");?></p>
+                                        <p><?php echo replace_vocales_voculeshtml("AMAZING TRAVEL, es una agencia mayorista de viaje que viene desarrollando un trabajo único y exclusivo en el rubro. Actualmente es parte del holding de empresa de 3T y da respaldo a la corporación.");?></p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("Obteniendo la franquicia de 3T y MAGIC VACATION MEMBER tendrás tu propia agencia mayorista de viaje con respaldo de la corporación, firmaras un contrato exclusivo con nosotros por un contrato de 3 años y podrás usar nuestro software altamente exclusivo para poder operar como agencia y tener ganancias hasta el 5000% por día.");?></p>
+                                        <p><?php echo replace_vocales_voculeshtml("Obteniendo el sofware de 3T y AMAZING TRAVEL tendrás tu propia agencia mayorista de viaje con respaldo de la corporación, firmaras un contrato exclusivo con nosotros por un contrato indefinido y podrás usar nuestro software altamente exclusivo para poder operar como agencia y tener ganancias todos los días.");?></p>
                                         
                                     </div>
                                     <div class="post-formatting">
                                         <p>&nbsp;</p>
                                         <h4><?php echo replace_vocales_voculeshtml("Training - Educación");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de Frank García.");?></p>
+                                        <p><?php echo replace_vocales_voculeshtml("Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de nuestra líder top y fundadora Silene Carrasco.");?></p>
                                         <p>&nbsp;</p>
                                         <p><?php echo replace_vocales_voculeshtml("En 3T creemos en un desarrollo integral incluyendo el desarrollo como persona. Recibe un sistema probado que ha llevado al éxito a miles de personas.");?></p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("El sistema de 9 pasos, su creado Frank García formador de más de 30 millonarios, coach de talla mundial, autor del libro “De Balsero a Millonario”, ¿Por qué fracasa la gente? Entre otros.");?></p>
+                                        <p><?php echo replace_vocales_voculeshtml("El sistema JAQUEMENTE, su creadora Silene Carrazco formadora y networker con mas de 9 años de experiencia creando organizaciones en los 5 continentes.");?></p>
                                     </div>
                                     <div class="post-formatting">
                                         <p>&nbsp;</p>
@@ -148,7 +148,7 @@
 					<div class="caption">3T Company</div>
                                     </div>
 				</div>
-                                <div class="col-xs-12">
+<!--                                <div class="col-xs-12">
                                     <div class="portfolio-images-slider">
                                         <div class="image-slide nivo">
                                             <a title="Magic Vacations" data-lightbox-gallery="post-gallery-1">
@@ -159,7 +159,7 @@
                                             </a>
 					</div>
                                     </div>
-				</div>
+				</div>-->
 				<div class="col-xs-12">
                                     <div class="portfolio-images-slider">
                                         <div class="image-slide nivo">
@@ -172,7 +172,7 @@
 					</div>
                                     </div>
 				</div>
-                                <div class="col-xs-12">
+<!--                                <div class="col-xs-12">
                                     <div class="photo wow fadeInLab">
                                         <a data-lightbox-gallery="post-gallery">
                                             <style>.img-452 {background-color: #d8a878;}</style>	
@@ -182,7 +182,7 @@
                                         </a>
                                         <div class="caption">Frank Garcia</div>
                                     </div>
-				</div>
+				</div>-->
                                 <div class="col-xs-12">
                                     <div class="photo wow fadeInLab">
                                     	<a data-lightbox-gallery="post-gallery">
