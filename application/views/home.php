@@ -777,46 +777,41 @@ tpj(document).ready(function() {
                             <div class="portfolio-title-holder"></div>	
                                 <div class="row">
                                     <div id="tours-1" class="portfolio-holder portfolio-type-2 sort-by-js is-masonry-layout">
-                                        <div class="portfolio-item portfolio-item-type-3 has-padding w3 post-435 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-beaches" data-portfolio-item-id="435" data-terms="beaches">
+                                        <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
                                             <div class="item-box-container">
                                                 <div class="item-box wow fadeInLab">
                                                     <div class="thumb">
                                                         <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
                                                             <div class="info">
                                                                 <h3>
-                                                                    <a href="<?php echo site_url().'paquete/basic'?>" class="item-link">BASIC</a>
+                                                                    <a href="<?php echo site_url().'plan/basic'?>" class="item-link">BASIC</a>
                                                                 </h3>
-                                                                <p class="terms">
-                                                                    <a href="<?php echo site_url().'paquete/basic'?>" data-term="basic">$125</a>
-                                                                </p>	    	
+                                                                    <p class="terms">$125</p>			    	
                                                             </div>
                                                         </div>
-								<a href="<?php echo site_url().'paquete/basic'?>" class="item-link">
-                                                                <style>.img-456 {background-color: #484848;}</style>	
-                                                                    <span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
-                                                                        <img width="655" height="545" class="lazyload" alt="paquete basic" data-src="<?php echo site_url().'static/page_front/images/plan/basic.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
-                                                                    </span>
+								<a href="<?php echo site_url().'plan/basic'?>" class="item-link">
+                                                                <style>.img-454 {background-color: #304830;}</style>	
+                                                                <span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
+                                                                        <img width="655" height="545" class="lazyload" alt="paquete basic" data-src="<?php echo site_url().'static/page_front/images/plan/basic.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
                                                                 </a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <!--START PAQUETE EXECUTIVE-->
-                                        <div class="portfolio-item portfolio-item-type-12 has-padding w3 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
+                                        <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
                                             <div class="item-box-container">
                                                 <div class="item-box wow fadeInLab">
                                                     <div class="thumb">
                                                         <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
                                                             <div class="info">
                                                                 <h3>
-                                                                    <a href="<?php echo site_url().'paquete/executive'?>" class="item-link">EXECUTIVE</a>
+                                                                    <a href="<?php echo site_url().'plan/executive'?>" class="item-link">EXECUTIVE</a>
                                                                 </h3>
-                                                                    <p class="terms">
-                                                                        <a href="<?php echo site_url().'paquete/executive'?>" data-term="nature">$250</a>
-                                                                    </p>			    	
+                                                                    <p class="terms">$250</p>			    	
                                                             </div>
                                                         </div>
-								<a href="<?php echo site_url().'paquete/executive'?>" class="item-link">
+								<a href="<?php echo site_url().'plan/executive'?>" class="item-link">
                                                                 <style>.img-454 {background-color: #304830;}</style>	
                                                                 <span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
                                                                         <img width="655" height="545" class="lazyload" alt="paquete executive" data-src="<?php echo site_url().'static/page_front/images/plan/executive.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
@@ -825,23 +820,49 @@ tpj(document).ready(function() {
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!--START PAQUETE BUSINESS-->
-                                        <div class="portfolio-item portfolio-item-type-5 has-padding w3 post-443 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="443" data-terms="nature">
+                                        <!--START PAQUETE INVESTOR-->
+                                        <div class="portfolio-item portfolio-item-type-5 has-padding w4" data-portfolio-item-id="443" data-terms="nature">
                                             <div class="item-box-container">
                                                 <div class="item-box wow fadeInLab">
                                                     <div class="thumb">
                                                         <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
                                                             <div class="info">
                                                                 <h3>
-                                                                    <a href="<?php echo site_url().'paquete/business'?>" class="item-link">BUSINESS</a>
+                                                                    <a href="<?php echo site_url().'plan/investor'?>" class="item-link">INVESTOR</a>
                                                                 </h3>
-                                                                    <p class="terms">
-                                                                        <a href="<?php echo site_url().'paquete/business'?>" data-term="nature">$1000</a>
-                                                                    </p>			    	
+                                                                    <p class="terms">$500</p>			    	
                                                             </div>
                                                         </div>
-								<a href="<?php echo site_url().'paquete/business'?>" class="item-link">
+								<a href="<?php echo site_url().'plan/investor'?>" class="item-link">
+                                                                <style>.img-453 {background-color: #a86090;}</style>	
+                                                                <span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
+                                                                    <img width="655" height="545" class="lazyload" alt="paquete investor" data-src="<?php echo site_url().'static/page_front/images/plan/investor.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
+                                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="portfolio-item portfolio-item-type-1 has-padding w2 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
+                                            <div class="item-box-container">
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <!--START PAQUETE BUSINESS-->
+                                        <div class="portfolio-item portfolio-item-type-5 has-padding w4 post-443 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="443" data-terms="nature">
+                                            <div class="item-box-container">
+                                                <div class="item-box wow fadeInLab">
+                                                    <div class="thumb">
+                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
+                                                            <div class="info">
+                                                                <h3>
+                                                                    <a href="<?php echo site_url().'plan/business'?>" class="item-link">BUSINESS</a>
+                                                                </h3>
+                                                                    <p class="terms">$1000</p>			    	
+                                                            </div>
+                                                        </div>
+								<a href="<?php echo site_url().'plan/business'?>" class="item-link">
                                                                 <style>.img-453 {background-color: #a86090;}</style>	
                                                                 <span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
                                                                     <img width="655" height="545" class="lazyload" alt="paquete business" data-src="<?php echo site_url().'static/page_front/images/plan/business.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
@@ -849,23 +870,21 @@ tpj(document).ready(function() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div
+                                        </div>
                                         <!--START PAQUETE MASTER-->
-                                        <div class="portfolio-item portfolio-item-type-1 has-padding w3 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
+                                        <div class="portfolio-item portfolio-item-type-1 has-padding w4 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
                                             <div class="item-box-container">
                                                 <div class="item-box wow fadeInLab">
                                                     <div class="thumb">
                                                         <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
                                                             <div class="info">
                                                                 <h3>
-                                                                    <a href="<?php echo site_url().'paquete/master'?>" class="item-link">MASTER</a>
+                                                                    <a href="<?php echo site_url().'plan/master'?>" class="item-link">MASTER</a>
                                                                 </h3>
-                                                                <p class="terms">
-                                                                    <a href="<?php echo site_url().'paquete/master'?>" data-term="master">$3000</a>
-                                                                </p>			    	
+                                                                <p class="terms">$3000</p>			    	
                                                             </div>
                                                         </div>
-                                                            <a href="<?php echo site_url().'paquete/master'?>" class="item-link">
+                                                            <a href="<?php echo site_url().'plan/master'?>" class="item-link">
                                                                 <style>.img-459 {background-color: #004878;}</style>	
                                                                 <span class="image-placeholder img-459" style="padding-bottom: 83.20610687%">
                                                                     <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/master.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
@@ -875,16 +894,10 @@ tpj(document).ready(function() {
                                             </div>
                                         </div>
                                     </div>
-		
-			<script type="text/javascript">
-	var portfolioContainers = portfolioContainers || [];
-	portfolioContainers.push( {"instanceId":"tours-1","instanceAlias":"tours-1","baseQuery":{"post_type":["portfolio"],"post_status":"publish","posts_per_page":8,"orderby":"date","tax_query":{"relation":"AND","0":{"field":"term_id","taxonomy":"portfolio_category","terms":[12],"operator":"NOT IN"}},"paged":0,"meta_query":[{"key":"_thumbnail_id","compare":"EXISTS"}]},"vcAttributes":{"portfolio_query":"size:8|order_by:date|post_type:,portfolio|tax_query:-12","title":"","description":"","category_filter":"no","portfolio_type":"type-2","columns":"4","reveal_effect":"inherit","portfolio_spacing":"inherit","dynamic_image_height":"no","portfolio_full_width_title_container":"yes","portfolio_full_width":"inherit","pagination_type":"static","more_link":"","endless_auto_reveal":"","endless_show_more_button_text":"Show More","endless_no_more_items_button_text":"No more portfolio items to show","endless_per_page":"","el_class":"homepage-destinations","css":""},"postId":0,"count":14,"countByTerms":{"beaches":5,"city-break":4,"history":3,"nature":3},"lightboxData":null,"filterPushState":false} );
-	</script>
-								
-	</div>
+                            </div>
 	
-</div>
-</div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -907,7 +920,7 @@ tpj(document).ready(function() {
     </div>
     
     <!--START NEW-->
-        <div class="vc-parent-row row-stretch_row vc_custom_1497021477671">
+<!--        <div class="vc-parent-row row-stretch_row vc_custom_1497021477671">
             <div class="vc-parent-row row-stretch_row vc_custom_1498222083293">
                 <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid homepage-news vc_row-has-fill">
                     <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -1011,7 +1024,7 @@ tpj(document).ready(function() {
                 </div>
                 <div class="vc_row-full-width vc_clearfix"></div>
             </div>
-        </div>
+        </div>-->
 <style>.homepage-city-break {background-attachment: fixed;}</style>
 	</div>	
 <!--START FOOTER-->
