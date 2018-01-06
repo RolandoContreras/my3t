@@ -609,7 +609,7 @@ tpj(document).ready(function() {
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Alianzas</h3>
-                                <p style="text-align: center;"><b>Magic Vacation Members </b><?php echo replace_vocales_voculeshtml("Prestigiosa empresa mayorista de viajes turísticos con mas de 15 años en el mercado.");?></p>
+                                <p style="text-align: center;"><b>Global Pass </b><?php echo replace_vocales_voculeshtml("Prestigiosa plataforma de viajes que te permitirán tener descuentos hasta un 70% en vuelos, hoteles, cruceros, autos entre otros.");?></p>
                             </div>
                         </div>
                     </div>
@@ -716,7 +716,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497270039282">
                             <figure class="wpb_wrapper vc_figure">
                                     <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                        <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/empresa.jpg';?>" class="vc_single_image-img attachment-full" alt="empresa" srcset="<?php echo site_url().'static/page_front/images/empresa.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/empresax300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/empresax768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/empresax1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/empresax1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/empresax806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/empresax558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/empresax655.jpeg';?> 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
+                                        <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/global.jpg';?>" class="vc_single_image-img attachment-full" alt="vision" srcset="<?php echo site_url().'static/page_front/images/global.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/globalx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/globalx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/globalx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/globalx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/globalx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/globalx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/globalx655.jpeg';?> 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
                                     </div>
                             </figure>
                         </div>
@@ -734,7 +734,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497271089392">
                             <figure class="wpb_wrapper vc_figure">
                                 <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                    <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/paris.jpg';?>" class="vc_single_image-img attachment-full" alt="paris" srcset="<?php echo site_url().'static/page_front/images/paris.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/parisx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/parisx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/parisx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/parisx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/parisx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/parisx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/parisx655.jpg';?> 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
+                                    <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/3rubros.jpg';?>" class="vc_single_image-img attachment-full" alt="Rubros" srcset="<?php echo site_url().'static/page_front/images/3rubros.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/3rubrosx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/3rubrosx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/3rubrosx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/3rubrosx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/3rubrosx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/3rubrosx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/3rubrosx655.jpg';?> 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
                                 </div>
                             </figure>
                         </div>
