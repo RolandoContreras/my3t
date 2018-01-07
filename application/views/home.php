@@ -609,7 +609,7 @@ tpj(document).ready(function() {
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Alianzas</h3>
-                                <p style="text-align: center;"><b>Global Pass </b><?php echo replace_vocales_voculeshtml("Prestigiosa plataforma de viajes que te permitirán tener descuentos hasta un 70% en vuelos, hoteles, cruceros, autos entre otros.");?></p>
+                                <p style="text-align: center;"><b>Global Pass </b><?php echo replace_vocales_voculeshtml("Prestigiosa plataforma que te permitirán tener hasta con un 70% de descuento en vuelos, hoteles, cruceros, autos y mucho más.");?></p>
                             </div>
                         </div>
                     </div>
@@ -667,7 +667,7 @@ tpj(document).ready(function() {
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Productos</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Desarrollados por profesionales altamente calificados, hechos con el fin de ayudar a los asociados en el área de desarrollo personal, liderazgo y trading.")?></p>
+                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Contamos con los productos y servicios más cotizados del mercado desarrollados por profesionales altamente calificados.")?></p>
                             </div>
                         </div>
                     </div>
@@ -748,11 +748,11 @@ tpj(document).ready(function() {
                             <div class="wpb_wrapper">
                                 <h2>TRAINING - TRAVEL - TRADE</h2>
                                     <h4>Viajes</h4>
-                                    <p><?php echo replace_vocales_voculeshtml("Te damos la oportunidad de no solo viajar con nosotros sino también de adquirir una franquicia con el respaldo de 3T y Magic Vacation Members.");?></p>
+                                    <p>Te damos la oportunidad de ser parte del CIRCULO DE VIDA de 3T y Global Pass teniendo 3 plataformas (Global Pass Perú, Internacional y Elite) que te permitirán tener bonos de descuentos hasta el 70% en cientos de establecimientos comerciales, viajes, autos, cruceros, hoteles, tiempo compartido y gana puntos rewards por recomendar a tus amigos y que ellos compren y viaja totalmente gratis.</p>
                                     <h4>Entramiento</h4>
-                                    <p><?php echo replace_vocales_voculeshtml("Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de Frank García coach internacional con más de 15 años en el rubro.");?></p>
+                                    <p>Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, 	recibe el sistema JAQUEMENTE un sistema probado que está llevando  al éxito a cientos de personas al lado Silene Carrasco Cruz (CEO 3T), líder de la industria multinivel con más de 10 años de experiencia y grandes resultados durante su carrera.</p>
                                     <h4>Forex</h4>
-                                    <p><?php echo replace_vocales_voculeshtml("Aprenderás como manejar y hacer operaciones en el mercado secundario en Forex al lado de expertos trader que trabajan con nosotros, lo cual te dará nuevas herramientas para tu crecimiento financiero.");?></p>
+                                    <p>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y la noticia más importante del día  tendrás en nuestra academia. Profesionales altamente calificados  en manejo y gestión de fondos de inversión con experiencias en compañías prestigiosas  en Latinoamérica y Europa forman el staff de 3T ACADEMY</p>
                             </div>
                         </div>
                     </div>
@@ -777,6 +777,30 @@ tpj(document).ready(function() {
                             <div class="portfolio-title-holder"></div>	
                                 <div class="row">
                                     <div id="tours-1" class="portfolio-holder portfolio-type-2 sort-by-js is-masonry-layout">
+                                        <!--START PAQUETE APERTURA-->
+                                        <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
+                                            <div class="item-box-container">
+                                                <div class="item-box wow fadeInLab">
+                                                    <div class="thumb">
+                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
+                                                            <div class="info">
+                                                                <h3>
+                                                                    <a href="<?php echo site_url().'plan/apertura'?>" class="item-link">POR PRE LANZAMIENTO</a>
+                                                                </h3>
+                                                                    <p class="terms">$299</p>			    	
+                                                            </div>
+                                                        </div>
+								<a href="<?php echo site_url().'plan/apertura'?>" class="item-link">
+                                                                <style>.img-454 {background-color: #304830;}</style>	
+                                                                <span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
+                                                                        <img width="655" height="545" class="lazyload" alt="paquete apertura" data-src="<?php echo site_url().'static/page_front/images/plan/apertura.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
+                                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--START PAQUETE BASIC-->
                                         <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
                                             <div class="item-box-container">
                                                 <div class="item-box wow fadeInLab">
@@ -843,10 +867,10 @@ tpj(document).ready(function() {
                                             </div>
                                         </div>
                                         
-                                        <div class="portfolio-item portfolio-item-type-1 has-padding w2 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
+<!--                                        <div class="portfolio-item portfolio-item-type-1 has-padding w2 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
                                             <div class="item-box-container">
                                             </div>
-                                        </div>
+                                        </div>-->
                                         
                                         
                                         <!--START PAQUETE BUSINESS-->

@@ -29,6 +29,9 @@ class Plan extends CI_Controller {
             if (isset($url[1])) {
                 $plan = $url[1];
                 switch ($plan) {
+                    case "apertura":
+                        $this->load->view('apertura');
+                        break;
                     case "basic":
                         $this->load->view('basic');
                         break;
