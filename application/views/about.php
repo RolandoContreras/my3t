@@ -63,18 +63,18 @@
                             </div>
                             <div class="project-description">
                                     <div class="post-formatting">
-                                        <h4><?php echo replace_vocales_voculeshtml("Travel (Viajes)");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros simplemente por ser parte de la empresa. Podrás tener una franquicia con respaldo de AMAZING TRAVEL y 3T.");?></p>
-                                        <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("AMAZING TRAVEL, es una agencia mayorista de viaje que viene desarrollando un trabajo único y exclusivo en el rubro. Actualmente es parte del holding de empresa de 3T y da respaldo a la corporación.");?></p>
-                                        <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("Obteniendo el sofware de 3T y AMAZING TRAVEL tendrás tu propia agencia mayorista de viaje con respaldo de la corporación, firmaras un contrato exclusivo con nosotros por un contrato indefinido y podrás usar nuestro software altamente exclusivo para poder operar como agencia y tener ganancias todos los días.");?></p>
-                                        
+                                        <h4>Travel - Viajes</h4>
+                                        <p>Una de nuestras fortalezas es la alianza que 3T tiene con la prestigiosa  plataforma GLOBAL PASS única en el rubro del turismo.<p/>
+                                        <p>Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros. Podrás tener la plataforma global pass que te permitirá tener hasta un 70% de descuentos en muchos servicios turísticos. 
+                                            Tenemos 3 distintas plataformas en global pass con características distintas, dependiendo de tu paquete de compra es el beneficio.</p>
+                                        <p><b>Global Pass Perú:</b> Te permite tener descuentos en cientos de establecimiento comerciales dentro de Perú tales como: restaurante, gasolineras, hoteles entre otros.</p>
+                                        <p><b>Global Pass Internacional:</b> Te permite tener hasta un 70% de descuentos en hoteles, vuelos, cruceros, semanas bono y autos. Y te regalamos $500 o $1000 dólares Pass para que los uses.</p>
+                                        <p><b>Global Pass Elite:</b> Te permite tener descuentos ilimitados en hoteles, vuelos, cruceros, semanas bono, autos, estancias prolongadas y mucho más. A la vez te permite acumular puntos rewards cuando tus recomendados compren a través de tu recomendación, puedes canjear tales puntos para cualquier servicio que desees y pagarlo en su totalidad.</p>
                                     </div>
                                     <div class="post-formatting">
                                         <p>&nbsp;</p>
-                                        <h4><?php echo replace_vocales_voculeshtml("Training - Educación");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de nuestra líder top y fundadora Silene Carrasco.");?></p>
+                                        <h4>Training - Educación</h4>
+                                        <p>Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de nuestra líder top y fundadora Silene Carrasco</p>
                                         <p>&nbsp;</p>
                                         <p><?php echo replace_vocales_voculeshtml("En 3T creemos en un desarrollo integral incluyendo el desarrollo como persona. Recibe un sistema probado que ha llevado al éxito a miles de personas.");?></p>
                                         <p>&nbsp;</p>
@@ -148,18 +148,18 @@
 					<div class="caption">3T Company</div>
                                     </div>
 				</div>
-<!--                                <div class="col-xs-12">
+                                <div class="col-xs-12">
                                     <div class="portfolio-images-slider">
                                         <div class="image-slide nivo">
                                             <a title="Magic Vacations" data-lightbox-gallery="post-gallery-1">
                                                 <style>.img-942 {background-color: #483048;}</style>	
                                                 <span class="image-placeholder img-942" style="padding-bottom:66.66666667%">
-                                                    <img width="1440" height="960" class="lazyload" alt="Magic Vacation" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/magic.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/magic.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/magicx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/magicx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/magicx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/magicx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/magicx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/magicx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/magicx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                                    <img width="1440" height="960" class="lazyload" alt="Global Pass" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/global.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/global.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/globalx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/globalx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/globalx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/globalx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/globalx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/globalx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/globalx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                                 </span>
                                             </a>
 					</div>
                                     </div>
-				</div>-->
+				</div>
 				<div class="col-xs-12">
                                     <div class="portfolio-images-slider">
                                         <div class="image-slide nivo">
@@ -172,17 +172,17 @@
 					</div>
                                     </div>
 				</div>
-<!--                                <div class="col-xs-12">
+                                <div class="col-xs-12">
                                     <div class="photo wow fadeInLab">
                                         <a data-lightbox-gallery="post-gallery">
                                             <style>.img-452 {background-color: #d8a878;}</style>	
                                             <span class="image-placeholder img-452" style="padding-bottom:62.50000000%">
-                                                <img width="1440" height="960" class="lazyload" alt="Frank Garcia" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/frank.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/frank.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/frankx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/frankx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/frankx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/frankx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/frnkx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/frankx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/frankx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                                <img width="1440" height="960" class="lazyload" alt="forex" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/staff_forex.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/staff_forex.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/staff_forexx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/staff_forexx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/staff_forexx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/staff_forexx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/staff_forex806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/staff_forexx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/staff_forexx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                             </span>
                                         </a>
-                                        <div class="caption">Frank Garcia</div>
+                                        <div class="caption">STAFF FOREX</div>
                                     </div>
-				</div>-->
+				</div>
                                 <div class="col-xs-12">
                                     <div class="photo wow fadeInLab">
                                     	<a data-lightbox-gallery="post-gallery">
@@ -192,17 +192,6 @@
                                             </span>
                                         </a>
                                         <div class="caption">Silene Carrasco Cruz</div>
-                                    </div>
-				</div>
-                                <div class="col-xs-12">
-                                    <div class="photo wow fadeInLab">
-                                        <a data-lightbox-gallery="post-gallery">
-                                            <style>.img-942 {background-color: #d8a878;}</style>	
-                                            <span class="image-placeholder img-452" style="padding-bottom:62.50000000%">
-                                                <img width="1440" height="960" class="lazyload" alt="forex" role="presentation" data-src="<?php echo site_url().'static/page_front/images/about/staff_forex.jpg';?>" data-srcset="<?php echo site_url().'static/page_front/images/about/staff_forex.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/about/staff_forexx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/about/staff_forexx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/about/staff_forexx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/about/staff_forexx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/about/staff_forex806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/about/staff_forexx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/about/staff_forexx655.jpg';?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
-                                            </span>
-                                        </a>
-                                        <div class="caption">STAFF FOREX</div>
                                     </div>
 				</div>
                             </div>
