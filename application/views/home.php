@@ -932,8 +932,8 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner vc_custom_1498573592424">
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
-                                <H2>Descubre todos los beneficios que 3T trae para ti</H2>
-                                <p>De <b>Octubre</b> a <b>Diciembre</b> tendremos promociones por ser parte de 3T.<br />
+                                <H2>Descubre todos los beneficios que 3T tiene para ti</H2>
+                                <p>Del <b>15 de Enero</b> al <b>28 de Febrero</b> tendremos promociones por ser parte de 3T.<br />
                                 No pierdas esta oportunidad y únete.</p>
                         </div>
                     </div>

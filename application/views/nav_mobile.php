@@ -18,6 +18,10 @@
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
                         <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
                     </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
+                        <a><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
+                        <a><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+                    </li>
                 </ul>
             <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
 	</div>
