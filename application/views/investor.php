@@ -10,26 +10,9 @@
 <!--END HEAD-->
 <body class="portfolio-template-default single single-portfolio postid-435 wpb-js-composer js-comp-ver-5.4.2 vc_responsive portfolio-category-beaches">
     <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<div class="mobile-menu-container">
-		<ul id="menu-main-menu-1" class="menu">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
-                        <a href=""><span>Acerca</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
-                    </li>
-                </ul>
-            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
-	</div>
+    	<!--GET NAV MOBILE-->
+    	<?php $this->load->view("nav_mobile");?>
+        <!--END GET NAV MOBILE-->
     </div>
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">
@@ -55,9 +38,9 @@
                             <div class="post-formatting">
                                 <p><?php echo replace_vocales_voculeshtml("El paquete INVESTOR tiene un costo de $500 dólares americanos y te otorgan 375 puntos para el plan de ganancias.");?></p>
                                             <p><b>Recibes:</b></p>
-                                            <p><b>LA FRANQUICIA DE MAGIC VACATION Y 3T</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("La franquicia y software exclusivo de MAGIC VACATION y 3T con respaldo en USA, México y PERÚ  pagando mensualidad de $35 y ten tu propia agencia mayorista por 3 años.");?></p>
-                                            <p><?php echo replace_vocales_voculeshtml("MAGIC VACATION MEMBERS empresa con más de 15 años en el rubro de viajes te otorga un soporte 24/7 para que puedas gestionar y desarrollar franquicia con tranquilidad.");?></p>
+                                            <p><b>La plataforma GLOBAL PASS PERÚ e INTERNACIONAL con un bono de $500 PASS  para descuentos.</b></p>
+                                            <p>Recibe el sistema de desarrollo personal y liderazgo JAQUEMENTE</p>
+                                            <p>Recibe los cursos de Forex nivel intermedio, señales, y las noticias más importante del día .</p>
                             </div>
                         </div>
                     </div>

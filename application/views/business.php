@@ -10,26 +10,10 @@
 <!--END HEAD-->
 <body class="portfolio-template-default single single-portfolio postid-435 wpb-js-composer js-comp-ver-5.4.2 vc_responsive portfolio-category-beaches">
     <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<div class="mobile-menu-container">
-		<ul id="menu-main-menu-1" class="menu">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
-                        <a href=""><span>Acerca</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
-                    </li>
-                </ul>
-            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
-	</div>
+        <!--GET NAV MOBILE-->
+    	<?php $this->load->view("nav_mobile");?>
+        <!--END GET NAV MOBILE-->
+    </div>
     </div>
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">
@@ -55,13 +39,9 @@
                             <div class="post-formatting">
                                 <p><?php echo replace_vocales_voculeshtml("El paquete BUSINESS tiene un costo de $1000 dólares americanos y te otorgan 750 puntos para el plan de ganancias.");?></p>
                                             <p><b>Recibes:</b></p>
-                                            <p><b><?php echo replace_vocales_voculeshtml("RECIBE UN VIAJE AL INTERIOR DE TU PAÍS TODO PAGADO.");?></b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Los pasos 7 y 8 del  sistema de 9 pasos desarrollado por Frank García. Formador de más de 30 millonarios, autor del libro “De balsero a millonario”, ¿Por qué fracasa la gente? entre otros.");?></p>
-                                            <p><b>Paso 7:</b><br/>- Tu negocio al desnudo.<br/>- Vida de vacas.</p>
-                                            <p><b>Paso 8:</b><br/><?php echo replace_vocales_voculeshtml("- De balsero a millonario.");?><br/><?php echo replace_vocales_voculeshtml("- 1000 Personas en 90 días.");?><br/><?php echo replace_vocales_voculeshtml("- ¿Como hacer tus sueños realidad?");?></p>
-                                            <p><b>Objetivo:</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Le muestra a la persona la verdad sobre el negocio de redes de mercadeo, le enseña estrategias poderosas para ingresar 1000 personas en 90 días y como tener éxito y hacer sus sueños realidad.");?></p>
-                                            <p><b><?php echo replace_vocales_voculeshtml("RECIBE CURSOS DE FOREX NIVEL AVANZADO Y TEN UN CURSO INTENSIVO DE 3 DÍAS.");?></b></p>
+                                            <p><b>La plataforma GLOBAL PASS PERÚ e INTERNACIONAL con un bono de $1000 PASS  para descuentos.</b></p>
+                                            <p>Recibe el sistema de desarrollo personal y liderazgo JAQUEMENTE</p>
+                                            <p>Recibe los cursos de Forex nivel avanzando, estrategias y seminarios online.</p>
                             </div>
                         </div>
                     </div>

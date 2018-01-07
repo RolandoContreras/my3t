@@ -33,7 +33,7 @@
 <script type="text/javascript">
 	var headerOptions = headerOptions || {};
 	//jQuery.extend( headerOptions, {"stickyHeader":false} );
-	Object.assign( headerOptions, {"stickyHeader":false} );
+	Object.assign( headerOptions, {"stickyHeader":true} );
 </script>
 <div class="vc-container">
 <div class="vc-parent-row row-stretch_row_content_no_spaces vc_custom_1497433955691">

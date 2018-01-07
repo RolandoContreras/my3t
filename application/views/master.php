@@ -10,26 +10,9 @@
 <!--END HEAD-->
 <body class="portfolio-template-default single single-portfolio postid-435 wpb-js-composer js-comp-ver-5.4.2 vc_responsive portfolio-category-beaches">
     <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<div class="mobile-menu-container">
-		<ul id="menu-main-menu-1" class="menu">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
-                        <a href=""><span>Acerca</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
-                    </li>
-                </ul>
-            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
-	</div>
+    	<!--GET NAV MOBILE-->
+    	<?php $this->load->view("nav_mobile");?>
+        <!--END GET NAV MOBILE-->
     </div>
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">
@@ -53,14 +36,11 @@
                     <div class="col-sm-12">
                         <div class="project-description">
                             <div class="post-formatting">
-                                <p><?php echo replace_vocales_voculeshtml("El paquete MASTER tiene un costo de $3000 dólares americanos y te otorgan 2250 puntos para el plan de ganancias.");?></p>
+                                <p><?php echo replace_vocales_voculeshtml("El paquete MASTER tiene un costo de $1899 dólares americanos y te otorgan 1424 puntos para el plan de ganancias.");?></p>
                                             <p><b>Recibes:</b></p>
-                                            <p><b><?php echo replace_vocales_voculeshtml("RECIBE UN VIAJE INTERNACIONAL TODO PAGADO.");?></b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("El paso 9 del  sistema de 9 pasos desarrollado por Frank García. Formador de más de 30 millonarios, autor del libro “De balsero a millonario”, ¿Por qué fracasa la gente? entre otros.");?></p>
-                                            <p><b>Paso 9:</b><br/><?php echo replace_vocales_voculeshtml("- Recibe videos exclusivos de negociación y cierre en vivo.");?><br/></p>
-                                            <p><b>Objetivo:</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("La persona aprende en videos de negociaciones en vivo, como aplicar todas las técnicas para lograr un cierre efectivo.");?></p>
-                                            <p><b><?php echo replace_vocales_voculeshtml("RECIBE UN CONVERSATORIO EN PRIVADO CON NUESTRO TRADER EN JEFE.");?></b></p>
+                                            <p><b>La plataforma GLOBAL PASS PERÚ Y ELITE con descuentos ilimtados.</b></p>
+                                            <p>Recibe el sistema de desarrollo personal y liderazgo JAQUEMENTE</p>
+                                            <p>Recibe los cursos de Forex nivel avanzando, estrategias y seminarios online.</p>
                             </div>
                         </div>
                     </div>
@@ -73,7 +53,7 @@
                                     <span class="image-placeholder img-456" style="padding-bottom:56.18055556%">
                                         <img width="1440" height="809" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/master.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/master.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx558'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                     </span>
-                                    <div class="caption">$3000</div>
+                                    <div class="caption">$1899</div>
 			</div>
                     </div>
                     <div class="row">

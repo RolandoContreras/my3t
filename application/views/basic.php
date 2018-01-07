@@ -10,26 +10,9 @@
 <!--END HEAD-->
 <body class="portfolio-template-default single single-portfolio postid-435 wpb-js-composer js-comp-ver-5.4.2 vc_responsive portfolio-category-beaches">
     <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<div class="mobile-menu-container">
-		<ul id="menu-main-menu-1" class="menu">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
-                        <a href=""><span>Acerca</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
-                    </li>
-                </ul>
-            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
-	</div>
+    	<!--GET NAV MOBILE-->
+    	<?php $this->load->view("nav_mobile");?>
+        <!--END GET NAV MOBILE-->
     </div>
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">
@@ -53,13 +36,9 @@
                     <div class="col-sm-12">
                         <div class="project-description">
                             <div class="post-formatting">
-                                <p><?php echo replace_vocales_voculeshtml("El paquete BASIC tiene un costo de $125 dólares americanos y te otorgan 93 puntos para el plan de ganancias.");?></p>
-                                            <p><b>Recibes:</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Los 2 primeros pasos del  sistema de 9 pasos desarrollado por Frank García. Formador de más de 30 millonarios, autor del libro “De balsero a millonario”, ¿Por qué fracasa la gente? entre otros.");?></p>
-                                            <p><b>Paso 1:</b><br/>- De Balsero a Millonario.<br/>- Historia de la Vaca.</p>
-                                            <p><b>Paso 2:</b><br/><?php echo replace_vocales_voculeshtml("- ¿Por qué fracasa la gente?.");?><br/>- De Oruga a Mariposa.<br/>- Creencias.</p>
-                                            <p><b>Objetivo:</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Logra conectar a las personas con sus sueños, logra que se tomen decisiones permanentes y que se salgan del confort zone, genera permanencia y retención en una organización.");?></p>
+                                <p>El paquete BASIC tiene un costo de $125 dólares americanos y te otorgan 93 puntos para el plan de ganancias.</p>
+                                <p><b>Recibes:</b></p>
+                                <p>Recibe el sistema de desarrollo personal y liderazgo JAQUEMENTE</p>
                             </div>
                         </div>
                     </div>

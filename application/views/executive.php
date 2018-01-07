@@ -10,26 +10,9 @@
 <!--END HEAD-->
 <body class="portfolio-template-default single single-portfolio postid-435 wpb-js-composer js-comp-ver-5.4.2 vc_responsive portfolio-category-beaches">
     <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<div class="mobile-menu-container">
-		<ul id="menu-main-menu-1" class="menu">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
-                        <a href=""><span>Acerca</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
-                    </li>
-                </ul>
-            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
-	</div>
+    	<!--GET NAV MOBILE-->
+    	<?php $this->load->view("nav_mobile");?>
+        <!--END GET NAV MOBILE-->
     </div>
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">
@@ -41,7 +24,7 @@
             <script type="text/javascript">
                     var headerOptions = headerOptions || {};
                     //jQuery.extend( headerOptions, {"stickyHeader":false} );
-                    Object.assign( headerOptions, {"stickyHeader":false} );
+                    Object.assign( headerOptions, {"stickyHeader":true} );
             </script>
     <div class="container">
 	<div class="page-container">
@@ -53,15 +36,10 @@
                     <div class="col-sm-12">
                         <div class="project-description">
                             <div class="post-formatting">
-                                <p><?php echo replace_vocales_voculeshtml("El paquete EXECUTIVE tiene un costo de $250 dólares americanos y te otorgan 187 puntos para el plan de ganancias.");?></p>
-                                            <p><b>Recibes:</b></p>
-                                            <p><b>UN ECO CRUCERO Y TEN UNA GRAN EXPERIENCIA.</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Los pasos 3 y 4 del  sistema de 9 pasos desarrollado por Frank García. Formador de más de 30 millonarios, autor del libro “De balsero a millonario”, ¿Por qué fracasa la gente? entre otros.");?></p>
-                                            <p><b>Paso 3:</b><br/>- Mi primer mes en redes de mercadeo.<br/>- Deseo ardiente.</p>
-                                            <p><b>Paso 4:</b><br/><?php echo replace_vocales_voculeshtml("- El secreto está en las preguntas.");?><br/>- Importancia del sistema educativo.<br/><?php echo replace_vocales_voculeshtml("- Diamante en 90 días.");?></p>
-                                            <p><b>Objetivo:</b></p>
-                                            <p><?php echo replace_vocales_voculeshtml("Le muestra a la persona los pasos claros y simples de que hacer el primer mes, de la importancia del tener un sistema educativo y  como tener éxito en los primeros 90 días de iniciar su negocio.");?></p>
-                                            <p><b><?php echo replace_vocales_voculeshtml("RECIBE CURSOS DE FOREX NIVEL BÁSICO EN NUESTRA ACADEMIA “3T ACADEMY”.");?></b></p>
+                                <p>El paquete EXECUTIVE tiene un costo de $250 dólares americanos y te otorgan 187 puntos para el plan de ganancias.</p>
+                                <p><b>Recibes:</b></p>
+                                <p>Recibe el sistema de desarrollo personal y liderazgo JAQUEMENTE</p>
+                                <p>RECIBE CURSOS DE FOREX NIVEL BÁSICO EN NUESTRA ACADEMIA “3T ACADEMY”.</p>
                             </div>
                         </div>
                     </div>

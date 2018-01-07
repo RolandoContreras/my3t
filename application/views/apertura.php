@@ -10,26 +10,9 @@
 <!--END HEAD-->
 <body class="portfolio-template-default single single-portfolio postid-435 wpb-js-composer js-comp-ver-5.4.2 vc_responsive portfolio-category-beaches">
     <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<div class="mobile-menu-container">
-		<ul id="menu-main-menu-1" class="menu">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
-                        <a href="<?php echo site_url();?>"><span>Inicio</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
-                        <a href=""><span>Acerca</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'plan';?>"><span>Plan</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
-                        <a href="<?php echo site_url().'contact';?>"><span>Contacto</span></a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28">
-                        <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
-                    </li>
-                </ul>
-            <a href="#" class="mobile-menu-close-link menu-bar exit menu-skin-light"><span class="ham"></span></a>
-	</div>
+    	<!--GET NAV MOBILE-->
+    	<?php $this->load->view("nav_mobile");?>
+        <!--END GET NAV MOBILE-->
     </div>
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">
@@ -66,9 +49,9 @@
                             <style>.gallery-item-0 {max-width: 1139px;}</style>				
                             <style>.img-456 {background-color: #484848;}</style>	
                                     <span class="image-placeholder img-456" style="padding-bottom:56.18055556%">
-                                        <img width="1440" height="809" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/basic.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/basic.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx558.jpg'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
+                                        <img width="1440" height="809" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/apertura.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/apertura.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/aperturax300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/aperturax768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/aperturax1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/aperturax1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/aperturax806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/aperturax558.jpg'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/aperturax655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
                                     </span>
-                                    <div class="caption">$125</div>
+                                    <div class="caption">$299</div>
 			</div>
                     </div>
                     <div class="row">
