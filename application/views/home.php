@@ -33,7 +33,7 @@
 <script type="text/javascript">
 	var headerOptions = headerOptions || {};
 	//jQuery.extend( headerOptions, {"stickyHeader":false} );
-	Object.assign( headerOptions, {"stickyHeader":true} );
+	Object.assign( headerOptions, {"stickyHeader":false} );
 </script>
 <div class="vc-container">
 <div class="vc-parent-row row-stretch_row_content_no_spaces vc_custom_1497433955691">
@@ -1054,29 +1054,28 @@ tpj(document).ready(function() {
 <!--START FOOTER-->
     <?php $this->load->view("footer");?>
 <!--END FOOTER-->
+<script type="text/javascript">
+    var portfolioContainers = portfolioContainers || [];
+    portfolioContainers.push( {"instanceId":"tours-1","instanceAlias":"tours-1","baseQuery":{"post_type":["portfolio"],"post_status":"publish","posts_per_page":8,"orderby":"date","tax_query":{"relation":"AND","0":{"field":"term_id","taxonomy":"portfolio_category","terms":[12],"operator":"NOT IN"}},"paged":0,"meta_query":[{"key":"_thumbnail_id","compare":"EXISTS"}]},"vcAttributes":{"portfolio_query":"size:8|order_by:date|post_type:,portfolio|tax_query:-12","title":"","description":"","category_filter":"no","portfolio_type":"type-2","columns":"4","reveal_effect":"inherit","portfolio_spacing":"inherit","dynamic_image_height":"no","portfolio_full_width_title_container":"yes","portfolio_full_width":"inherit","pagination_type":"static","more_link":"","endless_auto_reveal":"","endless_show_more_button_text":"Show More","endless_no_more_items_button_text":"No more portfolio items to show","endless_per_page":"","el_class":"homepage-destinations","css":""},"postId":0,"count":14,"countByTerms":{"beaches":5,"city-break":4,"history":3,"nature":3},"lightboxData":null,"filterPushState":false} );
+</script>
 <style>
 .wrapper {padding-top: 0px !important}
-</style>			<script type="text/javascript">
-				function revslider_showDoubleJqueryError(sliderID) {
-					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-						jQuery(sliderID).show().html(errorMessage);
-				}
-			</script>
-                        <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var objectL10n = {"destinationErrorMsg":"Sorry, we need at least part of the name to start searching.","tooManyDays":"Your check-out date is more than 30 nights after your check-in date. Bookings can only be made for a maximum period of 30 nights. Please enter alternative dates and try again.","dateInThePast":"Your check-in date is in the past. Please check your dates and try again.","cObeforeCI":"Please check your dates, the check-out date appears to be earlier than the check-in date.","calendar_nextMonth":"Next month","calendar_prevMonth":"Prev month","calendar_closeCalendar":"Close calendar","january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December","mo":"Mo","tu":"Tu","we":"We","th":"Th","fr":"Fr","sa":"Sa","su":"Su","updating":"Updating...","close":"Close","placeholder":"e.g. city, region, district or specific hotel","aid":"382821","dest_type":"select","calendar":"0","month_format":"short","flexible_dates":"0","logodim":"blue_150x25","logopos":"left","buttonpos":"right","bgcolor":"#FEBA02","textcolor":"#003580","submit_bgcolor":"#0896FF","submit_bordercolor":"#0896FF","submit_textcolor":"#FFFFFF","aid_starts_with_four":"affiliate ID is different from partner ID: should start with a 1, 3, 8 or 9. Please change it.","images_js_path":"https:\/\/demo.kaliumtheme.com\/travel\/wp-content\/plugins\/bookingcom-official-searchbox\/images"};
-/* ]]> */
+</style>			
+<script type="text/javascript">
+            function revslider_showDoubleJqueryError(sliderID) {
+                    var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+                    errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+                    errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+                    errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+                    errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+                            jQuery(sliderID).show().html(errorMessage);
+            }
 </script>
+                        <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
-
 <!-- Google Code for Click Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */
@@ -1085,15 +1084,8 @@ var google_custom_params = window.google_tag_params;
 var google_remarketing_only = true;
 /* ]]> */
 </script>
-
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 <style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/991533214/?value=0&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-		
-	<!-- ET: 0.1419689655304s 2.1.3ch -->
+<!-- ET: 0.1419689655304s 2.1.3ch -->
 </body>
 </html>
