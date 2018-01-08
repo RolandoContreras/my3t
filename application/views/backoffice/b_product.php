@@ -13,14 +13,11 @@
             <div class="col-md-12"> 
 					<div class="panel panel-warning">
 						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>Mis Productos - Información Adicional</b></div> 
+                                                    <div class="panel-title"><b>Información Productos</b></div> 
 						</div> 
 						<!-- panel body --> 
 						<div class="panel-body"> 
-                                                    <p><?php echo replace_vocales_voculeshtml("<b>1. El viaje de 3T</b> se hace al mes siguiente de la compra del paquete juntamente con todos los asociados de ese mes. El departamento de 3T – Travel se comunicará con usted para corroborar los datos para hacer la compra del viaje.");?></p>
-                                                    <p><?php echo replace_vocales_voculeshtml("<b>2. El sistema de 9 pasos</b> está dividido en 4 secciones, si usted tiene el paquete BASIC le correspondo los 2 primeros pasos, si tiene el paquete EXECUTIVE le corresponde el paso 3 y 4, si tiene el paquete BUSINESS le corresponde los pasos 7 y 8, y finalmente si tiene el paquete MASTER le corresponde todos los pasos.");?></p>
-                                                    <p><?php echo replace_vocales_voculeshtml("<b>3. La academia de FOREX</b> está divido en 3 módulos: con el paquete EXECUTIVE obtienes el módulo básico, con el paquete BUSINESS obtienes el módulo intermedio y con paquete MASTER obtienes el módulo avanzado.");?></p>
-                                                    <p><?php echo replace_vocales_voculeshtml("<b>4. Si tiene comprado la franquicia</b> tiene una duración de 3 años con un contrato exclusivo con MAGIC VACATION MEMBERS y pagando una mensualidad por el mantenimiento del software de gestión de su propia agencia. El contrato será emitido por la empresa y enviado a su persona como respaldo.");?></p>
+                                                    <p><b>Desde el 08 hasta el 31 de Enero estamos en tiempo de Pre Apertura, por lo cual los módulos de JAQUEMENTE y FOREX productos estrellas de 3T aún no están disponibles hasta el 1er de Febrero que ya empezamos con los servicios completos.</b></p>
 						</div> 
 					</div> 
 				</div>
@@ -32,7 +29,7 @@
 				    <div class="panel panel-default">
 						<!-- panel body --> 
 						<div class="panel-body"> 
-							<p>
+                                                    <p>
                                                             <img src="<?php echo site_url().'static/backoffice/images/viaje.jpg';?>" alt="viaje"/>
                                                         </p>
 						</div> 
@@ -41,14 +38,15 @@
                                 <div class="col-md-9"> 
 					<div class="panel panel-default">
 						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>VIAJE - 3T</b></div> 
+                                                    <div class="panel-title"><b>PLATAFORMA GLOBAL PASS</b></div> 
 						</div> 
 						<!-- panel body --> 
 						<div class="panel-body"> 
-                                                    <p><?php echo replace_vocales_voculeshtml("Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros simplemente por ser parte de la empresa.")?></p><br/>
-                                                    <p><b><?php echo replace_vocales_voculeshtml("$travel")?></b></p><br/>
-                                                    <br/>
-                                                    <a><button class="btn btn-success btn-block" type="button">VER DETALLE DEL VIAJE</button></a>
+                                                    <p>Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros siendo parte de 3T LIFESTYLE. 	
+Tendrás 3 plataformas GLOBAL PASS PERÚ, INTERNACIONAL Y ELITE que te permitirán tener hasta el 70% de descuentos en: cientos de establecimiento dentro de Perú, hoteles, restaurantes, autos, cruceros, vuelos y mucho más.<br/>Puedes acumular puntos boomerang o millas para canjearlos por viajes, cruceros, vuelos o cualquier servicio de la plataforma todo pagado simplemente por recomendar la plataforma y que tus recomendados compren a través tuyo. 
+</p><br/>
+                                                    
+                                                    <a><button class="btn btn-success btn-block" type="button">VER PLATAFORMAS</button></a>
 						</div> 
 					</div> 
 				</div>
@@ -61,7 +59,7 @@
 						<!-- panel body --> 
 						<div class="panel-body"> 
 							<p>
-                                                            <img src="<?php echo site_url().'static/backoffice/images/sistema_9.jpg';?>" alt="sistema_9"/>
+                                                            <img src="<?php echo site_url().'static/backoffice/images/jaquemente.jpg';?>" alt="jaquemente"/>
                                                         </p>
 						</div> 
 					</div> 
@@ -69,14 +67,14 @@
                                 <div class="col-md-9"> 
 					<div class="panel panel-default">
 						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>SISTEMA DE NUEVE PASOS</b></div> 
+                                                    <div class="panel-title"><b>SISTEMA JAQUEMENTE</b></div> 
 						</div> 
 						<!-- panel body --> 
 						<div class="panel-body"> 
-                                                    <p><?php echo replace_vocales_voculeshtml("Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de Frank García. El sistema de 9 pasos, su creador Frank García formador de más de 30 millonarios, coach de talla mundial, autor del libro “De Balsero a Millonario”, ¿Por qué fracasa la gente? Entre otros.")?></p><br/>
-                                                    <p><b><?php echo replace_vocales_voculeshtml("$education")?></b></p>
-                                                    <br/>
-                                                    <a href="http://sistemadenuevepasos.com/miembros/" target="_blank"><button class="btn btn-success btn-block" type="button">IR AL SISTEMA</button></a>
+                                                    <p>Descubre el mecanismo de tu “mente” con el coaching transformacional basado en experiencias vivenciales de ciencia práctica que te ayudarán a recuperar el poder de tu vida a través de la autoconfianza. Un sistema probado que esta llevando al éxitos a cientos de persona.<br/>Tendrás temas como:
+¿Cómo eliminar la basura mental?, entrena tu enfoque para ver oportunidades, ¿Cómo crear relaciones y la vida social que siempre quisiste?, ¿Cómo superar los miedos?, convertir espirales de muerte a vida y mucho más.
+</p><br/>
+                                                    <a href="http://sistemadenuevepasos.com/miembros/" target="_blank"><button disabled="" class="btn btn-success btn-block" type="button">IR AL SISTEMA</button></a>
 						</div> 
 					</div> 
 				</div>
@@ -100,40 +98,10 @@
 						</div> 
 						<!-- panel body --> 
 						<div class="panel-body"> 
-                                                    <p><?php echo replace_vocales_voculeshtml("Aprenderás como manejar y hacer operaciones en el mercado secundario en Forex al lado de expertos trader que trabajan con nosotros, lo cual te dará nuevas herramientas para tu crecimiento financiero.")?></p><br/>
-                                                    <p><b><?php echo replace_vocales_voculeshtml("$forex")?></b></p>
-                                                    <br/>
-                                                    <a href="<?php echo site_url().'backoffice/academy';?>"><button class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
-						</div> 
-					</div> 
-				</div>
-                    </div>
-                
-                
-                <!--MAGIC VACATION-->
-                <div class="row">
-                                <div class="col-md-3"> 
-				    <div class="panel panel-default">
-						<!-- panel body --> 
-						<div class="panel-body"> 
-							<p>
-                                                            <img src="<?php echo site_url().'static/backoffice/images/magic.png';?>" alt="magic"/>
-                                                        </p>
-						</div> 
-					</div> 
-				</div>
-                                <div class="col-md-9"> 
-					<div class="panel panel-default">
-						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>FRANQUICIA</b></div> 
-						</div> 
-						<!-- panel body --> 
-						<div class="panel-body"> 
-                                                    <p><?php echo replace_vocales_voculeshtml("Obteniendo la franquicia de 3T y MAGIC VACATION MEMBER tendrás tu propia agencia mayorista de viaje con respaldo de la corporación, firmaras un contrato exclusivo con nosotros por un contrato de 3 años y podrás usar nuestro software altamente exclusivo para poder operar como agencia y tener ganancias hasta el 5000% por día.")?></p>
-                                                    <p><?php echo replace_vocales_voculeshtml("MAGIC VACATION MEMBERS, empresa con más de 15 años en el rubro de viajes turísticos, es una agencia mayorista de viaje que viene desarrollando un trabajo único y exclusivo en estos 3 países. Actualmente es parte del holding de empresa de 3T y da respaldo a la corporación.")?></p><br/>
-                                                    <p><b><?php echo replace_vocales_voculeshtml("$magic_franchise_text")?></b></p>
-                                                    <br/>
-                                                    <a href="http://www.magicvacationsmembers.com/" target="_blank"><button class="btn btn-success btn-block" type="button">IR A LA FRANQUICIA</button></a>
+                                                    <p>Profesionales altamente calificados en el manejo de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de 3T ACADEMY.
+                                                        Nuestros profesionales son referentes y voceros en distintos medios de comunicación como américa noticias, canal N, diario gestión, el comercio, Perú 21, RPP Noticias entre otras.<br/>A la vez con un Track Record de hasta 20% de ganancia mensual en operaciones de manejo de fondos.
+                                                        <br/>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás en nuestra academia.</p><br/>
+                                                    <a href="<?php echo site_url().'backoffice/academy';?>"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
 						</div> 
 					</div> 
 				</div>
