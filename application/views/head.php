@@ -77,23 +77,9 @@ display: none;
 }</style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1497433955691{margin-bottom: 0px !important;}.vc_custom_1497449006247{background-image: url("static/page_front/images/cidem_seminarios.jpg?id=553") !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1497021477671{background-color: #fbce00 !important;}.vc_custom_1498222083293{margin-bottom: 0px !important;background-color: #f2f2f2 !important;}.vc_custom_1497016783071{background-color: #efefef !important;}.vc_custom_1497270039282{margin-bottom: 0px !important;}.vc_custom_1497016783071{background-color: #efefef !important;}.vc_custom_1497271089392{margin-bottom: 0px !important;}.vc_custom_1497274905763{margin-bottom: 0px !important;padding-top: 35px !important;padding-bottom: 35px !important;}.vc_custom_1498573592424{padding-top: 0px !important;}.vc_custom_1497023315246{margin-bottom: 0px !important;}.vc_custom_1498573588407{padding-top: 0px !important;}.vc_custom_1498573584830{padding-top: 0px !important;}</style><noscript>
 <style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
-
-
-<?php 
-     $url = explode("/", uri_string());
-        if (isset($url[0])) {
-            $link = $url[0];
-            switch ($link) {
-                    case "login": ?>
-                    <style type="text/css" data-type="vc_shortcodes-custom-css">
-                        .vc_custom_1497446612800{margin-bottom: 0px !important;background-image: url(static/page_front/images/ciudad.jpg?id=370) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1498222750047{padding-top: 0px !important;}.vc_custom_1498743833540{margin-bottom: 0px !important;}.vc_custom_1497012475617{margin-bottom: 0px !important;}</style>
-                    <?php break;
-            }
-        }
-?>
-                    <script type="text/javascript">
-                    var site = '<?php echo site_url();?>';
-                </script>
+<script type="text/javascript">
+    var site = '<?php echo site_url();?>';
+</script>
 <!--REPRODUCTOR VIDEO-->
 <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
 <!-- If you'd like to support IE8 -->
