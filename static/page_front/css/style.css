@@ -9,9 +9,11 @@ License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: kalium
 */
-.text-danger{
-    color: red !important;
+.text-active{
+    font-size: 18px !important;
+    font-weight: bolder !important;
 }
-.text-success{
-    color: green !important;
+.style_active{
+    color: #b8860b !important;
 }
+
