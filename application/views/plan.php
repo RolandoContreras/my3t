@@ -30,7 +30,7 @@
     <div id="tours-2-container" class="container portfolio-container-and-title portfolio-loop-layout-type-1">
 	<div class="page-container">
             <div class="row">
-		<div id="tours-2" class="portfolio-holder portfolio-type-1 sort-by-js">
+		<div class="portfolio-new portfolio-type-1 sort-by-js">
                     <!--START PACKAGE OPENING-->
                     <div class="portfolio-item portfolio-item-type-3 has-padding w4 post-435 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-beaches" data-portfolio-item-id="435" data-terms="beaches">
                         <div class="item-box wow fadeInLab">
@@ -40,16 +40,11 @@
                                     <span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/apertura.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
                                     </span>
-                                    <span class="on-hover opacity-yes">
-                                        <span class="custom-hover-icon">
-                                            <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/plan/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px" />						
-                                        </span>
-                                    </span>
                                 </a>
                             </div>
                             <div class="info">
-                                <h3>
-                                    <a href="<?php echo site_url().'plan/apertura'?>" class="item-link">POR PRE LANZAMIENTO</a>
+                                <h3 style="font-size:20px;">
+                                    <a href="<?php echo site_url().'plan/apertura'?>" class="item-link">APERTURA</a>
                                 </h3>
                                     <p class="terms"><a href="<?php echo site_url().'plan/apertura'?>" data-term="beaches">$299</a></p>		
                             </div>
@@ -63,11 +58,6 @@
                                     <style>.img-456 {background-color: #484848;}</style>	
                                     <span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/basic655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
-                                    </span>
-                                    <span class="on-hover opacity-yes">
-                                        <span class="custom-hover-icon">
-                                            <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/plan/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px" />						
-                                        </span>
                                     </span>
                                 </a>
                             </div>
@@ -88,11 +78,6 @@
                                     <span class="image-placeholder img-456" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/executive655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
                                     </span>
-                                    <span class="on-hover opacity-yes">
-                                        <span class="custom-hover-icon">
-                                            <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/plan/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px" />						
-                                        </span>
-                                    </span>
                                 </a>
                             </div>
                             <div class="info">
@@ -112,11 +97,6 @@
                                     <span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/investor655.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
                                     </span>
-                                        <span class="on-hover opacity-yes">
-                                            <span class="custom-hover-icon">
-                                                <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/plan/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px" />						
-                                            </span>
-                                        </span>
 				</a>
                             </div>
                             <div class="info">
@@ -138,11 +118,6 @@
                                     <span class="image-placeholder img-459" style="padding-bottom: 83.20610687%">
                                         <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/business655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
                                     </span>
-                                    <span class="on-hover opacity-yes">
-                                        <span class="custom-hover-icon">
-                                            <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/plan/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px" />						
-                                        </span>
-                                    </span>
                                 </a>
                             </div>
                             <div class="info">
@@ -163,11 +138,6 @@
 				<style>.img-405 {background-color: #f0d8f0;}</style>	
                                 <span class="image-placeholder img-405" style="padding-bottom: 83.20610687%">
                                     <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/master655.png';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	
-                                </span>
-				<span class="on-hover opacity-yes">
-                                    <span class="custom-hover-icon">
-					<img width="256" height="256" src="<?php echo site_url().'static/page_front/images/plan/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px" />						
-                                    </span>
                                 </span>
                                 </a>
                             </div>

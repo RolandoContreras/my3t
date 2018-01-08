@@ -211,7 +211,7 @@
             <?php $this->load->view("footer");?>
         <!--END FOOTER-->
         
-        <link rel='stylesheet' id='nivo-lightbox-css'  href='<?php echo site_url().'static/page_front/css/nivo-lightbox.css';?>' type='text/css' media='all' />
+<link rel='stylesheet' id='nivo-lightbox-css'  href='<?php echo site_url().'static/page_front/css/nivo-lightbox.css';?>' type='text/css' media='all' />
 <link rel='stylesheet' id='nivo-lightbox-default-css'  href='<?php echo site_url().'static/page_front/css/default.css';?>' type='text/css' media='all' />
 <link rel='stylesheet' id='slick-css'  href='<?php echo site_url().'static/page_front/css/slick.css';?>' type='text/css' media='all' />
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.fluidbox.min.js';?>'></script>
