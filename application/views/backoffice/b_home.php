@@ -66,8 +66,7 @@
                                         </div> 
                                         <!-- panel body --> 
                                         <div class="panel-body"> 
-                                            <p><?php echo replace_vocales_voculeshtml("Del 24 de Octubre el 31 de Octubre del 2017 se considera tiempo de pre apertura, durante este periodo de tiempo pueden ir desarrollando el negocio con total normalidad hasta empezar las actividades el 1 de Noviembre. Las comisiones generadas durante el tiempo de pre apertura serán procesadas con normalidad. El día miércoles 01 de noviembre del 2017, empezamos actividades de 3T Company contando con los servicios de viajes, educación, forex y todas las áreas al 100%.");?></p> 
-                                            <p><?php echo replace_vocales_voculeshtml("Desde la fecha de inicio (1 Noviembre) ya se empezará a hacer los respectivos re consumos cada quince días para que se mantenga activa su respectiva cuenta.");?></p> 
+                                            <p>Del 08 al 31 de Enero del 2018 se considera tiempo de pre apertura, durante este periodo de tiempo pueden ir desarrollando el negocio con total normalidad con los paquetes de promoción de $299 y $999. La fecha de inicio de actividades es el  01 de Febrero; los paquetes de inscripciones BASIC, EXECUTIVE, INVESTOR, BUSINESS Y MASTER ya estarán disponibles para esa fecha. Las comisiones generadas durante el tiempo de pre apertura serán acumuladas y procesadas el 1er de Febrero (día de apertura).</p> 
                                         </div> 
                                 </div> 
                         </div>
@@ -83,7 +82,7 @@
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Rango")?></h5>
+                                    <h5 class="media-heading">Rango</h5>
                                 <strong>Sin Rango</strong>
                                 </div>
                                 <div class="media-right media-middle">
@@ -95,19 +94,40 @@
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Próximo Rango")?></h5>
-                                <strong>Start</strong>
+                                    <h5 class="media-heading">Próximo Rango - <strong>Start</strong></h5>
+                                <strong>1000</strong>
                                 </div>
                                 <div class="media-right media-middle">
                                     <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
-                        
                         <a href="#" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntaje Mensual");?></h5>
+                                <h5 class="media-heading">Puntaje del día</h5>
+                                <strong>0 PTS</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                <h5 class="media-heading">Puntaje Semanal</h5>
+                                <strong>0 PTS</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading">Puntaje Mensual</h5>
                                 <strong>0 PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
@@ -117,32 +137,22 @@
                             </div>
                         </a>
                             
-                        <a href="#" class="col-flex box-height">
-                            <div class="media">
-                                <div class="media-body media-middle">
-                                <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntaje Semanal");?></h5>
-                                <strong>0 PTS</strong>
-                                </div>
-                                <div class="media-right media-middle">
-                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
+                        
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Promoción");?></h5>
+                                    <h5 class="media-heading">Próximo Reconsumo</h5>
                                 <strong>Ninguna</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-suitcase fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Miles");?></h5>
+                                    <h5 class="media-heading">Millas</h5>
                                 <strong>0 PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
@@ -205,7 +215,7 @@
                             <p><button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/investor.png";?>" alt="Paquete Investor"/></p>
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/investor.jpg";?>" alt="Paquete Investor"/></p>
                             <p><button type="button" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-2"> 
@@ -217,6 +227,16 @@
                             <p><button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-1"></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-2"> 
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/apertura.jpg";?>" alt="Apertura"/></p>
+                            <p><button type="button" onclick="make_pedido('6');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                        </div>
+                        <div class="col-md-2"> 
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/apertura-elite.jpg";?>" alt="Apertura Elite"/></p>
+                            <p><button type="button" onclick="make_pedido('7');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                        </div>
+                        <div class="col-md-4"></div>
                 </div> 
         </div>
     <br/><br/>
@@ -324,16 +344,16 @@
      <?php 
      if(count($obj_post) > 0){ ?>
             <!--SEPARATE SECCION-->
-            <div class="row">
+<!--            <div class="row">
                 <div class="col-sm-12 mb-25">
                     <div class="panel panel-default panel-tab-box">
                         <div class="panel-body"></div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!--END SEPARATE SECCION-->
             
-            <div class="col-lg-6">
+<!--            <div class="col-lg-6">
                 <div class="panel panel-default">
                         <div class="panel-heading no-border clearfix"> 
                             <h2 class="panel-title">NOTICIAS</h2>
@@ -372,7 +392,7 @@
                                 </div>
                         </div>
                 </div>
-            </div>
+            </div>-->
     <?php } ?>       
             
         </div>

@@ -147,7 +147,6 @@ class B_home extends CI_Controller {
                             if($franchise_id == 1){
                                 //CHANGE TO BASIC
                                  $data = array(
-                                            
                                             'franchise_id' => 1,
                                             'point_calification_left' => 50,
                                             'point_calification_rigth' => 50,
