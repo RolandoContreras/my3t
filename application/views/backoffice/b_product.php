@@ -11,16 +11,22 @@
     <div class="content-wrapper">
         <div class="row fix-box-height package-box-fix mt-30">
             <div class="col-md-12"> 
-					<div class="panel panel-warning">
+                <?php 
+                foreach ($messages_informative as $value) { ?>
+                    <div class="row">
+                        <div class="col-md-12"> 
+                                    <div class="panel panel-warning">
 						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>Información Productos</b></div> 
-						</div> 
-						<!-- panel body --> 
-						<div class="panel-body"> 
-                                                    <p><b>Desde el 08 hasta el 31 de Enero estamos en tiempo de Pre Apertura, por lo cual los módulos de JAQUEMENTE y FOREX productos estrellas de 3T aún no están disponibles hasta el 1er de Febrero que ya empezamos con los servicios completos.</b></p>
-						</div> 
-					</div> 
-				</div>
+                                                <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                            </div> 
+                                            <!-- panel body --> 
+                                            <div class="panel-body"> 
+                                                <p><?php echo $value->text;?></p> 
+                                            </div> 
+                                    </div> 
+                            </div>
+                        </div>
+                <?php } ?>
              
             <div class="col-lg-12">
                  <!--Viajes-->

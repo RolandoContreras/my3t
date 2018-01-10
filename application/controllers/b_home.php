@@ -90,9 +90,6 @@ class B_home extends CI_Controller {
                                     "order" => "position ASC");
                 
            $messages_informative = $this->obj_otros->search($params); 
-//           var_dump($messages_informative);
-//           die();
-           
            
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;
