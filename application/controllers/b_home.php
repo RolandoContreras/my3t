@@ -82,12 +82,21 @@ class B_home extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);
            
+           
+           //GET MESSAGE INFORMATIVE FOR HOME
+           $params = array(
+                                    "select" =>"",
+                                     "where" => "status_value = 1 and page = 1",
+                                    "order" => "position ASC");
+                
+           $messages_informative = $this->obj_otros->search($params); 
+//           var_dump($messages_informative);
+//           die();
+           
+           
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;
            
-           //GET DATE END CONTRACT
-             $date_end_contract = $obj_customer->date_end;
-             
               //SELECT FRANCHISE_ID 
               
                 switch ($obj_customer->franchise_id) {
@@ -125,13 +134,13 @@ class B_home extends CI_Controller {
                         break;
                 }
                 
+                $this->tmp_backoffice->set("messages_informative",$messages_informative);
                 $this->tmp_backoffice->set("obj_message",$obj_message);
                 $this->tmp_backoffice->set("all_message",$all_message);
 //                $this->tmp_backoffice->set("obj_post",$obj_post);
                 $this->tmp_backoffice->set("text_franchise",$text_franchise);
                 $this->tmp_backoffice->set("images_franchise",$images_franchise);
                 $this->tmp_backoffice->set("price_btc",$price_btc);
-                $this->tmp_backoffice->set("date_end_contract",$date_end_contract);
                 $this->tmp_backoffice->set("obj_total",$obj_total);
                 $this->tmp_backoffice->set("obj_balance",$obj_balance);
                 $this->tmp_backoffice->set("obj_customer",$obj_customer);

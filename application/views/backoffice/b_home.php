@@ -58,20 +58,26 @@
                 </div>
             </div>
             <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-md-12"> 
-                                <div class="panel panel-success">
-                                        <div class="panel-heading clearfix"> 
-                                            <div class="panel-title">Mensaje: <b>Inicio de Actividades</b></div> 
-                                        </div> 
-                                        <!-- panel body --> 
-                                        <div class="panel-body"> 
-                                            <p>Del 08 al 31 de Enero del 2018 se considera tiempo de pre apertura, durante este periodo de tiempo pueden ir desarrollando el negocio con total normalidad con los paquetes de promoción de $299 y $999. La fecha de inicio de actividades es el  01 de Febrero; los paquetes de inscripciones BASIC, EXECUTIVE, INVESTOR, BUSINESS Y MASTER ya estarán disponibles para esa fecha. Las comisiones generadas durante el tiempo de pre apertura serán acumuladas y procesadas el 1er de Febrero (día de apertura).</p> 
-                                        </div> 
-                                </div> 
+                <!--SHOW ALERT INFORMATIVE MESSAGE--> 
+                <?php 
+                foreach ($messages_informative as $value) { ?>
+                    <div class="row">
+                        <div class="col-md-12"> 
+                                    <div class="panel panel-success">
+                                            <div class="panel-heading clearfix"> 
+                                                <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                            </div> 
+                                            <!-- panel body --> 
+                                            <div class="panel-body"> 
+                                                <p><?php echo $value->text;?></p> 
+                                            </div> 
+                                    </div> 
+                            </div>
                         </div>
-                    </div>
+                <?php } ?>
             </div>
+            
+            
             
              
     <div class="row">

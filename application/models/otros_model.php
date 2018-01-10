@@ -18,6 +18,11 @@ BITSHARE S.A.C
 class otros_model_atributos{	
     var $otros_id='';
     var $precio_btc='';
+    var $title='';
+    var $position='';
+    var $page='';
+    var $text='';
+    var $status_value='';
     var $created_at='';
     var $created_by='';
     var $updated_at='';
@@ -32,6 +37,11 @@ class Otros_Model extends CI_Model{
 	$this->table_id = 'otros_id';
         $this->otros_id='';
         $this->precio_btc='';
+        $this->title='';
+        $this->position='';
+        $this->text='';
+        $this->page='';
+        $this->status_value='';
         $this->created_at='';
         $this->created_by='';
         $this->updated_at='';
