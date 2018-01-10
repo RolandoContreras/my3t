@@ -41,6 +41,7 @@
         <script type="text/javascript">
             var site = '<?php echo site_url();?>';
         </script>
+        <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
     </head>
 <body>
 <!-- top fixed navbar -->
@@ -84,7 +85,7 @@
                                         <ul class="nav nav-list">
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/mesaje_global";?>"><i class="icon-large icon-th"></i>Mensajes</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/informativos";?>"><i class="icon-large icon-th"></i>Mensajes Informativos</a></li>
                                             <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
                                             <?php } ?>

@@ -22,6 +22,7 @@ class otros_model_atributos{
     var $position='';
     var $page='';
     var $text='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -41,6 +42,7 @@ class Otros_Model extends CI_Model{
         $this->position='';
         $this->text='';
         $this->page='';
+        $this->active='';
         $this->status_value='';
         $this->created_at='';
         $this->created_by='';

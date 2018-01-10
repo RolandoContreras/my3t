@@ -115,6 +115,11 @@ $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
 $route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no";
 
+$route['dashboard/informativos'] = "d_informative"; 
+$route['dashboard/informativos/load'] = "d_informative/load";
+//$route['dashboard/informativos/edit_informative'] = "d_informative/edit_informative";
+//$route['dashboard/informativos/delete_informative'] = "d_informative/delete_informative";
+
 $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios/load'] = "d_users/load";
