@@ -56,10 +56,7 @@ class B_home extends CI_Controller {
                                         );
             $obj_customer = $this->obj_customer->get_search_row($params);
             
-            $points_left = $obj_customer->point_left / 0.12;
-            $points_rigth = $obj_customer->point_rigth / 0.12;
-           
-                //GET TOTAL AMOUNT
+            //GET TOTAL AMOUNT
                 $params_total = array(
                         "select" =>"sum(amount) as total,
                                     (select sum(amount) FROM commissions WHERE status_value <= 2 and customer_id = $customer_id) as balance",
@@ -69,13 +66,13 @@ class B_home extends CI_Controller {
              
              
               //GET POST (NEWS)
-            $params_post = array(
-                                    "select" =>"*",
-                                     "where" => "status_value = 1",
-                                     "order" => "date DESC",
-                                     "limit" => "3");
-                
-           $obj_post = $this->obj_post->search($params_post);
+//            $params_post = array(
+//                                    "select" =>"*",
+//                                     "where" => "status_value = 1",
+//                                     "order" => "date DESC",
+//                                     "limit" => "3");
+//                
+//           $obj_post = $this->obj_post->search($params_post);
              
             //GET PRICE BTC
             $params_price_btc = array(
@@ -118,19 +115,25 @@ class B_home extends CI_Controller {
                         $images_franchise = "membership.png";
                         $text_franchise = "MEMBERSHIP";
                         break;
+                    case 7:
+                        $images_franchise = "apertura.png";
+                        $text_franchise = "PRE APERTURA";
+                        break;
+                    case 8:
+                        $images_franchise = "apertura_elite.png";
+                        $text_franchise = "PRE APERTURA ELITE";
+                        break;
                 }
                 
                 $this->tmp_backoffice->set("obj_message",$obj_message);
                 $this->tmp_backoffice->set("all_message",$all_message);
-                $this->tmp_backoffice->set("obj_post",$obj_post);
+//                $this->tmp_backoffice->set("obj_post",$obj_post);
                 $this->tmp_backoffice->set("text_franchise",$text_franchise);
                 $this->tmp_backoffice->set("images_franchise",$images_franchise);
                 $this->tmp_backoffice->set("price_btc",$price_btc);
                 $this->tmp_backoffice->set("date_end_contract",$date_end_contract);
                 $this->tmp_backoffice->set("obj_total",$obj_total);
                 $this->tmp_backoffice->set("obj_balance",$obj_balance);
-                $this->tmp_backoffice->set("points_left",$points_left);
-                $this->tmp_backoffice->set("points_rigth",$points_rigth);
                 $this->tmp_backoffice->set("obj_customer",$obj_customer);
                 $this->tmp_backoffice->render("backoffice/b_home");
     }
@@ -148,8 +151,6 @@ class B_home extends CI_Controller {
                                 //CHANGE TO BASIC
                                  $data = array(
                                             'franchise_id' => 1,
-                                            'point_calification_left' => 50,
-                                            'point_calification_rigth' => 50,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
@@ -159,8 +160,6 @@ class B_home extends CI_Controller {
                                  $data = array(
                                             
                                             'franchise_id' => 2,
-                                            'point_calification_left' => 100,
-                                            'point_calification_rigth' => 100,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
@@ -169,8 +168,6 @@ class B_home extends CI_Controller {
                                 //CHANGE TO SENIOR EXECUTIVE
                                  $data = array(
                                             'franchise_id' => 3,
-                                            'point_calification_left' => 300,
-                                            'point_calification_rigth' => 300,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
@@ -179,8 +176,6 @@ class B_home extends CI_Controller {
                                 //CHANGE TO MASTER
                                  $data = array(
                                             'franchise_id' => 4,
-                                            'point_calification_left' => 500,
-                                            'point_calification_rigth' => 500,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
@@ -189,18 +184,30 @@ class B_home extends CI_Controller {
                                 //CHANGE TO MASTER
                                  $data = array(
                                             'franchise_id' => 5,
-                                            'point_calification_left' => 1000,
-                                            'point_calification_rigth' => 1000,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 6){
-                                //CHANGE TO MASTER
+                            }elseif($franchise_id == 7){
+                                //CHANGE TO APERTURA
+                                 $data = array(
+                                            'franchise_id' => 7,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }elseif($franchise_id == 8){
+                                //CHANGE TO ELITE   
+                                 $data = array(
+                                            'franchise_id' => 8,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }else{
+                                //CHANGE MEMBERSHIP
                                  $data = array(
                                             'franchise_id' => 6,
-                                            'point_calification_left' => 5000,
-                                            'point_calification_rigth' => 5000,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 

@@ -230,11 +230,11 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-2"> 
                             <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/apertura.jpg";?>" alt="Apertura"/></p>
-                            <p><button type="button" onclick="make_pedido('6');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p><button type="button" onclick="make_pedido('7');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-2"> 
                             <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/apertura-elite.jpg";?>" alt="Apertura Elite"/></p>
-                            <p><button type="button" onclick="make_pedido('7');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p><button type="button" onclick="make_pedido('8');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-4"></div>
                 </div> 
@@ -281,12 +281,20 @@
                                                                 <img src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Cuenta Business" height="120" width="130"/>
                                                                 <?php break;
                                                             case 5:
-                                                                $amount = "$3000"?>
+                                                                $amount = "$1899"?>
                                                                 <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
                                                                 <?php break;
                                                             case 6: 
                                                                 $amount = "0 USD";?>
                                                                  <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
+                                                              <?php  break;
+                                                          case 7: 
+                                                                $amount = "299 USD";?>
+                                                                 <img src="<?php echo site_url()."static/backoffice/images/apertura.png";?>" alt="Cuenta Apertura" height="120" width="130"/>
+                                                              <?php  break;
+                                                          case 8: 
+                                                                $amount = "999 USD";?>
+                                                                 <img src="<?php echo site_url()."static/backoffice/images/apertura_elite.png";?>" alt="Cuenta Elite" height="120" width="130"/>
                                                               <?php  break;
                                                         }?>
                                                 </p>
@@ -342,7 +350,7 @@
     
             
      <?php 
-     if(count($obj_post) > 0){ ?>
+//     if(count($obj_post) > 0){ ?>
             <!--SEPARATE SECCION-->
 <!--            <div class="row">
                 <div class="col-sm-12 mb-25">
@@ -393,7 +401,7 @@
                         </div>
                 </div>
             </div>-->
-    <?php } ?>       
+    <?php //} ?>       
             
         </div>
     </div>
