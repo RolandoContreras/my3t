@@ -5,7 +5,7 @@
 	<title>Travel - Training- Trade</title>
         <link rel='dns-prefetch' href='//fonts.googleapis.com' />
         <link rel='dns-prefetch' href='//s.w.org' />
-        <meta name="description" content="Empresa 100% peruana que brinda distintos servicios e info-productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
+        <meta name="description" content="Primera multiplataforma con los productos y servicios más cotizados del mercado: viajes, entrenamientos y forex. Negocio 100% legal con oficinas abiertas al público.">
         <meta name="author" content="3T Company">
         <meta name="keywords" content="3T,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
         <style type="text/css">
