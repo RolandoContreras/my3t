@@ -106,7 +106,7 @@
                                                     <p>Profesionales altamente calificados en el manejo de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de 3T ACADEMY.
                                                         Nuestros profesionales son referentes y voceros en distintos medios de comunicación como américa noticias, canal N, diario gestión, el comercio, Perú 21, RPP Noticias entre otras.<br/>A la vez con un Track Record de hasta 20% de ganancia mensual en operaciones de manejo de fondos.
                                                         <br/>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás en nuestra academia.</p><br/>
-                                                    <a href="<?php echo site_url().'backoffice/productos/academy';?>"><button  class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
+                                                    <a href="<?php echo site_url().'backoffice/productos/academy';?>"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
 						</div> 
 					</div> 
 				</div>

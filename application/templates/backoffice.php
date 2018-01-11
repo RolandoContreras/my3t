@@ -49,7 +49,7 @@
     var site = '<?php echo site_url();?>';
 </script>
 </head>
-<body>
+<body onload="" data-toggle="modal" data-target="#modal-2">
 
 <!-- Page container -->
 <div class="page-container">
