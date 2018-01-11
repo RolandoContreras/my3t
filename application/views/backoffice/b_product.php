@@ -49,10 +49,9 @@
 						<!-- panel body --> 
 						<div class="panel-body"> 
                                                     <p>Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros siendo parte de 3T LIFESTYLE. 	
-Tendrás 3 plataformas GLOBAL PASS PERÚ, INTERNACIONAL Y ELITE que te permitirán tener hasta el 70% de descuentos en: cientos de establecimiento dentro de Perú, hoteles, restaurantes, autos, cruceros, vuelos y mucho más.<br/>Puedes acumular puntos boomerang o millas para canjearlos por viajes, cruceros, vuelos o cualquier servicio de la plataforma todo pagado simplemente por recomendar la plataforma y que tus recomendados compren a través tuyo. 
-</p><br/>
-                                                    
-                                                    <a><button class="btn btn-success btn-block" type="button">VER PLATAFORMAS</button></a>
+                                                    Tendrás 3 plataformas GLOBAL PASS PERÚ, INTERNACIONAL Y ELITE que te permitirán tener hasta el 70% de descuentos en: cientos de establecimiento dentro de Perú, hoteles, restaurantes, autos, cruceros, vuelos y mucho más.<br/>Puedes acumular puntos boomerang o millas para canjearlos por viajes, cruceros, vuelos o cualquier servicio de la plataforma todo pagado simplemente por recomendar la plataforma y que tus recomendados compren a través tuyo. 
+                                                    </p><br/>
+                                                    <a href="<?php echo site_url().'backoffice/productos/globalpass';?>"><button class="btn btn-success btn-block" type="button">VER PLATAFORMAS</button></a>
 						</div> 
 					</div> 
 				</div>
@@ -107,7 +106,7 @@ Tendrás 3 plataformas GLOBAL PASS PERÚ, INTERNACIONAL Y ELITE que te permitir�
                                                     <p>Profesionales altamente calificados en el manejo de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de 3T ACADEMY.
                                                         Nuestros profesionales son referentes y voceros en distintos medios de comunicación como américa noticias, canal N, diario gestión, el comercio, Perú 21, RPP Noticias entre otras.<br/>A la vez con un Track Record de hasta 20% de ganancia mensual en operaciones de manejo de fondos.
                                                         <br/>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás en nuestra academia.</p><br/>
-                                                    <a href="<?php echo site_url().'backoffice/academy';?>"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
+                                                    <a href="<?php echo site_url().'backoffice/productos/academy';?>"><button  class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
 						</div> 
 					</div> 
 				</div>
