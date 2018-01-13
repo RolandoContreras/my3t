@@ -12,13 +12,24 @@ class Panel extends CI_Controller{
         //GET THE SESSION
         $this->get_session();
 
-        //GET ALL COMMENTS
-        $params = array("select" =>"count(comment_id) as comment_id, (select count(comment_id) from comments where status_value = 1) as active, (select count(comment_id) from comments where status_value = 0) as inactive");
-        $obj_comments = $this->obj_comments->get_search_row($params);
-
-        $active = $obj_comments->active;
-        $inactive = $obj_comments->inactive;
-        $obj_comments = $obj_comments->comment_id;
+        //GET TOTAL ROWS
+        $params = array("select" =>"count(comment_id) as total_comments,
+                                    (select count(*) from customer) as total_customer, 
+                                    (select count(*) from category) as total_category,
+                                    (select count(*) from franchise) as total_franchise,
+                                    (select count(*) from commissions) as total_commissions,
+                                    (select count(*) from product) as total_product,
+                                    (select count(*) from users) as total_users,
+                                    (select count(*) from otros) as total_informative,
+                                    (select count(*) from bonus) as total_bonus,
+                                    (select count(*) from pay) as total_pay");
+        $obj_total = $this->obj_comments->get_search_row($params);
+        
+         //GET PENDING ROWS
+        $params = array("select" =>"count(*) as pending_comments,
+                                    (select count(*) from pay where active = 1) as pending_pay",
+                        "where" => "active = 1");
+        $obj_pending = $this->obj_comments->get_search_row($params);
         
         //GET LASTEST COMMENT  
         $params = array(
@@ -32,14 +43,27 @@ class Panel extends CI_Controller{
             );
         $obj_last_comment = $this->obj_comments->get_search_row($params);
         
+        //GET TOTAL ROWS
+        $params = array("select" =>"count(comment_id) as total_comments,
+                                    (select count(*) from customer) as total_customer, 
+                                    (select count(*) from category) as total_category,
+                                    (select count(*) from franchise) as total_franchise,
+                                    (select count(*) from commissions) as total_commissions,
+                                    (select count(*) from product) as total_product,
+                                    (select count(*) from users) as total_users,
+                                    (select count(*) from otros) as total_informative,
+                                    (select count(*) from bonus) as total_bonus,
+                                    (select count(*) from pay) as total_pay");
+        $obj_total = $this->obj_comments->get_search_row($params);
+        
         //GET AND COUNT ALL THE CUSTOMER
-        $params = array("select" =>"count(customer_id) as customer_id,
-                                    (select count(customer_id) from customer where financy = 1) as financiado");
-        $obj_customer = $this->obj_customer->get_search_row($params);
-        //TOTAL FINANCIADOS
-        $obj_financiado = $obj_customer->financiado;
-        //TOTAL CUSTOMER
-        $obj_customer = $obj_customer->customer_id;
+//        $params = array("select" =>"count(customer_id) as customer_id,
+//                                    (select count(customer_id) from customer where financy = 1) as financiado");
+//        $obj_customer = $this->obj_customer->get_search_row($params);
+//        //TOTAL FINANCIADOS
+//        $obj_financiado = $obj_customer->financiado;
+//        //TOTAL CUSTOMER
+//        $obj_customer = $obj_customer->customer_id;
         
         //GET BTC PRICE
         $params = array("select" =>"otros_id, precio_btc as bitcoin");
@@ -51,12 +75,11 @@ class Panel extends CI_Controller{
         $seccion = 'Vista global';        
 
         $this->tmp_mastercms->set('bitcoin',$bitcoin);
-        $this->tmp_mastercms->set('obj_financiado',$obj_financiado);
-        $this->tmp_mastercms->set('obj_customer',$obj_customer);
+//        $this->tmp_mastercms->set('obj_financiado',$obj_financiado);
+//        $this->tmp_mastercms->set('obj_customer',$obj_customer);
+        $this->tmp_mastercms->set('obj_pending',$obj_pending);
         $this->tmp_mastercms->set('obj_last_comment',$obj_last_comment);
-        $this->tmp_mastercms->set('obj_comments',$obj_comments);
-        $this->tmp_mastercms->set('active',$active);
-        $this->tmp_mastercms->set('inactive',$inactive);
+        $this->tmp_mastercms->set('obj_total',$obj_total);
         $this->tmp_mastercms->set('modulos',$modulos);
         $this->tmp_mastercms->set('link_modulo',$link_modulo);
         $this->tmp_mastercms->set('seccion',$seccion);

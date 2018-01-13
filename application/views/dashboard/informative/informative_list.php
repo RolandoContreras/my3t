@@ -120,7 +120,7 @@
 <script type="text/javascript">
    $(document).ready(function() {
     $('#table').dataTable( {
-         "order": [[ 0, "desc" ]]
+         "order": [[ 0, "asc" ]]
     } );
 } );
 </script>

@@ -3,7 +3,7 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>CMS - 3T - Travel - Training- Trade</title>
+        <title>CMS - 3T</title>
         <base href="<?php echo site_url();?>">
         <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
         <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
@@ -83,13 +83,15 @@
                                     <div id="dashboardsb" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
+                                            <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/categorias";?>"><i class="icon-large icon-th"></i>Categórías</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/productos";?>"><i class="icon-large icon-th"></i>Productos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/informativos";?>"><i class="icon-large icon-th"></i>Mensajes Informativos</a></li>
                                             <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
                                             <?php } ?>
-                                            <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                         </ul>
                                         </div>
                                     </div>
@@ -105,6 +107,7 @@
                                     <div id="activaciones" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
+                                            <li><a href="<?php echo site_url()."dashboard/confirmation_activaciones";?>"><i class="icon-large icon-th"></i>Confirmación</a></li>
                                              <li><a href="<?php echo site_url()."dashboard/activaciones";?>"><i class="icon-large icon-th"></i>Activaciones</a></li>
                                         </ul>
                                         </div>

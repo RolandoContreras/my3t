@@ -110,6 +110,11 @@ $route['dashboard/clientes/no_active_customer'] = "d_customer/no_active_customer
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
 $route['dashboard/clientes/validate'] = "d_customer/validate";
 
+$route['dashboard/categorias'] = "d_category";
+$route['dashboard/categorias/load'] = "d_category/load";
+$route['dashboard/categorias/load/([0-9]+)'] = "d_category/load/$1";
+$route['dashboard/categorias/validate'] = "d_category/validate";
+
 $route['dashboard/pagos_diarios'] = "d_pay_dialy";
 $route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
 
@@ -119,8 +124,8 @@ $route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no
 
 $route['dashboard/informativos'] = "d_informative"; 
 $route['dashboard/informativos/load'] = "d_informative/load";
-//$route['dashboard/informativos/edit_informative'] = "d_informative/edit_informative";
-//$route['dashboard/informativos/delete_informative'] = "d_informative/delete_informative";
+$route['dashboard/informativos/load/([0-9]+)'] = "d_informative/load/$1";
+$route['dashboard/informativos/validate'] = "d_informative/validate";
 
 $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios'] = "d_users";

@@ -3,12 +3,10 @@
 <script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
 <script src="static/cms/js/core/jquery.dataTables.min.js"></script>
 <link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
-
-
 <div class="row-fluid">
     <div class="span6">
-            <div class="widget_container">
-                    <div class="well nomargin">
+            <div id="popular_posts" class="widget_container">
+                    <div class="well">
                             <div class="navbar navbar-static navbar_as_heading">
                                     <div class="navbar-inner">
                                             <div class="container" style="width: auto;">
@@ -16,70 +14,74 @@
                                             </div>
                                     </div>
                             </div>
-                            <table id="quick_view" class="table">
-                                    <thead>
-                                            <tr>
-                                                    <th>CMS</th>
-                                                    <th>Discuciones</th>
-                                            </tr>
-                                    </thead><!-- table heading -->
-                                    <tbody>
-                                            <tr>
-                                                    <td><a href="#"><b>0</b> <i class="icon-edit"></i> Reportes</a></td>
-                                                    <td><a class="pending"><b class="cmd"><?php echo $inactive;?></b> <i class="icon-edit"></i> Pendientes</a></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_customer?></b> <i class="icon-edit"></i>Total Asociados</a></td>
-                                                    <td><a href="<?php echo site_url().'dashboard/financiados';?>" class="pending"><b class="cmd"><?php echo $obj_financiado;?></b> <i class="icon-edit"></i> Financiados</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Precio del BTC</a>&nbsp;&nbsp;&nbsp;<input type="text" name="btc_price" id="btc_price" value="<?php echo $bitcoin;?>" style="vertical-align: middle !important;">&nbsp;&nbsp;&nbsp;<button onclick="guardar_btc();" class="btn btn-info">Guardar</button></td>
-                                                    <td></td>
-                                            </tr>
-                                           
-                                    </tbody>
-                            </table>
+                        <table class="table">
+                            <thead>
+                                <tr>   
+                                    <th>N°</th>
+                                    <th>Concepto</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="#">Asociados</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_customer;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="#">Comentarios</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_comments;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="#">Productos</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_product;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="#">Comisiones</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_commissions;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="#">Franquicias</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_franchise;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="#">Bonos</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_bonus;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="#">Pagos Realizados</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_pay;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="#">Categorías</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_category;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="#">Usuarios</a></td>
+                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_users;?></a></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="#">Mensajes Informativos</a></td>
+                                    <td><a class="btn btn-mini btn-warning"href="#"><?php echo $obj_total->total_informative;?></a></td>
+                                </tr>
+                                <tr>
+<!--                                    <td><a>Precio del BTC</a>&nbsp;&nbsp;&nbsp;<input type="text" name="btc_price" id="btc_price" value="<?php echo $bitcoin;?>" style="vertical-align: middle !important;">&nbsp;&nbsp;&nbsp;<button onclick="guardar_btc();" class="btn btn-info">Guardar</button></td>
+                                    <td></td>
+                                    <td></td>-->
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
             </div>
-        
-            <div class="widget_container">
-                    <div class="well nomargin">
-                            <div class="navbar navbar-static navbar_as_heading">
-                                    <div class="navbar-inner">
-                                            <div class="container" style="width: auto;">
-                                                    <a class="brand">Producción e Ingresos</a>
-                                            </div>
-                                    </div>
-                            </div>
-                            <table id="quick_view" class="table">
-                                    <thead>
-                                            <tr>
-                                                    <th>CMS</th>
-                                                    <th>Discuciones</th>
-                                            </tr>
-                                    </thead><!-- table heading -->
-                                    <tbody>
-                                            <tr>
-                                                    <td><a href="#"><b>0</b> <i class="icon-edit"></i> Reportes</a></td>
-                                                    <td><a class="pending"><b class="cmd"><?php echo $inactive;?></b> <i class="icon-edit"></i> Pendientes</a></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_customer?></b> <i class="icon-edit"></i>Total Asociados</a></td>
-                                                    <td><a href="<?php echo site_url().'dashboard/financiados';?>" class="pending"><b class="cmd"><?php echo $obj_financiado;?></b> <i class="icon-edit"></i> Financiados</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" align="right" >
-                                                    <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
-                                                </td>
-                                            </tr>
-                                            
-                                            
-                                    </tbody>
-                            </table>
-                    </div>
-            </div>
-        
-        
 
             <div id="quick_post" class="widget_container">
                     <div class="well">
@@ -167,48 +169,44 @@
                         </div>
                 </div>
 
-<!--                <div id="popular_posts" class="widget_container">
+                <div id="popular_posts" class="widget_container">
                         <div class="well">
                                 <div class="navbar navbar-static navbar_as_heading">
                                         <div class="navbar-inner">
                                                 <div class="container" style="width: auto;">
-                                                        <a class="brand">Últimos Mensajes Masivos</a>
+                                                        <a class="brand">Registros Pendientes</a>
                                                 </div>
                                         </div>
                                 </div>
-
                                 <table class="table">
-                                        <tbody>
-                                                <tr>
-                                                        <td>1</td>
-                                                        <td><a href="#">Post Title Here</a></td>
-                                                        <td><i class="icon-large icon-chat"></i> <a href="#">25 Comments</a></td>
-                                                </tr>
-                                                <tr>
-                                                        <td>2</td>
-                                                        <td><a href="#">Post Title Here</a></td>
-                                                        <td><i class="icon-large icon-chat"></i> <a href="#">20 Comments</a></td>
-                                                </tr>
-                                                <tr>
-                                                        <td>3</td>
-                                                        <td><a href="#">Post Title Here</a></td>
-                                                        <td><i class="icon-large icon-chat"></i> <a href="#">15 Comments</a></td>
-                                                </tr>
-                                                <tr>
-                                                        <td>4</td>
-                                                        <td><a href="#">Post Title Here</a></td>
-                                                        <td><i class="icon-large icon-chat"></i> <a href="#">10 Comments</a></td>
-                                                </tr>
-                                                <tr>
-                                                        <td>5</td>
-                                                        <td><a href="#">Post Title Here</a></td>
-                                                        <td><i class="icon-large icon-chat"></i> <a href="#">5 Comments</a></td>
-                                                </tr>
-                                        </tbody>
+                                    <thead>
+                                        <tr>   
+                                            <th>N°</th>
+                                            <th>Concepto</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                    <td>1</td>
+                                                    <td><a href="#">Comentarios</a></td>
+                                                    <td><a class="btn btn-mini btn-danger" href="#"><?php echo $obj_pending->pending_comments;?></a></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>2</td>
+                                                    <td><a href="#">Confirmación Activaciones</a></td>
+                                                    <td><a class="btn btn-mini btn-danger" href="#">20 Comments</a></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>3</td>
+                                                    <td><a href="#">Cobros</a></td>
+                                                    <td><a class="btn btn-mini btn-danger" href="#"><?php echo $obj_pending->pending_pay;?></a></td>
+                                            </tr>
+                                    </tbody>
                                 </table>
                                 <a href="#" class="btn btn-duadua">View More</a>
                         </div>
-                </div>-->
+                </div>
         </div>
 </div>
 <script src="static/cms/js/panel.js"></script>

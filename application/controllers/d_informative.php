@@ -48,6 +48,7 @@ class D_informative extends CI_Controller{
                          "where" => $where,
             ); 
             $obj_informative  = $this->obj_otros->get_search_row($params); 
+            
             //RENDER
             $this->tmp_mastercms->set("obj_informative",$obj_informative);
           }
@@ -60,6 +61,41 @@ class D_informative extends CI_Controller{
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->render("dashboard/informative/informative_form");    
+    }
+    
+    public function validate(){
+        //GET CUSTOMER_ID
+        $informative_id = $this->input->post("otros_id");
+        
+        if($informative_id != ""){
+            //PARAM DATA
+            $data = array(
+               'title' => $this->input->post('title'),
+               'page' => $this->input->post('page'),
+               'text' => $this->input->post('text'),
+               'position' => $this->input->post('position'),
+               'active' => $this->input->post('active'),
+               'updated_at' => date("Y-m-d H:i:s"),
+               'updated_by' => $_SESSION['usercms']['user_id']
+                );          
+            //SAVE DATA IN TABLE    
+            $this->obj_otros->update($informative_id, $data);
+        }else{
+            //PARAM DATA SAVE
+            $data = array(
+               'title' => $this->input->post('title'),
+               'page' => $this->input->post('page'),
+               'text' => $this->input->post('text'),
+               'position' => $this->input->post('position'),
+               'active' => $this->input->post('active'),
+               'status_value' => 1,
+               'created_at' => date("Y-m-d H:i:s"),
+               'created_by' => $_SESSION['usercms']['user_id'],
+                );          
+            //SAVE DATA IN TABLE    
+            $this->obj_otros->insert($data);
+        }
+        redirect(site_url()."dashboard/informativos");
     }
     
     public function delete_informative(){

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Mirrored from http://wrapbootstrap.com/preview/WB009538N by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2017 04:37:29 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,7 +50,7 @@
     var site = '<?php echo site_url();?>';
 </script>
 </head>
-<body onload="" data-toggle="modal" data-target="#modal-2">
+<body>
 
 <!-- Page container -->
 <div class="page-container">

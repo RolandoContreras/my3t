@@ -180,7 +180,7 @@
                         <a href="<?php echo site_url('backoffice/misdatos');?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Activación");?></h5>
+                                    <h5 class="media-heading">Fecha de Activación</h5>
                                     <strong><?php if(formato_fecha_barras($obj_customer->date_start)== '00/00/0000'){ echo "-----";}else{echo formato_fecha_barras($obj_customer->date_start);}?></strong>
                                 </div>
                                 <div class="media-right media-middle">
@@ -191,8 +191,19 @@
                         <a href="<?php echo site_url('backoffice/misdatos');?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Creación");?></h5>
+                                    <h5 class="media-heading">Fecha de Creación</h5>
                                 <strong><?php echo formato_fecha_barras($obj_customer->created_at);?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                    <i class="fa fa-area-chart fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading">Catálogo</h5>
+                                <button class="btn btn-success" type="button">VER</button>
                                 </div>
                                 <div class="media-right media-middle">
                                     <i class="fa fa-area-chart fa-3x" aria-hidden="true"></i>

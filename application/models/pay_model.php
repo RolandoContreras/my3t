@@ -20,6 +20,7 @@ class pay_model_atributos{
     var $customer_id='';
     var $date='';
     var $obs='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -37,6 +38,7 @@ class Pay_Model extends CI_Model{
         $this->customer_id='';
         $this->date='';
         $this->obs='';
+        $this->active='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';

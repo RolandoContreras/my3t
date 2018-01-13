@@ -19,6 +19,7 @@ class category_model_atributos{
     var $category_id='';
     var $name='';
     var $description='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -35,6 +36,7 @@ class Category_Model extends CI_Model{
         $this->category_id='';
         $this->name='';
         $this->description='';
+        $this->active='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';
