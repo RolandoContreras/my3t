@@ -5,84 +5,70 @@
 <link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
 <div class="row-fluid">
     <div class="span6">
-            <div id="popular_posts" class="widget_container">
-                    <div class="well">
-                            <div class="navbar navbar-static navbar_as_heading">
-                                    <div class="navbar-inner">
-                                            <div class="container" style="width: auto;">
-                                                <a class="brand"><?php echo replace_vocales_voculeshtml("Vista Rápida");?></a>
-                                            </div>
-                                    </div>
-                            </div>
-                        <table class="table">
-                            <thead>
-                                <tr>   
-                                    <th>N°</th>
-                                    <th>Concepto</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td><a href="#">Asociados</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_customer;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td><a href="#">Comentarios</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_comments;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td><a href="#">Productos</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_product;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td><a href="#">Comisiones</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_commissions;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td><a href="#">Franquicias</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_franchise;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td><a href="#">Bonos</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_bonus;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td><a href="#">Pagos Realizados</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_pay;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td><a href="#">Categorías</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_category;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td><a href="#">Usuarios</a></td>
-                                    <td><a class="btn btn-mini btn-warning" href="#"><?php echo $obj_total->total_users;?></a></td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td><a href="#">Mensajes Informativos</a></td>
-                                    <td><a class="btn btn-mini btn-warning"href="#"><?php echo $obj_total->total_informative;?></a></td>
-                                </tr>
-                                <tr>
-<!--                                    <td><a>Precio del BTC</a>&nbsp;&nbsp;&nbsp;<input type="text" name="btc_price" id="btc_price" value="<?php echo $bitcoin;?>" style="vertical-align: middle !important;">&nbsp;&nbsp;&nbsp;<button onclick="guardar_btc();" class="btn btn-info">Guardar</button></td>
-                                    <td></td>
-                                    <td></td>-->
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-            </div>
-
+                        <div class="widget_container">
+							<div class="well nomargin">
+								<div class="navbar navbar-static navbar_as_heading">
+									<div class="navbar-inner">
+										<div class="container" style="width: auto;">
+											<a class="brand">Vista Rápida</a>
+										</div>
+									</div>
+								</div>
+								<table id="quick_view" class="table">
+									<thead>
+										<tr>
+											<th>CMS</th>
+											<th>Acciones</th>
+										</tr>
+									</thead><!-- table heading -->
+									<tbody>
+										<tr>
+                                                                                    <td><a href="#"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados
+											</a></td>
+											<td><a href="#"><b class="cmd">12</b><i class="icon-large icon-chat"></i> Por Aprobar</a></td>
+										</tr>
+										<tr>
+											<td><a href="#"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
+											<td><a href="#" class="pending"><b class="cmd"><?php echo $obj_pending->pending_comments;?></b><i class="fa fa-comments"></i> Por Leer</a></td>
+										</tr>
+                                                                                <tr>
+											<td><a href="#"><b><?php echo $obj_total->total_pay;?></b><i class="fa fa-btc"></i> Pagos Realizados</a></td>
+											<td><a href="#" class="spam"><b class="cmd"><?php echo $obj_pending->pending_pay;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
+										</tr>
+										<tr>
+											<td><a href="#"><b><?php echo $obj_total->total_product;?></b><i class="fa fa-product-hunt"></i> Productos</a></td>
+											
+										</tr>
+										<tr>
+											<td><a href="#"><b><?php echo $obj_total->total_commissions;?></b><i class="fa fa-area-chart"></i> Comisiones</a></td>
+											<td class="blank">&nbsp;</td>
+										</tr>
+										<tr>
+											<td><a href="#"><b><?php echo $obj_total->total_bonus;?></b><i class="fa fa-area-chart"></i> Bonos</a></td>
+											<td class="blank">&nbsp;</td>
+										</tr>
+                                                                                <tr>
+											<td><a href="#"><b><?php echo $obj_total->total_category;?></b><i class="fa fa-tags"></i> Categorías</a></td>
+											<td class="blank">&nbsp;</td>
+										</tr>
+                                                                                <tr>
+											<td><a href="#"><b><?php echo $obj_total->total_users;?></b><i class="fa fa-user-secret"></i> Usuarios</a></td>
+											<td class="blank">&nbsp;</td>
+										</tr>
+                                                                                <tr>
+											<td><a href="#"><b><?php echo $obj_total->total_informative;?></b><i class="fa fa-envelope-open-o"></i> Mensajes Informativos</a></td>
+											<td class="blank">&nbsp;</td>
+										</tr>
+                                                                                <!--                                    
+                                                                                <td><a>Precio del BTC</a>&nbsp;&nbsp;&nbsp;<input type="text" name="btc_price" id="btc_price" value="<?php echo $bitcoin;?>" style="vertical-align: middle !important;">&nbsp;&nbsp;&nbsp;<button onclick="guardar_btc();" class="btn btn-info">Guardar</button></td>
+                                                                                <td></td>
+                                                                                <td></td>-->
+									</tbody>
+								</table>
+							</div>
+						</div>
+        
+        
             <div id="quick_post" class="widget_container">
                     <div class="well">
                             <div class="navbar navbar-static navbar_as_heading">
@@ -166,45 +152,6 @@
                                         <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
                                     </div>
                             <?php }  ?>
-                        </div>
-                </div>
-
-                <div id="popular_posts" class="widget_container">
-                        <div class="well">
-                                <div class="navbar navbar-static navbar_as_heading">
-                                        <div class="navbar-inner">
-                                                <div class="container" style="width: auto;">
-                                                        <a class="brand">Registros Pendientes</a>
-                                                </div>
-                                        </div>
-                                </div>
-                                <table class="table">
-                                    <thead>
-                                        <tr>   
-                                            <th>N°</th>
-                                            <th>Concepto</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                            <tr>
-                                                    <td>1</td>
-                                                    <td><a href="#">Comentarios</a></td>
-                                                    <td><a class="btn btn-mini btn-danger" href="#"><?php echo $obj_pending->pending_comments;?></a></td>
-                                            </tr>
-                                            <tr>
-                                                    <td>2</td>
-                                                    <td><a href="#">Confirmación Activaciones</a></td>
-                                                    <td><a class="btn btn-mini btn-danger" href="#">20 Comments</a></td>
-                                            </tr>
-                                            <tr>
-                                                    <td>3</td>
-                                                    <td><a href="#">Cobros</a></td>
-                                                    <td><a class="btn btn-mini btn-danger" href="#"><?php echo $obj_pending->pending_pay;?></a></td>
-                                            </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="btn btn-duadua">View More</a>
                         </div>
                 </div>
         </div>
