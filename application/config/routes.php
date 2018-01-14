@@ -133,6 +133,8 @@ $route['dashboard/usuarios/load'] = "d_users/load";
 $route['dashboard/usuarios/load/([0-9]+)'] = "d_users/load/$1";
 $route['dashboard/usuarios/validate'] = "d_users/validate";
 
+$route['dashboard/confirmation_activaciones'] = "d_activate/confirmation";
+
 $route['dashboard/activaciones'] = "d_activate";
 $route['dashboard/activaciones/active_customer'] = "d_activate/active_customer";
 $route['dashboard/activaciones/active_financy'] = "d_activate/active_financy";

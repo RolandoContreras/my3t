@@ -12,6 +12,27 @@
     <main>
         <div class="container-fluid">
             <div class="row ml-custom">
+                <!--SHOW ALERT MESSAGE INFORMATIVE-->
+                <div class="col-md-12"> 
+                <?php 
+                foreach ($messages_informative as $value) { ?>
+                    <div class="row">
+                        <div class="col-md-12"> 
+                                    <div class="panel panel-warning">
+						<div class="panel-heading clearfix"> 
+                                                <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                            </div> 
+                                            <!-- panel body --> 
+                                            <div class="panel-body"> 
+                                                <p><?php echo $value->text;?></p> 
+                                            </div> 
+                                    </div> 
+                            </div>
+                        </div>
+                <?php } ?>
+            </div>    
+                <!--END SHOW ALERT MESSAGE INFORMATIVE-->
+                
                 <div class="col-xs-12">
                     <div class="col-lg-12">
                         <div class="panel panel-default network-tree-panel">

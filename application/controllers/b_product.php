@@ -20,6 +20,8 @@ class B_product extends CI_Controller {
         $all_message = $this->get_total_messages($customer_id);
         //GET TOTAL MESSAGE
         $obj_message = $this->get_messages($customer_id);
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
         
         $params = array(
                         "select" =>"customer.customer_id,
@@ -47,13 +49,6 @@ class B_product extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);
            
-           
-           //GET MESSAGE INFORMATIVE FOR HOME
-           $params = array( "select" =>"",
-                             "where" => "status_value = 1 and page = 3",
-                            "order" => "position ASC");
-           $messages_informative = $this->obj_otros->search($params); 
-           
         $this->tmp_backoffice->set("messages_informative",$messages_informative);    
         $this->tmp_backoffice->set("obj_message",$obj_message);
         $this->tmp_backoffice->set("all_message",$all_message);  
@@ -61,6 +56,17 @@ class B_product extends CI_Controller {
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_product");
     }
+    
+    public function get_messages_informative(){
+            $params = array(
+                            "select" =>"",
+                             "where" => "status_value = 1 and page = 3 and active = 1",
+                            "order" => "position ASC");
+                
+           $messages_informative = $this->obj_otros->search($params); 
+            return $messages_informative;
+    }
+        
     
     public function get_session(){          
         if (isset($_SESSION['customer'])){

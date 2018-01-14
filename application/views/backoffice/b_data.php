@@ -10,12 +10,33 @@
     <!--SPINNER-->
         <div id="spinner"></div>
     <!--END SPINNER-->
+    <!--SHOW ALERT  MESSAGE INFORMATIVE-->
+    <div class="col-md-12"> 
+                <?php 
+                foreach ($messages_informative as $value) { ?>
+                    <div class="row">
+                        <div class="col-md-12"> 
+                                    <div class="panel panel-warning">
+						<div class="panel-heading clearfix"> 
+                                                <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                            </div> 
+                                            <!-- panel body --> 
+                                            <div class="panel-body"> 
+                                                <p><?php echo $value->text;?></p> 
+                                            </div> 
+                                    </div> 
+                            </div>
+                        </div>
+                <?php } ?>
+            </div>  
+    <!--END SHOW ALERT MESSAGE INFORMATIVE-->
+    
     <div class="tab">
         <button class="tablinks active"  onclick="openCity(event, 'principal')"><b><?php echo replace_vocales_voculeshtml("INFORMACIÓN PRINCIPAL");?></b></button>
         <button class="tablinks" onclick="openCity(event, 'payments')"><b><?php echo replace_vocales_voculeshtml("PAGO Y CONTRASEÑAS");?></b></button>
     </div>
     
-                             
+                    
     
 <div id="principal" class="tabcontent" style="display:block !important">
     <div class="row ml-custom">

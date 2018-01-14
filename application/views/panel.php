@@ -25,7 +25,7 @@
 										<tr>
                                                                                     <td><a href="#"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados
 											</a></td>
-											<td><a href="#"><b class="cmd">12</b><i class="icon-large icon-chat"></i> Por Aprobar</a></td>
+											<td><a href="#"><b class="cmd">12</b><i class="fa fa-users"></i> Por Aprobar</a></td>
 										</tr>
 										<tr>
 											<td><a href="#"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>

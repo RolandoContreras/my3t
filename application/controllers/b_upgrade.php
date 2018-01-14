@@ -40,6 +40,8 @@ class B_upgrade extends CI_Controller {
         $all_message = $this->get_total_messages($customer_id);
         //GET TOTAL MESSAGE
         $obj_message = $this->get_messages($customer_id);
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
         
         $params = array(
                         "select" =>"price",
@@ -70,6 +72,7 @@ class B_upgrade extends CI_Controller {
            $price_btc = "$".number_format($obj_otros->precio_btc,2);
          
         //SEND DATA TO VIEW  
+         $this->tmp_backoffice->set("messages_informative",$messages_informative); 
          $this->tmp_backoffice->set("obj_message",$obj_message);
          $this->tmp_backoffice->set("all_message",$all_message);   
          $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible);
@@ -77,7 +80,17 @@ class B_upgrade extends CI_Controller {
          $this->tmp_backoffice->set("price_btc",$price_btc);
          $this->tmp_backoffice->render("backoffice/b_upgrade");
 	}
-
+        
+        public function get_messages_informative(){
+            $params = array(
+                            "select" =>"",
+                             "where" => "status_value = 1 and page = 4 and active = 1",
+                            "order" => "position ASC");
+                
+           $messages_informative = $this->obj_otros->search($params); 
+            return $messages_informative;
+        }
+        
         public function get_session(){          
         if (isset($_SESSION['customer'])){
             if($_SESSION['customer']['logged_customer']=="TRUE" && $_SESSION['customer']['status']=='1'){               

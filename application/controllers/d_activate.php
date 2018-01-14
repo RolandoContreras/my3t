@@ -46,6 +46,40 @@ class D_activate extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/activate/activate_list");
     }
     
+    public function confirmation(){  
+        
+           $this->get_session();
+           $params = array(
+                        "select" =>"customer.customer_id,
+                                    customer.username,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.active,
+                                    customer.parents_id,
+                                    customer.created_at,
+                                    franchise.price as price,
+                                    franchise.point as point,
+                                    franchise.name as franchise,
+                                    customer.status_value",
+                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
+                        "where" => "customer.status_value = 1"
+               );
+           //GET DATA FROM CUSTOMER
+           $obj_customer= $this->obj_customer->search($params);
+           
+           /// PAGINADO
+            $modulos ='activaciones'; 
+            $seccion = 'Lista';        
+            $link_modulo =  site_url().'dashboard/activaciones'; 
+            
+            /// VISTA
+            $this->tmp_mastercms->set('link_modulo',$link_modulo);
+            $this->tmp_mastercms->set('modulos',$modulos);
+            $this->tmp_mastercms->set('seccion',$seccion);
+            $this->tmp_mastercms->set("obj_customer",$obj_customer);
+            $this->tmp_mastercms->render("dashboard/activate/activate_list");
+    }
+    
     public function validate(){
         
         //GET CUSTOMER_ID

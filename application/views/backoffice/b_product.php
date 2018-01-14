@@ -10,6 +10,7 @@
          <!-- Page content-->
     <div class="content-wrapper">
         <div class="row fix-box-height package-box-fix mt-30">
+            <!--SHOW ALERT  MESSAGE INFORMATIVE-->
             <div class="col-md-12"> 
                 <?php 
                 foreach ($messages_informative as $value) { ?>
@@ -27,7 +28,8 @@
                             </div>
                         </div>
                 <?php } ?>
-             
+            </div>
+            <!--END SHOW ALERT MESSAGE INFORMATIVE-->
             <div class="col-lg-12">
                  <!--Viajes-->
                 <div class="row">

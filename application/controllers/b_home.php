@@ -23,6 +23,8 @@ class B_home extends CI_Controller {
         $all_message = $this->get_total_messages($customer_id);
         //GET TOTAL MESSAGE
         $obj_message = $this->get_messages($customer_id);
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
         
         $params = array(
                         "select" =>"(select count(customer_id) from customer where parents_id = $customer_id) as direct,
@@ -81,15 +83,6 @@ class B_home extends CI_Controller {
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);
-           
-           
-           //GET MESSAGE INFORMATIVE FOR HOME
-           $params = array(
-                                    "select" =>"",
-                                     "where" => "status_value = 1 and page = 1",
-                                    "order" => "position ASC");
-                
-           $messages_informative = $this->obj_otros->search($params); 
            
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;
@@ -252,6 +245,16 @@ class B_home extends CI_Controller {
             //GET TOTAL MESSAGE ACTIVE   
             $all_message = $obj_message->total;
             return $all_message;
+    }
+    
+    public function get_messages_informative(){
+            $params = array(
+                            "select" =>"",
+                             "where" => "status_value = 1 and page = 1 and active = 1",
+                            "order" => "position ASC");
+                
+           $messages_informative = $this->obj_otros->search($params); 
+            return $messages_informative;
     }
     
     public function get_messages($customer_id){

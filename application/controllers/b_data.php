@@ -36,7 +36,8 @@ class B_data extends CI_Controller {
         $all_message = $this->get_total_messages($customer_id);
         //GET TOTAL MESSAGE
         $obj_message = $this->get_messages($customer_id);
-        
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
         $params = array(
                         "select" =>"customer.customer_id,
                                     customer.parents_id,
@@ -84,12 +85,25 @@ class B_data extends CI_Controller {
          
          //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("obj_message",$obj_message);
+         $this->tmp_backoffice->set("messages_informative",$messages_informative);
+         
+         
          $this->tmp_backoffice->set("all_message",$all_message);
          $this->tmp_backoffice->set("price_btc",$price_btc);
          $this->tmp_backoffice->set("obj_customer",$obj_customer);
          $this->tmp_backoffice->set("obj_sponsor",$obj_sponsor);
          $this->tmp_backoffice->render("backoffice/b_data");
 	}
+        
+        public function get_messages_informative(){
+            $params = array(
+                            "select" =>"",
+                             "where" => "status_value = 1 and page = 2 and active = 1",
+                            "order" => "position ASC");
+                
+           $messages_informative = $this->obj_otros->search($params); 
+            return $messages_informative;
+        }
         
         public function update_movil(){
             
