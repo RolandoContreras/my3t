@@ -36,6 +36,8 @@ class B_pay extends CI_Controller {
          $all_message = $this->get_total_messages($customer_id);
          //GET TOTAL MESSAGE
          $obj_message = $this->get_messages($customer_id);
+         //GET MESSAGE INFORMATIVE
+         $messages_informative = $this->get_messages_informative();
          
         //VERIFIRY GET SESSION    
          $this->get_session();
@@ -85,6 +87,7 @@ class B_pay extends CI_Controller {
         //SEND DATA OF DATA LIMIT TO PAY USUFRUCT
         $this->tmp_backoffice->set("date_limit_pay",$date_limit_pay);      
         //SEND DATA OF BITCOIN PRICE
+        $this->tmp_backoffice->set("messages_informative",$messages_informative);
         $this->tmp_backoffice->set("obj_message",$obj_message);
         $this->tmp_backoffice->set("all_message",$all_message); 
         $this->tmp_backoffice->set("price_btc",$price_btc);  
@@ -95,6 +98,16 @@ class B_pay extends CI_Controller {
         $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
         $this->tmp_backoffice->render("backoffice/b_pay");
 	}
+        
+        public function get_messages_informative(){
+            $params = array(
+                            "select" =>"",
+                             "where" => "status_value = 1 and page = 9 and active = 1",
+                            "order" => "position ASC");
+                
+           $messages_informative = $this->obj_otros->search($params); 
+            return $messages_informative;
+        }
         
         public function validate(){
         

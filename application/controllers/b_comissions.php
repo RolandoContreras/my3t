@@ -36,6 +36,8 @@ class b_comissions extends CI_Controller {
          $all_message = $this->get_total_messages($customer_id);
          //GET TOTAL MESSAGE
          $obj_message = $this->get_messages($customer_id);
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
          
          $url = explode("/", uri_string());
             if (isset($url[2])) {
@@ -96,7 +98,7 @@ class b_comissions extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = "$".number_format($obj_otros->precio_btc,2);
            
-        
+        $this->tmp_backoffice->set("messages_informative",$messages_informative);
         $this->tmp_backoffice->set("obj_message",$obj_message);
         $this->tmp_backoffice->set("all_message",$all_message);    
         $this->tmp_backoffice->set("bonus_id",$bonus_id);
@@ -105,6 +107,17 @@ class b_comissions extends CI_Controller {
         $this->tmp_backoffice->render("backoffice/b_comissions");
         
     }
+    
+    public function get_messages_informative(){
+            $params = array(
+                            "select" =>"",
+                             "where" => "status_value = 1 and page = 6 and active = 1",
+                            "order" => "position ASC");
+                
+           $messages_informative = $this->obj_otros->search($params); 
+            return $messages_informative;
+    }
+        
 
         public function consultar(){
         if($this->input->is_ajax_request()){   
