@@ -5,9 +5,17 @@
 	<title>Travel - Training- Trade</title>
         <link rel='dns-prefetch' href='//fonts.googleapis.com' />
         <link rel='dns-prefetch' href='//s.w.org' />
-        <meta name="description" content="Primera multiplataforma con los productos y servicios más cotizados del mercado: viajes, entrenamientos y forex. Negocio 100% legal con oficinas abiertas al público.">
-        <meta name="author" content="3T Company">
-        <meta name="keywords" content="3T,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
+        <meta name="description" content="Sé parte del club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar... Viaja, entrénate y Gana!!!">
+        <meta name="author" content="3T Club">
+        <meta name="keywords" content="3T Club,Club privado,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viaja, entreate y gana">
+        <!--SHARE FACEBOOK-->
+        <meta property="og:url" content="<?php echo site_url().'home';?>" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="3T Club" />
+        <meta property="og:description" content="Sé parte del club privado más completo en viajes, desarrollo personal y financiero a nivel mundial" />
+        <meta property="og:image" content="<?php echo site_url().'static/page_front/images/3t.jpg';?>" />
+        <!--END SHARE FACEBOOK-->
+        
         <style type="text/css">
         img.wp-smiley,
         img.emoji {

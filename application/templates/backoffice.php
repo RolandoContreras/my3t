@@ -5,8 +5,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Empresa 100% peruana que brinda distintos servicios e info-productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
-<meta name="keywords" content="3T,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
+<meta name="description" content="Sé parte del club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar... Viaja, entrénate y Gana!!!">
+<meta name="keywords" content="3T Club,Club privado,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viaja, entreate y gana">
 <title>Backoffice | Travel - Training- Trade</title>
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
 
@@ -234,7 +234,7 @@
                                                                         <div class="media-body">
                                                                             <a class="media-heading" href="<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>">
                                                                                     <span class="text-semibold"><?php $subject = replace_vocales_voculeshtml("$value->subject"); echo corta_texto($subject,40);?></span>
-                                                                                        <span class="media-annotation pull-right">Tue</span>
+                                                                                    <span class="media-annotation pull-right"><?php echo formato_fecha_barras($value->date);?></span>
                                                                                 </a>
                                                                             <span class="text-muted"><?php $message = replace_vocales_voculeshtml("$value->messages"); echo corta_texto($message,40);?></span>
                                                                         </div>
