@@ -120,6 +120,7 @@ class B_message_confirmation extends CI_Controller {
                                 'date' => date("Y-m-d H:i:s"),
                                 'message' => $message,
                                 'name' => $name,
+                                'active' => 1,
                                 'status_value' => 1,    
                                 'img' => $img,
                                 'subject' => "Correo de Activacion",
