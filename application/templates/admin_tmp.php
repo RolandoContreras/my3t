@@ -23,6 +23,8 @@
         <!-- color style -->
         <link href="static/cms/css/core/dark.css" rel="stylesheet">
         <link href="static/cms/css/core/bootstrap-responsive.css" rel="stylesheet">
+        <link href="static/cms/plugins/datepicker/css/datepicker.css" rel="stylesheet">
+        <link href="static/cms/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet">
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
         <script src="plugins/html5.js"></script>
@@ -34,9 +36,16 @@
         <script src="static/cms/plugins/datepicker/js/bootstrap-datepicker.js"></script>
         <script src="static/cms/plugins/wysiwyg/bootstrap-wysihtml5.js"></script>
         <script type="text/javascript" src="static/cms/js/browserplus-min.js"></script>
+        <script type="text/javascript" src="static/cms/plugins/plupload/js/plupload.full.js"></script>
+        <script type="text/javascript" src="static/cms/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
 
         <script src="static/cms/js/core/jquery.validate.min.js"></script>
         <script src="static/cms/js/core/bootstrap-alert.js"></script>
+        
+        <script src="static/cms/js/demo.js"></script>
+        
+        <script src="static/cms/plugins/colorpicker/js/bootstrap-colorpicker.js"></script>
+        
         
         <script type="text/javascript">
             var site = '<?php echo site_url();?>';

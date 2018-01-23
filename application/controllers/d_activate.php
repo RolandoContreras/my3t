@@ -6,10 +6,9 @@ class D_activate extends CI_Controller{
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
         $this->load->model("commissions_model","obj_commissions");
-        $this->load->model("paises_model","obj_paises");
-        $this->load->model("regiones_model","obj_regiones");
         $this->load->model("franchise_model","obj_franchise");
         $this->load->model("bonus_model","obj_bonus");
+        $this->load->model("activation_message_model","obj_activation");
     }   
                 
     public function index(){  
@@ -50,22 +49,19 @@ class D_activate extends CI_Controller{
         
            $this->get_session();
            $params = array(
-                        "select" =>"customer.customer_id,
+                        "select" =>"activation_message.activation_message_id,
+                                    activation_message.img,
                                     customer.username,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.active,
-                                    customer.parents_id,
-                                    customer.created_at,
-                                    franchise.price as price,
-                                    franchise.point as point,
-                                    franchise.name as franchise,
+                                    activation_message.message,
+                                    activation_message.franchise,
+                                    activation_message.date,
+                                    activation_message.active,
                                     customer.status_value",
-                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
-                        "where" => "customer.status_value = 1"
+                        "join" => array('customer, activation_message.customer_id = customer.customer_id')
+                        
                );
            //GET DATA FROM CUSTOMER
-           $obj_customer= $this->obj_customer->search($params);
+           $obj_active_message = $this->obj_activation->search($params);
            
            /// PAGINADO
             $modulos ='activaciones'; 
@@ -76,8 +72,8 @@ class D_activate extends CI_Controller{
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->set("obj_customer",$obj_customer);
-            $this->tmp_mastercms->render("dashboard/activate/activate_list");
+            $this->tmp_mastercms->set('obj_active_message',$obj_active_message);
+            $this->tmp_mastercms->render("dashboard/activate/activate_list_confirmation");
     }
     
     public function validate(){

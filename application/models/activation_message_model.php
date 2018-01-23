@@ -23,6 +23,7 @@ class activation_message_model_atributos{
     var $franchise='';
     var $customer_id='';
     var $date='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -43,6 +44,7 @@ class Activation_message_model extends CI_Model{
         $this->franchise='';
         $this->customer_id='';
         $this->date='';
+        $this->active='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';
