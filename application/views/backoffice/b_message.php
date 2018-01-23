@@ -11,13 +11,9 @@
 
             <div class="row">
                     <div class="col-lg-3">
-                        <p><a class="btn btn-block btn-red" href="<?php echo site_url().'backoffice/compose_message';?>">Componer</a></p>
                             <ul class="list-unstyled mail-list">
                                     <li class="active">
                                         <a href="<?php echo site_url().'backoffice/messages';?>"><i class="fa fa-inbox"></i> Inbox <b>(<?php echo $all_message;?>)</b></a>
-                                    </li>
-                                    <li>
-                                            <a href="#/"><i class="fa fa-send-o"></i> Enviados</a>
                                     </li>
                             </ul>
 
@@ -47,7 +43,7 @@
                                             <table class="table table-hover table-mails">
                                                     <tbody>
                                                         <?php 
-                                                        if($all_message == 0){ ?>
+                                                        if(count($obj_message) == 0){ ?>
                                                             <tr>
                                                                 <td colspan="5" style="text-align: center;">
                                                                         No hay mensajes
@@ -63,17 +59,17 @@
                                                             case 1:
                                                                 //BONUS
                                                                 $style =  "fa fa-circle text-purple m-r-15";
-                                                                $link =  "bonus";
+                                                                $link =  "Bonus";
                                                                 break;
                                                             case 2:
                                                                 //SUPPORT
                                                                 $style =  "fa fa-circle text-danger m-r-15";
-                                                                $link =  "support";
+                                                                $link =  "Support";
                                                                 break;
                                                             case 3:
                                                                 //SOCIAL
                                                                 $style =  "fa fa-circle text-primary m-r-15";
-                                                                $link =  "social";
+                                                                $link =  "Social";
                                                                 break;
                                                             } ?>
                                                             <tr class="unread">
@@ -86,7 +82,7 @@
                                                                             <i class="fa fa-star text-warning"></i>
                                                                     </td>
                                                                     <td>
-                                                                        <a href='<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>'><i class="<?php echo $style;?>"></i> <?php echo replace_vocales_voculeshtml("$value->label");?></a>
+                                                                        <a href='<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>'><i class="<?php echo $style;?>"></i> <?php echo $link;?></a>
                                                                     </td>
                                                                     <td>
                                                                         <a href="<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>"><?php echo replace_vocales_voculeshtml("$value->subject");?></a>

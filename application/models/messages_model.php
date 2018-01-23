@@ -24,6 +24,7 @@ class messages_model_atributos{
     var $messages='';
     var $type='';
     var $type_send='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -45,6 +46,7 @@ class Messages_Model extends CI_Model{
         $this->messages='';
         $this->type='';
         $this->type_send='';
+        $this->active='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';

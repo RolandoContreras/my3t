@@ -209,8 +209,9 @@ class D_activate extends CI_Controller{
                 'label' => "Soporte",
                 'subject' => "Bono Patrocinio",
                 'messages' => $message,
-                'type' => 2,
+                'type' => 1,
                 'type_send' => 0,
+                'active' => 1,
                 'created_by' => $customer_id,
                 'status_value' => 1,
                 'created_at' => date("Y-m-d H:i:s"),
@@ -220,14 +221,14 @@ class D_activate extends CI_Controller{
     }
     public function message_bonus_sponsor_lost($amount,$parents_id,$customer_id){
                 //GET PERCENT FROM BONUS
-               $message = "Acaba de pe $$amount en bono de patrocinio";
+               $message = "Acaba de perder $$amount en bono de patrocinio";
                     $data_messages = array(
                         'customer_id' => $parents_id,
                         'date' => date("Y-m-d H:i:s"),
                         'label' => "Soporte",
                         'subject' => "Bono Patrocinio",
                         'messages' => $message,
-                        'type' => 2,
+                        'type' => 1,
                         'type_send' => 0,
                         'created_by' => $customer_id,
                         'status_value' => 1,
@@ -248,6 +249,7 @@ class D_activate extends CI_Controller{
                         'messages' => $message,
                         'type' => 2,
                         'type_send' => 0,
+                        'active' => 1,
                         'created_by' => $customer_id,
                         'status_value' => 1,
                         'created_at' => date("Y-m-d H:i:s"),

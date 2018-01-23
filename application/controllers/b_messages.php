@@ -48,10 +48,9 @@ class B_messages extends CI_Controller {
 
             $obj_message = $this->obj_messages->search($params);  
          
-         //COUNT ALL MESSAGE
-         $all_message = count($obj_message);
-         
-         
+         //GET ALL MESSAGE
+          $all_message = $this->get_total_messages($customer_id);
+            
          //GET PRICE BTC
             $params_price_btc = array(
                                     "select" =>"",
@@ -72,7 +71,8 @@ class B_messages extends CI_Controller {
             
         //VERIFIRY GET SESSION    
         $this->get_session();
-        
+        //GET CUSTOMER_ID
+        $customer_id = $_SESSION['customer']['customer_id'];
         //GET URL
         $url = explode("/",uri_string());
         $type =  $url['2'];
@@ -91,17 +91,6 @@ class B_messages extends CI_Controller {
             $type =  1;
         }
         
-
-            //GET CUSTOMER_ID
-            $customer_id = $_SESSION['customer']['customer_id'];
-            $params = array(
-                        "select" =>"count(messages_id) as total",
-                        "where" => "customer_id = $customer_id and status_value = 1",
-                        
-                                        );
-            $obj_message = $this->obj_messages->get_search_row($params);
-            //GET ALL MESSAGE   
-            $all_message = $obj_message->total;
             
             //GET PRICE BTC
             $params_price_btc = array(
@@ -113,6 +102,8 @@ class B_messages extends CI_Controller {
             
            //GET TOTAL MESSAGE
            $obj_message = $this->get_messages($customer_id);
+           //GET ALL MESSAGE
+          $all_message = $this->get_total_messages($customer_id);
             
             //IF ISSET MESSAGE_ID
             if(isset($url['3'])){
@@ -126,13 +117,30 @@ class B_messages extends CI_Controller {
                                     label,
                                     messages,
                                     type,
+                                    active,
+                                    status_value,
                                     type_send",
                         "where" => "customer_id = $customer_id and status_value = 1 and type = $type and messages_id = $message_id",
                         "order" => "date DESC",
                         "limit" => "20",
                                         );
 
-            $obj_get_message = $this->obj_messages->get_search_row($params);  
+            $obj_get_message = $this->obj_messages->get_search_row($params); 
+            
+            //GET VALUE OF MESSAGE
+            $active = $obj_get_message->active;
+            
+            //IF IT ACTIVE
+                if($active > 0){
+                    //UPDATE DATA ON MESSAGE TABLE
+                        $data = array(
+                           'active' => 0,
+                           'updated_by' => $customer_id,
+                           'updated_at' => date("Y-m-d H:i:s")
+                       ); 
+                       $this->obj_messages->update($message_id,$data);
+                }
+            
             
             //SEND DATA TO VIEW  
             $this->tmp_backoffice->set("obj_message",$obj_message);
@@ -210,6 +218,19 @@ class B_messages extends CI_Controller {
             redirect(site_url().'home');
         }
     }
+    
+    public function get_total_messages($customer_id){
+        $params = array(
+                        "select" =>"count(messages_id) as total",
+                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1",
+                        
+                                        );
+            $obj_message = $this->obj_messages->get_search_row($params);
+            //GET TOTAL MESSAGE ACTIVE   
+            $all_message = $obj_message->total;
+            return $all_message;
+    }
+    
     
            public function get_messages($customer_id){
             $params = array(

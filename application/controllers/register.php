@@ -260,6 +260,7 @@ class Register extends CI_Controller {
                         'messages' => $message,
                         'type' => 2,
                         'type_send' => 0,
+                        'active' => 1,
                         'created_by' => $customer_id,
                         'status_value' => 1,
                         'created_at' => date("Y-m-d H:i:s"),
@@ -277,6 +278,7 @@ class Register extends CI_Controller {
                         'messages' => $message,
                         'type' => 2,
                         'type_send' => 0,
+                        'active' => 1,
                         'created_by' => $customer_id,
                         'status_value' => 1,
                         'created_at' => date("Y-m-d H:i:s"),
@@ -328,7 +330,7 @@ class Register extends CI_Controller {
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                 $mensaje = wordwrap("<html><body><h1>Bienvenido a CRIPTOWIN</h1><h3>Usuario: lidermillon</h3><h3>Usuario: lidermillon</h3><p>$img_path</p></body></html>", 70, "\n", true);
                 //Titulo
-                $titulo = "Bienvenido a Criptowin";
+                $titulo = "Bienvenido a 3T Club";
                 //cabecera
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
