@@ -9,6 +9,7 @@ class D_activate extends CI_Controller{
         $this->load->model("franchise_model","obj_franchise");
         $this->load->model("bonus_model","obj_bonus");
         $this->load->model("activation_message_model","obj_activation");
+        $this->load->model("messages_model","obj_messages");
     }   
                 
     public function index(){  
@@ -76,44 +77,11 @@ class D_activate extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/activate/activate_list_confirmation");
     }
     
-    public function validate(){
-        
-        //GET CUSTOMER_ID
-        $customer_id = $this->input->post("customer_id");
-        $data = array(
-               'first_name' => $this->input->post('first_name'),
-               'last_name   ' => $this->input->post('last_name'),
-               'username' => $this->input->post('username'),
-               'password' => $this->input->post('password'),
-               'email' => $this->input->post('email'),
-               'dni' => $this->input->post('dni'),  
-               'birth_date' => $this->input->post('fecha_de_nacimiento'),  
-               'phone' => $this->input->post('phone'),
-               'country' => $this->input->post('pais'),
-               'region' => $this->input->post('region'),
-               'franchise_id' => $this->input->post('franchise'),
-               'position' => $this->input->post('position'),
-               'address' => $this->input->post('address'),
-               'btc_address' => $this->input->post('btc_address'),
-               'city' => $this->input->post('city'),
-               'calification' => $this->input->post('calification'),
-               'status_value' => $this->input->post('status_value'),
-               'updated_at' => date("Y-m-d H:i:s"),
-               'updated_by' => $_SESSION['usercms']['user_id']
-                );          
-            //SAVE DATA IN TABLE    
-            $this->obj_customer->update($customer_id, $data);
-            
-        redirect(site_url()."dashboard/clientes");
-    }
-    
     public function active_financy(){
         //ACTIVE CUSTOMER FINANCADO
-        if($this->input->is_ajax_request()){  
+        if($this->input->is_ajax_request()){ 
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
-                
-                //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
                 
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
@@ -127,6 +95,9 @@ class D_activate extends CI_Controller{
                     ); 
                     $this->obj_customer->update($customer_id,$data);
                 }
+                //SEND MESSAGE CONFIRMATION ACTIVE
+                $this->message_active($customer_id);
+                
                 echo json_encode($data); 
                 exit();
             }
@@ -149,11 +120,18 @@ class D_activate extends CI_Controller{
                 $active = $obj_customer->active;
                 
                 if($active > 0){
-                    //GET BONUS DIRECT
-                    $this->pay_directo($customer_id,$point,$parents_id);
-
-                    //GET BONUS BINARY
-                    $this->pay_binario($customer_id);
+                    //GET BONUS SPONSOR
+                    $amount = $this->pay_directo($customer_id,$point,$parents_id);
+                    //SEND MESSAGE CONFIRMATION BONUS SPONSOR
+                    $this->message_bonus_sponsor($amount,$parents_id,$customer_id);
+                    
+                    //GET BONUS UNILEVEL
+//                    $this->pay_binario($customer_id);
+                }else{
+                    //GET AMOUNT BONUS SPONSOR
+                    $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
+                    //SEND MESSAGE CONFIRMATION BONUS SPONSOR
+                    $this->message_bonus_sponsor($amount,$parents_id,$customer_id);
                 }
                 
                 //SELECT TOY AND TODAY+76
@@ -169,43 +147,14 @@ class D_activate extends CI_Controller{
                     ); 
                     $this->obj_customer->update($customer_id,$data);
                 }
+                //SEND MESSAGE CONFIRMATION ACTIVE
+                $this->message_active($customer_id);
+                
                 echo json_encode($data); 
                 exit();
             }
     }
-    
-    public function modify_day(){
-        
-          $params = array(
-                        "select" =>"customer.customer_id,
-                                    customer.username,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.date_start,
-                                    customer.date_end,
-                                    customer.active,
-                                    customer.parents_id,
-                                    customer.status_value",
-                        "where" => "customer.date_start >= '2017-01-10' and <= '2017-04-30'",
-                        "order" => "date_start ASC"
-               );
-           //GET DATA FROM CUSTOMER
-           $obj_customer= $this->obj_customer->search($params);
-           
-           foreach ($obj_customer as $value) {
-               
-                $date_start = $value->date_start;
-                
-                $date_end = strtotime ( '+120 day' , strtotime ( $date_start ) ) ;
-                $date_end = date ( 'Y-m-j' , $date_end );
-                
-                $data = array(
-                        'date_end' => $date_end,
-                    ); 
-                $this->obj_customer->update($value->customer_id,$data);
-           }   
-            
-    }
+ 
    
     public function pay_directo($customer_id,$point,$parents_id){
                 //GET PERCENT FROM BONUS
@@ -225,7 +174,7 @@ class D_activate extends CI_Controller{
                     $data = array(
                         'customer_id' => $parents_id,
                         'bonus_id' => 1,
-                        'name' => "Pago por referido Directo",
+                        'name' => "Bono de Patrocinio",
                         'amount' => $amount,
                         'status_value' => 1,
                         'date' => date("Y-m-d H:i:s"),
@@ -233,8 +182,80 @@ class D_activate extends CI_Controller{
                         'created_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_commissions->insert($data);
+                    return $amount;
                 }
         }
+        
+    public function lost_pay_directo($customer_id,$point,$parents_id){
+                //GET PERCENT FROM BONUS
+                $params = array(
+                        "select" =>"percent",
+                        "where" => "bonus_id = 1 and status_value = 1"
+               );
+                //GET DATA FROM BONUS
+                $obj_bonus= $this->obj_bonus->get_search_row($params);
+                $percet = $obj_bonus->percent;
+                
+                //CALCULE AMOUNT
+                $amount = ($point  * $percet) / 100;
+                return $amount;
+    }    
+    
+    public function message_bonus_sponsor($amount,$parents_id,$customer_id){
+            $message = "Acaba de ganar $$amount en bono de patrocinio";
+            $data_messages = array(
+                'customer_id' => $parents_id,
+                'date' => date("Y-m-d H:i:s"),
+                'label' => "Soporte",
+                'subject' => "Bono Patrocinio",
+                'messages' => $message,
+                'type' => 2,
+                'type_send' => 0,
+                'created_by' => $customer_id,
+                'status_value' => 1,
+                'created_at' => date("Y-m-d H:i:s"),
+            );
+            //INSERT MESSAGES    
+            $this->obj_messages->insert($data_messages);
+    }
+    public function message_bonus_sponsor_lost($amount,$parents_id,$customer_id){
+                //GET PERCENT FROM BONUS
+               $message = "Acaba de pe $$amount en bono de patrocinio";
+                    $data_messages = array(
+                        'customer_id' => $parents_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Bono Patrocinio",
+                        'messages' => $message,
+                        'type' => 2,
+                        'type_send' => 0,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);
+    }
+    
+    public function message_active($customer_id){
+                //GET PERCENT FROM BONUS
+               $message = "Su cuenta se encuentra activa";
+                    $data_messages = array(
+                        'customer_id' => $customer_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Cuenta Activa",
+                        'messages' => $message,
+                        'type' => 2,
+                        'type_send' => 0,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);
+    }
+        
         
     public function pay_binario($customer_id){
             //GET PARAM TO CUSTOMER
@@ -470,6 +491,40 @@ class D_activate extends CI_Controller{
                 }
             }    
     }
+    
+       
+//    public function modify_day(){
+//        
+//          $params = array(
+//                        "select" =>"customer.customer_id,
+//                                    customer.username,
+//                                    customer.first_name,
+//                                    customer.last_name,
+//                                    customer.date_start,
+//                                    customer.date_end,
+//                                    customer.active,
+//                                    customer.parents_id,
+//                                    customer.status_value",
+//                        "where" => "customer.date_start >= '2017-01-10' and <= '2017-04-30'",
+//                        "order" => "date_start ASC"
+//               );
+//           //GET DATA FROM CUSTOMER
+//           $obj_customer= $this->obj_customer->search($params);
+//           
+//           foreach ($obj_customer as $value) {
+//               
+//                $date_start = $value->date_start;
+//                
+//                $date_end = strtotime ( '+120 day' , strtotime ( $date_start ) ) ;
+//                $date_end = date ( 'Y-m-j' , $date_end );
+//                
+//                $data = array(
+//                        'date_end' => $date_end,
+//                    ); 
+//                $this->obj_customer->update($value->customer_id,$data);
+//           }   
+//            
+//    }
     
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
