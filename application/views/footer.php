@@ -37,7 +37,7 @@
                                 <ul id="menu-tickets" class="menu">
                                     <li id="menu-item-147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"><a href="#">Bitcoin la nueva realidad</a></li>
                                     <li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="#">Blockchain - Cadena de bloque</a></li>
-                                    <li id="menu-item-148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"><a href="#"><?php echo replace_vocales_voculeshtml("¿Qué es la criptomoneda? - Bitcoin");?></a></li>
+                                    <li id="menu-item-148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"><a href="#">¿Qué es la criptomoneda? - Bitcoin</a></li>
                                 </ul>
                             </div>
                     </div>
@@ -45,12 +45,12 @@
                         <h2 class="widgettitle">Acerca</h2>
                             <div class="menu-tourism-container">
                                 <ul id="menu-tourism" class="menu">
-                                    <li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="<?php echo site_url().'about';?>"><?php echo corta_texto(replace_vocales_voculeshtml('Multiplataforma virtual que brinda distintos servicios y productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.'),120);?></a></li>
+                                    <li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="<?php echo site_url().'about';?>"><?php echo corta_texto('Somos elclub privado más completo en viajes, desarrollo personal y financiero a nivel mundial.  Los 3 rubros más cotizados en un solo lugar.',120);?></a></li>
                                 </ul>
                             </div>
                     </div>
                     <div id="nav_menu-6" class="widget widget_nav_menu">
-                        <h2 class="widgettitle"><?php echo replace_vocales_voculeshtml("Información");?></h2>
+                        <h2 class="widgettitle">Información</h2>
                             <div class="menu-information-container">
                                 <ul id="menu-information" class="menu">
                                     <li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Visión");?></a></li>
@@ -70,13 +70,8 @@
 					<div class="footer-content-right">
                                             <ul class="social-networks rounded colored">
                                                 <li>
-                                                    <a href="#" target="_blank" class="facebook" title="Facebook">
+                                                    <a href="https://www.facebook.com/my3t.club/" target="_blank" class="facebook" title="Facebook">
                                                         <i class="fa fa-facebook"></i><span class="name">Facebook</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" target="_blank" class="twitter" title="Twitter">
-                                                        <i class="fa fa-twitter"></i><span class="name">Twitter</span>
                                                     </a>
                                                 </li>
                                                 <li>
@@ -85,7 +80,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" target="_blank" class="youtube" title="YouTube"><i class="fa fa-youtube-play"></i>
+                                                    <a href="https://www.youtube.com/channel/UCOtxzB7gSOVfxFL_EH8XITg" target="_blank" class="youtube" title="YouTube"><i class="fa fa-youtube-play"></i>
                                                         <span class="name">YouTube</span>
                                                     </a>
                                                 </li>
