@@ -45,17 +45,15 @@
                         </div>
                     </div>
                 </div>
+                <br/>
+                 <div class="gallery-item photo gallery-item-4 slick-slide" tabindex="-1" role="option" aria-describedby="slick-slide04" style="" data-slick-index="4" aria-hidden="true">
+                    <style>.gallery-item-4 {max-width: 960px;}</style>				
+                    <style>.img-879 {background-color: #486048;}</style>	
+                    <span class="image-placeholder img-879 img-loaded" style="padding-bottom:66.69642857%">
+                        <img width="1440" height="809" class="lazyload" alt="master" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/master.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/master.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx558.jpg'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">
+                    </span>
+                </div>
 		<div class="full-width-container">
-                    <div class="gallery-slider wow fadeIn gallery variable-width carousel-center-mode" data-infinite="1" data-autoplay="7000">
-			<div class="gallery-item photo hidden gallery-item-0">
-                            <style>.gallery-item-0 {max-width: 1139px;}</style>				
-                            <style>.img-456 {background-color: #484848;}</style>	
-                                    <span class="image-placeholder img-456" style="padding-bottom:56.18055556%">
-                                        <img width="1440" height="809" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/master.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/master.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx558'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/masterx655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">	
-                                    </span>
-                                    <div class="caption">$1899</div>
-			</div>
-                    </div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="portfolio-big-navigation portfolio-navigation-type-simple wow fadeIn">
