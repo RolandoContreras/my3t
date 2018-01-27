@@ -59,17 +59,17 @@
                                                             case 1:
                                                                 //BONUS
                                                                 $style =  "fa fa-circle text-purple m-r-15";
-                                                                $link =  "Bonus";
+                                                                $link =  "bonus";
                                                                 break;
                                                             case 2:
                                                                 //SUPPORT
                                                                 $style =  "fa fa-circle text-danger m-r-15";
-                                                                $link =  "Support";
+                                                                $link =  "support";
                                                                 break;
                                                             case 3:
                                                                 //SOCIAL
                                                                 $style =  "fa fa-circle text-primary m-r-15";
-                                                                $link =  "Social";
+                                                                $link =  "social";
                                                                 break;
                                                             } ?>
                                                             <tr class="unread">

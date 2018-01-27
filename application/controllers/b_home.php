@@ -51,6 +51,7 @@ class B_home extends CI_Controller {
                                     customer.status_value,
                                     customer.franchise_id,
                                     franchise.price,
+                                    franchise.img,
                                     franchise.name as franchise,
                                     ",
                          "where" => "customer.customer_id = $customer_id",

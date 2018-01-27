@@ -280,43 +280,7 @@
                             <div class="panel panel-default">
                                         <!-- panel body --> 
                                         <div class="panel-body" style="vertical-align: central !important; margin-left: 20%"> 
-                                                <p>
-                                                     <?php
-                                                        switch ($obj_customer->franchise_id) {
-                                                            case 1:
-                                                                $amount = "$125";?>
-                                                                 <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
-                                                              <?php  break;
-                                                            case 2:
-                                                                $amount = "$250"?>
-                                                                <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
-                                                                <?php break;
-                                                            case 3:
-                                                                $amount = "$700"?>
-                                                                <img src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Cuenta Investor" height="120" width="130"/>
-                                                                <?php break;
-                                                            case 4:
-                                                                $amount = "$1000"?>
-                                                                <img src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Cuenta Business" height="120" width="130"/>
-                                                                <?php break;
-                                                            case 5:
-                                                                $amount = "$1899"?>
-                                                                <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
-                                                                <?php break;
-                                                            case 6: 
-                                                                $amount = "0 USD";?>
-                                                                 <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
-                                                              <?php  break;
-                                                          case 7: 
-                                                                $amount = "299 USD";?>
-                                                                 <img src="<?php echo site_url()."static/backoffice/images/apertura.png";?>" alt="Cuenta Apertura" height="120" width="130"/>
-                                                              <?php  break;
-                                                          case 8: 
-                                                                $amount = "999 USD";?>
-                                                                 <img src="<?php echo site_url()."static/backoffice/images/apertura_elite.png";?>" alt="Cuenta Elite" height="120" width="130"/>
-                                                              <?php  break;
-                                                        }?>
-                                                </p>
+                                                <p><img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="<?php echo $obj_customer->franchise;?>" height="120" width="130"/></p>
                                         </div> 
                                 </div> 
                         </div>
@@ -328,7 +292,7 @@
                                         <!-- panel body --> 
                                         <div id="spinner"></div>
                                         <div class="panel-body"> 
-                                             <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo $amount;?></a></b> a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b><br/> Envia un mensaje dando click en el boton de abajo indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p><br/>
+                                             <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo "$".$obj_customer->price;?></a></b>  a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b><br/> Envia un mensaje dando click en el boton de abajo indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p><br/>
                                              <div class="bs-example">
                                                  <a href="<?php echo site_url().'backoffice/message_confirmation';?>"><button type="button" class="btn btn-black btn-block"><i class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">Enviar Mensaje de Confirmación</span></button></a>
                                             </div>
