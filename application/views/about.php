@@ -35,36 +35,36 @@
                             <div class="title section-title">
                                     <h1>ACERCA DE NOSOTROS</h1>
                                     <br/>
-                                    <h2><?php echo replace_vocales_voculeshtml("¿Qué es 3T?");?></h2>
+                                    <h2>¿Qué es 3T CLUB</h2>
                             </div>
                             <div class="project-description">
                                     <div class="post-formatting">
-                                        <p><?php echo replace_vocales_voculeshtml("Multiplataforma que brinda distintos servicios y productos en los rubros de: VIAJES, DESARROLLO PERSONAL Y FOREX, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca y dar herramientas en este nuevo cambio de era, de esta forma pudiendo ayudar a nuestro activo más importante (los clientes).");?></p>
+                                        <p>Somos club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar: VIAJES, DESARROLLO PERSONAL Y FOREX, que utilizando el sistema de mercadeo en red nos permite fidelizar a los consumidores potenciales al club y dar herramientas en este nuevo cambio de era, de esta forma pudiendo ayudar a nuestro activo más importante (nuestros miembros).</p>
                                     </div>
                             </div>
                             <br/>
                             <div class="title section-title">
-                                    <h2><?php echo replace_vocales_voculeshtml("¿Propósito 3T?");?></h2>
+                                    <h2>Propósito 3T</h2>
                             </div>
                             <div class="project-description">
                                     <div class="post-formatting">
-                                        <h4><?php echo replace_vocales_voculeshtml("Visión");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser la primera compañía de productos y servicios que trabaja bajo una plataforma virtual dónde reemplacemos la forma cotidiana de compra y venta presencial por una virtual, que en consecuencia, logremos un upgrade integral en la vida de las personas, a través de los servicios de nuestra multiplataforma.");?></p>
+                                        <h4>Visión</h4>
+                                        <p>Nuestra visión es ser el primer club privado de viajes, desarrollo personal y financiero a nivel mundial dónde logremos hacer un cambio en el estilo de vida de los miembros que en consecuencia, estos mismos tenga un crecimiento integral a través de los servicios de nuestra nuestro club.</p>
                                     </div>
                                     <div class="post-formatting">
-                                        <h4><?php echo replace_vocales_voculeshtml("Misión");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del mundo virtual.");?></p>
+                                        <h4>Misión</h4>
+                                        <p>Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del mundo virtual.</p>
                                     </div>
                             </div>
                             <br/>
                             <div class="title section-title">
-                                    <h2><?php echo replace_vocales_voculeshtml("Productos");?></h2>
-                                    <h4><?php echo replace_vocales_voculeshtml("TRAVEL - TRAINING - TRADE");?></h4>
+                                    <h2>Productos</h2>
+                                    <h4>TRAVEL - TRAINING - TRADE</h4>
                             </div>
                             <div class="project-description">
                                     <div class="post-formatting">
                                         <h4>Travel - Viajes</h4>
-                                        <p>Una de nuestras fortalezas es la alianza que 3T tiene con la prestigiosa  plataforma GLOBAL PASS única en el rubro del turismo.<p/>
+                                        <p>Una de nuestras fortalezas es la alianza que 3T CLUB tiene con la prestigiosa  plataforma de descuento GLOBAL PASS única en el rubro del turismo.<p/>
                                         <p>Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros. Podrás tener la plataforma global pass que te permitirá tener hasta un 70% de descuentos en muchos servicios turísticos. 
                                             Tenemos 3 distintas plataformas en global pass con características distintas, dependiendo de tu paquete de compra es el beneficio.</p>
                                         <p><b>Global Pass Perú:</b> Te permite tener descuentos en cientos de establecimiento comerciales dentro de Perú tales como: restaurante, gasolineras, hoteles entre otros.</p>
@@ -76,59 +76,59 @@
                                         <h4>Training - Educación</h4>
                                         <p>Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, al lado de nuestra líder top y fundadora Silene Carrasco</p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("En 3T creemos en un desarrollo integral incluyendo el desarrollo como persona. Recibe un sistema probado que ha llevado al éxito a miles de personas.");?></p>
+                                        <p>En 3T CLUB creemos en un desarrollo integral incluyendo el desarrollo como persona. Recibe un sistema probado que ha llevado al éxito a miles de personas.</p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("El sistema JAQUEMENTE, su creadora Silene Carrazco formadora y networker con mas de 9 años de experiencia creando organizaciones en los 5 continentes.");?></p>
+                                        <p>El sistema JAQUEMENTE, su creadora Silene Carrazco formadora y networker con mas de 9 años de experiencia creando organizaciones en los 5 continentes.</p>
                                     </div>
                                     <div class="post-formatting">
                                         <p>&nbsp;</p>
-                                        <h4><?php echo replace_vocales_voculeshtml("Trade - FOREX");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Aprenderás como manejar y hacer operaciones en el mercado secundario en Forex al lado de expertos trader que trabajan con nosotros, lo cual te dará nuevas herramientas para tu crecimiento financiero.");?></p>
+                                        <h4>Trade - FOREX</h4>
+                                        <p>Aprenderás como manejar y hacer operaciones en el mercado secundario en Forex al lado de expertos trader que trabajan con nosotros, lo cual te dará nuevas herramientas para tu crecimiento financiero.</p>
                                     </div>
                             </div>
                             
                             <div class="title section-title">
                                     <p>&nbsp;</p>
-                                    <h2><?php echo replace_vocales_voculeshtml("DUEÑA");?></h2>
+                                    <h2>CEO - 3T CLUB</h2>
                             </div>
                             <div class="project-description">
                                     <div class="post-formatting">
-                                        <h4><?php echo replace_vocales_voculeshtml("Silene Carrasco Cruz");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Administradora de profesión, coach y networker con más de 10 años de experiencia en la industrial del multinivel, mujer filántropa y amante de los más necesitamos.");?></p>
+                                        <h4>Silene Carrasco Cruz</h4>
+                                        <p>Administradora de profesión, coach y networker con más de 10 años de experiencia en la industrial del multinivel, mujer filántropa y amante de los más necesitamos.</p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("Creadora de la corporación y concepto 3T, gracias a un estudio de mercado identificó cuales eran las áreas que todo ser humano necesita para tener una vida plena y libre. En ese momento se concibió el concepto 3T (viajes, entrenamientos y comercio), siendo parte fundamental de  la empresa.");?></p>
+                                        <p>Creadora de la corporación y concepto 3T, gracias a un estudio de mercado identificó cuales eran las áreas que todo ser humano necesita para tener una vida plena y libre. En ese momento se concibió el concepto 3T (viajes, entrenamientos y comercio), siendo parte fundamental de  la empresa.</p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("Durante su carrera ha obtenido grandes resultados en la industria MLM, creando organizaciones de personas alrededor del mundo. ");?></p>
+                                        <p>Durante su carrera ha obtenido grandes resultados en la industria MLM, creando organizaciones de personas alrededor del mundo.</p>
                                     </div>
                             </div>
                             <div class="title section-title">
                                     <p>&nbsp;</p>
-                                    <h2><?php echo replace_vocales_voculeshtml("STAFF FOREX");?></h2>
+                                    <h2>STAFF FOREX</h2>
                             </div>
                             <div class="project-description">
                                     <div class="post-formatting">
-                                        <h4><?php echo replace_vocales_voculeshtml("Felipe Arguedas");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Fue analista financiero para la firma europea X-Trade Brokers (XTB) y lideró el equipo comercial en sus oficinas de Perú. Posteriormente, se desempeñó como Research Analyst para Golden Capital FX, estando a la cabeza del análisis de mercado de la empresa.");?></p>
+                                        <h4>Felipe Arguedas</h4>
+                                        <p>Administrador de Negocios Internacionales de profesión. Fue analista financiero para la firma europea X-Trade Brokers (XTB) y lideró el equipo comercial en sus oficinas de Perú. Posteriormente, se desempeñó como Research Analyst para Golden Capital FX, estando a la cabeza del análisis de mercado de la empresa.</p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("En los últimos 4 años, se ha desempeñado como analista de derivados para mercados americanos, europeos y asiáticos. Al mismo tiempo, ha impartido cursos de formación bursátil para Metodotrading.com y El Instituto de la Moneda de Lima. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio, América Noticias, Canal N e Investing.com.");?></p>
+                                        <p>En los últimos 4 años, se ha desempeñado como analista de derivados para mercados americanos, europeos y asiáticos. Al mismo tiempo, ha impartido cursos de formación bursátil para Metodotrading.com y El Instituto de la Moneda de Lima. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio, América Noticias, Canal N e Investing.com.</p>
                                         <p>&nbsp;</p>
-                                        <h4><?php echo replace_vocales_voculeshtml("Gabriel Gutiérrez");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Ejerció durante 4 años como trader para el X-Trader Brokers (XTB). En los últimos años, se ha desempeñado como asesor de inversiones bursátiles para Sudamérica y Europa. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio y RPP Noticias. Además, ha impartido cursos de formación bursátil para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura en Perú.");?></p>
+                                        <h4>Gabriel Gutiérrez</h4>
+                                        <p>Administrador de Negocios Internacionales de profesión. Ejerció durante 4 años como trader para el X-Trader Brokers (XTB). En los últimos años, se ha desempeñado como asesor de inversiones bursátiles para Sudamérica y Europa. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio y RPP Noticias. Además, ha impartido cursos de formación bursátil para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura en Perú.</p>
                                         <p>&nbsp;</p>
-                                        <h4><?php echo replace_vocales_voculeshtml("Oscar Fernandez");?></h4>
-                                        <p><?php echo replace_vocales_voculeshtml("Administrador de Negocios Internacionales de profesión. Analista de Inversiones bursátiles para diferentes brókers de mercados financieros líderes en el Perú y Latinoamérica, como analista ha desarrollado diferentes alternativas de inversión y ha dictado distintos seminarios de bolsa de valores, tanto en el MBA de finanzas de la UPC y en las compañías donde ha trabajado, ha escrito informes de mercado de valores y economía para distintos medios de comunicación a nivel nacional.");?></p>
+                                        <h4>Oscar Fernandez</h4>
+                                        <p>Administrador de Negocios Internacionales de profesión. Analista de Inversiones bursátiles para diferentes brókers de mercados financieros líderes en el Perú y Latinoamérica, como analista ha desarrollado diferentes alternativas de inversión y ha dictado distintos seminarios de bolsa de valores, tanto en el MBA de finanzas de la UPC y en las compañías donde ha trabajado, ha escrito informes de mercado de valores y economía para distintos medios de comunicación a nivel nacional.</p>
                                         
                                     </div>
                             </div>
                             <div class="title section-title">
                                     <p>&nbsp;</p>
-                                    <h2><?php echo replace_vocales_voculeshtml("OFICINA");?></h2>
+                                    <h2>OFICINA</h2>
                             </div>
                             <div class="project-description">
                                     <div class="post-formatting">
-                                        <p><?php echo replace_vocales_voculeshtml("Nos encontramos en una de las zonas más exclusivas de Perú (país de residencia de 3T) con oficinas abiertas a los clientes y/o asociados de 3T.");?></p>
+                                        <p>Nos encontramos en una de las zonas más exclusivas de Perú (país de residencia de 3T) con oficinas abiertas a los clientes y/o asociados de 3T.</p>
                                         <p>&nbsp;</p>
-                                        <p><?php echo replace_vocales_voculeshtml("Horario de atención: lunes a viernes de 8: 00 a 17:00  en la dirección Av. La encalada #1171; Monterrico- Santiago de Surco, edificio CIUDARIS");?></p>
+                                        <p>Horario de atención: lunes a viernes de 8: 00 a 17:00  en la dirección Av. La encalada #1171; Monterrico- Santiago de Surco, edificio CIUDARIS</p>
                                     </div>
                             </div>
                             

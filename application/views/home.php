@@ -609,7 +609,7 @@ tpj(document).ready(function() {
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Alianzas</h3>
-                                <p style="text-align: center;"><b>Global Pass </b><?php echo replace_vocales_voculeshtml("Prestigiosa plataforma que te permitirán tener hasta con un 70% de descuento en vuelos, hoteles, cruceros, autos y mucho más.");?></p>
+                                <p style="text-align: center;"><b>Global Pass </b>Prestigiosa plataforma que te permitirán tener hasta con un 70% de descuento en hoteles, cruceros, autos y mucho más.</p>
                             </div>
                         </div>
                     </div>
@@ -683,8 +683,8 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner vc_custom_1498573592424">
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
-                                <H2>3T ES</H2>
-                                <p><?php echo replace_vocales_voculeshtml("Multiplataforma virtual que brinda distintos servicios y productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.");?></p>
+                                <H2>3T CLUB</H2>
+                                <p>Somos club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar. Viaja, entrénate y Gana. ¿Alguna vez has soñado con viajar? ¿Conocer otras culturas? ¿Descubrir las maravillas que el mundo tiene para ti? Sé parte de 3T Club.</p>
                         </div>
                     </div>
                 </div>
@@ -700,11 +700,11 @@ tpj(document).ready(function() {
                     <div class="wpb_wrapper">
                         <div class="wpb_text_column wpb_content_element  text-block post-formatting " >
                             <div class="wpb_wrapper">
-                                <h2><?php echo replace_vocales_voculeshtml("Propósito 3T")?></h2>
-                                <h3><?php echo replace_vocales_voculeshtml("Visión");?></h3>
-                                        <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser la primera compañía de productos y servicios que trabaja bajo una plataforma virtual dónde reemplacemos la forma cotidiana de compra y venta presencial por una virtual, que en consecuencia, logremos un upgrade integral en la vida de las personas, a través de los servicios de nuestra multiplataforma.")?></p>
-                                <h3><?php echo replace_vocales_voculeshtml("Misión");?></h3>
-                                <p><?php echo replace_vocales_voculeshtml("Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del mundo virtual.");?></p>
+                                <h2>Propósito 3T</h2>
+                                <h3>Visión</h3>
+                                        <p>Nuestra visión es ser el primer club privado de viajes, desarrollo personal y financiero a nivel mundial dónde logremos hacer un cambio en el estilo de vida de los miembros que en consecuencia, estos mismos tenga un crecimiento integral a través de los servicios de nuestra nuestro club.</p>
+                                <h3>Misión</h3>
+                                <p>Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del mundo virtual.</p>
                             </div>
                         </div>
                     </div>
@@ -748,7 +748,7 @@ tpj(document).ready(function() {
                             <div class="wpb_wrapper">
                                 <h2>TRAINING - TRAVEL - TRADE</h2>
                                     <h4>Viajes</h4>
-                                    <p>Te damos la oportunidad de ser parte del CIRCULO DE VIDA de 3T y Global Pass teniendo 3 plataformas (Global Pass Perú, Internacional y Elite) que te permitirán tener bonos de descuentos hasta el 70% en cientos de establecimientos comerciales, viajes, autos, cruceros, hoteles, tiempo compartido y gana puntos rewards por recomendar a tus amigos y que ellos compren y viaja totalmente gratis.</p>
+                                    <p>Te damos la oportunidad de ser parte de 3T Club y la plataforma de descuento Global Pass teniendo 3 plataformas (Global Pass Perú, Internacional y Elite) que te permitirán tener descuentos hasta el 70% en hoteles, autos, cruceros, tiempo compartido, semanas bono y gana puntos rewards por recomendar a tus amigos y que ellos compren gracias a tu recomendación y viaja totalmente gratis.</p>
                                     <h4>Entramiento</h4>
                                     <p>Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, 	recibe el sistema JAQUEMENTE un sistema probado que está llevando  al éxito a cientos de personas al lado Silene Carrasco Cruz (CEO 3T), líder de la industria multinivel con más de 10 años de experiencia y grandes resultados durante su carrera.</p>
                                     <h4>Forex</h4>
