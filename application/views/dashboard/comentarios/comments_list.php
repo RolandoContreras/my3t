@@ -56,7 +56,7 @@
                                 <div class="operation">
                                         <div class="btn-group">
                                             <?php 
-                                            if($value->active == 1){ ?>
+                                            if($value->active == 0){ ?>
                                                     <button class="btn btn-small" onclick="change_state_no('<?php echo $value->comment_id;?>');">Marcar como no Contestado</button>
                                             <?php }else{ ?>
                                                     <button class="btn btn-small" onclick="change_state('<?php echo $value->comment_id;?>');">Marcar como Contestado</button> 

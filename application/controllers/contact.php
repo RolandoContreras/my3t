@@ -48,7 +48,7 @@ class Contact extends CI_Controller {
                         'subject' => $subject,
                         'comment' => $message,
                         'date_comment' => date("Y-m-d H:i:s"),
-                        'active' => 0,
+                        'active' => 1,
                         'status_value' => 1,
                     );
                     $this->obj_comments->insert($data);
