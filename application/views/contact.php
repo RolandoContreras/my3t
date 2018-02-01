@@ -239,7 +239,7 @@ labVcMaps.push({
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Selecciona un Paquete</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Elije un paquete y sé parte de nueva revolución de 3T.");?></p>
+                                <p style="text-align: center;">Elije un paquete y sé parte de nueva revolución de 3T.</p>
                             </div>
                         </div>
                     </div>
@@ -256,7 +256,7 @@ labVcMaps.push({
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Planifica tu trabajo</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Arma tu estrategia y aplica el plan de acción.");?></p>
+                                <p style="text-align: center;">Arma tu estrategia y aplica el plan de acción.</p>
                             </div>
                         </div>
                     </div>
@@ -304,63 +304,46 @@ labVcMaps.push({
                 <div class="vc_column-inner vc_custom_1498222572351">
                     <div class="wpb_wrapper">
                         <div class="section-title ">
-                        <H2><?php echo replace_vocales_voculeshtml("Contáctenos");?></H2>
-                            <p><?php echo replace_vocales_voculeshtml("Mantente en contacto llenando el formulario, llámenos o visítenos en nuestras oficinas.");?></p>
+                        <h2>Contáctenos</h2>
+                            <p>Mantente en contacto llenando el formulario, llámenos o visítenos en nuestras oficinas.</p>
                         </div>
                         <div class="vc-parent-row row-default">
                             <div class="vc_row wpb_row vc_inner vc_row-fluid">
                                 <div class="wpb_column vc_column_container vc_col-sm-8">
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">
-                                            <div class="lab-contact-form contact-form ">
-                                                <form class="contact-form">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group labeled-input-row">
-                                                                    <div class="col-md-4">
-                                                                        <label>Nombre:</label>
-                                                                    </div>
-                                                                    <div class="col-md-8">
-                                                                        <input name="name" id="name" type="text" data-label="Name" style="border-style: outset !important; width:100% !important">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group labeled-input-row">
-                                                                    <div class="col-md-4">
-                                                                        <label>Correo:</label>
-                                                                    </div>
-                                                                    <div class="col-md-8">
-                                                                          <input name="email" id="email" type="email" data-label="Email" style="border-style: outset !important; width:100% !important">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group labeled-input-row">
-                                                                    <div class="col-md-4">
-                                                                        <label>Asunto:</label>
-                                                                    </div>
-                                                                    <div class="col-md-8">
-                                                                          <input name="subject" id="subject" type="text" data-label="Destination" style="border-style: outset !important;width:100% !important">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                                <div class="col-sm-12">
-                                                                    <div class="form-group labeled-textarea-row">
-                                                                        <div class="col-md-12">
-                                                                            <label>Mensaje:</label>
-                                                                        </div>
-                                                                        <textarea name="message" id="message" data-label="Message" style="border-style: outset !important;"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                        </div> <!-- row -->
-                                                        <a href="javascript:void(0);" onclick="send_messages();" class="button">
-                                                                <span class="pre-submit">Enviar Mensaje</span>
-<!--                                                                <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
-                                                                <span class="loading-bar">
-                                                                        <span></span>
-                                                                </span>-->
-                                                        </a>
+                                            <div class="lab-contact-form">
+                                                <form method="post" id="formid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                              <div class="col-md-3">
+                                                                  <label>Nombre:</label>
+                                                              </div>
+                                                              <div class="col-md-9">
+                                                                  <input class="form" name="name" id="name" type="text" data-label="Name">
+                                                              </div>    
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                              <div class="col-md-3">
+                                                                  <label>E-mail:</label>
+                                                              </div>
+                                                              <div class="col-md-9">
+                                                                   <input class="form" name="email" id="email" type="email" data-label="Email">
+                                                              </div>    
+                                                        </div>    
+                                                        <div class="col-md-12">
+                                                              <div class="col-md-3">
+                                                                  <label>Asunto:</label>
+                                                              </div>
+                                                              <div class="col-md-9">
+                                                                    <textarea class="form" name="message" id="message" data-label="Message"></textarea>
+                                                              </div>    
+                                                        </div>
+                                                    </div>
+                                            <div class="col-md-12">&nbsp;</div>    
+                                            <div class="col-md-12">
+                                                <button type="submit" value="Enviar Mensaje" class="button">Enviar Mensaje</button>
+                                            </div>
                                                 </form>
                                             </div>
                                         </div>
@@ -379,15 +362,12 @@ labVcMaps.push({
                                                     <p><span style="color: #222222;"><strong>Visítanos:</strong></span></p>
                                                         <p>Av. La Encalada # 1171</p>
                                                         <p>Monterrico - Santiago de surco</p>
-                                                        <p><?php echo replace_vocales_voculeshtml("Lima, Perú");?></p>
+                                                        <p>Lima, Perú</p>
                                                         <p>&nbsp;</p>
                                                         <p><span style="color: #222222;"><strong>Horario de Trabajo</strong>:</span></p>
                                                         <p>Lunes — Viernes (<span style="color: #222222;"><strong>08:00 — 17:00</strong></span>)</p>
                                                         <p>Sabados (<span style="color: #222222;"><strong>09:00 — 15:00</strong></span>)</p>
                                                         <p>&nbsp;</p>
-                            <!--                            <p><span style="color: #222222;"><strong>Or ring our phones:</strong></span></p>
-                                                        <p><a href="tel:+44 20 3457 5495">+44 20 3457 5495</a> (UK)</p>
-                                                        <p><a href="tel:+353 1 878 3944">+353 1 878 3944</a> (Ireland)</p>-->
                                                 </div>
                                             </div>
                                         </div>
@@ -402,52 +382,35 @@ labVcMaps.push({
         <div class="vc_row-full-width vc_clearfix"></div>
     </div>
 </div>
-    <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
-    <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/jquery.min.js';?>"></script>
-    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
-<style>.contact-form input, 
-.contact-form textarea {
- 	background: #FFF;
-	border: none;
-	padding: 10px 15px;
-}
-
-.message-form .form-group {
-	margin-bottom: 25px;	
-}
-
-.message-form .form-group .placeholder {
-	border: none;
-}
-
-.contact-form textarea { 
-	line-height: 2;
-}
-
-.message-form .form-group.absolute .placeholder {
-	padding: 0px;
-}
-
-.wpb_wrapper .lab-contact-form .form-group .placeholder label {
-	padding: 12px;
-	font-weight: 500;
-}
-
-.message-form .form-group .placeholder.ver-two {
-	background: #FFF;
-}
-
-.wpb_wrapper .lab-contact-form .form-group .placeholder.ver-two label {
-    padding: 12px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.contact-form .send {
-	margin: 0px;
-}</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#formid").validate({
+        rules: {
+            name: { required: true, minlength: 2},
+            email: { required:true, email: true},
+            message: { required:true, minlength: 2}
+        },
+        messages: {
+            name: "Por favor introduzca su nombre",
+            email : "Por favor introduzca un e-mail válido.",
+            message : "Por favor introduzca un mensaje."
+        },
+        submitHandler: function(form){
+            var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#message').val();
+            $.ajax({
+                type: "POST",
+                url:"<?php echo site_url().'contact/send_messages';?>",
+                data: {dataString : dataString},
+                success: function(data){
+//                    $("#ok").html(data);
+//                    $("#ok").show();
+//                    $("#formid").hide();
+                }
+            });
+        }
+    });
+});
+</script>    
 	</div>	
     <!--START FOOTER-->
     <?php $this->load->view("footer");?>
@@ -456,7 +419,6 @@ labVcMaps.push({
 .wrapper {padding-top: 0px !important}
 </style>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>

@@ -43,6 +43,8 @@ $route['404_override'] = 'errors/error_404';
 
 $route['home'] = 'home';
 $route['login'] = 'login';
+$route['contact/send_messages'] = 'contact/send_messages';
+$route['plan/([0-9a-z_-]+)'] = "plan/packages";
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 
 //$route['paquete/basic'] = 'plan/packages';

@@ -239,9 +239,8 @@ labVcMaps.push({
                                 <div class="wpb_column vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">
-                                            <div class="lab-contact-form contact-form ">
-                                                <form class="contact-form">
-                                                        <input type="hidden" name="request" value="rlWhLJ1yK3EcqTkyVwbvGzSgMGbvYPWyoJScoS90nKEfMFV6VxIgLJyfBvVfVaA1LzcyL3EsqTy0oTHvBvWRMKA0nJ5uqTyiowbvYPWgMKAmLJqyK3EcqTkyVwbvGJImp2SaMGbvYPWmnT93K3A1LzcyL3EsMzyyoTDvBvW5MKZvYPWmqJWgnKEsqTy0oTHvBvWGMJ5xVR1yp3AuM2HvYPWmqJWgnKEsp3IwL2ImplV6VyEbLJ5eVUyiqFNwYPOgMKAmLJqyVUAyoaDuVvjvLJkypaEsMKWlo3WmVwbvrJImVvjvp3IvnzIwqS9znJIfMS9up19yoJScoS9mqJWdMJA0VwbvrJImVvjvMJ1unJkspzIwMJy2MKVvBvVvYPWyoS9woTSmplV6VvVfVzAmplV6VvW9" />
+                                            <div class="lab-contact-form">
+                                                <form>
                                                         <div class="row">
                                                 <?php if(isset($obj_customer)){ ?>
                                                     <div class="col-md-12">
@@ -284,7 +283,7 @@ labVcMaps.push({
                                                       <label>USUARIO</label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input onblur="validate_username(this.value);" id="usuario" type="text" name="usuario" style="border-style: outset !important; width:100% !important">
+                                                      <input class="form" onblur="validate_username(this.value);" id="usuario" type="text" name="usuario" >
                                                       <span class="alert-0"></span>
                                                       <!--<span class="success-msg1">Usuario Disponible! <i class="fa fa-check-square-o" aria-hidden="true"></i></span>-->
                                                       <!--<span class="alert-0"></span>-->
@@ -296,7 +295,7 @@ labVcMaps.push({
                                                       <label><?php echo replace_vocales_voculeshtml("CONTRASEÑA");?></label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="clave" type="password" name="clave" style="border-style: outset !important; width:100% !important">
+                                                      <input class="form" id="clave" type="password" name="clave">
                                                   </div>    
                                             </div>
                                           
@@ -305,7 +304,7 @@ labVcMaps.push({
                                                       <label><?php echo replace_vocales_voculeshtml("REPETIR CONTRASEÑA");?></label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="repita_clave" onblur="validate_2passwordr(this.value);" type="password" name="repita_clave" style="border-style: outset !important; width:100% !important">
+                                                      <input class="form" id="repita_clave" onblur="validate_2passwordr(this.value);" type="password" name="repita_clave">
                                                       <span class="alert-1"></span>
                                                   </div>    
                                             </div>
@@ -315,7 +314,7 @@ labVcMaps.push({
                                                       <label>NOMBRES</label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="name" type="text" name="name" style="border-style: outset !important; width:100% !important">
+                                                      <input class="form" id="name" type="text" name="name">
                                                   </div>    
                                             </div>
                                                 
@@ -324,7 +323,7 @@ labVcMaps.push({
                                                       <label>APELLIDOS</label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="last_name" type="text" name="last_name" style="border-style: outset !important; width:100% !important">
+                                                      <input class="form" id="last_name" type="text" name="last_name">
                                                   </div>    
                                             </div>
                                                 
@@ -333,7 +332,7 @@ labVcMaps.push({
                                                       <label><?php echo replace_vocales_voculeshtml("DIRECCIÓN");?></label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="address" type="text" name="address" style="border-style: outset !important; width:100% !important">
+                                                      <input class="form" id="address" type="text" name="address">
                                                   </div>    
                                             </div>
                                            
@@ -342,7 +341,7 @@ labVcMaps.push({
                                                       <label><?php echo replace_vocales_voculeshtml("TELÉFONO");?></label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="telefono" type="text" name="telefono" style="border-style: outset !important; width:100% !important">
+                                                      <input class="form" id="telefono" type="text" name="telefono">
                                                   </div>    
                                             </div>
                                                 
@@ -351,7 +350,7 @@ labVcMaps.push({
                                                       <label><?php echo replace_vocales_voculeshtml("DNI / CEDULA");?></label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="dni" type="text" name="dni" style="border-style: outset !important; width:100% !important" >
+                                                      <input class="form" id="dni" type="text" name="dni">
                                                   </div>    
                                             </div>    
                                                 
@@ -360,7 +359,7 @@ labVcMaps.push({
                                                       <label><?php echo replace_vocales_voculeshtml("CORREO ELECTRÓNICO");?></label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="email" type="text" name="email" style="border-style:outset !important;width:100% !important">
+                                                      <input class="form" id="email" type="text" name="email">
                                                   </div>    
                                             </div>  
                                             <div class="col-md-12">
@@ -370,7 +369,7 @@ labVcMaps.push({
                                             </div>  
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
-                                                      <select  name="dia" id="dia">
+                                                      <select name="dia" id="dia">
                                                             <option value=""><?php echo replace_vocales_voculeshtml("DÍA")?></option>
                                                         <?php  for ($x = 1; $x <= 31; $x++) {  ?>
                                                             <option value="<?php echo $x?>"><?php echo $x;?></option>
@@ -381,7 +380,7 @@ labVcMaps.push({
                                                 
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
-                                                      <select iname="mes" id="mes">
+                                                      <select name="mes" id="mes">
                                                             <option value="">MES</option>
                                                                     <option value="01">Enero</option>
                                                                     <option value="02">Febrero</option>
@@ -401,7 +400,7 @@ labVcMaps.push({
                                                 
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
-                                                      <select  name="ano" id="ano" class="password_text" >
+                                                      <select name="ano" id="ano" class="password_text" >
                                                             <option selected="selected" value=""><?php echo replace_vocales_voculeshtml("AÑO");?></option>
                                                                 <?php  for ($x = 1950; $x <= 2016; $x++) {  ?>
                                                                     <option value="<?php echo $x?>"><?php echo $x;?></option>
@@ -413,7 +412,7 @@ labVcMaps.push({
                                                 <div class="col-md-12">&nbsp;</div>    
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
-                                                      <select class="password_text" onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
+                                                      <select onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
                                                         <option  selected value=""><?php echo replace_vocales_voculeshtml("PAÍS");?></option>
                                                             <?php  foreach ($obj_paises as $key => $value) { ?>
                                                                    <option style="border-style: solid !important" value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
@@ -423,8 +422,8 @@ labVcMaps.push({
                                             </div>   
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
-                                                      <select  name="region" id="region" class="password_text">
-                                                          <option  selected="selected" value=""><?php echo replace_vocales_voculeshtml("REGIÓN");?></option>
+                                                      <select name="region" id="region" style="margin-bottom: 10px;">
+                                                          <option  selected="selected" value="" >REGIÓN</option>
                                                       </select>
                                                   </div>
                                             </div> 
@@ -434,7 +433,7 @@ labVcMaps.push({
                                                       <label><?php echo replace_vocales_voculeshtml("CIUDAD");?></label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input id="city" type="text" name="city" style="border-style: outset !important;width:100% !important">
+                                                      <input class="form" id="city" type="text" name="city" >
                                                   </div>    
                                             </div>
                                           </div>

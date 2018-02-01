@@ -161,11 +161,6 @@
 			data-paddingleft="[0,0,0,0]"
 
 			style="z-index: 9;background-color:rgb(255,255,255);"> </div>
-
-                        
-                        
-                        
-                        
 		<!-- LAYER NR. 6 -->
 		<div class="tp-caption Creative-Button rev-btn " 
 			 id="slide-12-layer-6" 
@@ -675,8 +670,6 @@ tpj(document).ready(function() {
             </div>
         </div>
     </div>
-    
-    
     <div class="vc-parent-row row-stretch_row vc_custom_1497449006247">
         <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid homepage-city-break vc_row-has-fill">
             <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -866,13 +859,6 @@ tpj(document).ready(function() {
                                                 </div>
                                             </div>
                                         </div>
-                                        
-<!--                                        <div class="portfolio-item portfolio-item-type-1 has-padding w2 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
-                                            <div class="item-box-container">
-                                            </div>
-                                        </div>-->
-                                        
-                                        
                                         <!--START PAQUETE BUSINESS-->
                                         <div class="portfolio-item portfolio-item-type-5 has-padding w4 post-443 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="443" data-terms="nature">
                                             <div class="item-box-container">
@@ -942,113 +928,6 @@ tpj(document).ready(function() {
         </div>
         <div class="vc_row-full-width vc_clearfix"></div>
     </div>
-    
-    <!--START NEW-->
-<!--        <div class="vc-parent-row row-stretch_row vc_custom_1497021477671">
-            <div class="vc-parent-row row-stretch_row vc_custom_1498222083293">
-                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid homepage-news vc_row-has-fill">
-                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                        <div class="vc_column-inner vc_custom_1498573584830">
-                            <div class="wpb_wrapper">
-                                <div class="section-title ">
-                                    <H2>Noticias</H2>
-                                    <p><?php echo replace_vocales_voculeshtml("Mantente informado de los acontecimientos más importantes con el portal 3T.");?></p>
-                                </div>
-                                <div id="blogposts-200059dac55833a8b" class="row lab-blog-posts posts-layout-top" >
-                                    <div class="blog-post-column col-md-4 col-sm-6">			
-                                        <div class="blog-post-entry post-68 post type-post status-publish format-standard has-post-thumbnail hentry category-middle-east">
-                                            <div class="blog-post-image">
-						<a href="#">
-                                                    <span class="image-placeholder img-42644" style="padding-bottom: 62.50000000%">
-                                                        <img width="400" height="250" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/new/bitcoin.jpg';?>">	
-                                                    </span>
-                                                            <span class="hover-display with-spacing">
-                                                                <span class="custom-hover-icon">
-                                                                    <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/new/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px"/>
-                                                                </span>																	
-                                                            </span>
-							</a>
-						</div>
-						<div class="blog-post-content-container">
-                                                    <div class="blog-post-date">Octubre 09, 2017</div>
-                                                        <h3 class="blog-post-title">
-                                                                <a href="#">Bitcoin la nueva realidad</a>
-                                                        </h3>
-                                                        <div class="blog-post-excerpt">
-                                                            <p><?php echo corta_texto("Viena no solo será conocida como la capital de Austria, la cuna de la música, la hermosa ciudad a las orillas del Danubio, también será desde ahora la primera urbe en alojar un Banco Bitcoin con sede física, de acuerdo con Cryptocoinsnews. Un banco dedicado a Bitcoin, al parecer el primero del mundo abrió sus puertas en Mariahilfer Strasse en el centro de Viena, según informó The Local, un sitio de noticias en lengua inglesa de Austria. El banco fue creado por una startup Blockchain con sede en Berlín, Bit Trust Services, y se llama Bitcoin-Bank (banco Bitcoin). ",150)?></p>
-                                                        </div>
-                                                </div>
-					</div>
-                                    </div>
-                                    <div class="blog-post-column col-md-4 col-sm-6">			
-                                        <div class="blog-post-entry post-68 post type-post status-publish format-standard has-post-thumbnail hentry category-middle-east">
-                                            <div class="blog-post-image">
-						<a href="#">
-                                                    <span class="image-placeholder img-42644" style="padding-bottom: 62.50000000%">
-                                                        <img width="400" height="250" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/new/blockchain.jpg';?>">	
-                                                    </span>
-                                                            <span class="hover-display with-spacing">
-                                                                <span class="custom-hover-icon">
-                                                                    <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/new/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px"/>
-                                                                </span>																	
-                                                            </span>
-							</a>
-						</div>
-						<div class="blog-post-content-container">
-                                                    <div class="blog-post-date">Octubre 09, 2017</div>
-                                                        <h3 class="blog-post-title">
-                                                                <a href="#">Blockchain - Cadena de bloque</a>
-                                                        </h3>
-                                                        <div class="blog-post-excerpt">
-                                                            <p><?php echo corta_texto("El Blockchain (o cadena de bloques) es una base de datos compartida que funciona como un libro para el registro de operaciones de compra-venta o cualquier otra transacción. Es la base tecnológica del funcionamiento del bitcoin",150)?></p>
-                                                        </div>
-                                                </div>
-					</div>
-                                    </div>
-                                    
-                                    
-                                    <div class="blog-post-column col-md-4 col-sm-6">			
-                                        <div class="blog-post-entry post-68 post type-post status-publish format-standard has-post-thumbnail hentry category-middle-east">
-                                            <div class="blog-post-image">
-						<a href="#">
-                                                    <span class="image-placeholder img-42644" style="padding-bottom: 62.50000000%">
-                                                        <img width="400" height="250" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/new/realidad.jpg';?>">	</span>
-                                                            <span class="hover-display with-spacing">
-                                                                <span class="custom-hover-icon">
-                                                                    <img width="256" height="256" src="<?php echo site_url().'static/page_front/images/new/loader.gif';?>" class="attachment-original size-original" alt="" style="width:78px"/>
-                                                                </span>																	
-                                                            </span>
-							</a>
-						</div>
-						<div class="blog-post-content-container">
-                                                    <div class="blog-post-date">Octubre 09, 2017</div>
-                                                        <h3 class="blog-post-title">
-                                                            <a href="#"><?php echo replace_vocales_voculeshtml("¿Qué es la criptomoneda? - Bitcoin");?></a>
-                                                        </h3>
-                                                        <div class="blog-post-excerpt">
-                                                            <p><?php echo corta_texto("Bitcoin es una moneda virtual e intangible. Es decir, que no se puede tocar en ninguna de sus formas como ocurre con las monedas o billetes, pero puede utilizarse como medio de pago de la misma forma que éstos.", 150) ?></p>
-                                                        </div>
-                                                </div>
-					</div>
-                                    </div>
-                                    <div class="clear"></div>	
-                            </div>
-                            <div class="more-link ">
-                                    <div class="show-more">
-                                            <div class="reveal-button">
-                                                    <a href="#" target="" class="btn btn-white">
-                                                            <?php echo replace_vocales_voculeshtml("Ver Más");?>
-                                                    </a>
-                                            </div>
-                                    </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="vc_row-full-width vc_clearfix"></div>
-            </div>
-        </div>-->
 <style>.homepage-city-break {background-attachment: fixed;}</style>
 	</div>	
 <!--START FOOTER-->
@@ -1077,15 +956,7 @@ tpj(document).ready(function() {
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
 <!-- Google Code for Click Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 991533214;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 <style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
-<!-- ET: 0.1419689655304s 2.1.3ch -->
 </body>
 </html>

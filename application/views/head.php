@@ -33,6 +33,11 @@
         
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
 <link rel='stylesheet' id='rs-plugin-settings-css'  href='<?php echo site_url().'static/page_front/css/settings.css?ver=5.4.6'?>' type='text/css' media='all' />
+<link rel='stylesheet' href='<?php echo site_url().'static/page_front/css/style.css'?>' type='text/css' media='all'/>
+<!--PLUGIN JQUERY VALIDATE-->
+<script src="<?php echo site_url().'static/page_front/plugin/jvalidate/jquery-3.1.1.js';?>" type="text/javascript"></script>
+<script src="<?php echo site_url().'static/page_front/plugin/jvalidate/jquery.validate.js';?>" type="text/javascript"></script>
+<!--END PLUGIN JQUERY VALIDATE-->
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 #rs-demo-id {}
 </style>
@@ -85,9 +90,5 @@ display: none;
 <script type="text/javascript">
     var site = '<?php echo site_url();?>';
 </script>
-<!--REPRODUCTOR VIDEO-->
-<!--<link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">-->
-<!-- If you'd like to support IE8 -->
-<!--<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>-->
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.themepunch.revolution.min.js?ver=5.4.6';?>'></script>
 </head>

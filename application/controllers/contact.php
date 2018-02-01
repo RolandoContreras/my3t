@@ -27,32 +27,34 @@ class Contact extends CI_Controller {
 		$this->load->view('contact');
 	}
         public function send_messages(){
-            if($this->input->is_ajax_request()){ 
-                
-                $name = $this->input->post('name');  
-                $email = $this->input->post('email');  
-                $subject = $this->input->post('subject');  
-                $message = $this->input->post('message');  
-                
-                
-                //validate background
-                $this->form_validation->set_rules('name','name',"required|trim");
-                $this->form_validation->set_rules('email','email','required|trim'); 
-                $this->form_validation->set_rules('subject','subject','required|trim'); 
-                $this->form_validation->set_rules('message','message','required');              
-                $this->form_validation->set_message('required','Campo requerido %s');   
-
+            
+            //GET DATA BY POST
+            $data = $_POST['dataString']; 
+            //EXPLODE BY DEMILITER
+            $string =  explode('&', $data);
+            //GET NAME
+            $name = $string[0];
+            //GET EMAIL
+            $email = $string[1];
+            //GET SUBJECT
+            $email = $string[1];
+            //GET MESSAGE
+            $message = $string[2];
+            
+            //validate background
+            $this->form_validation->set_rules('name','name',"required|trim");
+            $this->form_validation->set_rules('email','email','required|trim'); 
+            $this->form_validation->set_rules('message','message','required');              
+            $this->form_validation->set_message('required','Campo requerido %s');   
                 
                 if ($this->form_validation->run($this)== false){ 
-                    $data['message'] = "false";
-                    $data['print'] = "Complete todos los datos correctamente";
+                    redirect('contact'); 
                 }else{
                     //status_value 0 means (not read)
                     $data = array(
                         'name' => $name,
                         'email' => $email,
                         'comment' => $message,
-                        'subject' => $subject,
                         'date_comment' => date("Y-m-d H:i:s"),
                         'status_value' => 0,
                     );
@@ -62,6 +64,6 @@ class Contact extends CI_Controller {
                 }         
                 echo json_encode($data);  
                 exit();      
-            }
+            
         }   
 }
