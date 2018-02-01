@@ -43,7 +43,7 @@
                             <td><?php echo $value->comment;?></td>
                             <td><?php echo formato_fecha($value->date_comment);?></td>
                             <td>
-                                <?php if ($value->status_value == 1) {
+                                <?php if ($value->active == 0) {
                                     $valor = "Leido";
                                     $stilo = "label label-success";
                                 }else{
@@ -56,7 +56,7 @@
                                 <div class="operation">
                                         <div class="btn-group">
                                             <?php 
-                                            if($value->status_value == 1){ ?>
+                                            if($value->active == 1){ ?>
                                                     <button class="btn btn-small" onclick="change_state_no('<?php echo $value->comment_id;?>');">Marcar como no Contestado</button>
                                             <?php }else{ ?>
                                                     <button class="btn btn-small" onclick="change_state('<?php echo $value->comment_id;?>');">Marcar como Contestado</button> 

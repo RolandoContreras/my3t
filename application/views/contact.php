@@ -336,6 +336,14 @@ labVcMaps.push({
                                                                   <label>Asunto:</label>
                                                               </div>
                                                               <div class="col-md-9">
+                                                                   <input class="form" name="subject" id="subject" type="text" data-label="Email">
+                                                              </div>    
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                              <div class="col-md-3">
+                                                                  <label>Mensaje:</label>
+                                                              </div>
+                                                              <div class="col-md-9">
                                                                     <textarea class="form" name="message" id="message" data-label="Message"></textarea>
                                                               </div>    
                                                         </div>
@@ -344,10 +352,11 @@ labVcMaps.push({
                                             <div class="col-md-12">
                                                 <button type="submit" value="Enviar Mensaje" class="button">Enviar Mensaje</button>
                                             </div>
-                                                </form>
+                                            </form>
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="alert_message"></div>
                                 </div>
                                 <div class="wpb_column vc_column_container vc_col-sm-1 vc_hidden-sm vc_hidden-xs">
                                     <div class="vc_column-inner ">
@@ -387,24 +396,24 @@ $(document).ready(function() {
     $("#formid").validate({
         rules: {
             name: { required: true, minlength: 2},
+            subject: { required: true, minlength: 2},
             email: { required:true, email: true},
             message: { required:true, minlength: 2}
         },
         messages: {
             name: "Por favor introduzca su nombre",
             email : "Por favor introduzca un e-mail válido.",
+            subject: "Por favor introduzca un título",
             message : "Por favor introduzca un mensaje."
         },
         submitHandler: function(form){
-            var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#message').val();
+            var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#subject').val()+'&'+$('#message').val();
             $.ajax({
                 type: "POST",
                 url:"<?php echo site_url().'contact/send_messages';?>",
                 data: {dataString : dataString},
                 success: function(data){
-//                    $("#ok").html(data);
-//                    $("#ok").show();
-//                    $("#formid").hide();
+                    $("#alert_message").html(data);
                 }
             });
         }

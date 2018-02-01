@@ -37,33 +37,21 @@ class Contact extends CI_Controller {
             //GET EMAIL
             $email = $string[1];
             //GET SUBJECT
-            $email = $string[1];
+            $subject = $string[2];
             //GET MESSAGE
-            $message = $string[2];
+            $message = $string[3];
             
-            //validate background
-            $this->form_validation->set_rules('name','name',"required|trim");
-            $this->form_validation->set_rules('email','email','required|trim'); 
-            $this->form_validation->set_rules('message','message','required');              
-            $this->form_validation->set_message('required','Campo requerido %s');   
-                
-                if ($this->form_validation->run($this)== false){ 
-                    redirect('contact'); 
-                }else{
                     //status_value 0 means (not read)
                     $data = array(
                         'name' => $name,
                         'email' => $email,
+                        'subject' => $subject,
                         'comment' => $message,
                         'date_comment' => date("Y-m-d H:i:s"),
-                        'status_value' => 0,
+                        'active' => 0,
+                        'status_value' => 1,
                     );
                     $this->obj_comments->insert($data);
-                    $data['print'] = "Mensaje enviado correctamente";
-                    $data['message'] = "true";       
+                    echo '<div class="alert alert-success" style="text-align: center">Enviado Correctamente.</div>';
                 }         
-                echo json_encode($data);  
-                exit();      
-            
-        }   
 }

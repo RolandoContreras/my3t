@@ -15,6 +15,7 @@ class D_comments extends CI_Controller{
                                     comments.name,
                                     comments.comment,
                                     comments.email,
+                                    comments.active,
                                     comments.status_value,
                                     comments.date_comment",
                          "order" => "date_comment ASC"
