@@ -84,16 +84,137 @@ class Register extends CI_Controller {
             echo json_encode($data);
             }
         }
+        
+        public function validate_username_register($username) {
+                //SELECT ID FROM CUSTOMER
+            $param_customer = array(
+                "select" => "customer_id",
+                "where" => "username = '$username'");
+            $customer = count($this->obj_customer->get_search_row($param_customer));
+            if ($customer > 0) {
+                return 1;
+            } else {
+                return 0;
+            }
+            
+        }
 
         public function crear_registro() {
-            if ($this->input->is_ajax_request()) {
+//            if ($this->input->is_ajax_request()) {
 
+            
                 //SET TIMEZONE AMERICA
                 date_default_timezone_set('America/Lima');
+                //GET DATA STRING
+                $data = $_POST['dataString']; 
+                //EXPLODE BY DEMILITER
+                $string =  explode('&', $data);
+                //SET $VARIBLE
+                $username = strtolower($string[0]);
+                
+                //validate username
+                $val = $this->validate_username_register($username);
+                if($val == 1){
+                    echo '<div class="alert alert-danger" style="text-align: center">Usuario no disponible.</div>';
+                }else{
+                    //SET $VARIBLE
+                    $name = $string[1];
+                    $password = $string[2];
+                    $last_name = $string[3];
+                    $address = $string[4];
+                    $phone = $string[5];
+                    $dni = $string[6];
+                    $email = $string[7];
+                    $dia = $string[8];
+                    $mes = $string[9];
+                    $ano = $string[10];
+                    $pais = $string[11];
+                    $region = $string[12];
+                    $city = $string[13];
+                    $customer_id = $string[14];
+                
+                    
+                    //create date to DB
+                    $birth_date = "$ano-$mes-$dia";
+                    $data = array(
+                        'parents_id' => $customer_id,
+                        'franchise_id' => 6,
+                            'username' => $username,
+                        'email' => $email,
+                        'password' => $password,
+                        'first_name' => $name,
+                        'last_name' => $last_name,
+                        'address' => $address,
+                        'phone' => $phone,
+                        'city' => $city,
+                        'dni' => $dni,
+                        'birth_date' => $birth_date,
+                        'country' => $pais,
+                        'region' => $region,
+                        'active' => 0,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    $customer_id = $this->obj_customer->insert($data);
+                    //INSERT MESSAGE WELCOME
+                    $this->messages_welcome($name,$last_name,$customer_id,$username,$password);
+                    echo '<div class="alert alert-success" style="text-align: center">Registro creado correctamente.</div>';
+                    
+    //                SEND MESSAGES
+//                    $images = "static/page_front/images/bienvenido.jpg";
+//                    $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
 
-                $customer_id = trim($this->input->post('customer_id'));
-
-                $pierna_customer = trim($this->input->post('pierna_customer'));
+                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $usuario</h3><h3>Contraseña: $clave</h3><p>$img_path</p></body></html>", 70, "\n", true);
+                    $titulo = "Bienvenido a 3T Company";
+                    $headers = "MIME-Version: 1.0\r\n"; 
+                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                    $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
+                    $bool = mail("$email",$titulo,$mensaje,$headers);
+        }
+      }
+       public function messages_welcome($name,$last_name,$customer_id,$username,$password){
+           //CREATE MESSAGE WELCOME
+                    $name = ucwords("$name $last_name");
+                    $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T. <br>Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
+                    
+                    $data_messages = array(
+                        'customer_id' => $customer_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Bienvenido a 3T",
+                        'messages' => $message,
+                        'type' => 2,
+                        'type_send' => 0,
+                        'active' => 1,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);
+                    
+                    //CREATE MESSAGE DATA ACCESS
+                    $message = "Ususario: $username <br> Contraseña: $password";
+                    $data_messages = array(
+                        'customer_id' => $customer_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Sus datos de acceso",
+                        'messages' => $message,
+                        'type' => 2,
+                        'type_send' => 0,
+                        'active' => 1,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);
+                    
+       }
+       
+       public function identificador(){
+            $pierna_customer = trim($this->input->post('pierna_customer'));
 
                 //PUT CUSTOMER_ID LIKE PAREND
                 $parent_id = $customer_id;
@@ -183,144 +304,10 @@ class Register extends CI_Controller {
                 $explo_identificator = explode(",", $idetificator);
                 $ultimo = $explo_identificator[0] + 1;
                 $identificator = $ultimo . $last_id . ',' . $idetificator;
-
-                $this->form_validation->set_rules('usuario', 'usuario', "required|trim");
-                $this->form_validation->set_rules('name', 'name', 'required|trim');
-                $this->form_validation->set_rules('last_name', 'last_name', "required|trim");
-                $this->form_validation->set_rules('address', 'address', 'required|trim');
-                $this->form_validation->set_rules('telefono', 'telefono', "required|trim");
-                $this->form_validation->set_rules('dni', 'dni', 'required|trim');
-                $this->form_validation->set_rules('email', 'email', "required|trim");
-                $this->form_validation->set_rules('city', 'city', 'required|trim');
-                $this->form_validation->set_rules('dia', 'dia', 'required|trim');
-                $this->form_validation->set_rules('mes', 'mes', "required|trim");
-                $this->form_validation->set_rules('ano', 'ano', 'required|trim');
-                $this->form_validation->set_message('required', 'Campo requerido %s');
-
-                if ($this->form_validation->run($this) == false) {
-                    $data['print'] = "Debe llenar todos los campos";
-                    $data['message'] = "false";
-                } else {
-                    $usuario = trim($this->input->post('usuario'));
-                    $clave = trim($this->input->post('clave'));
-                    $name = trim($this->input->post('name'));
-                    $last_name = trim($this->input->post('last_name'));
-                    $address = trim($this->input->post('address'));
-                    $telefono = trim($this->input->post('telefono'));
-                    $dni = trim($this->input->post('dni'));
-                    $email = trim($this->input->post('email'));
-                    $dia = trim($this->input->post('dia'));
-                    $mes = trim($this->input->post('mes'));
-                    $ano = trim($this->input->post('ano'));
-                    $pais = trim($this->input->post('pais'));
-                    $region = trim($this->input->post('region'));
-                    $city = trim($this->input->post('city'));
-                    //create date to DB
-                    $birth_date = "$ano-$mes-$dia";
-
-                    $data = array(
-                        'parents_id' => $parent_id,
-                        'franchise_id' => 6,
-                        'username' => $usuario,
-                        'email' => $email,
-                        'position' => $position,
-                        'point_left' => 0,
-                        'point_rigth' => 0,
-                        'calification' => 0,
-                        'date_start' => "0000/00/00",
-                        'identificador' => $identificator,
-                        'position_temporal' => 1,
-                        'password' => $clave,
-                        'first_name' => $name,
-                        'last_name' => $last_name,
-                        'address' => $address,
-                        'phone' => $telefono,
-                        'city' => $city,
-                        'dni' => $dni,
-                        'birth_date' => $birth_date,
-                        'country' => $pais,
-                        'region' => $region,
-                        'active' => 0,
-                        'calification' => 0,
-                        'status_value' => 1,
-                        'created_at' => date("Y-m-d H:i:s"),
-                    );
-
-                    $customer_id = $this->obj_customer->insert($data);
-                    
-                    //CREATE MESSAGE WELCOME
-                    $name = ucwords("$name $last_name");
-                    $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T. <br>Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
-                    
-                    $data_messages = array(
-                        'customer_id' => $customer_id,
-                        'date' => date("Y-m-d H:i:s"),
-                        'label' => "Soporte",
-                        'subject' => "Bienvenido a 3T",
-                        'messages' => $message,
-                        'type' => 2,
-                        'type_send' => 0,
-                        'active' => 1,
-                        'created_by' => $customer_id,
-                        'status_value' => 1,
-                        'created_at' => date("Y-m-d H:i:s"),
-                    );
-                    //INSERT MESSAGES    
-                    $this->obj_messages->insert($data_messages);
-                    
-                    //CREATE MESSAGE DATA ACCESS
-                    $message = "Ususario: $usuario <br> Contraseña: $clave";
-                    $data_messages = array(
-                        'customer_id' => $customer_id,
-                        'date' => date("Y-m-d H:i:s"),
-                        'label' => "Soporte",
-                        'subject' => "Sus datos de acceso",
-                        'messages' => $message,
-                        'type' => 2,
-                        'type_send' => 0,
-                        'active' => 1,
-                        'created_by' => $customer_id,
-                        'status_value' => 1,
-                        'created_at' => date("Y-m-d H:i:s"),
-                    );
-                    //INSERT MESSAGES    
-                    $this->obj_messages->insert($data_messages);
-
-                    //ACTIVE SESSION
-                    $data_customer_session['customer_id'] = $customer_id;
-                    $data_customer_session['name'] = $name;
-                    $data_customer_session['franchise_id'] = 6;
-                    $data_customer_session['username'] = $usuario;
-                    $data_customer_session['email'] = $email;
-                    $data_customer_session['active'] = 0;
-                    $data_customer_session['logged_customer'] = "TRUE";
-                    $data_customer_session['status'] = 1;
-                    $_SESSION['customer'] = $data_customer_session;
-
-    //                SEND MESSAGES
-                    $images = "static/page_front/images/bienvenido.jpg";
-                    $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
-
-                    // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $usuario</h3><h3>Contraseña: $clave</h3><p>$img_path</p></body></html>", 70, "\n", true);
-                    //Titulo
-                    $titulo = "Bienvenido a 3T Company";
-                    //cabecera
-                    $headers = "MIME-Version: 1.0\r\n"; 
-                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                    $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
-                    //Enviamos el mensaje a tu_dirección_email 
-                    $bool = mail("$email",$titulo,$mensaje,$headers);
-
-                    $data['message'] = "true";
-                    $data['print'] = "Registrado con éxito";
-                    $data['url'] = site_url() . "backoffice";
-                }
-                echo json_encode($data);
-                exit();
-        }
        }
 
+
+       
         public function mensaje(){
         //ACTIVE CUSTOMER
         

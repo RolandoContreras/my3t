@@ -1,3 +1,59 @@
+$(document).ready(function() {
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+    // I use element.value instead value here, value parameter was always null
+    return arg != element.value; 
+}, "Value must not equal arg.");
+    
+    $("#form-register").validate({
+  
+        
+        rules: {
+            usuario: { required: true, minlength: 2},
+            clave: { required: true, minlength: 4},
+            repita_clave: {required: true, minlength: 4, equalTo: "#clave"},
+            name: { required: true, minlength: 2},
+            last_name: { required: true, minlength: 2},
+            address: { required: true, minlength: 2},
+            telefono: { required: true, minlength: 2},
+            dni: { required: true, minlength: 2, number: true},
+            email: { required:true, email: true},
+            dia: { required:true},
+            mes: { required:true},
+            ano: { required:true},
+            pais: { required:true},
+            region: { required:true},
+            city: { required:true, minlength: 2}
+        },
+        messages: {
+            usuario: "Por favor introduzca su usuario.",
+            name: "Por favor introduzca su nombre.",
+            clave: "Por favor introduzca una contraseña mínimo valor 4 caracteres.",
+            last_name: "Por favor introduzca su apellido.",
+            repita_clave: "Por favor introduzca el mismo valor.",
+            address: "Por favor introduzca su dirección.",
+            telefono: "Por favor introduzca su teléfono.",
+            dni: "Por favor introduzca su documento de identidad solo números.",
+            dia: "Por favor introduzca el día de nacimiento.",
+            mes: "Por favor introduzca el mes de nacimiento.",
+            ano: "Por favor introduzca el año de nacimiento.",
+            pais: "Por favor introduzca su país.",
+            region : "Por favor introduzca su región.",
+            city: "Por favor introduzca su ciudad.",
+            email : "Por favor introduzca un e-mail válido."
+        },
+        submitHandler: function(form){
+            var dataString = $('#usuario').val()+'&'+$('#name').val()+'&'+$('#clave').val()+'&'+$('#last_name').val()+'&'+$('#address').val()+'&'+$('#telefono').val()+'&'+$('#dni').val()+'&'+$('#email').val()+'&'+$('#dia').val()+'&'+$('#mes').val()+'&'+$('#ano').val()+'&'+$('#pais').val()+'&'+$('#region').val()+'&'+$('#city').val()+'&'+$('#customer_id').val();
+            $.ajax({
+                type: "POST",
+                url: site + 'register/crear_registro',
+                data: {dataString : dataString},
+                success: function(data){
+                        $("#alert_message").html(data);
+                }
+            });
+        }
+    });
+});
 function validate_username(username){
         $.ajax({
         type: "post",
@@ -34,7 +90,7 @@ function validate_region(id) {
                 if(data.message == "true"){         
                     obj_region = data.print;
                     var texto = "";
-                    texto = texto+'<option value="">Seleccionar  Regi&oacuten</option>';
+                    texto = texto+'<option value="">Seleccionar  Región</option>';
                     var x = 0;               
                     $.each(obj_region, function(){
                         texto = texto+'<option value="'+obj_region[x]['id']+'">'+obj_region[x]['nombre']+'</option>';

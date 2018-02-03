@@ -240,7 +240,7 @@ labVcMaps.push({
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">
                                             <div class="lab-contact-form">
-                                                <form>
+                                                <form method="post" id="form-register">
                                                         <div class="row">
                                                 <?php if(isset($obj_customer)){ ?>
                                                     <div class="col-md-12">
@@ -248,7 +248,7 @@ labVcMaps.push({
                                                             <label>PATROCINADOR</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input type="text" style="border-style: outset !important; width:100% !important" readonly="readonly" value="<?php  
+                                                            <input class="form" type="text" readonly="readonly" value="<?php  
                                                                         if(isset($obj_customer->username)){
                                                                             echo $obj_customer->username;
                                                                         }?>" placeholder="<?php 
@@ -283,10 +283,8 @@ labVcMaps.push({
                                                       <label>USUARIO</label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input class="form" onblur="validate_username(this.value);" id="usuario" type="text" name="usuario" >
+                                                      <input class="form" onblur="validate_username(this.value);" id="usuario" type="text" name="usuario" style="text-transform:lowercase;">
                                                       <span class="alert-0"></span>
-                                                      <!--<span class="success-msg1">Usuario Disponible! <i class="fa fa-check-square-o" aria-hidden="true"></i></span>-->
-                                                      <!--<span class="alert-0"></span>-->
                                                   </div>    
                                             </div>
                                                 
@@ -423,7 +421,7 @@ labVcMaps.push({
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select name="region" id="region" style="margin-bottom: 10px;">
-                                                          <option  selected="selected" value="" >REGIÓN</option>
+                                                          <option  selected="selected" value="">REGIÓN</option>
                                                       </select>
                                                   </div>
                                             </div> 
@@ -439,14 +437,7 @@ labVcMaps.push({
                                           </div>
                                             <div class="col-md-12">&nbsp;</div>    
                                             <div class="col-md-12">
-                                                <a href="javascript:void(0);" onclick="crear_registro();" class="button btn_block">
-                                                                <span class="pre-submit">CREAR CUENTA</span>
-                                                                <!--<span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>-->
-<!--                                                                <span class="loading-bar">
-                                                                        <span></span>
-                                                                </span>-->
-                                                        </a>
-                                                
+                                                <button type="submit" class="button">Crear Cuenta</button>
                                             </div>
                                                 </form>
                                             </div>
@@ -455,16 +446,13 @@ labVcMaps.push({
                                 </div>
                             </div>
                         </div>
+                        <div id="alert_message"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="vc_row-full-width vc_clearfix"></div>
         <script src="<?php echo site_url().'static/page_front/js/register.js';?>"></script>
-        <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
-        <script src="<?php echo site_url().'static/page_front/js/jquery.min.js';?>"></script>
-        <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
     </div>
 </div>
 <style>.contact-form input, 
