@@ -164,7 +164,7 @@ class Register extends CI_Controller {
 //                    $images = "static/page_front/images/bienvenido.jpg";
 //                    $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
 
-                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $usuario</h3><h3>Contraseña: $clave</h3><p>$img_path</p></body></html>", 70, "\n", true);
+                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $username</h3><h3>Contraseña: $password</h3><p>$img_path</p></body></html>", 70, "\n", true);
                     $titulo = "Bienvenido a 3T Company";
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
