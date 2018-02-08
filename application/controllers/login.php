@@ -25,43 +25,32 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
-        public function validate(){
-        if($this->input->is_ajax_request()){
-            
-            $this->form_validation->set_rules('username','username',"required|trim|callback_validar_customer");
-            $this->form_validation->set_rules('password','password','required|trim');              
-    	    $this->form_validation->set_message('required','Campo requerido %s');    	    
-            
-            if ($this->form_validation->run($this)== false){                
-    	        $cadena  = explode("</p>", validation_errors());                
-    	        $cadena2 = implode("<p>", $cadena);
-    	        $cadena3 = explode("<p>", $cadena2);
-    	        array_pop($cadena3);
-    	        array_shift($cadena3);                
-    	        $data['print'] = "Datos invalidos";
-                $data['message'] = "false";       
-                
-    	    }else{
-                $data['message'] = "true";
-    	        $data['print'] = "Bienvenido al sistema";
-                $data['url'] = site_url()."backoffice";               
-            }         
-            echo json_encode($data);  
-            exit();      
-        }
-    }
     
     public function validar_customer(){
-        $username = $this->input->post('username');  
-        $password = $this->input->post('password');  
-        $params = array("select" =>"customer.customer_id,customer.first_name,customer.last_name,customer.username,customer.email,customer.country,customer.active,franchise.franchise_id,customer.status_value",
-                         "where" => "username = '$username' and password = '$password'",
+        //VALIDATE LOGIN HOME
+        //GET DATA STRING
+        $data = $_POST['dataString']; 
+        //EXPLODE BY DEMILITER
+        $string =  explode('&', $data);
+        //SET $VARIBLE
+        $username = strtolower($string[0]);
+        $password = $string[1];
+        //SET PARAMETER
+        $params = array("select" =>"customer.customer_id,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.username,
+                                    customer.email,
+                                    customer.country,
+                                    customer.active,
+                                    franchise.franchise_id,
+                                    customer.status_value",
+                         "where" => "customer.username = '$username' and customer.password = '$password' and customer.status_value = 1",
                          "join" => array('franchise, customer.franchise_id = franchise.franchise_id'));
                         
         $obj_customer = $this->obj_customer->get_search_row($params);
         
         if (count($obj_customer)>0){
-            if ($obj_customer->status_value == 1){                
                 $data_customer_session['customer_id'] = $obj_customer->customer_id;
                 $data_customer_session['name'] = $obj_customer->first_name.' '.$obj_customer->last_name;
                 $data_customer_session['username'] = $obj_customer->username;
@@ -71,15 +60,10 @@ class Login extends CI_Controller {
                 $data_customer_session['active'] = $obj_customer->active;
                 $data_customer_session['logged_customer'] = "TRUE";
                 $data_customer_session['status'] = $obj_customer->status_value;
-                $_SESSION['customer'] = $data_customer_session;                
-                return true;    
-            }else{
-                $this->form_validation->set_message('validar_user', "Usuario Inactivo");
-                return false;
-            }
+                $_SESSION['customer'] = $data_customer_session; 
+                echo "true";
         }else{
-            $this->form_validation->set_message('validar_user', "El usuario y/o la contraseña no son correctas");
-            return false;
+            echo '<div class="alert alert-danger" style="text-align: center">Datos Invalidos.</div>';
         }
     }
     

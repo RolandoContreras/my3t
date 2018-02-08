@@ -61,44 +61,48 @@
                             </div>
                             <div class="vc_tta-panels-container">
                                 <div class="vc_tta-panels">
-                                    <div class="vc_tta-panel vc_active" id="flights" data-vc-content=".vc_tta-panel-body">
+                                    <div class="vc_tta-panel vc_active">
                                         <div class="vc_tta-panel-heading">
                                             <h4 class="vc_tta-panel-title">
                                             </h4>
                                         </div>
                                         <div class="vc_tta-panel-body">
-                                            <div id="nf-form-3-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-3" aria-describedby="nf-form-errors-3" role="form">
+                                            <div id="nf-form-3-cont" class="nf-form-cont">
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div class="lab-contact-form contact-form ">
-                                                            <form action="#" class="contact-form" id="el_59e451473f27d" data-alerts="1" data-alerts-msg="Please fill &quot;%&quot; field." data-check="de6962edc5" data-use-subject="1" novalidate>
+                                                            <form method="post" id="form-login">
                                                                     <div class="row">
                                                                         <div class="col-sm-12">
-                                                                            <div class="form-group labeled-input-row">
-                                                                                <label for="el_59e451473f27d_name">Usuario:</label>
-                                                                                <input name="username" id="username" type="text" placeholder="Ingrese Usuario">
+                                                                            <div class="form-group">
+                                                                                <div class="col-md-3">
+                                                                                    <label>Usuario:</label>
+                                                                                </div>
+                                                                                <div class="col-md-9">
+                                                                                    <input class="form" name="username" id="username" type="text">
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                             <div class="col-sm-12">
-                                                                                <div class="form-group labeled-input-row">
-                                                                                    <label for="el_59e451473f27d_subject"><?php echo replace_vocales_voculeshtml("Contraseña:");?></label>
-                                                                                    <input name="password" id="password" type="password" placeholder="<?php echo replace_vocales_voculeshtml("Ingrese Contraseña");?>">
+                                                                                <div class="form-group">
+                                                                                    <div class="col-md-3">
+                                                                                     <label>Contraseña:</label>   
+                                                                                    </div>
+                                                                                    <div class="col-md-9">
+                                                                                        <input class="form" name="password" id="password" type="password">
+                                                                                    </div>
+                                                                                    
                                                                                 </div>
                                                                             </div>
                                                                     </div> <!-- row -->
-                                                                    <button onclick="send_login();" name="send" class="button">
-                                                                        <span class="pre-submit"><?php echo replace_vocales_voculeshtml("Iniciar de Sesión");?></span>
-                                                                            <span class="success-msg"><?php echo replace_vocales_voculeshtml("Iniciar de Sesión");?></span>
-                                                                            <span class="loading-bar">
-                                                                                    <span></span>
-                                                                            </span>
-                                                                    </button>
+                                                                    <button type="submit" class="button">Iniciar Sesión</button>
                                                             </form>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="nf-loading-spinner"></div>-->
                                             </div>
+                                            <div id="alert_message"></div>
                                     </div>
                                     </div>
                                 </div>
@@ -112,19 +116,9 @@
     </div>
     <div class="vc_row-full-width vc_clearfix"></div>
         <script src="<?php echo site_url().'static/page_front/js/login.js';?>"></script>
-        <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
-        <script src="<?php echo site_url().'static/page_front/js/jquery.min.js';?>"></script>
-        <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
-        <div id="spinner"></div>
-        
-        
+    </div>
 </div>
-</div>
-<style>.main-header.menu-type-standard-menu .standard-menu-container div.menu>ul ul li a:after, 
-.main-header.menu-type-standard-menu .standard-menu-container ul.menu ul li a:after {
-    background-color: transparent !important;
-}</style>
+
 	</div>	
 	    <!--START FOOTER-->
             <?php $this->load->view("footer");?>
@@ -140,14 +134,5 @@
             var upload_max_filesize = '256';
             var wp_memory_limit = '40';
         </script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
-<style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/991533214/?value=0&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-		
-	<!-- ET: 0.076863050460815s 2.1.3ch -->
 </body>
 </html>
