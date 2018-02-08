@@ -16,6 +16,7 @@ $(document).ready(function() {
                 data: {dataString : dataString},
                 success: function(data){
                     if(data == "true"){
+                        $("#alert_message").html('<div class="alert alert-success" style="text-align: center">Bienvenido.</div>');
                         location.href = site + "backoffice";
                     }else{
                         $("#alert_message").html(data);
