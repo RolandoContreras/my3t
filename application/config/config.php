@@ -23,8 +23,8 @@
 |
 */
 
-//$config['base_url'] = 'http://localhost/my3t/';
-$config['base_url'] = 'https://my3t.club/';
+$config['base_url'] = 'http://localhost/my3t/';
+//$config['base_url'] = 'https://my3t.club/';
 
 
 /*

@@ -239,7 +239,7 @@ labVcMaps.push({
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Selecciona un Paquete</h3>
-                                <p style="text-align: center;">Elije un paquete y sé parte de nueva revolución de 3T.</p>
+                                <p style="text-align: center;">Elije un paquete y sé parte de nueva revolución de 3T Club.</p>
                             </div>
                         </div>
                     </div>
@@ -369,14 +369,13 @@ labVcMaps.push({
                                             <div class="wpb_text_column wpb_content_element  post-formatting " >
                                                 <div class="wpb_wrapper">
                                                     <p><span style="color: #222222;"><strong>Visítanos:</strong></span></p>
-                                                        <p>Av. La Encalada # 1171</p>
-                                                        <p>Monterrico - Santiago de surco</p>
-                                                        <p>Lima, Perú</p>
+                                                        <p>Calle Germán Schreiber #276</p>
+                                                        <p>Edificio Schreiber Business Center</p>
+                                                        <p>San Isidro - Lima, Perú</p>
                                                         <p>&nbsp;</p>
                                                         <p><span style="color: #222222;"><strong>Horario de Trabajo</strong>:</span></p>
-                                                        <p>Lunes — Viernes (<span style="color: #222222;"><strong>08:00 — 17:00</strong></span>)</p>
-                                                        <p>Sabados (<span style="color: #222222;"><strong>09:00 — 15:00</strong></span>)</p>
-                                                        <p>&nbsp;</p>
+                                                        <p>Lunes — Viernes (<span style="color: #222222;"><strong>09:00 — 18:00</strong></span>)</p>
+                                                        <p>Sabados (<span style="color: #222222;"><strong>09:00 — 16:00</strong></span>)</p>
                                                 </div>
                                             </div>
                                         </div>
