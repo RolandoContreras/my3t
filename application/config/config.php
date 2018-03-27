@@ -22,8 +22,9 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'http://criptowin.com';
-$config['base_url'] = 'http://localhost/my3t/';
+
+//$config['base_url'] = 'http://localhost/my3t/';
+$config['base_url'] = 'https://my3t.club/';
 
 
 /*
