@@ -66,29 +66,7 @@
                                             <div class="col-sm-2" style="padding: 0;"></div>
                                             <div class="col-sm-8" style="padding: 0;">
                                               <div class="div-img">
-                                                   <?php
-                                                        switch ($obj_customer->franchise_id) {
-                                                            case 1:
-                                                                $images = "basic.png";
-                                                                break;
-                                                            case 2:
-                                                                $images = "executive.png";
-                                                                break;
-                                                            case 3:
-                                                                $images = "investor.png";
-                                                                break;
-                                                            case 4:
-                                                                $images = "business.png";
-                                                                break;
-                                                            case 5:
-                                                                $images = "master.png";
-                                                                break;
-                                                            case 6:
-                                                                $images = "membership.png";
-                                                                break;
-                                                            }
-                                                     ?>
-                                                  <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="paquete" width="150">
+                                                  <img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="paquete" width="150">
                                               </div>
                                             </div>
                                                   <?php if($obj_customer->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
@@ -122,29 +100,7 @@
                                             <div class="col-sm-2" style="padding: 0;"></div>
                                             <div class="col-sm-8" style="padding: 0;">
                                               <div class="div-img">
-                                                   <?php
-                                                        switch ($value->franchise_id) {
-                                                               case 1:
-                                                                    $images = "basic.png";
-                                                                    break;
-                                                                case 2:
-                                                                    $images = "executive.png";
-                                                                    break;
-                                                                case 3:
-                                                                    $images = "investor.png";
-                                                                    break;
-                                                                case 4:
-                                                                    $images = "business.png";
-                                                                    break;
-                                                                case 5:
-                                                                    $images = "master.png";
-                                                                    break;
-                                                                case 6:
-                                                                    $images = "membership.png";
-                                                                    break;
-                                                                }
-                                                    ?>
-                                            <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="paquete" width="150">
+                                            <img src="<?php echo site_url().'static/backoffice/images/'.$value->img;?>" alt="paquete" width="150">
                                               </div>
                                             </div>
                                           </div>
