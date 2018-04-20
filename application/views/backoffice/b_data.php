@@ -32,8 +32,8 @@
     <!--END SHOW ALERT MESSAGE INFORMATIVE-->
     
     <div class="tab">
-        <button class="tablinks active"  onclick="openCity(event, 'principal')"><b><?php echo replace_vocales_voculeshtml("INFORMACIÓN PRINCIPAL");?></b></button>
-        <button class="tablinks" onclick="openCity(event, 'payments')"><b><?php echo replace_vocales_voculeshtml("PAGO Y CONTRASEÑAS");?></b></button>
+        <button class="tablinks active"  onclick="openCity(event, 'principal')"><b><?php echo "INFORMACIÓN PRINCIPAL";?></b></button>
+        <button class="tablinks" onclick="openCity(event, 'payments')"><b><?php echo "PAGO Y CONTRASEÑAS";?></b></button>
     </div>
     
                     
@@ -46,9 +46,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-default panel-form" data-behaviour="container">
                             <div class="panel-heading text-uppercase clearfix">
-                                <h3 class="title"><?php echo replace_vocales_voculeshtml("Información Principal");?>
-                                    <button type="button" onclick="alter_movil();" class="btn btn-primary btn-sm edit-btn"><i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar</button>
-                                </h3>
+                                <h3 class="title"><?php echo "Información Principal";?></h3>
                             </div>
                             <hr class="style-2"/>
                             <div class="panel-body">         
@@ -74,7 +72,7 @@
                                     <div class="media">
                                         <div class="media-left"><i class="fa fa-envelope fa-3x"></i></div>
                                         <div class="media-body">
-                                            <div class="control-label"><?php echo replace_vocales_voculeshtml("Dirección e-mail");?></div>
+                                            <div class="control-label"><?php echo "E-mail";?></div>
                                             <p class="form-control">
                                                 <span><?php echo $obj_customer->email;?></span>
                                                 <input type="hidden" id="customer_id" name="customer_id" disabled value="<?php echo $obj_customer->customer_id;?>">
@@ -89,9 +87,9 @@
                                     <div class="media">
                                         <div class="media-left"><i class="fa fa-mobile fa-4x" aria-hidden="true"></i></div>
                                         <div class="media-body">
-                                            <div class="control-label"><?php echo replace_vocales_voculeshtml("Teléfono Movil:");?></div>
+                                            <div class="control-label"><?php echo "Teléfono Movil:";?></div>
                                             <p class="form-control">
-                                                <input id="phone" type="text" class="form-control" value="<?php echo $obj_customer->phone;?>">
+                                                <span><?php echo $obj_customer->phone;?></span>
                                             </p>
                                         </div>
                                     </div>
@@ -104,14 +102,13 @@
             </div>
         </div>
     </div>
-             <!--<div id="spinner"></div>-->
     <div class="row">
         <div class="col-md-9">
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default panel-form" data-behaviour="container">
                         <div class="panel-heading text-uppercase clearfix">
-                            <h3 class="title"><?php echo replace_vocales_voculeshtml("Activación");?></h3>
+                            <h3 class="title"><?php echo "Activación";?></h3>
                         </div>
                        <hr class="style-2"/> 
                         <div class="panel-body">
@@ -122,7 +119,7 @@
                                                 <div class="media-left"><i class="fa fa-calendar-check-o fa-3x"></i></div>
                                                 <div class="media-body">
                                                      <label class="control-label"><?php echo "Fecha de Inicio :";?></label>
-                                                    <p class="form-control"><span><?php echo formato_fecha_barras("$obj_customer->date_start");?></span></p>
+                                                    <p class="form-control"><span><?php echo formato_fecha_barras("$obj_customer->created_at");?></span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -131,9 +128,9 @@
                                             <div class="media">
                                                 <div class="media-left"><i class="fa fa-calendar-check-o fa-3x"></i></div>
                                                 <div class="media-body">
-                                                     <label class="control-label"><?php echo "Fecha de Termino :";?></label>
+                                                     <label class="control-label"><?php echo "Fecha de Activación :";?></label>
                                                     <p class="form-control">
-                                                    <span><?php echo formato_fecha_barras("$obj_customer->date_end");?></span>
+                                                    <span><?php if($obj_customer->date_start == "0000-00-00"){echo "---";}else{echo formato_fecha_barras("$obj_customer->date_start");}?></span>
                                                 </p>
                                                 </div>
                                             </div>
@@ -144,68 +141,12 @@
                         </div>
                     </div>
                 </div>
-            
             <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-default panel-form" data-behaviour="container">
-                        <div class="panel-heading text-uppercase clearfix">
-                            <h3 class="title">
-                                <?php echo replace_vocales_voculeshtml("Dirección");?>
-                                <button type="button" onclick="alter_address();" class="btn btn-primary btn-sm edit-btn" ><i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar</button>
-                            </h3>
-                        </div>
-                       <hr class="style-2"/> 
-                        <div class="panel-body">
-                                <div data-behaviour="content">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="media">
-                                                <div class="media-left"><i class="fa fa-globe fa-3x"></i></div>
-                                                <div class="media-body">
-                                                     <label class="control-label"><?php echo replace_vocales_voculeshtml("País :");?></label>
-                                                    <p class="form-control"><span><?php echo $obj_customer->pais;?></span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-sm-6">
-                                            <div class="media">
-                                                <div class="media-left"><i class="fa fa-globe fa-3x"></i></div>
-                                                <div class="media-body">
-                                                     <label class="control-label"><?php echo replace_vocales_voculeshtml("Región :");?></label>
-                                                     <p class="form-control"><span><?php echo $obj_customer->region;?></span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <hr class="style-1"/>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label class="control-label"><?php echo replace_vocales_voculeshtml("Dirección :");?></label>
-                                                <p class="form-control">
-                                                    <input type="text" id="address" class="form-control" value="<?php echo $obj_customer->address;?>">
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label class="control-label"><?php echo replace_vocales_voculeshtml("Ciudad :");?></label>
-                                                <p class="form-control"><span data-target="postcode"><?php echo $obj_customer->city;?></span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-md-6">
                         <div class="panel panel-default panel-form fix-info">
                             <div class="panel-heading text-uppercase">
                                 <div class="clearfix">
-                                    <h3 class="title"><?php echo replace_vocales_voculeshtml("Información de Nacimiento");?></h3>
+                                    <h3 class="title"><?php echo "Información de Nacimiento";?></h3>
                                 </div>
                             </div>
                             <hr class="style-1"/>
@@ -215,18 +156,8 @@
                                             <div class="media">
                                                 <div class="media-left"><i class="fa fa-calendar fa-3x"></i></div>
                                                 <div class="media-body">
-                                                     <label class="control-label"><?php echo replace_vocales_voculeshtml("Fecha de Nacimiento :");?></label>
+                                                     <label class="control-label"><?php echo "Fecha de Nacimiento :";?></label>
                                                      <p class="form-control"><span><?php echo formato_fecha_barras($obj_customer->birth_date);?></span></p>
-                                                </div>
-                                            </div>
-                                    </div>
-                                <hr class="style-1"/>
-                                    <div class="form-group has-feedback">
-                                          <div class="media">
-                                                <div class="media-left"><i class="fa fa-calendar fa-3x"></i></div>
-                                                <div class="media-body">
-                                                     <label class="control-label"><?php echo replace_vocales_voculeshtml("País de Nacimiento");?></label>
-                                                     <p class="form-control"><span><?php echo $obj_customer->pais;?></span></p>
                                                 </div>
                                             </div>
                                     </div>
@@ -234,33 +165,81 @@
                             </div>
                         </div>
                     </div>
-                    
                 <div class="col-md-6">
                     <div class="panel panel-default panel-form fix-info">
                         <div class="panel-heading text-uppercase">
                             <div class="clearfix">
-                                <h3 class="title"><?php echo replace_vocales_voculeshtml("Identificación");?></h3>
+                                <h3 class="title"><?php echo "Identificación";?></h3>
                             </div>
                         </div>
                         <hr class="style-1"/>
                         <div class="panel-body">
                             <div data-behaviour="content">
                                 <div class="form-group has-feedback" data-behaviour="element-content">
-                                    
                                     <div class="media">
-                                                <div class="media-left"><i class="fa fa-id-card fa-3x"></i></div>
-                                                <div class="media-body">
-                                                     <label class="control-label"><?php echo replace_vocales_voculeshtml("Pasaporte / Numero de Identidad:");?></label>
-                                                     <p class="form-control"><span><?php echo $obj_customer->dni;?></span></p>
-                                                </div>
-                                            </div>
-                                   
+                                        <div class="media-left"><i class="fa fa-id-card fa-3x"></i></div>
+                                        <div class="media-body">
+                                             <label class="control-label"><?php echo "Pasaporte / Numero de Identidad:";?></label>
+                                             <p class="form-control"><span><?php echo $obj_customer->dni;?></span></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-form" data-behaviour="container">
+                        <div class="panel-heading text-uppercase clearfix">
+                            <h3 class="title"><?php echo "Dirección";?></h3>
+                        </div>
+                       <hr class="style-2"/> 
+                        <div class="panel-body">
+                                <div data-behaviour="content">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="media">
+                                                <div class="media-left"><i class="fa fa-globe fa-3x"></i></div>
+                                                <div class="media-body">
+                                                     <label class="control-label"><?php echo "País :";?></label>
+                                                    <p class="form-control"><span><?php echo $obj_customer->pais;?></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="media">
+                                                <div class="media-left"><i class="fa fa-globe fa-3x"></i></div>
+                                                <div class="media-body">
+                                                     <label class="control-label"><?php echo "Región :";?></label>
+                                                     <p class="form-control"><span><?php echo $obj_customer->region;?></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <hr class="style-1"/>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo "Dirección :";?></label>
+                                                    <p class="form-control"><span><?php echo $obj_customer->address;?></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo "Ciudad :";?></label>
+                                                <p class="form-control"><span><?php echo $obj_customer->city;?></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         
         <div class="col-md-3">
@@ -305,7 +284,7 @@
             <div class="col-md-12">
                 <div class="panel panel-default panel-form">
                     <div class="panel-heading text-uppercase relative">
-                    <h3 class="title">Nuevos miembros</h3>
+                    <h3 class="title">Nuevos Miembros</h3>
                         <span class="invite-link-more-info" data-tooltip data-tooltip-class="tooltip-info" title="Antes de crear una cuenta es fundamental indicar la posición para crear una organización de acuerdo a su requerimiento.">
                             <i class="fa fa-lg fa-question-circle"></i>
                         </span>
@@ -323,11 +302,15 @@
                                         <div class="radio"> 
                                             <label class="required"><input type="radio" name="pierna" required="required" <?php if($obj_customer->position_temporal == 2){ ?> checked="" <?php } ?> value="2" /> Derecha</label>
                                         </div>
+                                        <div class="radio"> 
+                                            <label class="required"><input type="radio" name="pierna" required="required" <?php if($obj_customer->position_temporal == 3){ ?> checked="" <?php } ?> value="3" /> Equilibrio</label>
+                                        </div>
                                     </div>
                                      <div class="form-group mb-10">
                                         <div class="mb-10">
                                             <a class="btn btn-primary btn-block" onclick="alter_position();" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Guardar Posición");?></a>
                                         </div>
+                                         <div id="alert_message"></div>
                                     </div>
                                 </div>
                             </div>

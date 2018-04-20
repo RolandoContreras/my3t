@@ -45,7 +45,7 @@
             <div class="vc_column-inner vc_custom_1498222750047">
                 <div class="wpb_wrapper">
                     <div class="section-title  vc_custom_1498743833540">
-                        <H1><?php echo replace_vocales_voculeshtml("Inicio De Sesión");?></H1>
+                        <H1><?php echo "Inicio De Sesión";?></H1>
                         </div>
                     <div class="vc_tta-container" data-vc-action="collapse">
                         <div class="vc_general vc_tta vc_tta-tabs vc_tta-color-white vc_tta-style-flat vc_tta-shape-square vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left vc_custom_1497012475617">

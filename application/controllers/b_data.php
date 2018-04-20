@@ -151,6 +151,28 @@ class B_data extends CI_Controller {
            $pierna = $this->input->post('pierna');
            $customer_id = $this->input->post('customer_id');
            
+           if($pierna == 3){
+                $params = array(
+                        "select" =>"point_left,
+                                    point_rigth",
+                        "where" => "customer_id = $customer_id");
+                $obj_customer = $this->obj_customer->get_search_row($params); 
+                $left = $obj_customer->point_left;
+                $rigth = $obj_customer->point_rigth;
+                
+                switch($left){
+                    case $left < $rigth:
+                        $pierna = 1;
+                        break;
+                    case $left > $rigth:
+                        $pierna = 2;
+                        break;
+                    case $left == $rigth:
+                        $pierna = 1;
+                        break;
+                }
+           }
+           
            //UPDATE DATA EN CUSTOMER TABLE
            $data = array(
                            'position_temporal' => $pierna,
