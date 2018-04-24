@@ -118,7 +118,6 @@
         <script src="<?php echo site_url().'static/page_front/js/login.js';?>"></script>
     </div>
 </div>
-
 	</div>	
 	    <!--START FOOTER-->
             <?php $this->load->view("footer");?>

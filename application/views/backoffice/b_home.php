@@ -91,7 +91,7 @@
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading">Rango</h5>
-                                <strong>Sin Rango</strong>
+                                <strong><?php echo $obj_customer->ranges;?></strong>
                                 </div>
                                 <div class="media-right media-middle">
                                     <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
@@ -102,44 +102,44 @@
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading">Próximo Rango - <strong>Start</strong></h5>
-                                <strong>1000</strong>
+                                    <h5 class="media-heading">Próximo Rango</h5>
+                                <strong><?php echo $next_range->name;?> / <?php echo $next_range->point_grupal;?> PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
                                     <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="col-flex box-height">
+                        <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                <h5 class="media-heading">Puntaje del día</h5>
-                                <strong>0 PTS</strong>
+                                <h5 class="media-heading">Puntaje Izquierda</h5>
+                                <strong><?php echo $obj_customer->point_left;?> PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-align-left fa-3x"></i>
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="col-flex box-height">
+                        <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                <h5 class="media-heading">Puntaje Semanal</h5>
-                                <strong>0 PTS</strong>
+                                <h5 class="media-heading">Puntaje Derecha</h5>
+                                <strong><?php echo $obj_customer->point_rigth;?> PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-align-right fa-3x"></i>
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="col-flex box-height">
+                        <a href="<?php echo site_url().'binary';?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading">Puntaje Mensual</h5>
-                                <strong>0 PTS</strong>
+                                    <h5 class="media-heading">Binario</h5>
+                                <strong><?php echo $obj_customer->binary == 1 ?"Calificado":"No Calificado";?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-users fa-3x"></i>
                                    
                                 </div>
                             </div>
@@ -149,33 +149,33 @@
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading">Próximo Reconsumo</h5>
-                                <strong>Ninguna</strong>
+                                    <h5 class="media-heading">Calificación Izquierda</h5>
+                                <strong><?php echo $obj_customer->point_calification_left == 1 ?"Calificado":"No Calificado";?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-arrow-left fa-3x"></i>
                                 </div>
                             </div>
                         </a>
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading">Millas</h5>
-                                <strong>0 PTS</strong>
+                                    <h5 class="media-heading">Calificación Derecha</h5>
+                                <strong><?php echo $obj_customer->point_calification_rigth == 1 ?"Calificado":"No Calificado";?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-arrow-right fa-3x"></i>
                                 </div>
                             </div>
                         </a>
-                        <a href="<?php echo site_url('backoffice/binario');?>" class="col-flex box-height">
+                        <a href="<?php echo site_url('backoffice/unilevel');?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                 <h5 class="media-heading">Patrocinios Directos</h5>
                                 <strong><?php echo $obj_customer->direct;?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-user-plus fa-3x"></i>
                                 </div>
                             </div>
                         </a>
@@ -197,7 +197,7 @@
                                 <strong><?php echo formato_fecha_barras($obj_customer->created_at);?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-area-chart fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -208,7 +208,7 @@
                                 <button class="btn btn-success" type="button">VER</button>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-area-chart fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cart-plus fa-3x"></i>
                                 </div>
                             </div>
                         </a>
@@ -227,23 +227,23 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-2"> 
                             <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/basic.jpg";?>" alt="Paquete Basic"/></p>
-                            <p><button type="button" onclick="make_pedido('1');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p><button type="button" disabled="disabled" onclick="make_pedido('1');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                        <div class="col-md-2"> 
                             <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/executive.jpg";?>" alt="Paquete Executive"/></p>
-                            <p><button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p><button type="button" disabled="disabled" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-2"> 
                             <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/investor.jpg";?>" alt="Paquete Investor"/></p>
-                            <p><button type="button" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p><button type="button" disabled="disabled" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-2"> 
                             <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/business.jpg";?>" alt="Paquete Business"/></p>
-                            <p><button type="button" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p><button type="button" disabled="disabled" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-2"> 
                             <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/master.jpg";?>" alt="Paquete Master"/></p>
-                            <p><button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p><button type="button" disabled="disabled" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-4"></div>

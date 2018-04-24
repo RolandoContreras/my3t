@@ -9,6 +9,7 @@ class B_home extends CI_Controller {
         $this->load->model("franchise_model","obj_franchise");
         $this->load->model("post_model","obj_post");
         $this->load->model("messages_model","obj_messages");
+        $this->load->model("ranges_model","obj_ranges");
     }
 
     public function index()
@@ -38,7 +39,7 @@ class B_home extends CI_Controller {
                                     customer.active,
                                     customer.dni,
                                     customer.birth_date,
-                                    customer.calification,
+                                    customer.binary,
                                     customer.point_calification_left,
                                     customer.point_calification_rigth,
                                     customer.point_left,
@@ -53,29 +54,26 @@ class B_home extends CI_Controller {
                                     franchise.price,
                                     franchise.img,
                                     franchise.name as franchise,
+                                    ranges.range_id,
+                                    ranges.name as ranges
                                     ",
                          "where" => "customer.customer_id = $customer_id",
-                         "join" => array('franchise, customer.franchise_id = franchise.franchise_id',)
+                         "join" => array('franchise, customer.franchise_id = franchise.franchise_id',
+                                         'ranges, customer.range_id = ranges.range_id')
                                         );
             $obj_customer = $this->obj_customer->get_search_row($params);
+
+            //GET NEXT RANGE
+            $range_id = $obj_customer->range_id;
+            $next_range = $this->next_range($range_id);
             
             //GET TOTAL AMOUNT
-                $params_total = array(
-                        "select" =>"sum(amount) as total,
-                                    (select sum(amount) FROM commissions WHERE status_value <= 2 and customer_id = $customer_id) as balance",
-                         "where" => "commissions.customer_id = $customer_id",
-                    );
+            $params_total = array(
+                                "select" =>"sum(amount) as total,
+                                            (select sum(amount) FROM commissions WHERE status_value <= 2 and customer_id = $customer_id) as balance",
+                                 "where" => "commissions.customer_id = $customer_id",
+                                );
              $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
-             
-             
-              //GET POST (NEWS)
-//            $params_post = array(
-//                                    "select" =>"*",
-//                                     "where" => "status_value = 1",
-//                                     "order" => "date DESC",
-//                                     "limit" => "3");
-//                
-//           $obj_post = $this->obj_post->search($params_post);
              
             //GET PRICE BTC
             $params_price_btc = array(
@@ -125,10 +123,10 @@ class B_home extends CI_Controller {
                         break;
                 }
                 
+                $this->tmp_backoffice->set("next_range",$next_range);
                 $this->tmp_backoffice->set("messages_informative",$messages_informative);
                 $this->tmp_backoffice->set("obj_message",$obj_message);
                 $this->tmp_backoffice->set("all_message",$all_message);
-//                $this->tmp_backoffice->set("obj_post",$obj_post);
                 $this->tmp_backoffice->set("text_franchise",$text_franchise);
                 $this->tmp_backoffice->set("images_franchise",$images_franchise);
                 $this->tmp_backoffice->set("price_btc",$price_btc);
@@ -137,6 +135,17 @@ class B_home extends CI_Controller {
                 $this->tmp_backoffice->set("obj_customer",$obj_customer);
                 $this->tmp_backoffice->render("backoffice/b_home");
     }
+    
+    public function next_range($range_id){
+            $params = array(
+                        "select" =>"range_id,
+                                    name,
+                                    point_grupal",
+                         "where" => "range_id > $range_id");
+            $next_range = $this->obj_ranges->get_search_row($params);
+            return $next_range;
+    }
+    
     
     public function make_pedido(){
 
