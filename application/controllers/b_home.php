@@ -75,17 +75,12 @@ class B_home extends CI_Controller {
                                 );
              $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
              
-            //GET PRICE BTC
-            $params_price_btc = array(
-                                    "select" =>"",
-                                     "where" => "otros_id = 1");
-                
-           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = "$".number_format($obj_otros->precio_btc,2);
-           
-           $obj_total = $obj_commissions->total;
-           $obj_balance = $obj_commissions->balance;
-           
+             $obj_total = $obj_commissions->total;
+             $obj_balance = $obj_commissions->balance;
+             
+             //GET PRICE BTC
+             $price_btc = $this->btc_price();
+             
               //SELECT FRANCHISE_ID 
               
                 switch ($obj_customer->franchise_id) {
@@ -134,6 +129,32 @@ class B_home extends CI_Controller {
                 $this->tmp_backoffice->set("obj_balance",$obj_balance);
                 $this->tmp_backoffice->set("obj_customer",$obj_customer);
                 $this->tmp_backoffice->render("backoffice/b_home");
+    }
+    
+    public function btc_price(){
+             $url = "https://www.bitstamp.net/api/ticker";
+             $fgc = file_get_contents($url);
+             $json = json_decode($fgc, true);
+             $price_btc = $json['last'];
+             $open = $json['open'];
+             
+             if($open > $price_btc){
+                 //PRICE WENT UP
+                 $color = "red";
+                 $changes = $price_btc - $open;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2); 
+             }else{
+                 //PRICE WENT DOWN
+                 $color = "green";
+                 $changes = $open - $price_btc;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2);   
+             }
+             
+             return "$".$price_btc."&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
     }
     
     public function next_range($range_id){
