@@ -121,6 +121,8 @@ class B_unilevel extends CI_Controller {
                                                 'franchise, customer.franchise_id = franchise.franchise_id')
                                                 );
                  $obj_customer_n3 = $this->obj_customer->search($params_customer_n3);
+                 $direct_3 = count($obj_customer_n3);
+                 $this->tmp_backoffice->set("direct_3",$direct_3);
                  $this->tmp_backoffice->set("obj_customer_n3",$obj_customer_n3);
                  
                  //GET CUSTOMER BY PARENTS_ID 3 LEVEL
@@ -151,6 +153,8 @@ class B_unilevel extends CI_Controller {
                                                 'franchise, customer.franchise_id = franchise.franchise_id')
                                                 );
                             $obj_customer_n4 = $this->obj_customer->search($params_customer_n3);
+                            $direct_4 = count($obj_customer_n4);
+                            $this->tmp_backoffice->set("direct_4",$direct_4);
                             $this->tmp_backoffice->set("obj_customer_n4",$obj_customer_n4);   
                     }  
                  }

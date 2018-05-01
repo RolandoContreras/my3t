@@ -42,7 +42,9 @@
                                    <a href="javascript:history.back(1)"><button class="btn btn-success btn-outline" type="button"><?php echo replace_vocales_voculeshtml("Volver Atrás");?></button></a>
                                </div>
                                <div class="alert alert-inverse pull-right" style="opacity: 0.7;" aria-label="Right Align">
-                                   <button class="btn btn-success btn-outline" type="button">Patrocinios Directos: <?php echo $obj_customer->direct;?></button>
+                                   <button class="btn btn-success btn-outline" type="button">Patrocinios Directos: <?php echo $obj_customer->direct;?></button><br/><br/>
+                                   <button class="btn btn-success btn-outline" type="button">2° Patrocinios Directos: <?php echo isset($direct_3)?$direct_3:"0";?></button><br/><br/>
+                                   <button class="btn btn-success btn-outline" type="button">3° Patrocinios Directos: <?php echo isset($direct_4)?$direct_4:"0";?></button>
                                 </div>
                             <div class="tree" style="width: 1000%;"> 
                                 <div class="col-lg-12"><hr class="style-2"></div>
