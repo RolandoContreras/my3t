@@ -66,15 +66,13 @@
                                             <div class="col-sm-2" style="padding: 0;"></div>
                                             <div class="col-sm-8" style="padding: 0;">
                                               <div class="div-img">
-                                                  <img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="paquete" width="150">
+                                                  <img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="paquete" width="100">
                                               </div>
                                             </div>
                                                   <?php if($obj_customer->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                           </div>
                                           </a>
-                                        <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$obj_customer->customer_id;?>"><?php echo $obj_customer->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
-                                            
-                                                </span>
+                                        <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$obj_customer->customer_id;?>"><?php echo $obj_customer->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span></span>
                             <!--BEGIN SECOND LEVEL-->
                             <?php 
                             if(count($obj_customer_n2) > 0){ ?>
@@ -93,20 +91,98 @@
                                                       <?php } ?>
 
                                                           Calificación:<?php echo $value->franchise;?>
-                                                Pais: <?php echo $value->pais;?>
-                                                Padre:<?php echo $obj_customer->username;?>" class="some-popover-link">
+                                                Pais: <?php echo $value->pais;?>" class="some-popover-link">
 
                                           <div class="row imagen-profile">
                                             <div class="col-sm-2" style="padding: 0;"></div>
                                             <div class="col-sm-8" style="padding: 0;">
                                               <div class="div-img">
-                                            <img src="<?php echo site_url().'static/backoffice/images/'.$value->img;?>" alt="paquete" width="150">
+                                                  <img src="<?php echo site_url().'static/backoffice/images/'.$value->img;?>" alt="paquete" width="80">
                                               </div>
                                             </div>
                                           </div>
                                           </a>
                                             <?php if($value->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
                                             <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value->customer_id;?>"><?php echo $value->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                            
+                                                    <!--BEGIN THIRD LEVEL-->
+                                                            <?php 
+                                                            if(count($obj_customer_n3) > 0){ ?>
+                                                                <ul>
+                                                                    <?php 
+                                                                     foreach ($obj_customer_n3 as $value3) { ?>
+                                                                        <?php if($value->customer_id == $value3->parents_id){ ?>
+                                                                                <li>
+                                                                                    <a href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
+                                                                                        Nombre:<?php echo $value3->first_name." ".$value3->last_name;?>
+                                                                                        Fecha Registro:<?php echo $value3->created_at;?>
+                                                                                        Estatus:
+                                                                                        <?php if($value3->active == 1){ ?>
+                                                                                                  Activo
+                                                                                              <?php }else{ ?>
+                                                                                                  Inactivo
+                                                                                              <?php } ?>
+
+                                                                                                  Calificación:<?php echo $value3->franchise;?>
+                                                                                        Pais: <?php echo $value3->pais;?>" class="some-popover-link">
+
+                                                                                  <div class="row imagen-profile">
+                                                                                    <div class="col-sm-2" style="padding: 0;"></div>
+                                                                                    <div class="col-sm-8" style="padding: 0;">
+                                                                                      <div class="div-img">
+                                                                                    <img src="<?php echo site_url().'static/backoffice/images/'.$value3->img;?>" alt="paquete" width="80">
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                  </a>
+                                                                                    <?php if($value3->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
+                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value3->customer_id;?>"><?php echo $value3->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                                                                    <!--BEGIN FOURD LEVEL-->
+                                                                                            <?php 
+                                                                                            if(count($obj_customer_n4) > 0){ ?>
+                                                                                                <ul>
+                                                                                                    <?php 
+                                                                                                     foreach ($obj_customer_n4 as $value4) { ?>
+                                                                                                        <?php if($value3->customer_id == $value4->parents_id){ ?>
+                                                                                                                <li>
+                                                                                                                    <a href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
+                                                                                                                        Nombre:<?php echo $value4->first_name." ".$value4->last_name;?>
+                                                                                                                        Fecha Registro:<?php echo $value4->created_at;?>
+                                                                                                                        Estatus:
+                                                                                                                        <?php if($value4->active == 1){ ?>
+                                                                                                                                  Activo
+                                                                                                                              <?php }else{ ?>
+                                                                                                                                  Inactivo
+                                                                                                                              <?php } ?>
+
+                                                                                                                                  Calificación:<?php echo $value4->franchise;?>
+                                                                                                                        Pais: <?php echo $value4->pais;?>" class="some-popover-link">
+
+                                                                                                                  <div class="row imagen-profile">
+                                                                                                                    <div class="col-sm-2" style="padding: 0;"></div>
+                                                                                                                    <div class="col-sm-8" style="padding: 0;">
+                                                                                                                      <div class="div-img">
+                                                                                                                    <img src="<?php echo site_url().'static/backoffice/images/'.$value4->img;?>" alt="paquete">
+                                                                                                                      </div>
+                                                                                                                    </div>
+                                                                                                                  </div>
+                                                                                                                  </a>
+                                                                                                                    <?php if($value4->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
+                                                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value4->customer_id;?>"><?php echo $value4->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                                                                                                    <br><br><br>
+                                                                                                                </li>
+                                                                                                                <?php } ?>
+                                                                                                     <?php } ?>
+                                                                                            </ul>
+                                                                                           <?php } ?>
+                                                                                    
+                                                                                    <br><br><br>
+                                                                                </li>
+                                                                                <?php } ?>
+                                                                     <?php } ?>
+                                                            </ul>
+                                                           <?php } ?>
+                                            
                                             <br><br><br>
                                         </li>
                                         

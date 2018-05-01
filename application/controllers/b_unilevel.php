@@ -46,42 +46,32 @@ class B_unilevel extends CI_Controller {
             $customer_id = $_SESSION['customer']['customer_id'];
         }    
         
-        /// VISTA
+        /// GET DATA CUSTOMER SESSION
         $params = array(
                         "select" =>"(select count(customer_id) from customer where parents_id = $customer_id) as direct,
                                     customer.customer_id,
                                     customer.parents_id,
                                     customer.username,
-                                    customer.email,
                                     customer.created_at,
-                                    customer.position_temporal,
-                                    customer.phone,
-                                    customer.password,
                                     franchise.franchise_id,
                                     customer.first_name,
                                     customer.last_name,
-                                    customer.dni,
-                                    customer.birth_date,
-                                    customer.address,
-                                    customer.city,
                                     customer.active,
-                                    customer.status_value,
                                     paises.nombre as pais,
                                     franchise.name as franchise,
-                                    franchise.img
-                                    ",
+                                    franchise.img",
                         "where" => "customer.customer_id = $customer_id and paises.id_idioma = 7",
                         "join" => array('paises, customer.country = paises.id',
                                         'franchise, customer.franchise_id = franchise.franchise_id')
                                         );
          $obj_customer = $this->obj_customer->get_search_row($params);  
-         
+
+         //GET CUSTOMER BY PARENTS_ID
          $params_parents = array(
                         "select" =>"customer.username",
                         "where" => "customer.customer_id = $obj_customer->parents_id");
          $obj_customer_parent = $this->obj_customer->get_search_row($params_parents);  
          
-         //GET CUSTOMER BY PARENTS_ID
          $params_customer_n2 = array(
                         "select" =>"customer.customer_id,
                                     customer.parents_id,
@@ -92,7 +82,6 @@ class B_unilevel extends CI_Controller {
                                     customer.last_name,
                                     franchise.franchise_id,
                                     customer.active,
-                                    customer.status_value,
                                     paises.nombre as pais,
                                     franchise.name as franchise,
                                     franchise.img
@@ -101,9 +90,72 @@ class B_unilevel extends CI_Controller {
                         "join" => array('paises, customer.country = paises.id',
                                         'franchise, customer.franchise_id = franchise.franchise_id')
                                         );
-
          $obj_customer_n2 = $this->obj_customer->search($params_customer_n2);
+         $this->tmp_backoffice->set("obj_customer_n2",$obj_customer_n2);
          
+         //GET CUSTOMER BY PARENTS_ID 3 LEVEL
+         if(count($obj_customer_n2) > 0){
+             $customer_id_n2 = "";
+                 foreach ($obj_customer_n2 as $key => $value) {
+                        $customer_id_n2 .= $value->customer_id.",";
+                 }
+                 //DELETE LAST CARACTER ON STRING
+                 $customer_id_n2 = substr ($customer_id_n2, 0, strlen($customer_id_n2) - 1);
+                 if(count($customer_id_n2) > 0){
+                     $params_customer_n3 = array(
+                                "select" =>"customer.customer_id,
+                                            customer.parents_id,
+                                            customer.username,
+                                            customer.created_at,
+                                            customer.position_temporal,
+                                            customer.first_name,
+                                            customer.last_name,
+                                            franchise.franchise_id,
+                                            customer.active,
+                                            paises.nombre as pais,
+                                            franchise.name as franchise,
+                                            franchise.img
+                                            ",
+                                "where" => "customer.parents_id in ($customer_id_n2)  and paises.id_idioma = 7",
+                                "join" => array('paises, customer.country = paises.id',
+                                                'franchise, customer.franchise_id = franchise.franchise_id')
+                                                );
+                 $obj_customer_n3 = $this->obj_customer->search($params_customer_n3);
+                 $this->tmp_backoffice->set("obj_customer_n3",$obj_customer_n3);
+                 
+                 //GET CUSTOMER BY PARENTS_ID 3 LEVEL
+                 if(count($obj_customer_n3) > 0){
+                    $customer_id_n3 = "";
+                    foreach ($obj_customer_n3 as $key => $value) {
+                           $customer_id_n3 .= $value->customer_id.",";
+                    }
+                 //DELETE LAST CARACTER ON STRING
+                 $customer_id_n3 = substr ($customer_id_n3, 0, strlen($customer_id_n3) - 1);
+                    
+                         $params_customer_n3 = array(
+                                "select" =>"customer.customer_id,
+                                            customer.parents_id,
+                                            customer.username,
+                                            customer.created_at,
+                                            customer.position_temporal,
+                                            customer.first_name,
+                                            customer.last_name,
+                                            franchise.franchise_id,
+                                            customer.active,
+                                            paises.nombre as pais,
+                                            franchise.name as franchise,
+                                            franchise.img
+                                            ",
+                                "where" => "customer.parents_id in ($customer_id_n3)  and paises.id_idioma = 7",
+                                "join" => array('paises, customer.country = paises.id',
+                                                'franchise, customer.franchise_id = franchise.franchise_id')
+                                                );
+                            $obj_customer_n4 = $this->obj_customer->search($params_customer_n3);
+                            $this->tmp_backoffice->set("obj_customer_n4",$obj_customer_n4);   
+                    }  
+                 }
+            }
+            
          //GET PRICE BTC
                 $params_price_btc = array(
                         "select" =>"",
@@ -117,7 +169,6 @@ class B_unilevel extends CI_Controller {
          $this->tmp_backoffice->set("obj_message",$obj_message);
          $this->tmp_backoffice->set("all_message",$all_message);   
          $this->tmp_backoffice->set("price_btc",$price_btc);
-         $this->tmp_backoffice->set("obj_customer_n2",$obj_customer_n2);
          $this->tmp_backoffice->set("obj_customer_parent",$obj_customer_parent);
          $this->tmp_backoffice->set("obj_customer",$obj_customer);
          $this->tmp_backoffice->render("backoffice/b_unilevel");
