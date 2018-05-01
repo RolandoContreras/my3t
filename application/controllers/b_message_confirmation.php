@@ -18,9 +18,11 @@ class B_message_confirmation extends CI_Controller {
         //GET CUSTOMER_ID 
         $customer_id = $_SESSION['customer']['customer_id'];
         //GET TOTAL MESSAGE
-         $all_message = $this->get_total_messages($customer_id);
-         //GET TOTAL MESSAGE
-         $obj_message = $this->get_messages($customer_id);
+        $all_message = $this->get_total_messages($customer_id);
+        //GET TOTAL MESSAGE
+        $obj_message = $this->get_messages($customer_id);
+        //GET PRICE BTC
+        $price_btc = $this->btc_price();         
         
         //GET MESSAGE SEND FROM USER
         $param = array(
@@ -61,14 +63,6 @@ class B_message_confirmation extends CI_Controller {
                 $this->tmp_backoffice->set("obj_customer",$obj_customer);
          }
          
-            //GET PRICE BTC
-            $params_price_btc = array(
-                                    "select" =>"",
-                                     "where" => "otros_id = 1");
-                
-           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = "$".number_format($obj_otros->precio_btc,2);
-            
             $this->tmp_backoffice->set("obj_message",$obj_message);
             $this->tmp_backoffice->set("all_message",$all_message); 
             $this->tmp_backoffice->set("obj_total",$obj_total);
@@ -77,6 +71,32 @@ class B_message_confirmation extends CI_Controller {
             $this->tmp_backoffice->set("price_btc",$price_btc);
             $this->tmp_backoffice->render("backoffice/b_message_confirmation");
     }
+    
+    public function btc_price(){
+             $url = "https://www.bitstamp.net/api/ticker";
+             $fgc = file_get_contents($url);
+             $json = json_decode($fgc, true);
+             $price_btc = $json['last'];
+             $open = $json['open'];
+             
+             if($open > $price_btc){
+                 //PRICE WENT UP
+                 $color = "red";
+                 $changes = $price_btc - $open;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2); 
+             }else{
+                 //PRICE WENT DOWN
+                 $color = "green";
+                 $changes = $open - $price_btc;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2);   
+             }
+             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+        }
+    
     
     public function upload()
     {

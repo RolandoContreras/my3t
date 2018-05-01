@@ -64,12 +64,7 @@ class B_upgrade extends CI_Controller {
            $obj_balance_disponible = number_format($obj_data->balance, 2);
            
           //GET PRICE BTC
-            $params_price_btc = array(
-                                    "select" =>"",
-                                     "where" => "otros_id = 1");
-                
-           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = "$".number_format($obj_otros->precio_btc,2);
+          $price_btc = $this->btc_price(); 
          
         //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("messages_informative",$messages_informative); 
@@ -80,6 +75,31 @@ class B_upgrade extends CI_Controller {
          $this->tmp_backoffice->set("price_btc",$price_btc);
          $this->tmp_backoffice->render("backoffice/b_upgrade");
 	}
+        
+        public function btc_price(){
+             $url = "https://www.bitstamp.net/api/ticker";
+             $fgc = file_get_contents($url);
+             $json = json_decode($fgc, true);
+             $price_btc = $json['last'];
+             $open = $json['open'];
+             
+             if($open > $price_btc){
+                 //PRICE WENT UP
+                 $color = "red";
+                 $changes = $price_btc - $open;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2); 
+             }else{
+                 //PRICE WENT DOWN
+                 $color = "green";
+                 $changes = $open - $price_btc;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2);   
+             }
+             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+        }
         
         public function get_messages_informative(){
             $params = array(

@@ -154,7 +154,7 @@ class B_home extends CI_Controller {
                  $percent_change = number_format($percent, 2);   
              }
              
-             return "$".$price_btc."&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
     }
     
     public function next_range($range_id){

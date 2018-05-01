@@ -39,6 +39,8 @@ class B_unilevel extends CI_Controller {
         $obj_message = $this->get_messages($customer_id);
         //GET MESSAGE INFORMATIVE
         $messages_informative = $this->get_messages_informative();
+        //GET PRICE BTC
+        $price_btc = $this->btc_price();
         
         if(isset($url[2])){
             $customer_id = $url[2];
@@ -160,14 +162,7 @@ class B_unilevel extends CI_Controller {
                  }
             }
             
-         //GET PRICE BTC
-                $params_price_btc = array(
-                        "select" =>"",
-                         "where" => "otros_id = 1",
-                    );
-                
-           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = "$".number_format($obj_otros->precio_btc,2);
+          
           
          $this->tmp_backoffice->set("messages_informative",$messages_informative);   
          $this->tmp_backoffice->set("obj_message",$obj_message);
@@ -177,7 +172,32 @@ class B_unilevel extends CI_Controller {
          $this->tmp_backoffice->set("obj_customer",$obj_customer);
          $this->tmp_backoffice->render("backoffice/b_unilevel");
 	}
-
+        
+        public function btc_price(){
+             $url = "https://www.bitstamp.net/api/ticker";
+             $fgc = file_get_contents($url);
+             $json = json_decode($fgc, true);
+             $price_btc = $json['last'];
+             $open = $json['open'];
+             
+             if($open > $price_btc){
+                 //PRICE WENT UP
+                 $color = "red";
+                 $changes = $price_btc - $open;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2); 
+             }else{
+                 //PRICE WENT DOWN
+                 $color = "green";
+                 $changes = $open - $price_btc;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2);   
+             }
+             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+        }
+        
         public function get_session(){          
         if (isset($_SESSION['customer'])){
             if($_SESSION['customer']['logged_customer']=="TRUE" && $_SESSION['customer']['status']=='1'){               
@@ -188,7 +208,7 @@ class B_unilevel extends CI_Controller {
         }else{
             redirect(site_url().'home');
         }
-    }
+       }
     
         public function get_messages_informative(){
             $params = array(

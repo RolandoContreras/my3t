@@ -32,12 +32,14 @@ class B_pay extends CI_Controller {
          $customer_id = $_SESSION['customer']['customer_id'];
          date_default_timezone_set('America/Lima');
          
-         //GET TOTAL MESSAGE
-         $all_message = $this->get_total_messages($customer_id);
-         //GET TOTAL MESSAGE
-         $obj_message = $this->get_messages($customer_id);
-         //GET MESSAGE INFORMATIVE
-         $messages_informative = $this->get_messages_informative();
+        //GET TOTAL MESSAGE
+        $all_message = $this->get_total_messages($customer_id);
+        //GET TOTAL MESSAGE
+        $obj_message = $this->get_messages($customer_id);
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
+        //GET PRICE BTC
+        $price_btc = $this->btc_price();
          
         //VERIFIRY GET SESSION    
          $this->get_session();
@@ -76,13 +78,6 @@ class B_pay extends CI_Controller {
            $obj_balance_disponible = number_format($obj_balance_disponible, 2);
            
            $obj_balance_red = $obj_data->balance - ($mandatory_account + $normal_account);
-           //GET PRICE BTC
-             $params_price_btc = array(
-                                    "select" =>"",
-                                     "where" => "otros_id = 1");
-                
-           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = "$".number_format($obj_otros->precio_btc,2);  
            
         //SEND DATA OF DATA LIMIT TO PAY USUFRUCT
         $this->tmp_backoffice->set("date_limit_pay",$date_limit_pay);      
@@ -98,6 +93,31 @@ class B_pay extends CI_Controller {
         $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
         $this->tmp_backoffice->render("backoffice/b_pay");
 	}
+        
+        public function btc_price(){
+             $url = "https://www.bitstamp.net/api/ticker";
+             $fgc = file_get_contents($url);
+             $json = json_decode($fgc, true);
+             $price_btc = $json['last'];
+             $open = $json['open'];
+             
+             if($open > $price_btc){
+                 //PRICE WENT UP
+                 $color = "red";
+                 $changes = $price_btc - $open;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2); 
+             }else{
+                 //PRICE WENT DOWN
+                 $color = "green";
+                 $changes = $open - $price_btc;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2);   
+             }
+             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+        }
         
         public function get_messages_informative(){
             $params = array(
