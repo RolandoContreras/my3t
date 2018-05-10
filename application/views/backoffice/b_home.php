@@ -66,22 +66,17 @@
                         
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">PAQUETE ACTUAL</h5>
-                            <p class="title"><?php echo $text_franchise;?></p>
+                            <p class="title"><?php echo $obj_customer->franchise;?></p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img style="max-width: 120px" src="<?php echo site_url()."static/backoffice/images/$images_franchise";?>" alt="<?php echo $text_franchise;?>"/>
+                            <img style="max-width: 150px" src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="<?php echo $obj_customer->franchise;?>"/>
                         </div>
                         </div>
                     
                 </div>
                 </div>
             </div>
-            
-            
-            
-            
-             
     <div class="row">
         <div class="col-sm-12 mb-25">
             <div class="panel panel-default panel-tab-box">
@@ -223,39 +218,15 @@
             <div class="panel panel-primary">
                     <div class="panel-heading clearfix"> 
                             <div class="panel-title">SELECCIONA TU PAQUETE</div> 
-                    </div> 
-                        <div class="col-md-1"></div>
-                        <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/basic.jpg";?>" alt="Paquete Basic"/></p>
-                            <p><button type="button" disabled="disabled" onclick="make_pedido('1');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
-                        </div>
-                       <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/executive.jpg";?>" alt="Paquete Executive"/></p>
-                            <p><button type="button" disabled="disabled" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
-                        </div>
-                        <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/investor.jpg";?>" alt="Paquete Investor"/></p>
-                            <p><button type="button" disabled="disabled" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
-                        </div>
-                        <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/business.jpg";?>" alt="Paquete Business"/></p>
-                            <p><button type="button" disabled="disabled" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
-                        </div>
-                        <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/master.jpg";?>" alt="Paquete Master"/></p>
-                            <p><button type="button" disabled="disabled" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4"></div>
-                        <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/apertura.jpg";?>" alt="Apertura"/></p>
-                            <p><button type="button" onclick="make_pedido('7');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
-                        </div>
-                        <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/apertura-elite.jpg";?>" alt="Apertura Elite"/></p>
-                            <p><button type="button" onclick="make_pedido('8');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
-                        </div>
-                        <div class="col-md-4"></div>
+                    </div>
+                <div class="col-md-3"></div>
+                    <?php foreach ($obj_franchise as $value) { ?>
+                             <div class="col-md-2"> 
+                                <p style="margin-top:10px;align-items: center !important;padding: 5px;" ><img src="<?php echo site_url()."static/backoffice/images/$value->img";?>" alt="<?php echo $value->name;?>"/></p>
+                                <p><button type="button" onclick="make_pedido('<?php echo $value->franchise_id;?>');" class="btn btn-sm btn-black bg-gray btn-block">Seleccionar</button></p>
+                            </div>
+                    <?php } ?>
+                <div class="col-md-3"></div>
                 </div> 
         </div>
     <br/><br/>
