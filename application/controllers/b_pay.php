@@ -28,10 +28,11 @@ class B_pay extends CI_Controller {
 	 */
 	public function index()
 	{
-         //GET CUSTOMER_ID $_SESSION   
-         $customer_id = $_SESSION['customer']['customer_id'];
-         date_default_timezone_set('America/Lima');
-         
+        //VERIFIRY GET SESSION    
+         $this->get_session();
+        //GET CUSTOMER_ID $_SESSION   
+        $customer_id = $_SESSION['customer']['customer_id'];
+        date_default_timezone_set('America/Lima');
         //GET TOTAL MESSAGE
         $all_message = $this->get_total_messages($customer_id);
         //GET TOTAL MESSAGE
@@ -41,8 +42,7 @@ class B_pay extends CI_Controller {
         //GET PRICE BTC
         $price_btc = $this->btc_price();
          
-        //VERIFIRY GET SESSION    
-         $this->get_session();
+        
             $params = array(
                         "select" =>"pay.date,
                                     pay.amount,

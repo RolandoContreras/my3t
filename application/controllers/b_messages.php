@@ -30,7 +30,6 @@ class B_messages extends CI_Controller {
         //VERIFIRY GET SESSION    
         $this->get_session();
         /// VISTA
-        
         $customer_id = $_SESSION['customer']['customer_id'];
         $params = array(
                         "select" =>"messages_id,

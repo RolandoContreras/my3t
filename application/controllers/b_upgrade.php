@@ -31,7 +31,6 @@ class B_upgrade extends CI_Controller {
 	{
         //VERIFIRY GET SESSION    
         $this->get_session();
-        
         //GET PRICE FROM FRANCHISE
         $franchise_id = $_SESSION['customer']['franchise_id'];
         $customer_id = $_SESSION['customer']['customer_id'];

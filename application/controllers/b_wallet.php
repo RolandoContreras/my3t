@@ -27,11 +27,10 @@ class B_wallet extends CI_Controller {
 	 */
 	public function index()
 	{
-         //GET CUSTOMER_ID $_SESSION   
-         $customer_id = $_SESSION['customer']['customer_id'];
-         
         //VERIFIRY GET SESSION    
         $this->get_session();
+        //GET CUSTOMER_ID $_SESSION   
+         $customer_id = $_SESSION['customer']['customer_id'];
         //GET TOTAL MESSAGE
         $all_message = $this->get_total_messages($customer_id);
         //GET TOTAL MESSAGE

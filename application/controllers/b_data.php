@@ -26,7 +26,6 @@ class B_data extends CI_Controller {
 	 */
 	public function index()
 	{
-        
         //VERIFIRY GET SESSION    
         $this->get_session();
         /// VISTA

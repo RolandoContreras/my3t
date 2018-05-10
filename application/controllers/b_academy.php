@@ -27,17 +27,15 @@ class B_academy extends CI_Controller {
 	 */
 	public function index()
 	{
+        //VERIFIRY GET SESSION    
+         $this->get_session();
         //GET CUSTOMER_ID  FROM $_SESSION
         $customer_id = $_SESSION['customer']['customer_id'];
-        
         //GET TOTAL MESSAGE
          $all_message = $this->get_total_messages($customer_id);
          //GET TOTAL MESSAGE
          $obj_message = $this->get_messages($customer_id);
-
         
-        //VERIFIRY GET SESSION    
-         $this->get_session();
             $params = array(
                             "select" =>"customer.customer_id,
                                         customer.parents_id,

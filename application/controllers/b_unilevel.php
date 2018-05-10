@@ -27,11 +27,9 @@ class B_unilevel extends CI_Controller {
 	public function index()
 	{
         
-                //VERIFIRY GET SESSION    
+        //VERIFIRY GET SESSION    
         $this->get_session();    
-            
         $url = explode("/",uri_string());
-        
         $customer_id = $_SESSION['customer']['customer_id'];
         //GET TOTAL MESSAGE
         $all_message = $this->get_total_messages($customer_id);

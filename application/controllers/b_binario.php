@@ -26,7 +26,9 @@ class B_binario extends CI_Controller {
 	 */
 	public function index()
 	{
-        
+        //GET SESION ACTUALY
+        $this->get_session();
+        //GET CUSTOMER_ID    
         $customer_id = $_SESSION['customer']['customer_id'];
         //GET TOTAL MESSAGE
         $all_message = $this->get_total_messages($customer_id);
