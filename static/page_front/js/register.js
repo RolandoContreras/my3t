@@ -1,13 +1,6 @@
 $(document).ready(function() {
-    $.validator.addMethod("valueNotEquals", function(value, element, arg){
-    // I use element.value instead value here, value parameter was always null
-    return arg != element.value; 
-}, "Value must not equal arg.");
-    
     $("#form-register").validate({
-  
-        
-        rules: {
+      rules: {
             usuario: { required: true, minlength: 2},
             clave: { required: true, minlength: 4},
             repita_clave: {required: true, minlength: 4, equalTo: "#clave"},
@@ -23,7 +16,7 @@ $(document).ready(function() {
             pais: { required:true},
             region: { required:true},
             city: { required:true, minlength: 2}
-        },
+                    },
         messages: {
             usuario: "Por favor introduzca su usuario.",
             name: "Por favor introduzca su nombre.",
@@ -42,7 +35,7 @@ $(document).ready(function() {
             email : "Por favor introduzca un e-mail válido."
         },
         submitHandler: function(form){
-            var dataString = $('#usuario').val()+'&'+$('#name').val()+'&'+$('#clave').val()+'&'+$('#last_name').val()+'&'+$('#address').val()+'&'+$('#telefono').val()+'&'+$('#dni').val()+'&'+$('#email').val()+'&'+$('#dia').val()+'&'+$('#mes').val()+'&'+$('#ano').val()+'&'+$('#pais').val()+'&'+$('#region').val()+'&'+$('#city').val()+'&'+$('#customer_id').val();
+            var dataString = $('#usuario').val()+'&'+$('#name').val()+'&'+$('#clave').val()+'&'+$('#last_name').val()+'&'+$('#address').val()+'&'+$('#telefono').val()+'&'+$('#dni').val()+'&'+$('#email').val()+'&'+$('#dia').val()+'&'+$('#mes').val()+'&'+$('#ano').val()+'&'+$('#pais').val()+'&'+$('#region').val()+'&'+$('#city').val()+'&'+$('#customer_id').val()+'&'+$('#pierna_customer').val()+'&'+$('#point_left').val()+'&'+$('#point_rigth').val()+'&'+$('#identificador').val();
             $.ajax({
                 type: "POST",
                 url: site + 'register/crear_registro',

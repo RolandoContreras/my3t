@@ -255,22 +255,11 @@ labVcMaps.push({
                                                                         if(isset($obj_customer->username)){
                                                                             echo $obj_customer->username;
                                                                         }?>"/>
-                                                                        <input type="hidden"  id="customer_id" name="customer_id" value="<?php  
-                                                                        if(isset($obj_customer->customer_id)){
-                                                                            echo $obj_customer->customer_id;
-                                                                        }
-                                                                        ?>" placeholder="<?php 
-                                                                        if(isset($obj_customer->customer_id)){
-                                                                            echo $obj_customer->customer_id;
-                                                                        }?>"/>
-                                                                        <input type="hidden"  id="pierna_customer"  name="pierna_customer" value="<?php  
-                                                                        if(isset($obj_customer->position_temporal)){
-                                                                            echo $obj_customer->position_temporal;
-                                                                        }
-                                                                        ?>" placeholder="<?php 
-                                                                        if(isset($obj_customer->position_temporal)){
-                                                                            echo $obj_customer->position_temporal;
-                                                                        }?>"/>
+                                                                        <input type="hidden" id="customer_id" name="customer_id" value="<?php if(isset($obj_customer->customer_id)){echo $obj_customer->customer_id;}?>"/>
+                                                                        <input type="hidden" id="pierna_customer" name="pierna_customer" value="<?php if(isset($obj_customer->position_temporal)){echo $obj_customer->position_temporal;}?>" />
+                                                                        <input type="hidden" id="point_left" name="point_left" value="<?php if(isset($obj_customer->point_left)){echo $obj_customer->point_left;}?>" />
+                                                                        <input type="hidden" id="point_rigth" name="point_rigth" value="<?php if(isset($obj_customer->point_rigth)){echo $obj_customer->point_rigth;}?>" />
+                                                                        <input type="hidden" id="identificador" name="identificador" value="<?php if(isset($obj_customer->identificador)){echo $obj_customer->identificador;}?>" />
                                                         </div>    
                                                     </div>
                                             <?php }else{ ?>

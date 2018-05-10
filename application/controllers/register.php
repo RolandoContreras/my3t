@@ -34,7 +34,7 @@ class Register extends CI_Controller {
                 $username = $url[2];
                 //Select params
                 $params = array(
-                    "select" => "customer_id,first_name, position_temporal,username",
+                    "select" => "customer_id,first_name, position_temporal,username,point_left,point_rigth,identificador",
                     "where" => "username = '$username'");
                 $obj_paises['obj_customer'] = $this->obj_customer->get_search_row($params);
             }
@@ -100,8 +100,6 @@ class Register extends CI_Controller {
         }
 
         public function crear_registro() {
-//            if ($this->input->is_ajax_request()) {
-
             
                 //SET TIMEZONE AMERICA
                 date_default_timezone_set('America/Lima');
@@ -109,8 +107,14 @@ class Register extends CI_Controller {
                 $data = $_POST['dataString']; 
                 //EXPLODE BY DEMILITER
                 $string =  explode('&', $data);
+                
                 //SET $VARIBLE
                 $username = strtolower($string[0]);
+                $customer_id = $string[14];
+                $pierna_customer = $string[15];
+                $point_left = $string[16];
+                $point_rigth = $string[17];
+                $identificator_param = $string[18];
                 
                 //validate username
                 $val = $this->validate_username_register($username);
@@ -131,21 +135,104 @@ class Register extends CI_Controller {
                     $pais = $string[11];
                     $region = $string[12];
                     $city = $string[13];
-                    $customer_id = $string[14];
-                
+                    
+                    //PUT CUSTOMER_ID LIKE PAREND
+                    $parent_id = $customer_id;
+                    //SELECT PIERNA
+                    if($pierna_customer == 3){
+                        switch($point_left){
+                            case $point_left < $point_rigth:
+                                $last_id = 'z';
+                                //GET TO VERIFY UN ATUTHENTICATOR STRING
+                                $verify = 'd';
+                                $pierna_customer = 1;
+                                break;
+                            case $point_left > $point_rigth:
+                                $last_id = 'd';
+                                //GET TO VERIFY UN ATUTHENTICATOR STRING
+                                $verify = 'z';
+                                $pierna_customer = 2;
+                                break;
+                            case $point_left == $point_rigth:
+                                $last_id = 'z';
+                                //GET TO VERIFY UN ATUTHENTICATOR STRING
+                                $verify = 'd';
+                                $pierna_customer = 1;
+                                break;
+                        }
+                    }elseif ($pierna_customer == 1) {
+                            $last_id = 'z';
+                            //GET TO VERIFY UN ATUTHENTICATOR STRING
+                            $verify = 'd';
+                            $pierna_customer = 1;
+                    }elseif ($pierna_customer == 2){
+                            $last_id = 'd';
+                            //GET TO VERIFY UN ATUTHENTICATOR STRING
+                            $verify = 'z';
+                            $pierna_customer = 2;
+                    }
+                    
+                    //SELECT LAST REGISTER
+                    $params = array("select" => "identificador,customer_id,first_name",
+                        "where" => "identificador like '%$identificator_param' and position = $pierna_customer",
+                        "order" => "customer.identificador DESC");
+                    $obj_identificator = $this->obj_customer->search($params);
+                    //COUNT $identificator_param y quitar ,
+                    $count_identificator = strlen($identificator_param) + 1;
+
+                    //Get identificator last register
+                    if (count($obj_identificator) > 0) {
+
+                        $key = 1;
+                        $str = "";
+                        $str_number = "";
+                        foreach ($obj_identificator as $key => $value) {
+                            //GET IDENTIFICATOR TREE 
+                            $identificador = $value->identificador;
+                            //QUITAR IDENTIFICADOR DEL PADRE
+                            $identificador_2 = substr($identificador, 0, -$count_identificator);
+
+                            //CONSULT IF CONTAINT Z O D
+                            $find = strpos($identificador_2, "$verify");
+
+                            if ($find == false) {
+                                $str .= "$identificador|";
+                            }
+                        }
+
+                        $array_identificator = explode("|", $str);
+                        $count = 0;
+                        foreach ($array_identificator as $value) {
+                            $count_str = strlen($value);
+                            if($count_str > $count){
+                                $idetificator = $value;
+                                $count = $count_str;
+                            }
+                        }
+                        $idetificator =  $idetificator;             
+                    } else {
+                        $idetificator = $identificator_param;
+                    }
+                    
+                    $explo_identificator = explode(",", $idetificator);
+                    $ultimo = $explo_identificator[0] + 1;
+                    $identificator = $ultimo . $last_id . ',' . $idetificator;
                     
                     //create date to DB
                     $birth_date = "$ano-$mes-$dia";
                     $data = array(
                         'parents_id' => $customer_id,
                         'franchise_id' => 6,
-                            'username' => $username,
+                        'username' => $username,
                         'email' => $email,
                         'password' => $password,
+                        'position' => $pierna_customer,
+                        'position_temporal' => 1,
                         'first_name' => $name,
                         'last_name' => $last_name,
                         'address' => $address,
                         'phone' => $phone,
+                        'identificador' => $identificator,
                         'city' => $city,
                         'dni' => $dni,
                         'birth_date' => $birth_date,
@@ -163,13 +250,13 @@ class Register extends CI_Controller {
     //                SEND MESSAGES
 //                    $images = "static/page_front/images/bienvenido.jpg";
 //                    $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
-
-                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Company</h1><p>Bienvenido ahora eres parte de la revolución 3T estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $username</h3><h3>Contraseña: $password</h3><p>$img_path</p></body></html>", 70, "\n", true);
-                    $titulo = "Bienvenido a 3T Company";
-                    $headers = "MIME-Version: 1.0\r\n"; 
-                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                    $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
-                    $bool = mail("$email",$titulo,$mensaje,$headers);
+//
+//                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $username</h3><h3>Contraseña: $password</h3><p>$img_path</p></body></html>", 70, "\n", true);
+//                    $titulo = "Bienvenido a 3T Company";
+//                    $headers = "MIME-Version: 1.0\r\n"; 
+//                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+//                    $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
+//                    $bool = mail("$email",$titulo,$mensaje,$headers);
         }
       }
        public function messages_welcome($name,$last_name,$customer_id,$username,$password){
