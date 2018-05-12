@@ -233,7 +233,73 @@ class B_binario extends CI_Controller {
                 //SELECT LAST IDENTIFICATOR FOR N4_4d
                 $ultimo = $n3_2_d + 1; 
                 $n4_4_d = $ultimo."z,".$n3_2_d;
-
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_Z
+                $ultimo = $n4_z + 1; 
+                $n5_z = $ultimo."z,".$n4_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_2_Z
+                $ultimo = $n4_z + 1; 
+                $n5_2_z = $ultimo."d,".$n4_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_3z
+                $ultimo = $n4_2_z + 1; 
+                $n5_3_z = $ultimo."z,".$n4_2_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_4z
+                $ultimo = $n4_2_z + 1; 
+                $n5_4_z = $ultimo."d,".$n4_2_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_5z
+                $ultimo = $n4_3_z + 1; 
+                $n5_5_z = $ultimo."z,".$n4_3_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_6z
+                $ultimo = $n4_3_z + 1; 
+                $n5_6_z = $ultimo."d,".$n4_3_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_7z
+                $ultimo = $n4_4_z + 1; 
+                $n5_7_z = $ultimo."z,".$n4_4_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_8z
+                $ultimo = $n4_4_z + 1; 
+                $n5_8_z = $ultimo."d,".$n4_4_z;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_Z
+                $ultimo = $n4_d + 1; 
+                $n5_d = $ultimo."d,".$n4_d;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_2_Z
+                $ultimo = $n4_d + 1; 
+                $n5_2_d = $ultimo."z,".$n4_d;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_3z
+                $ultimo = $n4_2_d + 1; 
+                $n5_3_d = $ultimo."d,".$n4_2_d;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_4z
+                $ultimo = $n4_2_d + 1; 
+                $n5_4_d = $ultimo."z,".$n4_2_d;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_5z
+                $ultimo = $n4_3_d + 1; 
+                $n5_5_d = $ultimo."d,".$n4_3_d;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_6z
+                $ultimo = $n4_3_d + 1; 
+                $n5_6_d = $ultimo."z,".$n4_3_d;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_7z
+                $ultimo = $n4_4_d + 1; 
+                $n5_7_d = $ultimo."d,".$n4_4_d;
+                
+                //SELECT LAST IDENTIFICATOR FOR N5_8z
+                $ultimo = $n4_4_d + 1; 
+                $n5_8_d = $ultimo."z,".$n4_4_d;
+                
+                
+                
                 if($value->identificador == $n2_z){
                     $n2_iz = array($value->first_name,
                                                $value->last_name,
@@ -248,7 +314,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n2_iz",$n2_iz);
-                }elseif($value->identificador == $n2_d){
+                }
+                elseif($value->identificador == $n2_d){
                     $n2_de = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -262,7 +329,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n2_de",$n2_de);
-                }elseif($value->identificador == $n3_2_z){
+                }
+                elseif($value->identificador == $n3_2_z){
                     $n3_2_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -276,7 +344,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n3_2_iz",$n3_2_iz);
-                }elseif($value->identificador == $n3_z){
+                }
+                elseif($value->identificador == $n3_z){
                     $n3_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -290,7 +359,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n3_iz",$n3_iz);
-                }elseif($value->identificador == $n3_d){
+                }
+                elseif($value->identificador == $n3_d){
                     $n3_de = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -304,7 +374,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n3_de",$n3_de);
-                }elseif($value->identificador == $n3_2_d){
+                }
+                elseif($value->identificador == $n3_2_d){
                     $n3_2_de = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -318,7 +389,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n3_2_de",$n3_2_de);
-                }elseif($value->identificador == $n4_z){
+                }
+                elseif($value->identificador == $n4_z){
                     $n4_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -332,7 +404,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img); 
                     $this->tmp_backoffice->set("n4_iz",$n4_iz);
-                }elseif($value->identificador == $n4_2_z){
+                }
+                elseif($value->identificador == $n4_2_z){
                     $n4_2_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -346,7 +419,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n4_2_iz",$n4_2_iz);
-                }elseif($value->identificador == $n4_3_z){
+                }
+                elseif($value->identificador == $n4_3_z){
                     $n4_3_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -360,7 +434,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n4_3_iz",$n4_3_iz);
-                }elseif($value->identificador == $n4_4_z){
+                }
+                elseif($value->identificador == $n4_4_z){
                     $n4_4_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -374,7 +449,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n4_4_iz",$n4_4_iz);
-                }elseif($value->identificador == $n4_d){
+                }
+                elseif($value->identificador == $n4_d){
                     $n4_de = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -388,7 +464,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img); 
                     $this->tmp_backoffice->set("n4_de",$n4_de);
-                }elseif($value->identificador == $n4_2_d){
+                }
+                elseif($value->identificador == $n4_2_d){
                     $n4_2_de = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -402,7 +479,8 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n4_2_de",$n4_2_de);
-                }elseif($value->identificador == $n4_3_d){
+                }
+                elseif($value->identificador == $n4_3_d){
                     $n4_3_de = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
@@ -431,6 +509,246 @@ class B_binario extends CI_Controller {
                                                $value->franchise_id,
                                                $value->img);
                     $this->tmp_backoffice->set("n4_4_de",$n4_4_de);
+                }
+                elseif($value->identificador == $n5_z){
+                    $n5_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_iz",$n5_iz);
+                }
+                elseif($value->identificador == $n5_2_z){
+                    $n5_2_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_2_iz",$n5_2_iz);
+                }
+                elseif($value->identificador == $n5_3_z){
+                    $n5_3_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_3_iz",$n5_3_iz);
+                }
+                elseif($value->identificador == $n5_4_z){
+                    $n5_4_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_4_iz",$n5_4_iz);
+                }
+                elseif($value->identificador == $n5_5_z){
+                    $n5_5_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_5_iz",$n5_5_iz);
+                }
+                elseif($value->identificador == $n5_6_z){
+                    $n5_6_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_6_iz",$n5_6_iz);
+                }
+                elseif($value->identificador == $n5_7_z){
+                    $n5_7_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_7_iz",$n5_7_iz);
+                }
+                elseif($value->identificador == $n5_8_z){
+                    $n5_8_iz = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_8_iz",$n5_8_iz);
+                }
+                elseif($value->identificador == $n5_d){
+                    $n5_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_de",$n5_de);
+                }
+                elseif($value->identificador == $n5_2_d){
+                    $n5_2_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_2_de",$n5_2_de);
+                }
+                elseif($value->identificador == $n5_3_d){
+                    $n5_3_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_3_de",$n5_3_de);
+                }
+                elseif($value->identificador == $n5_4_d){
+                    $n5_4_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_4_de",$n5_4_de);
+                }
+                elseif($value->identificador == $n5_5_d){
+                    $n5_5_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_5_de",$n5_5_de);
+                }
+                elseif($value->identificador == $n5_6_d){
+                    $n5_6_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_6_de",$n5_6_de);
+                }
+                elseif($value->identificador == $n5_7_d){
+                    $n5_7_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_7_de",$n5_7_de);
+                }
+                elseif($value->identificador == $n5_8_d){
+                    $n5_8_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country,
+                                               $value->franchise_id,
+                                               $value->img);
+                    $this->tmp_backoffice->set("n5_8_de",$n5_8_de);
                 }
             }
   

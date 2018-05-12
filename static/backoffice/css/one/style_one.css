@@ -7494,7 +7494,7 @@ table table td:first-child {
       .panel > .panel-body .list-group > .list-group-item:last-of-type {
         padding-bottom: 0px; }
     .panel > .panel-body > p, .panel > .panel-body > div {
-      padding: 0px 15px;
+      padding: 0px;
       margin: 0;
       line-height: 1.7; }
     .panel > .panel-body.no-padding > p, .panel > .panel-body.no-padding > div {

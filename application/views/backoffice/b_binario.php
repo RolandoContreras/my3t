@@ -132,6 +132,53 @@
                                                                        <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO LEVEL LEFT--------->
+                                                                    <ul class="hidden-xs">
+                                                                        <li>
+                                                                            <!--//-----5TO LEVEL LEFT--------->
+                                                                                <span class="inline-block relative">
+                                                                                    <?php if(isset($n5_iz)){  ?>
+                                                                                        <a  href="#" title="<?php echo $n5_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                            <div class="row imagen-profile">
+                                                                                                    <div class="div-img">
+                                                                                                        <img src="<?php echo site_url().'static/backoffice/images/'.$n5_iz[11];?>" alt="paquete" width="60">
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                            </a>
+                                                                                    <!--USERNAME-->
+                                                                                            <?php if($n5_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                            <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_iz[2];?>" class=""><?php echo $n5_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                        <?php }else{ ?>
+                                                                                        <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                       <?php } ?>
+                                                                                    </span>
+                                                                                    <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                        </li>
+                                                                        <li>
+                                                                            <!--//-----5TO LEVEL LEFT--------->
+                                                                                <span class="inline-block relative">
+                                                                                    <?php if(isset($n5_2_iz)){  ?>
+                                                                                        <a  href="#" title="<?php echo $n5_2_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_2_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                            <div class="row imagen-profile">
+                                                                                                    <div class="div-img">
+                                                                                                        <img src="<?php echo site_url().'static/backoffice/images/'.$n5_2_iz[11];?>" alt="paquete" width="60">
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                            </a>
+                                                                                    <!--USERNAME-->
+                                                                                            <?php if($n5_2_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                            <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_2_iz[2];?>" class=""><?php echo $n5_2_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                        <?php }else{ ?>
+                                                                                        <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                       <?php } ?>
+                                                                                    </span>
+                                                                                    <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                        </li>
+                                                                    </ul>
+                                                                    
                                                         </li>
                                                         
                                                         <li>
@@ -153,6 +200,53 @@
                                                                     <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO 2DO LEVEL LEFT--------->
+                                                                    
+                                                                    <ul>
+                                                                        <li>
+                                                                            <!--//-----5TO LEVEL LEFT--------->
+                                                                                <span class="inline-block relative">
+                                                                                    <?php if(isset($n5_3_iz)){  ?>
+                                                                                        <a  href="#" title="<?php echo $n5_3_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_3_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                            <div class="row imagen-profile">
+                                                                                                    <div class="div-img">
+                                                                                                        <img src="<?php echo site_url().'static/backoffice/images/'.$n5_3_iz[11];?>" alt="paquete" width="60">
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                            </a>
+                                                                                    <!--USERNAME-->
+                                                                                            <?php if($n5_3_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                            <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_3_iz[2];?>" class=""><?php echo $n5_3_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                        <?php }else{ ?>
+                                                                                        <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                       <?php } ?>
+                                                                                    </span>
+                                                                                    <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                        </li>
+                                                                        <li>
+                                                                            <!--//-----5TO LEVEL LEFT--------->
+                                                                                <span class="inline-block relative">
+                                                                                    <?php if(isset($n5_4_iz)){  ?>
+                                                                                        <a  href="#" title="<?php echo $n5_4_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_4_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                            <div class="row imagen-profile">
+                                                                                                    <div class="div-img">
+                                                                                                        <img src="<?php echo site_url().'static/backoffice/images/'.$n5_4_iz[11];?>" alt="paquete" width="60">
+                                                                                                    </div>
+                                                                                            </div>
+                                                                                            </a>
+                                                                                    <!--USERNAME-->
+                                                                                            <?php if($n5_4_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                            <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_4_iz[2];?>" class=""><?php echo $n5_4_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                        <?php }else{ ?>
+                                                                                        <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                       <?php } ?>
+                                                                                    </span>
+                                                                                    <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                        </li>
+                                                                    </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -197,6 +291,53 @@
                                                                         <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO 3ER LEVEL LEFT--------->
+                                                                    
+                                                                        <ul>
+                                                                            <li>
+                                                                                <!--//-----5TO_5 LEVEL LEFT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_5_iz)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_5_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_5_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_5_iz[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                        <!--USERNAME-->
+                                                                                                <?php if($n5_5_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_5_iz[2];?>" class=""><?php echo $n5_5_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                            </li>
+                                                                            <li>
+                                                                                <!--//-----5TO_6 LEVEL LEFT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_6_iz)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_6_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_6_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_6_iz[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                        <!--USERNAME-->
+                                                                                                <?php if($n5_6_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_6_iz[2];?>" class=""><?php echo $n5_6_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                            </li>
+                                                                        </ul>
                                                         </li>
                                                         <li>
                                                             <!--//-----4TO 4TO LEVEL LEFT--------->
@@ -218,6 +359,53 @@
                                                                     <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO LEVEL LEFT--------->
+                                                                    
+                                                                        <ul>
+                                                                            <li>
+                                                                                <!--//-----5TO_7 LEVEL LEFT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_7_iz)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_7_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_7_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_7_iz[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                        <!--USERNAME-->
+                                                                                                <?php if($n5_7_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_7_iz[2];?>" class=""><?php echo $n5_7_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                            </li>
+                                                                            <li>
+                                                                                <!--//-----5TO_6 LEVEL LEFT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_8_iz)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_8_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_8_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_8_iz[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                        <!--USERNAME-->
+                                                                                                <?php if($n5_8_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_8_iz[2];?>" class=""><?php echo $n5_8_iz[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+
+                                                                            </li>
+                                                                        </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -290,6 +478,50 @@
                                                                        <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO LEVEL LEFT--------->
+                                                                        <ul class="hidden-xs">
+                                                                            <li>
+                                                                                <!--//-----5TO LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_8_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_8_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_8_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_8_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_8_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_8_de[2];?>" class=""><?php echo $n5_8_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>
+                                                                            <li>
+                                                                                <!--//-----5TO_3 LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_7_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_7_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_7_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_7_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_7_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_7_de[2];?>" class=""><?php echo $n5_7_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>  
+                                                                         </ul>
                                                         </li>
                                                         <li>
                                                             <!--//-----4TO 3ER LEVEL LEFT--------->
@@ -311,6 +543,51 @@
                                                                     <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO 3ER LEVEL RIGHT--------->
+                                                                        <ul class="hidden-xs">
+                                                                            <li>
+                                                                                <!--//-----5TO LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_6_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_6_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_6_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_6_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_6_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_6_de[2];?>" class=""><?php echo $n5_6_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>
+                                                                            <li>
+                                                                                <!--//-----5TO_3 LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_5_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_5_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_5_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_5_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_5_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_5_de[2];?>" class=""><?php echo $n5_5_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>  
+                                                                         </ul>
+                                                                    
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -355,6 +632,50 @@
                                                                         <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO 2DO LEVEL RIGHT--------->
+                                                                        <ul class="hidden-xs">
+                                                                            <li>
+                                                                                <!--//-----5TO LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_4_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_4_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_4_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_4_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_4_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_4_de[2];?>" class=""><?php echo $n5_4_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>
+                                                                            <li>
+                                                                                <!--//-----5TO_3 LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_3_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_3_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_3_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_3_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_3_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_3_de[2];?>" class=""><?php echo $n5_3_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>  
+                                                                         </ul> 
                                                         </li>
                                                         
                                                         <li>
@@ -377,6 +698,51 @@
                                                                     <?php } ?>
                                                                     </span>
                                                                     <!--//-----END 4TO LEVEL RIGHT--------->
+                                                                    
+                                                                         <ul class="hidden-xs">
+                                                                            <li>
+                                                                                <!--//-----5TO LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_2_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_2_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_2_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_2_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_2_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_2_de[2];?>" class=""><?php echo $n5_2_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>
+                                                                            <li>
+                                                                                <!--//-----5TO LEVEL RIGHT--------->
+                                                                                    <span class="inline-block relative">
+                                                                                        <?php if(isset($n5_de)){  ?>
+                                                                                            <a  href="#" title="<?php echo $n5_de[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n5_de[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1">
+                                                                                                <div class="row imagen-profile">
+                                                                                                        <div class="div-img">
+                                                                                                            <img src="<?php echo site_url().'static/backoffice/images/'.$n5_de[11];?>" alt="paquete" width="60">
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                </a>
+                                                                                                <!--USERNAME-->
+                                                                                                <?php if($n5_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                <span><a href="<?php echo site_url().'backoffice/binario/'.$n5_de[2];?>" class=""><?php echo $n5_de[6];?></a></span> - <span class="<?php echo $style;?>"><?php echo $text;?></span> <br>
+
+                                                                                            <?php }else{ ?>
+                                                                                            <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>     
+                                                                                           <?php } ?>
+                                                                                        </span>
+                                                                                        <!--//-----END 4TO LEVEL LEFT--------->
+                                                                            </li>
+                                                                         </ul>   
                                                         </li>
                                                     </ul>
                                                 </li>
