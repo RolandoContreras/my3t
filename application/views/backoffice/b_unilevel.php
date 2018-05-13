@@ -68,7 +68,7 @@
                                             <div class="col-sm-2" style="padding: 0;"></div>
                                             <div class="col-sm-8" style="padding: 0;">
                                               <div class="div-img">
-                                                  <img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="paquete" width="100">
+                                                  <img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="paquete" width="120">
                                               </div>
                                             </div>
                                                   <?php if($obj_customer->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
@@ -164,7 +164,7 @@
                                                                                                                     <div class="col-sm-2" style="padding: 0;"></div>
                                                                                                                     <div class="col-sm-8" style="padding: 0;">
                                                                                                                       <div class="div-img">
-                                                                                                                    <img src="<?php echo site_url().'static/backoffice/images/'.$value4->img;?>" alt="paquete">
+                                                                                                                    <img src="<?php echo site_url().'static/backoffice/images/'.$value4->img;?>" alt="paquete" width="80">
                                                                                                                       </div>
                                                                                                                     </div>
                                                                                                                   </div>
