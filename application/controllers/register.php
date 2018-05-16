@@ -87,7 +87,7 @@ class Register extends CI_Controller {
         
         public function email() {
               //SEND MESSAGES
-                    $images = site_url()."static/page_front/images/bienvenido.jpg";
+                    $images = site_url()."static/page_front/images/bienvenido2.jpg";
                     $img_path = "<img src='$images' alt='Bienvenido' height='800' width='800'/>";
                     $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: lidermillon</h3><h3>Contraseña: 123456789</h3><p>$img_path</p></body></html>", 70, "\n", true);
                     $titulo = "Bienvenido a 3T Company";
@@ -259,9 +259,9 @@ class Register extends CI_Controller {
                     echo '<div class="alert alert-success" style="text-align: center">Registro creado correctamente.</div>';
                     
                     //SEND MESSAGES
-                    $images = site_url()."static/page_front/images/bienvenido.jpg";
-                    $img_path = "<img src='$images' alt='Bienvenido' height='800' width='800'/>";
-                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h4>Usuario: $username</h4><h4>Contraseña: $password</h4><p>$img_path</p></body></html>", 70, "\n", true);
+                    $images = site_url()."static/page_front/images/bienvenido2.jpg";
+                    $img_path = "<img src='$images' alt='Bienvenido' height='1000' width='646'/>";
+                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h4>-----> Usuario: $username</h4><h4>-----> Contraseña: $password</h4><p>$img_path</p></body></html>", 70, "\n", true);
                     $titulo = "Bienvenido a 3T Club";
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
@@ -269,7 +269,8 @@ class Register extends CI_Controller {
                     $bool = mail("$email",$titulo,$mensaje,$headers);
         }
       }
-       public function messages_welcome($name,$last_name,$customer_id,$username,$password){
+      
+        public function messages_welcome($name,$last_name,$customer_id,$username,$password){
            //CREATE MESSAGE WELCOME
                     $name = ucwords("$name $last_name");
                     $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T. <br>Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
@@ -310,7 +311,7 @@ class Register extends CI_Controller {
                     
        }
        
-       public function identificador(){
+        public function identificador(){
             $pierna_customer = trim($this->input->post('pierna_customer'));
 
                 //PUT CUSTOMER_ID LIKE PAREND
@@ -403,8 +404,6 @@ class Register extends CI_Controller {
                 $identificator = $ultimo . $last_id . ',' . $idetificator;
        }
 
-
-       
         public function mensaje(){
         //ACTIVE CUSTOMER
         

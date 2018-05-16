@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/my3t/application/controllers/b_pay.php</file>
-            <file>file:/C:/wamp/www/my3t/application/views/backoffice/b_pay.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/d_bonus.php</file>
+            <file>file:/C:/wamp/www/my3t/application/config/routes.php</file>
+            <file>file:/C:/wamp/www/my3t/application/views/dashboard/ranges/ranges_list.php</file>
+            <file>file:/C:/wamp/www/my3t/application/views/dashboard/customer/customer_list.php</file>
+            <file>file:/C:/wamp/www/my3t/application/views/dashboard/bonus/bonus_list.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/d_ranges.php</file>
         </group>
     </open-files>
 </project-private>
