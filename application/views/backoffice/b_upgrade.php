@@ -37,28 +37,9 @@
                             <div class="panel-title">SELECCIONA TU PAQUETE DE CRECIMIENTO</div> 
                     </div> 
                         <?php foreach ($obj_franchise as $value) { ?>
-                            <?php
-                           switch ($value->franchise_id) {
-                                        case 1:
-                                           $img = "basic.jpg";
-                                           break;
-                                        case 2:
-                                            $img = "executive.jpg";
-                                            break;
-                                        case 3:
-                                           $img = "investor.png";
-                                            break;
-                                        case 4:
-                                            $img = "business.jpg";
-                                            break;
-                                        case 5:
-                                            $img = "master.jpg";
-                                            break;
-                                    }?>
-                            <!--<img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/$img";?>" alt="<?php echo $value->name?>"/>-->
                         <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/page_front/images/plan/$img";?>" alt="Paquete Basic"/></p>
-                            <p><button type="button" onclick="make_pedido('1');" class="btn btn-sm btn-primary bg-gray btn-block">Seleccionar</button></p>
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/backoffice/images/$value->img";?>" alt="<?php echo $value->name;?>"/></p>
+                            <p><button type="button" onclick="make_pedido('1');" class="btn btn-sm btn-black bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <?php } ?>
                 </div> 

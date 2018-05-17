@@ -47,9 +47,8 @@ class B_upgrade extends CI_Controller {
                         "where" => "franchise_id = '$franchise_id' and status_value = 1");
          $obj_price = $this->obj_franchise->get_search_row($params);  
          
-         
          //GET ALL ACCOUNT > A FRANCHISE_ID
-        $param = array( "select" =>"franchise_id,name,price",
+        $param = array( "select" =>"franchise_id,name,price,img",
                         "where" => "price > $obj_price->price and status_value = 1");
          $obj_franchise = $this->obj_franchise->search($param);  
          
