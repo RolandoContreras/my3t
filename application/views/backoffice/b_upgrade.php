@@ -38,8 +38,8 @@
                     </div> 
                         <?php foreach ($obj_franchise as $value) { ?>
                         <div class="col-md-2"> 
-                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/backoffice/images/$value->img";?>" alt="<?php echo $value->name;?>"/></p>
-                            <p><button type="button" onclick="make_pedido('1');" class="btn btn-sm btn-black bg-gray btn-block">Seleccionar</button></p>
+                            <p style="margin-top:10px;"><img src="<?php echo site_url()."static/backoffice/images/"."$value->img";?>" alt="<?php echo $value->name;?>"/></p>
+                            <p><button disabled="" type="button" onclick="make_pedido('1');" class="btn btn-sm btn-black bg-gray btn-block">Seleccionar</button></p>
                         </div>
                         <?php } ?>
                 </div> 
