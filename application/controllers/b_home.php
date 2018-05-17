@@ -271,7 +271,6 @@ class B_home extends CI_Controller {
         $params = array(
                         "select" =>"count(messages_id) as total",
                         "where" => "customer_id = $customer_id and active = 1 and status_value = 1",
-                        
                                         );
             $obj_message = $this->obj_messages->get_search_row($params);
             //GET TOTAL MESSAGE ACTIVE   

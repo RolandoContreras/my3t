@@ -131,7 +131,7 @@ class D_activate extends CI_Controller{
                     //GET AMOUNT BONUS SPONSOR
                     $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
                     //SEND MESSAGE CONFIRMATION BONUS SPONSOR
-                    $this->message_bonus_sponsor($amount,$parents_id,$customer_id);
+                    $this->message_bonus_sponsor_lost($amount,$parents_id,$customer_id);
                 }
                 
                 //SELECT TOY AND TODAY+76
@@ -230,6 +230,7 @@ class D_activate extends CI_Controller{
                         'messages' => $message,
                         'type' => 1,
                         'type_send' => 0,
+                        'active' => 1,
                         'created_by' => $customer_id,
                         'status_value' => 1,
                         'created_at' => date("Y-m-d H:i:s"),
