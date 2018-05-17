@@ -27,7 +27,6 @@ class B_product extends CI_Controller {
                         "select" =>"customer.customer_id,
                                     customer.username,
                                     customer.first_name,
-                                    customer.franchise_magic,
                                     customer.last_name,
                                     customer.active,
                                     customer.created_at,

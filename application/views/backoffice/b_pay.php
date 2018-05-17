@@ -43,7 +43,7 @@ $today = date("Y-m-d");
                         <div class="panel-body">
                             <div role="alert" class="alert alert-info">
                                 <strong>Nota:</strong><br>
-                            <?php echo replace_vocales_voculeshtml("Los pedidos de cobro se efectúan de lunes a sábado.");?><br>
+                            <?php echo "Los pedidos de cobro se efectúan todos los miércoles.";?><br>
                             </div><br/>
                             <div class="form-inline" >
                                 <p class="lead">
@@ -58,9 +58,9 @@ $today = date("Y-m-d");
                                 </select>
                                 </div>
                                 <?php 
-                                //GET SATURDAY AND SUNDAY
+                                //GET MIERCOLES
                                 $s_and_s = date('w',strtotime($today));
-                                if($s_and_s == '6' || $s_and_s == '0'){$style="disabled";}else{$style="";} ?>
+                                if($s_and_s != '3'){$style="disabled";}else{$style="";} ?>
                                 <!--BLOCK THE BOTON IF IS SATUDAY OR SUNDAY-->
                                         <input class="form-inline" type="hidden" name="SolicitarPago" value="1"/>
                                         <button onclick="enviar_pago();" <?php echo $style;?> class="btn btn-sm btn-primary bg-danger-dark">Enviar Solicitud</button>

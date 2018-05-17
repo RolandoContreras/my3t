@@ -53,43 +53,18 @@ class B_pay extends CI_Controller {
                 "where" => "pay.customer_id = $customer_id",
                 "order" => "pay.date DESC",
                 "limit" => "40");
-           //GET DATA FROM CUSTOMER
+        //GET DATA FROM CUSTOMER
         $obj_commissions= $this->obj_pay->search($params);
         
-        //GET TOTAL AMOUNT
-                $params_total = array(
-                        "select" =>"sum(mandatory_account) as mandatory_account,
-                                    sum(normal_account) as normal_account,
-                                    (select date_start FROM customer where customer_id = $customer_id) as date_start,
-                                    (select sum(amount) FROM commissions WHERE status_value <= 2 and customer_id = $customer_id) as balance",
-                         "where" => "commissions.customer_id = $customer_id and status_value = 2",
-                    );
-                
-           $obj_data = $this->obj_commissions->get_search_row($params_total);              
+        //GET BALANCE DISPONIBLE
+        $obj_balance_disponible = $this->balance($customer_id);
            
-           $date_start = date($obj_data->date_start);
-           $new_date = strtotime ( '+35 day' , strtotime ( $date_start ) ) ;
-           $date_limit_pay = date ( 'Y-m-j' , $new_date );
-           
-           $mandatory_account = $obj_data->mandatory_account;
-           $normal_account = $obj_data->normal_account;
-           
-           $obj_balance_disponible = $obj_data->balance - $mandatory_account;
-           $obj_balance_disponible = number_format($obj_balance_disponible, 2);
-           
-           $obj_balance_red = $obj_data->balance - ($mandatory_account + $normal_account);
-           
-        //SEND DATA OF DATA LIMIT TO PAY USUFRUCT
-        $this->tmp_backoffice->set("date_limit_pay",$date_limit_pay);      
         //SEND DATA OF BITCOIN PRICE
         $this->tmp_backoffice->set("messages_informative",$messages_informative);
         $this->tmp_backoffice->set("obj_message",$obj_message);
         $this->tmp_backoffice->set("all_message",$all_message); 
         $this->tmp_backoffice->set("price_btc",$price_btc);  
-        $this->tmp_backoffice->set("obj_balance_red",$obj_balance_red);   
         $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible);   
-        $this->tmp_backoffice->set("normal_account",$normal_account);
-        $this->tmp_backoffice->set("mandatory_account",$mandatory_account);
         $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
         $this->tmp_backoffice->render("backoffice/b_pay");
 	}
@@ -117,6 +92,16 @@ class B_pay extends CI_Controller {
                  $percent_change = number_format($percent, 2);   
              }
              return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+        }
+        
+        public function balance($customer_id){
+             //GET TOTAL AMOUNT
+                $params_total = array(
+                        "select" =>"sum(amount) as balance",
+                    "where" => "status_value <= 2 and customer_id = $customer_id"
+                    );
+           $obj_data = $this->obj_commissions->get_search_row($params_total); 
+           return $obj_data;
         }
         
         public function get_messages_informative(){
