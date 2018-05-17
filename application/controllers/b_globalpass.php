@@ -84,7 +84,7 @@ class B_globalpass extends CI_Controller {
         public function get_total_messages($customer_id){
         $params = array(
                         "select" =>"count(messages_id) as total",
-                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1",
                         
                                         );
             $obj_message = $this->obj_messages->get_search_row($params);
