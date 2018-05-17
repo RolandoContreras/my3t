@@ -41,9 +41,8 @@ class B_pay extends CI_Controller {
         $messages_informative = $this->get_messages_informative();
         //GET PRICE BTC
         $price_btc = $this->btc_price();
-         
         
-            $params = array(
+        $params = array(
                         "select" =>"pay.date,
                                     pay.amount,
                                     pay.descount as fee,
@@ -101,7 +100,8 @@ class B_pay extends CI_Controller {
                     "where" => "status_value <= 2 and customer_id = $customer_id"
                     );
            $obj_data = $this->obj_commissions->get_search_row($params_total); 
-           return $obj_data;
+           return $obj_data->balance;
+           
         }
         
         public function get_messages_informative(){

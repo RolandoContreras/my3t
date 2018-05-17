@@ -1,7 +1,3 @@
-<?php 
-//GET TODAY DATE
-$today = date("Y-m-d"); 
-?>
 <!-- Main section-->
       <section>
           <div class="section-heading row">
@@ -48,7 +44,7 @@ $today = date("Y-m-d");
                             <div class="form-inline" >
                                 <p class="lead">
                                 Saldo Disponible en Billetera:
-                                <b><?php if(count($obj_balance_disponible)>0){echo "$".$obj_balance_disponible;}else{echo "$0.00";}?></b>
+                                <b><?php if(count($obj_balance_disponible) > 0){echo "$".$obj_balance_disponible;}else{echo "$0.00";}?></b>
                                 </p>
                                 <div class="form-group">
                                 <label for="monto">Monto que Solicita:</label>
@@ -58,7 +54,9 @@ $today = date("Y-m-d");
                                 </select>
                                 </div>
                                 <?php 
-                                //GET MIERCOLES
+                                //GET TODAY DATE
+                                $today = date("Y-m-d"); 
+                                //GET WENESDAY
                                 $s_and_s = date('w',strtotime($today));
                                 if($s_and_s != '3'){$style="disabled";}else{$style="";} ?>
                                 <!--BLOCK THE BOTON IF IS SATUDAY OR SUNDAY-->
