@@ -57,6 +57,7 @@ class B_binario extends CI_Controller {
                                         customer.position_temporal,
                                         customer.phone,
                                         customer.position,
+                                        customer.binary,
                                         customer.password,
                                         customer.first_name,
                                         customer.last_name,
@@ -136,7 +137,7 @@ class B_binario extends CI_Controller {
             $pierna = $obj_customer->position;
             
             if($customer_id == 1){
-                if($pierna = 1){
+                if($pierna == 1){
                     $position_id1 = '1z';
                 }else{
                     $position_id1 = '1d';

@@ -21,8 +21,7 @@
                                 <div class="row">
                                     <div class="alert alert-inverse pull-left" style="opacity: 0.7;" aria-label="Left Align">
                                         <?php 
-                                                if($obj_customer->franchise_id != 7){
-                                                    if($obj_customer->point_calification_left <= 0 && $obj_customer->point_calification_rigth <= 0){ ?>
+                                            if($obj_customer->binary == 1){ ?>
                                                 <b>CALIFICADO PARA BINARIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
                                                 <?php }else{ ?>
                                                 <b>PUNTOS DE CALIFICACIÓN</b>
@@ -30,17 +29,13 @@
                                                     <b>IZQUIERDA: </b> <span class="label label-primary"><?php if($obj_customer->point_calification_left > 0){echo $obj_customer->point_calification_left;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <b>DERECHA: </b><span class="label label-primary"><?php if($obj_customer->point_calification_rigth > 0){echo $obj_customer->point_calification_rigth;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <?php } ?>
-                                                <?php }else{ ?>
-                                                     <b>IZQUIERDA: </b> <span class="label label-primary"><?php if($obj_customer->point_calification_left > 0){echo $obj_customer->point_calification_left;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <b>DERECHA: </b><span class="label label-primary"><?php if($obj_customer->point_calification_rigth > 0){echo $obj_customer->point_calification_rigth;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <?php } ?>
                                     </div>
                                     <div class="alert alert-inverse pull-right" style="opacity: 0.7;" aria-label="Right Align">
                                         <b>PUNTOS DE BINARIO</b>
                                         <hr>
                                          <b>IZQUIERDA: </b> 
-                                         <span class="label label-primary"><?php echo $obj_customer->point_left / 0.12;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                         <b>DERECHA: </b><span class="label label-primary"><?php echo $obj_customer->point_rigth / 0.12;?></span> &nbsp;&nbsp;&nbsp;
+                                         <span class="label label-primary"><?php echo $obj_customer->point_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <b>DERECHA: </b><span class="label label-primary"><?php echo $obj_customer->point_rigth;?></span> &nbsp;&nbsp;&nbsp;
                                     </div>
                                 </div>
                                 <!--//END INFORMATION POINT-->    
