@@ -85,6 +85,19 @@ class Register extends CI_Controller {
             }
         }
         
+        public function email() {
+              //SEND MESSAGES
+                    $images = site_url()."static/page_front/images/bienvenido.jpg";
+                    $img_path = "<img src='$images' alt='Bienvenido' height='800' width='800'/>";
+                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: lidermillon</h3><h3>Contraseña: 123456789</h3><p>$img_path</p></body></html>", 70, "\n", true);
+                    $titulo = "Bienvenido a 3T Company";
+                    $headers = "MIME-Version: 1.0\r\n"; 
+                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                    $headers .= "From: 3T Club: Travel - Training - Trade < noreplay@my3t.club >\r\n";
+                    $bool = mail("software.contreras@gmail.com",$titulo,$mensaje,$headers);
+                    echo $bool;
+        }
+        
         public function validate_username_register($username) {
                 //SELECT ID FROM CUSTOMER
             $param_customer = array(
@@ -245,12 +258,11 @@ class Register extends CI_Controller {
                     $this->messages_welcome($name,$last_name,$customer_id,$username,$password);
                     echo '<div class="alert alert-success" style="text-align: center">Registro creado correctamente.</div>';
                     
-    //                SEND MESSAGES
-                    $images = "static/page_front/images/bienvenido.jpg";
-                    $img_path = "<img src='".site_url().$images."' alt='Bienvenido' height='800' width='800'/>";
-
-                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h3>Usuario: $username</h3><h3>Contraseña: $password</h3><p>$img_path</p></body></html>", 70, "\n", true);
-                    $titulo = "Bienvenido a 3T Company";
+                    //SEND MESSAGES
+                    $images = site_url()."static/page_front/images/bienvenido.jpg";
+                    $img_path = "<img src='$images' alt='Bienvenido' height='800' width='800'/>";
+                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h4>Usuario: $username</h4><h4>Contraseña: $password</h4><p>$img_path</p></body></html>", 70, "\n", true);
+                    $titulo = "Bienvenido a 3T Club";
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
                     $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";

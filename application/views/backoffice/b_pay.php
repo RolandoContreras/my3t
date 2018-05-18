@@ -56,7 +56,7 @@
                                 <?php 
                                 //GET TODAY DATE
                                 $today = date("Y-m-d"); 
-                                //GET WENESDAY
+                                //GET WEDNESDAY
                                 $s_and_s = date('w',strtotime($today));
                                 if($s_and_s != '3'){$style="disabled";}else{$style="";} ?>
                                 <!--BLOCK THE BOTON IF IS SATUDAY OR SUNDAY-->
