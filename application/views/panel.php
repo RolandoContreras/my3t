@@ -23,46 +23,46 @@
 									</thead><!-- table heading -->
 									<tbody>
 										<tr>
-                                                                                    <td><a href="#"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados
+                                                                                    <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados
 											</a></td>
-											<td><a href="#"><b class="cmd">12</b><i class="fa fa-users"></i> Por Aprobar</a></td>
+											<td><a href="<?php echo site_url().'dashboard/confirmation_activaciones';?>"><b class="cmd">12</b><i class="fa fa-users"></i> Por Aprobar</a></td>
 										</tr>
 										<tr>
-											<td><a href="#"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
-											<td><a href="#" class="pending"><b class="cmd"><?php echo $obj_pending->pending_comments;?></b><i class="fa fa-comments"></i> Por Leer</a></td>
+											<td><a href="<?php echo site_url().'dashboard/comentarios';?>"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
+											<td><a href="<?php echo site_url().'dashboard/comentarios';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_comments;?></b><i class="fa fa-comments"></i> Por Leer</a></td>
 										</tr>
                                                                                 <tr>
-											<td><a href="#"><b><?php echo $obj_total->total_pay;?></b><i class="fa fa-btc"></i> Pagos Realizados</a></td>
-											<td><a href="#" class="spam"><b class="cmd"><?php echo $obj_pending->pending_pay;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
+											<td><a href="<?php echo site_url().'dashboard/cobros';?>"><b><?php echo $obj_total->total_pay;?></b><i class="fa fa-btc"></i> Pagos Realizados</a></td>
+											<td><a href="<?php echo site_url().'dashboard/cobros';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_pay;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
 										</tr>
 										<tr>
 											<td><a href="#"><b><?php echo $obj_total->total_product;?></b><i class="fa fa-product-hunt"></i> Productos</a></td>
-											
 										</tr>
 										<tr>
-											<td><a href="#"><b><?php echo $obj_total->total_commissions;?></b><i class="fa fa-area-chart"></i> Comisiones</a></td>
+											<td><a href="<?php echo site_url()."dashboard/comisiones";?>"><b><?php echo $obj_total->total_commissions;?></b><i class="fa fa-area-chart"></i> Comisiones</a></td>
 											<td class="blank">&nbsp;</td>
 										</tr>
 										<tr>
-											<td><a href="#"><b><?php echo $obj_total->total_bonus;?></b><i class="fa fa-area-chart"></i> Bonos</a></td>
+											<td><a href="<?php echo site_url().'dashboard/bonos';?>"><b><?php echo $obj_total->total_bonus;?></b><i class="fa fa-area-chart"></i> Bonos</a></td>
 											<td class="blank">&nbsp;</td>
 										</tr>
                                                                                 <tr>
-											<td><a href="#"><b><?php echo $obj_total->total_category;?></b><i class="fa fa-tags"></i> Categorías</a></td>
+											<td><a href="<?php echo site_url().'dashboard/categorias';?>"><b><?php echo $obj_total->total_category;?></b><i class="fa fa-tags"></i> Categorías</a></td>
 											<td class="blank">&nbsp;</td>
 										</tr>
                                                                                 <tr>
-											<td><a href="#"><b><?php echo $obj_total->total_users;?></b><i class="fa fa-user-secret"></i> Usuarios</a></td>
+											<td><a href="<?php echo site_url().'dashboard/rangos';?>"><b><?php echo $obj_total->total_ranges;?></b><i class="fa fa-level-up"></i> Rangos</a></td>
 											<td class="blank">&nbsp;</td>
 										</tr>
                                                                                 <tr>
-											<td><a href="#"><b><?php echo $obj_total->total_informative;?></b><i class="fa fa-envelope-open-o"></i> Mensajes Informativos</a></td>
+											<td><a href="<?php echo site_url().'dashboard/informativos';?>"><b><?php echo $obj_total->total_informative;?></b><i class="fa fa-envelope-open-o"></i> Mensajes Informativos</a></td>
 											<td class="blank">&nbsp;</td>
 										</tr>
-                                                                                <!--                                    
-                                                                                <td><a>Precio del BTC</a>&nbsp;&nbsp;&nbsp;<input type="text" name="btc_price" id="btc_price" value="<?php echo $bitcoin;?>" style="vertical-align: middle !important;">&nbsp;&nbsp;&nbsp;<button onclick="guardar_btc();" class="btn btn-info">Guardar</button></td>
-                                                                                <td></td>
-                                                                                <td></td>-->
+                                                                                <tr>
+											<td><a href="<?php echo site_url().'dashboard/usuarios';?>"><b><?php echo $obj_total->total_users;?></b><i class="fa fa-user-secret"></i> Usuarios</a></td>
+											<td class="blank">&nbsp;</td>
+										</tr>
+                                                                                
 									</tbody>
 								</table>
 							</div>

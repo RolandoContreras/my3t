@@ -47,12 +47,6 @@ $route['contact/send_messages'] = 'contact/send_messages';
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 
-//$route['paquete/basic'] = 'plan/packages';
-//$route['paquete/executive'] = 'plan/packages';
-//$route['paquete/business'] = 'plan/packages';
-//$route['paquete/master'] = 'plan/packages';
-
-
 $route['backoffice'] = "b_home";
 $route['backoffice/productos'] = "b_product";
 $route['backoffice/profile'] = "b_data";
@@ -83,7 +77,6 @@ $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 
 $route['backoffice/comisiones'] = "b_comissions";
-//$route['backoffice/comisiones/consultar'] = "b_comissions/consultar";
 $route['backoffice/comisiones/pay_dialy'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/binary'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/referred'] = "b_comissions/index/$1";
@@ -104,6 +97,8 @@ $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
+
+$route['dashboard/comisiones'] = "d_comission";
 
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/financiados'] = "d_customer/financiados";
