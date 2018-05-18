@@ -99,6 +99,7 @@ $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 
 $route['dashboard/comisiones'] = "d_comission";
+$route['dashboard/bonos'] = "d_bonus";     
 
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/financiados'] = "d_customer/financiados";
