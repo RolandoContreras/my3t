@@ -1,23 +1,25 @@
 <?php if ( ! defined("BASEPATH")) exit("No direct script access allowed"); 
 
-class D_bonus extends CI_Controller{    
+class D_ranges extends CI_Controller{    
     
     public function __construct(){
         parent::__construct();
-        $this->load->model("bonus_model","obj_bonus");
+        $this->load->model("ranges_model","obj_ranges");
     }   
                 
     public function index(){  
             //GER SESSION   
             $this->get_session();
             $params = array(
-                            "select" =>"bonus_id,
+                            "select" =>"range_id,
                                         name,
-                                        percent,
+                                        point_personal,
+                                        point_grupal,
+                                        active,
                                         status_value",
                             );            
             //GET DATA COMMISSIONS
-            $obj_bonus= $this->obj_bonus->search($params);
+            $obj_ranges= $this->obj_ranges->search($params);
             
             /// PAGINADO
             $modulos ='comisiones'; 
@@ -28,8 +30,8 @@ class D_bonus extends CI_Controller{
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->set("obj_bonus",$obj_bonus);
-            $this->tmp_mastercms->render("dashboard/bonus/bonus_list");
+            $this->tmp_mastercms->set("obj_ranges",$obj_ranges);
+            $this->tmp_mastercms->render("dashboard/ranges/ranges_list");
     }
     
     public function load($category_id=NULL){

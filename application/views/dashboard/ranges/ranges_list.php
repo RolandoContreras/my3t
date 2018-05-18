@@ -12,12 +12,10 @@
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
                                     <div class="container" style="width: auto;">
-                                            <a class="brand">BONOS</a>
+                                            <a class="brand">RANGOS</a>
                                     </div>
                             </div>
                     </div>
-                
-             <!--<form>-->
                 <div class="well nomargin" style="width: 100% !important;">
                     <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
@@ -25,19 +23,21 @@
                             <tr>
                                 <th>ID</th>
                                 <th>NOMBRE</th>
-                                <th>PORCENTAJE</th>
-                                <th>Estado</th>
-                                <th>Acción</th>
+                                <th>PUNTOS PERSONALES</th>
+                                <th>PUNTOS GRUPALES</th>
+                                <th>ESTADO</th>
+                                <th>ACCIÓN</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($obj_bonus as $value): ?>
+                            <?php foreach ($obj_ranges as $value): ?>
                                 <tr>
-                            <th align="center"><?php echo $value->bonus_id;?></th>
+                            <th><?php echo $value->range_id;?></th>
                             <td align="center"><?php echo strtoupper($value->name);?></td>
-                            <td align="center"><?php echo $value->percent;?></td>
+                            <td align="center"><?php echo $value->point_personal;?></td>
+                            <td align="center"><?php echo $value->point_grupal;?></td>
                             <td align="center">
-                                <?php if ($value->status_value == 0) {
+                                <?php if ($value->active == 0) {
                                     $valor = "No Activo";
                                     $stilo = "label label-important";
                                 }else{
@@ -46,10 +46,10 @@
                                 } ?>
                                 <span class="<?php echo $stilo;?>"><?php echo $valor;?></span>
                             </td>
-                            <td>
+                            <td align="center">
                                 <div class="operation">
                                         <div class="btn-group">
-                                           <button class="btn btn-small" onclick="edit_bonus('<?php echo $value->bonus_id;?>');">Editar</button>
+                                           <button class="btn btn-small" onclick="edit_ranges('<?php echo $value->range_id;?>');">Editar</button>
                                         </div>
                                 </div>
                             </td>

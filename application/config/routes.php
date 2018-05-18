@@ -72,7 +72,6 @@ $route['backoffice/messages/social/([0-9a-z_-]+)'] = "b_messages/message_type/$1
 
 $route['backoffice/compose_message'] = "b_messages/compose_message"; 
 
-
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 
@@ -99,7 +98,8 @@ $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 
 $route['dashboard/comisiones'] = "d_comission";
-$route['dashboard/bonos'] = "d_bonus";     
+$route['dashboard/bonos'] = "d_bonus"; 
+$route['dashboard/rangos'] = "d_ranges"; 
 
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/financiados'] = "d_customer/financiados";
