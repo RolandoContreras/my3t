@@ -155,7 +155,6 @@ class D_activate extends CI_Controller{
             }
     }
  
-   
     public function pay_directo($customer_id,$point,$parents_id){
                 //GET PERCENT FROM BONUS
                 $params = array(
@@ -219,6 +218,7 @@ class D_activate extends CI_Controller{
             //INSERT MESSAGES    
             $this->obj_messages->insert($data_messages);
     }
+    
     public function message_bonus_sponsor_lost($amount,$parents_id,$customer_id){
                 //GET PERCENT FROM BONUS
                $message = "Acaba de perder $$amount en bono de patrocinio";
@@ -258,8 +258,12 @@ class D_activate extends CI_Controller{
                     //INSERT MESSAGES    
                     $this->obj_messages->insert($data_messages);
     }
+    
+    public function calification(){
         
-        
+    }
+
+
     public function pay_binario($customer_id){
             //GET PARAM TO CUSTOMER
             $params = array(
