@@ -20,6 +20,7 @@ class ranges_model_atributos{
     var $name='';
     var $point_personal='';
     var $point_grupal='';
+    var $img='';
     var $active='';
     var $status_value='';
     var $created_at='';
@@ -38,6 +39,7 @@ class Ranges_Model extends CI_Model{
 	$this->name='';
         $this->point_personal='';
 	$this->point_grupal='';
+        $this->img='';
         $this->active='';
 	$this->status_value='';
 	$this->created_at='';

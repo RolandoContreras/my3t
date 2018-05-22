@@ -53,7 +53,8 @@ class B_home extends CI_Controller {
                                     franchise.img,
                                     franchise.name as franchise,
                                     ranges.range_id,
-                                    ranges.name as ranges
+                                    ranges.name as ranges,
+                                    ranges.img
                                     ",
                          "where" => "customer.customer_id = $customer_id",
                          "join" => array('franchise, customer.franchise_id = franchise.franchise_id',
@@ -130,6 +131,7 @@ class B_home extends CI_Controller {
             $params = array(
                         "select" =>"range_id,
                                     name,
+                                    img,
                                     point_grupal",
                          "where" => "range_id > $range_id");
             $next_range = $this->obj_ranges->get_search_row($params);

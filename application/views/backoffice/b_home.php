@@ -85,11 +85,17 @@
                         <a class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading">Rango</h5>
+                                    <h5 class="media-heading">Rango Actual</h5>
                                 <strong><?php echo $obj_customer->ranges;?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+                                    <?php 
+                                        if($obj_customer->range_id == 0){ ?>
+                                                <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+                                        <?php }else{ ?>
+                                                <i><img style="max-width: none" src="<?php echo site_url().'static/backoffice/images/rangos/'.$obj_customer->img;?>" alt="<?php echo $obj_customer->ranges;?>" width="55px"/></i>  
+                                        <?php } ?>
+                                    
                                 </div>
                             </div>
                         </a>
@@ -101,7 +107,7 @@
                                 <strong><?php echo $next_range->name;?> / <?php echo $next_range->point_grupal;?> PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+                                    <i><img style="max-width: none" src="<?php echo site_url().'static/backoffice/images/rangos/'.$next_range->img;?>" alt="<?php echo $next_range->name;?>" width="55px"/></i>
                                 </div>
                             </div>
                         </a>
