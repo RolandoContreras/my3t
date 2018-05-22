@@ -50,7 +50,7 @@ class B_home extends CI_Controller {
                                     customer.status_value,
                                     customer.franchise_id,
                                     franchise.price,
-                                    franchise.img,
+                                    franchise.img as franchise_img,
                                     franchise.name as franchise,
                                     ranges.range_id,
                                     ranges.name as ranges,
@@ -63,7 +63,10 @@ class B_home extends CI_Controller {
             $obj_customer = $this->obj_customer->get_search_row($params);
             
             //GET FRANCHISE ACTIVE
-            $obj_franchise = $this->franchise();
+            if($obj_customer->active == 0){
+                $obj_franchise = $this->franchise();
+                $this->tmp_backoffice->set("obj_franchise",$obj_franchise);
+            }
             
             //GET NEXT RANGE
             $range_id = $obj_customer->range_id;
@@ -78,7 +81,7 @@ class B_home extends CI_Controller {
              $price_btc = $this->btc_price();
              
                 $this->tmp_backoffice->set("next_range",$next_range);
-                $this->tmp_backoffice->set("obj_franchise",$obj_franchise);
+                
                 $this->tmp_backoffice->set("messages_informative",$messages_informative);
                 $this->tmp_backoffice->set("obj_message",$obj_message);
                 $this->tmp_backoffice->set("all_message",$all_message);

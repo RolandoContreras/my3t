@@ -70,7 +70,7 @@
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img style="max-width: 150px" src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="<?php echo $obj_customer->franchise;?>"/>
+                            <img style="max-width: 150px" src="<?php echo site_url()."static/backoffice/images/$obj_customer->franchise_img";?>" alt="<?php echo $obj_customer->franchise;?>"/>
                         </div>
                         </div>
                     
@@ -257,7 +257,7 @@
                             <div class="panel panel-default">
                                         <!-- panel body --> 
                                         <div class="panel-body" style="vertical-align: central !important; margin-left: 20%"> 
-                                                <p><img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="<?php echo $obj_customer->franchise;?>" height="120" width="130"/></p>
+                                                <p><img src="<?php echo site_url()."static/backoffice/images/$obj_customer->franchise_img";?>" alt="<?php echo $obj_customer->franchise;?>" height="120" width="130"/></p>
                                         </div> 
                                 </div> 
                         </div>
