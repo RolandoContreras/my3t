@@ -20,6 +20,7 @@ class D_activate extends CI_Controller{
                                     customer.username,
                                     customer.first_name,
                                     customer.last_name,
+                                    customer.position,
                                     customer.active,
                                     customer.parents_id,
                                     customer.created_at,
@@ -110,23 +111,44 @@ class D_activate extends CI_Controller{
                 $customer_id = $this->input->post("customer_id");
                 $point = $this->input->post("point");
                 $parents_id = $this->input->post("parents_id");
+                $side = $this->input->post("position");
                 
                 //GET SPONSOR ACTIVE
                     $params = array(
-                        "select" =>"customer.active",
+                        "select" =>"active,
+                                    binary,
+                                    point_calification_left,
+                                    point_calification_rigth",
                         "where" => "customer_id = $parents_id and customer.status_value = 1"
                     );
                 $obj_customer= $this->obj_customer->get_search_row($params);
                 $active = $obj_customer->active;
+                $binary = $obj_customer->binary;
+                $point_calification_left = $obj_customer->point_calification_left;
+                $point_calification_rigth = $obj_customer->point_calification_rigth;
                 
                 if($active > 0){
                     //GET BONUS SPONSOR
                     $amount = $this->pay_directo($customer_id,$point,$parents_id);
                     //SEND MESSAGE CONFIRMATION BONUS SPONSOR
                     $this->message_bonus_sponsor($amount,$parents_id,$customer_id);
-                    
-                    //GET BONUS UNILEVEL
-//                    $this->pay_binario($customer_id);
+                    //SET CALIFICATION
+                    if($binary != 1){
+                        $result = $this->calification($parents_id,$side,$point_calification_left,$point_calification_rigth,$point);
+                        
+                            
+                            
+                        if($result == 0){
+                            
+                        }else{
+                            
+                        }
+                            
+                        
+                        
+                    }else{
+                        echo "hola";
+                    }
                 }else{
                     //GET AMOUNT BONUS SPONSOR
                     $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
@@ -259,11 +281,69 @@ class D_activate extends CI_Controller{
                     $this->obj_messages->insert($data_messages);
     }
     
-    public function calification(){
-        
+    public function calification($parents_id,$side,$point_calification_left,$point_calification_rigth,$point){
+                //SET SIDE CALIFICATION
+                if($side == 1){
+                    $result = $point_calification_left - $point;
+                    $point_calification_left = $result;
+                    //VERIFICATE BINARY
+                    $this->verification_binary($point_calification_left, abs($point_calification_rigth), $parents_id);
+                        if($result < 0){
+                            //RESULT CONVERT INT
+                            $result = abs($result);
+                            $data = array(
+                                'point_calification_left' => 0,
+                                'point_left' => $result,
+                                ); 
+                            $this->obj_customer->update($parents_id,$data);
+                            
+                            //RETURN PARED_ID
+                            return $parents_id;
+                        }else{
+                             $data = array(
+                                'point_calification_left' => $result,
+                                ); 
+                            $this->obj_customer->update($parents_id,$data);
+                            return 0;
+                        }
+                }else{
+                    $result = $point_calification_rigth - $point;
+                    $point_calification_rigth = $result;
+                    //VERIFICATE BINARY
+                    $this->verification_binary($point_calification_left, $point_calification_rigth, $parents_id);
+                    if($result < 0){
+                            //RESULT CONVERT INT
+                            $result = abs($result);
+                            $data = array(
+                                'point_calification_rigth' => 0,
+                                'point_rigth' => $result,
+                                ); 
+                            $this->obj_customer->update($parents_id,$data);
+                            //RETURN PARED_ID
+                            return $parents_id;
+                    }else{
+                         $data = array(
+                            'point_calification_rigth' => $result,
+                            ); 
+                        $this->obj_customer->update($parents_id,$data);
+                        return 0;
+                    }
+                }
+                
+                
     }
-
-
+    
+    public function verification_binary($point_calification_left,$point_calification_rigth,$parents_id){
+        //VERIFICATE POINT CALIFICATION
+        if($point_calification_left <= 0 && $point_calification_rigth <= 0){
+                //RESULT CONVERT INT
+                    $data = array(
+                        'binary' => 1,
+                        ); 
+                    $this->obj_customer->update($parents_id,$data);
+        }
+    }
+    
     public function pay_binario($customer_id){
             //GET PARAM TO CUSTOMER
             $params = array(
