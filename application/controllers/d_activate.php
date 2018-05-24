@@ -22,6 +22,7 @@ class D_activate extends CI_Controller{
                                     customer.last_name,
                                     customer.position,
                                     customer.active,
+                                    customer.identificador,
                                     customer.parents_id,
                                     customer.created_at,
                                     franchise.price as price,
@@ -112,6 +113,7 @@ class D_activate extends CI_Controller{
                 $point = $this->input->post("point");
                 $parents_id = $this->input->post("parents_id");
                 $side = $this->input->post("position");
+                $identificador = $this->input->post("identificador");
                 
                 //GET SPONSOR ACTIVE
                     $params = array(
@@ -135,19 +137,14 @@ class D_activate extends CI_Controller{
                     //SET CALIFICATION
                     if($binary != 1){
                         $result = $this->calification($parents_id,$side,$point_calification_left,$point_calification_rigth,$point);
-                        
-                            
-                            
-                        if($result == 0){
-                            
-                        }else{
-                            
-                        }
-                            
-                        
-                        
-                    }else{
-                        echo "hola";
+                        //PAY BINARY
+                        $this->pay_binario($result,$identificador);
+                     }else{
+                         echo "hola";
+                             die();
+                         
+                         $result = 0;
+                        $this->pay_binario($result,$identificador);
                     }
                 }else{
                     //GET AMOUNT BONUS SPONSOR
@@ -344,7 +341,46 @@ class D_activate extends CI_Controller{
         }
     }
     
-    public function pay_binario($customer_id){
+    public function pay_binario($result,$identificador){
+            
+            //CONVERT ARRAY
+            $array_identificador =  explode(',', $identificador);
+            $count_array = count($array_identificador);
+            $key = $count_array;
+            
+            foreach ($array_identificador as $key => $value) {
+                var_dump($key);
+                var_dump($value);
+                die();
+                
+                $key = $key - 1;
+                
+                
+                
+            }
+            
+            var_dump($value);
+            var_dump($key);
+            die();
+            
+            
+            
+            
+            die();
+            
+            if($result == 0){
+                  $where = "";          
+            }else{
+                $where = "";
+            }
+        
+            
+                 $params = array("select" => "identificador,customer_id,first_name",
+                        "where" => "identificador like '%$identificator_param' and position = $pierna_customer",
+                        "order" => "customer.identificador DESC");
+                    $obj_identificator = $this->obj_customer->search($params);
+            
+        
             //GET PARAM TO CUSTOMER
             $params = array(
                         "select" =>"customer.customer_id,
@@ -578,6 +614,7 @@ class D_activate extends CI_Controller{
                 }
             }    
     }
+        
     
        
 //    public function modify_day(){
