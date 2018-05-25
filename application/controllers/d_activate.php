@@ -137,9 +137,14 @@ class D_activate extends CI_Controller{
                     //SET CALIFICATION
                     if($binary != 1){
                         $result = $this->calification($parents_id,$side,$point_calification_left,$point_calification_rigth,$point);
+                        //PAY BINARY
+                        $this->pay_binario($result,$identificador,$point);
+                     }else{
+                        //PAY BINARY
+                        $result = 0;
+                        $this->pay_binario($result,$identificador,$point);
                      }
-                     //PAY BINARY
-                     $this->pay_binario($result,$identificador,$point);
+                     
                 }else{
                     //GET AMOUNT BONUS SPONSOR
                     $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
@@ -345,6 +350,9 @@ class D_activate extends CI_Controller{
             $key = $count_array;
             
             foreach ($array_identificador as $key => $value) {
+                var_dump($key);
+                var_dump($value);
+                die();
                 if($key <= 9){
                     $identificador = substr(str_replace($value, "", $identificador),1);
                         if($result == 0){
@@ -355,24 +363,40 @@ class D_activate extends CI_Controller{
                             //GET DATA CUSTOMER
                             $params = array(
                                 "select" =>"customer_id,
+                                            point_left,
+                                            point_rigth,
                                             position",
                                 "where" => $where
                             );
-                            $obj_customer= $this->obj_customer->get_search_row($params);
-                    
-                            //UPDATE POINT ON CUSTOMER TABLE
-                            $position = $obj_customer->position;
-                                if($position == 1){
+                            
+                            $obj_customer = $this->obj_customer->get_search_row($params);
+                            
+                            if(count($obj_customer) > 0){
+                                
+                                echo "hola";
+                                die();
+                                
+                                //UPDATE POINT ON CUSTOMER TABLE
+                               $rest = substr("$value", -1); 
+                                if($rest == "z"){
                                     $leg = 'point_left';
+                                    $point = $obj_customer->point_left + $point;
                                 }else{
                                     $leg = 'point_rigth';
+                                    $point = $obj_customer->point_rigth + $point;
                                 }
+                                //SUM POINT LEG
                                     $data = array(
                                         "$leg" => $point,
                                         'updated_at' => date("Y-m-d H:i:s"),
                                         'updated_by' => $_SESSION['usercms']['user_id'],
                                     ); 
                                     $this->obj_customer->update($obj_customer->customer_id,$data);
+                            }
+                            
+                            echo "hola2";
+                            die();
+                            
             }
         }
     }
