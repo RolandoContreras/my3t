@@ -137,20 +137,16 @@ class D_activate extends CI_Controller{
                     //SET CALIFICATION
                     if($binary != 1){
                         $result = $this->calification($parents_id,$side,$point_calification_left,$point_calification_rigth,$point);
-                        //PAY BINARY
-                        $this->pay_binario($result,$identificador);
-                     }else{
-                         echo "hola";
-                             die();
-                         
-                         $result = 0;
-                        $this->pay_binario($result,$identificador);
-                    }
+                     }
+                     //PAY BINARY
+                     $this->pay_binario($result,$identificador,$point);
                 }else{
                     //GET AMOUNT BONUS SPONSOR
                     $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
                     //SEND MESSAGE CONFIRMATION BONUS SPONSOR
                     $this->message_bonus_sponsor_lost($amount,$parents_id,$customer_id);
+                    $result = 0;
+                    $this->pay_binario($result,$identificador,$point);
                 }
                 
                 //SELECT TOY AND TODAY+76
@@ -341,7 +337,7 @@ class D_activate extends CI_Controller{
         }
     }
     
-    public function pay_binario($result,$identificador){
+    public function pay_binario($result,$identificador,$point){
             
             //CONVERT ARRAY
             $array_identificador =  explode(',', $identificador);
@@ -349,307 +345,38 @@ class D_activate extends CI_Controller{
             $key = $count_array;
             
             foreach ($array_identificador as $key => $value) {
-                var_dump($key);
-                var_dump($value);
-                die();
-                
-                $key = $key - 1;
-                
-                
-                
-            }
-            
-            var_dump($value);
-            var_dump($key);
-            die();
-            
-            
-            
-            
-            die();
-            
-            if($result == 0){
-                  $where = "";          
-            }else{
-                $where = "";
-            }
-        
-            
-                 $params = array("select" => "identificador,customer_id,first_name",
-                        "where" => "identificador like '%$identificator_param' and position = $pierna_customer",
-                        "order" => "customer.identificador DESC");
-                    $obj_identificator = $this->obj_customer->search($params);
-            
-        
-            //GET PARAM TO CUSTOMER
-            $params = array(
-                        "select" =>"customer.customer_id,
-                                    customer.username,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.active,
-                                    customer.parents_id,
-                                    customer.identificador,
-                                    customer.created_at,
-                                    (select percent from bonus where bonus_id = 3 and status_value = 1) as percet_binario,
-                                    franchise.price as price,
-                                    franchise.name as franchise,
-                                    customer.status_value",
-                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
-                        "where" => "customer_id = $customer_id and customer.status_value = 1"
-               );
-        
-            $obj_customer = $this->obj_customer->get_search_row($params); 
-            //GET PERCENT BINARY FROM TABLE BONUS
-            $percet_binario = $obj_customer->percet_binario;
-            
-            //GET CALIFICATION PARENT_ID
-            $parent_id = $obj_customer->parents_id;
-            //SELECT PRICE TO PAQUETE
-            $price_tree = $obj_customer->price;
-            //SELECT IDENTIFICATOR
-            $identificator = $obj_customer->identificador;
-            $creacion = $obj_customer->created_at;
-            //SEPARAR EL IDENTIFICADOR
-            $explo_identificator =  explode(",", $identificator);
-            
-            $str = "";
-            foreach ($explo_identificator as $key => $value) {
-
-                    $encontrar_post = strpos($identificator, $value);
-                    $texto =  substr($identificator, $encontrar_post);
-                    $str .= "or customer.identificador like '$texto%' ";
-                }
-                //ELIMINAR OR DE INICIO
-                $str = substr($str, 3);  
-                
-            if(count($customer_id) > 0){
-                //SELECT TREE TO INSERT % BINARY
-                $param_tree = array(
-                                    "select" =>"customer.customer_id,
-                                                customer.username,
-                                                customer.created_at,
-                                                customer.point_left,
-                                                customer.point_rigth,
-                                                customer.identificador,
-                                                customer.calification,
-                                                customer.point_calification_left,
-                                                customer.point_calification_rigth,
-                                                customer.position",
-                                     "where" => "customer.created_at < '$creacion' and customer.status_value = 1 and ($str)",
-                                     "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
-                                     "order" => "customer.created_at DESC"); 
-                 $obj_tree = $this->obj_customer->search($param_tree); 
-                 
-                //SELECT Z O D FROM CUSTOMER_ID
-                $position_principal = substr($explo_identificator[0], -1);
-                //ORDER POINT LEFT OR RIGTH
-                $position_tree = "";
-                                
-                foreach ($obj_tree as $value) {
-                    $identificator_tree  = $value->identificador;
-                    //SELECT Z O D FROM CUSTOMER_ID
-                    $explo_identificator_2 =  explode(",", $identificator_tree);
-                    $position_tree = substr($explo_identificator_2[0], -1);
-                    
-                    //CONDITION IS EQUAL
-                    if($position_tree == $position_principal){
-                        if($position_principal == 'z'){
-                            $point_left = ($price_tree  * $percet_binario) / 100;
-                            $point_left = $value->point_left + $point_left;
-                            //UPDATE POINT LEFT TABLE CUSTOMER
-                            
-                            if($value->customer_id == $parent_id && $value->calification == 0){
-                                                                
-                                $calification_left = $value->point_calification_left - $price_tree;
-                                $calification_rigth = $value->point_calification_rigth;
-                                
-                                    if($calification_rigth <= 0 && $calification_left <= 0){
-                                        $data = array(
-                                        'point_calification_left' => $calification_left,
-                                        'calification' => 1,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }else{
-                                        $data = array(
-                                        'point_calification_left' => $calification_left,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }
-                            }else{
-                                
-                                $data = array(
-                                'point_left' => $point_left,
-                                'updated_at' => date("Y-m-d H:i:s"),
-                                'updated_by' => $_SESSION['usercms']['user_id'],
-                                ); 
-                                $this->obj_customer->update($value->customer_id,$data);
-                            }
-                            //SAVE LAST POSITION
-                            $position_principal = $position_tree;
-                                                        
+                if($key <= 9){
+                    $identificador = substr(str_replace($value, "", $identificador),1);
+                        if($result == 0){
+                            $where = "customer.identificador = '$identificador'";
                         }else{
-                            $point_rigth = ($price_tree  * $percet_binario) / 100;
-                            $point_rigth = $value->point_rigth + $point_rigth;
-                            //UPDATE POINT RIGTH TABLE CUSTOMER
-                            
-                            if($value->customer_id == $parent_id && $value->calification == 0){
-                                $calification_left = $value->point_calification_left;
-                                $calification_rigth = $value->point_calification_rigth - $price_tree;
-                                
-                                    if($calification_left <= 0 && $calification_rigth  <= 0){
-                                        $data = array(
-                                        'point_calification_rigth' => $calification_rigth,
-                                        'calification' => 1,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }else{
-                                         $data = array(
-                                        'point_calification_rigth' => $calification_rigth,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }
-                                   
-                                    //SAVE LAST POSITION
-                                    $position_principal = $position_tree;
-                            }else{
-                                    $data = array(
-                                        'point_rigth' => $point_rigth,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                    ); 
-                                    $this->obj_customer->update($value->customer_id,$data);
-                                    //SAVE LAST POSITION
-                                    $position_principal = $position_tree;
-                            }
-                            
+                            $where = "customer.identificador = '$identificador' and customer_id <> $result";
                         }
-                    }else{
-                            if($position_principal == 'z'){
-                                $point_left = ($price_tree  * $percet_binario) / 100;
-                                $point_left = $value->point_left + $point_left;
-
-                                //UPDATE POINT LEFT TABLE CUSTOMER
-                                
-                              if($value->customer_id == $parent_id && $value->calification == 0){
-                                  $calification_left = $value->point_calification_left - $price_tree;
-                                  $calification_rigth = $value->point_calification_rigth;
-                                
-                                    if($calification_rigth <= 0 && $calification_left  <= 0){
-                                        $data = array(
-                                        'point_calification_left' => $calification_left,
-                                        'calification' => 1,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }else{
-                                         $data = array(
-                                        'point_calification_left' => $calification_rigth,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }
-                                    $position_principal = $position_tree;
-                              }else{
-                                  $data = array(
-                                    'point_left' => $point_left,
-                                    'updated_at' => date("Y-m-d H:i:s"),
-                                    'updated_by' => $_SESSION['usercms']['user_id'],
-                                ); 
-                                $this->obj_customer->update($value->customer_id,$data);
-                                $position_principal = $position_tree;
-                              }
-                                
-
-                            }else{
-                                $point_rigth = ($price_tree  * $percet_binario) / 100;
-                                $point_rigth = $value->point_rigth + $point_rigth;
-                                //UPDATE POINT RIGTH TABLE CUSTOMER
-                                
-                                if($value->customer_id == $parent_id && $value->calification == 0){
-                                    $calification_left = $value->point_calification_left;
-                                    $calification_rigth = $value->point_calification_rigth - $price_tree;
-                                
-                                    if($calification_left <= 0 && $calification_rigth  <= 0){
-                                        $data = array(
-                                        'point_calification_rigth' => $calification_rigth,
-                                        'calification' => 1,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }else{
-                                         $data = array(
-                                        'point_calification_rigth' => $calification_rigth,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
-                                        ); 
-                                        $this->obj_customer->update($value->customer_id,$data);
-                                    }
-                                   
-                                    //SAVE LAST POSITION
-                                    $position_principal = $position_tree;
+                            //GET DATA CUSTOMER
+                            $params = array(
+                                "select" =>"customer_id,
+                                            position",
+                                "where" => $where
+                            );
+                            $obj_customer= $this->obj_customer->get_search_row($params);
+                    
+                            //UPDATE POINT ON CUSTOMER TABLE
+                            $position = $obj_customer->position;
+                                if($position == 1){
+                                    $leg = 'point_left';
                                 }else{
-                                     $data = array(
-                                    'point_rigth' => $point_rigth,
-                                    'updated_at' => date("Y-m-d H:i:s"),
-                                    'updated_by' => $_SESSION['usercms']['user_id'],
-                                    ); 
-                                    $this->obj_customer->update($value->customer_id,$data);
-                                    $position_principal = $position_tree;
+                                    $leg = 'point_rigth';
                                 }
-                                
-                            }
-                    }
-                }
-            }    
+                                    $data = array(
+                                        "$leg" => $point,
+                                        'updated_at' => date("Y-m-d H:i:s"),
+                                        'updated_by' => $_SESSION['usercms']['user_id'],
+                                    ); 
+                                    $this->obj_customer->update($obj_customer->customer_id,$data);
+            }
+        }
     }
-        
-    
-       
-//    public function modify_day(){
-//        
-//          $params = array(
-//                        "select" =>"customer.customer_id,
-//                                    customer.username,
-//                                    customer.first_name,
-//                                    customer.last_name,
-//                                    customer.date_start,
-//                                    customer.date_end,
-//                                    customer.active,
-//                                    customer.parents_id,
-//                                    customer.status_value",
-//                        "where" => "customer.date_start >= '2017-01-10' and <= '2017-04-30'",
-//                        "order" => "date_start ASC"
-//               );
-//           //GET DATA FROM CUSTOMER
-//           $obj_customer= $this->obj_customer->search($params);
-//           
-//           foreach ($obj_customer as $value) {
-//               
-//                $date_start = $value->date_start;
-//                
-//                $date_end = strtotime ( '+120 day' , strtotime ( $date_start ) ) ;
-//                $date_end = date ( 'Y-m-j' , $date_end );
-//                
-//                $data = array(
-//                        'date_end' => $date_end,
-//                    ); 
-//                $this->obj_customer->update($value->customer_id,$data);
-//           }   
-//            
-//    }
-    
+          
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
             if($_SESSION['usercms']['logged_usercms']=="TRUE" && $_SESSION['usercms']['status']==1){               
