@@ -225,14 +225,12 @@
                     <div class="panel-heading clearfix"> 
                             <div class="panel-title">SELECCIONA TU PAQUETE</div> 
                     </div>
-                <div class="col-md-3"></div>
                     <?php foreach ($obj_franchise as $value) { ?>
                              <div class="col-md-2"> 
                                 <p style="margin-top:10px;align-items: center !important;padding: 5px;" ><img src="<?php echo site_url()."static/backoffice/images/$value->img";?>" alt="<?php echo $value->name;?>"/></p>
                                 <p><button type="button" onclick="make_pedido('<?php echo $value->franchise_id;?>');" class="btn btn-sm btn-black bg-gray btn-block">Seleccionar</button></p>
                             </div>
                     <?php } ?>
-                <div class="col-md-3"></div>
                 </div> 
         </div>
     <br/><br/>
