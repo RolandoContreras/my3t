@@ -240,6 +240,36 @@ class B_home extends CI_Controller {
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
+                            }elseif($franchise_id == 10){
+                                //CHANGE TO ELITE   
+                                 $data = array(
+                                            'franchise_id' => 10,
+                                            'point_calification_left' => 487,
+                                            'point_calification_rigth' => 487,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }elseif($franchise_id == 11){
+                                //CHANGE TO ELITE   
+                                 $data = array(
+                                            'franchise_id' => 11,
+                                            'point_calification_left' => 975,
+                                            'point_calification_rigth' => 975,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }elseif($franchise_id == 12){
+                                //CHANGE TO ELITE   
+                                 $data = array(
+                                            'franchise_id' => 11,
+                                            'point_calification_left' => 2925,
+                                            'point_calification_rigth' => 2925,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
                             }else{
                                 //CHANGE MEMBERSHIP
                                  $data = array(
