@@ -263,7 +263,7 @@ class B_home extends CI_Controller {
                             }elseif($franchise_id == 12){
                                 //CHANGE TO ELITE   
                                  $data = array(
-                                            'franchise_id' => 11,
+                                            'franchise_id' => 12,
                                             'point_calification_left' => 2925,
                                             'point_calification_rigth' => 2925,
                                             'updated_by' => $customer_id,
