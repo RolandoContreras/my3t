@@ -115,7 +115,7 @@
                             <div class="media">
                                 <div class="media-body media-middle">
                                 <h5 class="media-heading">Puntaje Izquierda</h5>
-                                <strong><?php echo $obj_customer->point_left;?> PTS</strong>
+                                <strong><?php echo format_number_miles($obj_customer->point_left,2);?> PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
                                     <i class="fa fa-align-left fa-3x"></i>
@@ -126,7 +126,7 @@
                             <div class="media">
                                 <div class="media-body media-middle">
                                 <h5 class="media-heading">Puntaje Derecha</h5>
-                                <strong><?php echo $obj_customer->point_rigth;?> PTS</strong>
+                                <strong><?php echo format_number_miles($obj_customer->point_rigth);?> PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
                                     <i class="fa fa-align-right fa-3x"></i>

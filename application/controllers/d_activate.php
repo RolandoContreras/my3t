@@ -201,6 +201,9 @@ class D_activate extends CI_Controller{
                         'created_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_commissions->insert($data);
+                    
+                    //POINT ON POINT TABLE
+                    
                     return $amount;
                 }
         }
