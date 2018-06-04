@@ -34,7 +34,7 @@ class Register extends CI_Controller {
                 $username = $url[2];
                 //Select params
                 $params = array(
-                    "select" => "customer_id,first_name, position_temporal,username,point_left,point_rigth,identificador",
+                    "select" => "customer_id,first_name, position_temporal,username,identificador",
                     "where" => "username = '$username'");
                 $obj_paises['obj_customer'] = $this->obj_customer->get_search_row($params);
             }
