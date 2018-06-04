@@ -15,34 +15,34 @@ BITSHARE S.A.C
 * Fecha: 16/11/2016
 ****/
 
-class commissions_model_atributos{	
-    var $commissions_id='';
-    var $customer_id='';
+class points_model_atributos{	
+    var $point_id='';
     var $bonus_id='';
-    var $name='';
-    var $amount='';
-    var $date='';
+    var $customer_id='';
+    var $point='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
+    var $updated_at='';
+    var $updated_by='';
 }
 
-class Commissions_Model extends CI_Model{ 
+class Points_Model extends CI_Model{ 
 
     public function __construct() {
         parent::__construct();  
-        $this->table = 'commissions';
-	$this->table_id = 'commissions_id';
-        $this->commissions_id='';
-        $this->customer_id='';
+        $this->table = 'points';
+	$this->table_id = 'point_id';
+        $this->point_id='';
         $this->bonus_id='';
-        $this->name ='';
-	$this->amount='';
-        $this->date='';
+        $this->customer_id='';
+        $this->point='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';
-	$this->fields = new commissions_model_atributos();
+        $this->updated_at='';
+        $this->updated_by='';
+	$this->fields = new points_model_atributos();
     }   
     
     public function fields(){
@@ -128,14 +128,5 @@ class Commissions_Model extends CI_Model{
         $dato = $query->row();
         return $dato;       
   }
-  
-   public function verificar_username($username,$password){        
-        $this->db->where('$username',$username);
-        $this->db->where('password', $password);
-        $this->db->from($this->table);
-        $query = $this->db->get();                     
-        return $query->row();        
-   }
-  
 } //FIN DEL MODELO EXTENDIDO
 ?>

@@ -10,6 +10,8 @@ class D_activate extends CI_Controller{
         $this->load->model("bonus_model","obj_bonus");
         $this->load->model("activation_message_model","obj_activation");
         $this->load->model("messages_model","obj_messages");
+        $this->load->model("points_model","obj_points");
+        $this->load->model("binarys_model","obj_binarys");
     }   
                 
     public function index(){  
@@ -146,6 +148,7 @@ class D_activate extends CI_Controller{
                      }
                      
                 }else{
+                    
                     //GET AMOUNT BONUS SPONSOR
                     $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
                     //SEND MESSAGE CONFIRMATION BONUS SPONSOR
@@ -158,7 +161,7 @@ class D_activate extends CI_Controller{
                 $today = date('Y-m-j');
                 
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
-                if(count($customer_id) > 0){
+//                if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
                         'date_start' => $today,
@@ -166,7 +169,7 @@ class D_activate extends CI_Controller{
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_customer->update($customer_id,$data);
-                }
+//                }
                 //SEND MESSAGE CONFIRMATION ACTIVE
                 $this->message_active($customer_id);
                 
@@ -176,6 +179,7 @@ class D_activate extends CI_Controller{
     }
  
     public function pay_directo($customer_id,$point,$parents_id){
+        
                 //GET PERCENT FROM BONUS
                 $params = array(
                         "select" =>"percent",
@@ -203,7 +207,16 @@ class D_activate extends CI_Controller{
                     $this->obj_commissions->insert($data);
                     
                     //POINT ON POINT TABLE
-                    
+                    $data = array(
+                        'customer_id' => $parents_id,
+                        'bonus_id' => 1,
+                        'point' => $point,
+                        'status_value' => 1,
+                        'date' => date("Y-m-d H:i:s"),
+                        'created_at' => date("Y-m-d H:i:s"),
+                        'created_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_points->insert($data);
                     return $amount;
                 }
         }
@@ -294,9 +307,18 @@ class D_activate extends CI_Controller{
                             $result = abs($result);
                             $data = array(
                                 'point_calification_left' => 0,
-                                'point_left' => $result,
                                 ); 
                             $this->obj_customer->update($parents_id,$data);
+                            
+                            //INSERT POINT ON BINERY TABLE
+                             $data = array(
+                                'customer_id' => $parents_id,
+                                'point_left' => $result,
+                                'created_by' => $parents_id,
+                                'status_value' => 1,
+                                'created_at' => date("Y-m-d H:i:s"),
+                                ); 
+                            $this->obj_binarys->insert($data);
                             
                             //RETURN PARED_ID
                             return $parents_id;
@@ -317,9 +339,19 @@ class D_activate extends CI_Controller{
                             $result = abs($result);
                             $data = array(
                                 'point_calification_rigth' => 0,
-                                'point_rigth' => $result,
                                 ); 
                             $this->obj_customer->update($parents_id,$data);
+                            
+                            //INSERT POINT ON BINERY TABLE
+                             $data = array(
+                                'customer_id' => $parents_id,
+                                'point_rigth' => $result,
+                                 'created_by' => $parents_id,
+                                'status_value' => 1,
+                                'created_at' => date("Y-m-d H:i:s"),
+                                ); 
+                            $this->obj_binarys->insert($data);
+                            
                             //RETURN PARED_ID
                             return $parents_id;
                     }else{
@@ -349,13 +381,13 @@ class D_activate extends CI_Controller{
             
             //CONVERT ARRAY
             $array_identificador =  explode(',', $identificador);
-            $count_array = count($array_identificador);
-            $key = $count_array;
+//            $count_array = count($array_identificador);
+//            $key = $count_array;
             
             foreach ($array_identificador as $key => $value) {
-                var_dump($key);
-                var_dump($value);
-                die();
+//                var_dump($key);
+//                var_dump($value);
+//                die();
                 if($key <= 9){
                     $identificador = substr(str_replace($value, "", $identificador),1);
                         if($result == 0){
@@ -366,8 +398,6 @@ class D_activate extends CI_Controller{
                             //GET DATA CUSTOMER
                             $params = array(
                                 "select" =>"customer_id,
-                                            point_left,
-                                            point_rigth,
                                             position",
                                 "where" => $where
                             );
@@ -375,31 +405,35 @@ class D_activate extends CI_Controller{
                             $obj_customer = $this->obj_customer->get_search_row($params);
                             
                             if(count($obj_customer) > 0){
-                                
-                                echo "hola";
-                                die();
-                                
-                                //UPDATE POINT ON CUSTOMER TABLE
+                                //INSERT POINT ON BINARYS TABLE
                                $rest = substr("$value", -1); 
                                 if($rest == "z"){
                                     $leg = 'point_left';
-                                    $point = $obj_customer->point_left + $point;
                                 }else{
                                     $leg = 'point_rigth';
-                                    $point = $obj_customer->point_rigth + $point;
                                 }
-                                //SUM POINT LEG
+                                  //INSERT POINT LEG ON BINARYS TABLE
                                     $data = array(
+                                        'customer_id' => $obj_customer->customer_id,
                                         "$leg" => $point,
-                                        'updated_at' => date("Y-m-d H:i:s"),
-                                        'updated_by' => $_SESSION['usercms']['user_id'],
+                                        'created_by' => $obj_customer->customer_id,
+                                        'status_value' => 1,
+                                        'created_at' => date("Y-m-d H:i:s"),
                                     ); 
-                                    $this->obj_customer->update($obj_customer->customer_id,$data);
+                                    $this->obj_binarys->insert($data);
+                                    
+                                    //INSERT POINT LEG ON POINTS TABLE
+                                    $data = array(
+                                        'bonus_id' => 7,
+                                        'customer_id' => $obj_customer->customer_id,
+                                        'point' => $point,
+                                        'date' => date("Y-m-d H:i:s"),
+                                        'status_value' => 1,
+                                        'created_at' => date("Y-m-d H:i:s"),
+                                        'created_by' => $obj_customer->customer_id,
+                                    ); 
+                                    $this->obj_points->insert($data);
                             }
-                            
-                            echo "hola2";
-                            die();
-                            
             }
         }
     }

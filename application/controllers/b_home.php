@@ -26,9 +26,9 @@ class B_home extends CI_Controller {
         $messages_informative = $this->get_messages_informative();
         
         $params = array(
-                        "select" =>"(select count(customer_id) from customer where parents_id = $customer_id and status_value = 1) as direct,
+                        "select" =>"(select count(customer_id) from customer where parents_id = $customer_id) as direct,
                                     (select sum(point_left) from binarys where customer_id = $customer_id and status_value = 1) as point_left,
-                                    (select sum(point_rigth) from binarys where customer_id = $customer_id) as point_rigth,
+                                    (select sum(point_rigth) from binarys where customer_id = $customer_id and status_value = 1) as point_rigth,
                                     customer.customer_id,
                                     customer.parents_id,
                                     customer.username,

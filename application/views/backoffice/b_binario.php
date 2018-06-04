@@ -34,8 +34,8 @@
                                         <b>PUNTOS DE BINARIO</b>
                                         <hr>
                                          <b>IZQUIERDA: </b> 
-                                         <span class="label label-primary"><?php echo $obj_customer->point_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                         <b>DERECHA: </b><span class="label label-primary"><?php echo $obj_customer->point_rigth;?></span> &nbsp;&nbsp;&nbsp;
+                                         <span class="label label-primary"><?php echo format_number_miles($obj_customer->point_left);?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <b>DERECHA: </b><span class="label label-primary"><?php echo format_number_miles($obj_customer->point_rigth);?></span> &nbsp;&nbsp;&nbsp;
                                     </div>
                                 </div>
                                 <!--//END INFORMATION POINT-->    
