@@ -133,7 +133,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="<?php echo site_url().'binary';?>" class="col-flex box-height">
+                        <a href="<?php echo site_url().'backoffice/binary';?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading">Binario</h5>
@@ -147,25 +147,14 @@
                         </a>
                             
                         
-                        <a class="col-flex box-height">
+                        <a href="<?php echo site_url('backoffice/points');?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
-                                    <h5 class="media-heading">Calificación Izquierda</h5>
-                                <strong><?php echo $obj_customer->point_calification_left == 1 ?"Calificado":"No Calificado";?></strong>
+                                    <h5 class="media-heading">Puntos del Mes</h5>
+                                    <strong><?php echo format_number_miles($obj_customer->points);?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                    <i class="fa fa-arrow-left fa-3x"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="col-flex box-height">
-                            <div class="media">
-                                <div class="media-body media-middle">
-                                    <h5 class="media-heading">Calificación Derecha</h5>
-                                <strong><?php echo $obj_customer->point_calification_rigth == 1 ?"Calificado":"No Calificado";?></strong>
-                                </div>
-                                <div class="media-right media-middle">
-                                    <i class="fa fa-arrow-right fa-3x"></i>
+                                    <i class="fa fa-list-ol fa-3x"></i>
                                 </div>
                             </div>
                         </a>

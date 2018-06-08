@@ -75,6 +75,8 @@ $route['backoffice/compose_message'] = "b_messages/compose_message";
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 
+$route['backoffice/points'] = "b_points";
+
 $route['backoffice/comisiones'] = "b_comissions";
 $route['backoffice/comisiones/pay_dialy'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/binary'] = "b_comissions/index/$1";

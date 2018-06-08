@@ -84,6 +84,7 @@ class D_activate extends CI_Controller{
     public function active_financy(){
         //ACTIVE CUSTOMER FINANCADO
         if($this->input->is_ajax_request()){ 
+                date_default_timezone_set('America/Lima');
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
                 $today = date('Y-m-j');
@@ -110,6 +111,7 @@ class D_activate extends CI_Controller{
     public function active(){
         //ACTIVE CUSTOMER NORMALY
         if($this->input->is_ajax_request()){  
+                date_default_timezone_set('America/Lima');
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
                 $point = $this->input->post("point");

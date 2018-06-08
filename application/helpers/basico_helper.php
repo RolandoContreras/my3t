@@ -55,6 +55,18 @@ function formato_fecha($fecha){
     return  $dia_semana." ".$dia." de ".$mostrar_mes." del ".$anio;
 }
 
+function last_month_day($month,$year){ 
+      $day = date("d", mktime(0,0,0, $month+1, 0, $year));
+      return date('Y-m-d', mktime(0,0,0, $month, $day, $year));
+}
+ 
+function first_month_day($month,$year){
+      $month = date('m');
+      $year = date('Y');
+      return date('Y-m-d', mktime(0,0,0, $month, 1, $year));
+}
+
+
 function dia_semana($mes,$dia,$anio){
     $dia= date("w",mktime(0, 0, 0, $mes, $dia, $anio));
     switch ($dia) {
