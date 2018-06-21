@@ -51,7 +51,6 @@ class D_pays extends CI_Controller{
                         "select" =>"commissions.commissions_id,
                                     commissions.name, 
                                     commissions.amount,
-                                    commissions.normal_account,
                                     commissions.date,
                                     commissions.status_value",
                         "where" => "pay_commission.pay_id = $pay_id",

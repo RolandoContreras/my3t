@@ -27,20 +27,18 @@
                                 <th>FECHA</th>
                                 <th>NOMBRE COMISIÓN</th>
                                 <th>MONTO</th>
-                                <th>BILLETERA NORMAL</th>
                                 <th>ESTADO</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $sum_normal = "";?>
                             <?php foreach ($obj_pay_commission as $value): ?>
-                            <?php $sum_normal += $value->normal_account;?>
+                            <?php $sum_normal += $value->amount;?>
                             <tr>
                                 <td align="center"><?php echo $value->commissions_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td align="center"><?php echo $value->name;?></td>
                                 <td align="center"><b><?php echo $value->amount;?></b></td>
-                                <td align="center"><a class="pending"><b><?php echo $value->normal_account;?></a></b></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 2) {
                                         $valor = "Devuelto o Cancelado";
@@ -62,7 +60,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td align="center"><b>TOTAL</b></td>
                             <td align="center"><a class="pending"><b><?php echo $sum_normal;?></a></b></td>
                             <td></td>
                         </tr>

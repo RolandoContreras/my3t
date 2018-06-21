@@ -39,7 +39,7 @@
                         <div class="panel-body">
                             <div role="alert" class="alert alert-info">
                                 <strong>Nota:</strong><br>
-                            <?php echo "Los pedidos de cobro se efectúan todos los miércoles.";?><br>
+                            <?php echo "Los pedidos de cobro se efectúan todos los miércoles.<br/>El monto mínimo para rescate es de $10";?><br>
                             </div><br/>
                             <div class="form-inline" >
                                 <p class="lead">
