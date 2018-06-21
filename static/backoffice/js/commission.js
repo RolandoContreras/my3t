@@ -6,10 +6,25 @@ function consultar(){
         var url= 'backoffice/comisiones/referred';
 	location.href = site+url;
     }else if(concepto == 2){
-        var url= 'backoffice/comisiones/pay_dialy';
+        var url= 'backoffice/comisiones/teambuilder';
+	location.href = site+url;
+    }else if(concepto == 3){
+        var url= 'backoffice/comisiones/productor';
+	location.href = site+url;
+    }else if(concepto == 4){
+        var url= 'backoffice/comisiones/performance';
+	location.href = site+url;
+    }else if(concepto == 5){
+        var url= 'backoffice/comisiones/unilevel';
+	location.href = site+url;
+    }else if(concepto == 6){
+        var url= 'backoffice/comisiones/global';
+	location.href = site+url;
+    }else if(concepto == 7){
+        var url= 'backoffice/comisiones/binary';
 	location.href = site+url;
     }else{
-        var url= 'backoffice/comisiones/binary';
+        var url= 'backoffice/comisiones/referred';
 	location.href = site+url;
     }
           

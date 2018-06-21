@@ -49,11 +49,23 @@ class b_comissions extends CI_Controller {
                     case "referred":
                         $bonus_id = "1";
                         break;
-                    case "pay_dialy":
+                    case "teambuilder":
                         $bonus_id = "2";
                         break;
-                    case "binary":
+                    case "productor":
                         $bonus_id = "3";
+                        break;
+                    case "performance":
+                        $bonus_id = "4";
+                        break;
+                    case "unilevel":
+                        $bonus_id = "5";
+                        break;
+                    case "global":
+                        $bonus_id = "6";
+                        break;
+                    case "binary":
+                        $bonus_id = "7";
                         break;
                 }
                 $params = array(
