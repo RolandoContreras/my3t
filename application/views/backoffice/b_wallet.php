@@ -38,9 +38,9 @@
                                  <thead>
                                     <tr>
                                          <th>Fecha</th>
+                                         <th>Concepto</th>
                                          <th>Afiliado</th>
                                          <th>Monto</th>
-                                         <th>Concepto</th>
                                          <th>Estado</th>
                                     </tr>
                                  </thead>
@@ -48,11 +48,9 @@
                                      <?php foreach ($obj_commissions as $value) { ?>
                                       <tr>
                                           <td><?php echo formato_fecha($value->date);?></td>
-                                          <td class="sorting_1"><?php echo $value->username;?></td>
-                                          <td>
-                                            <span class="text-success"><?php echo "$".$value->amount;?></span>
-                                          </td>
-                                          <td><b><?php echo $value->bonus;?></b></td> 
+                                          <td><?php echo strtoupper($value->bonus);?></td> 
+                                          <td><?php echo $value->username;?></td>
+                                          <td><b><?php echo "$".$value->amount;?></b></td>
                                           <td>
                                                    <?php 
                                                    if($value->status_value <= 4){ ?>
