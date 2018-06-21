@@ -26,6 +26,7 @@
 
 <!-- Bootstrap stylesheet min version -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/bootstrap.min.css';?>" rel="stylesheet">
+
 <!-- /bootstrap stylesheet min version -->
 
 <!-- Mouldifi core stylesheet -->

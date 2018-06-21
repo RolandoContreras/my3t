@@ -34,10 +34,15 @@ function convert_query($slug){
     return strtolower(str_replace($search, $replace, $slug));
 }
 
-function format_number_moneda($number){
+function format_number_moneda_soles($number){
     $decimals ="2";
     $number = number_format($number, $decimals);
     return "S/.".$number;
+}
+function format_number_dolar($number){
+    $decimals ="2";
+    $number = number_format($number, $decimals);
+    return "$".$number;
 }
 
 function format_number_miles($number){

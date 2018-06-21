@@ -18,15 +18,13 @@
                     foreach ($messages_informative as $value) { ?>
                         <div class="row">
                             <div class="col-md-12"> 
-                                        <div class="panel panel-warning">
-                                                    <div class="panel-heading clearfix"> 
-                                                    <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
-                                                </div> 
-                                                <!-- panel body --> 
-                                                <div class="panel-body"> 
-                                                    <p><?php echo $value->text;?></p> 
-                                                </div> 
-                                        </div> 
+                                    <div class="panel-heading clearfix"> 
+                                        <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                    </div> 
+                                    <!-- panel body --> 
+                                    <div class="panel-body"> 
+                                        <p><?php echo $value->text;?></p> 
+                                    </div> 
                                 </div>
                             </div>
                     <?php } ?>
@@ -63,7 +61,6 @@
             </div>
             <div class="row">
                <div class="col-lg-12">
-                    
                      <div class="panel panel-info">
                         <div class="panel-heading">
                            Movimientos

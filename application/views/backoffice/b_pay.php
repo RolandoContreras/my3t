@@ -61,31 +61,29 @@
                                 if($s_and_s != '3'){$style="disabled";}else{$style="";} ?>
                                 <!--BLOCK THE BOTON IF IS SATUDAY OR SUNDAY-->
                                         <input class="form-inline" type="hidden" name="SolicitarPago" value="1"/>
-                                        <button onclick="enviar_pago();" <?php echo $style;?> class="btn btn-sm btn-primary bg-danger-dark">Enviar Solicitud</button>
+                                        <button onclick="enviar_pago();" <?php echo $style;?> class="btn btn-success">Enviar Solicitud</button>
                                 </div>
-                            <br/>
-                            <br/>
-                            <legend>Movimientos de Solicitudes</legend>
-                           <div class="proceso_1 col-lg-12">
-                           <div class="proceso_2 col-lg-12">
-                              <table id="table" class="display table table-striped table-hover responsive">
+                            </div><br/>
+                            <!--<div class="panel panel-info">-->
+                                <div class="panel-heading">
+                                    Movimientos
+                                 </div>
+                                <div role="alert" class="alert alert-success" style="overflow:auto;">
+                                    <table id="table" class="display table table-striped table-hover">
                                  <thead>
                                     <tr>
-                                         <th>Concepto</th>
-                                         <th class="all">Fecha</th>
-                                         <th>Monto Enviado</th>
-                                         <th>Estado</th>
+                                         <th align="center">Concepto</th>
+                                         <th align="center">Fecha</th>
+                                         <th align="center">Monto Enviado</th>
+                                         <th align="center">Estado</th>
                                     </tr>
                                  </thead>
-                                 <tbody >
+                                 <tbody>
                                      <?php foreach ($obj_commissions as $value) { ?>
-                                      <tr role="row" class="odd">
-                                          
-                                          <td class="sorting_1">Pagos por comisiones</td>
+                                      <tr>
+                                          <td >Pagos por comisiones</td>
                                           <td><?php echo formato_fecha($value->date);?></td>
-                                          <td>
-                                            <span class="text-success"><?php echo "$".$value->amount;?></span>
-                                          </td>
+                                          <td><b><?php echo format_number_dolar($value->amount);?></b></td>
                                           <td>
                                                <?php 
                                                if($value->status_value == 2){ ?>
@@ -100,11 +98,9 @@
                                   <?php } ?>
                                 </tbody>
                               </table>
-                           </div>
-                           </div>
-                        </div>
+                                </div>
+                         <!--</div>-->
                      </div>
-                     
                   </div>  
 
               <!--SPINNER-->
