@@ -74,7 +74,6 @@
                                          <th>Concepto</th>
                                          <th class="all">Fecha</th>
                                          <th>Monto Enviado</th>
-                                         <th class="all">Cuota</th>
                                          <th>Estado</th>
                                     </tr>
                                  </thead>
@@ -86,9 +85,6 @@
                                           <td><?php echo formato_fecha($value->date);?></td>
                                           <td>
                                             <span class="text-success"><?php echo "$".$value->amount;?></span>
-                                          </td>
-                                          <td>
-                                            <span class="text-danger"><?php echo "$".$value->fee;?></span>
                                           </td>
                                           <td>
                                                <?php 

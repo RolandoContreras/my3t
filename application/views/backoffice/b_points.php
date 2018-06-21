@@ -1,3 +1,9 @@
+<script src="static/cms/js/core/bootstrap-modal.js"></script>
+<script src="static/cms/js/core/bootbox.min.js"></script>
+<script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
+<script src="static/cms/js/core/jquery.dataTables.min.js"></script>
+<link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
+
 <!-- Main section-->
       <section>
          <!-- Page content-->
@@ -67,7 +73,8 @@
                            <div class="proceso_2 col-lg-12">
                               <!--<legend>Resultados de la busqueda</legend>-->
 
-                              <table id="table" class="display table table-striped table-hover responsive">
+                              <!--<table id="table" class="display table table-striped table-hover ">-->
+                                  <table id="table" class="display responsive" cellspacing="0" width="100%" >
                                  <thead>
                                     <tr>
                                        <th class="all">Fecha</th>
@@ -76,7 +83,7 @@
                                        <th>Estado<th>
                                     </tr>
                                  </thead>
-                                 <tbody id="resultado">
+                                 <tbody>
                                      <?php if(count($obj_points) > 0){ 
                                                 foreach ($obj_points as $value) { ?>
                                                     <tr>
@@ -112,12 +119,6 @@
          </div>
       </section>
 </body>
-<script src="<?php echo site_url().'static/cms/js/core/bootstrap-modal.js';?>"></script>
-<script src="<?php echo site_url().'static/cms/js/core/bootbox.min.js';?>"></script>
-<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
-<script src="<?php echo site_url().'static/cms/js/core/jquery.dataTables.min.js';?>"></script>
-<link href="<?php echo site_url().'static/cms/css/core/jquery.dataTables.css';?>" rel="stylesheet"/>
-
  <script type="text/javascript">
    $(document).ready(function() {
     $('#table').dataTable( {

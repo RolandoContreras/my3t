@@ -17,8 +17,6 @@ class D_pays extends CI_Controller{
                         "select" =>"pay.pay_id,
                                     pay.date,
                                     pay.amount,
-                                    pay.descount as fee,
-                                    pay.amount_total,
                                     pay.status_value,
                                     customer.customer_id,
                                     customer.first_name,
@@ -240,7 +238,6 @@ class D_pays extends CI_Controller{
         }
     }
 
-    
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
             if($_SESSION['usercms']['logged_usercms']=="TRUE" && $_SESSION['usercms']['status']==1){               

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class B_pay extends CI_Controller {
+class B_soporte extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("commissions_model","obj_commissions");
@@ -45,6 +45,8 @@ class B_pay extends CI_Controller {
         $params = array(
                         "select" =>"pay.date,
                                     pay.amount,
+                                    pay.descount as fee,
+                                    pay.amount_total,
                                     pay.status_value",
                "join" => array('customer, pay.customer_id = customer.customer_id'),
                 "where" => "pay.customer_id = $customer_id",
@@ -63,7 +65,7 @@ class B_pay extends CI_Controller {
         $this->tmp_backoffice->set("price_btc",$price_btc);  
         $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible);   
         $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
-        $this->tmp_backoffice->render("backoffice/b_pay");
+        $this->tmp_backoffice->render("backoffice/b_soporte");
 	}
         
         public function btc_price(){
@@ -136,6 +138,11 @@ class B_pay extends CI_Controller {
            $today = date("Y-m-j"); 
            $s_and_s = date('w',strtotime($today));
 
+           
+        //VERIFY IT´S NOT SATURDAY OR DUNDAY   
+        if($s_and_s == 6 || $s_and_s == 0){
+            exit(); 
+        }else{
              if($obj_total >= 10){
                     //GET TOTAL AMOUNT AND TO BE PAGOS DIARIOS "3"
                     $params = array(
@@ -148,10 +155,17 @@ class B_pay extends CI_Controller {
 
                $obj_commission = $this->obj_commissions->search($params); 
 
+               //FEE OR COMISION BY DO PAYOUT
+               $fee = $obj_total * 0.05;
+               //AMOUNT TOTAL TO PAY
+               $amount_total  = $obj_total - $fee;
+
                //CREATE DATA IN PAY
                     $data = array(
                         'status_value' => 3,
                         'amount' => $obj_total,
+                        'descount' => $fee,
+                        'amount_total' => $amount_total,
                         'customer_id' => $_SESSION['customer']['customer_id'],
                         'date' => date("Y-m-d H:i:s"),
                         'created_at' => date("Y-m-d H:i:s"),
@@ -185,7 +199,7 @@ class B_pay extends CI_Controller {
            }
            echo json_encode($data);   
            exit();
-         
+         }
        } 
     }
 

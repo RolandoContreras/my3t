@@ -92,6 +92,7 @@
                                     $url = explode("/",uri_string()); 
                                     $style_inicio = "";
                                     $style_misdatos = "";
+                                    $style_points = "";
                                     $style_productos = "";
                                     $style_unilevel = "";
                                     $style_binario = "";
@@ -99,12 +100,16 @@
                                     $style_comisiones = "";
                                     $style_mired = "";
                                     $style_billetera = "";
+                                    $style_soporte = "";
                                     $style_pagos = "";
                                     if(isset($url[1])){
                                         switch ($url[1]) {
                                             ////////
                                                     case "profile":
                                                         $style_misdatos = "a_active";
+                                                        break;
+                                                     case "points":
+                                                        $style_inicio = "a_active";
                                                         break;
                                                     case "upgrade":
                                                         $style_upgrade = "a_active";
@@ -136,6 +141,9 @@
                                                     case "messages":
                                                         $style_inicio = "a_active";
                                                         break;
+                                                    case "soporte":
+                                                        $style_soporte = "a_active";
+                                                        break;
                                                     case "compose_message":
                                                         $style_inicio = "a_active";
                                                         break;
@@ -155,7 +163,7 @@
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/binario'?>" class="<?php echo $style_binario;?>"><i class="fa fa-users fa-lg"></i><span class="title">Binario</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title">Mis Comisiones</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title">Billetera</span></a></li>
-                        <li class="has-sub"><a class=""><i class="fa fa-cogs"></i><span class="title">Soporte</span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/soporte'?>" class="<?php echo $style_soporte;?>"><i class="fa fa-cogs"></i><span class="title">Soporte</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/cobros'?>" class="<?php echo $style_pagos;?>"><i class="fa fa-university fa-lg"></i><span class="title">Cobros</span></a></li>
 		</ul>
 		<!-- /main navigation -->		
@@ -175,8 +183,7 @@
                                 <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> 
                                     <img width="44" class="img-circle avatar" alt="" src="<?php echo site_url().'static/backoffice/images/avatar/avatar.png';?>"><?php echo $_SESSION['customer']['name'];?> &nbsp;&nbsp;<i class="fa fa-arrow-down" aria-hidden="true"></i>
                                 </a>
-
-                                          <!-- User action menu -->
+                              <!-- User action menu -->
                               <ul class="dropdown-menu">
 
                                   <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fa fa-user-circle-o" aria-hidden="true"></i>My profile</a></li>
@@ -184,21 +191,15 @@
                                             <li class="divider"></li>
                                             <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i>Salir</a></li>
                               </ul>
-                                          <!-- /user action menu -->
-
+                              <!-- /user action menu -->
                             </li>
                           </ul>
 			<!-- /user info -->
-			
 		  </div>
-		  
 		  <div class="col-sm-6 col-xs-5">
 			<div class="pull-right">
 				<!-- User alerts -->
 				<ul class="user-info pull-left">
-				
-				  <!-- /notifications -->
-				  
 				  <!-- Messages -->
 				  <li class="notifications dropdown">
 					<a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -273,7 +274,10 @@
 <!-- /page container -->
 
 <!--Load JQuery-->
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.min.js';?>"></script>
+<script src="static/cms/js/core/jquery.js"></script>        
+        <script src="static/cms/plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
+
+<!--<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.min.js';?>"></script>-->
 <script src="<?php echo site_url().'static/backoffice/js/assets/bootstrap.min.js';?>"></script>
 
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.metisMenu.js';?>"></script>
