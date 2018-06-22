@@ -42,29 +42,24 @@ class B_soporte extends CI_Controller {
         //GET PRICE BTC
         $price_btc = $this->btc_price();
         
+        //GET MESSAGES SUPPORT
         $params = array(
-                        "select" =>"pay.date,
-                                    pay.amount,
-                                    pay.descount as fee,
-                                    pay.amount_total,
-                                    pay.status_value",
-               "join" => array('customer, pay.customer_id = customer.customer_id'),
-                "where" => "pay.customer_id = $customer_id",
-                "order" => "pay.date DESC",
-                "limit" => "40");
+                        "select" =>"messages_id,
+                                    date,
+                                    subject,
+                                    active",
+                        "where" => "customer_id = $customer_id and support = 1 and status_value = 1",
+                        "order" => "messages_id DESC"
+                                        );
         //GET DATA FROM CUSTOMER
-        $obj_commissions= $this->obj_pay->search($params);
+        $obj_message_support= $this->obj_messages->search($params);
         
-        //GET BALANCE DISPONIBLE
-        $obj_balance_disponible = $this->balance($customer_id);
-           
         //SEND DATA OF BITCOIN PRICE
         $this->tmp_backoffice->set("messages_informative",$messages_informative);
         $this->tmp_backoffice->set("obj_message",$obj_message);
         $this->tmp_backoffice->set("all_message",$all_message); 
         $this->tmp_backoffice->set("price_btc",$price_btc);  
-        $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible);   
-        $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
+        $this->tmp_backoffice->set("obj_message_support",$obj_message_support);
         $this->tmp_backoffice->render("backoffice/b_soporte");
 	}
         
@@ -93,17 +88,6 @@ class B_soporte extends CI_Controller {
              return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
         }
         
-        public function balance($customer_id){
-             //GET TOTAL AMOUNT
-                $params_total = array(
-                        "select" =>"sum(amount) as balance",
-                    "where" => "status_value <= 2 and customer_id = $customer_id"
-                    );
-           $obj_data = $this->obj_commissions->get_search_row($params_total); 
-           return $obj_data->balance;
-           
-        }
-        
         public function get_messages_informative(){
             $params = array(
                             "select" =>"",
@@ -116,91 +100,54 @@ class B_soporte extends CI_Controller {
         
         public function validate(){
         
-        if($this->input->is_ajax_request()){   
-            //GET MONTO
-            date_default_timezone_set('America/Lima');
-            $monto = trim($this->input->post('monto'));
-            //GET CUSTOMER_ID FROM $_SESSION
-            $customer_id = $_SESSION['customer']['customer_id'];
-            
-            if ($monto == 3) {
-                $params_total = array(
-                        "select" =>"sum(amount) as total",
-                         "where" => "commissions.customer_id = $customer_id and status_value <= 2",
-                    );
-                $obj_commission_total = $this->obj_commissions->get_search_row($params_total);
-                
-                //SELECT AMOUNT 
-                $obj_total = $obj_commission_total->total;
+        //GET SESION ACTUALY
+        $this->get_session();
+        $customer_id = $_SESSION['customer']['customer_id'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+        $img = $_FILES["image_file"]["name"];
+        
+        $param = array("select" =>"messages_id",
+                         "where" => "customer_id = $customer_id and active = 1 and status_value = 1 and support = 1");
+         $obj_message = $this->obj_messages->get_search_row($param);
+         $messaje_support_count = count($obj_message);
+         
+         //VERIFI ONLY 1 ROW 
+        if($messaje_support_count == 0){
+            if(isset($_FILES["image_file"]["name"]))
+            {
+            $config['upload_path']          = './static/backoffice/images/soporte/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $config['max_size']             = 1000;
+            $this->load->library('upload', $config);
+                if ( ! $this->upload->do_upload('image_file'))
+                {
+                     $error = array('error' => $this->upload->display_errors());
+                      echo '<div class="alert alert-danger">'.$error['error'].'</div>';
+                }
+                else
+                {
+                    $data = array('upload_data' => $this->upload->data());
+                    // INSERT ON TABLE activation_message
+                        $data_insert = array(
+                                'customer_id' => $customer_id,
+                                'date' => date("Y-m-d H:i:s"),
+                                'messages' => $message,
+                                'subject' => $subject,
+                                'support' => 1,
+                                'active' => 1,
+                                'status_value' => 1,    
+                                'img' => $img,
+                                'created_by' => $customer_id,
+                                'created_at' => date("Y-m-d H:i:s")
+                            ); 
+                           $this->obj_messages->insert($data_insert);
+                        echo '<div class="alert alert-success" style="text-align: center">Creado Exitosamente</div>';
+                }
             }
-            
-           //GET TODAY DATE
-           $today = date("Y-m-j"); 
-           $s_and_s = date('w',strtotime($today));
-
-           
-        //VERIFY IT´S NOT SATURDAY OR DUNDAY   
-        if($s_and_s == 6 || $s_and_s == 0){
-            exit(); 
         }else{
-             if($obj_total >= 10){
-                    //GET TOTAL AMOUNT AND TO BE PAGOS DIARIOS "3"
-                    $params = array(
-                            "select" =>"commissions_id,
-                                        bonus_id,
-                                        date,
-                                        status_value,",
-                             "where" => "commissions.customer_id = $customer_id and status_value <= 2",
-                        );
-
-               $obj_commission = $this->obj_commissions->search($params); 
-
-               //FEE OR COMISION BY DO PAYOUT
-               $fee = $obj_total * 0.05;
-               //AMOUNT TOTAL TO PAY
-               $amount_total  = $obj_total - $fee;
-
-               //CREATE DATA IN PAY
-                    $data = array(
-                        'status_value' => 3,
-                        'amount' => $obj_total,
-                        'descount' => $fee,
-                        'amount_total' => $amount_total,
-                        'customer_id' => $_SESSION['customer']['customer_id'],
-                        'date' => date("Y-m-d H:i:s"),
-                        'created_at' => date("Y-m-d H:i:s"),
-                        'created_by' => $_SESSION['customer']['customer_id'],
-                    ); 
-                    $pay_id = $this->obj_pay->insert($data);
-
-
-               foreach ($obj_commission as $value) {
-                        //UPDATE TABLE COMMISSIONS
-                        $data = array(
-                            'status_value' => 3,
-                            'updated_at' => date("Y-m-d H:i:s"),
-                            'updated_by' => $_SESSION['customer']['customer_id'],
-                        ); 
-                        $this->obj_commissions->update($value->commissions_id,$data);
-
-                        //CREATE DATA IN PAY_COMMISSION
-                        $data_pay_commission = array(
-                            'pay_id' => $pay_id,
-                            'commissions_id' => $value->commissions_id,
-                            'status_value' => 3,
-                            'created_at' => date("Y-m-d H:i:s"),
-                            'created_by' => $_SESSION['customer']['customer_id'],
-                        ); 
-                        $this->obj_pay_commission->insert($data_pay_commission);
-               }
-                        echo json_encode($data);   
-                        exit();   
-               
-           }
-           echo json_encode($data);   
-           exit();
-         }
-       } 
+            echo '<div class="alert alert-danger" style="text-align: center">Ya tiene un ticket abierto.</div>';
+        } 
     }
 
         public function get_session(){          
@@ -218,7 +165,7 @@ class B_soporte extends CI_Controller {
         public function get_total_messages($customer_id){
         $params = array(
                         "select" =>"count(messages_id) as total",
-                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1",
+                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1 and support <> 1",
                         
                                         );
             $obj_message = $this->obj_messages->get_search_row($params);
@@ -235,11 +182,12 @@ class B_soporte extends CI_Controller {
                                     label,
                                     type,
                                     messages",
-                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "where" => "customer_id = $customer_id and status_value = 1 and support <> 1",
                         "order" => "messages_id DESC",
                         "limit" => "3",
                                         );
             $obj_message = $this->obj_messages->search($params); 
+            
             //GET ALL MESSAGE   
             return $obj_message;
         }

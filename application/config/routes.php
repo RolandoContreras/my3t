@@ -73,6 +73,7 @@ $route['backoffice/messages/social/([0-9a-z_-]+)'] = "b_messages/message_type/$1
 $route['backoffice/compose_message'] = "b_messages/compose_message"; 
 
 $route['backoffice/soporte'] = "b_soporte"; 
+$route['backoffice/soporte/validate'] = "b_soporte/validate";
 
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";

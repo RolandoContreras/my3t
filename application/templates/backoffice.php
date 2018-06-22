@@ -275,10 +275,11 @@
 <!-- /page container -->
 
 <!--Load JQuery-->
-<script src="static/cms/js/core/jquery.js"></script>        
-        <script src="static/cms/plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
+<script src="static/cms/js/core/jquery.js"></script> 
 
-<!--<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.min.js';?>"></script>-->
+
+<script src="<?php // echo site_url().'static/backoffice/js/assets/jquery.min.js';?>"></script>
+<script src="static/cms/plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/bootstrap.min.js';?>"></script>
 
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.metisMenu.js';?>"></script>
@@ -291,9 +292,6 @@
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.selection.min.js';?>"></script>        
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.pie.min.js';?>"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.time.min.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/functions.js';?>"></script>
-
 <!--ChartJs-->
-<script src="<?php echo site_url().'static/backoffice/js/assets/Chart.min.js';?>"></script>
 </body>
 </html>
