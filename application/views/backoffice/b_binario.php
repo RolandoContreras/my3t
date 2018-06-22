@@ -759,6 +759,7 @@
 </div>
 </section>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 $('[data-toggle="popover"]').popover({ html : true });

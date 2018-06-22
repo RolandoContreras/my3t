@@ -474,5 +474,6 @@ color:white;
     border-top: none;
 }
 </style>
+<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
     
     

@@ -93,3 +93,4 @@
 <br/><br/><br/><br/>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
 <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>

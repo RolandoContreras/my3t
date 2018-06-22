@@ -126,8 +126,5 @@ $(document).ready(function(){
     });
 });
 </script>
-
-
-
 <script src="<?php echo site_url().'static/backoffice/js/support.js';?>"></script>
 </html>

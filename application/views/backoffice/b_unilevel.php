@@ -205,8 +205,7 @@
     </main>
 </div>
 </section>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 $('[data-toggle="popover"]').popover({ html : true });
