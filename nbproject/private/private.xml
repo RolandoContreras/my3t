@@ -3,10 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/my3t/application/controllers/d_pays.php</file>
-            <file>file:/C:/wamp/www/my3t/application/controllers/b_pay.php</file>
-            <file>file:/C:/wamp/www/my3t/application/views/backoffice/b_pay.php</file>
-            <file>file:/C:/wamp/www/my3t/application/views/dashboard/cobros/cobros_details.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/register.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/b_soporte.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/b_data.php</file>
+            <file>file:/C:/wamp/www/my3t/application/config/routes.php</file>
+            <file>file:/C:/wamp/www/my3t/application/views/backoffice/b_data.php</file>
+            <file>file:/C:/wamp/www/my3t/application/views/backoffice/b_message.php</file>
+            <file>file:/C:/wamp/www/my3t/application/views/backoffice/b_home.php</file>
+            <file>file:/C:/wamp/www/my3t/static/backoffice/js/data.js</file>
+            <file>file:/C:/wamp/www/my3t/application/views/backoffice/b_view_message.php</file>
+            <file>file:/C:/wamp/www/my3t/application/templates/backoffice.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/b_messages.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/b_message_confirmation.php</file>
         </group>
     </open-files>
 </project-private>

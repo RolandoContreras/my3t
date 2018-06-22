@@ -357,16 +357,18 @@
                 <div class="col-md-6">
                         <form name="form">
                         <div class="panel panel-default panel-form">
-                            <div class="panel-heading text-uppercase"><h3><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></h3></div>
+                            <div class="panel-heading text-uppercase">
+                                <h3>Cambiar Contraseña</h3>
+                            </div>
                             <hr class="style-2">
                             <div class="panel-body">
                                 <div class="">
                                     <div class="row">
                                     <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="control-label required"><?php echo replace_vocales_voculeshtml("Contraseña Actual");?></label>
-                                        <input type="password" id="password" name="password" onblur="validate_password(this.value);" class="form-control form-control" maxlength="50" data-constraints="@NotEmpty"/>
-                                        <!--<input type="password" required="required" class="form-control form-control"/>-->
+                                        <label class="control-label required">Contraseña Actual</label>
+                                        <span class="invite-link-more-info" data-tooltip data-tooltip-class="tooltip-info" title="Introduzca su contraseña actual."><i class="fa fa-lg fa-question-circle"></i></span>
+                                        <input type="password" id="password" name="password" onkeyup="validate_password(this.value);" class="form-control form-control" maxlength="50" data-constraints="@NotEmpty"/>
                                         <span class="alert-0"></span>
                                     </div>
                                     </div>
@@ -374,14 +376,14 @@
 
                                     <div class="row">
                                     <div class="col-sm-12">
-                                    <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Nueva Contraseña");?></label>
+                                    <div class="form-group"><label class="control-label required">Nueva Contraseña</label>
                                         <input type="password" id="password_one" name="password_one" disabled  required="required" class="form-control form-control"/>
                                     </div>
                                     </div>
                                     </div>
                                     <div class="row">
                                     <div class="col-sm-12">
-                                    <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Repita Nueva Contraseña");?></label>
+                                    <div class="form-group"><label class="control-label required">Repita Nueva Contraseña</label>
                                         <input type="password" id="password_two" name="password_two" required="required" disabled  class="form-control form-control"/></div>
 
                                     </div>
@@ -390,7 +392,7 @@
                                     <div class="row">
                                         <div class="mb-10">
                                             <a class="btn btn-primary btn-block" onclick="alter_password();" name="button_password" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></a>
-                                            <span style="position: relative;left: 25%;top: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);" class="alert-1"></span>
+                                            <div id="alert_message_password"></div>
                                         </div>
                                     </div>
 
@@ -399,7 +401,6 @@
                         </div>
                      </form>
                 </div>
-                
             </div>
         </div>
     </div> 
