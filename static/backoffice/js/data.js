@@ -15,49 +15,6 @@ function alter_position(){
         }            
     });
 }
-//function alter_movil(){
-//    var opts = {
-//        lines: 13 // The number of lines to draw
-//      , length: 28 // The length of each line
-//      , width: 14 // The line thickness
-//      , radius: 42 // The radius of the inner circle
-//      , scale: 1 // Scales overall size of the spinner
-//      , corners: 1 // Corner roundness (0..1)
-//      , color: '#000' // #rgb or #rrggbb or array of colors
-//      , opacity: 0.50 // Opacity of the lines
-//      , rotate: 0 // The rotation offset
-//      , direction: 1 // 1: clockwise, -1: counterclockwise
-//      , speed: 1 // Rounds per second
-//      , trail: 60 // Afterglow percentage
-//      , fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
-//      , zIndex: 2e9 // The z-index (defaults to 2000000000)
-//      , className: 'spinner' // The CSS class to assign to the spinner
-//      , top: '50%' // Top position relative to parent
-//      , left: '50%' // Left position relative to parent
-//      , shadow: true // Whether to render a shadow
-//      , hwaccel: false // Whether to use hardware acceleration
-//      , position: 'absolute' // Element positioning
-//    }
-//    var target = document.getElementById('spinner')
-//    var spinner = new Spinner(opts).spin(target);
-//    
-//    var phone = document.getElementById("phone").value;
-//    var customer_id = document.getElementById("customer_id").value;
-//    
-//        $.ajax({
-//        type: "post",
-//        url: site +"b_data/update_movil",
-//        dataType: "json",
-//        data: {phone: phone,
-//               customer_id: customer_id},
-//        success:function(data){            
-//              if(data.message == "true"){  
-//              location.reload();
-//            }
-//        }            
-//    });
-//}
-
 function alter_address(){
     var opts = {
         lines: 13 // The number of lines to draw
@@ -105,33 +62,6 @@ function alter_address(){
 
 
 function alter_btc(){
-    
-    var opts = {
-        lines: 13 // The number of lines to draw
-      , length: 28 // The length of each line
-      , width: 14 // The line thickness
-      , radius: 42 // The radius of the inner circle
-      , scale: 1 // Scales overall size of the spinner
-      , corners: 1 // Corner roundness (0..1)
-      , color: '#000' // #rgb or #rrggbb or array of colors
-      , opacity: 0.25 // Opacity of the lines
-      , rotate: 0 // The rotation offset
-      , direction: 1 // 1: clockwise, -1: counterclockwise
-      , speed: 1 // Rounds per second
-      , trail: 60 // Afterglow percentage
-      , fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
-      , zIndex: 2e9 // The z-index (defaults to 2000000000)
-      , className: 'spinner' // The CSS class to assign to the spinner
-      , top: '50%' // Top position relative to parent
-      , left: '50%' // Left position relative to parent
-      , shadow: true // Whether to render a shadow
-      , hwaccel: false // Whether to use hardware acceleration
-      , position: 'absolute' // Element positioning
-    }
-    
-    var target = document.getElementById('spinner');
-    var spinner = new Spinner(opts).spin(target);
-    
         var customer_id = document.getElementById("customer_id").value;
         var btc = document.getElementById("btc").value;
 
@@ -143,7 +73,7 @@ function alter_btc(){
                customer_id:customer_id },
         success:function(data){            
               if(data.message == "true"){  
-                location.reload();  
+                $("#alert_message_wallet").html('<div class="alert alert-success" style="text-align: center"><i class="fa fa-thumbs-up fa-3x"></i></div>'); 
             }
         }            
     });

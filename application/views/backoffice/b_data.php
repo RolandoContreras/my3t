@@ -32,12 +32,9 @@
     <!--END SHOW ALERT MESSAGE INFORMATIVE-->
     
     <div class="tab">
-        <button class="tablinks active"  onclick="openCity(event, 'principal')"><b><?php echo "INFORMACIÓN PRINCIPAL";?></b></button>
-        <button class="tablinks" onclick="openCity(event, 'payments')"><b><?php echo "PAGO Y CONTRASEÑAS";?></b></button>
+        <button class="tablinks active"  onclick="openCity(event, 'principal')"><b>INFORMACIÓN PRINCIPAL</b></button>
+        <button class="tablinks" onclick="openCity(event, 'payments')"><b>PAGO Y CONTRASEÑAS</b></button>
     </div>
-    
-                    
-    
 <div id="principal" class="tabcontent" style="display:block !important">
     <div class="row ml-custom">
         <div class="col-xs-12">
@@ -46,7 +43,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-default panel-form" data-behaviour="container">
                             <div class="panel-heading text-uppercase clearfix">
-                                <h3 class="title"><?php echo "Información Principal";?></h3>
+                                <h3 class="title"><?php echo "Información";?></h3>
                             </div>
                             <hr class="style-2"/>
                             <div class="panel-body">         
@@ -350,6 +347,7 @@
                                             <input type="text" id="btc" name="btc" class="form-control form-control" data-constraints="@NotEmpty" value="<?php echo $obj_customer->btc_address;?>"/>
                                         </p>
                                     </div>
+                                    <div id="alert_message_wallet"></div>
                                 </div>
                             </div>
                         </div>
@@ -406,7 +404,6 @@
         </div>
     </div> 
 </div>    
-<script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>    
 <script src="<?php echo site_url().'static/backoffice/js/data.js';?>"></script>
 </section>
 <script>
@@ -438,7 +435,6 @@ div.tab {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
-
 /* Style the buttons inside the tab */
 div.tab button {
     background-color: inherit;
@@ -448,6 +444,12 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    
+    border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border: 0px solid #000000;
+    
 }
 
 /* Change background color of buttons on hover */

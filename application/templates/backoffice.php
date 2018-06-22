@@ -52,13 +52,10 @@
 </script>
 </head>
 <body>
-
 <!-- Page container -->
 <div class="page-container">
-
 	<!-- Page Sidebar -->
 	<div class="page-sidebar">
-	
 		<!-- Site header  -->
 		<header class="site-header">
 		  <div class="site-logo">
@@ -76,8 +73,6 @@
                   </div>
 		</header>
 		<!-- /site header -->
-		
-		<!-- Main navigation -->
 		<!-- Main navigation -->
 		<ul id="side-nav" class="main-menu navbar-collapse collapse">
                      <?php 
@@ -169,11 +164,8 @@
 		</ul>
 		<!-- /main navigation -->		
   </div>
-  <!-- /page sidebar -->
-  
   <!-- Main container -->
   <div class="main-container gray-bg">
-  
 		<!-- Main header -->
 		<div class="main-header row">
 		  <div class="col-sm-6 col-xs-7">
@@ -257,27 +249,20 @@
 				  
 				</ul>
 				<!-- /user alerts -->
-				
 			</div>
 		  </div>
 		</div>
 		<!-- /main header -->
-		
 	<!-- Main section-->
             <?php echo $body;?> 
       <!--START FOOTER-->
       <footer class="footer-main"> 
-			© Copyright 2017. All Rights Reserved  -<strong> 3T Company</strong>
+			© Copyright 2017. All Rights Reserved  -<strong> 3T Club</strong>
       </footer>	
   <!-- /main container -->
-  
 </div>
-<!-- /page container -->
-
+</div>
 <!--Load JQuery-->
-<script src="static/cms/js/core/jquery.js"></script> 
-
-
 <script src="<?php // echo site_url().'static/backoffice/js/assets/jquery.min.js';?>"></script>
 <script src="static/cms/plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/bootstrap.min.js';?>"></script>
@@ -292,6 +277,5 @@
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.selection.min.js';?>"></script>        
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.pie.min.js';?>"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.time.min.js';?>"></script>
-<!--ChartJs-->
 </body>
 </html>

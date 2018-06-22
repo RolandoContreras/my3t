@@ -47,16 +47,13 @@ class B_messages extends CI_Controller {
 
             $obj_message = $this->obj_messages->search($params);  
          
-         //GET ALL MESSAGE
-          $all_message = $this->get_total_messages($customer_id);
-            
-         //GET PRICE BTC
-            $params_price_btc = array(
-                                    "select" =>"",
-                                     "where" => "otros_id = 1");
-                
-           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = "$".number_format($obj_otros->precio_btc,2);
+            date_default_timezone_set('America/Lima');
+            //GET TOTAL MESSAGE
+            $all_message = $this->get_total_messages($customer_id);
+            //GET TOTAL MESSAGE
+            $obj_message = $this->get_messages($customer_id);
+            //GET PRICE BTC
+            $price_btc = $this->btc_price();
          
          //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("price_btc",$price_btc);
@@ -175,6 +172,31 @@ class B_messages extends CI_Controller {
             }
         }    
         
+        public function btc_price(){
+             $url = "https://www.bitstamp.net/api/ticker";
+             $fgc = file_get_contents($url);
+             $json = json_decode($fgc, true);
+             $price_btc = $json['last'];
+             $open = $json['open'];
+             
+             if($open > $price_btc){
+                 //PRICE WENT UP
+                 $color = "red";
+                 $changes = $price_btc - $open;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2); 
+             }else{
+                 //PRICE WENT DOWN
+                 $color = "green";
+                 $changes = $open - $price_btc;
+                 $percent = $changes / $open;
+                 $percent = $percent * 100;
+                 $percent_change = number_format($percent, 2);   
+             }
+             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+        }
+        
         public function compose_message(){
             
         //VERIFIRY GET SESSION    
@@ -221,7 +243,7 @@ class B_messages extends CI_Controller {
     public function get_total_messages($customer_id){
         $params = array(
                         "select" =>"count(messages_id) as total",
-                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1",
+                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1 and support <> 1",
                         
                                         );
             $obj_message = $this->obj_messages->get_search_row($params);
@@ -239,7 +261,7 @@ class B_messages extends CI_Controller {
                                     label,
                                     type,
                                     messages",
-                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "where" => "customer_id = $customer_id and status_value = 1 and support <> 1",
                         "order" => "messages_id DESC",
                         "limit" => "3",
                                         );

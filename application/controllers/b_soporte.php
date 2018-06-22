@@ -54,6 +54,7 @@ class B_soporte extends CI_Controller {
         //GET DATA FROM CUSTOMER
         $obj_message_support= $this->obj_messages->search($params);
         
+        
         //SEND DATA OF BITCOIN PRICE
         $this->tmp_backoffice->set("messages_informative",$messages_informative);
         $this->tmp_backoffice->set("obj_message",$obj_message);

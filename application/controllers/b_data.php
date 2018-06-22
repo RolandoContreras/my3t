@@ -124,26 +124,6 @@ class B_data extends CI_Controller {
             return $messages_informative;
         }
         
-        public function update_movil(){
-            
-         if($this->input->is_ajax_request()){  
-           //SELECT ID FROM CUSTOMER
-           $phone = $this->input->post('phone');
-           $customer_id = $this->input->post('customer_id');
-
-           //UPDATE DATA EN CUSTOMER TABLE
-           $data = array(
-                           'phone' => $phone,
-                           'updated_by' => $customer_id,
-                           'updated_at' => date("Y-m-d H:i:s")
-                       ); 
-                       $this->obj_customer->update($customer_id,$data);
-
-                $data['message'] = "true";
-            echo json_encode($data); 
-            }
-        }
-    
         public function udpate_address(){
             
          if($this->input->is_ajax_request()){  
@@ -169,29 +149,6 @@ class B_data extends CI_Controller {
             //SELECT ID FROM CUSTOMER
            $pierna = $this->input->post('pierna');
            $customer_id = $this->input->post('customer_id');
-           
-//           if($pierna == 3){
-//                $params = array(
-//                        "select" =>"point_left,
-//                                    point_rigth",
-//                        "where" => "customer_id = $customer_id");
-//                $obj_customer = $this->obj_customer->get_search_row($params); 
-//                $left = $obj_customer->point_left;
-//                $rigth = $obj_customer->point_rigth;
-//                
-//                switch($left){
-//                    case $left < $rigth:
-//                        $pierna = 1;
-//                        break;
-//                    case $left > $rigth:
-//                        $pierna = 2;
-//                        break;
-//                    case $left == $rigth:
-//                        $pierna = 1;
-//                        break;
-//                }
-//           }
-           
            //UPDATE DATA EN CUSTOMER TABLE
            $data = array(
                            'position_temporal' => $pierna,
@@ -263,18 +220,38 @@ class B_data extends CI_Controller {
                        ); 
                        $this->obj_customer->update($customer_id,$data);
             
-                       // El mensaje
-                $mail = "Hola, $obj_customer->first_name $obj_customer->last_name la dirección de su cuenta de bitcoin se cambio por: $btc_address";
-
+                       
+                 // El mensaje
+                $mail = "Querido(a), $obj_customer->first_name $obj_customer->last_name la dirección de bitcoin de su cuenta se cambio por: $btc_address";
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                $mensaje = wordwrap($mail, 70, "\r\n");
+                $mensaje = wordwrap($mail, 70, "\r\n");         
+                       
+                //insert on messages
+                $data_messages = array(
+                        'customer_id' => $customer_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Cambio de dirección BTC",
+                        'messages' => $mensaje,
+                        'type' => 2,
+                        'type_send' => 0,
+                        'active' => 1,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);           
+                       
+                       
+               
                 //Titulo
-                $titulo = "Cambio de dirección BTC - CRIPTOWIN";
+                $titulo = "3T Club - Cambio de dirección BTC";
                 //cabecera
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
                 //dirección del remitente 
-                $headers .= "From: Criptowin - The Best Investment < noreplay@criptowin.com >\r\n";
+                $headers .= "3T Club: Travel - Training - Trade < noreplay@3t.club >\r\n";
                 //Enviamos el mensaje a tu_dirección_email 
                 $bool = mail("$email",$titulo,$mensaje,$headers);
 //                       

@@ -273,7 +273,7 @@ class Register extends CI_Controller {
         public function messages_welcome($name,$last_name,$customer_id,$username,$password){
            //CREATE MESSAGE WELCOME
                     $name = ucwords("$name $last_name");
-                    $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T. <br>Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
+                    $message = "Bienvenido $name es un gusto que haya tomado la mejor decisión de pertenecer al equipo de 3T Club. <br>Estamos para apoyarlo en lo que necesite. Si tienen alguna consulta escribamos a soporte que lo ayudaremos de inmediato.";
                     
                     $data_messages = array(
                         'customer_id' => $customer_id,
