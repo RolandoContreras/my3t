@@ -121,91 +121,42 @@ class B_points extends CI_Controller {
         }
         
         public function validate(){
-        
-        if($this->input->is_ajax_request()){   
-            //GET MONTO
+        if($this->input->is_ajax_request()){  
+            //VERIFIRY GET SESSION    
+            $this->get_session();
+            //GET DATE
             date_default_timezone_set('America/Lima');
-            $monto = trim($this->input->post('monto'));
+            $date1 = $this->input->post('datepicker1');
+            $date2 = $this->input->post('datepicker2');
+            //SET DATE BD
+            $date_db_1 = formato_fecha_db_mes_dia_ano($date1);
+            $date_db_2 = formato_fecha_db_mes_dia_ano($date2);
             //GET CUSTOMER_ID FROM $_SESSION
             $customer_id = $_SESSION['customer']['customer_id'];
+            //GET POINTS DATE
+            $params = array(
+                        "select" =>"points.point,
+                                    points.date,
+                                    bonus.name,
+                                    points.status_value",
+               "join" => array('bonus, points.bonus_id = bonus.bonus_id'),
+                "where" => "points.date between '$date_db_1' and '$date_db_2' and points.customer_id = $customer_id",
+                "order" => "points.point_id DESC");
+            //GET DATA FROM POINTS
+            $obj_points = $this->obj_points->search($params);
+            $region['obj_points'] = $obj_points;
             
-            if ($monto == 3) {
-                $params_total = array(
-                        "select" =>"sum(amount) as total",
-                         "where" => "commissions.customer_id = $customer_id and status_value <= 2",
-                    );
-                $obj_commission_total = $this->obj_commissions->get_search_row($params_total);
-                
-                //SELECT AMOUNT 
-                $obj_total = $obj_commission_total->total;
+            if(count($obj_points) > 0){
+                $data['message'] = "true";
+                $data['print'] = $region['obj_points'];
+            }else{
+                $data['message'] = "false";
             }
-            
-           //GET TODAY DATE
-           $today = date("Y-m-j"); 
-           $s_and_s = date('w',strtotime($today));
-
-           
-        //VERIFY IT´S NOT SATURDAY OR DUNDAY   
-        if($s_and_s == 6 || $s_and_s == 0){
-            exit(); 
-        }else{
-             if($obj_total >= 10){
-                    //GET TOTAL AMOUNT AND TO BE PAGOS DIARIOS "3"
-                    $params = array(
-                            "select" =>"commissions_id,
-                                        bonus_id,
-                                        date,
-                                        status_value,",
-                             "where" => "commissions.customer_id = $customer_id and status_value <= 2",
-                        );
-
-               $obj_commission = $this->obj_commissions->search($params); 
-
-               //FEE OR COMISION BY DO PAYOUT
-               $fee = $obj_total * 0.05;
-               //AMOUNT TOTAL TO PAY
-               $amount_total  = $obj_total - $fee;
-
-               //CREATE DATA IN PAY
-                    $data = array(
-                        'status_value' => 3,
-                        'amount' => $obj_total,
-                        'descount' => $fee,
-                        'amount_total' => $amount_total,
-                        'customer_id' => $_SESSION['customer']['customer_id'],
-                        'date' => date("Y-m-d H:i:s"),
-                        'created_at' => date("Y-m-d H:i:s"),
-                        'created_by' => $_SESSION['customer']['customer_id'],
-                    ); 
-                    $pay_id = $this->obj_pay->insert($data);
-
-
-               foreach ($obj_commission as $value) {
-                        //UPDATE TABLE COMMISSIONS
-                        $data = array(
-                            'status_value' => 3,
-                            'updated_at' => date("Y-m-d H:i:s"),
-                            'updated_by' => $_SESSION['customer']['customer_id'],
-                        ); 
-                        $this->obj_commissions->update($value->commissions_id,$data);
-
-                        //CREATE DATA IN PAY_COMMISSION
-                        $data_pay_commission = array(
-                            'pay_id' => $pay_id,
-                            'commissions_id' => $value->commissions_id,
-                            'status_value' => 3,
-                            'created_at' => date("Y-m-d H:i:s"),
-                            'created_by' => $_SESSION['customer']['customer_id'],
-                        ); 
-                        $this->obj_pay_commission->insert($data_pay_commission);
-               }
-                        echo json_encode($data);   
-                        exit();   
-               
-           }
-           echo json_encode($data);   
+            //SEND DATA
+            $data['print'] = $region['obj_points'];
+            echo json_encode($data);
            exit();
-         }
+         
        } 
     }
 

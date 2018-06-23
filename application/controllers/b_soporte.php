@@ -100,55 +100,40 @@ class B_soporte extends CI_Controller {
         }
         
         public function validate(){
-        
-        //GET SESION ACTUALY
-        $this->get_session();
+        //VERIFIRY GET SESSION    
+         $this->get_session();
+        //GET CUSTOMER_ID $_SESSION   
         $customer_id = $_SESSION['customer']['customer_id'];
-        $subject = $_POST['subject'];
-        $message = $_POST['message'];
-        $img = $_FILES["image_file"]["name"];
+        date_default_timezone_set('America/Lima');
+        //GET TOTAL MESSAGE
+        $all_message = $this->get_total_messages($customer_id);
+        //GET TOTAL MESSAGE
+        $obj_message = $this->get_messages($customer_id);
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
+        //GET PRICE BTC
+        $price_btc = $this->btc_price();
         
-        $param = array("select" =>"messages_id",
-                         "where" => "customer_id = $customer_id and active = 1 and status_value = 1 and support = 1");
-         $obj_message = $this->obj_messages->get_search_row($param);
-         $messaje_support_count = count($obj_message);
-         
-         //VERIFI ONLY 1 ROW 
-        if($messaje_support_count == 0){
-            if(isset($_FILES["image_file"]["name"]))
-            {
-            $config['upload_path']          = './static/backoffice/images/soporte/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
-            $config['max_size']             = 1000;
-            $this->load->library('upload', $config);
-                if ( ! $this->upload->do_upload('image_file'))
-                {
-                     $error = array('error' => $this->upload->display_errors());
-                      echo '<div class="alert alert-danger">'.$error['error'].'</div>';
-                }
-                else
-                {
-                    $data = array('upload_data' => $this->upload->data());
-                    // INSERT ON TABLE activation_message
-                        $data_insert = array(
-                                'customer_id' => $customer_id,
-                                'date' => date("Y-m-d H:i:s"),
-                                'messages' => $message,
-                                'subject' => $subject,
-                                'support' => 1,
-                                'active' => 1,
-                                'status_value' => 1,    
-                                'img' => $img,
-                                'created_by' => $customer_id,
-                                'created_at' => date("Y-m-d H:i:s")
-                            ); 
-                           $this->obj_messages->insert($data_insert);
-                        echo '<div class="alert alert-success" style="text-align: center">Creado Exitosamente</div>';
-                }
-            }
-        }else{
-            echo '<div class="alert alert-danger" style="text-align: center">Ya tiene un ticket abierto.</div>';
-        } 
+        //GET MESSAGES SUPPORT
+        $params = array(
+                        "select" =>"messages_id,
+                                    date,
+                                    subject,
+                                    active",
+                        "where" => "customer_id = $customer_id and support = 1 and status_value = 1",
+                        "order" => "messages_id DESC"
+                                        );
+        //GET DATA FROM CUSTOMER
+        $obj_message_support= $this->obj_messages->search($params);
+        
+        
+        //SEND DATA OF BITCOIN PRICE
+        $this->tmp_backoffice->set("messages_informative",$messages_informative);
+        $this->tmp_backoffice->set("obj_message",$obj_message);
+        $this->tmp_backoffice->set("all_message",$all_message); 
+        $this->tmp_backoffice->set("price_btc",$price_btc);  
+        $this->tmp_backoffice->set("obj_message_support",$obj_message_support);
+        $this->tmp_backoffice->render("backoffice/b_soporte");
     }
 
         public function get_session(){          

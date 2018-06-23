@@ -183,6 +183,14 @@ function formato_fecha_db_time($fecha){
     return $anio."/".$mes."/".$dia;
 }
 
+function formato_fecha_db_mes_dia_ano($fecha){   
+    $mes=substr($fecha, 0, 2);
+    $dia=substr($fecha, 3, 2);
+    $anio=substr($fecha, 6, 4); 
+    return $anio."/".$mes."/".$dia;
+}
+
+
 function get_day_number($fecha){    
     $dia=substr($fecha, 8, 2);
     return  $dia;
