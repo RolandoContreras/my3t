@@ -23,9 +23,8 @@
 									</thead><!-- table heading -->
 									<tbody>
 										<tr>
-                                                                                    <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados
-											</a></td>
-											<td><a href="<?php echo site_url().'dashboard/confirmation_activaciones';?>"><b class="cmd">12</b><i class="fa fa-users"></i> Por Aprobar</a></td>
+                                                                                        <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados</a></td>
+                                                                                        <td><a href="<?php echo site_url().'dashboard/confirmation_activaciones';?>"><b class="cmd"><?php echo $obj_pending->pending_messages_activate;?></b><i class="fa fa-users"></i> Por Aprobar</a></td>
 										</tr>
 										<tr>
 											<td><a href="<?php echo site_url().'dashboard/comentarios';?>"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
@@ -34,6 +33,10 @@
                                                                                 <tr>
 											<td><a href="<?php echo site_url().'dashboard/cobros';?>"><b><?php echo $obj_total->total_pay;?></b><i class="fa fa-btc"></i> Pagos Realizados</a></td>
 											<td><a href="<?php echo site_url().'dashboard/cobros';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_pay;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
+										</tr>
+                                                                                <tr>
+											<td><a href="<?php echo site_url().'dashboard/soporte';?>"><b><?php echo $obj_total->total_messages_support;?></b><i class="fa fa-question"></i> Soporte</a></td>
+                                                                                        <td><a href="<?php echo site_url().'dashboard/soporte';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_messages_support;?></b><i class="fa fa-question"></i> Por Pagar</a></td>
 										</tr>
 										<tr>
 											<td><a href="#"><b><?php echo $obj_total->total_product;?></b><i class="fa fa-product-hunt"></i> Productos</a></td>

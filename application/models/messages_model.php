@@ -22,6 +22,7 @@ class messages_model_atributos{
     var $label='';
     var $subject='';
     var $messages='';
+    var $answer='';
     var $type='';
     var $type_send='';
     var $support='';
@@ -46,6 +47,7 @@ class Messages_Model extends CI_Model{
         $this->label='';
         $this->subject='';
         $this->messages='';
+        $this->answer='';
         $this->type='';
         $this->type_send='';
         $this->support='';

@@ -14,7 +14,9 @@ class Panel extends CI_Controller{
 
          //GET PENDING ROWS
         $params = array("select" =>"count(*) as pending_comments,
-                                    (select count(*) from pay where active = 1) as pending_pay",
+                                    (select count(*) from pay where active = 1) as pending_pay,
+                                    (select count(*) from messages where support = 1 and active = 1) as pending_messages_support,
+                                    (select count(*) from activation_message where active = 1) as pending_messages_activate",
                         "where" => "active = 1");
         $obj_pending = $this->obj_comments->get_search_row($params);
         
@@ -35,6 +37,8 @@ class Panel extends CI_Controller{
                                     (select count(*) from customer) as total_customer, 
                                     (select count(*) from category) as total_category,
                                     (select count(*) from franchise) as total_franchise,
+                                    (select count(*) from messages where support = 1) as total_messages_support,
+                                    (select count(*) from activation_message) as total_activation_messages,
                                     (select count(*) from commissions) as total_commissions,
                                     (select count(*) from product) as total_product,
                                     (select count(*) from users) as total_users,
@@ -57,26 +61,6 @@ class Panel extends CI_Controller{
         $this->tmp_mastercms->render('panel');
      }
      
-    public function guardar_btc(){
-        //ACTIVE CUSTOMER
-        if($this->input->is_ajax_request()){  
-            
-                //SELECT PRICE BTC
-                $btc_price = $this->input->post("btc_price");
-               
-                if($btc_price != 0){
-                    $data = array(
-                        'precio_btc' => $btc_price,
-                        'updated_at' => date("Y-m-d H:i:s"),
-                        'updated_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_otros->update(1,$data);
-                }
-                    echo json_encode($data);            
-        exit();
-            }
-    }
-    
     public function masive_messages(){
         //ACTIVE CUSTOMER
         if($this->input->is_ajax_request()){  
@@ -127,7 +111,7 @@ class Panel extends CI_Controller{
                 echo json_encode($data); 
         exit();
             }
-    }
+    } 
      
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
