@@ -1,4 +1,4 @@
-function actualizar_soporte(message_id,number){
+function actualizar_soporte(message_id,number,customer_id){
     
     var message  = document.getElementById(number).value;
     bootbox.dialog("Confirma que desea actualizar?", [        
@@ -12,7 +12,8 @@ function actualizar_soporte(message_id,number){
                url: site+"dashboard/soporte/update",
                dataType: "json",
                data: {message_id : message_id,
-                      message:message
+                      message:message,
+                      customer_id:customer_id
                       },
                success:function(data){                             
                location.reload();

@@ -61,7 +61,7 @@
                             <td align="center">
                                 <div class="operation">
                                     <div class="btn-group">
-                                       <button class="btn btn-small" onclick="actualizar_soporte('<?php echo $value->messages_id;?>','<?php echo "message".$key;?>');">Actualizar</button>
+                                       <button class="btn btn-small" onclick="actualizar_soporte('<?php echo $value->messages_id;?>','<?php echo "message".$key;?>','<?php echo $value->customer_id;?>');">Actualizar</button>
                                     </div>
                                 </div>
                             </td>

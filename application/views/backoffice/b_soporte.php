@@ -59,6 +59,7 @@
                                                 <th align="center">Número de Ticket</th>
                                                 <th align="center">Asunto</th>
                                                  <th align="center">Fecha</th>
+                                                 <th align="center">Respuesta</th>
                                                  <th align="center">Estado</th>
                                             </tr>
                                          </thead>
@@ -68,6 +69,7 @@
                                           <td><?php echo $value->messages_id;?></b></td>
                                           <td><?php echo $value->subject;?></b></td>
                                           <td><?php echo formato_fecha($value->date);?></td>
+                                          <td><b><?php echo $value->answer;?></b></td>
                                           <td>
                                                <?php 
                                                if($value->active == 1){ ?>

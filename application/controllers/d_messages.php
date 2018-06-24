@@ -44,6 +44,7 @@ class D_messages extends CI_Controller{
         $this->get_session();
         $params = array(
                         "select" =>"messages.messages_id,
+                                    customer.customer_id,
                                     customer.username,
                                     customer.first_name,
                                     customer.last_name,
@@ -79,6 +80,8 @@ class D_messages extends CI_Controller{
         if($this->input->is_ajax_request()){   
                 $message_id = $this->input->post("message_id");
                 $message = $this->input->post("message");
+                $customer_id = $this->input->post("customer_id");
+                
                 if(count($message_id) > 0){
                     $data = array(
                         'active' => 0,
@@ -87,6 +90,24 @@ class D_messages extends CI_Controller{
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_messages->update($message_id,$data);
+                    
+                    //CREATE MESSAGES INFORMATIVO FOR CUSTOMER
+                    $data_messages = array(
+                        'customer_id' => $customer_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'label' => "Soporte",
+                        'subject' => "Soporte - Respuesta",
+                        'messages' => "Soporte acaba de responder tu solicitud",
+                        'type' => 2,
+                        'type_send' => 0,
+                        'active' => 1,
+                        'created_by' => $customer_id,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                    );
+                    //INSERT MESSAGES    
+                    $this->obj_messages->insert($data_messages);
+                    
                 }
                 echo json_encode($data);            
         exit();
