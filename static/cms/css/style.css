@@ -1344,7 +1344,7 @@ a.custom-label:hover, a.custom-badge:hover {
 /*modal*/
 .modal-body img{
 	display:block;
-	max-height: 390px;
+	max-height: 750px;
 	margin:auto auto;
 }
 

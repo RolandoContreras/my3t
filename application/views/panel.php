@@ -36,7 +36,7 @@
 										</tr>
                                                                                 <tr>
 											<td><a href="<?php echo site_url().'dashboard/soporte';?>"><b><?php echo $obj_total->total_messages_support;?></b><i class="fa fa-question"></i> Soporte</a></td>
-                                                                                        <td><a href="<?php echo site_url().'dashboard/soporte';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_messages_support;?></b><i class="fa fa-question"></i> Por Pagar</a></td>
+                                                                                        <td><a href="<?php echo site_url().'dashboard/soporte';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_messages_support;?></b><i class="fa fa-question"></i> Por Solucionar</a></td>
 										</tr>
 										<tr>
 											<td><a href="#"><b><?php echo $obj_total->total_product;?></b><i class="fa fa-product-hunt"></i> Productos</a></td>
