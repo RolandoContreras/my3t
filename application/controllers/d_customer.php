@@ -8,10 +8,10 @@ class D_customer extends CI_Controller{
         $this->load->model("paises_model","obj_paises");
         $this->load->model("regiones_model","obj_regiones");
         $this->load->model("franchise_model","obj_franchise");
+        $this->load->model("ranges_model","obj_ranges");
     }   
                 
     public function index(){  
-        
            $this->get_session();
            $params = array(
                         "select" =>"customer.customer_id,
@@ -22,14 +22,13 @@ class D_customer extends CI_Controller{
                                     customer.created_at,
                                     customer.active,
                                     franchise.name as franchise,
+                                    customer.range_id,
                                     customer.status_value",
                         "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
                         "group" => "customer.customer_id"
-               
                );
            //GET DATA FROM CUSTOMER
            $obj_customer= $this->obj_customer->search($params);
-  
            /// PAGINADO
             $modulos ='clientes'; 
             $seccion = 'Lista';        
@@ -81,32 +80,23 @@ class D_customer extends CI_Controller{
     public function validate(){
         
         $parents_id =  $this->input->post('parents_id');
-        //fecha inicio de pago
-        $date_start =  $this->input->post('date_start');
-        //fecha final de pago
-//        $date_end =  $this->input->post('date_end');
-        //financiada
+        $date_start = formato_fecha_db_mes_dia_ano($this->input->post('date_start'));
+        $date_stand_by = formato_fecha_db_mes_dia_ano($this->input->post('date_stand_by'));
+        $birth_date = formato_fecha_db_mes_dia_ano($this->input->post('fecha_de_nacimiento'));
         $financy =  $this->input->post('financy');
-        //position temporal
         $position_temporal =  $this->input->post('position_temporal');
-        //activo o pagado
-//        $point_calification_left =  $this->input->post('point_calification_left');
-//        $point_calification_rigth =  $this->input->post('point_calification_rigth');
+        $point_calification_left =  $this->input->post('point_calification_left');
+        $point_calification_rigth =  $this->input->post('point_calification_rigth');
         $identificador =  $this->input->post('identificador');
-        //puntos izquierda
-        $point_left =  $this->input->post('point_left');
-        //puntos derecha
-        $point_rigth =  $this->input->post('point_rigth');
-        //franchise_id
         $franchise=  $this->input->post('franchise');
-        
-        
-        
+        $rango=  $this->input->post('rango');
+        //VERIFICAR SI ESTA CALIFICADO
+        $point_calification_left = ($point_calification_left == "Calificado") ? 0 : $point_calification_left;
+        $point_calification_rigth = ($point_calification_rigth == "Calificado") ? 0 : $point_calification_rigth;
         
         //GET CUSTOMER_ID
         $customer_id = $this->input->post("customer_id");
         $data = array(
-                
                 'first_name' => $this->input->post('first_name'),
                 'last_name   ' => $this->input->post('last_name'),
                 'username' => $this->input->post('username'),
@@ -115,82 +105,28 @@ class D_customer extends CI_Controller{
                 'dni' => $this->input->post('dni'),  
                 'parents_id' => $parents_id,  
                 'date_start' => $date_start,  
-                'date_end' => $date_end,  
+                'date_stand_by' => $date_stand_by,  
                 'financy' => $financy,  
                 'position_temporal' => $position_temporal,  
-//                'point_calification_left' => $point_calification_left,  
-//                'point_calification_rigth' => $point_calification_rigth,  
+                'point_calification_left' => $point_calification_left,  
+                'point_calification_rigth' => $point_calification_rigth,  
                 'identificador' => $identificador,  
-                'point_left' => $point_left,  
-                'point_rigth' => $point_rigth,  
-                'birth_date' => $this->input->post('fecha_de_nacimiento'),  
+                'birth_date' => $birth_date,  
                 'phone' => $this->input->post('phone'),
-//                'bank_name' => $this->input->post('bank_name'),
-//                'titular_name' => $this->input->post('titular_name'),
-//                'bank_account' => $this->input->post('bank_account'),
                 'country' => $this->input->post('pais'),
                 'region' => $this->input->post('region'),
+                'range_id' => $rango,
                 'franchise_id' => $franchise,
                 'position' => $this->input->post('position'),
                 'address' => $this->input->post('address'),
                 'btc_address' => $this->input->post('btc_address'),
                 'city' => $this->input->post('city'),
-//                'calification' => $this->input->post('calification'),
                 'status_value' => $this->input->post('status_value'),
                 'updated_at' => date("Y-m-d H:i:s"),
                 'updated_by' => $_SESSION['usercms']['user_id']
                 );          
             //SAVE DATA IN TABLE    
             $this->obj_customer->update($customer_id, $data);
-            
-//            if($franchise == 2){
-//            //CHANGE TO BASIC
-//             $data = array(
-//                        'point_calification_left' => 100,
-//                        'point_calification_rigth' => 100,
-//                        'updated_by' => $customer_id,
-//                        'updated_at' => date("Y-m-d H:i:s")
-//                    ); 
-//                    $this->obj_customer->update($customer_id,$data);
-//            }elseif($franchise == 3){
-//                //CHANGE TO PLATINIUM
-//                 $data = array(
-//                            'point_calification_left' => 250,
-//                            'point_calification_rigth' => 250,
-//                            'updated_by' => $customer_id,
-//                            'updated_at' => date("Y-m-d H:i:s")
-//                        ); 
-//                        $this->obj_customer->update($customer_id,$data);
-//            }elseif($franchise == 4){
-//                //CHANGE TO GOLD
-//                 $data = array(
-//                            'point_calification_left' => 500,
-//                            'point_calification_rigth' => 500,
-//                            'updated_by' => $customer_id,
-//                            'updated_at' => date("Y-m-d H:i:s")
-//                        ); 
-//                        $this->obj_customer->update($customer_id,$data);
-//            }elseif($franchise == 5){
-//                //CHANGE TO VIP
-//                 $data = array(
-//                            'point_calification_left' => 1000,
-//                            'point_calification_rigth' => 1000,
-//                            'updated_by' => $customer_id,
-//                            'updated_at' => date("Y-m-d H:i:s")
-//                        ); 
-//                        $this->obj_customer->update($customer_id,$data);
-//            }elseif($franchise == 6){
-//                //CHANGE TO MEMBERSHIP
-//                 $data = array(
-//                            'point_calification_left' => 0,
-//                            'point_calification_rigth' => 0,
-//                            'updated_by' => $customer_id,
-//                            'updated_at' => date("Y-m-d H:i:s")
-//                        ); 
-//                        $this->obj_customer->update($customer_id,$data);
-//            }
-            
-            
         redirect(site_url()."dashboard/clientes");
     }
     
@@ -228,24 +164,31 @@ class D_customer extends CI_Controller{
           }
           
             //SELECT PAISES
-            $params = array("select" => "",
+            $params = array("select" => "id,nombre",
                             "where" => "id_idioma = 7");
             $obj_paises  = $this->obj_paises->search($params);   
             //RENDER TO VIEW
             $this->tmp_mastercms->set("obj_paises",$obj_paises);
             
             //SELECT REGIONES
-            $params = array("select" => "",
+            $params = array("select" => "id,id_pais,nombre",
                             "where" => "id_idioma = 7");
             $obj_regiones  = $this->obj_regiones->search($params);   
             //RENDER TO VIEW
             $this->tmp_mastercms->set("obj_regiones",$obj_regiones); 
             
             //SELECT PAQUETES
-            $params = array("select" => "");
+            $params = array("select" => "franchise_id,name");
             $obj_franchise  = $this->obj_franchise->search($params);   
             //RENDER TO VIEW
             $this->tmp_mastercms->set("obj_franchise",$obj_franchise); 
+            
+            //SELECT RANGOS
+            $params = array("select" => "range_id,name");
+            $obj_ranges  = $this->obj_ranges->search($params);
+            
+            //RENDER TO VIEW
+            $this->tmp_mastercms->set("obj_ranges",$obj_ranges); 
             
             $modulos ='clientes'; 
             $seccion = 'Formulario';        

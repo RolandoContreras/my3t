@@ -71,7 +71,6 @@ function first_month_day($month,$year){
       return date('Y-m-d', mktime(0,0,0, $month, 1, $year));
 }
 
-
 function dia_semana($mes,$dia,$anio){
     $dia= date("w",mktime(0, 0, 0, $mes, $dia, $anio));
     switch ($dia) {
@@ -184,12 +183,18 @@ function formato_fecha_db_time($fecha){
 }
 
 function formato_fecha_db_mes_dia_ano($fecha){   
-    $mes=substr($fecha, 0, 2);
-    $dia=substr($fecha, 3, 2);
+    $dia=substr($fecha, 0, 2);
+    $mes=substr($fecha, 3, 2);
     $anio=substr($fecha, 6, 4); 
     return $anio."/".$mes."/".$dia;
 }
 
+function formato_fecha_datepicker_ano_mes_dia($fecha){   
+    $mes=substr($fecha, 4, 2);
+    $dia=substr($fecha, 0, 2);
+    $anio=substr($fecha, 8, 4); 
+    return $mes."/".$dia."/".$anio;
+}
 
 function get_day_number($fecha){    
     $dia=substr($fecha, 8, 2);

@@ -28,8 +28,6 @@ class customer_model_atributos{
     var $last_name='';
     var $dni='';
     var $birth_date='';
-    var $point_left='';
-    var $point_rigth='';
     var $identificador='';
     var $address='';
     var $btc_address='';
@@ -70,8 +68,6 @@ class Customer_Model extends CI_Model{
         $this->address='';
         $this->btc_address='';
         $this->country='';
-        $this->point_left='';
-        $this->point_rigth='';
         $this->identificador='';
         $this->region='';
         $this->city='';
