@@ -154,6 +154,19 @@
                </div>
               <br><br>
               <div class="inner">
+                <strong>Binario:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select name="binaries" id="binaries">
+                                <option value="">[ Seleccionar ]</option>
+                                <option value="1" <?php if(isset($obj_customer)){
+                                    if($obj_customer->binaries == 1){ echo "selected";}
+                                }else{echo "";} ?>>Calificado</option>
+                                <option value="0" <?php if(isset($obj_customer)){
+                                    if($obj_customer->binaries == 0){ echo "selected";}
+                                }else{echo "";} ?>>No Calificado</option>
+                    </select>
+               </div>
+              <br><br>
+              <div class="inner">
                 <strong>Posición Pierna:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <select name="position" id="position">
                                 <option value="">[ Seleccionar ]</option>

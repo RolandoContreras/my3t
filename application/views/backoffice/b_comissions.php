@@ -75,14 +75,7 @@
                                           <td><?php echo $value->bonus;?></b></td>
                                           <td><b><?php echo format_number_dolar($value->amount);?></b></td>
                                           <td>
-                                               <?php 
-                                               if($value->status_value == 2){ ?>
-                                                   <span class="label label-danger">Cancelado/Devuelto</span>
-                                               <?php }elseif($value->status_value == 3){ ?>
-                                                   <span class="label label-warning">En espera de procesar</span>
-                                               <?php }elseif($value->status_value == 4){ ?>
-                                                   <span class="label label-success">Procesado</span>
-                                               <?php } ?>
+                                              <span class="label label-success">Abonado</span>
                                            </td>
                                        </tr>
                                   <?php } ?>

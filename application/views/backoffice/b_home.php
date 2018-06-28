@@ -138,7 +138,7 @@
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading">Binario</h5>
-                                <strong><?php echo $obj_customer->binary == 1 ?"Calificado":"No Calificado";?></strong>
+                                <strong><?php echo $obj_customer->binaries == 1 ?"Calificado":"No Calificado";?></strong>
                                 </div>
                                 <div class="media-right media-middle">
                                     <i class="fa fa-users fa-3x"></i>

@@ -45,6 +45,11 @@ function format_number_dolar($number){
     return "$".$number;
 }
 
+function convert_mayuscula($string){
+    $string = strtoupper($string);
+    return $string;
+}
+
 function format_number_miles($number){
     $number = number_format($number, 0, '.', ',');
     return $number;

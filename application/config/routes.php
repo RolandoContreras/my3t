@@ -81,9 +81,14 @@ $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 $route['backoffice/points'] = "b_points";
 
 $route['backoffice/comisiones'] = "b_comissions";
-$route['backoffice/comisiones/pay_dialy'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/binary'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/referred'] = "b_comissions/index/$1";
+$route['backoffice/comisiones/teambuilder'] = "b_comissions/index/$1";
+$route['backoffice/comisiones/productor'] = "b_comissions/index/$1";
+$route['backoffice/comisiones/performance'] = "b_comissions/index/$1";
+$route['backoffice/comisiones/unilevel'] = "b_comissions/index/$1";
+$route['backoffice/comisiones/global'] = "b_comissions/index/$1";
+
 
 $route['backoffice/billetera'] = "b_wallet";
 $route['backoffice/cobros'] = "b_pay";
@@ -105,6 +110,8 @@ $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 $route['dashboard/comisiones'] = "d_comission";
 $route['dashboard/bonos'] = "d_bonus"; 
 $route['dashboard/rangos'] = "d_ranges"; 
+$route['dashboard/puntos'] = "d_points"; 
+$route['dashboard/puntos_binario'] = "d_binaries"; 
 
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/financiados'] = "d_customer/financiados";

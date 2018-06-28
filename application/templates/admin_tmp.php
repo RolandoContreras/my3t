@@ -98,6 +98,8 @@
                                             <li><a href="<?php echo site_url()."dashboard/soporte";?>"><i class="icon-large icon-th"></i>Soporte</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/categorias";?>"><i class="icon-large icon-th"></i>Categórías</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comisiones";?>"><i class="icon-large icon-th"></i>Comisiones</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/puntos_binario";?>"><i class="icon-large icon-th"></i>Puntos Binario</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/bonos";?>"><i class="icon-large icon-th"></i>Bonos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/productos";?>"><i class="icon-large icon-th"></i>Productos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/informativos";?>"><i class="icon-large icon-th"></i>Mensajes Informativos</a></li>

@@ -103,6 +103,7 @@ class D_customer extends CI_Controller{
                 'password' => $this->input->post('password'),
                 'email' => $this->input->post('email'),
                 'dni' => $this->input->post('dni'),  
+                'binaries' => $this->input->post('binaries'),  
                 'parents_id' => $parents_id,  
                 'date_start' => $date_start,  
                 'date_stand_by' => $date_stand_by,  
