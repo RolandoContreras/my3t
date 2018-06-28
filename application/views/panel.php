@@ -1,8 +1,5 @@
 <script src="static/cms/js/core/bootstrap-modal.js"></script>
 <script src="static/cms/js/core/bootbox.min.js"></script>
-<script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
-<script src="static/cms/js/core/jquery.dataTables.min.js"></script>
-<link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
 <div class="row-fluid">
     <div class="span6">
                         <div class="widget_container">
@@ -11,6 +8,7 @@
 									<div class="navbar-inner">
 										<div class="container" style="width: auto;">
 											<a class="brand">Vista Rápida</a>
+                                                                                        <button class="btn btn-duadua" onclick="pago_binario();">Pago de Binario</button>
 										</div>
 									</div>
 								</div>
@@ -160,3 +158,4 @@
         </div>
 </div>
 <script src="static/cms/js/panel.js"></script>
+<script src="static/cms/js/jobs.js"></script>

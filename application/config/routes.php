@@ -118,8 +118,11 @@ $route['dashboard/categorias/load'] = "d_category/load";
 $route['dashboard/categorias/load/([0-9]+)'] = "d_category/load/$1";
 $route['dashboard/categorias/validate'] = "d_category/validate";
 
-$route['dashboard/pagos_diarios'] = "d_pay_dialy";
+$route['dashboard/pagos_diarios'] = "d_pay_dialy"; 
 $route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
+$route['dashboard/jobs/pago_binario'] = "jobs/pago_binario"; 
+
+
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";

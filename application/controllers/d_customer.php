@@ -115,6 +115,7 @@ class D_customer extends CI_Controller{
                 'phone' => $this->input->post('phone'),
                 'country' => $this->input->post('pais'),
                 'region' => $this->input->post('region'),
+                'active' => $this->input->post('active'),
                 'range_id' => $rango,
                 'franchise_id' => $franchise,
                 'position' => $this->input->post('position'),

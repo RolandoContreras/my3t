@@ -21,7 +21,7 @@
                                 <div class="row">
                                     <div class="alert alert-inverse pull-left" style="opacity: 0.7;" aria-label="Left Align">
                                         <?php 
-                                            if($obj_customer->binary == 1){ ?>
+                                            if($obj_customer->binaries == 1){ ?>
                                                 <b>CALIFICADO PARA BINARIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
                                                 <?php }else{ ?>
                                                 <b>PUNTOS DE CALIFICACIÓN</b>

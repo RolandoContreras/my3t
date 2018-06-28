@@ -34,10 +34,10 @@ class Binarys_Model extends CI_Model{
         $this->table = 'binarys';
 	$this->table_id = 'binary_id';
         $this->binary_id='';
-        $this->customer_id='';
+        $this->customer_id='customer_id';
         $this->point_left='';
         $this->point_rigth='';
-	$this->status_value='';
+	$this->status_value='status_value';
         $this->created_at='';
         $this->created_by='';
         $this->updated_at='';
@@ -61,7 +61,7 @@ class Binarys_Model extends CI_Model{
         $this->db->where($this->table_id, $pk);
         $this->db->update($this->table, $data);
     }
-
+    
     public function delete($pk){
         $this->db->where($this->table_id, $pk);
         $this->db->delete($this->table);
@@ -128,5 +128,11 @@ class Binarys_Model extends CI_Model{
         $dato = $query->row();
         return $dato;       
   }
+  public function update_rows_customer($pk, $data){
+        $this->db->where($this->customer_id, $pk);
+        $this->db->where($this->status_value, 1);
+        $this->db->update($this->table, $data);
+    }
+  
 } //FIN DEL MODELO EXTENDIDO
 ?>
