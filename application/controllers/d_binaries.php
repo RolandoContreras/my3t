@@ -4,28 +4,28 @@ class D_binaries extends CI_Controller{
     
     public function __construct(){
         parent::__construct();
-        $this->load->model("comments_model","obj_comments");
+        $this->load->model("binarys_model","obj_binarys");
     }   
                 
     public function index(){  
             //GER SESSION
             $this->get_session();
             $params = array(
-                        "select" =>"comments.comment_id,
-                                    comments.name,
-                                    comments.comment,
-                                    comments.email,
-                                    comments.active,
-                                    comments.status_value,
-                                    comments.date_comment",
-                         "order" => "date_comment ASC"
-            );
-            //GET DATA COMMENTS
-            $obj_comments= $this->obj_comments->search($params);
+                        "select" =>"binarys.binary_id,
+                                    customer.username,
+                                    binarys.point_left,
+                                    binarys.point_rigth,
+                                    binarys.created_at,
+                                    binarys.status_value",
+                        "join" => array('customer, customer.customer_id = binarys.customer_id'),
+                        "order" => "binarys.binary_id DESC",
+                        "limit" => "500");
             
+            //GET DATA COMMENTS
+            $obj_binarys= $this->obj_binarys->search($params);
             
             /// PAGINADO
-            $modulos ='comentarios'; 
+            $modulos ='puntos_binario'; 
             $seccion = 'Lista';        
             $link_modulo =  site_url().'dashboard/'.$modulos; 
             /// DATA
@@ -34,8 +34,8 @@ class D_binaries extends CI_Controller{
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->set("obj_comments",$obj_comments);
-            $this->tmp_mastercms->render("dashboard/comentarios/comments_list");
+            $this->tmp_mastercms->set("obj_binarys",$obj_binarys);
+            $this->tmp_mastercms->render("dashboard/puntos_binario/points_binary_list");
     }
     
     public function change_status(){
