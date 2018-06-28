@@ -40,7 +40,7 @@ class B_home extends CI_Controller {
                                     customer.active,
                                     customer.dni,
                                     customer.birth_date,
-                                    customer.binary,
+                                    customer.binaries,
                                     customer.point_calification_left,
                                     customer.point_calification_rigth,
                                     customer.date_start,

@@ -122,14 +122,14 @@ class D_activate extends CI_Controller{
                 //GET SPONSOR ACTIVE
                     $params = array(
                         "select" =>"active,
-                                    binary,
+                                    binaries,
                                     point_calification_left,
                                     point_calification_rigth",
                         "where" => "customer_id = $parents_id and customer.status_value = 1"
                     );
                 $obj_customer= $this->obj_customer->get_search_row($params);
                 $active = $obj_customer->active;
-                $binary = $obj_customer->binary;
+                $binary = $obj_customer->binaries;
                 $point_calification_left = $obj_customer->point_calification_left;
                 $point_calification_rigth = $obj_customer->point_calification_rigth;
                 
@@ -373,7 +373,7 @@ class D_activate extends CI_Controller{
         if($point_calification_left <= 0 && $point_calification_rigth <= 0){
                 //RESULT CONVERT INT
                     $data = array(
-                        'binary' => 1,
+                        'binaries' => 1,
                         ); 
                     $this->obj_customer->update($parents_id,$data);
         }
