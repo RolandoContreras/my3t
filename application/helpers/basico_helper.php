@@ -39,6 +39,7 @@ function format_number_moneda_soles($number){
     $number = number_format($number, $decimals);
     return "S/.".$number;
 }
+
 function format_number_dolar($number){
     $decimals ="2";
     $number = number_format($number, $decimals);
@@ -242,6 +243,10 @@ function replace_vocales_voculeshtml($str){
     $search  = array('á', 'é', 'í', 'ó', 'ú','Á', 'É', 'Í', 'Ó', 'Ú', '¿', 'ñ', 'Ñ');
     $replace = array('&aacute;', '&eacute;', '&iacute;', '&oacute;', '&uacute;','&Aacute;','&Eacute;', '&Iacute;', '&Oacute;', '&Uacute;', '&iquest;', '&ntilde;','&Ntilde;');    
     return str_replace($search, $replace, $str);
-    
+}
+
+function string_to_mayusculas($string){
+    $str = strtoupper($string);
+    return $str;
 }
 ?>

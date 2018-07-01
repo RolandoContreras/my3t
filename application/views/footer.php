@@ -23,11 +23,12 @@
                         <h2 class="widgettitle">Plan</h2>
                             <div class="menu-destinations-container">
                                 <ul id="menu-destinations" class="menu">
-                                    <li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="<?php echo site_url().'plan/basic';?>">Basic</a></li>
-                                    <li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="<?php echo site_url().'plan/executive';?>">Executive</a></li>
-                                    <li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="<?php echo site_url().'plan/investor';?>">Investor</a></li>
-                                    <li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="<?php echo site_url().'plan/business';?>">Business</a></li>
-                                    <li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="<?php echo site_url().'plan/master';?>">Master</a></li>
+                                    <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="<?php echo site_url().'plan/apertura';?>">Apertura</a></li>
+                                    <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="<?php echo site_url().'plan/apertura-elite';?>">Apertura Elite</a></li>
+                                    <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="<?php echo site_url().'plan/apertura-premium';?>">Apertura Premium</a></li>
+                                    <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="<?php echo site_url().'plan/fx1';?>">Fx1</a></li>
+                                    <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="<?php echo site_url().'plan/fx2';?>">Fx2</a></li>
+                                    <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="<?php echo site_url().'plan/fx3';?>">Fx3</a></li>
                                 </ul>
                             </div>
                     </div>
@@ -35,9 +36,9 @@
                         <h2 class="widgettitle">Noticias</h2>
                             <div class="menu-tickets-container">
                                 <ul id="menu-tickets" class="menu">
-                                    <li id="menu-item-147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"><a href="#">Bitcoin la nueva realidad</a></li>
-                                    <li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="#">Blockchain - Cadena de bloque</a></li>
-                                    <li id="menu-item-148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"><a href="#">¿Qué es la criptomoneda? - Bitcoin</a></li>
+                                    <li id="menu-item-148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"><a href="#">Bitcoin la nueva realidad</a></li>
+                                    <li id="menu-item-149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="#">Blockchain - Cadena de bloque</a></li>
+                                    <li id="menu-item-150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"><a href="#">¿Qué es la criptomoneda? - Bitcoin</a></li>
                                 </ul>
                             </div>
                     </div>
@@ -55,8 +56,8 @@
                                 <ul id="menu-information" class="menu">
                                     <li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Visión");?></a></li>
                                     <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Misión");?></a></li>
-                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("¿Porqué Nosotros?");?></a></li>
-                                    <li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Momento");?></a></li>
+                                    <li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("¿Porqué Nosotros?");?></a></li>
+                                    <li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-159"><a href="<?php echo site_url().'about';?>"><?php echo replace_vocales_voculeshtml("Momento");?></a></li>
                                 </ul>
                             </div>
                     </div>			

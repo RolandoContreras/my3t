@@ -3,7 +3,7 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en-US"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en-US"> 
+<html lang="es"> 
 <!--<![endif]-->
 <!--STAR HEAD-->
 <?php $this->load->view("head");?>
@@ -18,21 +18,13 @@
 
 <div class="mobile-menu-overlay"></div>
 	<div class="wrapper" id="main-wrapper">
-		<style>header.site-header {
-                padding-top: 35px;
-
-                }
-                </style>
-                <style>header.site-header {
-                    padding-bottom: 35px;
-                }</style>
+		<style>header.site-header {padding-top: 35px;}</style>
+                <style>header.site-header {padding-bottom: 35px;}</style>
                 <!--START HEADER-->
                 <?php $this->load->view("header");?>
                 <!--END HEADER-->
-
 <script type="text/javascript">
 	var headerOptions = headerOptions || {};
-	//jQuery.extend( headerOptions, {"stickyHeader":false} );
 	Object.assign( headerOptions, {"stickyHeader":false} );
 </script>
 <div class="vc-container">
@@ -50,7 +42,6 @@
                                         <!-- MAIN IMAGE -->
                                         <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="Atenas" title="C5gsPJq"  width="1920" height="1200" data-lazyload="<?php echo site_url().'static/page_front/images/atenas.jpg';?>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
                                         <!-- LAYERS -->
-
                                         <!-- LAYER NR. 1 -->
                                         <div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-tobggroup" 
                                                  id="slide-12-layer-1" 
@@ -70,9 +61,7 @@
                                                 data-paddingright="[0,0,0,0]"
                                                 data-paddingbottom="[0,0,0,0]"
                                                 data-paddingleft="[0,0,0,0]"
-
                                                 style="z-index: 5;background-color:rgba(0,0,0,0.2);"> </div>
-
                                                 <!-- LAYER NR. 2 -->
                                                 <div class="tp-caption tp-shape tp-shapewrapper " 
                                                          id="slide-12-layer-4" 
@@ -91,9 +80,7 @@
                                                         data-paddingright="[0,0,0,0]"
                                                         data-paddingbottom="[0,0,0,0]"
                                                         data-paddingleft="[0,0,0,0]"
-
                                                         style="z-index: 6;background-color:rgb(255,255,255);"> </div>
-
 		<!-- LAYER NR. 3 -->
 		<div class="tp-caption Creative-SubTitle   tp-resizeme" 
 			 id="slide-12-layer-3" 
@@ -104,52 +91,43 @@
 			data-width="none"
 			data-height="none"
 			data-whitespace="nowrap"
- 
 			data-type="text" 
 			data-responsive_offset="on" 
-
 			data-frames='[{"delay":2350,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","ease":"Power3.easeInOut"}]'
 			data-textAlign="['center','center','center','center']"
 			data-paddingtop="[0,0,0,0]"
 			data-paddingright="[0,0,0,0]"
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
-
                         style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?php echo replace_vocales_voculeshtml("Sé parte de los pioneros y ten un asombroso estilo de vida.");?></div>
-
 		<!-- LAYER NR. 4 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
-			 id="slide-12-layer-2" 
-			 data-x="['center','center','center','center']" data-hoffset="['1','0','0','0']" 
-			 data-y="['middle','middle','middle','middle']" data-voffset="['-9','-10','-10','-10']" 
-						data-fontsize="['70','70','50','40']"
+			id="slide-12-layer-2" 
+			data-x="['center','center','center','center']" data-hoffset="['1','0','0','0']" 
+			data-y="['middle','middle','middle','middle']" data-voffset="['-9','-10','-10','-10']" 
+                        data-fontsize="['70','70','50','40']"
 			data-lineheight="['70','70','55','45']"
 			data-width="['none','none','none','320']"
 			data-height="none"
 			data-whitespace="nowrap"
- 
 			data-type="text" 
 			data-responsive_offset="on" 
-
 			data-frames='[{"delay":2550,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","ease":"Power3.easeInOut"}]'
 			data-textAlign="['center','center','center','center']"
 			data-paddingtop="[0,0,0,0]"
 			data-paddingright="[0,0,0,0]"
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
-
 			style="z-index: 8; white-space: nowrap;">Asombroso Estilo De Vida<br/>
                 </div>
-
 		<!-- LAYER NR. 5 -->
 		<div class="tp-caption tp-shape tp-shapewrapper " 
-			 id="slide-12-layer-5" 
-			 data-x="['center','center','center','center']" data-hoffset="['1','1','0','0']" 
-			 data-y="['middle','middle','middle','middle']" data-voffset="['137','137','119','100']" 
-						data-width="1"
+			id="slide-12-layer-5" 
+			data-x="['center','center','center','center']" data-hoffset="['1','1','0','0']" 
+			data-y="['middle','middle','middle','middle']" data-voffset="['137','137','119','100']" 
+                        data-width="1"
 			data-height="100"
 			data-whitespace="nowrap"
- 
 			data-type="shape" 
 			data-responsive_offset="on" 
 			data-responsive="off"
@@ -159,17 +137,15 @@
 			data-paddingright="[0,0,0,0]"
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
-
 			style="z-index: 9;background-color:rgb(255,255,255);"> </div>
 		<!-- LAYER NR. 6 -->
 		<div class="tp-caption Creative-Button rev-btn " 
 			 id="slide-12-layer-6" 
 			 data-x="['center','center','center','center']" data-hoffset="['1','0','0','0']" 
 			 data-y="['top','top','top','top']" data-voffset="['694','611','689','540']" 
-						data-width="none"
+			data-width="none"
 			data-height="none"
 			data-whitespace="nowrap"
- 
 			data-type="button" 
 			data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"register\/","delay":""}]'
 			data-responsive_offset="on" 
@@ -180,7 +156,6 @@
 			data-paddingright="[50,50,50,50]"
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
-
 			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
 	</li>
 	<!-- SLIDE  -->
@@ -188,16 +163,14 @@
 		<!-- MAIN IMAGE -->
                 <img src="<?php echo site_url().'static/page_front/images/dummy.png';?>"  alt="" title="roma"  width="1440" height="814" data-lazyload="<?php echo site_url().'static/page_front/images/roma-1.jpg';?>" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 		<!-- LAYERS -->
-
 		<!-- LAYER NR. 7 -->
 		<div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-tobggroup" 
-			 id="slide-15-layer-1" 
-			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-						data-width="full"
+			id="slide-15-layer-1" 
+			data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+			data-width="full"
 			data-height="full"
 			data-whitespace="nowrap"
- 
 			data-type="shape" 
 			data-basealign="slide" 
 			data-responsive_offset="off" 
@@ -208,9 +181,7 @@
 			data-paddingright="[0,0,0,0]"
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
-
 			style="z-index: 5;background-color:rgba(0,0,0,0.25);"> </div>
-
 		<!-- LAYER NR. 8 -->
 		<div class="tp-caption tp-shape tp-shapewrapper " 
 			 id="slide-15-layer-4" 
@@ -597,14 +568,14 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
                                 <figure class="wpb_wrapper vc_figure">
                                         <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                            <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/equipo.png';?>" class="vc_single_image-img attachment-full" alt="" />
+                                            <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/equipo.png';?>" alt="Alianzas" />
                                         </div>
                                 </figure>
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Alianzas</h3>
-                                <p style="text-align: center;"><b>Global Pass </b>Prestigiosa plataforma que te permitirán tener hasta con un 70% de descuento en hoteles, cruceros, autos y mucho más.</p>
+                                <p style="text-align: center;">Contamos con las mejores alianzas a nivel internacional con compañías prestigiosas para garantizar la calidad de nuestros servicios.</p>
                             </div>
                         </div>
                     </div>
@@ -616,14 +587,14 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center  retina-icon">
                                 <figure class="wpb_wrapper vc_figure">
                                         <div class="vc_single_image-wrapper vc_box_border_grey">
-                                            <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/calidad.png';?>" class="vc_single_image-img attachment-full" alt="" />
+                                            <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/calidad.png';?>" alt="Legalidad" />
                                         </div>
                                 </figure>
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Legalidad</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Empresa 100% legal que reside en Perú con avales y permisos en dicha jurisdicción con oficinas en una zona exclusiva abierta los asociados.")?></p>
+                                <p style="text-align: center;">Empresa 100% legal que reside en Perú con avales y permisos en dicha jurisdicción con oficinas en una zona exclusiva abierta los asociados.</p>
 
                             </div>
                         </div>
@@ -636,14 +607,14 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
                             <figure class="wpb_wrapper vc_figure">
                                 <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                    <img src="<?php echo site_url().'static/page_front/icon/moneda.png';?>" alt="" />
+                                    <img src="<?php echo site_url().'static/page_front/icon/moneda.png';?>" alt="Oportunidad" />
                                 </div>
                             </figure>
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Oportunidad</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Somos globales desde el día uno,  tenemos un crecimiento exponencial, alianzas estratégicas con compañías prestigiosas.");?></p>
+                                <p style="text-align: center;">Somos globales desde el día uno y damos beneficios para que Ud. puede ser socio de este club exclusivo con membresías por debajo del mercado.</p>
                             </div>
                         </div>
                     </div>
@@ -655,14 +626,14 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
                             <figure class="wpb_wrapper vc_figure">
                                 <div class="vc_single_image-wrapper vc_box_border_grey">
-                                    <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/avion.png';?>" class="vc_single_image-img attachment-full" alt="" />
+                                    <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/avion.png';?>" alt="Productos" />
                                 </div>
                             </figure>
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
                                 <h3 style="text-align: center;">Productos</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Contamos con los productos y servicios más cotizados del mercado desarrollados por profesionales altamente calificados.")?></p>
+                                <p style="text-align: center;">Contamos con los productos y servicios más cotizados del mercado desarrollados por profesionales altamente calificados.</p>
                             </div>
                         </div>
                     </div>
@@ -677,7 +648,7 @@ tpj(document).ready(function() {
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
                                 <H2>3T CLUB</H2>
-                                <p>Somos club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar. Viaja, entrénate y Gana. ¿Alguna vez has soñado con viajar? ¿Conocer otras culturas? ¿Descubrir las maravillas que el mundo tiene para ti? Sé parte de 3T Club.</p>
+                                <p><b>Somos club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar. Viaja, entrénate y Gana. ¿Alguna vez has soñado con viajar? ¿Conocer otras culturas? ¿Descubrir las maravillas que el mundo tiene para ti? Sé parte de 3T Club.</b></p>
                         </div>
                     </div>
                 </div>
@@ -709,7 +680,7 @@ tpj(document).ready(function() {
                         <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1497270039282">
                             <figure class="wpb_wrapper vc_figure">
                                     <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                        <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/global.jpg';?>" class="vc_single_image-img attachment-full" alt="vision" srcset="<?php echo site_url().'static/page_front/images/global.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/globalx300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/globalx768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/globalx1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/globalx1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/globalx806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/globalx558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/globalx655.jpeg';?> 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
+                                        <img width="1440" height="960" src="<?php echo site_url().'static/page_front/images/mundo.jpg';?>" class="vc_single_image-img attachment-full" alt="vision" srcset="<?php echo site_url().'static/page_front/images/mundo.jpg';?> 1440w, <?php echo site_url().'static/page_front/images/mundox300.jpg';?> 300w, <?php echo site_url().'static/page_front/images/mundox768.jpg';?> 768w, <?php echo site_url().'static/page_front/images/mundox1024.jpg';?> 1024w, <?php echo site_url().'static/page_front/images/mundox1116.jpg';?> 1116w, <?php echo site_url().'static/page_front/images/mundox806.jpg';?> 806w, <?php echo site_url().'static/page_front/images/mundox558.jpg';?> 558w, <?php echo site_url().'static/page_front/images/mundox655.jpeg';?> 655w" sizes="(max-width: 1440px) 100vw, 1440px" />
                                     </div>
                             </figure>
                         </div>
@@ -763,7 +734,7 @@ tpj(document).ready(function() {
                     <div class="wpb_wrapper">
                         <div class="section-title  homepage-destinations-title vc_custom_1497274905763">
                                 <H2>Paquetes 3T</H2>
-                                <p><?php echo replace_vocales_voculeshtml("Sé parte de la revolución, y no te quedes fuera.")?></p>
+                                <p>Sé parte de la revolución, y no te quedes fuera.</p>
                         </div>
                         <div id="tours-1-container" class="lab-portfolio-items portfolio-container-and-title  homepage-destinations portfolio-loop-layout-type-2">
                             <!--START PAQUETE BASIC-->
@@ -771,143 +742,36 @@ tpj(document).ready(function() {
                                 <div class="row">
                                     <div id="tours-1" class="portfolio-holder portfolio-type-2 sort-by-js is-masonry-layout">
                                         <!--START PAQUETE APERTURA-->
-                                        <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
-                                            <div class="item-box-container">
-                                                <div class="item-box wow fadeInLab">
-                                                    <div class="thumb">
-                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-                                                            <div class="info">
-                                                                <h3>
-                                                                    <a href="<?php echo site_url().'plan/apertura'?>" class="item-link">POR PRE LANZAMIENTO</a>
-                                                                </h3>
-                                                                    <p class="terms">$299</p>			    	
-                                                            </div>
-                                                        </div>
-								<a href="<?php echo site_url().'plan/apertura'?>" class="item-link">
-                                                                <style>.img-454 {background-color: #304830;}</style>	
-                                                                <span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
-                                                                        <img width="655" height="545" class="lazyload" alt="paquete apertura" data-src="<?php echo site_url().'static/page_front/images/plan/apertura.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-                                                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php 
                                         
-                                        <!--START PAQUETE BASIC-->
-                                        <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
+                                        foreach ($obj_franchise as $value) { ?>
+                                            <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
                                             <div class="item-box-container">
                                                 <div class="item-box wow fadeInLab">
                                                     <div class="thumb">
-                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
+                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-display opacity-yes">
                                                             <div class="info">
                                                                 <h3>
-                                                                    <a href="<?php echo site_url().'plan/basic'?>" class="item-link">BASIC</a>
+                                                                    <?php $url = convert_slug($value->name);?>
+                                                                    <a href="<?php echo site_url()."plan/$url"?>" class="item-link"><?php echo string_to_mayusculas($value->name);?></a>
                                                                 </h3>
-                                                                    <p class="terms">$125</p>			    	
+                                                                <p class="terms"><?php echo format_number_dolar($value->price);?></p>			    	
                                                             </div>
                                                         </div>
-								<a href="<?php echo site_url().'plan/basic'?>" class="item-link">
+								<a href="<?php echo site_url()."plan/$url"?>" class="item-link">
                                                                 <style>.img-454 {background-color: #304830;}</style>	
                                                                 <span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
-                                                                        <img width="655" height="545" class="lazyload" alt="paquete basic" data-src="<?php echo site_url().'static/page_front/images/plan/basic.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
+                                                                        <img width="655" height="545" class="lazyload" alt="<?php echo $value->name;?>" src="<?php echo site_url()."static/backoffice/images/$value->img";?>" data-src="<?php echo site_url()."static/backoffice/images/$value->img";?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
                                                                 </a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--START PAQUETE EXECUTIVE-->
-                                        <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
-                                            <div class="item-box-container">
-                                                <div class="item-box wow fadeInLab">
-                                                    <div class="thumb">
-                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-                                                            <div class="info">
-                                                                <h3>
-                                                                    <a href="<?php echo site_url().'plan/executive'?>" class="item-link">EXECUTIVE</a>
-                                                                </h3>
-                                                                    <p class="terms">$250</p>			    	
-                                                            </div>
-                                                        </div>
-								<a href="<?php echo site_url().'plan/executive'?>" class="item-link">
-                                                                <style>.img-454 {background-color: #304830;}</style>	
-                                                                <span class="image-placeholder img-454" style="padding-bottom: 83.20610687%">
-                                                                        <img width="655" height="545" class="lazyload" alt="paquete executive" data-src="<?php echo site_url().'static/page_front/images/plan/executive.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-                                                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--START PAQUETE INVESTOR-->
-                                        <div class="portfolio-item portfolio-item-type-5 has-padding w4" data-portfolio-item-id="443" data-terms="nature">
-                                            <div class="item-box-container">
-                                                <div class="item-box wow fadeInLab">
-                                                    <div class="thumb">
-                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-                                                            <div class="info">
-                                                                <h3>
-                                                                    <a href="<?php echo site_url().'plan/investor'?>" class="item-link">INVESTOR</a>
-                                                                </h3>
-                                                                    <p class="terms">$500</p>			    	
-                                                            </div>
-                                                        </div>
-								<a href="<?php echo site_url().'plan/investor'?>" class="item-link">
-                                                                <style>.img-453 {background-color: #a86090;}</style>	
-                                                                <span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
-                                                                    <img width="655" height="545" class="lazyload" alt="paquete investor" data-src="<?php echo site_url().'static/page_front/images/plan/investor.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-                                                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--START PAQUETE BUSINESS-->
-                                        <div class="portfolio-item portfolio-item-type-5 has-padding w4 post-443 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="443" data-terms="nature">
-                                            <div class="item-box-container">
-                                                <div class="item-box wow fadeInLab">
-                                                    <div class="thumb">
-                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-                                                            <div class="info">
-                                                                <h3>
-                                                                    <a href="<?php echo site_url().'plan/business'?>" class="item-link">BUSINESS</a>
-                                                                </h3>
-                                                                    <p class="terms">$1000</p>			    	
-                                                            </div>
-                                                        </div>
-								<a href="<?php echo site_url().'plan/business'?>" class="item-link">
-                                                                <style>.img-453 {background-color: #a86090;}</style>	
-                                                                <span class="image-placeholder img-453" style="padding-bottom: 83.20610687%">
-                                                                    <img width="655" height="545" class="lazyload" alt="paquete business" data-src="<?php echo site_url().'static/page_front/images/plan/business.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-                                                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--START PAQUETE MASTER-->
-                                        <div class="portfolio-item portfolio-item-type-1 has-padding w4 post-445 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="445" data-terms="nature">
-                                            <div class="item-box-container">
-                                                <div class="item-box wow fadeInLab">
-                                                    <div class="thumb">
-                                                        <div class="hover-state padding hover-eff-fade-slide position-center hover-full hover-style-primary opacity-yes">
-                                                            <div class="info">
-                                                                <h3>
-                                                                    <a href="<?php echo site_url().'plan/master'?>" class="item-link">MASTER</a>
-                                                                </h3>
-                                                                <p class="terms">$3000</p>			    	
-                                                            </div>
-                                                        </div>
-                                                            <a href="<?php echo site_url().'plan/master'?>" class="item-link">
-                                                                <style>.img-459 {background-color: #004878;}</style>	
-                                                                <span class="image-placeholder img-459" style="padding-bottom: 83.20610687%">
-                                                                    <img width="655" height="545" class="lazyload" alt="" data-src="<?php echo site_url().'static/page_front/images/plan/master.jpg';?>" data-srcset="" data-sizes="(max-width: 655px) 100vw, 655px">	</span>
-                                                            </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php } ?>
                                     </div>
-                            </div>
-	
+                              </div>
                         </div>
-                    </div>
+                   </div>
             </div>
         </div>
     </div>
@@ -919,8 +783,7 @@ tpj(document).ready(function() {
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
                                 <H2>Descubre todos los beneficios que 3T tiene para ti</H2>
-                                <p>Del <b>15 de Enero</b> al <b>28 de Febrero</b> tendremos promociones por ser parte de 3T.<br />
-                                No pierdas esta oportunidad y únete.</p>
+                                <p><b>No pierdas esta oportunidad y comunícate con la persona que te recomendó 3T Club</b></p>
                         </div>
                     </div>
                 </div>
