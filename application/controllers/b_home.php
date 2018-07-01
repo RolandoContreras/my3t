@@ -24,12 +24,19 @@ class B_home extends CI_Controller {
         $obj_message = $this->get_messages($customer_id);
         //GET MESSAGE INFORMATIVE
         $messages_informative = $this->get_messages_informative();
+        //GET DATE
+        $month = date("m");
+        $year = date("Y");
+        //GET LAST DAY ON MONTH
+        $last_day = last_month_day($month,$year);
+        //GET FIRST DAY ON MONTH
+        $first_day = first_month_day($month,$year); 
         
         $params = array(
                         "select" =>"(select count(customer_id) from customer where parents_id = $customer_id) as direct,
                                     (select sum(point_left) from binarys where customer_id = $customer_id and status_value = 1) as point_left,
                                     (select sum(point_rigth) from binarys where customer_id = $customer_id and status_value = 1) as point_rigth,
-                                    (select sum(point) from points where customer_id = $customer_id and status_value = 1) as points,
+                                    (select sum(point) from points where date between '$first_day' and '$last_day' and customer_id = $customer_id) as points,
                                     customer.customer_id,
                                     customer.parents_id,
                                     customer.username,
