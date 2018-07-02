@@ -127,7 +127,9 @@ $route['dashboard/categorias/validate'] = "d_category/validate";
 
 $route['dashboard/pagos_diarios'] = "d_pay_dialy"; 
 $route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
+
 $route['dashboard/jobs/pago_binario'] = "jobs/pago_binario"; 
+$route['dashboard/jobs/verificar_rango'] = "jobs/verify_ranges"; 
 
 
 

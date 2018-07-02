@@ -52,8 +52,6 @@ class B_academy extends CI_Controller {
                                         customer.birth_date,
                                         customer.address,
                                         customer.identificador,
-                                        customer.point_left,
-                                        customer.point_rigth,
                                         customer.point_calification_left,
                                         customer.point_calification_rigth,
                                         customer.city,

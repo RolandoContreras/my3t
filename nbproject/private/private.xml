@@ -4,7 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp/www/my3t/application/controllers/d_customer.php</file>
-            <file>file:/C:/wamp/www/my3t/application/views/dashboard/customer/customer_form.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/b_unilevel.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/b_points.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/register.php</file>
+            <file>file:/C:/wamp/www/my3t/application/config/routes.php</file>
+            <file>file:/C:/wamp/www/my3t/application/helpers/basico_helper.php</file>
+            <file>file:/C:/wamp/www/my3t/application/controllers/jobs.php</file>
         </group>
     </open-files>
 </project-private>

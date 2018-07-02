@@ -71,8 +71,8 @@ function last_month_day($month,$year){
 }
  
 function first_month_day($month,$year){
-      $month = date('m');
-      $year = date('Y');
+//      $month = date('m');
+//      $year = date('Y');
       return date('Y-m-d', mktime(0,0,0, $month, 1, $year));
 }
 
@@ -190,6 +190,13 @@ function formato_fecha_db_time($fecha){
 function formato_fecha_db_mes_dia_ano($fecha){   
     $dia=substr($fecha, 0, 2);
     $mes=substr($fecha, 3, 2);
+    $anio=substr($fecha, 6, 4); 
+    return $anio."/".$mes."/".$dia;
+}
+
+function formato_fecha_db($fecha){   
+    $mes=substr($fecha, 0, 2);
+    $dia=substr($fecha, 3, 2);
     $anio=substr($fecha, 6, 4); 
     return $anio."/".$mes."/".$dia;
 }

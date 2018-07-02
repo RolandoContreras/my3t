@@ -129,8 +129,9 @@ class B_points extends CI_Controller {
             $date1 = $this->input->post('datepicker1');
             $date2 = $this->input->post('datepicker2');
             //SET DATE BD
-            $date_db_1 = formato_fecha_db_mes_dia_ano($date1);
-            $date_db_2 = formato_fecha_db_mes_dia_ano($date2);
+            $date_db_1 = formato_fecha_db($date1);
+            $date_db_2 = formato_fecha_db($date2);
+            
             //GET CUSTOMER_ID FROM $_SESSION
             $customer_id = $_SESSION['customer']['customer_id'];
             //GET POINTS DATE

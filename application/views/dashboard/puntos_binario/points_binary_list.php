@@ -46,7 +46,7 @@
                                         $stilo = "label label-success";
                                     }else{
                                         $valor = "Pagado";
-                                        $stilo = "label label-success";
+                                        $stilo = "label label-info";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
