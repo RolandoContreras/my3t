@@ -48,7 +48,7 @@
         }
 ?>
 <nav>
-    <ul id="menu-main-menu-1" class="menu">
+    <ul class="menu">
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27">
             <a class="<?php echo $style_home;?>" href="<?php echo site_url().'home';?>"><span class="<?php echo $style_font_home;?>">Inicio</span></a>
         </li>

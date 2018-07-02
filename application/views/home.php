@@ -23,7 +23,8 @@
                 <!--START HEADER-->
                 <?php $this->load->view("header");?>
                 <!--END HEADER-->
-<script type="text/javascript">
+        </div>
+<script>
 	var headerOptions = headerOptions || {};
 	Object.assign( headerOptions, {"stickyHeader":false} );
 </script>
@@ -451,7 +452,7 @@
 					document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
 				}
 			</script>
-		<script type="text/javascript">
+		<script>
 setREVStartSize({c: jQuery('#rev_slider_4_1'), responsiveLevels: [1240,1024,778,480], gridwidth: [1240,1024,778,480], gridheight: [868,768,960,720], sliderLayout: 'fullscreen', fullScreenAutoWidth:'off', fullScreenAlignForce:'off', fullScreenOffsetContainer:'', fullScreenOffset:''});
 			
 var revapi4,
@@ -796,14 +797,14 @@ tpj(document).ready(function() {
 <!--START FOOTER-->
     <?php $this->load->view("footer");?>
 <!--END FOOTER-->
-<script type="text/javascript">
+<script>
     var portfolioContainers = portfolioContainers || [];
     portfolioContainers.push( {"instanceId":"tours-1","instanceAlias":"tours-1","baseQuery":{"post_type":["portfolio"],"post_status":"publish","posts_per_page":8,"orderby":"date","tax_query":{"relation":"AND","0":{"field":"term_id","taxonomy":"portfolio_category","terms":[12],"operator":"NOT IN"}},"paged":0,"meta_query":[{"key":"_thumbnail_id","compare":"EXISTS"}]},"vcAttributes":{"portfolio_query":"size:8|order_by:date|post_type:,portfolio|tax_query:-12","title":"","description":"","category_filter":"no","portfolio_type":"type-2","columns":"4","reveal_effect":"inherit","portfolio_spacing":"inherit","dynamic_image_height":"no","portfolio_full_width_title_container":"yes","portfolio_full_width":"inherit","pagination_type":"static","more_link":"","endless_auto_reveal":"","endless_show_more_button_text":"Show More","endless_no_more_items_button_text":"No more portfolio items to show","endless_per_page":"","el_class":"homepage-destinations","css":""},"postId":0,"count":14,"countByTerms":{"beaches":5,"city-break":4,"history":3,"nature":3},"lightboxData":null,"filterPushState":false} );
 </script>
 <style>
 .wrapper {padding-top: 0px !important}
 </style>			
-<script type="text/javascript">
+<script>
             function revslider_showDoubleJqueryError(sliderID) {
                     var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
                     errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
@@ -813,13 +814,13 @@ tpj(document).ready(function() {
                             jQuery(sliderID).show().html(errorMessage);
             }
 </script>
-                        <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
 <!-- Google Code for Click Conversion Page -->
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<script src="//www.googleadservices.com/pagead/conversion.js"></script>
 <style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
 </body>
 </html>

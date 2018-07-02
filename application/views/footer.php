@@ -1,4 +1,4 @@
-<footer id="footer" role="contentinfo" class="site-footer main-footer footer-bottom-horizontal">
+<footer id="footer" class="site-footer main-footer footer-bottom-horizontal">
     <div class="container">
 	<div class="footer-widgets footer-collapsed-mobile">
             <a href="#" class="footer-collapse-link">
