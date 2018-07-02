@@ -34,12 +34,10 @@ class Forgot extends CI_Controller {
                  $params = array("select" => "first_name,email,password",
                                 "where" => "username = '$username'");
                  $obj_data = $this->obj_customer->get_search_row($params);
-                
-                 $name = ucfirst($obj_data->first_name);
-                 $email = $obj_data->email;
-                 $password = $obj_data->password;
-                 
                  if (count($obj_data) > 0){ 
+                        $name = ucfirst($obj_data->first_name);
+                        $email = $obj_data->email;
+                        $password = $obj_data->password;
                     //SEND MESSAGES
                     // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                     $mensaje = wordwrap("<html><body><h1>Contraseña</h1><p>Hola $name.</p><p>Te dejamos tu contraseña de ingreso.</p><h3>Contraseña: $password</h3></body></html>", 70, "\n", true);
@@ -48,14 +46,12 @@ class Forgot extends CI_Controller {
                     //cabecera
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                    $headers .= "From: CRIPTOWIN - The best Investment < noreplay@criptowin.com >\r\n";
+                    $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
                     //Enviamos el mensaje a tu_dirección_email 
                     $bool = mail("$email",$titulo,$mensaje,$headers);
-                    $data['print'] = "Mensaje enviado correctamente";
                     $data['message'] = "true";  
                 }else{
                     $data['message'] = "false";
-                    $data['print'] = "No existe el usuario ingresado";
                 }         
                 echo json_encode($data);  
                 exit();      

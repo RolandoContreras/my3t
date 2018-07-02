@@ -27772,16 +27772,13 @@ body>.nivo-lightbox-overlay {
     margin-bottom: 45px
 }
 .alert {
-    font-size: 20px;
+    font-size: 14px;
     -webkit-border-radius: 0;
     -webkit-background-clip: padding-box;
     -moz-border-radius: 0;
     -moz-background-clip: padding;
     border-radius: 0;
-    background-clip: padding-box;
     border: 0;
-    padding: 20px 25px;
-    margin-top: 12px;
     margin-bottom: 12px;
     position: relative
 }

@@ -229,10 +229,10 @@ labVcMaps.push({
             <div class="container">
                 <div class="section-title ">
                         <h2>Recuperar Contraseña</h2>
-                        </div>
+                </div>
                 <div class="row">
                     <div class="col-md-8 col-sm-12 col-xs-12">
-				<form id="form-register" class="contact-formm">
+				<form>
                                   <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-12">
@@ -240,14 +240,14 @@ labVcMaps.push({
                                                       <label>INGRESE USUARIO</label>
                                                   </div>
                                                   <div class="col-md-9">
-                                                      <input class="form" onblur="validate_username(this.value);" id="usuario" type="text" name="usuario" style="text-transform:lowercase;">
+                                                      <input class="form" id="usuario" type="text" name="usuario" style="text-transform:lowercase;">
                                                       <div id="alert_message"></div>
                                                   </div>    
                                             </div>
                                     </div>
                                      <br/>
                                     <div class="col-md-12">
-                                      <button onclick="send_messages();" class="btn btn-default hvr-bounce-to-right">Recuperar</button>
+                                        <a  style="cursor:pointer;" class="btn btn-default hvr-bounce-to-right" onclick="send_messages();">Recuperar Contraseña</a>
                                     </div>
                                   </div>
                                 </form>
@@ -257,62 +257,14 @@ labVcMaps.push({
         </section>
 <script src="<?php echo site_url().'static/page_front/js/forgot.js';?>"></script>
 </div>
-<style>.contact-form input, 
-.contact-form textarea {
- 	background: #FFF;
-	border: none;
-	padding: 10px 15px;
-}
-
-.message-form .form-group {
-	margin-bottom: 25px;	
-}
-
-.message-form .form-group .placeholder {
-	border: none;
-}
-
-.contact-form textarea { 
-	line-height: 2;
-}
-
-.message-form .form-group.absolute .placeholder {
-	padding: 0px;
-}
-
-.wpb_wrapper .lab-contact-form .form-group .placeholder label {
-	padding: 12px;
-	font-weight: 500;
-}
-
-.message-form .form-group .placeholder.ver-two {
-	background: #FFF;
-}
-
-.wpb_wrapper .lab-contact-form .form-group .placeholder.ver-two label {
-    padding: 12px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.contact-form .send {
-	margin: 0px;
-}</style>
 	</div>	
     <!--START FOOTER-->
     <?php $this->load->view("footer");?>
     <!--END FOOTER-->
-<style>
-.wrapper {padding-top: 0px !important}
-</style>
-<script src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
-<script src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
-<script src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
-<script src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
 <script src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
 <script src='//maps.googleapis.com/maps/api/js?key=AIzaSyDMXJTazGcfmeoXHr6wf96AKergYCwWLTg '></script>
 <script src='<?php echo site_url().'static/page_front/js/maps.js?ver=4.8.2';?>'></script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<script src="//www.googleadservices.com/pagead/conversion.js"></script>
 <style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
 </body>
 </html>
