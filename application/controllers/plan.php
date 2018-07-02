@@ -2,55 +2,31 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Plan extends CI_Controller {
+     public function __construct(){
+     parent::__construct();
+        $this->load->model("franchise_model","obj_franchise");
+    } 
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
-        //  GET LINK URL
-            $this->load->view('plan');
-//		$this->load->view('plan');
+            //GET DATA FRANCHISE
+            $param = array( "select" =>"franchise_id,name,price,img",
+                            "where" => "franchise_id <> 6 and status_value = 1");
+            $data['obj_franchise'] = $this->obj_franchise->search($param);  
+            
+            $this->load->view('plan',$data);
 	}
         public function packages(){
             $url = explode("/", uri_string());
             if (isset($url[1])) {
-                $plan = $url[1];
-                switch ($plan) {
-                    case "apertura":
-                        $this->load->view('apertura');
-                        break;
-                    case "basic":
-                        $this->load->view('basic');
-                        break;
-                    case "executive":
-                        $this->load->view('executive');
-                        break;
-                    case "investor":
-                        $this->load->view('investor');
-                        break;
-                    case "business":
-                        $this->load->view('business');
-                        break;
-                    case "master":
-                        $this->load->view('master');
-                        break;
-                }
-
-                //Select params
+                $plan = convert_query($url[1]);
+                
+                //GET DATA FRANCHISE
+                $param = array( "select" =>"franchise_id,name,price,img,description",
+                                "where" => "name like '%$plan%' and status_value = 1");
+                $data['obj_franchise'] = $this->obj_franchise->get_search_row($param); 
+                
+                $this->load->view('detail_plan',$data);
             }
-            
         }
 }

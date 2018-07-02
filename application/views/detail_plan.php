@@ -30,25 +30,23 @@
 	<div class="page-container">
             <div class="single-portfolio-holder portfolio-type-3 alt-four">
 		<div class="title section-title">
-                    <h1>PAQUETE BASIC</h1>
+                    <h1><?php echo string_to_mayusculas($obj_franchise->name);?></h1>
                 </div>
     		<div class="details row">
                     <div class="col-sm-12">
                         <div class="project-description">
                             <div class="post-formatting">
-                                <p>El paquete BASIC tiene un costo de $125 dólares americanos y te otorgan 93 puntos para el plan de ganancias.</p>
-                                <p><b>Recibes:</b></p>
-                                <p>Recibe el sistema de desarrollo personal y liderazgo JAQUEMENTE</p>
+                                <p><?php echo $obj_franchise->description;?></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                 <br/>
-                <div class="gallery-item photo gallery-item-4 slick-slide" tabindex="-1" role="option" aria-describedby="slick-slide04" style="" data-slick-index="4" aria-hidden="true">
+                <br/>
+                 <div class="gallery-item photo gallery-item-4 slick-slide" tabindex="-1" role="option" aria-describedby="slick-slide04" style="" data-slick-index="4" aria-hidden="true">
                     <style>.gallery-item-4 {max-width: 960px;}</style>				
                     <style>.img-879 {background-color: #486048;}</style>	
                     <span class="image-placeholder img-879 img-loaded" style="padding-bottom:66.69642857%">
-                        <img width="1440" height="809" class="lazyload" alt="basic" data-src="<?php echo site_url().'static/page_front/images/plan/presentacion/basic.jpg'?>" data-srcset="<?php echo site_url().'static/page_front/images/plan/presentacion/basic.jpg'?> 1440w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx300.jpg'?> 300w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx768.jpg'?> 768w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx1024.jpg'?> 1024w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx1116.jpg'?> 1116w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx806.jpg'?> 806w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx558.jpg'?> 558w, <?php echo site_url().'static/page_front/images/plan/presentacion/basicx655.jpg'?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">
+                        <img width="1440" height="809" class="lazyload" alt="apertura" src="<?php echo site_url()."static/page_front/images/plan/presentacion/paquetes.jpg"?>" data-src="<?php echo site_url()."static/page_front/images/plan/presentacion/paquetes.jpg"?>" data-srcset="<?php echo site_url()."static/page_front/images/plan/presentacion/paquetes.jpg"?> 1440w, <?php echo site_url()."static/page_front/images/plan/presentacion/paquetesx300.jpg"?> 300w, <?php echo site_url()."static/page_front/images/plan/presentacion/paquetesx768.jpg"?> 768w, <?php echo site_url()."static/page_front/images/plan/presentacion/paquetesx1024.jpg"?> 1024w, <?php echo site_url()."static/page_front/images/plan/presentacion/paquetesx1116.jpg"?> 1116w, <?php echo site_url()."static/page_front/images/plan/presentacion/paquetesx806.jpg"?> 806w, <?php echo site_url()."static/page_front/images/plan/presentacion/paquetesx558.jpg"?> 558w, <?php echo site_url()."static/page_front/images/plan/presentacion/paquetesx655.jpg"?> 655w" data-sizes="(max-width: 1440px) 100vw, 1440px">
                     </span>
                 </div>
 		<div class="full-width-container">
@@ -66,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>            
             </div>
 	</div>
     </div>
