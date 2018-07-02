@@ -24,7 +24,6 @@
                 <!--END HEADER 2-->
 <script type="text/javascript">
 	var headerOptions = headerOptions || {};
-	//jQuery.extend( headerOptions, {"stickyHeader":false} );
 	Object.assign( headerOptions, {"stickyHeader":false} );
 </script>
 <div class="vc-container">
@@ -36,7 +35,7 @@
     <div class="cd-zoom cd-zoom-out hidden"></div>
 </div>
 
-<script type="text/javascript">
+<script>
 var labVcMaps = labVcMaps || [];
 labVcMaps.push({
 	id: 'el_59e451473d203',
@@ -232,7 +231,7 @@ labVcMaps.push({
                 <div class="vc_column-inner vc_custom_1498222572351">
                     <div class="wpb_wrapper">
                         <div class="section-title ">
-                        <h1><?php echo replace_vocales_voculeshtml("Formulario de Registro");?></h1>
+                        <h1>Formulario de Registro</h1>
                         </div>
                         <div class="vc-parent-row row-default">
                             <div class="vc_row wpb_row vc_inner vc_row-fluid">
@@ -248,7 +247,7 @@ labVcMaps.push({
                                                             <label>PATROCINADOR</label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <input class="form" type="text" readonly="readonly" value="<?php  
+                                                            <input class="form" type="text" disabled="disabled" value="<?php  
                                                                         if(isset($obj_customer->username)){
                                                                             echo $obj_customer->username;
                                                                         }?>" placeholder="<?php 
@@ -279,7 +278,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label><?php echo replace_vocales_voculeshtml("CONTRASEÑA");?></label>
+                                                      <label>CONTRASEÑA></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="clave" type="password" name="clave">
@@ -288,7 +287,7 @@ labVcMaps.push({
                                           
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label><?php echo replace_vocales_voculeshtml("REPETIR CONTRASEÑA");?></label>
+                                                      <label>REPETIR CONTRASEÑA</label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="repita_clave" onblur="validate_2passwordr(this.value);" type="password" name="repita_clave">
@@ -316,7 +315,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label><?php echo replace_vocales_voculeshtml("DIRECCIÓN");?></label>
+                                                      <label>DIRECCIÓN</label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="address" type="text" name="address">
@@ -325,7 +324,7 @@ labVcMaps.push({
                                            
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label><?php echo replace_vocales_voculeshtml("TELÉFONO");?></label>
+                                                      <label>TELÉFONO</label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="telefono" type="text" name="telefono">
@@ -334,7 +333,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label><?php echo replace_vocales_voculeshtml("DNI / CEDULA");?></label>
+                                                      <label>DNI / CEDULA</label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="dni" type="text" name="dni">
@@ -343,7 +342,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label><?php echo replace_vocales_voculeshtml("CORREO ELECTRÓNICO");?></label>
+                                                      <label>CORREO ELECTRÓNICO</label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="email" type="text" name="email">
@@ -351,13 +350,13 @@ labVcMaps.push({
                                             </div>  
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
-                                                      <label><?php echo replace_vocales_voculeshtml("FECHA DE NACIMIENTO");?></label>
+                                                      <label>FECHA DE NACIMIENTO</label>
                                                   </div>
                                             </div>  
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select name="dia" id="dia">
-                                                            <option value=""><?php echo replace_vocales_voculeshtml("DÍA")?></option>
+                                                            <option value="">DÍA</option>
                                                         <?php  for ($x = 1; $x <= 31; $x++) {  ?>
                                                             <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                         <?php } ?>
@@ -388,7 +387,7 @@ labVcMaps.push({
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select name="ano" id="ano" class="password_text" >
-                                                            <option selected="selected" value=""><?php echo replace_vocales_voculeshtml("AÑO");?></option>
+                                                            <option selected="selected" value="">AÑO</option>
                                                                 <?php  for ($x = 1950; $x <= 2016; $x++) {  ?>
                                                                     <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                                 <?php } ?>
@@ -400,7 +399,7 @@ labVcMaps.push({
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
-                                                        <option  selected value=""><?php echo replace_vocales_voculeshtml("PAÍS");?></option>
+                                                        <option  selected value="">PAÍS</option>
                                                             <?php  foreach ($obj_paises as $key => $value) { ?>
                                                                    <option style="border-style: solid !important" value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
                                                             <?php } ?>
@@ -417,7 +416,7 @@ labVcMaps.push({
                                              
                                              <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label><?php echo replace_vocales_voculeshtml("CIUDAD");?></label>
+                                                      <label>CIUDAD</label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="city" type="text" name="city" >
@@ -492,24 +491,14 @@ labVcMaps.push({
 <style>
 .wrapper {padding-top: 0px !important}
 </style>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
-<script type='text/javascript' src='//maps.googleapis.com/maps/api/js?key= AIzaSyDMXJTazGcfmeoXHr6wf96AKergYCwWLTg '></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/maps.js?ver=4.8.2';?>'></script>
-<!-- Google Code for Click Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 991533214;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
-/* ]]> */
-</script>
+<script src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
+<script src='//maps.googleapis.com/maps/api/js?key=AIzaSyDMXJTazGcfmeoXHr6wf96AKergYCwWLTg '></script>
+<script src='<?php echo site_url().'static/page_front/js/maps.js?ver=4.8.2';?>'></script>
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 <style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
-		
-	<!-- ET: 0.070381879806519s 2.1.3ch -->
 </body>
 </html>
