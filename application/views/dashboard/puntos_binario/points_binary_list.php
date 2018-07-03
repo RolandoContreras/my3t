@@ -51,9 +51,10 @@
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
                                 <td>
+                                    <div id="alert_message"></div>
                                     <div class="operation">
                                             <div class="btn-group">
-                                                <button class="btn btn-small" onclick="edit_comissions('<?php echo $value->binary_id;?>');">Editar</button>
+                                                <button class="btn btn-small" onclick="edit_binary('<?php echo $value->binary_id;?>');"><i class="fa fa-edit"></i> Editar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -61,6 +62,7 @@
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+                    
             </div>
            <!--</form>-->         
         </div>
@@ -74,4 +76,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/customer.js"></script>
+<script src="static/cms/js/binary_list.js"></script>

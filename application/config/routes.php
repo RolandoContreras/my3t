@@ -108,10 +108,17 @@ $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 
 $route['dashboard/comisiones'] = "d_comission";
+
 $route['dashboard/bonos'] = "d_bonus"; 
+
 $route['dashboard/rangos'] = "d_ranges"; 
+
 $route['dashboard/puntos'] = "d_points"; 
+
 $route['dashboard/puntos_binario'] = "d_binaries"; 
+$route['dashboard/puntos_binario/load/([0-9]+)'] = "d_binaries/load/$1";
+$route['dashboard/puntos_binario/validate_customer'] = "d_binaries/validate_customer";
+$route['dashboard/puntos_binario/validate'] = "d_binaries/validate";
 
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/financiados'] = "d_customer/financiados";
