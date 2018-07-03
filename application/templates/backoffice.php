@@ -34,20 +34,7 @@
 <!-- /mouldifi core stylesheet -->
 
 <link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-forms.css';?>" rel="stylesheet">
-
-<!--Bootstrap-wysihtml5-->
-<link rel='stylesheet' id='bos_sb_main_css-css'  href='<?php echo site_url().'static/backoffice/css/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css';?>' type='text/css' media='all' />
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
-      <script src="js/respond.min.js"></script>
-<![endif]-->
-
-<!--[if lte IE 8]>
-	<script src="js/plugins/flot/excanvas.min.js"></script>
-<![endif]-->
-<script type="text/javascript">
+<script>
     var site = '<?php echo site_url();?>';
 </script>
 </head>
@@ -214,15 +201,12 @@
                                                                 foreach ($obj_message as $value) { 
                                                                     switch ($value->type) {
                                                                         case 1:
-                                                                            //BONUS
                                                                             $link =  "bonus";
                                                                             break;
                                                                         case 2:
-                                                                            //SUPPORT
                                                                             $link =  "support";
                                                                             break;
                                                                         case 3:
-                                                                            //SOCIAL
                                                                             $link =  "social";
                                                                             break;
                                                                 } ?>
@@ -277,5 +261,6 @@
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.selection.min.js';?>"></script>        
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.pie.min.js';?>"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.time.min.js';?>"></script>
+<script src="<?php echo site_url().'static/backoffice/js/assets/functions.js';?>"></script>
 </body>
 </html>
