@@ -82,7 +82,7 @@
                                                     <p>Descubre el mecanismo de tu “mente” con el coaching transformacional basado en experiencias vivenciales de ciencia práctica que te ayudarán a recuperar el poder de tu vida a través de la autoconfianza. Un sistema probado que esta llevando al éxitos a cientos de personas.<br/>Tendrás temas como:
 ¿Cómo eliminar la basura mental?, entrena tu enfoque para ver oportunidades, ¿Cómo crear relaciones y la vida social que siempre quisiste?, ¿Cómo superar los miedos?, convertir espirales de muerte a vida y mucho más.
 </p><br/>
-                                                    <a href="http://sistemadenuevepasos.com/miembros/" target="_blank"><button disabled="" class="btn btn-success btn-block" type="button">IR AL SISTEMA</button></a>
+                                                    <a href="javascript:void(0)"><button disabled="disabled" class="btn btn-success btn-block" type="button">IR AL SISTEMA</button></a>
 						</div> 
 					</div> 
 				</div>
@@ -109,7 +109,9 @@
                                                     <p>Profesionales altamente calificados en el manejo de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de <b>3T ACADEMY</b>.
                                                         Nuestros profesionales son referentes y voceros en distintos medios de comunicación como américa noticias, canal N, diario gestión, el comercio, Perú 21, RPP Noticias entre otras.<br/>A la vez con un Track Record de hasta 20% de ganancia mensual en operaciones de manejo de fondos.
                                                         <br/>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás en nuestra academia.</p><br/>
-                                                    <a href="<?php echo site_url().'backoffice/productos/academy';?>"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
+                                                    
+                                                    <a href="javascript:void(0)"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
+                                                    <!--<a href="<?php echo site_url().'backoffice/productos/academy';?>"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>-->
 						</div> 
 					</div> 
 				</div>
