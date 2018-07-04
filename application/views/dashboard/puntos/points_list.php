@@ -39,7 +39,7 @@
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td class="post_title" align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><b><?php echo convert_mayuscula($value->name);?></b></td>
-                                <td class="post_title" align="center"><b><?php echo $value->point;?></b></td>
+                                <td class="label-success" style="color:#fff;" align="center"><b><?php echo $value->point;?></b></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 1) {
                                         $valor = "Abonado";
@@ -53,7 +53,7 @@
                                 <td>
                                     <div class="operation">
                                             <div class="btn-group">
-                                                <button class="btn btn-small" onclick="edit_comissions('<?php echo $value->point_id;?>');">Editar</button>
+                                                <button class="btn btn-small" onclick="edit_points('<?php echo $value->point_id;?>');"><i class="fa fa-edit"></i> Editar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -74,4 +74,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/customer.js"></script>
+<script src="static/cms/js/point_list.js"></script>

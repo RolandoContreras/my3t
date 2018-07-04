@@ -114,6 +114,9 @@ $route['dashboard/bonos'] = "d_bonus";
 $route['dashboard/rangos'] = "d_ranges"; 
 
 $route['dashboard/puntos'] = "d_points"; 
+$route['dashboard/puntos/load/([0-9]+)'] = "d_points/load/$1";
+$route['dashboard/puntos/validate_customer'] = "d_points/validate_customer";
+$route['dashboard/puntos/validate'] = "d_points/validate";
 
 $route['dashboard/puntos_binario'] = "d_binaries"; 
 $route['dashboard/puntos_binario/load/([0-9]+)'] = "d_binaries/load/$1";

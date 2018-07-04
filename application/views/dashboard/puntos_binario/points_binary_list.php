@@ -38,8 +38,8 @@
                                 <td align="center"><?php echo $value->binary_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->created_at);?></td>
                                 <td class="post_title" align="center"><b><?php echo $value->username;?></b></td>
-                                <td align="center"><span class="label label-success"><?php echo $value->point_left;?></span></td>
-                                <td align="center"><span class="label label-block"><?php echo $value->point_rigth;?></span></td>
+                                <td align="center" class="label-success" style="color:#fff;"><?php echo $value->point_left;?></td>
+                                <td align="center" class="label-info" style="color:#fff;"><?php echo $value->point_rigth;?></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 1) {
                                         $valor = "Abonado";
