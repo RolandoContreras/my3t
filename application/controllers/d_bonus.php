@@ -20,8 +20,8 @@ class D_bonus extends CI_Controller{
             $obj_bonus= $this->obj_bonus->search($params);
             
             /// PAGINADO
-            $modulos ='comisiones'; 
-            $seccion = 'Lista';        
+            $modulos ='bonos'; 
+            $seccion = 'Lista';
             $link_modulo =  site_url().'dashboard/'.$modulos; 
             
             /// VISTA
@@ -32,61 +32,50 @@ class D_bonus extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/bonus/bonus_list");
     }
     
-    public function load($category_id=NULL){
+    public function load($bonus_id=NULL){
         //VERIFY IF ISSET CUSTOMER_ID
         
-        if ($category_id != ""){
+        if ($bonus_id != ""){
             /// PARAM FOR SELECT 
-            $where = "category_id = $category_id";
             $params = array(
                         "select" =>"*",
-                         "where" => $where,
+                         "where" => "bonus_id = $bonus_id",
             ); 
-            $obj_category  = $this->obj_category->get_search_row($params); 
+            $obj_bonus  = $this->obj_bonus->get_search_row($params); 
             //RENDER
-            $this->tmp_mastercms->set("obj_category",$obj_category);
+            $this->tmp_mastercms->set("obj_bonus",$obj_bonus);
           }
       
-            $modulos ='categorias'; 
+            $modulos ='bonos'; 
             $seccion = 'Formulario';        
             $link_modulo =  site_url().'dashboard/'.$modulos; 
 
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->render("dashboard/categorias/category_form");    
+            $this->tmp_mastercms->render("dashboard/bonus/bonus_form");    
     }
     
     public function validate(){
         
         //GET CUSTOMER_ID
-        $category_id = $this->input->post("category_id");
+        $bonus_id = $this->input->post("bonus_id");
+        $name =  $this->input->post('name');
+        $percent =  $this->input->post('percent');
+        $status_value =  $this->input->post('status_value');
         
-        if($category_id != ""){
-            //PARAM DATA
-            $data = array(
-               'name' => $this->input->post('name'),
-               'description' => $this->input->post('description'),
-               'active' => $this->input->post('active'),
-               'updated_at' => date("Y-m-d H:i:s"),
-               'updated_by' => $_SESSION['usercms']['user_id']
+        //UPDATE DATA
+        $data = array(
+                'bonus_id' => $bonus_id,
+                'name' => $name,
+                'percent' => $percent,
+                'status_value' => $status_value,  
+                'updated_at' => date("Y-m-d H:i:s"),
+                'updated_by' => $_SESSION['usercms']['user_id']
                 );          
             //SAVE DATA IN TABLE    
-            $this->obj_category->update($category_id, $data);
-        }else{
-            //PARAM DATA SAVE
-            $data = array(
-               'name' => $this->input->post('name'),
-               'description' => $this->input->post('description'),
-               'active' => $this->input->post('active'),
-               'status_value' => 1,
-               'created_at' => date("Y-m-d H:i:s"),
-               'created_by' => $_SESSION['usercms']['user_id'],
-                );          
-            //SAVE DATA IN TABLE    
-            $this->obj_category->insert($data);
-        }
-        redirect(site_url()."dashboard/categorias");
+            $this->obj_bonus->update($bonus_id, $data);
+        redirect(site_url()."dashboard/bonos");
     }
     
     public function get_session(){          

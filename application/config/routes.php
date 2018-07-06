@@ -110,6 +110,8 @@ $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 $route['dashboard/comisiones'] = "d_comission";
 
 $route['dashboard/bonos'] = "d_bonus"; 
+$route['dashboard/bonos/load/([0-9]+)'] = "d_bonus/load/$1";
+$route['dashboard/bonos/validate'] = "d_bonus/validate";
 
 $route['dashboard/rangos'] = "d_ranges"; 
 

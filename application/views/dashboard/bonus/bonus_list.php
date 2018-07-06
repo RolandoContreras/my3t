@@ -35,7 +35,7 @@
                                 <tr>
                             <th align="center"><?php echo $value->bonus_id;?></th>
                             <td align="center"><?php echo strtoupper($value->name);?></td>
-                            <td align="center"><?php echo $value->percent;?></td>
+                            <td align="center" style="color:#fff;" class="label-success"><?php echo $value->percent;?></td>
                             <td align="center">
                                 <?php if ($value->status_value == 0) {
                                     $valor = "No Activo";
@@ -49,7 +49,7 @@
                             <td>
                                 <div class="operation">
                                         <div class="btn-group">
-                                           <button class="btn btn-small" onclick="edit_bonus('<?php echo $value->bonus_id;?>');">Editar</button>
+                                           <button class="btn btn-small" onclick="edit_bonus('<?php echo $value->bonus_id;?>');"><i class="fa fa-edit"></i>  Editar</button>
                                         </div>
                                 </div>
                             </td>
@@ -70,4 +70,4 @@
     } );
 } );
 </script>
-<script src="<?php echo site_url();?>static/cms/js/comments.js"></script>
+<script src="<?php echo site_url();?>static/cms/js/bonus.js"></script>
