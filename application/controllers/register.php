@@ -129,10 +129,6 @@ class Register extends CI_Controller {
                 $point_rigth = $string[17];
                 $identificator_param = $string[18];
                 
-//                var_dump($customer_id);
-//                var_dump($identificator_param);
-//                die();
-                
                 //validate username
                 $val = $this->validate_username_register($username);
                 if($val == 1){
@@ -209,50 +205,6 @@ class Register extends CI_Controller {
                             
                         }
                     }
-                    
-                    //COUNT $identificator_param y quitar ,
-//                    $count_identificator = strlen($identificator_param) + 1;
-
-                    //Get identificator last register
-//                    if (count($obj_identificator) > 0) {
-//
-//                        $key = 1;
-//                        $str = "";
-//                        $str_number = "";
-//                        foreach ($obj_identificator as $key => $value) {
-//                            //GET IDENTIFICATOR TREE 
-//                            $identificador = $value->identificador;
-//                            //QUITAR IDENTIFICADOR DEL PADRE
-//                            $identificador_2 = substr($identificador, 0, -$count_identificator);
-//
-//                            //CONSULT IF CONTAINT Z O D
-//                            $find = strpos($identificador_2, "$verify");
-//
-//                            if ($find == false) {
-//                                $str .= "$identificador|";
-//                            }
-//                        }
-//
-//                        $array_identificator = explode("|", $str);
-//                        $count = 0;
-//                        foreach ($array_identificator as $value) {
-//                            $count_str = strlen($value);
-//                            if($count_str > $count){
-//                                $idetificator = $value;
-//                                $count = $count_str;
-//                            }
-//                        }
-//                        $idetificator =  $idetificator;             
-//                    } else {
-//                        $idetificator = $identificator_param;
-//                    }
-                    
-//                    var_dump($idetificator);
-//                    die();
-                    
-//                    $explo_identificator = explode(",", $idetificator);
-//                    $ultimo = $explo_identificator[0] + 1;
-//                    $identificator = $ultimo . $last_id . ',' . $idetificator;
                     
                     //create date to DB
                     $birth_date = "$ano-$mes-$dia";
