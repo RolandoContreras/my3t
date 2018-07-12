@@ -28,7 +28,6 @@
                                 <th>USUARIO</th>
                                 <th>ASOCIADO</th>
                                 <th>BONO</th>
-                                <th>TIPO</th>
                                 <th>MONTO</th> 
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
@@ -42,22 +41,24 @@
                                 <td class="post_title" align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->bonus;?></td>
-                                <td align="center"><?php echo $value->name;?></td>
-                                <td align="center"><b><?php echo $value->amount;?></b></td>
+                                <td align="center" class="label-success" style="color:#fff;"><b><?php echo $value->amount;?></b></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 0) {
-                                        $valor = "No Pagado";
-                                        $stilo = "label label-important";
-                                    }else{
+                                    <?php if (($value->status_value == 1) || ($value->status_value == 2)) {
+                                        $valor = "Abonado";
+                                        $stilo = "label label-default";
+                                    }elseif($value->status_value == 3){
+                                        $valor = "Espera de procesar";
+                                        $stilo = "label label-warning";
+                                    }elseif($value->status_value == 4){
                                         $valor = "Pagado";
                                         $stilo = "label label-success";
-                                    } ?>
+                                    }?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
                                 <td>
                                     <div class="operation">
-                                            <div class="btn-group">
-                                                <button class="btn btn-small" onclick="edit_comissions('<?php echo $value->commissions_id;?>');">Editar</button>
+                                        <div class="btn-group">
+                                                <button class="btn btn-small" onclick="edit_comissions('<?php echo $value->commissions_id;?>');"><i class="fa fa-edit"></i> Editar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -78,4 +79,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/customer.js"></script>
+<script src="static/cms/js/comission.js"></script>

@@ -16,7 +16,6 @@ class D_comission extends CI_Controller{
                                     customer.first_name,
                                     customer.last_name,
                                     bonus.name as bonus,
-                                    commissions.name,
                                     commissions.amount,
                                     commissions.status_value,
                                     commissions.date",
@@ -42,61 +41,63 @@ class D_comission extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/comisiones/comission_list");
     }
     
-    public function load($category_id=NULL){
+    public function load($commissions_id=NULL){
         //VERIFY IF ISSET CUSTOMER_ID
         
-        if ($category_id != ""){
+        if ($commissions_id != ""){
             /// PARAM FOR SELECT 
-            $where = "category_id = $category_id";
             $params = array(
-                        "select" =>"*",
-                         "where" => $where,
+                        "select" =>"commissions.commissions_id,
+                                    commissions.customer_id,
+                                    commissions.date,
+                                    commissions.amount,
+                                    commissions.bonus_id,
+                                    commissions.status_value,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.username,",
+                         "where" => "commissions_id = $commissions_id",
+                         "join" => array('customer, commissions.customer_id = customer.customer_id')
             ); 
-            $obj_category  = $this->obj_category->get_search_row($params); 
+            $obj_comission  = $this->obj_comission->get_search_row($params); 
             //RENDER
-            $this->tmp_mastercms->set("obj_category",$obj_category);
+            $this->tmp_mastercms->set("obj_comission",$obj_comission);
           }
       
-            $modulos ='categorias'; 
+            $modulos ='comisiones'; 
             $seccion = 'Formulario';        
             $link_modulo =  site_url().'dashboard/'.$modulos; 
 
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->render("dashboard/categorias/category_form");    
+            $this->tmp_mastercms->render("dashboard/comisiones/comission_form");    
     }
     
     public function validate(){
         
-        //GET CUSTOMER_ID
-        $category_id = $this->input->post("category_id");
+        $commissions_id =  $this->input->post('commissions_id');
+        $customer_id =  $this->input->post('customer_id');
+        $amount =  $this->input->post('amount');
+        $bonus_id =  $this->input->post('bonus_id');
+        $date = formato_fecha_db_mes_dia_ano($this->input->post('date'));
+        $status_value =  $this->input->post('status_value');
         
-        if($category_id != ""){
-            //PARAM DATA
-            $data = array(
-               'name' => $this->input->post('name'),
-               'description' => $this->input->post('description'),
-               'active' => $this->input->post('active'),
-               'updated_at' => date("Y-m-d H:i:s"),
-               'updated_by' => $_SESSION['usercms']['user_id']
+        //UPDATE DATA
+        $data = array(
+                'commissions_id' => $commissions_id,
+                'customer_id' => $customer_id,
+                'amount' => $amount,
+                'bonus_id' => $bonus_id,
+                'date' => $date,
+                'status_value' => $status_value,  
+                'updated_at' => date("Y-m-d H:i:s"),
+                'updated_by' => $_SESSION['usercms']['user_id']
                 );          
             //SAVE DATA IN TABLE    
-            $this->obj_category->update($category_id, $data);
-        }else{
-            //PARAM DATA SAVE
-            $data = array(
-               'name' => $this->input->post('name'),
-               'description' => $this->input->post('description'),
-               'active' => $this->input->post('active'),
-               'status_value' => 1,
-               'created_at' => date("Y-m-d H:i:s"),
-               'created_by' => $_SESSION['usercms']['user_id'],
-                );          
-            //SAVE DATA IN TABLE    
-            $this->obj_category->insert($data);
-        }
-        redirect(site_url()."dashboard/categorias");
+        
+            $this->obj_comission->update($commissions_id, $data);
+        redirect(site_url()."dashboard/comisiones");
     }
     
     public function get_session(){          
