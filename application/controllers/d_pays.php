@@ -61,18 +61,17 @@ class D_pays extends CI_Controller{
            //GET DATA FROM CUSTOMER
            $obj_pay_commission= $this->obj_pay_commission->search($params);
            
-           
            /// PAGINADO
             $modulos ='cobros'; 
             $seccion = 'Lista';        
-            $link_modulo =  site_url().'dashboard/cobros'; 
+            $link_modulo =  site_url().'dashboard/pagos'; 
             
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->set("obj_pay_commission",$obj_pay_commission);
-            $this->tmp_mastercms->render("dashboard/cobros/cobros_details");
+            $this->tmp_mastercms->render("dashboard/pagos/pagos_details");
     }
     
     public function pagado(){
@@ -121,7 +120,7 @@ class D_pays extends CI_Controller{
          // Envio de Correo de confirmacion de pago
                $mail = '<html> 
                             <head> 
-                               <title>COBRO PROCESADO</title> 
+                               <title>Cobro Procesado</title> 
                             </head> 
                             <body> 
                             <h2>Pedido de cobro procesado</h2> 
@@ -131,9 +130,8 @@ class D_pays extends CI_Controller{
                             <br>
                             <br>
                             <br>
-                            <p><b><u>Department of Payments</u></b><br>
-                            CRIPTOWIN - The Best Investment<br>
-                            <i>http://www.criptowin.com</i></p> 
+                            3T Club: Travel - Training - Trade <br>
+                            <i>https://my3t.club</i></p> 
                             </body> 
                             </html> 
                             '; 
@@ -146,7 +144,7 @@ class D_pays extends CI_Controller{
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
                 //dirección del remitente 
-                $headers .= "From: CRIPTOTWIN - The Best Investment< noreplay@criptowin.com >\r\n";
+                $headers .= "From: 3T Club: Travel - Training - Trade < noreplay@my3t.club >\r\n";
                 //Enviamos el mensaje a tu_dirección_email 
                 
                 $bool = mail("$email",$titulo,$mensaje,$headers);
@@ -198,24 +196,22 @@ class D_pays extends CI_Controller{
                     ); 
                     $this->obj_commission->update($value->commissions_id,$data_comission);    
            }
-            
            // Envio de Correo de confirmacion de pago
                 $mail = '<html> 
                             <head> 
-                               <title>PEDIDO DE COBRO CANCELADO</title> 
+                               <title>Pedido de cobro cancelado</title> 
                             </head> 
                             <body> 
                             <h2>Pedido de Cobro Cancelado</h2> 
                             <p>     
-                            Saludos líder '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada cancelada. 
+                            Saludos '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada cancelada. 
                             <br>Comunicarse con soporte. Gracias por su confianza. 
                             </p> 
                             <br>
                             <br>
                             <br>
-                            <p><b><u>Department of Payments</u></b><br> 
-                            Bitshare - Una solución para las personas<br>
-                            <i>http://www.yourbitshares.com</i></p> 
+                            3T Club: Travel - Training - Trade<br>
+                            <i>https://my3t.club</i></p> 
                             </body> 
                             </html> 
                             '; 
@@ -223,12 +219,12 @@ class D_pays extends CI_Controller{
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                 $mensaje = wordwrap($mail, 70, "\r\n");
                 //Titulo
-                $titulo = "PEDIDO DE COBRO CANCELADO";
+                $titulo = "Pedido de cobro cancelado";
                 //cabecera
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
                 //dirección del remitente 
-                $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                $headers .= "From: 3T Club: Travel - Training - Trade < noreplay@my3t.club >\r\n";
                 //Enviamos el mensaje a tu_dirección_email 
                 $bool = mail("$email",$titulo,$mensaje,$headers);
            
