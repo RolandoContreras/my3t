@@ -89,7 +89,7 @@
                                                if($value->status_value == 2){ ?>
                                                    <span class="label label-danger">Cancelado/Devuelto</span>
                                                <?php }elseif($value->status_value == 3){ ?>
-                                                   <span class="label label-warning">En espera de procesar</span>
+                                                   <span style="color: #00620C" class="label label-warning">En espera de procesar</span>
                                                <?php }elseif($value->status_value == 4){ ?>
                                                    <span class="label label-success">Procesado</span>
                                                <?php } ?>

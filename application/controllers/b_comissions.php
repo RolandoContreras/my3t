@@ -99,8 +99,8 @@ class b_comissions extends CI_Controller {
                "join" => array('customer, commissions.customer_id = customer.customer_id',
                                 'bonus, commissions.bonus_id = bonus.bonus_id'),
                 "where" => "customer.customer_id = $customer_id",
-                "order" => "commissions.date DESC",
-                "limit" => "50");
+                "order" => "commissions.commissions_id DESC",
+                "limit" => "100");
            //GET DATA FROM CUSTOMER
         $obj_commissions = $this->obj_commissions->search($params);
         }

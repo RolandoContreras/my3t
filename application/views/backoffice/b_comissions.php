@@ -62,10 +62,10 @@
                                     <table id="table" class="display table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                 <th align="center">Fecha</th>
-                                                 <th align="center">Concepto</th>
-                                                 <th align="center">Monto Enviado</th>
-                                                 <th align="center">Estado</th>
+                                                 <th>Fecha</th>
+                                                 <th>Concepto</th>
+                                                 <th>Monto Enviado</th>
+                                                 <th>Estado</th>
                                             </tr>
                                          </thead>
                                  <tbody>
@@ -75,8 +75,18 @@
                                           <td><?php echo $value->bonus;?></b></td>
                                           <td><b><?php echo format_number_dolar($value->amount);?></b></td>
                                           <td>
-                                              <span class="label label-success">Abonado</span>
-                                           </td>
+                                               <?php if (($value->status_value == 1) || ($value->status_value == 2)) {
+                                                    $valor = "Abonado";
+                                                    $stilo = "label label-default";
+                                                }elseif($value->status_value == 3){
+                                                    $valor = "Espera de procesar";
+                                                    $stilo = "label label-warning";
+                                                }elseif($value->status_value == 4){
+                                                    $valor = "Pagado";
+                                                    $stilo = "label label-success";
+                                                }?>
+                                                <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                           </td>   
                                        </tr>
                                   <?php } ?>
                                 </tbody>

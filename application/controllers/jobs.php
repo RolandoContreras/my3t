@@ -67,7 +67,7 @@ class Jobs extends CI_Controller {
                                         break;
                                     case $point_left > $point_rigth:
                                          $data = $point_rigth * $percet;
-                                         $row = "point_rigth";
+                                         $row = "point_left";
                                           //OPERATION
                                           $result = $point_left - $point_rigth;      
                                         break;

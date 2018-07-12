@@ -52,12 +52,17 @@
                                           <td><?php echo $value->username;?></td>
                                           <td><b><?php echo "$".$value->amount;?></b></td>
                                           <td>
-                                                   <?php 
-                                                   if($value->status_value <= 4){ ?>
-                                                       <span class="label label-success">Abonado</span>
-                                                   <?php }else{ ?>
-                                                       <span class="label label-danger">Salida a billetera externa</span>
-                                                   <?php } ?>
+                                               <?php if (($value->status_value == 1) || ($value->status_value == 2)) {
+                                                        $valor = "Abonado";
+                                                        $stilo = "label label-default";
+                                                    }elseif($value->status_value == 3){
+                                                        $valor = "Espera de procesar";
+                                                        $stilo = "label label-warning";
+                                                    }elseif($value->status_value == 4){
+                                                        $valor = "Pagado";
+                                                        $stilo = "label label-success";
+                                                }?>
+                                            <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                            </td>
                                        </tr>
                                   <?php } ?>
