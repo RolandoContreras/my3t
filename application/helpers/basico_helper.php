@@ -22,6 +22,21 @@ function corta_texto($texto, $longitud=400) {
     return $texto; 
 }
 
+function encrypt($cadena){
+    $key='c7850f98Tc0150Z2191Y29abb3f9fbc9i';
+    $string = utf8_encode($cadena);
+    $string = $key.$string.$key; //concateno la llave para encriptar la cadena
+    $encrypted = base64_encode($string);//codifico la cadena
+    return($encrypted);
+}
+
+function decrypt($cadena){
+     $key='c7850f98Tc0150Z2191Y29abb3f9fbc9i';  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
+     $string = base64_decode($cadena); //decodifico la cadena
+     $decrypted = str_replace($key, "", "$string"); //quito la llave de la cadena
+     return $decrypted;  //Devuelve el string desencriptado
+}
+
 function convert_slug($url){
     $search  = array('á', 'é', 'í', 'ó', 'ú',' ','ñ','Á', 'É', 'Í', 'Ó', 'Ú');
     $replace = array('a', 'e', 'i', 'o', 'u','-','n','a', 'e', 'i', 'o', 'u');    

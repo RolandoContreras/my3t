@@ -52,7 +52,7 @@ $route['backoffice/productos'] = "b_product";
 $route['backoffice/profile'] = "b_data";
 $route['backoffice/upgrade'] = "b_upgrade";
 $route['backoffice/binario'] = "b_binario";
-$route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
+$route['backoffice/binario/([0-9a-z_A-Z-=+/]+)'] = "b_binario/index/$1";
 
 $route['backoffice/productos/academy'] = "b_academy";
 $route['backoffice/productos/academy/courses'] = "b_academy/courses";

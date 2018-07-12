@@ -43,7 +43,7 @@ class B_binario extends CI_Controller {
         $url = explode("/",uri_string());
             
         if(isset($url[2])){
-             $customer_id = $url[2];
+             $customer_id = decrypt($url[2]);
         }    
         
         //VERIFIRY GET SESSION    
@@ -304,7 +304,7 @@ class B_binario extends CI_Controller {
                 if($value->identificador == $n2_z){
                     $n2_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -319,7 +319,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n2_d){
                     $n2_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -334,7 +334,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n3_2_z){
                     $n3_2_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -349,7 +349,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n3_z){
                     $n3_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -364,7 +364,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n3_d){
                     $n3_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -379,7 +379,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n3_2_d){
                     $n3_2_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -394,7 +394,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_z){
                     $n4_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -409,7 +409,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_2_z){
                     $n4_2_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -424,7 +424,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_3_z){
                     $n4_3_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -439,7 +439,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_4_z){
                     $n4_4_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -454,7 +454,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_d){
                     $n4_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -469,7 +469,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_2_d){
                     $n4_2_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -484,7 +484,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_3_d){
                     $n4_3_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -499,7 +499,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n4_4_d){
                     $n4_4_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -514,7 +514,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_z){
                     $n5_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -529,7 +529,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_2_z){
                     $n5_2_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -544,7 +544,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_3_z){
                     $n5_3_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -559,7 +559,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_4_z){
                     $n5_4_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -574,7 +574,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_5_z){
                     $n5_5_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -589,7 +589,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_6_z){
                     $n5_6_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -604,7 +604,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_7_z){
                     $n5_7_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -619,7 +619,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_8_z){
                     $n5_8_iz = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -634,7 +634,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_d){
                     $n5_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -649,7 +649,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_2_d){
                     $n5_2_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -664,7 +664,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_3_d){
                     $n5_3_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -679,7 +679,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_4_d){
                     $n5_4_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -694,7 +694,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_5_d){
                     $n5_5_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -709,7 +709,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_6_d){
                     $n5_6_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -724,7 +724,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_7_d){
                     $n5_7_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
@@ -739,7 +739,7 @@ class B_binario extends CI_Controller {
                 elseif($value->identificador == $n5_8_d){
                     $n5_8_de = array($value->first_name,
                                                $value->last_name,
-                                               $value->customer_id,
+                                               encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
                                                $value->position,
