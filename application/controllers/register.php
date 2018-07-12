@@ -129,6 +129,10 @@ class Register extends CI_Controller {
                 $point_rigth = $string[17];
                 $identificator_param = $string[18];
                 
+//                var_dump($customer_id);
+//                var_dump($identificator_param);
+//                die();
+                
                 //validate username
                 $val = $this->validate_username_register($username);
                 if($val == 1){
@@ -183,54 +187,72 @@ class Register extends CI_Controller {
                             $verify = 'z';
                     }
                     
-                    //SELECT LAST REGISTER
-                    $params = array("select" => "identificador,customer_id,first_name",
+                    //SELECT NEW IDENTIFICATOR
+                    $identificador_explo = explode(',', $identificator_param);
+                    $last_number = intval(preg_replace('/[^0-9]+/', '', $identificador_explo[0]), 10); 
+                    $last_number = $last_number + 1;
+                    $new_identification = $last_number.$last_id.",".$identificator_param;
+                    
+                    $params = array("select" => "identificador,customer_id,first_name,created_at",
                         "where" => "identificador like '%$identificator_param' and position = $pierna_customer",
-                        "order" => "customer.identificador DESC");
+                        "order" => "customer.created_at ASC");
                     $obj_identificator = $this->obj_customer->search($params);
-                    //COUNT $identificator_param y quitar ,
-                    $count_identificator = strlen($identificator_param) + 1;
-
-                    //Get identificator last register
-                    if (count($obj_identificator) > 0) {
-
-                        $key = 1;
-                        $str = "";
-                        $str_number = "";
-                        foreach ($obj_identificator as $key => $value) {
-                            //GET IDENTIFICATOR TREE 
-                            $identificador = $value->identificador;
-                            //QUITAR IDENTIFICADOR DEL PADRE
-                            $identificador_2 = substr($identificador, 0, -$count_identificator);
-
-                            //CONSULT IF CONTAINT Z O D
-                            $find = strpos($identificador_2, "$verify");
-
-                            if ($find == false) {
-                                $str .= "$identificador|";
-                            }
+                    
+                    foreach ($obj_identificator as $key => $value){
+                        
+                        if($value->identificador == "$new_identification"){
+                            //VERIDY NEW IDENTIFICATOR
+                            $new_identification = explode(',', $value->identificador);
+                            $last_number = intval(preg_replace('/[^0-9]+/', '', $new_identification[0]), 10); 
+                            $last_number = $last_number + 1;
+                            $new_identification = $last_number.$last_id.",".$value->identificador;
+                            
                         }
-
-                        $array_identificator = explode("|", $str);
-                        $count = 0;
-                        foreach ($array_identificator as $value) {
-                            $count_str = strlen($value);
-                            if($count_str > $count){
-                                $idetificator = $value;
-                                $count = $count_str;
-                            }
-                        }
-                        $idetificator =  $idetificator;             
-                    } else {
-                        $idetificator = $identificator_param;
                     }
                     
-                    var_dump($idetificator);
-                    die();
+                    //COUNT $identificator_param y quitar ,
+//                    $count_identificator = strlen($identificator_param) + 1;
+
+                    //Get identificator last register
+//                    if (count($obj_identificator) > 0) {
+//
+//                        $key = 1;
+//                        $str = "";
+//                        $str_number = "";
+//                        foreach ($obj_identificator as $key => $value) {
+//                            //GET IDENTIFICATOR TREE 
+//                            $identificador = $value->identificador;
+//                            //QUITAR IDENTIFICADOR DEL PADRE
+//                            $identificador_2 = substr($identificador, 0, -$count_identificator);
+//
+//                            //CONSULT IF CONTAINT Z O D
+//                            $find = strpos($identificador_2, "$verify");
+//
+//                            if ($find == false) {
+//                                $str .= "$identificador|";
+//                            }
+//                        }
+//
+//                        $array_identificator = explode("|", $str);
+//                        $count = 0;
+//                        foreach ($array_identificator as $value) {
+//                            $count_str = strlen($value);
+//                            if($count_str > $count){
+//                                $idetificator = $value;
+//                                $count = $count_str;
+//                            }
+//                        }
+//                        $idetificator =  $idetificator;             
+//                    } else {
+//                        $idetificator = $identificator_param;
+//                    }
                     
-                    $explo_identificator = explode(",", $idetificator);
-                    $ultimo = $explo_identificator[0] + 1;
-                    $identificator = $ultimo . $last_id . ',' . $idetificator;
+//                    var_dump($idetificator);
+//                    die();
+                    
+//                    $explo_identificator = explode(",", $idetificator);
+//                    $ultimo = $explo_identificator[0] + 1;
+//                    $identificator = $ultimo . $last_id . ',' . $idetificator;
                     
                     //create date to DB
                     $birth_date = "$ano-$mes-$dia";
@@ -246,7 +268,7 @@ class Register extends CI_Controller {
                         'last_name' => $last_name,
                         'address' => $address,
                         'phone' => $phone,
-                        'identificador' => $identificator,
+                        'identificador' => $new_identification,
                         'city' => $city,
                         'dni' => $dni,
                         'birth_date' => $birth_date,
