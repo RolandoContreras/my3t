@@ -204,7 +204,7 @@ class D_pays extends CI_Controller{
                             <body> 
                             <h2>Pedido de Cobro Cancelado</h2> 
                             <p>     
-                            Saludos '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada cancelada. 
+                            Saludos '.$first_name.' la petición de cobro del usuario: <b>'.$username.'</b> por la cantidad: $'.$amount.', fue  cancelada. 
                             <br>Comunicarse con soporte. Gracias por su confianza. 
                             </p> 
                             <br>
