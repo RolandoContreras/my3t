@@ -76,7 +76,7 @@ $route['backoffice/soporte'] = "b_soporte";
 $route['backoffice/soporte/validate'] = "b_soporte/validate";
 
 $route['backoffice/unilevel'] = "b_unilevel";
-$route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
+$route['backoffice/unilevel/([0-9a-z_A-Z-=+/]+)'] = "b_unilevel/index/$1";
 
 $route['backoffice/points'] = "b_points";
 

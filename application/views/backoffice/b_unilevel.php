@@ -74,7 +74,7 @@
                                                   <?php if($obj_customer->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                           </div>
                                           </a>
-                                        <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$obj_customer->customer_id;?>"><?php echo $obj_customer->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span></span>
+                                        <span class="tree_text"><a><?php echo $obj_customer->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span></span>
                             <!--BEGIN SECOND LEVEL-->
                             <?php 
                             if(count($obj_customer_n2) > 0){ ?>
@@ -105,7 +105,7 @@
                                           </div>
                                           </a>
                                             <?php if($value->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
-                                            <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value->customer_id;?>"><?php echo $value->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                            <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value->customer_id);?>"><?php echo $value->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
                                             
                                                     <!--BEGIN THIRD LEVEL-->
                                                             <?php 
@@ -138,7 +138,7 @@
                                                                                   </div>
                                                                                   </a>
                                                                                     <?php if($value3->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
-                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value3->customer_id;?>"><?php echo $value3->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value3->customer_id);?>"><?php echo $value3->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
                                                                                     <!--BEGIN FOURD LEVEL-->
                                                                                             <?php 
                                                                                             if(count($obj_customer_n4) > 0){ ?>
@@ -170,7 +170,7 @@
                                                                                                                   </div>
                                                                                                                   </a>
                                                                                                                     <?php if($value4->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
-                                                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value4->customer_id;?>"><?php echo $value4->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value4->customer_id);?>"><?php echo $value4->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
                                                                                                                     <br><br><br>
                                                                                                                 </li>
                                                                                                                 <?php } ?>

@@ -41,7 +41,7 @@ class B_unilevel extends CI_Controller {
         $price_btc = $this->btc_price();
         
         if(isset($url[2])){
-            $customer_id = $url[2];
+            $customer_id = decrypt($url[2]);
         }else{
             $customer_id = $_SESSION['customer']['customer_id'];
         }    
