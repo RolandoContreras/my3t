@@ -89,7 +89,6 @@ $route['backoffice/comisiones/performance'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/unilevel'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/global'] = "b_comissions/index/$1";
 
-
 $route['backoffice/billetera'] = "b_wallet";
 $route['backoffice/cobros'] = "b_pay";
 $route['backoffice/pagos/validar'] = "b_pay/validate";
@@ -116,7 +115,9 @@ $route['dashboard/bonos'] = "d_bonus";
 $route['dashboard/bonos/load/([0-9]+)'] = "d_bonus/load/$1";
 $route['dashboard/bonos/validate'] = "d_bonus/validate";
 
-$route['dashboard/rangos'] = "d_ranges"; 
+$route['dashboard/rangos'] = "d_ranges";
+$route['dashboard/rangos/load/([0-9]+)'] = "d_ranges/load/$1";
+$route['dashboard/rangos/validate'] = "d_ranges/validate";
 
 $route['dashboard/puntos'] = "d_points"; 
 $route['dashboard/puntos/load/([0-9]+)'] = "d_points/load/$1";
@@ -145,8 +146,6 @@ $route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
 
 $route['dashboard/jobs/pago_binario'] = "jobs/pago_binario"; 
 $route['dashboard/jobs/verificar_rango'] = "jobs/verify_ranges"; 
-
-
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";

@@ -25,6 +25,7 @@
                                 <th>NOMBRE</th>
                                 <th>PUNTOS PERSONALES</th>
                                 <th>PUNTOS GRUPALES</th>
+                                <th>IMAGEN</th>
                                 <th>ESTADO</th>
                                 <th>ACCIÓN</th>
                             </tr>
@@ -34,8 +35,9 @@
                                 <tr>
                             <th><?php echo $value->range_id;?></th>
                             <td align="center"><?php echo strtoupper($value->name);?></td>
-                            <td align="center"><?php echo $value->point_personal;?></td>
-                            <td align="center"><?php echo $value->point_grupal;?></td>
+                            <td align="center" class="label-info" style="color:#FFF;"><?php echo $value->point_personal;?></td>
+                            <td align="center" class="label-success" style="color:#FFF;"><?php echo format_number_miles($value->point_grupal);?></td>
+                            <td><img width="100" src="<?php echo site_url()."static/backoffice/images/rangos/$value->img";?>" alt="<?php echo $value->name;?>"/></td>
                             <td align="center">
                                 <?php if ($value->active == 0) {
                                     $valor = "No Activo";
@@ -46,10 +48,11 @@
                                 } ?>
                                 <span class="<?php echo $stilo;?>"><?php echo $valor;?></span>
                             </td>
+                            
                             <td align="center">
                                 <div class="operation">
                                         <div class="btn-group">
-                                           <button class="btn btn-small" onclick="edit_ranges('<?php echo $value->range_id;?>');">Editar</button>
+                                           <button class="btn btn-small" onclick="edit_ranges('<?php echo $value->range_id;?>');"><i class="fa fa-edit"></i> Editar</button>
                                         </div>
                                 </div>
                             </td>
@@ -70,4 +73,4 @@
     } );
 } );
 </script>
-<script src="<?php echo site_url();?>static/cms/js/comments.js"></script>
+<script src="<?php echo site_url();?>static/cms/js/ranges.js"></script>
