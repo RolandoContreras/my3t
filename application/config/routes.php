@@ -38,6 +38,10 @@
 |
 */
 
+//route example: http://domain.tld/en/controller => http://domain.tld/controller
+//$route['(\w{2})/(.*)'] = '$2';
+//$route['(\w{2})'] = $route['home'];
+
 $route['default_controller'] = "home";
 $route['404_override'] = 'errors/error_404';
 

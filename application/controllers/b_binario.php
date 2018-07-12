@@ -82,35 +82,12 @@ class B_binario extends CI_Controller {
              $obj_customer = $this->obj_customer->get_search_row($params);  
              
              $identificator = $obj_customer->identificador;
-             $explode_identificator = explode(",", $identificator);
-             $count_explode = count($explode_identificator);
-             
-                //GET DATE CREATED
-                $creacion = $obj_customer->created_at;
-                $identificator = $obj_customer->identificador;
                 
                 if($customer_id == 1){
-                    $str = "customer.identificador like '%1z' or customer.identificador like '%1d' and ";
+                    $str = "customer.identificador like '%1z' or customer.identificador like '%1d'";
                 }else{
-                    $creacion = $obj_customer->created_at;
-                    $explo_identificator =  explode(",", $identificator);
-
-                    $str = "";
-                    //for para separar el identificador
-                    foreach ($explo_identificator as $key => $value) {
-
-                    $encontrar_post = strpos($identificator, $value);
-                    $texto =  substr($identificator, $encontrar_post);
-                    $str .= "customer.identificador like '%$texto' or ";
-                    }
+                    $str = "customer.identificador like '%$identificator' and identificador <> '$identificator'";
                 }
-                    
-                if($customer_id != 1){
-                    //ELIMINAR OR DEL FINAL
-                    $str = substr($str, 0, -3); 
-                    $str = $str.'and';
-                }
-                
                     //SELECT ALL CUSTOMER IN THE TREE  
                     $param_tree = array(
                                 "select" =>"customer.customer_id,
@@ -131,14 +108,14 @@ class B_binario extends CI_Controller {
                                             customer.status_value,
                                             franchise.img,
                                             franchise.franchise_id",
-                                 "where" => "paises.id_idioma = 7 and $str customer.created_at > '$creacion'",
-                                "join" => array('paises, customer.country = paises.id',
+                                 "where" => "paises.id_idioma = 7 and $str",
+                                 "join" => array('paises, customer.country = paises.id',
                                             'franchise, customer.franchise_id = franchise.franchise_id',
-                                            'ranges, customer.range_id = ranges.range_id')); 
+                                            'ranges, customer.range_id = ranges.range_id'),
+                                "limit" => "100");
+                                
+                                
                     $obj_tree = $this->obj_customer->search($param_tree); 
-//                    var_dump($obj_tree);
-//                    die();
-                    
             //GET POSITION PIERNA
             $pierna = $obj_customer->position;
             
@@ -304,8 +281,6 @@ class B_binario extends CI_Controller {
                 //SELECT LAST IDENTIFICATOR FOR N5_8z
                 $ultimo = $n4_4_d + 1; 
                 $n5_8_d = $ultimo."z,".$n4_4_d;
-                
-                
                 
                 if($value->identificador == $n2_z){
                     $n2_iz = array($value->first_name,
@@ -818,8 +793,6 @@ class B_binario extends CI_Controller {
                     $this->tmp_backoffice->set("n5_8_de",$n5_8_de);
                 }
             }
-  
-            
         $this->tmp_backoffice->set("price_btc",$price_btc);  
         $this->tmp_backoffice->set("messages_informative",$messages_informative);   
         $this->tmp_backoffice->set("obj_message",$obj_message);

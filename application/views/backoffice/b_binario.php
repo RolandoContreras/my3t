@@ -61,9 +61,9 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo string_to_mayusculas($obj_customer->username);?></b><br/>
-                                                              Nombre: <b><?php echo string_to_mayusculas($obj_customer->first_name." ".$obj_customer->last_name);?></b><br/>
-                                                              Rango: <b><?php echo string_to_mayusculas($obj_customer->rango);?></b><br/>
+                                                              Usuario: <b><?php echo $obj_customer->username;?></b><br/>
+                                                              Nombre: <b><?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></b><br/>
+                                                              Rango: <b><?php echo $obj_customer->rango;?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$obj_customer->img_rango";?>" width="50px" alt="rango"/>
                                                           </p>
                                                       </div>
@@ -80,10 +80,10 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo string_to_mayusculas($n2_iz[6]);?></b><br/>
-                                                              Nombre: <b><?php echo string_to_mayusculas($n2_iz[0]." ".$n2_iz[1]);?></b><br/>
-                                                              Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                              Rango: <b><?php echo string_to_mayusculas($n2_iz[12]);?></b><br/>
+                                                              Usuario: <b><?php echo $n2_iz[6];?></b><br/>
+                                                              Nombre: <b><?php echo $n2_iz[0]." ".$n2_iz[1];?></b><br/>
+                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              Rango: <b><?php echo $n2_iz[12];?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n2_iz[13]";?>" width="50px" alt="<?php echo $n2_iz[13];?>"/>
                                                           </p>
                                                       </div>
@@ -105,10 +105,10 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo string_to_mayusculas($n3_iz[6]);?></b><br/>
-                                                              Nombre: <b><?php echo string_to_mayusculas($n3_iz[0]." ".$n3_iz[1]);?></b><br/>
-                                                              Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                              Rango: <b><?php echo string_to_mayusculas($n3_iz[12]);?></b><br/>
+                                                              Usuario: <b><?php echo $n3_iz[6];?></b><br/>
+                                                              Nombre: <b><?php echo $n3_iz[0]." ".$n3_iz[1];?></b><br/>
+                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              Rango: <b><?php echo $n3_iz[12];?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_iz[13]";?>" width="50px" alt="<?php echo $n3_iz[13];?>"/>
                                                           </p>
                                                       </div>
@@ -131,10 +131,10 @@
                                                                               </a>
                                                                               <div class="push popover__content_left">
                                                                                   <p class="popover__message_left">
-                                                                                      Usuario: <b><?php echo string_to_mayusculas($n4_iz[6]);?></b><br/>
-                                                                                      Nombre: <b><?php echo string_to_mayusculas($n4_iz[0]." ".$n4_iz[1]);?></b><br/>
-                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                      Rango: <b><?php echo string_to_mayusculas($n4_iz[12]);?></b><br/>
+                                                                                      Usuario: <b><?php echo $n4_iz[6];?></b><br/>
+                                                                                      Nombre: <b><?php echo $n4_iz[0]." ".$n4_iz[1];?></b><br/>
+                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                      Rango: <b><?php echo $n4_iz[12];?></b><br/>
                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_iz[13]";?>" width="50px" alt="<?php echo $n4_iz[13];?>"/>
                                                                                   </p>
                                                                               </div>
@@ -157,10 +157,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo string_to_mayusculas($n5_iz[6]);?></b><br/>
-                                                                                                  Nombre: <b><?php echo string_to_mayusculas($n5_iz[0]." ".$n5_iz[1]);?></b><br/>
-                                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo string_to_mayusculas($n5_iz[12]);?></b><br/>
+                                                                                                  Usuario: <b><?php echo $n5_iz[6];?></b><br/>
+                                                                                                  Nombre: <b><?php echo $n5_iz[0]." ".$n5_iz[1];?></b><br/>
+                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  Rango: <b><?php echo $n5_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_iz[13]";?>" width="50px" alt="<?php echo $n5_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -184,10 +184,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo string_to_mayusculas($n5_2_iz[6]);?></b><br/>
-                                                                                                  Nombre: <b><?php echo string_to_mayusculas($n5_2_iz[0]." ".$n5_2_iz[1]);?></b><br/>
-                                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo string_to_mayusculas($n5_2_iz[12]);?></b><br/>
+                                                                                                  Usuario: <b><?php echo $n5_2_iz[6];?></b><br/>
+                                                                                                  Nombre: <b><?php echo $n5_2_iz[0]." ".$n5_2_iz[1];?></b><br/>
+                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  Rango: <b><?php echo $n5_2_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_2_iz[13]";?>" width="50px" alt="<?php echo $n5_2_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -215,10 +215,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_left">
                                                                                               <p class="popover__message_left">
-                                                                                                  Usuario: <b><?php echo string_to_mayusculas($n4_2_iz[6]);?></b><br/>
-                                                                                                  Nombre: <b><?php echo string_to_mayusculas($n4_2_iz[0]." ".$n4_2_iz[1]);?></b><br/>
-                                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo string_to_mayusculas($n4_2_iz[12]);?></b><br/>
+                                                                                                  Usuario: <b><?php echo $n4_2_iz[6];?></b><br/>
+                                                                                                  Nombre: <b><?php echo $n4_2_iz[0]." ".$n4_2_iz[1];?></b><br/>
+                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  Rango: <b><?php echo $n4_2_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_2_iz[13]";?>" width="50px" alt="<?php echo $n4_2_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -242,10 +242,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo string_to_mayusculas($n5_3_iz[6]);?></b><br/>
-                                                                                                  Nombre: <b><?php echo string_to_mayusculas($n5_3_iz[0]." ".$n5_3_iz[1]);?></b><br/>
-                                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo string_to_mayusculas($n5_3_iz[12]);?></b><br/>
+                                                                                                  Usuario: <b><?php echo $n5_3_iz[6];?></b><br/>
+                                                                                                  Nombre: <b><?php echo $n5_3_iz[0]." ".$n5_3_iz[1];?></b><br/>
+                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  Rango: <b><?php echo $n5_3_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_3_iz[13]";?>" width="50px" alt="<?php echo $n5_3_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -270,10 +270,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo string_to_mayusculas($n5_4_iz[6]);?></b><br/>
-                                                                                                  Nombre: <b><?php echo string_to_mayusculas($n5_4_iz[0]." ".$n5_4_iz[1]);?></b><br/>
-                                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo string_to_mayusculas($n5_4_iz[12]);?></b><br/>
+                                                                                                  Usuario: <b><?php echo $n5_4_iz[6];?></b><br/>
+                                                                                                  Nombre: <b><?php echo $n5_4_iz[0]." ".$n5_4_iz[1];?></b><br/>
+                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  Rango: <b><?php echo $n5_4_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_4_iz[13]";?>" width="50px" alt="<?php echo $n5_4_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -303,10 +303,10 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo string_to_mayusculas($n3_2_iz[6]);?></b><br/>
-                                                              Nombre: <b><?php echo string_to_mayusculas($n3_2_iz[0]." ".$n3_2_iz[1]);?></b><br/>
-                                                              Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                              Rango: <b><?php echo string_to_mayusculas($n3_2_iz[12]);?></b><br/>
+                                                              Usuario: <b><?php echo $n3_2_iz[6];?></b><br/>
+                                                              Nombre: <b><?php echo $n3_2_iz[0]." ".$n3_2_iz[1];?></b><br/>
+                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              Rango: <b><?php echo $n3_2_iz[12];?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_2_iz[13]";?>" width="50px" alt="<?php echo $n3_2_iz[13];?>"/>
                                                           </p>
                                                       </div>
@@ -329,10 +329,10 @@
                                                                           </a>
                                                                           <div class="push popover__content_left">
                                                                               <p class="popover__message_left">
-                                                                                  Usuario: <b><?php echo string_to_mayusculas($n4_3_iz[6]);?></b><br/>
-                                                                                  Nombre: <b><?php echo string_to_mayusculas($n4_3_iz[0]." ".$n4_3_iz[1]);?></b><br/>
-                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                  Rango: <b><?php echo string_to_mayusculas($n4_3_iz[12]);?></b><br/>
+                                                                                  Usuario: <b><?php echo $n4_3_iz[6];?></b><br/>
+                                                                                  Nombre: <b><?php echo $n4_3_iz[0]." ".$n4_3_iz[1];?></b><br/>
+                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                  Rango: <b><?php echo $n4_3_iz[12];?></b><br/>
                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_3_iz[13]";?>" width="50px" alt="<?php echo $n4_3_iz[13];?>"/>
                                                                               </p>
                                                                           </div>
@@ -356,10 +356,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_5_iz[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_5_iz[0]." ".$n5_5_iz[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_5_iz[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_5_iz[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_5_iz[0]." ".$n5_5_iz[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_5_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_5_iz[13]";?>" width="50px" alt="<?php echo $n5_5_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -383,10 +383,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_6_iz[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_6_iz[0]." ".$n5_6_iz[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_6_iz[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_6_iz[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_6_iz[0]." ".$n5_6_iz[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_6_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_6_iz[13]";?>" width="50px" alt="<?php echo $n5_6_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -412,10 +412,10 @@
                                                                       </a>
                                                                       <div class="push popover__content_left">
                                                                           <p class="popover__message_left">
-                                                                              Usuario: <b><?php echo string_to_mayusculas($n4_4_iz[6]);?></b><br/>
-                                                                              Nombre: <b><?php echo string_to_mayusculas($n4_4_iz[0]." ".$n4_4_iz[1]);?></b><br/>
-                                                                              Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                              Rango: <b><?php echo string_to_mayusculas($n4_4_iz[12]);?></b><br/>
+                                                                              Usuario: <b><?php echo $n4_4_iz[6];?></b><br/>
+                                                                              Nombre: <b><?php echo $n4_4_iz[0]." ".$n4_4_iz[1];?></b><br/>
+                                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                              Rango: <b><?php echo $n4_4_iz[12];?></b><br/>
                                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_4_iz[13]";?>" width="50px" alt="<?php echo $n4_4_iz[13];?>"/>
                                                                           </p>
                                                                       </div>
@@ -439,10 +439,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_7_iz[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_7_iz[0]." ".$n5_7_iz[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_7_iz[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_7_iz[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_7_iz[0]." ".$n5_7_iz[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_7_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_7_iz[13]";?>" width="50px" alt="<?php echo $n5_7_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -466,10 +466,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_8_iz[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_8_iz[0]." ".$n5_8_iz[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_8_iz[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_8_iz[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_8_iz[0]." ".$n5_8_iz[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_8_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_8_iz[13]";?>" width="50px" alt="<?php echo $n5_8_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -504,10 +504,10 @@
                                                               </a>
                                                               <div class="push popover__content">
                                                                   <p class="popover__message">
-                                                                      Usuario: <b><?php echo string_to_mayusculas($n2_de[6]);?></b><br/>
-                                                                      Nombre: <b><?php echo string_to_mayusculas($n2_de[0]." ".$n2_de[1]);?></b><br/>
-                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                      Rango: <b><?php echo string_to_mayusculas($n2_de[12]);?></b><br/>
+                                                                      Usuario: <b><?php echo $n2_de[6];?></b><br/>
+                                                                      Nombre: <b><?php echo $n2_de[0]." ".$n2_de[1];?></b><br/>
+                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                      Rango: <b><?php echo $n2_de[12];?></b><br/>
                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n2_de[13]";?>" width="50px" alt="<?php echo $n2_de[13];?>"/>
                                                                   </p>
                                                               </div>
@@ -530,10 +530,10 @@
                                                               </a>
                                                               <div class="push popover__content">
                                                                   <p class="popover__message">
-                                                                      Usuario: <b><?php echo string_to_mayusculas($n3_2_de[6]);?></b><br/>
-                                                                      Nombre: <b><?php echo string_to_mayusculas($n3_2_de[0]." ".$n3_2_de[1]);?></b><br/>
-                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                      Rango: <b><?php echo string_to_mayusculas($n3_2_de[12]);?></b><br/>
+                                                                      Usuario: <b><?php echo $n3_2_de[6];?></b><br/>
+                                                                      Nombre: <b><?php echo $n3_2_de[0]." ".$n3_2_de[1];?></b><br/>
+                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                      Rango: <b><?php echo $n3_2_de[12];?></b><br/>
                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_2_de[13]";?>" width="50px" alt="<?php echo $n3_2_de[13];?>"/>
                                                                   </p>
                                                               </div>
@@ -556,10 +556,10 @@
                                                                               </a>
                                                                               <div class="push popover__content_right">
                                                                                   <p class="popover__message_right">
-                                                                                      Usuario: <b><?php echo string_to_mayusculas($n4_4_de[6]);?></b><br/>
-                                                                                      Nombre: <b><?php echo string_to_mayusculas($n4_4_de[0]." ".$n4_4_de[1]);?></b><br/>
-                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                      Rango: <b><?php echo string_to_mayusculas($n4_4_de[12]);?></b><br/>
+                                                                                      Usuario: <b><?php echo $n4_4_de[6];?></b><br/>
+                                                                                      Nombre: <b><?php echo $n4_4_de[0]." ".$n4_4_de[1];?></b><br/>
+                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                      Rango: <b><?php echo $n4_4_de[12];?></b><br/>
                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_4_de[13]";?>" width="50px" alt="<?php echo $n4_4_de[13];?>"/>
                                                                                   </p>
                                                                               </div>
@@ -582,10 +582,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_8_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_8_de[0]." ".$n5_8_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_8_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_8_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_8_de[0]." ".$n5_8_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_8_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_8_de[13]";?>" width="50px" alt="<?php echo $n5_8_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -608,10 +608,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_7_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_7_de[0]." ".$n5_7_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_7_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_7_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_7_de[0]." ".$n5_7_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_7_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_7_de[13]";?>" width="50px" alt="<?php echo $n5_7_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -636,9 +636,9 @@
                                                                           </a>
                                                                           <div class="push popover__content_right">
                                                                               <p class="popover__message_right">
-                                                                                  Usuario: <b><?php echo string_to_mayusculas($n4_3_de[6]);?></b><br/>
-                                                                                  Nombre: <b><?php echo string_to_mayusculas($n4_3_de[0]." ".$n4_3_de[1]);?></b><br/>
-                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                  Usuario: <b><?php echo $n4_3_de[6];?></b><br/>
+                                                                                  Nombre: <b><?php echo $n4_3_de[0]." ".$n4_3_de[1];?></b><br/>
+                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
                                                                                   Rango: <b><?php echo string_to_mayusculas($n4_3_de[12]);?></b><br/>
                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_3_de[13]";?>" width="50px" alt="<?php echo $n4_3_de[13];?>"/>
                                                                               </p>
@@ -662,10 +662,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_6_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_6_de[0]." ".$n5_6_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_6_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_6_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_6_de[0]." ".$n5_6_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_6_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_6_de[13]";?>" width="50px" alt="<?php echo $n5_6_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -688,10 +688,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_5_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_5_de[0]." ".$n5_5_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_5_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_5_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_5_de[0]." ".$n5_5_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_5_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_5_de[13]";?>" width="50px" alt="<?php echo $n5_5_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -720,10 +720,10 @@
                                                               </a>
                                                               <div class="push popover__content">
                                                                   <p class="popover__message">
-                                                                      Usuario: <b><?php echo string_to_mayusculas($n3_de[6]);?></b><br/>
-                                                                      Nombre: <b><?php echo string_to_mayusculas($n3_de[0]." ".$n3_de[1]);?></b><br/>
-                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                      Rango: <b><?php echo string_to_mayusculas($n3_de[12]);?></b><br/>
+                                                                      Usuario: <b><?php echo $n3_de[6];?></b><br/>
+                                                                      Nombre: <b><?php echo $n3_de[0]." ".$n3_de[1];?></b><br/>
+                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                      Rango: <b><?php echo $n3_de[12];?></b><br/>
                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_de[13]";?>" width="50px" alt="<?php echo $n3_de[13];?>"/>
                                                                   </p>
                                                               </div>
@@ -746,10 +746,10 @@
                                                                           </a>
                                                                           <div class="push popover__content_right">
                                                                               <p class="popover__message_right">
-                                                                                  Usuario: <b><?php echo string_to_mayusculas($n4_2_de[6]);?></b><br/>
-                                                                                  Nombre: <b><?php echo string_to_mayusculas($n4_2_de[0]." ".$n4_2_de[1]);?></b><br/>
-                                                                                  Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                  Rango: <b><?php echo string_to_mayusculas($n4_2_de[12]);?></b><br/>
+                                                                                  Usuario: <b><?php echo $n4_2_de[6];?></b><br/>
+                                                                                  Nombre: <b><?php echo $n4_2_de[0]." ".$n4_2_de[1];?></b><br/>
+                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                  Rango: <b><?php echo $n4_2_de[12];?></b><br/>
                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_2_de[13]";?>" width="50px" alt="<?php echo $n4_2_de[13];?>"/>
                                                                               </p>
                                                                           </div>
@@ -772,10 +772,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_4_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_4_de[0]." ".$n5_4_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_4_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_4_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_4_de[0]." ".$n5_4_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_4_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_4_de[13]";?>" width="50px" alt="<?php echo $n5_4_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -798,10 +798,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_3_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_3_de[0]." ".$n5_3_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_4_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_3_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_3_de[0]." ".$n5_3_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_4_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_3_de[13]";?>" width="50px" alt="<?php echo $n5_3_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -827,10 +827,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_right">
                                                                                                   <p class="popover__message_right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n4_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n4_de[0]." ".$n4_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n4_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n4_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n4_de[0]." ".$n4_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n4_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_de[13]";?>" width="50px" alt="<?php echo $n4_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -854,10 +854,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_2_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_2_de[0]." ".$n5_2_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_2_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_2_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_2_de[0]." ".$n5_2_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_2_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_2_de[13]";?>" width="50px" alt="<?php echo $n5_2_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -880,10 +880,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo string_to_mayusculas($n5_de[6]);?></b><br/>
-                                                                                                      Nombre: <b><?php echo string_to_mayusculas($n5_de[0]." ".$n5_de[1]);?></b><br/>
-                                                                                                      Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_de[12]);?></b><br/>
+                                                                                                      Usuario: <b><?php echo $n5_de[6];?></b><br/>
+                                                                                                      Nombre: <b><?php echo $n5_de[0]." ".$n5_de[1];?></b><br/>
+                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      Rango: <b><?php echo $n5_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_de[13]";?>" width="50px" alt="<?php echo $n5_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>

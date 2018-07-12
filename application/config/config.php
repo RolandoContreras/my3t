@@ -80,8 +80,15 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+//$config['language']	= 'spanish';
+/* default language abbreviation */
+//$config['language_abbr'] = "es";
 
+/* set available language abbreviations */
+//$config['lang_uri_abbr'] = array("es" => "spanish", "en" => "english", "pt-br" => "portugues");
+
+/* hide the language segment (use cookie) */
+//$config['lang_ignore'] = TRUE;
 /*
 |--------------------------------------------------------------------------
 | Default Character Set

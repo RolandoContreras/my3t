@@ -225,6 +225,9 @@ class Register extends CI_Controller {
                         $idetificator = $identificator_param;
                     }
                     
+                    var_dump($idetificator);
+                    die();
+                    
                     $explo_identificator = explode(",", $idetificator);
                     $ultimo = $explo_identificator[0] + 1;
                     $identificator = $ultimo . $last_id . ',' . $idetificator;

@@ -450,6 +450,23 @@
 }
 .popover__message {
   text-align: center;
+  text-transform: uppercase;
+}
+.popover__message_5left {
+  text-align: center;
+  text-transform: uppercase;
+}
+.popover__message_5right {
+  text-align: center;
+  text-transform: uppercase;
+}
+.popover__message_left {
+  text-align: center;
+  text-transform: uppercase;
+}
+.popover__message_right {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 

@@ -260,7 +260,7 @@ class D_activate extends CI_Controller{
                 //GET DATA FROM BONUS
                 $obj_customer= $this->obj_customer->get_search_row($params);
                 
-                //GET DATA PARENT
+                //GET DATA PARENT 1
                 $param_parent = array(
                         "select" =>"team_builder,
                                     customer_id,
@@ -275,8 +275,7 @@ class D_activate extends CI_Controller{
                 
                 //VERIFY AND EXIST
                 if(($obj_parent->active == 1) && ("$today" <= "$team_date")){
-                    
-                    //GET CHILD 1er
+                    //GET CHILD
                     $param = array(
                         "select" =>"customer_id,
                                     username,
@@ -286,25 +285,32 @@ class D_activate extends CI_Controller{
                     );
                     //GET DATA FROM BONUS
                     $obj_parent_child = $this->obj_customer->search($param);
+                    var_dump($obj_parent_child);
+                    die();
+                    
+                    
                     $count = count($obj_parent_child);
                     
-                    if($count == 2){
+                    if($count >= 2){
                         foreach ($obj_parent_child as $key => $value) {
                             $param_child = array(
-                                "select" =>"customer_id,
-                                            username,
+                                "select" =>"username,
                                             team_builder,
                                             team_bluider_active",
                                 "where" => "parents_id = $value->customer_id and team_bluider_active = 1"
                             );
                             $obj_child = $this->obj_customer->search($param_child);
                             $obj_child_count = count($obj_child);
-                            if($key == 0){
-                                $first =  $obj_child_count;
-                            }else{
-                                $second = $obj_child_count;
+                            
+                            if($obj_child_count >= 2){
+                                $parent.$key = $value->customer_id;
                             }
                         }
+                        
+                        var_dump($$parent0);
+                        var_dump($$parent1);
+                        die();
+                        
                          var_dump($first);
                             var_dump($second);
                             die();

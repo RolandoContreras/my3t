@@ -11,13 +11,14 @@ class Dashboard extends CI_Controller {
     }
     
     public function validate(){
-        if($this->input->is_ajax_request()){    
+        if($this->input->is_ajax_request()){  
+            
             $this->form_validation->set_rules('email','email',"required|trim|valid_email|callback_validar_user");
             $this->form_validation->set_rules('password','password','required|trim');              
     	    $this->form_validation->set_message('required','Campo requerido %s');    	    
             $this->form_validation->set_message('valid_email','Correo Invalido %s');    	    
             
-            if ($this->form_validation->run($this)== false){                
+            if ($this->form_validation->run($this)== false){  
     	        $cadena  = explode("</p>", validation_errors());                
     	        $cadena2 = implode("<p>", $cadena);
     	        $cadena3 = explode("<p>", $cadena2);
@@ -25,7 +26,6 @@ class Dashboard extends CI_Controller {
     	        array_shift($cadena3);                
     	        $data['print'] = $cadena3[0];
                 $data['message'] = "false";       
-                
     	    }else{
                 $data['message'] = "true";
     	        $data['print'] = "Bienvenido al sistema";
@@ -42,7 +42,6 @@ class Dashboard extends CI_Controller {
         $obj_user = $this->obj_user->verificar_email($email,$password);       
         
         if (count($obj_user)>0){
-            
             if ($obj_user->status_value == 1){                            
                 $data_user_session['user_id'] = $obj_user->user_id;
                 $data_user_session['name'] = $obj_user->first_name.' '.$obj_user->last_name;
