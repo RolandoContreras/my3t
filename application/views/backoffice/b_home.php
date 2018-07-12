@@ -8,7 +8,7 @@
             <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
         </div>
     </div> 
-         <!-- Page content-->
+    <!-- Page content-->
     <div class="content-wrapper">
         <div class="row fix-box-height package-box-fix mt-30">
             <!--SHOW ALERT MESSAGE INFORMATIVE --> 

@@ -9,7 +9,6 @@
 <meta name="keywords" content="3T Club,Club privado,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viaja, entreate y gana">
 <title>Backoffice | Travel - Training- Trade</title>
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
-
 <!-- Site favicon -->
 <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
 <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
@@ -23,16 +22,12 @@
 <!-- Font awesome stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/font-awesome.min.css';?>" rel="stylesheet">
 <!-- /font awesome stylesheet -->
-
 <!-- Bootstrap stylesheet min version -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/bootstrap.min.css';?>" rel="stylesheet">
-
 <!-- /bootstrap stylesheet min version -->
-
 <!-- Mouldifi core stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-core.css';?>" rel="stylesheet">
 <!-- /mouldifi core stylesheet -->
-
 <link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-forms.css';?>" rel="stylesheet">
 <script>
     var site = '<?php echo site_url();?>';
@@ -247,10 +242,8 @@
 </div>
 </div>
 <!--Load JQuery-->
-<script src="<?php // echo site_url().'static/backoffice/js/assets/jquery.min.js';?>"></script>
 <script src="static/cms/plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/bootstrap.min.js';?>"></script>
-
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.metisMenu.js';?>"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery-ui.js';?>"></script>
 <script src="<?php echo site_url().'static/backoffice/js/assets/jquery.blockUI.js';?>"></script>
