@@ -294,65 +294,7 @@
                                     </div> 
                             </div> 
                     </div>
-     
-    
-            
-     <?php 
-//     if(count($obj_post) > 0){ ?>
-            <!--SEPARATE SECCION-->
-<!--            <div class="row">
-                <div class="col-sm-12 mb-25">
-                    <div class="panel panel-default panel-tab-box">
-                        <div class="panel-body"></div>
-                    </div>
-                </div>
-            </div>-->
-            <!--END SEPARATE SECCION-->
-            
-<!--            <div class="col-lg-6">
-                <div class="panel panel-default">
-                        <div class="panel-heading no-border clearfix"> 
-                            <h2 class="panel-title">NOTICIAS</h2>
-                        </div>
-                        <div class="panel-body">
-                                <div class="carousel slide" id="carousel5">
-                                        <div class="carousel-inner">
-                                                <div class="item gallery active">
-                                                        <ul class="list-item most-watched">
-                                                            <?php foreach ($obj_post as $value) { ?>
-                                                                <li>
-                                                                        <div class="lockup-video">
-                                                                                <div class="lockup-thumbnail">
-                                                                                        <div class="embed-responsive embed-responsive-16by9">
-                                                                                            <img src='<?php echo site_url()."static/backoffice/images/news/$value->img";?>' alt="<?php echo $value->title?>"/>
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="lockup-content">
-                                                                                    <div class="lockup-title"><a href="#"><?php echo replace_vocales_voculeshtml("$value->title");?></a></div>
-                                                                                        <div class="lockup-description">
-                                                                                            <p><?php echo corta_texto(replace_vocales_voculeshtml("$value->summary"),80);?></p>
-                                                                                        </div>
-                                                                                        <div class="lockup-meta">
-                                                                                            <span><?php echo formato_fecha($value->date);?></span>
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
-                                                                </li>
-                                                            <?php } ?>
-                                                        </ul>
-                                                </div>
-                                                <div class="carousel-footer">
-                                                         <a href=""><button class="btn btn-primary btn-block" type="button">VER TODO</button></a>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-            </div>-->
-    <?php //} ?>       
-            
         </div>
     </div>
    </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
-<!--<script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>-->

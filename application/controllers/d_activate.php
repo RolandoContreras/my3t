@@ -311,19 +311,7 @@ class D_activate extends CI_Controller{
                                 'point_calification_left' => 0,
                                 ); 
                             $this->obj_customer->update($parents_id,$data);
-                            
-                            //INSERT POINT ON BINERY TABLE
-                             $data = array(
-                                'customer_id' => $parents_id,
-                                'point_left' => $result,
-                                'created_by' => $parents_id,
-                                'status_value' => 1,
-                                'created_at' => date("Y-m-d H:i:s"),
-                                ); 
-                            $this->obj_binarys->insert($data);
-                            
-                            //RETURN PARED_ID
-                            return $parents_id;
+                            return 0;
                         }else{
                              $data = array(
                                 'point_calification_left' => $result,
@@ -343,19 +331,7 @@ class D_activate extends CI_Controller{
                                 'point_calification_rigth' => 0,
                                 ); 
                             $this->obj_customer->update($parents_id,$data);
-                            
-                            //INSERT POINT ON BINERY TABLE
-                             $data = array(
-                                'customer_id' => $parents_id,
-                                'point_rigth' => $result,
-                                 'created_by' => $parents_id,
-                                'status_value' => 1,
-                                'created_at' => date("Y-m-d H:i:s"),
-                                ); 
-                            $this->obj_binarys->insert($data);
-                            
-                            //RETURN PARED_ID
-                            return $parents_id;
+                            return 0;
                     }else{
                          $data = array(
                             'point_calification_rigth' => $result,
@@ -383,13 +359,7 @@ class D_activate extends CI_Controller{
             
             //CONVERT ARRAY
             $array_identificador =  explode(',', $identificador);
-//            $count_array = count($array_identificador);
-//            $key = $count_array;
-            
             foreach ($array_identificador as $key => $value) {
-//                var_dump($key);
-//                var_dump($value);
-//                die();
                 if($key <= 9){
                     $identificador = substr(str_replace($value, "", $identificador),1);
                         if($result == 0){
