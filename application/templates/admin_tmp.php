@@ -94,7 +94,6 @@
                                         <ul class="nav nav-list">
                                             <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/cobros";?>"><i class="icon-large icon-th"></i>Pagos y/o Cobros</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/soporte";?>"><i class="icon-large icon-th"></i>Soporte</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/categorias";?>"><i class="icon-large icon-th"></i>Categórías</a></li>
@@ -132,13 +131,13 @@
                         <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#cobros">
-                                        Cobros
+                                        Pagos
                                         </a>
                                     </div>
                                     <div id="cobros" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/cobros";?>"><i class="icon-large icon-th"></i>Cobros</a></li>
+                                             <li><a href="<?php echo site_url()."dashboard/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a></li>
                                         </ul>
                                         </div>
                                     </div>

@@ -17,6 +17,7 @@ class D_pays extends CI_Controller{
                         "select" =>"pay.pay_id,
                                     pay.date,
                                     pay.amount,
+                                    pay.obs,
                                     pay.status_value,
                                     customer.customer_id,
                                     customer.first_name,
@@ -32,16 +33,16 @@ class D_pays extends CI_Controller{
            $obj_pay= $this->obj_pay->search($params);
            
            /// PAGINADO
-            $modulos ='cobros'; 
+            $modulos ='pagos'; 
             $seccion = 'Lista';        
-            $link_modulo =  site_url().'dashboard/cobros'; 
+            $link_modulo =  site_url().'dashboard/pagos'; 
             
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->set("obj_pay",$obj_pay);
-            $this->tmp_mastercms->render("dashboard/cobros/cobros_list");
+            $this->tmp_mastercms->render("dashboard/pagos/pagos_list");
     }
     
     public function details($pay_id){  
@@ -235,6 +236,84 @@ class D_pays extends CI_Controller{
                     echo json_encode($data); 
             exit();
         }
+    }
+    
+    public function load($pay_id=NULL){
+            /// PARAMETROS PARA EL SELECT 
+            $params = array(
+                        "select" =>"pay.pay_id,
+                                    pay.amount,
+                                    pay.date,
+                                    pay.obs,
+                                    pay.customer_id,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.username,
+                                    pay.status_value",
+                         "where" => "pay_id = $pay_id",
+                         "join" => array('customer, pay.customer_id = customer.customer_id'),
+            ); 
+            $obj_pays  = $this->obj_pay->get_search_row($params); 
+            
+            $modulos ='pagos'; 
+            $seccion = 'Formulario';        
+            $link_modulo =  site_url().'dashboard/'.$modulos; 
+
+            $this->tmp_mastercms->set('link_modulo',$link_modulo);
+            $this->tmp_mastercms->set('modulos',$modulos);
+            $this->tmp_mastercms->set('seccion',$seccion);
+            $this->tmp_mastercms->set("obj_pays",$obj_pays);
+            $this->tmp_mastercms->render("dashboard/pagos/pagos_form");    
+    }
+    
+    public function validate_customer() {
+            if ($this->input->is_ajax_request()) {
+                //SELECT ID FROM CUSTOMER
+            $customer_id = $this->input->post('customer_id');
+            $param = array(
+                "select" => "customer_id,
+                             username,
+                             first_name,
+                             last_name",
+                "where" => "customer_id = $customer_id");
+            $obj_customer = $this->obj_customer->get_search_row($param);
+            
+            if (count($obj_customer) > 0) {
+                $data['message'] = "true";
+                $data['username'] = $obj_customer->username;
+                $data['name'] = $obj_customer->first_name." ".$obj_customer->last_name;
+                $data['print'] = '<div class="alert alert-success" style="text-align: center">Usuario Encontrado.</div>';
+            } else {
+                $data['message'] = "false";
+                $data['print'] = '<div class="alert alert-danger" style="text-align: center">Usuario no Existe.</div>';
+            }
+            echo json_encode($data);
+            }
+        }
+        
+    public function validate(){
+        
+        $pay_id =  $this->input->post('pay_id');
+        $customer_id =  $this->input->post('customer_id');
+        $amount =  $this->input->post('amount');
+        $obs =  $this->input->post('obs');
+        $date = formato_fecha_db_mes_dia_ano($this->input->post('date'));
+        $status_value =  $this->input->post('status_value');
+        
+        //UPDATE DATA
+        $data = array(
+                'customer_id' => $customer_id,
+                'amount' => $amount,
+                'obs' => $obs,
+                'date' => $date,
+                'status_value' => $status_value,  
+                'updated_at' => date("Y-m-d H:i:s"),
+                'updated_by' => $_SESSION['usercms']['user_id']
+                );          
+            //SAVE DATA IN TABLE    
+        
+            $this->obj_pay->update($pay_id, $data);
+        redirect(site_url()."dashboard/pagos");
     }
 
     public function get_session(){          

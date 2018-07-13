@@ -141,9 +141,6 @@ $route['dashboard/categorias/load'] = "d_category/load";
 $route['dashboard/categorias/load/([0-9]+)'] = "d_category/load/$1";
 $route['dashboard/categorias/validate'] = "d_category/validate";
 
-$route['dashboard/pagos_diarios'] = "d_pay_dialy"; 
-$route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
-
 $route['dashboard/jobs/pago_binario'] = "jobs/pago_binario"; 
 $route['dashboard/jobs/verificar_rango'] = "jobs/verify_ranges"; 
 
@@ -172,10 +169,13 @@ $route['dashboard/activaciones/active'] = "d_activate/active";
 $route['dashboard/soporte'] = "d_messages/soporte";
 $route['dashboard/soporte/update'] = "d_messages/update";
 
-$route['dashboard/cobros'] = "d_pays";
-$route['dashboard/cobros_details/([0-9]+)'] = "d_pays/details/$1";
-$route['dashboard/cobros/pagado'] = "d_pays/pagado";
-$route['dashboard/cobros/devolver'] = "d_pays/devolver";
+$route['dashboard/pagos'] = "d_pays";
+$route['dashboard/pagos_details/([0-9]+)'] = "d_pays/details/$1";
+$route['dashboard/pagos/pagado'] = "d_pays/pagado";
+$route['dashboard/pagos/devolver'] = "d_pays/devolver";
+$route['dashboard/pagos/load/([0-9]+)'] = "d_pays/load/$1";
+$route['dashboard/pagos/validate_customer'] = "d_pays/validate_customer";
+$route['dashboard/pagos/validate'] = "d_pays/validate";
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
@@ -186,6 +186,11 @@ $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios/load'] = "d_users/load";
 $route['dashboard/usuarios/load/([0-9]+)'] = "d_users/load/$1";
 $route['dashboard/usuarios/validate'] = "d_users/validate";
+
+
+$route['dashboard/reportes/asociados'] = "d_report_customer";
+$route['dashboard/reportes/cuentas'] = "d_report_membership";
+$route['dashboard/reportes/pagos'] = "d_report_pays";
 
 
 /* End of file routes.php */
