@@ -172,4 +172,5 @@
     </main>
 </div>
 </section>
+<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
 <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
