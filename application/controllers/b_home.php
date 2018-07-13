@@ -10,6 +10,7 @@ class B_home extends CI_Controller {
         $this->load->model("post_model","obj_post");
         $this->load->model("messages_model","obj_messages");
         $this->load->model("ranges_model","obj_ranges");
+        $this->load->model("news_model","obj_news");
     }
 
     public function index()
@@ -24,6 +25,8 @@ class B_home extends CI_Controller {
         $obj_message = $this->get_messages($customer_id);
         //GET MESSAGE INFORMATIVE
         $messages_informative = $this->get_messages_informative();
+        //GET NEWS
+        $obj_news = $this->get_news();
         //GET DATE
         $month = date("m");
         $year = date("Y");
@@ -93,6 +96,7 @@ class B_home extends CI_Controller {
                 
                 $this->tmp_backoffice->set("messages_informative",$messages_informative);
                 $this->tmp_backoffice->set("obj_message",$obj_message);
+                $this->tmp_backoffice->set("obj_news",$obj_news);
                 $this->tmp_backoffice->set("all_message",$all_message);
                 $this->tmp_backoffice->set("price_btc",$price_btc);
                 $this->tmp_backoffice->set("obj_total",$obj_total);
@@ -229,6 +233,17 @@ class B_home extends CI_Controller {
            $messages_informative = $this->obj_otros->search($params); 
             return $messages_informative;
     }
+    
+    public function get_news(){
+            $params = array(
+                            "select" =>"news_id,
+                                        img",
+                             "where" => "status_value = 1");
+                
+           $news = $this->obj_news->search($params); 
+           return $news;
+    }
+    
     
     public function get_messages($customer_id){
         $params = array(

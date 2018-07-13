@@ -13,24 +13,55 @@
         <div class="row fix-box-height package-box-fix mt-30">
             <!--SHOW ALERT MESSAGE INFORMATIVE --> 
             <div class="col-lg-12">
-                <?php 
-                foreach ($messages_informative as $value) { ?>
-                    <div class="row">
-                        <div class="col-md-12"> 
+                <div class="panel-group" id="accordion">
+                    <?php foreach ($messages_informative as $value) { ?>
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="panel panel-success">
-                                            <div class="panel-heading clearfix"> 
-                                                <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
-                                            </div> 
-                                            <!-- panel body --> 
-                                            <div class="panel-body"> 
-                                                <p><?php echo $value->text;?></p> 
-                                            </div> 
+                                            <header class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse_message"><i class="collapse-caret fa  fa-angle-up"></i> Informativo</a>
+                                            </header>
+                                            <div id="collapse_message" class="panel-collapse collapse in center">
+                                                <div class="panel-heading clearfix"> 
+                                                    <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                                </div> 
+                                                <!-- panel body --> 
+                                                <div class="panel-body"> 
+                                                    <p><?php echo $value->text;?></p> 
+                                                </div> 
+                                            </div>
                                     </div> 
+                                </div>
                             </div>
-                        </div>
-                <?php } ?>
+                    <?php } ?>
+                </div>
             </div>
             <!--END SHOW ALERT INFORMATIVE MESSAGE--> 
+            <!--START NEWS-->
+            <?php if($obj_news){ ?>
+                <div class="col-lg-12">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-shadow">
+                                    <header class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse61"><i class="collapse-caret fa  fa-angle-up"></i> Noticias</a>
+                                    </header>
+                                    
+                                    <div id="collapse61" class="panel-collapse collapse in center">
+                                        <div class="panel-body">
+                                            <?php foreach ($obj_news as $value) { ?>
+                                            <div>
+                                                <img class="text-center img-rounded img-responsive" src="<?php echo site_url()."static/backoffice/images/new/$value->img";?>">
+                                            </div>
+                                            <hr>
+                                        <?php } ?>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    </div>
+            <?php } ?>
+            <!--END NEWS-->
             <div class="col-lg-6">
                 <div class="row">
                     <div class="col-sm-6">
