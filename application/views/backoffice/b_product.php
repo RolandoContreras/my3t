@@ -12,22 +12,28 @@
         <div class="row fix-box-height package-box-fix mt-30">
             <!--SHOW ALERT  MESSAGE INFORMATIVE-->
             <div class="col-md-12"> 
-                <?php 
-                foreach ($messages_informative as $value) { ?>
-                    <div class="row">
-                        <div class="col-md-12"> 
-                                    <div class="panel panel-warning">
-						<div class="panel-heading clearfix"> 
-                                                <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
-                                            </div> 
-                                            <!-- panel body --> 
-                                            <div class="panel-body"> 
-                                                <p><?php echo $value->text;?></p> 
-                                            </div> 
-                                    </div> 
-                            </div>
+                <div class="panel-group" id="accordion">
+                <?php foreach ($messages_informative as $value) { ?>
+                        <div class="row">
+                            <div class="col-md-12"> 
+                                        <div class="panel panel-success">
+                                            <header class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse_message"><i class="collapse-caret fa  fa-angle-up"></i> Informativo</a>
+                                            </header>
+                                            <div id="collapse_message" class="panel-collapse collapse in center">
+                                                    <div class="panel-heading clearfix"> 
+                                                    <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                                </div> 
+                                                <!-- panel body --> 
+                                                <div class="panel-body"> 
+                                                    <p><?php echo $value->text;?></p> 
+                                                </div> 
+                                            </div>
+                                        </div> 
+                                </div>
                         </div>
                 <?php } ?>
+                </div>
             </div>
             <!--END SHOW ALERT MESSAGE INFORMATIVE-->
             <div class="col-lg-12">
@@ -44,19 +50,21 @@
 					</div> 
 				</div>
                                 <div class="col-md-9"> 
-					<div class="panel panel-default">
-						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>GLOBAL PASS</b></div> 
-						</div> 
-						<!-- panel body --> 
-						<div class="panel-body"> 
+                                        <div class="panel panel-success">
+                                            <div id="collapse_message" class="panel-collapse collapse in center">
+                                                <div class="panel-heading clearfix"> 
+                                                        <div class="panel-title"><b>GLOBAL PASS</b></div> 
+                                                </div> 
+                                                <!-- panel body --> 
+                                                <div class="panel-body"> 
                                                     <p>Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros siendo parte de <b>3T CLUB</b>.<br/> 	
-                                                        Tendrás 3 plataformas <b>GLOBAL PASS PERÚ, INTERNACIONAL Y ELITE</b> que te permitirán tener hasta el 70% de descuentos en cientos de establecimiento dentro de Perú y a nivel internacional como en hoteles, restaurantes, autos, cruceros, vuelos y mucho más.<br/>
+                                                        Tendrás 3 programas vacacionales <b>GLOBAL PASS PERÚ, INTERNACIONAL Y ELITE</b> que te permitirán tener hasta el 70% de descuentos en cientos de establecimiento dentro de Perú y a nivel internacional como en hoteles, restaurantes, autos, cruceros, vuelos y mucho más.<br/>
                                                         Puedes acumular créditos de recompensa a través de nuestro sistema boomerang rewards para canjearlos por viajes, cruceros, vuelos o cualquier servicio de la plataforma todo pagado simplemente por recomendar 3T CLUB y GLOBAL PASS y que tus recomendados compren a través tuyo. 
                                                     </p><br/>
-                                                    <a href="<?php echo site_url().'backoffice/productos/globalpass';?>"><button class="btn btn-success btn-block" type="button">VER PLATAFORMAS</button></a>
-						</div> 
-					</div> 
+                                                    <a href="<?php echo site_url().'backoffice/productos/globalpass';?>"><button class="btn btn-success btn-block" type="button">VER PROGRAMAS</button></a>
+                                                </div> 
+                                            </div>
+                                        </div> 
 				</div>
                     </div>
                  <!--Forex-->
@@ -73,18 +81,20 @@
 					</div> 
 				</div>
                                 <div class="col-md-9"> 
-					<div class="panel panel-default">
-						<div class="panel-heading clearfix"> 
-                                                    <div class="panel-title"><b>SISTEMA JAQUEMENTE</b></div> 
-						</div> 
-						<!-- panel body --> 
-						<div class="panel-body"> 
+                                        <div class="panel panel-success">
+                                            <div id="collapse_message" class="panel-collapse collapse in center">
+                                                <div class="panel-heading clearfix"> 
+                                                        <div class="panel-title"><b>JAQUEMENTE</b></div> 
+                                                </div> 
+                                                <!-- panel body --> 
+                                                <div class="panel-body"> 
                                                     <p>Descubre el mecanismo de tu “mente” con el coaching transformacional basado en experiencias vivenciales de ciencia práctica que te ayudarán a recuperar el poder de tu vida a través de la autoconfianza. Un sistema probado que esta llevando al éxitos a cientos de personas.<br/>Tendrás temas como:
-¿Cómo eliminar la basura mental?, entrena tu enfoque para ver oportunidades, ¿Cómo crear relaciones y la vida social que siempre quisiste?, ¿Cómo superar los miedos?, convertir espirales de muerte a vida y mucho más.
-</p><br/>
+                                                    ¿Cómo eliminar la basura mental?, entrena tu enfoque para ver oportunidades, ¿Cómo crear relaciones y la vida social que siempre quisiste?, ¿Cómo superar los miedos?, convertir espirales de muerte a vida y mucho más.
+                                                    </p><br/>
                                                     <a href="javascript:void(0)"><button disabled="disabled" class="btn btn-success btn-block" type="button">IR AL SISTEMA</button></a>
-						</div> 
-					</div> 
+                                                </div> 
+                                            </div>
+                                        </div> 
 				</div>
                     </div>
                  <!--Forex-->
@@ -100,21 +110,38 @@
 					</div> 
 				</div>
                                 <div class="col-md-9"> 
+                                        <div class="panel panel-success">
+                                            <div id="collapse_message" class="panel-collapse collapse in center">
+                                                <div class="panel-heading clearfix"> 
+                                                        <div class="panel-title"><b>3T ACADEMY FOREX</b></div> 
+                                                </div> 
+                                                <!-- panel body --> 
+                                                <div class="panel-body"> 
+                                                    <p>Profesionales altamente calificados en el manejo de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de <b>3T ACADEMY</b>.
+                                                        Nuestros profesionales son referentes y voceros en distintos medios de comunicación como américa noticias, canal N, diario gestión, el comercio, Perú 21, RPP Noticias entre otras.<br/>A la vez con un Track Record de hasta 20% de ganancia mensual en operaciones de manejo de fondos.
+                                                        <br/>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás en nuestra academia.</p><br/>
+                                                    <a href="javascript:void(0)"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
+                                                </div> 
+                                            </div>
+                                        </div> 
+				</div>
+                    
+<!--                                <div class="col-md-9"> 
 					<div class="panel panel-default">
 						<div class="panel-heading clearfix"> 
                                                     <div class="panel-title"><b>ACADEMIA DE FOREX</b></div> 
 						</div> 
-						<!-- panel body --> 
+						 panel body  
 						<div class="panel-body"> 
                                                     <p>Profesionales altamente calificados en el manejo de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de <b>3T ACADEMY</b>.
                                                         Nuestros profesionales son referentes y voceros en distintos medios de comunicación como américa noticias, canal N, diario gestión, el comercio, Perú 21, RPP Noticias entre otras.<br/>A la vez con un Track Record de hasta 20% de ganancia mensual en operaciones de manejo de fondos.
                                                         <br/>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás en nuestra academia.</p><br/>
                                                     
                                                     <a href="javascript:void(0)"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
-                                                    <!--<a href="<?php echo site_url().'backoffice/productos/academy';?>"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>-->
+                                                    <a href="<?php echo site_url().'backoffice/productos/academy';?>"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
 						</div> 
 					</div> 
-				</div>
+				</div>-->
                     </div>
                 </div>
             
