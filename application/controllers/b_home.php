@@ -138,7 +138,9 @@ class B_home extends CI_Controller {
                                     price,
                                     point,
                                     img",
-                         "where" => "status_value = 1 and franchise_id <> 6");
+                         "where" => "status_value = 1 and franchise_id <> 6",
+                        "order" => "price ASC",
+                );
             $obj_franchise = $this->obj_franchise->search($params);
             return $obj_franchise;
     }

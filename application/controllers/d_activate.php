@@ -281,17 +281,12 @@ class D_activate extends CI_Controller{
                     if($count >= 2){
                         $parent = "";
                         foreach ($obj_parent_child as $key => $value) {
-                            
-                            var_dump($value->customer_id);
-//                            die();
-                            
-                            
                             $param_child = array(
                                 "select" =>"customer.username,
                                             customer.team_builder,
                                             customer.team_builder_active",
                                 "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
-                                "where" => "customer.franchise_id between 7 and 9 and customer.parents_id = $value->customer_id and customer.team_builder_active = 1 and customer.financy = 0"
+                                "where" => "customer.parents_id = $value->customer_id and customer.team_builder_active = 1 and customer.financy = 0"
                             );
                             $obj_child = $this->obj_customer->total_records($param_child);
                             
