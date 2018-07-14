@@ -59,8 +59,8 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo string_to_mayusculas($obj_customer->username);?></b><br/>
-                                                              Nombre: <b><?php echo string_to_mayusculas($obj_customer->first_name." ".$obj_customer->last_name);?></b><br/>
+                                                              Usuario: <b><?php echo $obj_customer->username;?></b><br/>
+                                                              Nombre: <b><?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></b><br/>
                                                               Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
                                                               Rango: <b><?php echo string_to_mayusculas($obj_customer->rango);?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$obj_customer->img_rango";?>" width="50px" alt="rango"/>
@@ -75,7 +75,7 @@
                                      foreach ($obj_customer_n2 as $value) { ?>
                                         <li>
                                             <div class="popover__wrapper">
-                                                        <a href="<?php echo site_url().'backoffice/binario/'.encrypt($value->customer_id);?>">
+                                                        <a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value->customer_id);?>">
                                                         <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$value->img;?>" alt="paquete" width="80"></div>
                                                         <?php if($value->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                         <span class="user-name"><?php echo $value->username;?></span>
@@ -99,7 +99,7 @@
                                                                         <?php if($value->customer_id == $value3->parents_id){ ?>
                                                                                 <li>
                                                                                     <div class="popover__wrapper">
-                                                                                            <a href="<?php echo site_url().'backoffice/binario/'.encrypt($value3->customer_id);?>">
+                                                                                            <a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value3->customer_id);?>">
                                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$value3->img;?>" alt="paquete" width="80"></div>
                                                                                             <?php if($value3->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                             <span class="user-name"><?php echo $value3->username;?></span>
@@ -123,7 +123,7 @@
                                                                                                         <?php if($value3->customer_id == $value4->parents_id){ ?>
                                                                                                                 <li>
                                                                                                                     <div class="popover__wrapper">
-                                                                                                                        <a href="<?php echo site_url().'backoffice/binario/'.encrypt($value4->customer_id);?>">
+                                                                                                                        <a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value4->customer_id);?>">
                                                                                                                         <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$value4->img;?>" alt="paquete" width="80"></div>
                                                                                                                         <?php if($value4->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                                         <span class="user-name"><?php echo $value4->username;?></span>
@@ -151,10 +151,8 @@
                                                                      <?php } ?>
                                                             </ul>
                                                            <?php } ?>
-                                            
                                             <br><br><br>
                                         </li>
-                                        
                                      <?php }?>
                             </ul>
                            <?php } ?>

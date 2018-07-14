@@ -45,7 +45,6 @@
                                     <header class="panel-heading">
                                         <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse61"><i class="collapse-caret fa  fa-angle-up"></i> Noticias</a>
                                     </header>
-                                    
                                     <div id="collapse61" class="panel-collapse collapse in center">
                                         <div class="panel-body">
                                             <?php foreach ($obj_news as $value) { ?>

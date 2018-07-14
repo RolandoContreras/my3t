@@ -88,13 +88,15 @@ class D_activate extends CI_Controller{
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
                 $today = date('Y-m-j');
-                
+                $team_builder = date("Y-m-d", strtotime("+30 days"));
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
                 if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
                         'date_start' => $today,
                         'financy' => 1,
+                        'team_builder_active' => 1,
+                        'team_builder' => $team_builder,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
@@ -118,14 +120,6 @@ class D_activate extends CI_Controller{
                 $parents_id = $this->input->post("parents_id");
                 $side = $this->input->post("position");
                 $identificador = $this->input->post("identificador");
-                
-                 //VERIFY TEAM BUILDER
-                $today = date('Y-m-j');
-                $team_builder = date("Y-m-d", strtotime("+30 days"));
-                
-                $this->get_team_builder($parents_id,$today);
-                
-                
                 //GET SPONSOR ACTIVE
                     $params = array(
                         "select" =>"active,
@@ -168,25 +162,25 @@ class D_activate extends CI_Controller{
                 
                 //SELECT TODAY
                 $today = date('Y-m-j');
-                $expire = date("Y-m-d", strtotime("+30 days"));
-                
+                $team_builder = date("Y-m-d", strtotime("+30 days"));
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
                     $data = array(
                         'active' => 1,
-                        'team_bluider_active' => 1,
-                        'team_bluider' => 1,
+                        'team_builder_active' => 1,
+                        'team_builder' => $team_builder,
                         'date_start' => $today,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_customer->update($customer_id,$data);
+                    
+                    
+                //VERIFY TEAM BUILDER
+                $this->get_team_builder($parents_id,$today);  
                 //SEND MESSAGE CONFIRMATION ACTIVE
                 $this->message_active($customer_id);
                 //VERIFY TEAM BUILDER
                 $this->get_team_builder($parents_id,$today);
-                
-                
-                
                 echo json_encode($data); 
                 exit();
             }
@@ -251,7 +245,6 @@ class D_activate extends CI_Controller{
     }  
     
     public function get_team_builder($parents_id,$today){
-                
                 //GET PAREND 1
                 $params = array(
                         "select" =>"parents_id",
@@ -259,7 +252,6 @@ class D_activate extends CI_Controller{
                 );
                 //GET DATA FROM BONUS
                 $obj_customer= $this->obj_customer->get_search_row($params);
-                
                 //GET DATA PARENT 1
                 $param_parent = array(
                         "select" =>"team_builder,
@@ -267,59 +259,98 @@ class D_activate extends CI_Controller{
                                     active",
                         "where" => "customer_id = $obj_customer->parents_id"
                 );
-                
                 //GET DATA FROM BONUS
                 $obj_parent= $this->obj_customer->get_search_row($param_parent);
-                $team_date = formato_fecha_barras($obj_parent->team_builder);
-                $today = formato_fecha_barras($today);
+                
+                $team_date = $obj_parent->team_builder;
+                $today = $today;
                 
                 //VERIFY AND EXIST
-                if(($obj_parent->active == 1) && ("$today" <= "$team_date")){
+                if(($obj_parent->active == 1) && ("$team_date" >= "$today")){
                     //GET CHILD
                     $param = array(
                         "select" =>"customer_id,
                                     username,
                                     team_builder,
-                                    team_bluider_active",
-                        "where" => "parents_id = $obj_customer->parents_id and team_bluider_active = 1"
+                                    team_builder_active",
+                        "where" => "parents_id = $obj_customer->parents_id and team_builder_active = 1"
                     );
                     //GET DATA FROM BONUS
                     $obj_parent_child = $this->obj_customer->search($param);
-                    var_dump($obj_parent_child);
-                    die();
-                    
-                    
                     $count = count($obj_parent_child);
-                    
                     if($count >= 2){
+                        $parent = "";
                         foreach ($obj_parent_child as $key => $value) {
-                            $param_child = array(
-                                "select" =>"username,
-                                            team_builder,
-                                            team_bluider_active",
-                                "where" => "parents_id = $value->customer_id and team_bluider_active = 1"
-                            );
-                            $obj_child = $this->obj_customer->search($param_child);
-                            $obj_child_count = count($obj_child);
                             
-                            if($obj_child_count >= 2){
-                                $parent.$key = $value->customer_id;
+                            var_dump($value->customer_id);
+//                            die();
+                            
+                            
+                            $param_child = array(
+                                "select" =>"customer.username,
+                                            customer.team_builder,
+                                            customer.team_builder_active",
+                                "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
+                                "where" => "customer.franchise_id between 7 and 9 and customer.parents_id = $value->customer_id and customer.team_builder_active = 1 and customer.financy = 0"
+                            );
+                            $obj_child = $this->obj_customer->total_records($param_child);
+                            
+                            
+                            
+                            if($obj_child >= 2){
+                                $parent = $value->customer_id;
+                                
+                                var_dump($parent);
+                                die();
+                                
+//                                $id = $id + 1;
+                                
                             }
+                            
+                            
+                             var_dump($parent);
+                             die();
+//                            elseif(($obj_child >= 2) && ($key != 0)){
+//                                $parent1 = $value->customer_id;
+//                            }
                         }
                         
-                        var_dump($$parent0);
-                        var_dump($$parent1);
+                        var_dump($parent);
                         die();
                         
-                         var_dump($first);
-                            var_dump($second);
-                            die();
+//                        var_dump($parent0);
+//                        var_dump($parent1);
+//                        die();
+                        
+                        if(($parent0 != 0) && ($parent1 != 0)){
+                            //INSERT COMMISSION TABLE
+                            $data = array(
+                                'customer_id' => $obj_parent->customer_id,
+                                'bonus_id' => 2,
+                                'name' => "Bono Team Builders",
+                                'amount' => 50,
+                                'status_value' => 1,
+                                'date' => date("Y-m-d H:i:s"),
+                                'created_at' => date("Y-m-d H:i:s"),
+                                'created_by' => $_SESSION['usercms']['user_id'],
+                            ); 
+                            $this->obj_commissions->insert($data);
+                            
+                            //UPDATE DATA CUSTOMER TEAM BUILDER INACTIVE
+                            $data_customer1 = array(
+                                'team_builder_active' => 0,
+                                ); 
+                            $this->obj_customer->update($parent0,$data_customer1);
+                            $data_customer2 = array(
+                                'team_builder_active' => 0,
+                                ); 
+                            $this->obj_customer->update($parent1,$data_customer2);
+                            //SEND MESSAGE TEAM BUILDER
+                            $this->message_team_builder($obj_parent->customer_id);
+                            
+                        }
                     }
                 }
-                
-                //CALCULE AMOUNT
-                $amount = ($point  * $percet) / 100;
-                return $amount;
     }
     
     
@@ -330,6 +361,25 @@ class D_activate extends CI_Controller{
                 'date' => date("Y-m-d H:i:s"),
                 'label' => "Soporte",
                 'subject' => "Bono Patrocinio",
+                'messages' => $message,
+                'type' => 1,
+                'type_send' => 0,
+                'active' => 1,
+                'created_by' => $customer_id,
+                'status_value' => 1,
+                'created_at' => date("Y-m-d H:i:s"),
+            );
+            //INSERT MESSAGES    
+            $this->obj_messages->insert($data_messages);
+    }
+    
+    public function message_team_builder($customer_id){
+            $message = "Acaba de ganar $50 en el bono Team Builder";
+            $data_messages = array(
+                'customer_id' => $customer_id,
+                'date' => date("Y-m-d H:i:s"),
+                'label' => "Soporte",
+                'subject' => "Bono Team Builder",
                 'messages' => $message,
                 'type' => 1,
                 'type_send' => 0,

@@ -63,6 +63,7 @@
                                                           <p class="popover__message">
                                                               Usuario: <b><?php echo $obj_customer->username;?></b><br/>
                                                               Nombre: <b><?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></b><br/>
+                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
                                                               Rango: <b><?php echo $obj_customer->rango;?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$obj_customer->img_rango";?>" width="50px" alt="rango"/>
                                                           </p>
