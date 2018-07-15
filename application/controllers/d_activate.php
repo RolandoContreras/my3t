@@ -149,9 +149,7 @@ class D_activate extends CI_Controller{
                         $result = 0;
                         $this->pay_binario($result,$identificador,$point);
                      }
-                     
                 }else{
-                    
                     //GET AMOUNT BONUS SPONSOR
                     $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
                     //SEND MESSAGE CONFIRMATION BONUS SPONSOR
@@ -179,8 +177,6 @@ class D_activate extends CI_Controller{
                 $this->get_team_builder($parents_id,$today);  
                 //SEND MESSAGE CONFIRMATION ACTIVE
                 $this->message_active($customer_id);
-                //VERIFY TEAM BUILDER
-                $this->get_team_builder($parents_id,$today);
                 echo json_encode($data); 
                 exit();
             }
@@ -280,44 +276,25 @@ class D_activate extends CI_Controller{
                     $count = count($obj_parent_child);
                     if($count >= 2){
                         $parent = "";
+                        $result = "";
                         foreach ($obj_parent_child as $key => $value) {
+                            
                             $param_child = array(
                                 "select" =>"customer.username,
                                             customer.team_builder,
                                             customer.team_builder_active",
                                 "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
-                                "where" => "customer.parents_id = $value->customer_id and customer.team_builder_active = 1 and customer.financy = 0"
+                                "where" => "customer.franchise_id between 7 and 9 and customer.parents_id = $value->customer_id and customer.team_builder_active = 1 and customer.financy = 0"
                             );
                             $obj_child = $this->obj_customer->total_records($param_child);
                             
-                            
-                            
                             if($obj_child >= 2){
                                 $parent = $value->customer_id;
-                                
-                                var_dump($parent);
-                                die();
-                                
-//                                $id = $id + 1;
-                                
+                                //SAVE DATA UN ARRAY RESULTS
+                                $result[$key] = $parent;
                             }
-                            
-                            
-                             var_dump($parent);
-                             die();
-//                            elseif(($obj_child >= 2) && ($key != 0)){
-//                                $parent1 = $value->customer_id;
-//                            }
                         }
-                        
-                        var_dump($parent);
-                        die();
-                        
-//                        var_dump($parent0);
-//                        var_dump($parent1);
-//                        die();
-                        
-                        if(($parent0 != 0) && ($parent1 != 0)){
+                        if(count($result) >= 2){
                             //INSERT COMMISSION TABLE
                             $data = array(
                                 'customer_id' => $obj_parent->customer_id,
@@ -331,19 +308,16 @@ class D_activate extends CI_Controller{
                             ); 
                             $this->obj_commissions->insert($data);
                             
-                            //UPDATE DATA CUSTOMER TEAM BUILDER INACTIVE
-                            $data_customer1 = array(
-                                'team_builder_active' => 0,
-                                ); 
-                            $this->obj_customer->update($parent0,$data_customer1);
-                            $data_customer2 = array(
-                                'team_builder_active' => 0,
-                                ); 
-                            $this->obj_customer->update($parent1,$data_customer2);
-                            //SEND MESSAGE TEAM BUILDER
-                            $this->message_team_builder($obj_parent->customer_id);
-                            
+                            foreach ($result as $key => $value) {
+                                //UPDATE DATA CUSTOMER TEAM BUILDER INACTIVE
+                                $data_customer = array(
+                                    'team_builder_active' => 0,
+                                    ); 
+                                $this->obj_customer->update($value,$data_customer);
+                            }
                         }
+                        //SEND MESSAGE TEAM BUILDER
+                        $this->message_team_builder($obj_parent->customer_id);
                     }
                 }
     }
