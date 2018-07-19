@@ -61,8 +61,8 @@ class D_activate extends CI_Controller{
                                     activation_message.franchise,
                                     activation_message.date,
                                     activation_message.active",
-                        "join" => array('customer, activation_message.customer_id = customer.customer_id')
-                        
+                        "join" => array('customer, activation_message.customer_id = customer.customer_id'),
+                        "order" => "activation_message.activation_message_id DESC"
                );
            //GET DATA FROM CUSTOMER
            $obj_active_message = $this->obj_activation->search($params);
