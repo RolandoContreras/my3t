@@ -315,9 +315,9 @@ class D_activate extends CI_Controller{
                                     ); 
                                 $this->obj_customer->update($value,$data_customer);
                             }
+                            //SEND MESSAGE TEAM BUILDER
+                            $this->message_team_builder($obj_parent->customer_id);
                         }
-                        //SEND MESSAGE TEAM BUILDER
-                        $this->message_team_builder($obj_parent->customer_id);
                     }
                 }
     }

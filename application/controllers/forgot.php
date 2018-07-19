@@ -29,7 +29,6 @@ class Forgot extends CI_Controller {
         public function send_messages(){
             if($this->input->is_ajax_request()){ 
                 $username = $this->input->post('username');  
-                
                 //GER DATA USERNAME
                  $params = array("select" => "first_name,email,password",
                                 "where" => "username = '$username'");

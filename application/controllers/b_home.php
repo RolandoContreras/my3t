@@ -231,7 +231,7 @@ class B_home extends CI_Controller {
                             "select" =>"",
                              "where" => "status_value = 1 and page = 1 and active = 1",
                             "order" => "position ASC");
-                
+
            $messages_informative = $this->obj_otros->search($params); 
             return $messages_informative;
     }

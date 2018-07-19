@@ -117,7 +117,7 @@ class B_message_confirmation extends CI_Controller {
             if(isset($_FILES["image_file"]["name"]))
             {
             $config['upload_path']          = './static/backoffice/uploads/';
-            $config['allowed_types']        = 'gif|jpg|png';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $config['max_size']             = 1000;
             $this->load->library('upload', $config);
                 if ( ! $this->upload->do_upload('image_file'))
@@ -149,7 +149,15 @@ class B_message_confirmation extends CI_Controller {
                                 'created_at' => date("Y-m-d H:i:s")
                             ); 
                            $this->obj_activation_message->insert($data);
-                        echo '<div class="alert alert-success" style="text-align: center">Enviado Exitosamente</div>';
+                           
+                    //SEND EMAIL
+                    $mensaje = wordwrap("<html><body><h1>Nueva Activación</h1><p>Tenemos una nueva activación procesarla.</p></body></html>", 70, "\n", true);
+                    $titulo = "Activación Nueva";
+                    $headers = "MIME-Version: 1.0\r\n"; 
+                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                    $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
+                    $bool = mail("software.contreras@gmail.com",$titulo,$mensaje,$headers);
+                    echo '<div class="alert alert-success" style="text-align: center">Enviado Exitosamente</div>';
                 }
             }
         }else{
