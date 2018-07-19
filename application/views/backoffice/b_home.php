@@ -304,7 +304,7 @@
                                     </div> 
                                     <!-- panel body --> 
                                     <div class="panel-body"> 
-                                        <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo "$".$obj_customer->price;?></a></b>  a la siguiente dirección de bitcoin: <b>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</b><br/> Envia un mensaje dando click en el boton de abajo indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p><br/>
+                                        <p><strong>Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo "$".$obj_customer->price;?></a></b>  a la siguiente dirección de bitcoin: <b>15UuH4uF42kFEHL7uZbibjDhGJ5YTZjewn</b><br/> Envia un mensaje dando click en el boton de abajo indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br></p><br/>
                                         <div class="bs-example">
                                              <a href="<?php echo site_url().'backoffice/message_confirmation';?>"><button type="button" class="btn btn-black btn-block"><i class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">Enviar Mensaje de Confirmación</span></button></a>
                                         </div>

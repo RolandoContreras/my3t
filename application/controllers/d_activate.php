@@ -60,8 +60,7 @@ class D_activate extends CI_Controller{
                                     activation_message.message,
                                     activation_message.franchise,
                                     activation_message.date,
-                                    activation_message.active,
-                                    customer.status_value",
+                                    activation_message.active",
                         "join" => array('customer, activation_message.customer_id = customer.customer_id')
                         
                );
@@ -79,6 +78,26 @@ class D_activate extends CI_Controller{
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->set('obj_active_message',$obj_active_message);
             $this->tmp_mastercms->render("dashboard/activate/activate_list_confirmation");
+    }
+    
+    public function update_confirmation(){
+        if($this->input->is_ajax_request()){   
+              $activation_message_id = $this->input->post("activation_message_id");
+              $status = $this->input->post("status");
+              
+              
+              
+                if(count($activation_message_id) > 0){
+                    $data = array(
+                        'active' => $status,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_activation->update($activation_message_id,$data);
+                }
+                echo json_encode($data);            
+        exit();
+        }
     }
     
     public function active_financy(){
@@ -321,7 +340,6 @@ class D_activate extends CI_Controller{
                     }
                 }
     }
-    
     
     public function message_bonus_sponsor($amount,$parents_id,$customer_id){
             $message = "Acaba de ganar $$amount en bono de patrocinio";

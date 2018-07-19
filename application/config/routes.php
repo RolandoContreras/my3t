@@ -179,6 +179,7 @@ $route['dashboard/activaciones'] = "d_activate";
 $route['dashboard/activaciones/active_customer'] = "d_activate/active_customer";
 $route['dashboard/activaciones/active_financy'] = "d_activate/active_financy";
 $route['dashboard/activaciones/active'] = "d_activate/active";
+$route['dashboard/activaciones/update_confirmation'] = "d_activate/update_confirmation";
 
 $route['dashboard/soporte'] = "d_messages/soporte";
 $route['dashboard/soporte/update'] = "d_messages/update";
