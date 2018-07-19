@@ -37,8 +37,8 @@
                             <?php foreach ($obj_points as $value): ?>
                                 <td align="center"><?php echo $value->point_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
-                                <td class="post_title" align="center"><b><?php echo $value->username;?></b></td>
-                                <td align="center"><b><?php echo convert_mayuscula($value->name);?></b></td>
+                                <td align="center" class="label-info" style="color:#fff;"><?php echo $value->username;?></td>
+                                <td align="center"><?php echo convert_mayuscula($value->name);?></td>
                                 <td class="label-success" style="color:#fff;" align="center"><b><?php echo $value->point;?></b></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 1) {

@@ -16,8 +16,6 @@
                                     </div>
                             </div>
                     </div>
-                
-             <!--<form>-->
                 <div class="well nomargin" style="width: 100%;">
                     <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
@@ -57,14 +55,7 @@
                                 </div>
                                 
                             </td>
-                            <td><?php echo $value->username;?>
-                                <div class="operation">
-                                        <div class="btn-group">
-                                          <a class="btn btn-small"><i class="fa fa-check"></i> Marcar Activo</a>
-                                          <a class="btn btn-small"><i class="fa fa-ban"></i> Marcar Inactivo</a>
-                                        </div>
-                                </div>
-                            </td>
+                            <td class="label-success" style="color:#fff;" align="center"><?php echo $value->username;?></td>
                                
                             <td><?php echo $value->franchise;?></td>
                             <td><?php echo $value->message;?></td>
@@ -95,7 +86,6 @@
                         </tbody>
                     </table>
             </div>
-           <!--</form>-->         
         </div>
     </div>
 </div><!-- main content -->
