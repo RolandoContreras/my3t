@@ -1,4 +1,3 @@
-<!-- Main section-->
       <section>
           <div class="section-heading row">
             <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
@@ -8,8 +7,6 @@
                 <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
             </div>
         </div>
-         <!-- Page content-->
-         <!--<div class="content-wrapper">-->
             <div class="row">
                <div class="col-lg-12">
                 <!--SHOW ALERT  MESSAGE INFORMATIVE-->
@@ -64,7 +61,6 @@
                                         <button onclick="enviar_pago();" <?php echo $style;?> class="btn btn-success">Enviar Solicitud</button>
                                 </div>
                             </div><br/>
-                            <!--<div class="panel panel-info">-->
                                 <div class="panel-heading">
                                     Movimientos
                                  </div>
@@ -99,16 +95,9 @@
                                 </tbody>
                               </table>
                                 </div>
-                         <!--</div>-->
                      </div>
                   </div>  
-
-              <!--SPINNER-->
-        <div id="spinner"></div>
-    <!--END SPINNER--> 
             </div>
-            <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>  
-         <!--</div>-->
       </section>
 </body>
 <script src="<?php echo site_url().'static/cms/js/core/bootstrap-modal.js';?>"></script>
@@ -116,8 +105,7 @@
 <script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/cms/js/core/jquery.dataTables.min.js';?>"></script>
 <link href="<?php echo site_url().'static/cms/css/core/jquery.dataTables.css';?>" rel="stylesheet"/>
-
- <script type="text/javascript">
+ <script>
    $(document).ready(function() {
     $('#table').dataTable( {
          "order": [[ 0, "desc" ]]
