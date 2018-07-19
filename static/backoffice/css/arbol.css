@@ -301,6 +301,153 @@
     transform: translate(0,-20px);
     transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
 }
+
+
+/*LEFT*/
+
+.popover__wrapper_left:hover .popover__content_left {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__content_left {
+    border-radius:5px 5px 5px 5px;
+    color: #002222;
+    margin-top: -95px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 95px;
+    transform: translate(0,10px);
+    background-color: #BFBFBF;
+    border-width: 3px;
+    border-style: solid ;
+    border-color: #002222;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 190px;
+}
+.popover__message_left:hover .popover__message_left {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+/*5TO LEFT*/
+.popover__wrapper_5left:hover .popover__content_5left {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__content_5left {
+    border-radius:5px 5px 5px 5px;
+    color: #002222;
+    margin-top: -200px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 95px;
+    transform: translate(0,10px);
+    background-color: #BFBFBF;
+    border-width: 3px;
+    border-style: solid ;
+    border-color: #002222;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 190px;
+}
+.popover__message_5left:hover .popover__message_5left {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__message_5left:hover .popover__message_5left {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+/*RIGTH*/
+.popover__wrapper_right:hover .popover__content_right {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__content_right {
+    border-radius:5px 5px 5px 5px;
+    color: #002222;
+    margin-top: -95px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -200px;
+    transform: translate(0,10px);
+    background-color: #BFBFBF;
+    border-width: 3px;
+    border-style: solid ;
+    border-color: #002222;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 190px;
+}
+.popover__message_right:hover .popover__message_right {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+/*5TO RIGHT*/
+.popover__wrapper_5right:hover .popover__content_5right {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__content_5right {
+    border-radius:5px 5px 5px 5px;
+    color: #002222;
+    margin-top: -200px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -200px;
+    transform: translate(0,10px);
+    background-color: #BFBFBF;
+    border-width: 3px;
+    border-style: solid ;
+    border-color: #002222;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 190px;
+}
+.popover__message_5right:hover .popover__message_5right {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__message_5right:hover .popover__message_5right {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
 .popover__message {
   text-align: center;
 }

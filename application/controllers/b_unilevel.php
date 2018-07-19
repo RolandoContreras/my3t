@@ -57,12 +57,15 @@ class B_unilevel extends CI_Controller {
                                     customer.first_name,
                                     customer.last_name,
                                     customer.active,
+                                    ranges.name as rango,
+                                    ranges.img as img_rango,
                                     paises.nombre as pais,
                                     franchise.name as franchise,
                                     franchise.img",
                         "where" => "customer.customer_id = $customer_id and paises.id_idioma = 7",
                         "join" => array('paises, customer.country = paises.id',
-                                        'franchise, customer.franchise_id = franchise.franchise_id')
+                                        'franchise, customer.franchise_id = franchise.franchise_id',
+                                        'ranges, customer.range_id = ranges.range_id')
                                         );
          $obj_customer = $this->obj_customer->get_search_row($params);  
 
@@ -82,13 +85,15 @@ class B_unilevel extends CI_Controller {
                                     customer.last_name,
                                     franchise.franchise_id,
                                     customer.active,
+                                    ranges.name as rango,
+                                    ranges.img as img_rango,
                                     paises.nombre as pais,
                                     franchise.name as franchise,
-                                    franchise.img
-                                    ",
-                        "where" => "customer.parents_id = $customer_id and paises.id_idioma = 7",
+                                    franchise.img",
+                        "where" => "paises.id_idioma = 7 and customer.parents_id = $customer_id",
                         "join" => array('paises, customer.country = paises.id',
-                                        'franchise, customer.franchise_id = franchise.franchise_id')
+                                        'franchise, customer.franchise_id = franchise.franchise_id',
+                                        'ranges, customer.range_id = ranges.range_id')
                                         );
          $obj_customer_n2 = $this->obj_customer->search($params_customer_n2);
          $this->tmp_backoffice->set("obj_customer_n2",$obj_customer_n2);
@@ -112,13 +117,16 @@ class B_unilevel extends CI_Controller {
                                             customer.last_name,
                                             franchise.franchise_id,
                                             customer.active,
+                                            ranges.name as rango,
+                                            ranges.img as img_rango,
                                             paises.nombre as pais,
                                             franchise.name as franchise,
                                             franchise.img
                                             ",
-                                "where" => "customer.parents_id in ($customer_id_n2)  and paises.id_idioma = 7",
+                                "where" => "paises.id_idioma = 7 and customer.parents_id in ($customer_id_n2)",
                                 "join" => array('paises, customer.country = paises.id',
-                                                'franchise, customer.franchise_id = franchise.franchise_id')
+                                                'franchise, customer.franchise_id = franchise.franchise_id',
+                                                'ranges, customer.range_id = ranges.range_id')
                                                 );
                  $obj_customer_n3 = $this->obj_customer->search($params_customer_n3);
                  $direct_3 = count($obj_customer_n3);
@@ -144,14 +152,16 @@ class B_unilevel extends CI_Controller {
                                             customer.last_name,
                                             franchise.franchise_id,
                                             customer.active,
+                                            ranges.name as rango,
+                                            ranges.img as img_rango,
                                             paises.nombre as pais,
                                             franchise.name as franchise,
                                             franchise.img
                                             ",
                                 "where" => "customer.parents_id in ($customer_id_n3)  and paises.id_idioma = 7",
                                 "join" => array('paises, customer.country = paises.id',
-                                                'franchise, customer.franchise_id = franchise.franchise_id')
-                                                );
+                                                'franchise, customer.franchise_id = franchise.franchise_id',
+                                                'ranges, customer.range_id = ranges.range_id'));
                             $obj_customer_n4 = $this->obj_customer->search($params_customer_n3);
                             $direct_4 = count($obj_customer_n4);
                             $this->tmp_backoffice->set("direct_4",$direct_4);
@@ -159,8 +169,6 @@ class B_unilevel extends CI_Controller {
                     }  
                  }
             }
-            
-          
           
          $this->tmp_backoffice->set("messages_informative",$messages_informative);   
          $this->tmp_backoffice->set("obj_message",$obj_message);

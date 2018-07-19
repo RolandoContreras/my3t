@@ -10,12 +10,12 @@
 <!------------------------------------------->
 <div id="page-content-wrapper">
     <main>
-        <div class="container-fluid">
+        <div class="container-fluid cont-arbol">
             <div class="row ml-custom">
                 <div class="col-xs-12">
                     <div class="col-lg-12">
-                        <div class="panel panel-default network-tree-panel">
-                            <div class="panel-body">
+                        <div class="panel panel-default network-tree-panel cont-arbol">
+                            <div class="panel-body cont-arbol">
                                 
                             <!--//INFORMATION POINT-->   
                                 <div class="row">
@@ -118,19 +118,19 @@
                                                             <!--//-----4TO LEVEL LEFT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_iz)){  ?>
-                                                                         <div class="popover__wrapper">
-                                                                                <a href="<?php echo site_url().'backoffice/binario/'.$n3_iz[2];?>">
-                                                                                <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n3_iz[11]?>" alt="paquete" width="80"></div>
-                                                                                <?php if($n3_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
-                                                                                <span class="user-name"><?php echo $n3_iz[6];?></span>
+                                                                         <div class="popover__wrapper_left">
+                                                                                <a href="<?php echo site_url().'backoffice/binario/'.$n4_iz[2];?>">
+                                                                                <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_iz[11]?>" alt="paquete" width="80"></div>
+                                                                                <?php if($n4_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                <span class="user-name"><?php echo $n4_iz[6];?></span>
                                                                               </a>
-                                                                              <div class="push popover__content">
-                                                                                  <p class="popover__message">
-                                                                                      Usuario: <b><?php echo string_to_mayusculas($n3_iz[6]);?></b><br/>
-                                                                                      Nombre: <b><?php echo string_to_mayusculas($n3_iz[0]." ".$n3_iz[1]);?></b><br/>
+                                                                              <div class="push popover__content_left">
+                                                                                  <p class="popover__message_left">
+                                                                                      Usuario: <b><?php echo string_to_mayusculas($n4_iz[6]);?></b><br/>
+                                                                                      Nombre: <b><?php echo string_to_mayusculas($n4_iz[0]." ".$n4_iz[1]);?></b><br/>
                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                      Rango: <b><?php echo string_to_mayusculas($n3_iz[12]);?></b><br/>
-                                                                                      <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_iz[13]";?>" width="50px" alt="<?php echo $n3_iz[13];?>"/>
+                                                                                      Rango: <b><?php echo string_to_mayusculas($n4_iz[12]);?></b><br/>
+                                                                                      <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_iz[13]";?>" width="50px" alt="<?php echo $n4_iz[13];?>"/>
                                                                                   </p>
                                                                               </div>
                                                                             </div>
@@ -144,14 +144,14 @@
                                                                             <!--//-----5TO LEVEL LEFT--------->
                                                                                 <span class="inline-block relative">
                                                                                     <?php if(isset($n5_iz)){  ?>
-                                                                                        <div class="popover__wrapper">
+                                                                                        <div class="popover__wrapper_5left">
                                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n5_iz[2];?>">
                                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_iz[11]?>" alt="paquete" width="80"></div>
                                                                                             <?php if($n5_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                             <span class="user-name"><?php echo $n5_iz[6];?></span>
                                                                                           </a>
-                                                                                          <div class="push popover__content">
-                                                                                              <p class="popover__message">
+                                                                                          <div class="push popover__content_5left">
+                                                                                              <p class="popover__message_5left">
                                                                                                   Usuario: <b><?php echo string_to_mayusculas($n5_iz[6]);?></b><br/>
                                                                                                   Nombre: <b><?php echo string_to_mayusculas($n5_iz[0]." ".$n5_iz[1]);?></b><br/>
                                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -171,14 +171,14 @@
                                                                             <!--//-----5TO LEVEL LEFT--------->
                                                                                 <span class="inline-block relative">
                                                                                     <?php if(isset($n5_2_iz)){  ?>
-                                                                                        <div class="popover__wrapper">
+                                                                                        <div class="popover__wrapper_5left">
                                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n5_2_iz[2];?>">
                                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_2_iz[11]?>" alt="paquete" width="80"></div>
                                                                                             <?php if($n5_2_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                             <span class="user-name"><?php echo $n5_2_iz[6];?></span>
                                                                                           </a>
-                                                                                          <div class="push popover__content">
-                                                                                              <p class="popover__message">
+                                                                                          <div class="push popover__content_5left">
+                                                                                              <p class="popover__message_5left">
                                                                                                   Usuario: <b><?php echo string_to_mayusculas($n5_2_iz[6]);?></b><br/>
                                                                                                   Nombre: <b><?php echo string_to_mayusculas($n5_2_iz[0]." ".$n5_2_iz[1]);?></b><br/>
                                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -202,14 +202,14 @@
                                                             <!--//-----4TO 2IZ LEVEL LEFT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_2_iz)){ ?>
-                                                                    <div class="popover__wrapper">
+                                                                    <div class="popover__wrapper_left">
                                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n4_2_iz[2];?>">
                                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_2_iz[11]?>" alt="paquete" width="80"></div>
                                                                                             <?php if($n4_2_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                             <span class="user-name"><?php echo $n4_2_iz[6];?></span>
                                                                                           </a>
-                                                                                          <div class="push popover__content">
-                                                                                              <p class="popover__message">
+                                                                                          <div class="push popover__content_left">
+                                                                                              <p class="popover__message_left">
                                                                                                   Usuario: <b><?php echo string_to_mayusculas($n4_2_iz[6]);?></b><br/>
                                                                                                   Nombre: <b><?php echo string_to_mayusculas($n4_2_iz[0]." ".$n4_2_iz[1]);?></b><br/>
                                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -229,14 +229,14 @@
                                                                             <!--//-----5TO LEVEL LEFT--------->
                                                                                 <span class="inline-block relative">
                                                                                     <?php if(isset($n5_3_iz)){  ?>
-                                                                                        <div class="popover__wrapper">
+                                                                                        <div class="popover__wrapper_5left">
                                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n5_3_iz[2];?>">
                                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_3_iz[11]?>" alt="paquete" width="80"></div>
                                                                                             <?php if($n5_3_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                             <span class="user-name"><?php echo $n5_3_iz[6];?></span>
                                                                                           </a>
-                                                                                          <div class="push popover__content">
-                                                                                              <p class="popover__message">
+                                                                                          <div class="push popover__content_5left">
+                                                                                              <p class="popover__message_5left">
                                                                                                   Usuario: <b><?php echo string_to_mayusculas($n5_3_iz[6]);?></b><br/>
                                                                                                   Nombre: <b><?php echo string_to_mayusculas($n5_3_iz[0]." ".$n5_3_iz[1]);?></b><br/>
                                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -257,14 +257,14 @@
                                                                             <!--//-----5TO LEVEL LEFT--------->
                                                                                 <span class="inline-block relative">
                                                                                     <?php if(isset($n5_4_iz)){  ?>
-                                                                                        <div class="popover__wrapper">
+                                                                                        <div class="popover__wrapper_5left">
                                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n5_4_iz[2];?>">
                                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_4_iz[11]?>" alt="paquete" width="80"></div>
                                                                                             <?php if($n5_4_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                             <span class="user-name"><?php echo $n5_4_iz[6];?></span>
                                                                                           </a>
-                                                                                          <div class="push popover__content">
-                                                                                              <p class="popover__message">
+                                                                                          <div class="push popover__content_5left">
+                                                                                              <p class="popover__message_5left">
                                                                                                   Usuario: <b><?php echo string_to_mayusculas($n5_4_iz[6]);?></b><br/>
                                                                                                   Nombre: <b><?php echo string_to_mayusculas($n5_4_iz[0]." ".$n5_4_iz[1]);?></b><br/>
                                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -316,14 +316,14 @@
                                                             <!--//-----4TO 3ER LEVEL LEFT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_3_iz)){ ?>
-                                                                        <div class="popover__wrapper">
+                                                                        <div class="popover__wrapper_left">
                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n4_3_iz[2];?>">
                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_3_iz[11]?>" alt="paquete" width="80"></div>
                                                                             <?php if($n4_3_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                             <span class="user-name"><?php echo $n4_3_iz[6];?></span>
                                                                           </a>
-                                                                          <div class="push popover__content">
-                                                                              <p class="popover__message">
+                                                                          <div class="push popover__content_left">
+                                                                              <p class="popover__message_left">
                                                                                   Usuario: <b><?php echo string_to_mayusculas($n4_3_iz[6]);?></b><br/>
                                                                                   Nombre: <b><?php echo string_to_mayusculas($n4_3_iz[0]." ".$n4_3_iz[1]);?></b><br/>
                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -343,14 +343,14 @@
                                                                                 <!--//-----5TO_5 LEVEL LEFT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_5_iz)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5left">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_5_iz[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_5_iz[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_5_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_5_iz[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5left">
+                                                                                                  <p class="popover__message_5left">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_5_iz[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_5_iz[0]." ".$n5_5_iz[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -370,14 +370,14 @@
                                                                                 <!--//-----5TO_6 LEVEL LEFT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_6_iz)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5left">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_6_iz[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_6_iz[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_6_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_6_iz[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5left">
+                                                                                                  <p class="popover__message_5left">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_6_iz[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_6_iz[0]." ".$n5_6_iz[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -399,14 +399,14 @@
                                                             <!--//-----4TO 4TO LEVEL LEFT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_4_iz)){ ?>
-                                                                    <div class="popover__wrapper">
+                                                                    <div class="popover__wrapper_left">
                                                                         <a href="<?php echo site_url().'backoffice/binario/'.$n4_4_iz[2];?>">
                                                                         <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_4_iz[11]?>" alt="paquete" width="80"></div>
                                                                         <?php if($n4_4_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                         <span class="user-name"><?php echo $n4_4_iz[6];?></span>
                                                                       </a>
-                                                                      <div class="push popover__content">
-                                                                          <p class="popover__message">
+                                                                      <div class="push popover__content_left">
+                                                                          <p class="popover__message_left">
                                                                               Usuario: <b><?php echo string_to_mayusculas($n4_4_iz[6]);?></b><br/>
                                                                               Nombre: <b><?php echo string_to_mayusculas($n4_4_iz[0]." ".$n4_4_iz[1]);?></b><br/>
                                                                               Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -426,14 +426,14 @@
                                                                                 <!--//-----5TO_7 LEVEL LEFT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_7_iz)){  ?>
-                                                                                           <div class="popover__wrapper">
+                                                                                           <div class="popover__wrapper_5left">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_7_iz[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_7_iz[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_7_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_7_iz[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5left">
+                                                                                                  <p class="popover__message_5left">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_7_iz[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_7_iz[0]." ".$n5_7_iz[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -453,14 +453,14 @@
                                                                                 <!--//-----5TO_6 LEVEL LEFT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_8_iz)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5left">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_8_iz[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_8_iz[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_8_iz[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_8_iz[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5left">
+                                                                                                  <p class="popover__message_5left">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_8_iz[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_8_iz[0]." ".$n5_8_iz[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -543,14 +543,14 @@
                                                             <!--//-----4TO 4TO LEVEL RIGHT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_4_de)){  ?>
-                                                                        <div class="popover__wrapper">
+                                                                        <div class="popover__wrapper_right">
                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n4_4_de[2];?>">
                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_4_de[11]?>" alt="paquete" width="80"></div>
                                                                                 <?php if($n4_4_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                 <span class="user-name"><?php echo $n4_4_de[6];?></span>
                                                                               </a>
-                                                                              <div class="push popover__content">
-                                                                                  <p class="popover__message">
+                                                                              <div class="push popover__content_right">
+                                                                                  <p class="popover__message_right">
                                                                                       Usuario: <b><?php echo string_to_mayusculas($n4_4_de[6]);?></b><br/>
                                                                                       Nombre: <b><?php echo string_to_mayusculas($n4_4_de[0]." ".$n4_4_de[1]);?></b><br/>
                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -569,14 +569,14 @@
                                                                                 <!--//-----5TO LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_8_de)){  ?>
-                                                                                           <div class="popover__wrapper">
+                                                                                           <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_8_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_8_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_8_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_8_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_8_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_8_de[0]." ".$n5_8_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -595,14 +595,14 @@
                                                                                 <!--//-----5TO_3 LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_7_de)){  ?>
-                                                                                             <div class="popover__wrapper">
+                                                                                             <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_7_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_7_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_7_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_7_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_7_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_7_de[0]." ".$n5_7_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -623,14 +623,14 @@
                                                             <!--//-----4TO 3ER LEVEL LEFT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_3_de)){ ?>
-                                                                    <div class="popover__wrapper">
+                                                                    <div class="popover__wrapper_right">
                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n4_3_de[2];?>">
                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_3_de[11]?>" alt="paquete" width="80"></div>
                                                                             <?php if($n4_3_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                             <span class="user-name"><?php echo $n4_3_de[6];?></span>
                                                                           </a>
-                                                                          <div class="push popover__content">
-                                                                              <p class="popover__message">
+                                                                          <div class="push popover__content_right">
+                                                                              <p class="popover__message_right">
                                                                                   Usuario: <b><?php echo string_to_mayusculas($n4_3_de[6]);?></b><br/>
                                                                                   Nombre: <b><?php echo string_to_mayusculas($n4_3_de[0]." ".$n4_3_de[1]);?></b><br/>
                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -649,14 +649,14 @@
                                                                                 <!--//-----5TO LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_6_de)){  ?>
-                                                                                           <div class="popover__wrapper">
+                                                                                           <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_6_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_6_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_6_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_6_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_6_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_6_de[0]." ".$n5_6_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -675,14 +675,14 @@
                                                                                 <!--//-----5TO_3 LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_5_de)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_5_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_5_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_5_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_5_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_5_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_5_de[0]." ".$n5_5_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -733,14 +733,14 @@
                                                             <!--//-----4TO 2DO LEVEL LEFT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_2_de)){ ?>
-                                                                        <div class="popover__wrapper">
+                                                                        <div class="popover__wrapper_right">
                                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n4_2_de[2];?>">
                                                                             <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_2_de[11]?>" alt="paquete" width="80"></div>
                                                                             <?php if($n4_2_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                             <span class="user-name"><?php echo $n4_2_de[6];?></span>
                                                                           </a>
-                                                                          <div class="push popover__content">
-                                                                              <p class="popover__message">
+                                                                          <div class="push popover__content_right">
+                                                                              <p class="popover__message_right">
                                                                                   Usuario: <b><?php echo string_to_mayusculas($n4_2_de[6]);?></b><br/>
                                                                                   Nombre: <b><?php echo string_to_mayusculas($n4_2_de[0]." ".$n4_2_de[1]);?></b><br/>
                                                                                   Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -759,14 +759,14 @@
                                                                                 <!--//-----5TO LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_4_de)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_4_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_4_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_4_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_4_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_4_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_4_de[0]." ".$n5_4_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -785,14 +785,14 @@
                                                                                 <!--//-----5TO_3 LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_3_de)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_3_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_3_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_3_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_3_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_3_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_3_de[0]." ".$n5_3_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -814,18 +814,18 @@
                                                             <!--//-----4TO LEVEL RIGHT--------->
                                                                 <span class="inline-block relative">
                                                                     <?php if(isset($n4_de)){ ?>
-                                                                   <div class="popover__wrapper">
+                                                                   <div class="popover__wrapper_right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n4_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n4_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n4_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n4_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_right">
+                                                                                                  <p class="popover__message_right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n4_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n4_de[0]." ".$n4_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo string_to_mayusculas($n5_4_de[12]);?></b><br/>
+                                                                                                      Rango: <b><?php echo string_to_mayusculas($n4_de[12]);?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_de[13]";?>" width="50px" alt="<?php echo $n4_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -841,14 +841,14 @@
                                                                                 <!--//-----5TO LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_2_de)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_2_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_2_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_2_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_2_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_2_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_2_de[0]." ".$n5_2_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
@@ -867,14 +867,14 @@
                                                                                 <!--//-----5TO LEVEL RIGHT--------->
                                                                                     <span class="inline-block relative">
                                                                                         <?php if(isset($n5_de)){  ?>
-                                                                                            <div class="popover__wrapper">
+                                                                                            <div class="popover__wrapper_5right">
                                                                                                 <a href="<?php echo site_url().'backoffice/binario/'.$n5_de[2];?>">
                                                                                                 <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n5_de[11]?>" alt="paquete" width="80"></div>
                                                                                                 <?php if($n5_de[7] == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
                                                                                                 <span class="user-name"><?php echo $n5_de[6];?></span>
                                                                                               </a>
-                                                                                              <div class="push popover__content">
-                                                                                                  <p class="popover__message">
+                                                                                              <div class="push popover__content_5right">
+                                                                                                  <p class="popover__message_5right">
                                                                                                       Usuario: <b><?php echo string_to_mayusculas($n5_de[6]);?></b><br/>
                                                                                                       Nombre: <b><?php echo string_to_mayusculas($n5_de[0]." ".$n5_de[1]);?></b><br/>
                                                                                                       Estado: <span class="user-name"><span class="<?php echo $style;?>"><?php echo $text;?></span><br/>

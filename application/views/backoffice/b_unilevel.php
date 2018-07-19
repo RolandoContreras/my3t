@@ -51,30 +51,22 @@
                                 <ul>
                                     <li>
                                     <span class="inline-block relative">
-                                                    <a href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
-                                                Nombre:<?php echo $obj_customer->first_name." ".$obj_customer->last_name;?>
-                                                Fecha Registro:<?php echo $obj_customer->created_at;?>
-                                                Estatus:
-                                                <?php if($obj_customer->active == 1){ ?>
-                                                          Activo
-                                                      <?php }else{ ?>
-                                                          Inactivo
-                                                      <?php } ?>
-
-                                                          Calificación:<?php echo $obj_customer->franchise;?>
-                                                Pais: <?php echo $obj_customer->pais;?>" class="some-popover-link">
-
-                                          <div class="row imagen-profile">
-                                            <div class="col-sm-2" style="padding: 0;"></div>
-                                            <div class="col-sm-8" style="padding: 0;">
-                                              <div class="div-img">
-                                                  <img src="<?php echo site_url()."static/backoffice/images/$obj_customer->img";?>" alt="paquete" width="120">
-                                              </div>
-                                            </div>
-                                                  <?php if($obj_customer->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
-                                          </div>
-                                          </a>
-                                        <span class="tree_text"><a><?php echo $obj_customer->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span></span>
+                                            <div class="popover__wrapper">
+                                                        <a href="javascript:void(0);">
+                                                        <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$obj_customer->img;?>" alt="paquete" width="80"></div>
+                                                        <?php if($obj_customer->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                        <span class="user-name"><?php echo $obj_customer->username;?></span>
+                                                      </a>
+                                                      <div class="push popover__content">
+                                                          <p class="popover__message">
+                                                              Usuario: <b><?php echo string_to_mayusculas($obj_customer->username);?></b><br/>
+                                                              Nombre: <b><?php echo string_to_mayusculas($obj_customer->first_name." ".$obj_customer->last_name);?></b><br/>
+                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              Rango: <b><?php echo string_to_mayusculas($obj_customer->rango);?></b><br/>
+                                                              <img src="<?php echo site_url()."static/backoffice/images/rangos/$obj_customer->img_rango";?>" width="50px" alt="rango"/>
+                                                          </p>
+                                                      </div>
+                                                    </div>
                             <!--BEGIN SECOND LEVEL-->
                             <?php 
                             if(count($obj_customer_n2) > 0){ ?>
@@ -82,31 +74,22 @@
                                     <?php 
                                      foreach ($obj_customer_n2 as $value) { ?>
                                         <li>
-                                            <a href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
-                                                Nombre:<?php echo $value->first_name." ".$value->last_name;?>
-                                                Fecha Registro:<?php echo $value->created_at;?>
-                                                Estatus:
-                                                <?php if($value->active == 1){ ?>
-                                                          Activo
-                                                      <?php }else{ ?>
-                                                          Inactivo
-                                                      <?php } ?>
-
-                                                          Calificación:<?php echo $value->franchise;?>
-                                                Pais: <?php echo $value->pais;?>" class="some-popover-link">
-
-                                          <div class="row imagen-profile">
-                                            <div class="col-sm-2" style="padding: 0;"></div>
-                                            <div class="col-sm-8" style="padding: 0;">
-                                              <div class="div-img">
-                                                  <img src="<?php echo site_url().'static/backoffice/images/'.$value->img;?>" alt="paquete" width="80">
-                                              </div>
-                                            </div>
-                                          </div>
-                                          </a>
-                                            <?php if($value->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
-                                            <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value->customer_id);?>"><?php echo $value->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
-                                            
+                                            <div class="popover__wrapper">
+                                                        <a href="<?php echo site_url().'backoffice/binario/'.encrypt($value->customer_id);?>">
+                                                        <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$value->img;?>" alt="paquete" width="80"></div>
+                                                        <?php if($value->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                        <span class="user-name"><?php echo $value->username;?></span>
+                                                      </a>
+                                                      <div class="push popover__content">
+                                                          <p class="popover__message">
+                                                              Usuario: <b><?php echo string_to_mayusculas($value->username);?></b><br/>
+                                                              Nombre: <b><?php echo string_to_mayusculas($value->first_name." ".$value->last_name);?></b><br/>
+                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              Rango: <b><?php echo string_to_mayusculas($value->rango);?></b><br/>
+                                                              <img src="<?php echo site_url()."static/backoffice/images/rangos/$value->img_rango";?>" width="50px" alt="rango"/>
+                                                          </p>
+                                                      </div>
+                                                    </div>
                                                     <!--BEGIN THIRD LEVEL-->
                                                             <?php 
                                                             if(count($obj_customer_n3) > 0){ ?>
@@ -115,30 +98,22 @@
                                                                      foreach ($obj_customer_n3 as $value3) { ?>
                                                                         <?php if($value->customer_id == $value3->parents_id){ ?>
                                                                                 <li>
-                                                                                    <a href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
-                                                                                        Nombre:<?php echo $value3->first_name." ".$value3->last_name;?>
-                                                                                        Fecha Registro:<?php echo $value3->created_at;?>
-                                                                                        Estatus:
-                                                                                        <?php if($value3->active == 1){ ?>
-                                                                                                  Activo
-                                                                                              <?php }else{ ?>
-                                                                                                  Inactivo
-                                                                                              <?php } ?>
-
-                                                                                                  Calificación:<?php echo $value3->franchise;?>
-                                                                                        Pais: <?php echo $value3->pais;?>" class="some-popover-link">
-
-                                                                                  <div class="row imagen-profile">
-                                                                                    <div class="col-sm-2" style="padding: 0;"></div>
-                                                                                    <div class="col-sm-8" style="padding: 0;">
-                                                                                      <div class="div-img">
-                                                                                    <img src="<?php echo site_url().'static/backoffice/images/'.$value3->img;?>" alt="paquete" width="80">
-                                                                                      </div>
-                                                                                    </div>
-                                                                                  </div>
-                                                                                  </a>
-                                                                                    <?php if($value3->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
-                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value3->customer_id);?>"><?php echo $value3->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
+                                                                                    <div class="popover__wrapper">
+                                                                                            <a href="<?php echo site_url().'backoffice/binario/'.encrypt($value3->customer_id);?>">
+                                                                                            <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$value3->img;?>" alt="paquete" width="80"></div>
+                                                                                            <?php if($value3->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                            <span class="user-name"><?php echo $value3->username;?></span>
+                                                                                          </a>
+                                                                                          <div class="push popover__content">
+                                                                                              <p class="popover__message">
+                                                                                                  Usuario: <b><?php echo string_to_mayusculas($value3->username);?></b><br/>
+                                                                                                  Nombre: <b><?php echo string_to_mayusculas($value3->first_name." ".$value3->last_name);?></b><br/>
+                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  Rango: <b><?php echo string_to_mayusculas($value3->rango);?></b><br/>
+                                                                                                  <img src="<?php echo site_url()."static/backoffice/images/rangos/$value3->img_rango";?>" width="50px" alt="rango"/>
+                                                                                              </p>
+                                                                                          </div>
+                                                                                        </div>
                                                                                     <!--BEGIN FOURD LEVEL-->
                                                                                             <?php 
                                                                                             if(count($obj_customer_n4) > 0){ ?>
@@ -147,31 +122,23 @@
                                                                                                      foreach ($obj_customer_n4 as $value4) { ?>
                                                                                                         <?php if($value3->customer_id == $value4->parents_id){ ?>
                                                                                                                 <li>
-                                                                                                                    <a href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
-                                                                                                                        Nombre:<?php echo $value4->first_name." ".$value4->last_name;?>
-                                                                                                                        Fecha Registro:<?php echo $value4->created_at;?>
-                                                                                                                        Estatus:
-                                                                                                                        <?php if($value4->active == 1){ ?>
-                                                                                                                                  Activo
-                                                                                                                              <?php }else{ ?>
-                                                                                                                                  Inactivo
-                                                                                                                              <?php } ?>
-
-                                                                                                                                  Calificación:<?php echo $value4->franchise;?>
-                                                                                                                        Pais: <?php echo $value4->pais;?>" class="some-popover-link">
-
-                                                                                                                  <div class="row imagen-profile">
-                                                                                                                    <div class="col-sm-2" style="padding: 0;"></div>
-                                                                                                                    <div class="col-sm-8" style="padding: 0;">
-                                                                                                                      <div class="div-img">
-                                                                                                                    <img src="<?php echo site_url().'static/backoffice/images/'.$value4->img;?>" alt="paquete" width="80">
+                                                                                                                    <div class="popover__wrapper">
+                                                                                                                        <a href="<?php echo site_url().'backoffice/binario/'.encrypt($value4->customer_id);?>">
+                                                                                                                        <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$value4->img;?>" alt="paquete" width="80"></div>
+                                                                                                                        <?php if($value4->active == 1 ){$style = 'text-success';$text = 'Activo';}else{$style = 'text-danger';$text = 'Inactivo';}?>
+                                                                                                                        <span class="user-name"><?php echo $value4->username;?></span>
+                                                                                                                      </a>
+                                                                                                                      <div class="push popover__content">
+                                                                                                                          <p class="popover__message">
+                                                                                                                              Usuario: <b><?php echo string_to_mayusculas($value4->username);?></b><br/>
+                                                                                                                              Nombre: <b><?php echo string_to_mayusculas($value4->first_name." ".$value4->last_name);?></b><br/>
+                                                                                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                                              Rango: <b><?php echo string_to_mayusculas($value4->rango);?></b><br/>
+                                                                                                                              <img src="<?php echo site_url()."static/backoffice/images/rangos/$value4->img_rango";?>" width="50px" alt="rango"/>
+                                                                                                                          </p>
                                                                                                                       </div>
                                                                                                                     </div>
-                                                                                                                  </div>
-                                                                                                                  </a>
-                                                                                                                    <?php if($value4->active == 1 ){$style = 'text-success';$text='Activo';}else{$style = 'text-danger';$text='Inactivo';}?>
-                                                                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value4->customer_id);?>"><?php echo $value4->username;?></a></span> - <span class="tree_text"><a class="<?php echo $style;?>"><?php echo $text;?></a></span>
-                                                                                                                    <br><br><br>
+                                                                                                                   <br><br><br>
                                                                                                                 </li>
                                                                                                                 <?php } ?>
                                                                                                      <?php } ?>
@@ -205,12 +172,4 @@
     </main>
 </div>
 </section>
-<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-$('[data-toggle="popover"]').popover({ html : true });
-//$('.btn').popover({title: "<h1><strong>HTML</strong> inside <code>the</code> <em>popover</em></h1>", content: "Blabla <br> <h2>Cool stuff!</h2>", html: true, placement: "right"}); 
-});
-</script>
 <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
-<link rel="stylesheet" href="<?php echo site_url().'static/page_front/css/style.css';?>" id="style-css">
