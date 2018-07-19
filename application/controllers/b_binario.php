@@ -67,17 +67,18 @@ class B_binario extends CI_Controller {
                                         customer.point_calification_left,
                                         customer.point_calification_rigth,
                                         customer.city,
+                                        ranges.name as rango,
+                                        ranges.img as img_rango,
                                         customer.active,
                                         customer.status_value,
                                         paises.nombre as pais,
                                         franchise.franchise_id,
                                         franchise.name as franchise,
-                                        franchise.img
-                                        ",
-                            "where" => "customer.customer_id = $customer_id and paises.id_idioma = 7",
+                                        franchise.img",
+                            "where" => "paises.id_idioma = 7 and customer.customer_id = $customer_id",
                             "join" => array('paises, customer.country = paises.id',
-                                            'franchise, customer.franchise_id = franchise.franchise_id')
-                                            );
+                                            'franchise, customer.franchise_id = franchise.franchise_id',
+                                            'ranges, customer.range_id = ranges.range_id'));
              $obj_customer = $this->obj_customer->get_search_row($params);  
              
              $identificator = $obj_customer->identificador;
@@ -117,9 +118,12 @@ class B_binario extends CI_Controller {
                                             customer.last_name,
                                             customer.parents_id,
                                             customer.binaries,
+                                            paises.nombre as pais,
+                                            ranges.name as rango,
+                                            ranges.img as img_rango,
                                             customer.username,
                                             customer.created_at,
-                                            customer.country,
+                                            paises.nombre as pais,
                                             customer.active,
                                             customer.identificador,
                                             franchise.name as franchise,
@@ -127,11 +131,13 @@ class B_binario extends CI_Controller {
                                             customer.status_value,
                                             franchise.img,
                                             franchise.franchise_id",
-                                 "where" => "$str customer.created_at > '$creacion' and customer.status_value = 1",
-                                 "join" => array('franchise, customer.franchise_id = franchise.franchise_id')
-                        ); 
+                                 "where" => "paises.id_idioma = 7 and $str customer.created_at > '$creacion'",
+                                "join" => array('paises, customer.country = paises.id',
+                                            'franchise, customer.franchise_id = franchise.franchise_id',
+                                            'ranges, customer.range_id = ranges.range_id')); 
                     $obj_tree = $this->obj_customer->search($param_tree); 
-                    
+//                    var_dump($obj_tree);
+//                    die();
                     
             //GET POSITION PIERNA
             $pierna = $obj_customer->position;
@@ -311,9 +317,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n2_iz",$n2_iz);
                 }
                 elseif($value->identificador == $n2_d){
@@ -326,9 +334,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n2_de",$n2_de);
                 }
                 elseif($value->identificador == $n3_2_z){
@@ -341,9 +351,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n3_2_iz",$n3_2_iz);
                 }
                 elseif($value->identificador == $n3_z){
@@ -356,14 +368,16 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n3_iz",$n3_iz);
                 }
                 elseif($value->identificador == $n3_d){
                     $n3_de = array($value->first_name,
-                                               $value->last_name,
+                                              $value->last_name,
                                                encrypt($value->customer_id),
                                                $value->created_at,
                                                $value->parents_id,
@@ -371,9 +385,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n3_de",$n3_de);
                 }
                 elseif($value->identificador == $n3_2_d){
@@ -386,9 +402,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n3_2_de",$n3_2_de);
                 }
                 elseif($value->identificador == $n4_z){
@@ -401,9 +419,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img); 
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_iz",$n4_iz);
                 }
                 elseif($value->identificador == $n4_2_z){
@@ -416,9 +436,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_2_iz",$n4_2_iz);
                 }
                 elseif($value->identificador == $n4_3_z){
@@ -431,9 +453,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_3_iz",$n4_3_iz);
                 }
                 elseif($value->identificador == $n4_4_z){
@@ -446,9 +470,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_4_iz",$n4_4_iz);
                 }
                 elseif($value->identificador == $n4_d){
@@ -461,9 +487,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img); 
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_de",$n4_de);
                 }
                 elseif($value->identificador == $n4_2_d){
@@ -476,9 +504,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_2_de",$n4_2_de);
                 }
                 elseif($value->identificador == $n4_3_d){
@@ -491,9 +521,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_3_de",$n4_3_de);
                 }
                 elseif($value->identificador == $n4_4_d){
@@ -506,9 +538,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n4_4_de",$n4_4_de);
                 }
                 elseif($value->identificador == $n5_z){
@@ -521,9 +555,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_iz",$n5_iz);
                 }
                 elseif($value->identificador == $n5_2_z){
@@ -536,9 +572,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_2_iz",$n5_2_iz);
                 }
                 elseif($value->identificador == $n5_3_z){
@@ -551,9 +589,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_3_iz",$n5_3_iz);
                 }
                 elseif($value->identificador == $n5_4_z){
@@ -566,9 +606,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_4_iz",$n5_4_iz);
                 }
                 elseif($value->identificador == $n5_5_z){
@@ -581,9 +623,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_5_iz",$n5_5_iz);
                 }
                 elseif($value->identificador == $n5_6_z){
@@ -596,9 +640,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_6_iz",$n5_6_iz);
                 }
                 elseif($value->identificador == $n5_7_z){
@@ -611,9 +657,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_7_iz",$n5_7_iz);
                 }
                 elseif($value->identificador == $n5_8_z){
@@ -626,9 +674,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_8_iz",$n5_8_iz);
                 }
                 elseif($value->identificador == $n5_d){
@@ -641,9 +691,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_de",$n5_de);
                 }
                 elseif($value->identificador == $n5_2_d){
@@ -656,9 +708,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_2_de",$n5_2_de);
                 }
                 elseif($value->identificador == $n5_3_d){
@@ -671,9 +725,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_3_de",$n5_3_de);
                 }
                 elseif($value->identificador == $n5_4_d){
@@ -686,9 +742,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_4_de",$n5_4_de);
                 }
                 elseif($value->identificador == $n5_5_d){
@@ -701,9 +759,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_5_de",$n5_5_de);
                 }
                 elseif($value->identificador == $n5_6_d){
@@ -716,9 +776,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_6_de",$n5_6_de);
                 }
                 elseif($value->identificador == $n5_7_d){
@@ -731,9 +793,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_7_de",$n5_7_de);
                 }
                 elseif($value->identificador == $n5_8_d){
@@ -746,9 +810,11 @@ class B_binario extends CI_Controller {
                                                $value->username,
                                                $value->active,
                                                $value->franchise,
-                                               $value->country,
+                                               $value->pais,
                                                $value->franchise_id,
-                                               $value->img);
+                                               $value->img,
+                                               $value->rango,
+                                               $value->img_rango);
                     $this->tmp_backoffice->set("n5_8_de",$n5_8_de);
                 }
             }

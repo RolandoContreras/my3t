@@ -241,12 +241,68 @@
     .style_free_position{
    background-size: 100% !important;
     }
-    
 }
 .tree_text a{
     font-size: 11px !important;
     overflow-wrap: break-word;
     line-height: 15px;
+}
+ a{
+  text-decoration: none;
+}
+.popover__title {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  text-decoration: none;
+  color: rgb(228, 68, 68);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.popover__wrapper {
+    position: relative;
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+.popover__content {
+    border-radius:5px 5px 5px 5px;
+    color: #002222;
+    margin-top: 4px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -65px;
+    transform: translate(0,10px);
+    background-color: #BFBFBF;
+    border-width: 3px;
+    border-style: solid ;
+    border-color: #002222;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 190px;
+}
+.popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    right: calc(50% - 10px);
+    top: -15px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #002222 transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.popover__wrapper:hover .popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,-20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__message {
+  text-align: center;
 }
 
 
@@ -270,7 +326,5 @@
         padding-top: 120px !important;
     }
 }
-
-
 /*Thats all. I hope you enjoyed it.
 Thanks :)*/

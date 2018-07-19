@@ -260,6 +260,12 @@ function replace_vocales_voculeshtml($str){
     return str_replace($search, $replace, $str);
 }
 
+function replace_euacutes_vocales($str){
+    $search  = array('á', 'é', 'í', 'ó', 'ú','Á', 'É', 'Í', 'Ó', 'Ú', '¿', 'ñ', 'Ñ');
+    $replace = array('&aacute;', '&eacute;', '&iacute;', '&oacute;', '&uacute;','&Aacute;','&Eacute;', '&Iacute;', '&Oacute;', '&Uacute;', '&iquest;', '&ntilde;','&Ntilde;');    
+    return str_replace($replace, $search, $str);
+}
+
 function string_to_mayusculas($string){
     $str = strtoupper($string);
     return $str;
