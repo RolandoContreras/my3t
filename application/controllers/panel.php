@@ -6,6 +6,7 @@ class Panel extends CI_Controller{
         $this->load->model("comments_model","obj_comments");
         $this->load->model("customer_model","obj_customer");
         $this->load->model("otros_model","obj_otros");
+        $this->load->model("message_masive_model","obj_message_masive");
     }
     
     public function index(){
@@ -32,6 +33,17 @@ class Panel extends CI_Controller{
             );
         $obj_last_comment = $this->obj_comments->get_search_row($params);
         
+        //GET LASTEST MESSAGE MASIVE
+        $params = array(
+                        "select" =>"title,
+                                    content,
+                                    img,
+                                    date,
+                                    active",
+                         "order" => "message_masive_id DESC"
+            );
+        $obj_last_masive = $this->obj_message_masive->get_search_row($params);
+        
         //GET TOTAL ROWS
         $params = array("select" =>"count(comment_id) as total_comments,
                                     (select count(*) from customer) as total_customer, 
@@ -52,6 +64,7 @@ class Panel extends CI_Controller{
         $link_modulo =  site_url().$modulos; 
         $seccion = 'Vista global';        
 
+        $this->tmp_mastercms->set('obj_last_masive',$obj_last_masive);
         $this->tmp_mastercms->set('obj_pending',$obj_pending);
         $this->tmp_mastercms->set('obj_last_comment',$obj_last_comment);
         $this->tmp_mastercms->set('obj_total',$obj_total);
@@ -62,55 +75,61 @@ class Panel extends CI_Controller{
      }
      
     public function masive_messages(){
-        //ACTIVE CUSTOMER
-        if($this->input->is_ajax_request()){  
                 //GET TITLE AND MESSAGES
                 $title = $this->input->post("title");
                 $message_content = $this->input->post("message_content");
                 
-                $params = array(
-                        "select" =>"customer.email",
-                        "where" => "customer.active = 1"
-               
-               );
-                //GET DATA FROM CUSTOMER
-                $obj_customer= $this->obj_customer->search($params);
-                
-                $array_email = "";
-                    foreach ($obj_customer as $key => $value) {
-                        $array_email .= "$value->email".",";
+                if(isset($_FILES["image_file"]["name"])){
+                $config['upload_path']          = './static/cms/images/masive';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['max_size']             = 2000;
+                $this->load->library('upload', $config);
+                    if ( ! $this->upload->do_upload('image_file')){
+                         $error = array('error' => $this->upload->display_errors());
+                          echo '<div class="alert alert-danger">'.$error['error'].'</div>';
+                    }else{
+                        $data = array('upload_data' => $this->upload->data());
+                        $img = $_FILES["image_file"]["name"];
+                        // INSERT ON TABLE activation_message
+                        $data_message = array(
+                                'date' => date("Y-m-d"),
+                                'content' => $message_content,
+                                'title' => $title,
+                                'active' => 1,
+                                'status_value' => 1,    
+                                'img' => $img,
+                                'created_by' => $_SESSION['usercms']['user_id'],
+                                'created_at' => date("Y-m-d H:i:s")
+                            ); 
+                           $this->obj_message_masive->insert($data_message);
+                           
+                           //GET EMAIL
+                            $params = array(
+                                    "select" =>"email",
+                                    "where" => "status_value = 1"
+                           );
+                            //GET DATA FROM CUSTOMER
+                            $obj_customer= $this->obj_customer->search($params);
+
+                            $array_email = "";
+                                foreach ($obj_customer as $key => $value) {
+                                    $array_email .= "$value->email".",";
+                                }
+
+                            $images = "static/cms/images/masive/$img";
+                            $img_path = "<img src='".site_url().'/'.$images."' alt='".$title."' height='600' width='300'/>";
+                            //SEND EMAIL
+                            $mensaje = wordwrap("<html><body><center><h1>Nueva Activación</h1><p>Tenemos una nueva activación procesarla.</p></center></body></html>", 70, "\n", true);
+//                            $title = "Zoom de Liderazgo JAQUEMENTE - Silene Carrasco (CEO)";
+                            $headers = "MIME-Version: 1.0\r\n"; 
+                            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                            $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
+                            $bool = mail("software.contreras@gmail.com,software.contreras1@gmail.com, irvingsong_5@hotmail.com,pastorolandoc@hotmail.com",$title,$message_content,$headers);
+                            echo '<div class="alert alert-success" style="text-align: center">Publicado Exitosamente</div>';
+                        
                     }
-                
-                $images = "static/cms/messages/images/flyer-webinar.jpg";
-                $img_path = "<img src='".site_url().'/'.$images."' alt='".$title."' height='800' width='800'/>";
-                
-                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                $mensaje = wordwrap("<html><body>$message_content<p>$img_path</p></body></html>", 70, "\n", true);
-                //Titulo
-                $titulo = "$title";
-                //cabecera
-                $headers = "MIME-Version: 1.0\r\n"; 
-                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                $headers .= "From: BITSHARE - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
-                $headers .= "Cco: software.contreras@gmail.com,jupomlm@gmail.com,skcc1991@gmail.com" . "\r\n"; 
-                
-                //dirección del remitente 
-                
-//                $headers .= "From: BITSHARE - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
-                
-                //Enviamos el mensaje a tu_dirección_email 
-//                $bool = mail("$array_email",$titulo,$mensaje,$headers);
-                $bool = mail("marketing@yourbitshares.com",$titulo,$mensaje,$headers);
-//                $bool = mail("$array_email",$titulo,$mensaje,$headers);
-                
-                if($bool){
-                    $data['message'] = "El mensaje se envio correctamente";
-                }else{
-                    $data['message'] = "El mensaje no se envio";
                 }
-                echo json_encode($data); 
-        exit();
-            }
+                
     } 
      
     public function get_session(){          

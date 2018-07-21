@@ -80,32 +80,51 @@
                                     </div>
                             </div>
 
-                            <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom:20px;">
+<!--                            <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom:20px;">
                                     <button class="btn btn-duadua active">Red</button>
                                     <button class="btn btn-duadua">Page</button>
                                     <button class="btn btn-duadua">Report</button>
                                     <button class="btn btn-duadua">Event</button>
-                            </div>
+                            </div>-->
 
-                            <form>
+                            <form method="post" name="upload_form" id="upload_form" enctype="multipart/form-data">
                             <fieldset>
                             <div class="control-group">
-                            <div class="controls">
-                            <div class="input-prepend">
-                            <span class="add-on"><i class="icon-edit"></i></span>
-                            <input class="input-large" size="16" type="text" id="title"  name="title" style="width:88%;" placeholder="<?php echo replace_vocales_voculeshtml("Título");?>" />
-                            </div>
-                            </div>
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-edit"></i></span>
+                                        <input class="input-large" size="16" type="text" id="title"  name="title" value="<?php echo isset($obj_last_masive->title)?$obj_last_masive->title:"";?>" style="width:88%;" placeholder="<?php echo replace_vocales_voculeshtml("Título");?>" />
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="control-group">
                             <div class="controls">
-                            <textarea class="input-large" id="message_content" name="message_content" rows="5" style="width:97%;height:180px;" placeholder="Content"></textarea>
+                            <textarea class="input-large" id="message_content" name="message_content" rows="5" style="width:97%;height:180px;" placeholder="Contenido"><?php echo isset($obj_last_masive->content)?$obj_last_masive->content:"";?></textarea>
                             </div>
                             </div>
-
-                            <a onclick="message_public();" class="btn btn-primary">Publicar</a>
-
+                            <?php
+                            if(isset($obj_last_masive->img)){ ?>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-edit"></i></span>
+                                        <img id="message_content" name="message_content" src="<?php echo site_url()."static/cms/images/masive/$obj_last_masive->img"?>" alt="<?php echo isset($obj_last_masive->title)?$obj_last_masive->title:"";?>" width="100"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                                
+                            <div class="control-group">
+                            <div class="controls">
+                            600x300:<br> 
+                            <input type="file" value="Upload Imagen de Envio" name="image_file" id="image_file">
+                            </div>
+                            </div>  
+                            <br/>
+                            <button type="submit" name="upload" id="upload" class="btn btn-primary"><i class="fa fa-send"></i> Publicar </button>
+                            <!--<a onclick="message_public();" class="btn btn-primary">Publicar</a>-->
+                            <div id="uploaded_image"></div>
                             </fieldset>
                             </form>
                     </div>
@@ -159,3 +178,32 @@
 </div>
 <script src="static/cms/js/panel.js"></script>
 <script src="static/cms/js/jobs.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#upload_form").on('submit',function(e){
+        e.preventDefault();
+        if($('#image_file').val() == ''){
+            $("#uploaded_image").html('<div class="alert alert-danger" style="text-align: center">Debe seleccionar la imagen</div>  ');
+        }else{
+            if($('#message_content').val() == ''){
+                $("#uploaded_image").html('<div class="alert alert-danger" style="text-align: center">Debe llenar los campos</div>  ');
+            }else{
+                $.ajax({
+                url : "<?php echo site_url().'dashboard/panel/masive_messages'?>",
+                method: "POST",
+                data:new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success:function(data){
+                    $("#uploaded_image").html(data);
+                }
+            });
+            }
+            
+        }
+    });
+});
+</script>
