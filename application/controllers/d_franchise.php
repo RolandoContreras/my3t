@@ -62,6 +62,7 @@ class D_franchise extends CI_Controller{
     public function validate(){
         
         //GET CUSTOMER_ID
+        $name =     $this->input->post('name');
         $price =     $this->input->post('price');
         $point =  $this->input->post('point');
         $description =  $this->input->post('description');
@@ -86,6 +87,7 @@ class D_franchise extends CI_Controller{
                         $img = $_FILES["image_file"]["name"];
                     // INSERT ON TABLE activation_message
                         $data = array(
+                                'name' => $name,
                                 'price' => $price,
                                 'point' => $point,
                                 'img' => $img,
