@@ -37,6 +37,7 @@ class customer_model_atributos{
     var $phone='';
     var $active=''; 
     var $binaries='';
+    var $team_builder='';
     var $point_calification_left='';
     var $point_calification_rigth='';
     var $range_id='';
@@ -74,6 +75,7 @@ class Customer_Model extends CI_Model{
 	$this->phone='';
         $this->active='';
         $this->binaries='';
+        $this->team_builder='';
         $this->point_calification_left='';
         $this->point_calification_rigth='';
         $this->range_id='';

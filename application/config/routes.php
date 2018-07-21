@@ -119,6 +119,11 @@ $route['dashboard/rangos'] = "d_ranges";
 $route['dashboard/rangos/load/([0-9]+)'] = "d_ranges/load/$1";
 $route['dashboard/rangos/validate'] = "d_ranges/validate";
 
+$route['dashboard/membresias'] = "d_franchise";
+$route['dashboard/membresias/load'] = "d_franchise/load";
+$route['dashboard/membresias/load/([0-9]+)'] = "d_franchise/load/$1";
+$route['dashboard/membresias/validate'] = "d_franchise/validate";
+
 $route['dashboard/puntos'] = "d_points"; 
 $route['dashboard/puntos/load/([0-9]+)'] = "d_points/load/$1";
 $route['dashboard/puntos/validate_customer'] = "d_points/validate_customer";

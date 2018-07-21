@@ -261,7 +261,7 @@ class Register extends CI_Controller {
                     //SEND MESSAGES
                     $images = site_url()."static/page_front/images/bienvenido2.jpg";
                     $img_path = "<img src='$images' alt='Bienvenido'/>";
-                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h4>-----> Usuario: $username</h4><h4>-----> Contraseña: $password</h4><p>$img_path</p></body></html>", 70, "\n", true);
+                    $mensaje = wordwrap("<html><body><h1>Bienvenido a 3T Club</h1><p>Bienvenido ahora eres parte de la revolución 3T Club estamos muy contentos de que hayas tomado la mejor decisión en este tiempo.</p><p>Estamos para apoyarte en todo lo que necesites. Te dejamos tus datos de ingreso.</p><h4> >>>>>>> USUARIO: $username</h4><h4> >>>>>>> PASSWORD: $password</h4><p>$img_path</p></body></html>", 70, "\n", true);
                     $titulo = "Bienvenido a 3T Club";
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 

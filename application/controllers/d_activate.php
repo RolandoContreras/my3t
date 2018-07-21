@@ -119,6 +119,13 @@ class D_activate extends CI_Controller{
                 $side = $this->input->post("position");
                 $identificador = $this->input->post("identificador");
                 
+                 //VERIFY TEAM BUILDER
+                $today = date('Y-m-j');
+                $team_builder = date("Y-m-d", strtotime("+30 days"));
+                
+                $this->get_team_builder($parents_id,$today);
+                
+                
                 //GET SPONSOR ACTIVE
                     $params = array(
                         "select" =>"active,
@@ -159,21 +166,26 @@ class D_activate extends CI_Controller{
                     $this->pay_binario($result,$identificador,$point);
                 }
                 
-                //SELECT TOY AND TODAY+76
+                //SELECT TODAY
                 $today = date('Y-m-j');
+                $expire = date("Y-m-d", strtotime("+30 days"));
                 
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
-//                if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
+                        'team_bluider_active' => 1,
+                        'team_bluider' => 1,
                         'date_start' => $today,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_customer->update($customer_id,$data);
-//                }
                 //SEND MESSAGE CONFIRMATION ACTIVE
                 $this->message_active($customer_id);
+                //VERIFY TEAM BUILDER
+                $this->get_team_builder($parents_id,$today);
+                
+                
                 
                 echo json_encode($data); 
                 exit();
@@ -236,7 +248,74 @@ class D_activate extends CI_Controller{
                 //CALCULE AMOUNT
                 $amount = ($point  * $percet) / 100;
                 return $amount;
-    }    
+    }  
+    
+    public function get_team_builder($parents_id,$today){
+                
+                //GET PAREND 1
+                $params = array(
+                        "select" =>"parents_id",
+                        "where" => "customer_id = $parents_id"
+                );
+                //GET DATA FROM BONUS
+                $obj_customer= $this->obj_customer->get_search_row($params);
+                
+                //GET DATA PARENT
+                $param_parent = array(
+                        "select" =>"team_builder,
+                                    customer_id,
+                                    active",
+                        "where" => "customer_id = $obj_customer->parents_id"
+                );
+                
+                //GET DATA FROM BONUS
+                $obj_parent= $this->obj_customer->get_search_row($param_parent);
+                $team_date = formato_fecha_barras($obj_parent->team_builder);
+                $today = formato_fecha_barras($today);
+                
+                //VERIFY AND EXIST
+                if(($obj_parent->active == 1) && ("$today" <= "$team_date")){
+                    
+                    //GET CHILD 1er
+                    $param = array(
+                        "select" =>"customer_id,
+                                    username,
+                                    team_builder,
+                                    team_bluider_active",
+                        "where" => "parents_id = $obj_customer->parents_id and team_bluider_active = 1"
+                    );
+                    //GET DATA FROM BONUS
+                    $obj_parent_child = $this->obj_customer->search($param);
+                    $count = count($obj_parent_child);
+                    
+                    if($count == 2){
+                        foreach ($obj_parent_child as $key => $value) {
+                            $param_child = array(
+                                "select" =>"customer_id,
+                                            username,
+                                            team_builder,
+                                            team_bluider_active",
+                                "where" => "parents_id = $value->customer_id and team_bluider_active = 1"
+                            );
+                            $obj_child = $this->obj_customer->search($param_child);
+                            $obj_child_count = count($obj_child);
+                            if($key == 0){
+                                $first =  $obj_child_count;
+                            }else{
+                                $second = $obj_child_count;
+                            }
+                        }
+                         var_dump($first);
+                            var_dump($second);
+                            die();
+                    }
+                }
+                
+                //CALCULE AMOUNT
+                $amount = ($point  * $percet) / 100;
+                return $amount;
+    }
+    
     
     public function message_bonus_sponsor($amount,$parents_id,$customer_id){
             $message = "Acaba de ganar $$amount en bono de patrocinio";

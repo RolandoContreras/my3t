@@ -170,6 +170,17 @@
                                 </div>
                             </div>
                         </a>
+                        <a href="javascript:void(0);" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                <h5 class="media-heading">Team Builder</h5>
+                                <strong><?php if(formato_fecha_barras($obj_customer->team_builder)== '00/00/0000'){ echo "-----";}else{echo formato_fecha_barras($obj_customer->team_builder);}?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                    <i class="fa fa-calendar fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
                         <a href="<?php echo site_url('backoffice/misdatos');?>" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">

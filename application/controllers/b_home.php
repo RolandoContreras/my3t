@@ -42,6 +42,7 @@ class B_home extends CI_Controller {
                                     customer.username,
                                     customer.email,
                                     customer.password,
+                                    customer.team_builder,
                                     customer.first_name,
                                     customer.last_name,
                                     customer.active,

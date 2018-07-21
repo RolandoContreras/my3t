@@ -96,6 +96,7 @@
                                             <ul class="">
                                                 <!--//-----3ER LEVEL LEFT--------->
                                                 <li>
+                                                    <?php if(isset($n3_iz)){  ?>
                                                     <div class="popover__wrapper">
                                                         <a href="<?php echo site_url().'backoffice/binario/'.$n3_iz[2];?>">
                                                         <div class="row imagen-profile"><img src="<?php echo site_url().'static/backoffice/images/'.$n3_iz[11]?>" alt="paquete" width="80"></div>
@@ -112,6 +113,10 @@
                                                           </p>
                                                       </div>
                                                     </div>
+                                                    <?php }else{ ?>
+                                                        <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blank" width="80"/>                                                            
+                                                        <span class="user-name"></span>
+                                                    <?php } ?>
                                                             <!--//-----END 4TO LEVEL LEFT--------->
                                                     <ul class="hidden-xs">
                                                         <li>
