@@ -166,135 +166,33 @@ class B_home extends CI_Controller {
                 //SELECT ID FROM CUSTOMER
                $franchise_id = $this->input->post('franchise_id');
                $customer_id = $_SESSION['customer']['customer_id'];
+               //verify
                
-               if($franchise_id != "" && $customer_id != ""){
+               
+               
+               if(($franchise_id != "") && ($customer_id != "")){
                             //UPDATE DATA EN CUSTOMER TABLE
-                            if($franchise_id == 1){
-                                //CHANGE TO BASIC
-                                 $data = array(
-                                            'franchise_id' => 1,
-                                            'point_calification_left' => 93,
-                                            'point_calification_rigth' => 93,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 2){
-                                //CHANGE TO EXECUTIVE
-                                 $data = array(
-                                            'franchise_id' => 2,
-                                            'point_calification_left' => 187,
-                                            'point_calification_rigth' => 187,                                     
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 3){
-                                //CHANGE TO SENIOR EXECUTIVE
-                                 $data = array(
-                                            'franchise_id' => 3,
-                                            'point_calification_left' => 525,
-                                            'point_calification_rigth' => 525,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 4){
-                                //CHANGE TO MASTER
-                                 $data = array(
-                                            'franchise_id' => 4,
-                                            'point_calification_left' => 750,
-                                            'point_calification_rigth' => 750,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 5){
-                                //CHANGE TO MASTER
-                                 $data = array(
-                                            'franchise_id' => 5,
-                                            'point_calification_left' => 1424,
-                                            'point_calification_rigth' => 1424,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 7){
-                                //CHANGE TO APERTURA
-                                 $data = array(
-                                            'franchise_id' => 7,
-                                            'point_calification_left' => 224,
-                                            'point_calification_rigth' => 224,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 8){
-                                //CHANGE TO ELITE   
-                                 $data = array(
-                                            'franchise_id' => 8,
-                                            'point_calification_left' => 749,
-                                            'point_calification_rigth' => 749,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 9){
-                                //CHANGE TO ELITE   
-                                 $data = array(
-                                            'franchise_id' => 9,
-                                            'point_calification_left' => 1498,
-                                            'point_calification_rigth' => 1498,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 10){
-                                //CHANGE TO ELITE   
-                                 $data = array(
-                                            'franchise_id' => 10,
-                                            'point_calification_left' => 487,
-                                            'point_calification_rigth' => 487,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 11){
-                                //CHANGE TO ELITE   
-                                 $data = array(
-                                            'franchise_id' => 11,
-                                            'point_calification_left' => 975,
-                                            'point_calification_rigth' => 975,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }elseif($franchise_id == 12){
-                                //CHANGE TO ELITE   
-                                 $data = array(
-                                            'franchise_id' => 12,
-                                            'point_calification_left' => 2925,
-                                            'point_calification_rigth' => 2925,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }else{
-                                //CHANGE MEMBERSHIP
-                                 $data = array(
-                                            'franchise_id' => 6,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
-                                        ); 
-                                        $this->obj_customer->update($customer_id,$data);
-                            }
+                         $params_total = array(
+                                "select" =>"point",
+                                 "where" => "franchise_id = $franchise_id",
+                                );
+                        $obj_franchise = $this->obj_franchise->get_search_row($params_total);    
+                        
+                        
+                        
+                        //UPDATE
+                        $data = array(
+                            'franchise_id' => $franchise_id,
+                            'point_calification_left' => $obj_franchise->point,
+                            'point_calification_rigth' => $obj_franchise->point,
+                            'updated_by' => $customer_id,
+                            'updated_at' => date("Y-m-d H:i:s")
+                        ); 
+                        $this->obj_customer->update($customer_id,$data);
+                        //send data
                              $data['message'] = "true";
                              echo json_encode($data); 
                              exit();
-               }else{
-                     $data['message'] = "true";
-                     echo json_encode($data); 
-                     exit();
                }
             }
         }
