@@ -17,8 +17,8 @@ if($('#image_file').val() == ''){
         }
 }
 
-function edit_franchise(range_id){    
-     var url = 'dashboard/membresias/load/'+range_id;
+function edit_franchise(franchise_id){    
+     var url = 'dashboard/membresias/load/'+franchise_id;
      location.href = site+url;   
 }
 function nuevo_users(){
