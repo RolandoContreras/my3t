@@ -124,6 +124,8 @@ $route['dashboard/bonos'] = "d_bonus";
 $route['dashboard/bonos/load/([0-9]+)'] = "d_bonus/load/$1";
 $route['dashboard/bonos/validate'] = "d_bonus/validate";
 
+$route['dashboard/correos'] = "D_messages_masive"; 
+
 $route['dashboard/rangos'] = "d_ranges";
 $route['dashboard/rangos/load/([0-9]+)'] = "d_ranges/load/$1";
 $route['dashboard/rangos/validate'] = "d_ranges/validate";
