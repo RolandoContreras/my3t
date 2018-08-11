@@ -88,15 +88,42 @@
                                                     <a href="<?php echo site_url().'static/backoffice/document/blu-trading.pdf';?>" download="Presentación Blu Trading.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
-<!--                                            <tr>
+                                            <tr>
                                                 <td style="padding: 25px">
-                                                <em class="fa fa-file-word-o fa-2x"/>
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Contrato Bitshare (DOCX)</td>
-                                                <td class="text-center" style="padding: 25px">
-                                                    <a href="<?php echo site_url().'static/plan/document/Contrato_de_Dsitribuidor_BITSHARE.docx';?>" download="contrato_distribuidor_bitshare" class="btn btn-primary" title="Descargar Contrato Bitshare">Descargar</a>
+                                                <td style="padding: 25px">Presentación Blu Trading</td>
+                                                <td style="padding: 25px" class="text-center">
+                                                    <a href="<?php echo site_url().'static/backoffice/document/blu-trading.pdf';?>" download="Presentación Blu Trading.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
-                                            </tr>-->
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 25px">
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
+                                                </td>
+                                                <td style="padding: 25px">Contrato de Apertura - TIB</td>
+                                                <td style="padding: 25px" class="text-center">
+                                                    <a href="<?php echo site_url().'static/backoffice/document/contrato_apertura.pdf';?>" download="Contrato de Apertura.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 25px">
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
+                                                </td>
+                                                <td style="padding: 25px">Ficha Cliente Natural - TIB</td>
+                                                <td style="padding: 25px" class="text-center">
+                                                    <a href="<?php echo site_url().'static/backoffice/document/ficha-cliente-natural.pdf';?>" download="Ficha Cliente Natural.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 25px">
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
+                                                </td>
+                                                <td style="padding: 25px">Power Of Attorney - TIB</td>
+                                                <td style="padding: 25px" class="text-center">
+                                                    <a href="<?php echo site_url().'static/backoffice/document/power-of-attorney.pdf';?>" download="Power of Attormey.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
