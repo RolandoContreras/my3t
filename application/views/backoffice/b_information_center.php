@@ -40,7 +40,7 @@
                                                 </td>
                                                 <td style="padding: 25px">Presentación 3T Club - Ingles</td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/presentacion_oficial_en.pdf';?>" disabled download="Presentación 3T Club En.pdf" class="btn btn-success " title="Presentation 3T Club"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/presentacion_oficial_en.pdf';?>" download="Presentación 3T Club En.pdf" class="btn btn-success " title="Presentation 3T Club"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
