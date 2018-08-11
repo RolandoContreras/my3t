@@ -64,6 +64,8 @@ $route['backoffice/productos/academy/courses/([0-9a-z_-]+)'] = "b_academy/course
 
 $route['backoffice/productos/globalpass'] = "b_globalpass";
 
+$route['backoffice/informacion'] = "b_information";
+
 $route['backoffice/messages'] = "b_messages";
 $route['backoffice/messages/bonus'] = "b_messages/message_type";
 $route['backoffice/messages/bonus/([0-9a-z_-]+)'] = "b_messages/message_type/$1";
@@ -124,7 +126,7 @@ $route['dashboard/bonos'] = "d_bonus";
 $route['dashboard/bonos/load/([0-9]+)'] = "d_bonus/load/$1";
 $route['dashboard/bonos/validate'] = "d_bonus/validate";
 
-$route['dashboard/correos'] = "D_messages_masive"; 
+$route['dashboard/correos'] = "d_messages_masive"; 
 
 $route['dashboard/rangos'] = "d_ranges";
 $route['dashboard/rangos/load/([0-9]+)'] = "d_ranges/load/$1";

@@ -64,31 +64,6 @@ class D_messages_masive extends CI_Controller{
             $this->tmp_mastercms->set("obj_binaries",$obj_binaries);
             $this->tmp_mastercms->render("dashboard/puntos_binario/points_binary_form");    
     }
-
-    public function validate_customer() {
-            if ($this->input->is_ajax_request()) {
-                //SELECT ID FROM CUSTOMER
-            $customer_id = $this->input->post('customer_id');
-            $param = array(
-                "select" => "customer_id,
-                             username,
-                             first_name,
-                             last_name",
-                "where" => "customer_id = $customer_id");
-            $obj_customer = $this->obj_customer->get_search_row($param);
-            
-            if (count($obj_customer) > 0) {
-                $data['message'] = "true";
-                $data['username'] = $obj_customer->username;
-                $data['name'] = $obj_customer->first_name." ".$obj_customer->last_name;
-                $data['print'] = '<div class="alert alert-success" style="text-align: center">Usuario Encontrado.</div>';
-            } else {
-                $data['message'] = "false";
-                $data['print'] = '<div class="alert alert-danger" style="text-align: center">Usuario no Existe.</div>';
-            }
-            echo json_encode($data);
-            }
-        }
         
     public function validate(){
         

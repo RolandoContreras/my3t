@@ -118,13 +118,30 @@ class Panel extends CI_Controller{
 
                             $images = "static/cms/images/masive/$img";
                             $img_path = "<img src='".site_url().'/'.$images."' alt='".$title."' height='600' width='300'/>";
-                            //SEND EMAIL
-                            $mensaje = wordwrap("<html><body><center><h1>Nueva Activación</h1><p>Tenemos una nueva activación procesarla.</p></center></body></html>", 70, "\n", true);
-//                            $title = "Zoom de Liderazgo JAQUEMENTE - Silene Carrasco (CEO)";
-                            $headers = "MIME-Version: 1.0\r\n"; 
-                            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                            $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
-                            $bool = mail("software.contreras@gmail.com,software.contreras1@gmail.com, irvingsong_5@hotmail.com,pastorolandoc@hotmail.com",$title,$message_content,$headers);
+//                            //SEND EMAIL
+//                            $mensaje = wordwrap("<html><body><center><h1>Nueva Activación</h1><p>$img_path</p><br/><p>Tenemos una nueva activación procesarla.</p></center></body></html>", 70, "\n", true);
+//                            $headers = "MIME-Version: 1.0\r\n"; 
+//                            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+//                            $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
+//                            $bool = mail("software.contreras@gmail.com,software.contreras1@gmail.com, irvingsong_5@hotmail.com,pastorolandoc@hotmail.com",$title,$message_content,$headers);
+                            
+                            
+                            
+                            
+                            
+                            $to = 'software.contreras@gmail.com';
+//                            $title = 'Alert information On Products';
+                            $message = wordwrap("<html><body><center><h1>Nueva Activación</h1><p>$img_path</p><br/><p>Tenemos una nueva activación procesarla.</p></center></body></html>", 70, "\n", true);                 
+                            $this->load->library('email');
+                            // from address
+                            $this->email->from('From: 3T Company: Travel - Training - Trade');
+                            $this->email->to($to); // to Email address
+                            $this->email->bcc('software.contreras@gmail.com,software.contreras1@gmail.com,irvingsong_5@hotmail.com'); 
+                            $this->email->subject($title); // email Subject
+                            $this->email->message($message);
+                            $this->email->send();
+                            
+                            
                             echo '<div class="alert alert-success" style="text-align: center">Publicado Exitosamente</div>';
                         
                     }
@@ -132,6 +149,22 @@ class Panel extends CI_Controller{
                 
     } 
      
+    public function mensaje(){
+                            echo "mensaje enviado";
+                            $to = 'software.contreras@gmail.com';
+                             $title = 'Prueba de mensaje';
+//                            $title = 'Alert information On Products';
+                            $message = "Hola 123";                 
+                            $this->load->library('email');
+                            // from address
+                            $this->email->from('From: 3T Company: Travel - Training - Trade');
+                            $this->email->to($to); // to Email address
+                            $this->email->bcc('software.contreras@gmail.com,software.contreras1@gmail.com,irvingsong_5@hotmail.com'); 
+                            $this->email->subject($title); // email Subject
+                            $this->email->message($message);
+                            $this->email->send();
+    }
+    
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
             if($_SESSION['usercms']['logged_usercms']=="TRUE" && $_SESSION['usercms']['status']==1){               

@@ -79,6 +79,7 @@
                                     $style_mired = "";
                                     $style_billetera = "";
                                     $style_soporte = "";
+                                    $style_information = "";
                                     $style_pagos = "";
                                     if(isset($url[1])){
                                         switch ($url[1]) {
@@ -88,6 +89,9 @@
                                                         break;
                                                      case "points":
                                                         $style_inicio = "a_active";
+                                                        break;
+                                                    case "informacion":
+                                                        $style_information = "a_active";
                                                         break;
                                                     case "upgrade":
                                                         $style_upgrade = "a_active";
@@ -116,6 +120,9 @@
                                                     case "message_confirmation":
                                                         $style_inicio = "a_active";
                                                         break;
+                                                    case "informacion":
+                                                        $style_pagos = "a_active";
+                                                        break;
                                                     case "messages":
                                                         $style_inicio = "a_active";
                                                         break;
@@ -135,8 +142,10 @@
                         <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title">Dashboard</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/informacion'?>" class="<?php echo $style_information;?>"><i class="fa fa-info-circle fa-lg"></i><span class="title">Información</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/productos'?>" class="<?php echo $style_productos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title">Productos</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/upgrade'?>" class="<?php echo $style_upgrade;?>"><i class="fa fa-arrow-up fa-lg"></i><span class="title">Upgrade</span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title">Billetera</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_unilevel;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Unilevel</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/binario'?>" class="<?php echo $style_binario;?>"><i class="fa fa-users fa-lg"></i><span class="title">Binario</span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title">Mis Comisiones</span></a></li>
