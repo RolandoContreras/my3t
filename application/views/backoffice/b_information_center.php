@@ -58,7 +58,7 @@
                                                 </td>
                                                 <td style="padding: 25px">Ficha RUC (Blu Trading)</td>
                                                 <td class="text-center" style="padding: 25px">
-                                                    <a href="<?php echo site_url().'static/plan/document/blutrading_ruc.jpg';?>" download="Ficha Ruc Blu Trading.jpg" class="btn btn-success" title="Descargar Ficha Ruc Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/blutrading_ruc.jpg';?>" download="Ficha Ruc Blu Trading.jpg" class="btn btn-success" title="Descargar Ficha Ruc Blu Trading"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -67,7 +67,7 @@
                                                 </td>
                                                 <td style="padding: 25px">Ficha RUC (Trade It Broker House)</td>
                                                 <td class="text-center" style="padding: 25px">
-                                                    <a href="<?php echo site_url().'static/plan/document/tradeit_ruc.jpg';?>" download="Ficha Ruc Trade It Broker House.jpg" class="btn btn-success" title="Descargar Ficha Ruc Trade It Broker House"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/tradeit_ruc.jpg';?>" download="Ficha Ruc Trade It Broker House.jpg" class="btn btn-success" title="Descargar Ficha Ruc Trade It Broker House"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -76,7 +76,7 @@
                                                 </td>
                                                 <td style="padding: 25px">Presentación Global Pass</td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/presentacion_globalpass.pdf';?>" download="Presentación Global Pass.pdf" class="btn btn-success" title="Descargar Presentación Global Pass"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/presentacion_globalpass.pdf';?>" download="Presentación Global Pass.pdf" class="btn btn-success" title="Descargar Presentación Global Pass"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -85,7 +85,7 @@
                                                 </td>
                                                 <td style="padding: 25px">Presentación Blu Trading</td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/blu-trading.pdf';?>" download="Presentación Blu Trading.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/blu-trading.pdf';?>" download="Presentación Blu Trading.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
 <!--                                            <tr>
