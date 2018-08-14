@@ -35,6 +35,7 @@ class B_upgrade extends CI_Controller {
         $franchise_id = $_SESSION['customer']['franchise_id'];
         $customer_id = $_SESSION['customer']['customer_id'];
         
+        
         //GET TOTAL MESSAGE
         $all_message = $this->get_total_messages($customer_id);
         //GET TOTAL MESSAGE
@@ -44,27 +45,20 @@ class B_upgrade extends CI_Controller {
         
         $params = array(
                         "select" =>"price",
-                        "where" => "franchise_id = '$franchise_id' and status_value = 1");
+                        "where" => "franchise_id = '$franchise_id' and status_value = 1",
+                        );
          $obj_price = $this->obj_franchise->get_search_row($params);  
          
-         //GET ALL ACCOUNT > A FRANCHISE_ID
+        //GET ALL ACCOUNT > A FRANCHISE_ID
         $param = array( "select" =>"franchise_id,name,price,img",
-                        "where" => "price > $obj_price->price and status_value = 1");
+                        "where" => "price > $obj_price->price and status_value = 1",
+                        "order" => "price ASC");
          $obj_franchise = $this->obj_franchise->search($param);  
-         
-         //GET TOTAL AMOUNT
-                $params_total = array(
-                        "select" =>"(select sum(amount) FROM commissions WHERE status_value <= 2 and customer_id = $customer_id) as balance",
-                         "where" => "commissions.customer_id = $customer_id and status_value <= 2",
-                    );
-                
-           $obj_data = $this->obj_commissions->get_search_row($params_total);              
-           $obj_balance_disponible = number_format($obj_data->balance, 2);
-           
-          //GET PRICE BTC
-          $price_btc = $this->btc_price(); 
-         
-        //SEND DATA TO VIEW  
+         //GET BALANCE DISPONIBLE
+         $obj_balance_disponible = $this->balance($customer_id);
+         //GET PRICE BTC
+         $price_btc = $this->btc_price(); 
+         //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("messages_informative",$messages_informative); 
          $this->tmp_backoffice->set("obj_message",$obj_message);
          $this->tmp_backoffice->set("all_message",$all_message);   
@@ -148,5 +142,15 @@ class B_upgrade extends CI_Controller {
             $obj_message = $this->obj_messages->search($params); 
             //GET ALL MESSAGE   
             return $obj_message;
+        }
+        public function balance($customer_id){
+             //GET TOTAL AMOUNT
+                $params_total = array(
+                        "select" =>"sum(amount) as balance",
+                    "where" => "status_value <= 2 and customer_id = $customer_id"
+                    );
+           $obj_data = $this->obj_commissions->get_search_row($params_total); 
+           return $obj_data->balance;
+           
         }
 }
