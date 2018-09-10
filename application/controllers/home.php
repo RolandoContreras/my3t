@@ -10,9 +10,10 @@ class Home extends CI_Controller {
     public function index()
 	{
         //GET DATA FRANCHISE
-//        $this->lang->load('lenguages','spanish');
         $param = array( "select" =>"franchise_id,name,price,img",
-                        "where" => "franchise_id <> 6 and status_value = 1");
+                        "where" => "franchise_id <> 6 and status_value = 1",
+                        "order" => "price ASC",
+                        );
          $data['obj_franchise'] = $this->obj_franchise->search($param);  
 
             

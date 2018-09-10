@@ -364,7 +364,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?php echo replace_vocales_voculeshtml("Primera multiplataforma peruana con servicios y productos en los rubros de viaje, desarrollo personal y comercio.");?></div>
+                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;">Primer club con servicios  en los rubros de viaje, desarrollo personal y comercio.</div>
 
 		<!-- LAYER NR. 16 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
@@ -465,8 +465,6 @@ tpj(document).ready(function() {
 		revapi4 = tpj("#rev_slider_4_1").show().revolution({
 			sliderType:"standard",
 			jsFileLocation:"https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/public/assets/js/",
-//                        jsFileLocation:"https://demokaliumsites-laborator.netdna-ssl.com/travel/wp-content/plugins/revslider/public/assets/js/';?>",
-                        
 			sliderLayout:"fullscreen",
 			dottedOverlay:"none",
 			delay:9000,
@@ -711,13 +709,13 @@ tpj(document).ready(function() {
                     <div class="wpb_wrapper">
                         <div class="wpb_text_column wpb_content_element  text-block post-formatting " >
                             <div class="wpb_wrapper">
-                                <h2>TRAINING - TRAVEL - TRADE</h2>
+                                <h2>VIAJES - COACHING - INVERSIONES</h2>
                                     <h4>Viajes</h4>
-                                    <p>Te damos la oportunidad de ser parte de 3T Club y la plataforma de descuento Global Pass teniendo 3 plataformas (Global Pass Perú, Internacional y Elite) que te permitirán tener descuentos hasta el 70% en hoteles, autos, cruceros, tiempo compartido, semanas bono y gana puntos rewards por recomendar a tus amigos y que ellos compren gracias a tu recomendación y viaja totalmente gratis.</p>
-                                    <h4>Entramiento</h4>
-                                    <p>Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, 	recibe el sistema JAQUEMENTE un sistema probado que está llevando  al éxito a cientos de personas al lado Silene Carrasco Cruz (CEO 3T), líder de la industria multinivel con más de 10 años de experiencia y grandes resultados durante su carrera.</p>
-                                    <h4>Forex</h4>
-                                    <p>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y la noticia más importante del día  tendrás en nuestra academia. Profesionales altamente calificados  en manejo y gestión de fondos de inversión con experiencias en compañías prestigiosas  en Latinoamérica y Europa forman el staff de 3T ACADEMY</p>
+                                    <p>Te damos la oportunidad de ser parte de 3T Club que te permitirá tener hasta un 70% de descuentos en hoteles de julo, rentas de autos, cruceros, vacaciones entre otros, y ser parte de la plataforma más gran intercambio conformado por los mejores resort a nivel internacional R.C.I.</p>
+                                    <h4>Coaching</h4>
+                                    <p>Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, recibe el sistema JAQUEMENTE un sistema probado que está llevando al éxito a cientos de personas haciendo que tengan un crecimiento es su vida.</p>
+                                    <h4>Inversiones</h4>
+                                    <p>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y la noticia más importante del día  tendrás en nuestra academia. Profesionales altamente calificados  en manejo y gestión de fondos de inversión con experiencias en compañías prestigiosas  en Latinoamérica y Europa forman el staff de 3T ACADEMY.</p>
                             </div>
                         </div>
                     </div>
@@ -734,8 +732,8 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner">
                     <div class="wpb_wrapper">
                         <div class="section-title  homepage-destinations-title vc_custom_1497274905763">
-                                <H2>Paquetes 3T</H2>
-                                <p>Sé parte de la revolución, y no te quedes fuera.</p>
+                                <H2>Membresías 3T </H2>
+                                <p>Sé parte del club, y no te quedes fuera.</p>
                         </div>
                         <div id="tours-1-container" class="lab-portfolio-items portfolio-container-and-title  homepage-destinations portfolio-loop-layout-type-2">
                             <!--START PAQUETE BASIC-->
@@ -744,7 +742,6 @@ tpj(document).ready(function() {
                                     <div id="tours-1" class="portfolio-holder portfolio-type-2 sort-by-js is-masonry-layout">
                                         <!--START PAQUETE APERTURA-->
                                         <?php 
-                                        
                                         foreach ($obj_franchise as $value) { ?>
                                             <div class="portfolio-item portfolio-item-type-12 has-padding w4 post-447 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-nature" data-portfolio-item-id="447" data-terms="nature">
                                             <div class="item-box-container">
