@@ -667,7 +667,7 @@ tpj(document).ready(function() {
                                 <h3>Visión</h3>
                                         <p>Nuestra visión es ser el primer club privado de viajes, desarrollo personal y financiero a nivel mundial dónde logremos hacer un cambio en el estilo de vida de los miembros que en consecuencia, estos mismos tenga un crecimiento integral a través de los servicios de nuestra nuestro club.</p>
                                 <h3>Misión</h3>
-                                <p>Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del mundo virtual.</p>
+                                <p>Nuestra misión es que mediante las recomendación de nuestros asociados y el constante desarrollo de nuestros productos y servicios podamos ayudar a que las personas puedan tener el estilo de vida que siempre han soñado.</p>
                             </div>
                         </div>
                     </div>
