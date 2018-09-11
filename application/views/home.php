@@ -157,7 +157,7 @@
 			data-paddingright="[50,50,50,50]"
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
-			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
+			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><?=lang('idioma.banner_comprar');?></div>
 	</li>
 	<!-- SLIDE  -->
 	<li data-index="rs-15" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="<?php echo site_url().'static/page_front/images/roma-1.jpg';?>"  data-rotate="0"  data-saveperformance="off"  data-title="City Break" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -292,7 +292,7 @@
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
 
-			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
+			style="z-index: 10; white-space: nowrap; border-color:rgb(255,255,255);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><?=lang('idioma.banner_comprar');?></div>
 	</li>
 	<!-- SLIDE  -->
         <li data-index="rs-16" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="2000"  data-thumb="<?php echo site_url().'static/page_front/images/cidem_seminarios.jpg';?>"  data-rotate="0"  data-saveperformance="off"  data-title="Croatia" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -428,7 +428,7 @@
 			data-paddingbottom="[15,15,15,15]"
 			data-paddingleft="[50,50,50,50]"
 
-			style="z-index: 10; white-space: nowrap;border-color:rgba(255,255,255,0.75);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">REGISTRARME</div>
+			style="z-index: 10; white-space: nowrap;border-color:rgba(255,255,255,0.75);border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><?=lang('idioma.banner_comprar');?></div>
 	</li>
 </ul>
 <script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";

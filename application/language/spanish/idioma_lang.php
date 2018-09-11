@@ -28,13 +28,13 @@ $lang['idioma.fo_mision'] = "Mision";
 $lang['idioma.fo_porque'] = "¿Porqué Nosotros?";
 $lang['idioma.fo_derechos'] = "Copyright 2017. Todos los derechos reservados - 3T Club";
 //HOME
-
 $lang['idioma.banner_se_parte'] = "Sé parte de los pioneros y ten un asombroso estilo de vida.";   
 $lang['idioma.banner_asombroso'] = "Asombroso Estilo De Vida";   
 $lang['idioma.banner_ten_estilo'] = "Ten un estilo de vida distinto, empieza a viajar, entrenarte y convertirte en un profesional del trading.";   
 $lang['idioma.banner_primer_club'] = "Primer club con servicios  en los rubros de viaje, desarrollo personal y comercio.";   
 $lang['idioma.banner_3t_inicia'] = "3T - Inicia";   
 $lang['idioma.banner_revolucion'] = "Sé parte de una revolución.";   
+$lang['idioma.banner_comprar'] = "¡Comprar!";   
 
 $lang['idioma.home_alianzas'] = "Alianzas";   
 $lang['idioma.home_contamos_alianzas'] = "Contamos con las mejores alianzas a nivel internacional con compañías prestigiosas para garantizar la calidad de nuestros servicios.";   

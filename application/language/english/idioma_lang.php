@@ -34,6 +34,7 @@ $lang['idioma.banner_ten_estilo'] = "Have a different lifestyle, begins to trave
 $lang['idioma.banner_primer_club'] = "First club with services in the areas of travel, personal development and trade.";   
 $lang['idioma.banner_3t_inicia'] = "3T Club - Beginn";   
 $lang['idioma.banner_revolucion'] = "Be part of a revolution.";
+$lang['idioma.banner_comprar'] = "¡Shop!";   
 
 $lang['idioma.home_alianzas'] = "Alliances";   
 $lang['idioma.home_contamos_alianzas'] = "We have the best international alliances with prestigious companies to guarantee the quality of our services.";   
