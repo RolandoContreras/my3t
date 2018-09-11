@@ -53,13 +53,48 @@ $lang['idioma.home_descubre'] = "Descubre todos los beneficios que 3T tiene para
 $lang['idioma.home_no_pierdas'] = "No pierdas esta oportunidad y comunícate con la persona que te recomendó 3T Club";   
 
 //ABOUT
+$lang['idioma.about_nosotros'] = "ACERCA DE NOSOTROS";   
+$lang['idioma.about_que_es'] = "¿Qué es 3T Club?";   
+$lang['idioma.about_somos_el_club'] = "Somos el club privado más completo en viajes, desarrollo personal y financiero. Club latinoamericano que se desarrolla a nivel mundial presentando los 3 rubros más cotizados y deseado del momento: VIAJES, DESARROLLO PERSONAL E INVERSIONES, el cual permite que cualquiera persona que sea recomendado por un asociado del club tenga los beneficios mencionados a continuación.";   
+
+$lang['idioma.about_productos'] = "Productos";   
+$lang['idioma.about_todos_miembro'] = "Todos los miembros del club reciben la prestigiosa plataforma de intercambios R.C.I. conformada por los mejores hoteles y resort a nivel mundial para que de esta forma sean clientes exclusivos y puedan tener descuentos en el rubro de viajes.";   
+$lang['idioma.about_rci'] = "¿Qué es RCI?";   
+$lang['idioma.about_somos_principal'] = "Somos el principal proveedor de intercambios de vacaciones para titulares de tiempo compartido del mundo.";   
+$lang['idioma.about_actualmente'] = "Actualmente, seguimos siendo líderes mundiales en el intercambio de vacaciones, ya que contamos con la red global más extensa de complejos, destinos y experiencias de vacaciones para los titulares de tiempo compartido. Más complejos confían en nosotros a la hora de ofrecer una inscripción de intercambio de vacaciones de categoría superior a sus valiosos titulares, que ninguna otra empresa de intercambios de vacaciones del mundo puede igualar.";   
+$lang['idioma.about_en_rci_comprendemos'] = "En RCI, comprendemos que, con independencia de cómo de ajetreada sea su vida, valora verdaderamente el tiempo que reserva para las vacaciones con familiares y amigos cada año. Queremos ayudarle a crear recuerdos que perdurarán para siempre, porque sus vacaciones son nuestro mundo.";   
+$lang['idioma.about_educacion_coaching'] = "Educación & Coaching";   
+$lang['idioma.about_te_damos_coaching'] = "Te damos un coaching exclusivo para que desarrolles el líder que hay en ti, al dado por la ceo y fundadora de 3T Club.";   
+$lang['idioma.about_creemos_crecimiento'] = "Creemos en un crecimiento integral incluyendo el desarrollo como persona, aquí recibirás el sistema jaquemente que está llevando al éxitos a cientos de personas.";   
+$lang['idioma.about_que_jaquemente'] = "¿Qué es JAQUEMENTE?";
+$lang['idioma.about_sistema_coaching'] = "Es un sistema de coaching transformacional basado en experiencias vivenciales de ciencia practica que te ayudará a recuperar el poder de tu vida a través de la autoconfianza y descubrirás el mecanismo de tu mente.";   
+$lang['idioma.about_inversiones_academia'] = "Inversiones & Academia";   
+$lang['idioma.about_profesionales_calificados'] = "Profesionales altamente calificados en el mundo de la finanzas y gestión de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de 3T ACADEMY a la vez son voceros y referentes en el mundo financiero en Latinoamérica.";   
+$lang['idioma.about_que_es_academy'] = "¿Qué es 3T Academy?";   
+$lang['idioma.about_academia_3t'] = "Academia de 3T Club para aprender a hacer inversiones en el mundo de Forex (mundo bursatil). Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás con nosotros.";   
+$lang['idioma.about_se_divide'] = "La academia se divide en 3 módulos “básico, intermedio y avanzando” dependiendo de tus conocimientos entrarás a cualquier de ellos, las clases y enseñanzas son basadas en cursos por competencias.";   
+$lang['idioma.about_que_es_blu'] = "¿Qué es Blu Trading?";   
+$lang['idioma.about_prestigiosa_firma'] = "Blu Trading prestigiosa firma de gestión de fondo con operaciones en América, Europa y Asia busca revalorizar el dinero nuestros asociados en los mercados de acciones, índices bursátiles, commodities y divisas. Los asociados de 3T Club tendrán la opción de firmar un contrato por tiempo ilimitado para que puedan rentabilizar sus inversiones con la firma de gestión.";   
+
+$lang['idioma.about_team'] = "Equipo";   
+$lang['idioma.about_ceo_fundadora'] = "CEO & Fundadora";   
+$lang['idioma.about_administradora_profesion'] = "Administradora de profesión, coach y networker con más de 10 años de experiencia en la industrial del network marketing, durante su carrera ha obtenido grandes resultados creando organizaciones de personas alrededor del mundo y a la vez es la creadora del concepto 3T “Travel, Training and Trade”";   
+$lang['idioma.about_fundador'] = "Fundador";   
+$lang['idioma.about_ingeniero_informatico'] = "Ingeniero informático de profesión, durante su carrera como ingeniero ha desarrollado softwares para compañías prestigiosas en América y Europa, creador de CEVOLUTION WEB (empresa de construcción de software a nivel internacional) a la vez es networker profesional con más de 8 años de experiencia en la industria del networkmarketing con organizaciones en todo el continente americano.";   
+$lang['idioma.about_director_blu'] = "Director de Blu Trading";   
+$lang['idioma.about_administrador_negocios'] = "Administrador de Negocios Internacionales de profesión. Fue analista financiero para la firma europea X-Trade Brokers (XTB) y lideró el equipo comercial en sus oficinas de Perú. Posteriormente, se desempeñó como Research Analyst para Golden Capital FX, estando a la cabeza del análisis de mercado de la empresa.";   
+$lang['idioma.about_ultimos_4anos'] = "En los últimos 4 años, se ha desempeñado como analista de derivados para mercados americanos, europeos y asiáticos. Al mismo tiempo, ha impartido cursos de formación bursátil para Metodotrading.com y El Instituto de la Moneda de Lima. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio, América Noticias, Canal N e Investing.com.";   
+$lang['idioma.about_trader_profesional'] = "Trader Profesional";   
+$lang['idioma.about_trader_xtrader'] = "Administrador de Negocios Internacionales de profesión. Ejerció durante 4 años como trader para el X-Trader Brokers (XTB). En los últimos años, se ha desempeñado como asesor de inversiones bursátiles para Sudamérica y Europa. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio y RPP Noticias. Además, ha impartido cursos de formación bursátil para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura en Perú.";   
+$lang['idioma.about_analista_financiero'] = "Analista Financiero";   
+$lang['idioma.about_analista_inversiones'] = "Administrador de Negocios Internacionales de profesión. Analista de Inversiones bursátiles para diferentes brókers de mercados financieros líderes en el Perú y Latinoamérica, como analista ha desarrollado diferentes alternativas de inversión y ha dictado distintos seminarios de bolsa de valores, tanto en el MBA de finanzas de la UPC y en las compañías donde ha trabajado, ha escrito informes de mercado de valores y economía para distintos medios de comunicación a nivel nacional.";   
+
+
 $lang['idioma.about_proposito'] = "Propósito 3T";   
 $lang['idioma.about_vision'] = "Visión";   
 $lang['idioma.about_nuestra_vision'] = "Nuestra visión es ser el primer club privado de viajes, desarrollo personal y financiero a nivel mundial dónde logremos hacer un cambio en el estilo de vida de los miembros que en consecuencia, estos mismos tenga un crecimiento integral a través de los servicios de nuestra nuestro club.";   
 $lang['idioma.about_mision'] = "Misión";   
 $lang['idioma.about_nuestra_mision'] = "Nuestra misión es que mediante las recomendación de nuestros asociados y el constante desarrollo de nuestros productos y servicios podamos ayudar a que las personas puedan tener el estilo de vida que siempre han soñado.";   
-
-
 $lang['idioma.about_viaje_coaching_inversiones'] = "VIAJES - COACHING - INVERSIONES";   
 $lang['idioma.about_viajes'] = "Viajes";   
 $lang['idioma.about_te_damos_viaje'] = "Te damos la oportunidad de ser parte de 3T Club que te permitirá tener hasta un 70% de descuentos en hoteles de lujo, rentas de autos, cruceros, vacaciones entre otros, y ser parte de la plataforma más gran intercambio conformado por los mejores resort a nivel internacional R.C.I.";   
