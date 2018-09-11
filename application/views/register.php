@@ -231,7 +231,7 @@ labVcMaps.push({
                 <div class="vc_column-inner vc_custom_1498222572351">
                     <div class="wpb_wrapper">
                         <div class="section-title ">
-                        <h1>Formulario de Registro</h1>
+                        <h1><?=lang('idioma.reg_registro');?></h1>
                         </div>
                         <div class="vc-parent-row row-default">
                             <div class="vc_row wpb_row vc_inner vc_row-fluid">
@@ -244,7 +244,7 @@ labVcMaps.push({
                                                 <?php if(isset($obj_customer)){ ?>
                                                     <div class="col-md-12">
                                                         <div class="col-md-3">
-                                                            <label>PATROCINADOR</label>
+                                                            <label><?=lang('idioma.reg_patrocinador');?></label>
                                                         </div>
                                                         <div class="col-md-9">
                                                             <input class="form" type="text" disabled="disabled" value="<?php  
@@ -268,7 +268,7 @@ labVcMaps.push({
                                             <div class="col-md-12">&nbsp;</div>   
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>USUARIO</label>
+                                                      <label><?=lang('idioma.reg_usuario');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" onkeyup="this.value=Numtext(this.value)" onblur="validate_username(this.value);" id="usuario" type="text" name="usuario" style="text-transform:lowercase;">
@@ -278,7 +278,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>CONTRASEÑA</label>
+                                                      <label><?=lang('idioma.reg_contraseña');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="clave" type="password" name="clave">
@@ -287,7 +287,7 @@ labVcMaps.push({
                                           
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>REPETIR CONTRASEÑA</label>
+                                                      <label><?=lang('idioma.reg_rep_contraseña');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="repita_clave" onblur="validate_2passwordr(this.value);" type="password" name="repita_clave">
@@ -297,7 +297,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>NOMBRES</label>
+                                                      <label><?=lang('idioma.reg_nombres');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="name" type="text" name="name">
@@ -306,7 +306,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>APELLIDOS</label>
+                                                      <label><?=lang('idioma.reg_apellidos');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="last_name" type="text" name="last_name">
@@ -315,7 +315,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>DIRECCIÓN</label>
+                                                      <label><?=lang('idioma.reg_direccion');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="address" type="text" name="address">
@@ -324,7 +324,7 @@ labVcMaps.push({
                                            
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>TELÉFONO</label>
+                                                      <label><?=lang('idioma.reg_telefono');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="telefono" type="text" name="telefono">
@@ -333,7 +333,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>DNI / CEDULA</label>
+                                                      <label><?=lang('idioma.reg_dni');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="dni" type="text" name="dni">
@@ -342,7 +342,7 @@ labVcMaps.push({
                                                 
                                             <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>CORREO ELECTRÓNICO</label>
+                                                      <label><?=lang('idioma.reg_correo');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="email" type="text" name="email">
@@ -350,13 +350,13 @@ labVcMaps.push({
                                             </div>  
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
-                                                      <label>FECHA DE NACIMIENTO</label>
+                                                      <label><?=lang('idioma.reg_fecha');?></label>
                                                   </div>
                                             </div>  
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select name="dia" id="dia">
-                                                            <option value="">DÍA</option>
+                                                            <option value=""><?=lang('idioma.reg_dia');?></option>
                                                         <?php  for ($x = 1; $x <= 31; $x++) {  ?>
                                                             <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                         <?php } ?>
@@ -367,19 +367,19 @@ labVcMaps.push({
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select name="mes" id="mes">
-                                                            <option value="">MES</option>
-                                                                    <option value="01">Enero</option>
-                                                                    <option value="02">Febrero</option>
-                                                                    <option value="03">Marzo</option>
-                                                                    <option value="04">Abril</option>
-                                                                    <option value="05">Mayo</option>
-                                                                    <option value="06">Junio</option>
-                                                                    <option value="07">Julio</option>
-                                                                    <option value="08">Agosto</option>
-                                                                    <option value="09">Setiembre</option>
-                                                                    <option value="10">Octubre</option>
-                                                                    <option value="11">Noviembre</option>
-                                                                    <option value="12">Diciembre</option>
+                                                            <option value=""><?=lang('idioma.reg_mes');?></option>
+                                                                    <option value="01"><?=lang('idioma.reg_enero');?></option>
+                                                                    <option value="02"><?=lang('idioma.reg_febrero');?></option>
+                                                                    <option value="03"><?=lang('idioma.reg_marzo');?></option>
+                                                                    <option value="04"><?=lang('idioma.reg_abril');?></option>
+                                                                    <option value="05"><?=lang('idioma.reg_mayo');?></option>
+                                                                    <option value="06"><?=lang('idioma.reg_junio');?></option>
+                                                                    <option value="07"><?=lang('idioma.reg_julio');?></option>
+                                                                    <option value="08"><?=lang('idioma.reg_agosto');?></option>
+                                                                    <option value="09"><?=lang('idioma.reg_setiembre');?></option>
+                                                                    <option value="10"><?=lang('idioma.reg_octubre');?></option>
+                                                                    <option value="11"><?=lang('idioma.reg_noviembre');?></option>
+                                                                    <option value="12"><?=lang('idioma.reg_diciembre');?></option>
                                                         </select>
                                                   </div>
                                             </div>   
@@ -387,7 +387,7 @@ labVcMaps.push({
                                              <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select name="ano" id="ano" class="password_text" >
-                                                            <option selected="selected" value="">AÑO</option>
+                                                            <option selected="selected" value=""><?=lang('idioma.reg_ano');?></option>
                                                                 <?php  for ($x = 1950; $x <= 2016; $x++) {  ?>
                                                                     <option value="<?php echo $x?>"><?php echo $x;?></option>
                                                                 <?php } ?>
@@ -399,7 +399,7 @@ labVcMaps.push({
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
-                                                        <option  selected value="">PAÍS</option>
+                                                        <option  selected value=""><?=lang('idioma.reg_pais');?></option>
                                                             <?php  foreach ($obj_paises as $key => $value) { ?>
                                                                    <option style="border-style: solid !important" value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
                                                             <?php } ?>
@@ -409,14 +409,14 @@ labVcMaps.push({
                                             <div class="col-md-12">
                                                   <div class="col-md-12">
                                                       <select name="region" id="region" style="margin-bottom: 10px;">
-                                                          <option  selected="selected" value="">REGIÓN</option>
+                                                          <option  selected="selected" value=""><?=lang('idioma.reg_region');?></option>
                                                       </select>
                                                   </div>
                                             </div> 
                                              
                                              <div class="col-md-12">
                                                   <div class="col-md-3">
-                                                      <label>CIUDAD</label>
+                                                      <label><?=lang('idioma.reg_ciudad');?></label>
                                                   </div>
                                                   <div class="col-md-9">
                                                       <input class="form" id="city" type="text" name="city" >
@@ -425,7 +425,7 @@ labVcMaps.push({
                                           </div>
                                             <div class="col-md-12">&nbsp;</div>    
                                             <div class="col-md-12">
-                                                <button type="submit" class="button">Crear Cuenta</button>
+                                                <button type="submit" class="button"><?=lang('idioma.crear_cuenta');?></button>
                                             </div>
                                                 </form>
                                             </div>

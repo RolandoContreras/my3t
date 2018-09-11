@@ -128,6 +128,71 @@ $lang['idioma.ingrese_mensaje'] = "Please enter your message";
 $lang['idioma.olvidar'] = "Forgot your password?";   
 $lang['idioma.recuperar'] = "Recover password";   
 $lang['idioma.ingresa_usuario'] = "Enter your username:";   
+//REGISTER
+$lang['idioma.reg_patrocinador'] = "PATROCINADOR";  
+$lang['idioma.reg_usuario'] = "USUARIO";  
+$lang['idioma.reg_contraseña'] = "CONTRASEÑA";  
+$lang['idioma.reg_rep_contraseña'] = "REPETIR CONTRASEÑA";  
+$lang['idioma.reg_nombres'] = "NOMBRES";  
+$lang['idioma.reg_apellidos'] = "APELLIDOS";  
+$lang['idioma.reg_direccion'] = "DIRECCIÓN";  
+$lang['idioma.reg_telefono'] = "TELÉFONO";  
+$lang['idioma.reg_dni'] = "DNI / CEDULA";  
+$lang['idioma.reg_correo'] = "CORREO ELECTRÓNICO";  
+$lang['idioma.reg_fecha'] = "FECHA DE NACIMIENTO";  
+$lang['idioma.reg_dia'] = "DÍA";  
+$lang['idioma.reg_mes'] = "MES";
+$lang['idioma.reg_enero'] = "Enero";  
+$lang['idioma.reg_febrero'] = "Febrero";
+$lang['idioma.reg_marzo'] = "Marzo";
+$lang['idioma.reg_abril'] = "Abril";
+$lang['idioma.reg_mayo'] = "Mayo";
+$lang['idioma.reg_junio'] = "Junio";
+$lang['idioma.reg_julio'] = "Julio";
+$lang['idioma.reg_agosto'] = "Agosto";
+$lang['idioma.reg_setiembre'] = "Setiembre";
+$lang['idioma.reg_octubre'] = "Octubre";
+$lang['idioma.reg_noviembre'] = "Noviembre";
+$lang['idioma.reg_diciembre'] = "Diciembre";
+$lang['idioma.reg_ano'] = "AÑO";
+$lang['idioma.reg_pais'] = "PAÍS";
+$lang['idioma.reg_region'] = "REGIÓN";
+$lang['idioma.reg_ciudad'] = "CIUDAD";
+$lang['idioma.crear_cuenta'] = "Crear Cuenta";
+//REGISTER
+$lang['idioma.reg_registro'] = "Registration Form";  
+$lang['idioma.reg_patrocinador'] = "SPONSOR";  
+$lang['idioma.reg_usuario'] = "USERNAME";  
+$lang['idioma.reg_contraseña'] = "PASSWORD";  
+$lang['idioma.reg_rep_contraseña'] = "REPEAT PASSWORD";  
+$lang['idioma.reg_nombres'] = "NAMES";  
+$lang['idioma.reg_apellidos'] = "LAST NAME";  
+$lang['idioma.reg_direccion'] = "ADDRESS";  
+$lang['idioma.reg_telefono'] = "PHONE";  
+$lang['idioma.reg_dni'] = "DNI / IDENTIFICATION CARD";  
+$lang['idioma.reg_correo'] = "EMAIL";  
+$lang['idioma.reg_fecha'] = "DATE OF BIRTH";  
+$lang['idioma.reg_dia'] = "DAY";  
+$lang['idioma.reg_mes'] = "MONTH";
+$lang['idioma.reg_enero'] = "January";  
+$lang['idioma.reg_febrero'] = "February";
+$lang['idioma.reg_marzo'] = "March";
+$lang['idioma.reg_abril'] = "April";
+$lang['idioma.reg_mayo'] = "May";
+$lang['idioma.reg_junio'] = "June";
+$lang['idioma.reg_julio'] = "July";
+$lang['idioma.reg_agosto'] = "August";
+$lang['idioma.reg_setiembre'] = "September";
+$lang['idioma.reg_octubre'] = "october";
+$lang['idioma.reg_noviembre'] = "November";
+$lang['idioma.reg_diciembre'] = "December";
+$lang['idioma.reg_ano'] = "YEAR";
+$lang['idioma.reg_pais'] = "COUNTRY";
+$lang['idioma.reg_region'] = "REGION";
+$lang['idioma.reg_ciudad'] = "CITY";
+$lang['idioma.crear_cuenta'] = "Create Account";
+
+
 
 
 

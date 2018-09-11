@@ -126,9 +126,42 @@ $lang['idioma.ingrese_email'] = "Por favor ingrese su e-mail";
 $lang['idioma.ingrese_asunto'] = "Por favor ingrese su asunto";   
 $lang['idioma.ingrese_mensaje'] = "Por favor ingrese su mensaje";   
 $lang['idioma.olvidar'] = "¿Olvidó su Contraseña?";   
-
 $lang['idioma.recuperar'] = "Recuperar Contraseña";   
 $lang['idioma.ingresa_usuario'] = "Ingresa tu usuario:";   
+//REGISTER
+$lang['idioma.reg_registro'] = "Formulario de Registro";  
+$lang['idioma.reg_patrocinador'] = "PATROCINADOR";  
+$lang['idioma.reg_usuario'] = "USUARIO";  
+$lang['idioma.reg_contraseña'] = "CONTRASEÑA";  
+$lang['idioma.reg_rep_contraseña'] = "REPETIR CONTRASEÑA";  
+$lang['idioma.reg_nombres'] = "NOMBRES";  
+$lang['idioma.reg_apellidos'] = "APELLIDOS";  
+$lang['idioma.reg_direccion'] = "DIRECCIÓN";  
+$lang['idioma.reg_telefono'] = "TELÉFONO";  
+$lang['idioma.reg_dni'] = "DNI / CEDULA";  
+$lang['idioma.reg_correo'] = "CORREO ELECTRÓNICO";  
+$lang['idioma.reg_fecha'] = "FECHA DE NACIMIENTO";  
+$lang['idioma.reg_dia'] = "DÍA";  
+$lang['idioma.reg_mes'] = "MES";
+$lang['idioma.reg_enero'] = "Enero";  
+$lang['idioma.reg_febrero'] = "Febrero";
+$lang['idioma.reg_marzo'] = "Marzo";
+$lang['idioma.reg_abril'] = "Abril";
+$lang['idioma.reg_mayo'] = "Mayo";
+$lang['idioma.reg_junio'] = "Junio";
+$lang['idioma.reg_julio'] = "Julio";
+$lang['idioma.reg_agosto'] = "Agosto";
+$lang['idioma.reg_setiembre'] = "Setiembre";
+$lang['idioma.reg_octubre'] = "Octubre";
+$lang['idioma.reg_noviembre'] = "Noviembre";
+$lang['idioma.reg_diciembre'] = "Diciembre";
+$lang['idioma.reg_ano'] = "AÑO";
+$lang['idioma.reg_pais'] = "PAÍS";
+$lang['idioma.reg_region'] = "REGIÓN";
+$lang['idioma.reg_ciudad'] = "CIUDAD";
+$lang['idioma.crear_cuenta'] = "Crear Cuenta";
+
+
 
 
 

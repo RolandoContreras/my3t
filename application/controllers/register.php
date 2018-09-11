@@ -30,8 +30,8 @@ class Register extends CI_Controller {
 	{
             //SELECT URL IF ISSET USERNAME
             $url = explode("/", uri_string());
-            if (isset($url[2])) {
-                $username = $url[2];
+            if (isset($url[3])) {
+                $username = $url[3];
                 //Select params
                 $params = array(
                     "select" => "customer_id,first_name, position_temporal,username,identificador",
