@@ -34,22 +34,22 @@
                                                     <a href="<?php echo site_url().'static/backoffice/document/presentacion_oficial_es.pdf';?>" download="Presentación_3TClub_Es.pdf" class="btn btn-success " title="Descargar Presentación 3T Club"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
-                                            <tr>
+<!--                                            <tr>
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
                                                 <td style="padding: 25px">Presentación 3T Club - Ingles</td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/presentacion_oficial_en.pdf';?>" download="Presentación_3TClub_En.pdf" class="btn btn-success " title="Presentation 3T Club"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/presentacion_oficial_en.pdf';?>" download="Presentación_3TClub_En.pdf" class="btn btn-success" title="Presentation 3T Club"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
-                                            </tr>
+                                            </tr>-->
                                             <tr>
                                                 <td style="padding: 25px">
-                                                    <em class="fa fa-file-image-o fa-2x"/>
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Ficha RUC (Global Pass)</td>
+                                                <td style="padding: 25px">Plan de Acción</td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/globalpass_ruc.jpg';?>" download="Ficha Ruc Global Pass.jpg" class="btn btn-success" title="Descargar Ficha Ruc Global Pass"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/plan_de_accion.pdf';?>" download="Plan_accion_3TClub.pdf" class="btn btn-success " title="Plan Accion 3T Club"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -61,33 +61,7 @@
                                                     <a href="<?php echo site_url().'static/backoffice/document/blutrading_ruc.jpg';?>" download="Ficha Ruc Blu Trading.jpg" class="btn btn-success" title="Descargar Ficha Ruc Blu Trading"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td style="padding: 25px">
-                                                    <em class="fa fa-file-image-o fa-2x"/>
-                                                </td>
-                                                <td style="padding: 25px">Ficha RUC (Trade It Broker House)</td>
-                                                <td class="text-center" style="padding: 25px">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/tradeit_ruc.jpg';?>" download="Ficha Ruc Trade It Broker House.jpg" class="btn btn-success" title="Descargar Ficha Ruc Trade It Broker House"><i class="fa fa-download"></i> Descargar</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 25px">
-                                                    <em class="fa fa-file-pdf-o fa-2x"/>
-                                                </td>
-                                                <td style="padding: 25px">Presentación Global Pass</td>
-                                                <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/presentacion_globalpass.pdf';?>" download="Presentación Global Pass.pdf" class="btn btn-success" title="Descargar Presentación Global Pass"><i class="fa fa-download"></i> Descargar</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 25px">
-                                                    <em class="fa fa-file-pdf-o fa-2x"/>
-                                                </td>
-                                                <td style="padding: 25px">Presentación Blu Trading</td>
-                                                <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/blu-trading.pdf';?>" download="Presentación Blu Trading.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
-                                                </td>
-                                            </tr>
+                                            
                                             <tr>
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
@@ -122,6 +96,15 @@
                                                 <td style="padding: 25px">Power Of Attorney - TIB</td>
                                                 <td style="padding: 25px" class="text-center">
                                                     <a href="<?php echo site_url().'static/backoffice/document/power-of-attorney.pdf';?>" download="Power of Attormey.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 25px">
+                                                    <em class="fa fa-file-image-o fa-2x"/>
+                                                </td>
+                                                <td style="padding: 25px">Ficha RUC (Trade It Broker House)</td>
+                                                <td class="text-center" style="padding: 25px">
+                                                    <a href="<?php echo site_url().'static/backoffice/document/tradeit_ruc.jpg';?>" download="Ficha Ruc Trade It Broker House.jpg" class="btn btn-success" title="Descargar Ficha Ruc Trade It Broker House"><i class="fa fa-download"></i> Descargar</a>
                                                 </td>
                                             </tr>
                                         </tbody>
