@@ -119,6 +119,12 @@ $lang['idioma.ingresa_email'] = "Ingresa tu e-mail:";
 $lang['idioma.ingresa_asunto'] = "Ingresa el asunto:";   
 $lang['idioma.ingresa_mensaje'] = "Ingresa el mensaje:";   
 $lang['idioma.enviar_mensaje'] = "Enviar Mensaje";   
+$lang['idioma.ingrese_nombre'] = "Por favor ingrese su nombre";   
+$lang['idioma.ingrese_email'] = "Por favor ingrese su e-mail";   
+$lang['idioma.ingrese_asunto'] = "Por favor ingrese su asunto";   
+$lang['idioma.ingrese_mensaje'] = "Por favor ingrese su mensaje";   
+
+
 
 
 
