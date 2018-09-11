@@ -40,8 +40,8 @@ class B_unilevel extends CI_Controller {
         //GET PRICE BTC
         $price_btc = $this->btc_price();
         
-        if(isset($url[2])){
-            $customer_id = decrypt($url[2]);
+        if(isset($url[3])){
+            $customer_id = decrypt($url[3]);
         }else{
             $customer_id = $_SESSION['customer']['customer_id'];
         }    

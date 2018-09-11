@@ -42,8 +42,8 @@ class B_binario extends CI_Controller {
         //SELECT URL    
         $url = explode("/",uri_string());
             
-        if(isset($url[2])){
-             $customer_id = decrypt($url[2]);
+        if(isset($url[3])){
+             $customer_id = decrypt($url[3]);
         }    
         
         //VERIFIRY GET SESSION    
