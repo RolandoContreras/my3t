@@ -111,8 +111,8 @@ class B_binario extends CI_Controller {
                                  "where" => "paises.id_idioma = 7 and $str",
                                  "join" => array('paises, customer.country = paises.id',
                                             'franchise, customer.franchise_id = franchise.franchise_id',
-                                            'ranges, customer.range_id = ranges.range_id'),
-                                "limit" => "100");
+                                            'ranges, customer.range_id = ranges.range_id')
+                                );
                                 
                                 
                     $obj_tree = $this->obj_customer->search($param_tree); 
