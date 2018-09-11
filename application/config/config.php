@@ -79,16 +79,15 @@ $config['url_suffix'] = '';
 | there is an available translation if you intend to use something other
 | than english.
 |
-*/
-//$config['language']	= 'spanish';
+$config['language'] = "spanish";
 /* default language abbreviation */
-//$config['language_abbr'] = "es";
+$config['language_abbr'] = "es";
 
 /* set available language abbreviations */
-//$config['lang_uri_abbr'] = array("es" => "spanish", "en" => "english", "pt-br" => "portugues");
+$config['lang_uri_abbr'] = array("es" => "spanish", "en" => "english");
 
 /* hide the language segment (use cookie) */
-//$config['lang_ignore'] = TRUE;
+$config['lang_ignore'] = TRUE;
 /*
 |--------------------------------------------------------------------------
 | Default Character Set

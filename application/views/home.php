@@ -100,7 +100,7 @@
 			data-paddingright="[0,0,0,0]"
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
-                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?php echo replace_vocales_voculeshtml("Sé parte de los pioneros y ten un asombroso estilo de vida.");?></div>
+                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?=lang('idioma.banner_se_parte');?></div>
 		<!-- LAYER NR. 4 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
 			id="slide-12-layer-2" 
@@ -119,7 +119,7 @@
 			data-paddingright="[0,0,0,0]"
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
-			style="z-index: 8; white-space: nowrap;">Asombroso Estilo De Vida<br/>
+			style="z-index: 8; white-space: nowrap;"><?=lang('idioma.banner_asombroso');?><br/>
                 </div>
 		<!-- LAYER NR. 5 -->
 		<div class="tp-caption tp-shape tp-shapewrapper " 
@@ -225,7 +225,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-			style="z-index: 7; white-space: nowrap; letter-spacing: 3px;">Ten un estilo de vida distinto, empieza a viajar, entrenarte y convertirte en un profesional del trading.</div>
+			style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?=lang('idioma.banner_ten_estilo');?></div>
 
 		<!-- LAYER NR. 10 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
@@ -364,7 +364,7 @@
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
 
-                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;">Primer club con servicios  en los rubros de viaje, desarrollo personal y comercio.</div>
+                        style="z-index: 7; white-space: nowrap; letter-spacing: 3px;"><?=lang('idioma.banner_primer_club');?></div>
 
 		<!-- LAYER NR. 16 -->
 		<div class="tp-caption Creative-Title   tp-resizeme" 
@@ -386,9 +386,7 @@
 			data-paddingright="[0,0,0,0]"
 			data-paddingbottom="[0,0,0,0]"
 			data-paddingleft="[0,0,0,0]"
-
-			style="z-index: 8; white-space: nowrap; ;text-align:center;">3T - Inicia <br/>Sé parte de una revolución <br/></div>
-
+			style="z-index: 8; white-space: nowrap; ;text-align:center;"><?=lang('idioma.banner_3t_inicia');?><br/><?=lang('idioma.banner_revolucion');?><br/></div>
 		<!-- LAYER NR. 17 -->
 		<div class="tp-caption tp-shape tp-shapewrapper " 
 			 id="slide-16-layer-5" 
@@ -573,8 +571,8 @@ tpj(document).ready(function() {
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Alianzas</h3>
-                                <p style="text-align: center;">Contamos con las mejores alianzas a nivel internacional con compañías prestigiosas para garantizar la calidad de nuestros servicios.</p>
+                                <h3 style="text-align: center;"><?=lang('idioma.home_alianzas');?></h3>
+                                <p style="text-align: center;"><?=lang('idioma.home_contamos_alianzas');?></p>
                             </div>
                         </div>
                     </div>
@@ -592,8 +590,8 @@ tpj(document).ready(function() {
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Legalidad</h3>
-                                <p style="text-align: center;">Empresa 100% legal que reside en Perú con avales y permisos en dicha jurisdicción con oficinas en una zona exclusiva abierta los asociados.</p>
+                                <h3 style="text-align: center;"><?=lang('idioma.home_legalidad');?></h3>
+                                <p style="text-align: center;"><?=lang('idioma.home_empresa_100');?></p>
 
                             </div>
                         </div>
@@ -612,8 +610,8 @@ tpj(document).ready(function() {
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Oportunidad</h3>
-                                <p style="text-align: center;">Somos globales desde el día uno y damos beneficios para que Ud. puede ser socio de este club exclusivo con membresías por debajo del mercado.</p>
+                                <h3 style="text-align: center;"><?=lang('idioma.home_oportunidad');?></h3>
+                                <p style="text-align: center;"><?=lang('idioma.home_somos_globales');?></p>
                             </div>
                         </div>
                     </div>
@@ -631,8 +629,8 @@ tpj(document).ready(function() {
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Productos</h3>
-                                <p style="text-align: center;">Contamos con los productos y servicios más cotizados del mercado desarrollados por profesionales altamente calificados.</p>
+                                <h3 style="text-align: center;"><?=lang('idioma.home_productos');?></h3>
+                                <p style="text-align: center;"><?=lang('idioma.home_productos_cotizados');?></p>
                             </div>
                         </div>
                     </div>
@@ -646,8 +644,8 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner vc_custom_1498573592424">
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
-                                <H2>3T CLUB</H2>
-                                <p><b>Somos club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar. Viaja, entrénate y Gana. ¿Alguna vez has soñado con viajar? ¿Conocer otras culturas? ¿Descubrir las maravillas que el mundo tiene para ti? Sé parte de 3T Club.</b></p>
+                                <H2><?=lang('idioma.3t_club');?></H2>
+                                <p><b><?=lang('idioma.home_somos_club');?></b></p>
                         </div>
                     </div>
                 </div>
@@ -663,11 +661,11 @@ tpj(document).ready(function() {
                     <div class="wpb_wrapper">
                         <div class="wpb_text_column wpb_content_element  text-block post-formatting " >
                             <div class="wpb_wrapper">
-                                <h2>Propósito 3T</h2>
-                                <h3>Visión</h3>
-                                        <p>Nuestra visión es ser el primer club privado de viajes, desarrollo personal y financiero a nivel mundial dónde logremos hacer un cambio en el estilo de vida de los miembros que en consecuencia, estos mismos tenga un crecimiento integral a través de los servicios de nuestra nuestro club.</p>
-                                <h3>Misión</h3>
-                                <p>Nuestra misión es que mediante las recomendación de nuestros asociados y el constante desarrollo de nuestros productos y servicios podamos ayudar a que las personas puedan tener el estilo de vida que siempre han soñado.</p>
+                                <h2><?=lang('idioma.about_proposito');?></h2>
+                                    <h3><?=lang('idioma.about_vision');?></h3>
+                                    <p><?=lang('idioma.about_nuestra_vision');?></p>
+                                    <h3><?=lang('idioma.about_mision');?></h3>
+                                    <p><?=lang('idioma.about_nuestra_mision');?></p>
                             </div>
                         </div>
                     </div>
@@ -709,13 +707,13 @@ tpj(document).ready(function() {
                     <div class="wpb_wrapper">
                         <div class="wpb_text_column wpb_content_element  text-block post-formatting " >
                             <div class="wpb_wrapper">
-                                <h2>VIAJES - COACHING - INVERSIONES</h2>
-                                    <h4>Viajes</h4>
-                                    <p>Te damos la oportunidad de ser parte de 3T Club que te permitirá tener hasta un 70% de descuentos en hoteles de julo, rentas de autos, cruceros, vacaciones entre otros, y ser parte de la plataforma más gran intercambio conformado por los mejores resort a nivel internacional R.C.I.</p>
-                                    <h4>Coaching</h4>
-                                    <p>Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, recibe el sistema JAQUEMENTE un sistema probado que está llevando al éxito a cientos de personas haciendo que tengan un crecimiento es su vida.</p>
-                                    <h4>Inversiones</h4>
-                                    <p>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y la noticia más importante del día  tendrás en nuestra academia. Profesionales altamente calificados  en manejo y gestión de fondos de inversión con experiencias en compañías prestigiosas  en Latinoamérica y Europa forman el staff de 3T ACADEMY.</p>
+                                <h2><?=lang('idioma.about_viaje_coaching_inversiones');?></h2>
+                                    <h4><?=lang('idioma.about_viajes');?></h4>
+                                    <p><?=lang('idioma.about_te_damos_viaje');?></p>
+                                    <h4><?=lang('idioma.about_coaching');?></h4>
+                                    <p><?=lang('idioma.about_te_damos_entrenamiento');?></p>
+                                    <h4><?=lang('idioma.about_inversiones');?></h4>
+                                    <p><?=lang('idioma.about_fundamentos_basicos');?></p>
                             </div>
                         </div>
                     </div>
@@ -732,8 +730,8 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner">
                     <div class="wpb_wrapper">
                         <div class="section-title  homepage-destinations-title vc_custom_1497274905763">
-                                <H2>Membresías 3T </H2>
-                                <p>Sé parte del club, y no te quedes fuera.</p>
+                                <H2><?=lang('idioma.home_membresias');?></H2>
+                                <p><?=lang('idioma.home_se_parte');?></p>
                         </div>
                         <div id="tours-1-container" class="lab-portfolio-items portfolio-container-and-title  homepage-destinations portfolio-loop-layout-type-2">
                             <!--START PAQUETE BASIC-->
@@ -780,8 +778,8 @@ tpj(document).ready(function() {
                 <div class="vc_column-inner vc_custom_1498573592424">
                     <div class="wpb_wrapper">
                         <div class="section-title  vc_custom_1497023315246">
-                                <H2>Descubre todos los beneficios que 3T tiene para ti</H2>
-                                <p><b>No pierdas esta oportunidad y comunícate con la persona que te recomendó 3T Club</b></p>
+                                <h2><?=lang('idioma.home_descubre');?></h2>
+                                <p><b><?=lang('idioma.home_no_pierdas');?></b></p>
                         </div>
                     </div>
                 </div>

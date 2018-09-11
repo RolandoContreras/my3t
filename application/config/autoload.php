@@ -64,7 +64,7 @@ $autoload['libraries'] = array('pagination','form_validation','image_lib','tmp_b
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url','form','string','basico');
+$autoload['helper'] = array('url','form','string','basico','language');
 
 
 /*
@@ -96,7 +96,7 @@ $autoload['config'] = array();
 |
 */
 
-$autoload['language'] = array();
+$autoload['language'] = array('idioma');
 
 
 /*
