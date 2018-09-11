@@ -81,8 +81,8 @@
                                     $style_soporte = "";
                                     $style_information = "";
                                     $style_pagos = "";
-                                    if(isset($url[1])){
-                                        switch ($url[1]) {
+                                    if(isset($url[2])){
+                                        switch ($url[2]) {
                                             ////////
                                                     case "profile":
                                                         $style_misdatos = "a_active";
