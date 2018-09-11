@@ -69,7 +69,7 @@
                                                                         <div class="col-sm-12">
                                                                             <div class="form-group">
                                                                                 <div class="col-md-3">
-                                                                                    <label><?=lang('idioma.ingresa_usuario');?></label>
+                                                                                    <label><?=lang('idioma.usuario');?></label>
                                                                                 </div>
                                                                                 <div class="col-md-9">
                                                                                     <input class="form" name="username" id="username" type="text">
@@ -79,7 +79,7 @@
                                                                             <div class="col-sm-12">
                                                                                 <div class="form-group">
                                                                                     <div class="col-md-3">
-                                                                                     <label><?=lang('idioma.ingresa_contrasena');?></label>   
+                                                                                     <label><?=lang('idioma.contrasena');?></label>   
                                                                                     </div>
                                                                                     <div class="col-md-9">
                                                                                         <input class="form" name="password" id="password" type="password">
