@@ -35,7 +35,6 @@ $lang['idioma.banner_primer_club'] = "Primer club con servicios  en los rubros d
 $lang['idioma.banner_3t_inicia'] = "3T - Inicia";   
 $lang['idioma.banner_revolucion'] = "Sé parte de una revolución.";   
 $lang['idioma.banner_comprar'] = "¡Comprar!";   
-
 $lang['idioma.home_alianzas'] = "Alianzas";   
 $lang['idioma.home_contamos_alianzas'] = "Contamos con las mejores alianzas a nivel internacional con compañías prestigiosas para garantizar la calidad de nuestros servicios.";   
 $lang['idioma.home_legalidad'] = "Legalidad";    
@@ -45,8 +44,6 @@ $lang['idioma.home_somos_globales'] = "Somos globales desde el día uno y damos 
 $lang['idioma.home_productos'] = "Productos";    
 $lang['idioma.home_productos_cotizados'] = "Contamos con los productos y servicios más cotizados del mercado desarrollados por profesionales altamente calificados.";   
 $lang['idioma.home_somos_club'] = "Somos club privado más completo en viajes, desarrollo personal y financiero a nivel mundial. Los 3 rubros más cotizados en un solo lugar. Viaja, entrénate y Gana. ¿Alguna vez has soñado con viajar? ¿Conocer otras culturas? ¿Descubrir las maravillas que el mundo tiene para ti? Sé parte de 3T Club.";   
-
-
 $lang['idioma.home_membresias'] = "Membresías 3T Club";   
 $lang['idioma.home_se_parte'] = "Sé parte del club, y no te quedes fuera.";   
 $lang['idioma.home_descubre'] = "Descubre todos los beneficios que 3T tiene para ti";   
@@ -56,7 +53,6 @@ $lang['idioma.home_no_pierdas'] = "No pierdas esta oportunidad y comunícate con
 $lang['idioma.about_nosotros'] = "ACERCA DE NOSOTROS";   
 $lang['idioma.about_que_es'] = "¿Qué es 3T Club?";   
 $lang['idioma.about_somos_el_club'] = "Somos el club privado más completo en viajes, desarrollo personal y financiero. Club latinoamericano que se desarrolla a nivel mundial presentando los 3 rubros más cotizados y deseado del momento: VIAJES, DESARROLLO PERSONAL E INVERSIONES, el cual permite que cualquiera persona que sea recomendado por un asociado del club tenga los beneficios mencionados a continuación.";   
-
 $lang['idioma.about_productos'] = "Productos";   
 $lang['idioma.about_todos_miembro'] = "Todos los miembros del club reciben la prestigiosa plataforma de intercambios R.C.I. conformada por los mejores hoteles y resort a nivel mundial para que de esta forma sean clientes exclusivos y puedan tener descuentos en el rubro de viajes.";   
 $lang['idioma.about_rci'] = "¿Qué es RCI?";   
@@ -75,7 +71,6 @@ $lang['idioma.about_academia_3t'] = "Academia de 3T Club para aprender a hacer i
 $lang['idioma.about_se_divide'] = "La academia se divide en 3 módulos “básico, intermedio y avanzando” dependiendo de tus conocimientos entrarás a cualquier de ellos, las clases y enseñanzas son basadas en cursos por competencias.";   
 $lang['idioma.about_que_es_blu'] = "¿Qué es Blu Trading?";   
 $lang['idioma.about_prestigiosa_firma'] = "Blu Trading prestigiosa firma de gestión de fondo con operaciones en América, Europa y Asia busca revalorizar el dinero nuestros asociados en los mercados de acciones, índices bursátiles, commodities y divisas. Los asociados de 3T Club tendrán la opción de firmar un contrato por tiempo ilimitado para que puedan rentabilizar sus inversiones con la firma de gestión.";   
-
 $lang['idioma.about_team'] = "Equipo";   
 $lang['idioma.about_ceo_fundadora'] = "CEO & Fundadora";   
 $lang['idioma.about_administradora_profesion'] = "Administradora de profesión, coach y networker con más de 10 años de experiencia en la industrial del network marketing, durante su carrera ha obtenido grandes resultados creando organizaciones de personas alrededor del mundo y a la vez es la creadora del concepto 3T “Travel, Training and Trade”";   
@@ -88,8 +83,6 @@ $lang['idioma.about_trader_profesional'] = "Trader Profesional";
 $lang['idioma.about_trader_xtrader'] = "Administrador de Negocios Internacionales de profesión. Ejerció durante 4 años como trader para el X-Trader Brokers (XTB). En los últimos años, se ha desempeñado como asesor de inversiones bursátiles para Sudamérica y Europa. Ha realizado variadas publicaciones sobre economía global y local para El Diario Gestión, El Comercio y RPP Noticias. Además, ha impartido cursos de formación bursátil para, Metodotrading.com y El Instituto de la Moneda de Lima y la Universidad de Piura en Perú.";   
 $lang['idioma.about_analista_financiero'] = "Analista Financiero";   
 $lang['idioma.about_analista_inversiones'] = "Administrador de Negocios Internacionales de profesión. Analista de Inversiones bursátiles para diferentes brókers de mercados financieros líderes en el Perú y Latinoamérica, como analista ha desarrollado diferentes alternativas de inversión y ha dictado distintos seminarios de bolsa de valores, tanto en el MBA de finanzas de la UPC y en las compañías donde ha trabajado, ha escrito informes de mercado de valores y economía para distintos medios de comunicación a nivel nacional.";   
-
-
 $lang['idioma.about_proposito'] = "Propósito 3T";   
 $lang['idioma.about_vision'] = "Visión";   
 $lang['idioma.about_nuestra_vision'] = "Nuestra visión es ser el primer club privado de viajes, desarrollo personal y financiero a nivel mundial dónde logremos hacer un cambio en el estilo de vida de los miembros que en consecuencia, estos mismos tenga un crecimiento integral a través de los servicios de nuestra nuestro club.";   
@@ -102,6 +95,34 @@ $lang['idioma.about_coaching'] = "Coaching";
 $lang['idioma.about_te_damos_entrenamiento'] = "Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, recibe el sistema JAQUEMENTE un sistema probado que está llevando al éxito a cientos de personas haciendo que tengan un crecimiento es su vida.";   
 $lang['idioma.about_inversiones'] = "Inversiones";   
 $lang['idioma.about_fundamentos_basicos'] = "Fundamentos básicos, entrenamientos personalizados, señales, estrategias y la noticia más importante del día tendrás en nuestra academia. Profesionales altamente calificados en manejo y gestión de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de 3T ACADEMY.";   
+
+//CONTACT
+$lang['idioma.contact_membresia'] = "Selecciona una membresía";   
+$lang['idioma.contact_compra'] = "Compra una membresía y obtén los beneficios del club.";   
+$lang['idioma.contact_planifica'] = "Planifica tu trabajo";   
+$lang['idioma.contact_arma'] = "Arma tu estrategia y aplica el plan de acción.";   
+$lang['idioma.contact_prueba'] = "Pruebas los productos";   
+$lang['idioma.contact_empieza'] = "Empieza a viajar, entrenar y hacer trading y cambia tu vida.";   
+$lang['idioma.contact_obtendras'] = "Obtendrás resultados";   
+$lang['idioma.contact_90dias'] = "En los próximos 90 días tendrás los resultados que esperas.";   
+$lang['idioma.contact'] = "Contáctenos";   
+$lang['idioma.contact_mantente'] = "Mantente en contacto llenando el formulario, llámenos o visítenos en nuestras oficinas.";   
+$lang['idioma.contact_visitanos'] = "Visítanos:";   
+$lang['idioma.contact_calle'] = "Calle Germán Schreiber #276";   
+$lang['idioma.contact_edificio'] = "Edificio Schreiber Business Center";   
+$lang['idioma.contact_horario'] = "Horario de Trabajo";   
+$lang['idioma.contact_lunes'] = "Lunes — Viernes";   
+$lang['idioma.contact_sabado'] = "Sábados";   
+//FORMULAIO
+$lang['idioma.ingresa_nombre'] = "Ingresa tu nombre:";   
+$lang['idioma.ingresa_email'] = "Ingresa tu e-mail:";   
+$lang['idioma.ingresa_asunto'] = "Ingresa el asunto:";   
+$lang['idioma.ingresa_mensaje'] = "Ingresa el mensaje:";   
+$lang['idioma.enviar_mensaje'] = "Enviar Mensaje";   
+
+
+
+
 
 
 

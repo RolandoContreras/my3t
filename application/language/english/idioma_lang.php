@@ -35,7 +35,6 @@ $lang['idioma.banner_primer_club'] = "First club with services in the areas of t
 $lang['idioma.banner_3t_inicia'] = "3T Club - Beginn";   
 $lang['idioma.banner_revolucion'] = "Be part of a revolution.";
 $lang['idioma.banner_comprar'] = "¡Shop!";   
-
 $lang['idioma.home_alianzas'] = "Alliances";   
 $lang['idioma.home_contamos_alianzas'] = "We have the best international alliances with prestigious companies to guarantee the quality of our services.";   
 $lang['idioma.home_legalidad'] = "Legality";    
@@ -45,7 +44,6 @@ $lang['idioma.home_somos_globales'] = "We are global from day one and give benef
 $lang['idioma.home_productos'] = "Products";    
 $lang['idioma.home_productos_cotizados'] = "We have products and services most quoted on the market developed by highly qualified professionals.";   
 $lang['idioma.home_somos_club'] = "We are the most complete private club in travel, personal and financial development. The 3 areas most quoted in one place. Travel, train and win. Would ever have dreamed of travel? Get to know other cultures? Would discover the wonders that the world has for you?. Be part of the 3T Club";   
-
 $lang['idioma.home_membresias'] = "3T Club memberships";   
 $lang['idioma.home_se_parte'] = "Be a part of the club, and do not stay out";   
 $lang['idioma.home_descubre'] = "See all the benefits that 3T Club has for you";   
@@ -54,8 +52,7 @@ $lang['idioma.home_no_pierdas'] = "Don't miss this opportunity and contact the p
 //ABOUT
 $lang['idioma.about_nosotros'] = "ABOUT US";   
 $lang['idioma.about_que_es'] = "What is 3T Club?";   
-$lang['idioma.about_somos_el_club'] = "Somos el club privado más completo en viajes, desarrollo personal y financiero. Club latinoamericano que se desarrolla a nivel mundial presentando los 3 rubros más cotizados y deseado del momento: VIAJES, DESARROLLO PERSONAL E INVERSIONES, el cual permite que cualquiera persona que sea recomendado por un asociado del club tenga los beneficios mencionados a continuación.";   
-
+$lang['idioma.about_somos_el_club'] = "We are the most complete private club in travel, personal and financial development.Latin American Club that develops around the world presenting the 3 products quoted and most desired of the moment: travel, development staff and investments, which allows anyone who is recommended by an associate of club benefits mentioned below.";   
 $lang['idioma.about_productos'] = "Products";   
 $lang['idioma.about_todos_miembro'] = "All the club members receive the prestigious platform of exchanges R.C.I. formed by the best hotels and resort to level world so that in this way are exclusive customers and they have discounts in the travel area.";   
 $lang['idioma.about_rci'] = "What is RCI?";   
@@ -74,7 +71,6 @@ $lang['idioma.about_academia_3t'] = "Learn how to make investments in the world 
 $lang['idioma.about_se_divide'] = 'The Academy is divided into 3 modules "Basic, intermediate and advance" depending on your skills you will enter to any of them, classes and teachings are based on courses for skills.';   
 $lang['idioma.about_que_es_blu'] = "What is Blu Trading?";   
 $lang['idioma.about_prestigiosa_firma'] = "Blu Trading prestigious fund management firm with operations in the Americas, Europe and Asia seeks to revalue the money our partners in actions, stock indices, commodities and currency markets.3T Club members will have the option of signing a contract for an unlimited period so they can monetize their investments with the firm's management.";   
-
 $lang['idioma.about_team'] = "Team";   
 $lang['idioma.about_ceo_fundadora'] = "CEO & Founder";   
 $lang['idioma.about_administradora_profesion'] = 'Administrator by profession, coach and networker with over 10 years of experience in the network marketing industry, during his career has obtained great results by creating organizations of people around the world and is also the creator of the 3T concept" Travel, Training and Trade"'; 
@@ -87,15 +83,11 @@ $lang['idioma.about_trader_profesional'] = "Professional Trader";
 $lang['idioma.about_trader_xtrader'] = "Manager of international business by profession. He worked for 4 years as a trader for the X-Trader Brokers (XTB).In recent years, he has served as Advisor to stock investments in South America and Europe.He has made various publications on global and local economies for RPP Noticias and the newspaper management, El Comercio.In addition, she has taught courses of stock market training, Metodotrading.com and the Institute of the currency of Lima and the University of Piura in Peru.";   
 $lang['idioma.about_analista_financiero'] = "Financial Analyst";   
 $lang['idioma.about_analista_inversiones'] = "Manager of international business by profession. Investment analyst stock for different brokers of leading financial markets in the Peru and Latin America, as an analyst has developed different investment alternatives and has given several seminars of stock, both in the MBA Finance UPC and in companies where he has worked, he has written reports of securities market and economy to media nationwide.";   
-
-
 $lang['idioma.about_proposito'] = "3T Purpose";   
 $lang['idioma.about_vision'] = "Vision";   
 $lang['idioma.about_nuestra_vision'] = "Our vision is to be the first private travel, club development staff and financial world where will be able to make a change in the lifestyle of the members as a result, these have a comprehensive growth through our services our club.";   
 $lang['idioma.about_mision'] = "Mission";   
 $lang['idioma.about_nuestra_mision'] = "Our mission is that through the recommendation of our partners and the constant development of our products and services we can help people to have the lifestyle you have always dreamed of.";   
-
-
 $lang['idioma.about_viaje_coaching_inversiones'] = "TRAVEL - COACHING - INVESTMENTS";   
 $lang['idioma.about_viajes'] = "Travel";   
 $lang['idioma.about_te_damos_viaje'] = "We give you the opportunity to be part of 3T Club that will allow you to have up to 70% discounts on luxury hotels, cars, cruises, vacation among others, incomes and be part of the platform more great exchange consisting of the best resort internationally R. C.I.";   
@@ -103,6 +95,32 @@ $lang['idioma.about_coaching'] = "Coaching";
 $lang['idioma.about_te_damos_entrenamiento'] = "We give you an exclusive training so that you can develop the leader that there is in you, receives the JAQUEMENTE system that is taking the success to hundreds of people doing having a growth is his life.";   
 $lang['idioma.about_inversiones'] = "Investments";   
 $lang['idioma.about_fundamentos_basicos'] = "Basics, personalized training, signals, strategies and the most important news of the day you can have in our Academy.Highly qualified professionals in management and administration of mutual funds with experiences in prestigious companies in America and Europe are 3T ACADEMY staff.";   
+
+//CONTACT
+$lang['idioma.contact_membresia'] = "Select a membership";   
+$lang['idioma.contact_compra'] = "Buy a membership and get the benefits of the club.";   
+$lang['idioma.contact_planifica'] = "Plan your work";   
+$lang['idioma.contact_arma'] = "Plan your strategy and the action plan applies";   
+$lang['idioma.contact_prueba'] = "Enjoy the products";   
+$lang['idioma.contact_empieza'] = "It starts to travel, train and make trading and change your life.";   
+$lang['idioma.contact_obtendras'] = "You will get results";   
+$lang['idioma.contact_90dias'] = "In the next 90 days, you will have results that you expect.";   
+$lang['idioma.contact'] = "Contact us";   
+$lang['idioma.contact_mantente'] = "Keep in touch by filling out the form, call us or visit us in our offices.";   
+$lang['idioma.contact_visitanos'] = "Visit us:";   
+$lang['idioma.contact_calle'] = "Street Germán Schreiber 276";   
+$lang['idioma.contact_edificio'] = "Schreiber Business Center Building";   
+$lang['idioma.contact_horario'] = "Work Schedule";   
+$lang['idioma.contact_lunes'] = "Monday - Friday";   
+$lang['idioma.contact_sabado'] = "Saturdays";   
+//FORMULAIO
+$lang['idioma.ingresa_nombre'] = "Tell us your name:";   
+$lang['idioma.ingresa_email'] = "Tell us your e-mail:";   
+$lang['idioma.ingresa_asunto'] = "Tell us your subject:";   
+$lang['idioma.ingresa_mensaje'] = "Tell us your message:";   
+$lang['idioma.enviar_mensaje'] = "Send Message";   
+
+
 
 
 

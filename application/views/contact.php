@@ -238,8 +238,8 @@ labVcMaps.push({
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Selecciona un Paquete</h3>
-                                <p style="text-align: center;">Elije un paquete y sé parte de nueva revolución de 3T Club.</p>
+                                <h3 style="text-align: center;"><?=lang('idioma.contact_membresia');?></h3>
+                                <p style="text-align: center;"><?=lang('idioma.contact_compra');?></p>
                             </div>
                         </div>
                     </div>
@@ -255,8 +255,8 @@ labVcMaps.push({
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Planifica tu trabajo</h3>
-                                <p style="text-align: center;">Arma tu estrategia y aplica el plan de acción.</p>
+                                <h3 style="text-align: center;"><?=lang('idioma.contact_planifica');?></h3>
+                                <p style="text-align: center;"><?=lang('idioma.contact_arma');?></p>
                             </div>
                         </div>
                     </div>
@@ -272,8 +272,8 @@ labVcMaps.push({
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Pruebas los productos</h3>
-                                    <p style="text-align: center;">Empieza a viajar, entrenar y hacer trading y cambia tu vida.</p>
+                                <h3 style="text-align: center;"><?=lang('idioma.contact_prueba');?></h3>
+                                    <p style="text-align: center;"><?=lang('idioma.contact_empieza');?></p>
                             </div>
                         </div>
                     </div>
@@ -289,8 +289,8 @@ labVcMaps.push({
                         </div>
                         <div class="wpb_text_column wpb_content_element  post-formatting " >
                             <div class="wpb_wrapper">
-                                    <h3 style="text-align: center;">Obtendrás resultados</h3>
-                                        <p style="text-align: center;">En los próximos 90 días tendrás los resultados que esperas.</p>
+                                    <h3 style="text-align: center;"><?=lang('idioma.contact_obtendras');?></h3>
+                                        <p style="text-align: center;"><?=lang('idioma.contact_90dias');?></p>
                             </div>
                         </div>
                     </div>
@@ -304,8 +304,8 @@ labVcMaps.push({
                 <div class="vc_column-inner vc_custom_1498222572351">
                     <div class="wpb_wrapper">
                         <div class="section-title ">
-                        <h2>Contáctenos</h2>
-                            <p>Mantente en contacto llenando el formulario, llámenos o visítenos en nuestras oficinas.</p>
+                        <h2><?=lang('idioma.contact');?></h2>
+                            <p><?=lang('idioma.contact_mantente');?></p>
                         </div>
                         <div class="vc-parent-row row-default">
                             <div class="vc_row wpb_row vc_inner vc_row-fluid">
@@ -317,40 +317,40 @@ labVcMaps.push({
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                               <div class="col-md-3">
-                                                                  <label>Nombre:</label>
+                                                                  <label><?=lang('idioma.ingresa_nombre');?></label>
                                                               </div>
                                                               <div class="col-md-9">
-                                                                  <input class="form" name="name" id="name" type="text" data-label="Name">
+                                                                  <input class="form" name="name" id="name" type="text">
                                                               </div>    
                                                         </div>
                                                         <div class="col-md-12">
                                                               <div class="col-md-3">
-                                                                  <label>E-mail:</label>
+                                                                  <label><?=lang('idioma.ingresa_email');?></label>
                                                               </div>
                                                               <div class="col-md-9">
-                                                                   <input class="form" name="email" id="email" type="email" data-label="Email">
+                                                                   <input class="form" name="email" id="email" type="email">
                                                               </div>    
                                                         </div>    
                                                         <div class="col-md-12">
                                                               <div class="col-md-3">
-                                                                  <label>Asunto:</label>
+                                                                  <label><?=lang('idioma.ingresa_asunto');?></label>
                                                               </div>
                                                               <div class="col-md-9">
-                                                                   <input class="form" name="subject" id="subject" type="text" data-label="Email">
+                                                                   <input class="form" name="subject" id="subject" type="text">
                                                               </div>    
                                                         </div>
                                                         <div class="col-md-12">
                                                               <div class="col-md-3">
-                                                                  <label>Mensaje:</label>
+                                                                  <label><?=lang('idioma.ingresa_mensaje');?></label>
                                                               </div>
                                                               <div class="col-md-9">
-                                                                    <textarea class="form" name="message" id="message" data-label="Message"></textarea>
+                                                                    <textarea class="form" name="message" id="message"></textarea>
                                                               </div>    
                                                         </div>
                                                     </div>
                                             <div class="col-md-12">&nbsp;</div>    
                                             <div class="col-md-12">
-                                                <button type="submit" value="Enviar Mensaje" class="button">Enviar Mensaje</button>
+                                                <button type="submit" value="Enviar Mensaje" class="button"><?=lang('idioma.enviar_mensaje');?></button>
                                             </div>
                                             </form>
                                             </div>
