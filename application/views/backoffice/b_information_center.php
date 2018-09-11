@@ -1,4 +1,5 @@
-  <!-- Main section-->
+<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>  
+<!-- Main section-->
   <section>
       <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
