@@ -8,8 +8,6 @@
 <!--STAR HEAD-->
 <?php $this->load->view("head");?>
 <!--END HEAD-->
-
-
 <body class="page-template-default page page-id-91 wpb-js-composer js-comp-ver-5.3 vc_responsive">
 	<div class="mobile-menu-wrapper mobile-menu-fullscreen">
             <!--GET NAV MOBILE-->
@@ -44,7 +42,7 @@
             <div class="vc_column-inner vc_custom_1498222750047">
                 <div class="wpb_wrapper">
                     <div class="section-title  vc_custom_1498743833540">
-                        <H1><?php echo "Inicio De Sesión";?></H1>
+                        <h1><?=lang('idioma.login');?></h1>
                         </div>
                     <div class="vc_tta-container" data-vc-action="collapse">
                         <div class="vc_general vc_tta vc_tta-tabs vc_tta-color-white vc_tta-style-flat vc_tta-shape-square vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left vc_custom_1497012475617">
@@ -52,7 +50,7 @@
                                 <ul class="vc_tta-tabs-list">
                                     <li class="vc_tta-tab vc_active" data-vc-tab>
                                         <a href="#flights" data-vc-tabs data-vc-container=".vc_tta">
-                                            <span class="vc_tta-title-text">Login</span>
+                                            <span class="vc_tta-title-text"><?=lang('idioma.login');?></span>
                                             <i class="vc_tta-icon vc-material vc-material-local_airport"></i>
                                         </a>
                                     </li>
@@ -71,7 +69,7 @@
                                                                         <div class="col-sm-12">
                                                                             <div class="form-group">
                                                                                 <div class="col-md-3">
-                                                                                    <label>Usuario:</label>
+                                                                                    <label><?=lang('idioma.ingresa_usuario');?></label>
                                                                                 </div>
                                                                                 <div class="col-md-9">
                                                                                     <input class="form" name="username" id="username" type="text">
@@ -81,7 +79,7 @@
                                                                             <div class="col-sm-12">
                                                                                 <div class="form-group">
                                                                                     <div class="col-md-3">
-                                                                                     <label>Contraseña:</label>   
+                                                                                     <label><?=lang('idioma.ingresa_contrasena');?></label>   
                                                                                     </div>
                                                                                     <div class="col-md-9">
                                                                                         <input class="form" name="password" id="password" type="password">
@@ -92,12 +90,12 @@
                                                                         <div class="col-sm-12">
                                                                             <div class="form-group">
                                                                                 <div class="col-md-12">
-                                                                                    <a href="<?php echo site_url().'forgot';?>">¿Olvidó su Contraseña?</a>
+                                                                                    <a href="<?php echo site_url().'forgot';?>"><?=lang('idioma.olvidar');?></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div> <!-- row -->
-                                                                    <button type="submit" class="button">Iniciar Sesión</button>
+                                                                    <button type="submit" class="button"><?=lang('idioma.login');?></button>
                                                             </form>
                                                             
                                                         </div>
@@ -105,7 +103,7 @@
                                                 </div>
                                             </div>
                                             <div id="alert_message"></div>
-                                    </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

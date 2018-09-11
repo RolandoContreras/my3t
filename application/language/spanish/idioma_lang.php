@@ -114,6 +114,8 @@ $lang['idioma.contact_horario'] = "Horario de Trabajo";
 $lang['idioma.contact_lunes'] = "Lunes — Viernes";   
 $lang['idioma.contact_sabado'] = "Sábados";   
 //FORMULAIO
+$lang['idioma.ingresa_usuario'] = "Usuario:";   
+$lang['idioma.ingresa_contrasena'] = "Contraseña:";   
 $lang['idioma.ingresa_nombre'] = "Ingresa tu nombre:";   
 $lang['idioma.ingresa_email'] = "Ingresa tu e-mail:";   
 $lang['idioma.ingresa_asunto'] = "Ingresa el asunto:";   
@@ -123,6 +125,12 @@ $lang['idioma.ingrese_nombre'] = "Por favor ingrese su nombre";
 $lang['idioma.ingrese_email'] = "Por favor ingrese su e-mail";   
 $lang['idioma.ingrese_asunto'] = "Por favor ingrese su asunto";   
 $lang['idioma.ingrese_mensaje'] = "Por favor ingrese su mensaje";   
+$lang['idioma.olvidar'] = "¿Olvidó su Contraseña?";   
+
+$lang['idioma.recuperar'] = "Recuperar Contraseña";   
+$lang['idioma.ingresa_usuario'] = "Ingresa tu usuario:";   
+
+
 
 
 

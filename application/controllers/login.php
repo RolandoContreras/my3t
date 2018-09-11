@@ -63,7 +63,7 @@ class Login extends CI_Controller {
                 $_SESSION['customer'] = $data_customer_session; 
                 echo "true";
         }else{
-            echo '<div class="alert alert-danger" style="text-align: center">Datos Invalidos.</div>';
+            echo '<div class="alert alert-danger" style="text-align: center">Invalid data.</div>';
         }
     }
     

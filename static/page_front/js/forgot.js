@@ -8,13 +8,15 @@ function send_messages(){
         data: {username:username},
         success:function(data){            
             if (data.message == "false"){                         
-                $("#alert_message").html('<div class="alert alert-danger" style="text-align: center">Usuario no registrado</div>'); 
+                document.getElementById("alert_message").style.display="block";
             }else{
-                $("#alert_message").html('<div class="alert alert-success" style="text-align: center">Se envió un mensaje al e-mail registrado</div>'); 
+                document.getElementById("alert_message").style.display="none";
+                document.getElementById("alert_message_success").style.display="block";
+                
             }
             }            
         });
     }else{
-        $("#alert_message").html('<div class="alert alert-danger" style="text-align: center">Ingrese Usuario</div>'); 
+        $("#alert_message").show();
     }
 }
