@@ -209,6 +209,43 @@ $lang['idioma.b_no_mensajes'] = "There are no new messages";
 $lang['idioma.b_todos_mensajes'] = "All Messages";  
 $lang['idioma.b_espanol'] = "Spanish";  
 $lang['idioma.b_inlges'] = "English";  
+//BACKOFFICE - GLOBAL
+$lang['idioma.b_precio_btc'] = "BITCOIN PRICE:";  
+$lang['idioma.b_informativo'] = "Informative";  
+$lang['idioma.b_mensaje '] = "Message:";  
+$lang['idioma.b_noticias'] = "News";  
+$lang['idioma.b_total_pagado'] = "TOTAL PAID";  
+$lang['idioma.b_balance_disponer'] = "BALANCE BY HAVING";  
+$lang['idioma.b_paquete_actual'] = "CURRENT PACKAGE"; 
+//BACKOFFICE - HOME
+$lang['idioma.b_rango_actual'] = "Current Range";  
+$lang['idioma.b_proximo_rango'] = "Next Range";  
+$lang['idioma.b_puntaje_izquierda'] = "Score Left";  
+$lang['idioma.b_puntaje_derecha'] = "Score Right";  
+$lang['idioma.b_h_binario'] = "Binary";  
+$lang['idioma.b_puntos_mes'] = "Month Points";  
+$lang['idioma.b_patrocinio_directos'] = "Patrocinios Directos";  
+$lang['idioma.b_team_builder'] = "Direct sponsorships"; 
+$lang['idioma.b_fecha_activacion'] = "Activation Date"; 
+$lang['idioma.b_fecha_creacion'] = "Creation Date"; 
+$lang['idioma.b_catalogo'] = "Catalog"; 
+$lang['idioma.b_ver'] = "SEE"; 
+$lang['idioma.b_seleccionar_paquete'] = "SELECT YOUR PACKAGE"; 
+$lang['idioma.b_selecionar'] = "Select"; 
+$lang['idioma.b_cuenta_seleccionada'] = "SELECTED PACKAGE"; 
+$lang['idioma.b_modo_activacion'] = "ACTIVATION MODE - BITCOIN WALLET"; 
+$lang['idioma.b_activacion_btc'] = "Activation through bitcoin:"; 
+$lang['idioma.b_enviar_monto'] = "send the amount of"; 
+$lang['idioma.b_siguiente_direccion'] = "to the following address of bitcoin:"; 
+$lang['idioma.b_enviar_mensaje'] = "Send a message by clicking on the button below indicating the user, paid account type and the proof or the identification code of the transaction."; 
+$lang['idioma.b_mensaje_confirmacion'] = "Confirmation Message"; 
+$lang['idioma.b_patrocinio'] = "SPONSORSHIP"; 
+$lang['idioma.b_link_patrocinio'] = "SPONSORED LINK"; 
+$lang['idioma.b_estimado_usuario'] = "Dear user, you have a link to sponsor new associates in 3T Club under your organization."; 
+$lang['idioma.b_h_link_patrocinio'] = "Sponsored Link:"; 
+$lang['idioma.b_compartiendo_enlace'] = "Sharing this link you can sponsor more people"; 
+$lang['idioma.b_activar_patrocinados'] = "How to activate to its sponsored?"; 
+$lang['idioma.b_las_activaciones'] = "Activations are made in btc (bitcoin) and the amount of the selected account is sent to the following address of bitcoin:"; 
 
 
 

@@ -179,6 +179,66 @@ $lang['idioma.b_no_mensajes'] = "No hay nuevos mensajes";
 $lang['idioma.b_todos_mensajes'] = "Todos los Mensajes";  
 $lang['idioma.b_espanol'] = "Español";  
 $lang['idioma.b_inlges'] = "Ingles";  
+//BACKOFFICE - GLOBAL
+$lang['idioma.b_precio_btc'] = "Precio del BITCOIN:";  
+$lang['idioma.b_informativo'] = "Informativo";  
+$lang['idioma.b_mensaje '] = "Mensaje:";  
+$lang['idioma.b_noticias'] = "Noticias";  
+$lang['idioma.b_total_pagado'] = "TOTAL PAGADO";  
+$lang['idioma.b_balance_disponer'] = "BALANCE POR DISPONER";  
+$lang['idioma.b_paquete_actual'] = "PAQUETE ACTUAL";  
+//BACKOFFICE - HOME
+$lang['idioma.b_rango_actual'] = "Rango Actual";  
+$lang['idioma.b_proximo_rango'] = "Próximo Rango";  
+$lang['idioma.b_puntaje_izquierda'] = "Puntaje Izquierda";  
+$lang['idioma.b_puntaje_derecha'] = "Puntaje Derecha";  
+$lang['idioma.b_h_binario'] = "Binario";  
+$lang['idioma.b_puntos_mes'] = "Puntos del Mes";  
+$lang['idioma.b_patrocinio_directos'] = "Patrocinios Directos";  
+$lang['idioma.b_team_builder'] = "Team Builder"; 
+$lang['idioma.b_fecha_activacion'] = "Fecha de Activación"; 
+$lang['idioma.b_fecha_creacion'] = "Fecha de Creación"; 
+$lang['idioma.b_catalogo'] = "Catálogo"; 
+$lang['idioma.b_ver'] = "VER"; 
+$lang['idioma.b_seleccionar_paquete'] = "SELECCIONA TU PAQUETE"; 
+$lang['idioma.b_selecionar'] = "Seleccionar"; 
+$lang['idioma.b_cuenta_seleccionada'] = "CUENTA SELECCIONADA"; 
+$lang['idioma.b_modo_activacion'] = "MODO DE ACTIVACIÓN - BILLETERA DE BITCOIN"; 
+$lang['idioma.b_activacion_btc'] = "Activación a través de bitcoin:"; 
+$lang['idioma.b_enviar_monto'] = "enviar el monto de"; 
+$lang['idioma.b_siguiente_direccion'] = "a la siguiente dirección de bitcoin:"; 
+$lang['idioma.b_enviar_mensaje'] = "Envia un mensaje dando click en el boton de abajo indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada."; 
+$lang['idioma.b_mensaje_confirmacion'] = "Mensaje de Confirmación"; 
+$lang['idioma.b_patrocinio'] = "PATROCINIO"; 
+$lang['idioma.b_link_patrocinio'] = "LINK DE PATROCINIO"; 
+$lang['idioma.b_estimado_usuario'] = "Estimado usuario usted tiene un enlace para patrocinar a nuevos asociados en 3T debajo de su organización."; 
+$lang['idioma.b_h_link_patrocinio'] = "Link de patrocinio:"; 
+$lang['idioma.b_compartiendo_enlace'] = "Compartiendo este enlace podrá patrocinar a más personas."; 
+$lang['idioma.b_activar_patrocinados'] = "¿Cómo activar a sus patrocinados?"; 
+$lang['idioma.b_las_activaciones'] = "Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin:"; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
