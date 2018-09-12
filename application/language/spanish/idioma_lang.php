@@ -160,6 +160,36 @@ $lang['idioma.reg_pais'] = "PAÍS";
 $lang['idioma.reg_region'] = "REGIÓN";
 $lang['idioma.reg_ciudad'] = "CIUDAD";
 $lang['idioma.crear_cuenta'] = "Crear Cuenta";
+//BACKOFFICE - TEMPLATE
+$lang['idioma.b_tablero'] = "Tablero";  
+$lang['idioma.b_perfil'] = "Mi Perfil";  
+$lang['idioma.b_informacion'] = "Información";  
+$lang['idioma.b_productos'] = "Productos";  
+$lang['idioma.b_crecimiento'] = "Crecimiento";  
+$lang['idioma.b_billetera'] = "Billetera";  
+$lang['idioma.b_unilevel'] = "Unilevel";  
+$lang['idioma.b_binario'] = "Binario";  
+$lang['idioma.b_comisiones'] = "Mis Comisiones";  
+$lang['idioma.b_billetera'] = "Billetera";  
+$lang['idioma.b_soporte'] = "Soporte";  
+$lang['idioma.b_cobros'] = "Cobros";  
+$lang['idioma.b_mensajes'] = "Mensajes";  
+$lang['idioma.b_salir'] = "Salir";  
+$lang['idioma.b_no_mensajes'] = "No hay nuevos mensajes";  
+$lang['idioma.b_todos_mensajes'] = "Todos los Mensajes";  
+$lang['idioma.b_espanol'] = "Español";  
+$lang['idioma.b_inlges'] = "Ingles";  
+
+
+
+
+
+
+
+
+
+
+
 
 
 

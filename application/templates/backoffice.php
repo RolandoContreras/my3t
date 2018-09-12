@@ -86,72 +86,90 @@
                                             ////////
                                                     case "profile":
                                                         $style_misdatos = "a_active";
+                                                        $nav = "profile";
                                                         break;
                                                      case "points":
                                                         $style_inicio = "a_active";
+                                                         $nav = "points";
                                                         break;
                                                     case "informacion":
                                                         $style_information = "a_active";
+                                                        $nav = "informacion";
                                                         break;
                                                     case "upgrade":
                                                         $style_upgrade = "a_active";
+                                                        $nav = "upgrade";
                                                         break;
                                                     case "unilevel":
                                                         $style_unilevel = "a_active";
+                                                        $nav = "unilevel";
                                                         break;
                                                     case "binario":
                                                         $style_binario = "a_active";
+                                                        $nav = "binario";
                                                         break;
                                                     case "comisiones":
                                                         $style_comisiones = "a_active";
+                                                        $nav = "comisiones";
                                                         break;
                                                     case "billetera":
                                                         $style_billetera = "a_active";
+                                                        $nav = "billetera";
                                                         break;
                                                     case "cobros":
                                                         $style_pagos = "a_active";
+                                                        $nav = "cobros";
                                                         break;
                                                     case "productos":
                                                         $style_productos = "a_active";
+                                                        $nav = "productos";
                                                         break;
                                                     case "academy":
                                                         $style_productos = "a_active";
+                                                        $nav = "academy";
                                                         break;
                                                     case "message_confirmation":
                                                         $style_inicio = "a_active";
+                                                        $nav = "message_confirmation";
                                                         break;
                                                     case "informacion":
                                                         $style_pagos = "a_active";
+                                                        $nav = "informacion";
                                                         break;
                                                     case "messages":
                                                         $style_inicio = "a_active";
+                                                        $nav = "messages";
                                                         break;
                                                     case "soporte":
                                                         $style_soporte = "a_active";
+                                                        $nav = "soporte";
                                                         break;
                                                     case "compose_message":
                                                         $style_inicio = "a_active";
+                                                        $nav = "compose_message";
                                                         break;
                                                     default:
                                                          $title = "Inicio";
+                                                         $nav = "backoffice";
                                             }
                                     }else{
                                         $style_inicio = "a_active";
+                                        $nav = "backoffice";
                                     }
                                     ?>  
                         <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title">Dashboard</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/informacion'?>" class="<?php echo $style_information;?>"><i class="fa fa-info-circle fa-lg"></i><span class="title">Información</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/productos'?>" class="<?php echo $style_productos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title">Productos</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/upgrade'?>" class="<?php echo $style_upgrade;?>"><i class="fa fa-arrow-up fa-lg"></i><span class="title">Upgrade</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title">Billetera</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_unilevel;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Unilevel</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/binario'?>" class="<?php echo $style_binario;?>"><i class="fa fa-users fa-lg"></i><span class="title">Binario</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title">Mis Comisiones</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title">Billetera</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/soporte'?>" class="<?php echo $style_soporte;?>"><i class="fa fa-cogs"></i><span class="title">Soporte</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/cobros'?>" class="<?php echo $style_pagos;?>"><i class="fa fa-university fa-lg"></i><span class="title">Cobros</span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title"><?=lang('idioma.b_tablero');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title"><?=lang('idioma.b_perfil');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/informacion'?>" class="<?php echo $style_information;?>"><i class="fa fa-info-circle fa-lg"></i><span class="title"><?=lang('idioma.b_informacion');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/productos'?>" class="<?php echo $style_productos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title"><?=lang('idioma.b_productos');?></span></a></li>
+			<li class="has-sub"><a href="<?php echo site_url().'backoffice/upgrade'?>" class="<?php echo $style_upgrade;?>"><i class="fa fa-arrow-up fa-lg"></i><span class="title"><?=lang('idioma.b_crecimiento');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title"><?=lang('idioma.b_billetera');?></span></a></li>
+			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_unilevel;?>"><i class="fa fa-cubes fa-lg"></i><span class="title"><?=lang('idioma.b_unilevel');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/binario'?>" class="<?php echo $style_binario;?>"><i class="fa fa-users fa-lg"></i><span class="title"><?=lang('idioma.b_binario');?></span></a></li>
+			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title"><?=lang('idioma.b_comisiones');?></span></a></li>
+			<li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title"><?=lang('idioma.b_billetera');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/soporte'?>" class="<?php echo $style_soporte;?>"><i class="fa fa-cogs"></i><span class="title"><?=lang('idioma.b_soporte');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/cobros'?>" class="<?php echo $style_pagos;?>"><i class="fa fa-university fa-lg"></i><span class="title"><?=lang('idioma.b_cobros');?></span></a></li>
 		</ul>
 		<!-- /main navigation -->		
   </div>
@@ -169,11 +187,12 @@
                                 </a>
                               <!-- User action menu -->
                               <ul class="dropdown-menu">
-
-                                  <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fa fa-user-circle-o" aria-hidden="true"></i>My profile</a></li>
-                                  <li><a href="<?php echo site_url().'backoffice/messages'; ?>"><i class="fa fa-comment" aria-hidden="true"></i>Mensajes</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i>Salir</a></li>
+                                  <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?=lang('idioma.b_perfil');?></a></li>
+                                  <li><a href="<?php echo site_url().'backoffice/messages'; ?>"><i class="fa fa-comment" aria-hidden="true"></i><?=lang('idioma.b_mensajes');?></a></li>
+                                  <li class="notifications dropdown"><a href='<?php echo site_url()."es/$nav";?>'><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="20"/>&nbsp;&nbsp;&nbsp;&nbsp; <?=lang('idioma.b_espanol');?></a></li>
+                                  <li class="notifications dropdown"><a href="<?php echo site_url()."en/$nav";?>"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="20"/>&nbsp;&nbsp;&nbsp;&nbsp; <?=lang('idioma.b_inlges');?></a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i><?=lang('idioma.b_salir');?></a></li>
                               </ul>
                               <!-- /user action menu -->
                             </li>
@@ -190,7 +209,7 @@
                                             <i class="icon-mail"></i><span class="badge badge-secondary"><?php echo $all_message;?></span></a>
 					<ul class="dropdown-menu pull-right">
 						<li class="first">
-							<div class="dropdown-content-header">Mensajes</div>
+							<div class="dropdown-content-header"><?=lang('idioma.b_mensajes');?></div>
 						</li>
 						<li>
                                                     <ul class="media-list">
@@ -198,7 +217,7 @@
                                                             if($all_message == 0){ ?>
                                                                 <li>
                                                                     <div class="media-body">
-                                                                            <span class="text-muted">No hay nuevos mensajes</span>
+                                                                            <span class="text-muted"><?=lang('idioma.b_no_mensajes');?></span>
                                                                         </div>
                                                                 </li>
                                                             <?php }else{
@@ -230,12 +249,13 @@
                                                            <?php } ?>
                                                     </ul>
 						</li>
-                                                <li class="external-last"> <a class="danger" href="<?php echo site_url().'backoffice/messages';?>"><i class="fa fa-comments" aria-hidden="true"></i> Todos los Mensajes</a> </li>
+                                                <li class="external-last"> <a class="danger" href="<?php echo site_url().'backoffice/messages';?>"><i class="fa fa-comments" aria-hidden="true"></i> <?=lang('idioma.b_todos_mensajes');?></a> </li>
+                                                
 					</ul>
 				  </li>
 				  <!-- /messages -->
-				  
 				</ul>
+                                
 				<!-- /user alerts -->
 			</div>
 		  </div>

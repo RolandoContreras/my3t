@@ -191,6 +191,24 @@ $lang['idioma.reg_pais'] = "COUNTRY";
 $lang['idioma.reg_region'] = "REGION";
 $lang['idioma.reg_ciudad'] = "CITY";
 $lang['idioma.crear_cuenta'] = "Create Account";
+//BACKOFFICE - TEMPLATE
+$lang['idioma.b_tablero'] = "Dashboard";  
+$lang['idioma.b_perfil'] = "Mi Profile";  
+$lang['idioma.b_informacion'] = "Information";  
+$lang['idioma.b_productos'] = "Products";  
+$lang['idioma.b_crecimiento'] = "Upgrade";  
+$lang['idioma.b_billetera'] = "Wallet";  
+$lang['idioma.b_unilevel'] = "Unilevel";  
+$lang['idioma.b_binario'] = "Binary";  
+$lang['idioma.b_comisiones'] = "My Commissions";  
+$lang['idioma.b_soporte'] = "Support";  
+$lang['idioma.b_cobros'] = "Cash";  
+$lang['idioma.b_mensajes'] = "Messages";  
+$lang['idioma.b_salir'] = "Exit login";  
+$lang['idioma.b_no_mensajes'] = "There are no new messages";  
+$lang['idioma.b_todos_mensajes'] = "All Messages";  
+$lang['idioma.b_espanol'] = "Spanish";  
+$lang['idioma.b_inlges'] = "English";  
 
 
 
