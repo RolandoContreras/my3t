@@ -1,10 +1,10 @@
 <section>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-            <h1 class="title text-uppercase">PRODUCTOS</h1>
+            <h1 class="title text-uppercase"><?=lang('idioma.b_productos');?></h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+            <a class="white"><?=lang('idioma.b_precio_btc');?> <?php echo $price_btc;?></a>
         </div>
     </div> 
          <!-- Page content-->
@@ -18,11 +18,11 @@
                             <div class="col-md-12"> 
                                         <div class="panel panel-success">
                                             <header class="panel-heading">
-                                                <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse_message"><i class="collapse-caret fa  fa-angle-up"></i> Informativo</a>
+                                                <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse_message"><i class="collapse-caret fa  fa-angle-up"></i> <?=lang('idioma.b_informativo');?></a>
                                             </header>
                                             <div id="collapse_message" class="panel-collapse collapse in center">
                                                     <div class="panel-heading clearfix"> 
-                                                    <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                                    <div class="panel-title"><?=lang('idioma.b_mensaje');?> <b><?php echo $value->title;?></b></div> 
                                                 </div> 
                                                 <!-- panel body --> 
                                                 <div class="panel-body"> 
@@ -53,15 +53,15 @@
                                         <div class="panel panel-success">
                                             <div id="collapse_message" class="panel-collapse collapse in center">
                                                 <div class="panel-heading clearfix"> 
-                                                        <div class="panel-title"><b>GLOBAL PASS</b></div> 
+                                                        <div class="panel-title"><b>RCI</b></div> 
                                                 </div> 
                                                 <!-- panel body --> 
                                                 <div class="panel-body"> 
-                                                    <p>Te otorgamos un estilo de vida distinto, podrás viajar a lugares paradisiacos con nosotros siendo parte de <b>3T CLUB</b>.<br/> 	
-                                                        Tendrás 3 programas vacacionales <b>GLOBAL PASS PERÚ, INTERNACIONAL Y ELITE</b> que te permitirán tener hasta el 70% de descuentos en cientos de establecimiento dentro de Perú y a nivel internacional como en hoteles, restaurantes, autos, cruceros, vuelos y mucho más.<br/>
-                                                        Puedes acumular créditos de recompensa a través de nuestro sistema boomerang rewards para canjearlos por viajes, cruceros, vuelos o cualquier servicio de la plataforma todo pagado simplemente por recomendar 3T CLUB y GLOBAL PASS y que tus recomendados compren a través tuyo. 
-                                                    </p><br/>
-                                                    <a href="<?php echo site_url().'backoffice/productos/globalpass';?>"><button class="btn btn-success btn-block" type="button">VER PROGRAMAS</button></a>
+                                                    <p><?=lang('idioma.about_somos_principal');?></p>
+                                                    <p><?=lang('idioma.about_actualmente');?></p>
+                                                    <p><?=lang('idioma.about_en_rci_comprendemos');?></p>
+                                                    <br/>
+                                                    <a href="https://www.rci.com/" target="_bank"><button class="btn btn-success btn-block" type="button"><?=lang('idioma.b_ir_rci');?></button></a>
                                                 </div> 
                                             </div>
                                         </div> 
@@ -88,10 +88,10 @@
                                                 </div> 
                                                 <!-- panel body --> 
                                                 <div class="panel-body"> 
-                                                    <p>Descubre el mecanismo de tu “mente” con el coaching transformacional basado en experiencias vivenciales de ciencia práctica que te ayudarán a recuperar el poder de tu vida a través de la autoconfianza. Un sistema probado que esta llevando al éxitos a cientos de personas.<br/>Tendrás temas como:
-                                                    ¿Cómo eliminar la basura mental?, entrena tu enfoque para ver oportunidades, ¿Cómo crear relaciones y la vida social que siempre quisiste?, ¿Cómo superar los miedos?, convertir espirales de muerte a vida y mucho más.
-                                                    </p><br/>
-                                                    <a href="javascript:void(0)"><button disabled="disabled" class="btn btn-success btn-block" type="button">IR AL SISTEMA</button></a>
+                                                    <p><?=lang('idioma.about_te_damos_coaching');?>
+                                                    <?=lang('idioma.about_creemos_crecimiento');?></p>
+                                                    <p><?=lang('idioma.about_sistema_coaching');?></p>
+                                                    <a href="javascript:void(0)"><button disabled="disabled" class="btn btn-success btn-block" type="button"><?=lang('idioma.b_ir_sistema');?></button></a>
                                                 </div> 
                                             </div>
                                         </div> 
@@ -113,14 +113,17 @@
                                         <div class="panel panel-success">
                                             <div id="collapse_message" class="panel-collapse collapse in center">
                                                 <div class="panel-heading clearfix"> 
-                                                        <div class="panel-title"><b>3T ACADEMY FOREX</b></div> 
+                                                        <div class="panel-title"><b><?=lang('idioma.b_academy_forex');?></b></div> 
                                                 </div> 
                                                 <!-- panel body --> 
                                                 <div class="panel-body"> 
-                                                    <p>Profesionales altamente calificados en el manejo de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de <b>3T ACADEMY</b>.
-                                                        Nuestros profesionales son referentes y voceros en distintos medios de comunicación como américa noticias, canal N, diario gestión, el comercio, Perú 21, RPP Noticias entre otras.<br/>A la vez con un Track Record de hasta 20% de ganancia mensual en operaciones de manejo de fondos.
-                                                        <br/>Fundamentos básicos, entrenamientos personalizados, señales, estrategias y noticias del día tendrás en nuestra academia.</p><br/>
-                                                    <a href="javascript:void(0)"><button disabled="" class="btn btn-success btn-block" type="button">IR A 3T ACADEMY</button></a>
+                                                    <p><?=lang('idioma.about_profesionales_calificados');?></p>
+                                                    <p><?=lang('idioma.about_academia_3t');?></p>
+                                                    <p><?=lang('idioma.about_se_divide');?></p>
+                                                    <p><b><?=lang('idioma.about_que_es_blu');?></b></p>
+                                                    <p><?=lang('idioma.about_prestigiosa_firma');?></p>
+                                                    <br/>
+                                                    <a href="javascript:void(0)"><button disabled="" class="btn btn-success btn-block" type="button"><?=lang('idioma.b_academy_forex');?></button></a>
                                                 </div> 
                                             </div>
                                         </div> 

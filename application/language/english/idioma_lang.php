@@ -294,6 +294,11 @@ $lang['idioma.b_ficha_cliente'] = "Natural Customer Form - TIB";
 $lang['idioma.b_contrato_poder'] = "Power of Attorney - TIB";
 $lang['idioma.b_ruc_trade'] = "RUC Form (Trade It Broker House)";
 $lang['idioma.b_descargar'] = "Download";
+//BACKOFFICE - PRODUCTOS
+$lang['idioma.b_academy_forex'] = "ACADEMY FOREX 3T ";  
+$lang['idioma.b_ir_rci'] = "GO TO RCI";
+$lang['idioma.b_academy_forex'] = "GO TO ACADEMY";  
+$lang['idioma.b_ir_sistema'] = "GO TO SYSTEM";  
 
 
 

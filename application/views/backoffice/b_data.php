@@ -16,16 +16,21 @@
                 foreach ($messages_informative as $value) { ?>
                     <div class="row">
                         <div class="col-md-12"> 
-                                    <div class="panel panel-warning">
-						<div class="panel-heading clearfix"> 
-                                                <div class="panel-title"><?=lang('idioma.b_mensaje');?> <b><?php echo $value->title;?></b></div> 
-                                            </div> 
-                                            <!-- panel body --> 
-                                            <div class="panel-body"> 
-                                                <p><?php echo $value->text;?></p> 
-                                            </div> 
-                                    </div> 
-                            </div>
+                                        <div class="panel panel-success">
+                                            <header class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse_message"><i class="collapse-caret fa  fa-angle-up"></i> <?=lang('idioma.b_informativo');?></a>
+                                            </header>
+                                            <div id="collapse_message" class="panel-collapse collapse in center">
+                                                    <div class="panel-heading clearfix"> 
+                                                    <div class="panel-title"><?=lang('idioma.b_mensaje');?> <b><?php echo $value->title;?></b></div> 
+                                                </div> 
+                                                <!-- panel body --> 
+                                                <div class="panel-body"> 
+                                                    <p><?php echo $value->text;?></p> 
+                                                </div> 
+                                            </div>
+                                        </div> 
+                                </div>
                         </div>
                 <?php } ?>
             </div>  
