@@ -154,7 +154,7 @@
                                             }
                                     }else{
                                         $style_inicio = "a_active";
-                                        $nav = "backoffice";
+                                        $nav = "";
                                     }
                                     ?>  
                         <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
@@ -189,8 +189,8 @@
                               <ul class="dropdown-menu">
                                   <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?=lang('idioma.b_perfil');?></a></li>
                                   <li><a href="<?php echo site_url().'backoffice/messages'; ?>"><i class="fa fa-comment" aria-hidden="true"></i><?=lang('idioma.b_mensajes');?></a></li>
-                                  <li class="notifications dropdown"><a href='<?php echo site_url()."es/$nav";?>'><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="20"/>&nbsp;&nbsp;&nbsp;&nbsp; <?=lang('idioma.b_espanol');?></a></li>
-                                  <li class="notifications dropdown"><a href="<?php echo site_url()."en/$nav";?>"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="20"/>&nbsp;&nbsp;&nbsp;&nbsp; <?=lang('idioma.b_inlges');?></a></li>
+                                  <li class="notifications dropdown"><a href='<?php echo site_url()."es/backoffice/$nav";?>'><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="20"/>&nbsp;&nbsp;&nbsp;&nbsp; <?=lang('idioma.b_espanol');?></a></li>
+                                  <li class="notifications dropdown"><a href="<?php echo site_url()."en/backoffice/$nav";?>"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="20"/>&nbsp;&nbsp;&nbsp;&nbsp; <?=lang('idioma.b_inlges');?></a></li>
                                   <li class="divider"></li>
                                   <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i><?=lang('idioma.b_salir');?></a></li>
                               </ul>

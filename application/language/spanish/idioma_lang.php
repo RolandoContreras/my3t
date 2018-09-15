@@ -216,50 +216,43 @@ $lang['idioma.b_h_link_patrocinio'] = "Link de patrocinio:";
 $lang['idioma.b_compartiendo_enlace'] = "Compartiendo este enlace podrá patrocinar a más personas."; 
 $lang['idioma.b_activar_patrocinados'] = "¿Cómo activar a sus patrocinados?"; 
 $lang['idioma.b_las_activaciones'] = "Las activaciones hacen en btc (bitcoin) y se envía el monto de la cuenta seleccionada a la siguiente dirección de bitcoin:"; 
+//BACKOFFICE - PERFIL
+$lang['idioma.b_informacion_principal'] = "INFORMACIÓN PRINCIPAL";  
+$lang['idioma.b_pago_contrasena'] = "PAGO Y CONTRASEÑAS";
+$lang['idioma.b_información'] = "Información";
+$lang['idioma.b_telefono'] = "Teléfono";
+$lang['idioma.b_activacion'] = "Activación";
+$lang['idioma.b_data_fecha_creacion'] = "Fecha de Creación :";
+$lang['idioma.b_data_fecha_activacion'] = "Fecha de Activación :";
+$lang['idioma.b_informacion_nacimiento'] = "Información de Nacimiento";
+$lang['idioma.b_fecha_nacimiento'] = "Fecha de Nacimiento :";
+$lang['idioma.b_identificacion'] = "Identificación";
+$lang['idioma.b_pasaporte'] = "Pasaporte / Numero de Identidad";
+$lang['idioma.b_direccion'] = "Dirección";
+$lang['idioma.b_pais'] = "País :";
+$lang['idioma.b_region'] = "Región :";
+$lang['idioma.b_data_direccion'] = "Dirección :";
+$lang['idioma.b_ciudad'] = "Ciudad :";
+$lang['idioma.b_region'] = "Región :";
+$lang['idioma.b_data_region'] = "Región :";
 
+$lang['idioma.b_patrocinador'] = "Patrocinador:";
+$lang['idioma.b_link_patrocinio'] = "Link de Patrocinio";
+$lang['idioma.b_click_nuevo'] = "Click aquí para agregar a un nuevo miembro";
+$lang['idioma.b_nuevos_miembros'] = "Nuevos Miembros";
+$lang['idioma.b_izquierda'] = "Izquierda";
+$lang['idioma.b_derecha'] = "Derecha";
+$lang['idioma.b_equilibrio'] = "Equilibrio";
+$lang['idioma.b_data_region'] = "Guardar Posición";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$lang['idioma.b_billetera_bitcoin'] = "Billetera de bitcoin";
+$lang['idioma.b_guardar'] = "Guardar";
+$lang['idioma.b_direccion_bitcoin'] = "Dirección de bitcoin";
+$lang['idioma.b_cambiar_contrasena'] = "Cambiar Contraseña";
+$lang['idioma.b_introduzca_contrasena'] = "Introduzca su contraseña actual.";
+$lang['idioma.b_contrasena_actual'] = "Contraseña Actual";
+$lang['idioma.b_nueva_contrasena'] = "Nueva Contraseña";
+$lang['idioma.b_repita_contrasena'] = "Repita Nueva Contraseña";
 
 
 

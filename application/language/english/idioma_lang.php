@@ -246,6 +246,43 @@ $lang['idioma.b_h_link_patrocinio'] = "Sponsored Link:";
 $lang['idioma.b_compartiendo_enlace'] = "Sharing this link you can sponsor more people"; 
 $lang['idioma.b_activar_patrocinados'] = "How to activate to its sponsored?"; 
 $lang['idioma.b_las_activaciones'] = "Activations are made in btc (bitcoin) and the amount of the selected account is sent to the following address of bitcoin:"; 
+//BACKOFFICE - PERFIL
+$lang['idioma.b_informacion_principal'] = "MAIN INFORMATION";  
+$lang['idioma.b_pago_contrasena'] = "PAYMENT AND PASSWORDS";
+$lang['idioma.b_información'] = "Information";
+$lang['idioma.b_telefono'] = "Phone";
+$lang['idioma.b_activacion'] = "Activation";
+$lang['idioma.b_data_fecha_creacion'] = "Creation Date :";
+$lang['idioma.b_data_fecha_activacion'] = "Activation Date :";
+$lang['idioma.b_informacion_nacimiento'] = "Data of Birth";
+$lang['idioma.b_fecha_nacimiento'] = "Date of birth :";
+$lang['idioma.b_identificacion'] = "Identification";
+$lang['idioma.b_pasaporte'] = "Passport / ID number";
+$lang['idioma.b_direccion'] = "Address";
+$lang['idioma.b_pais'] = "Country :";
+$lang['idioma.b_region'] = "Region :";
+$lang['idioma.b_data_direccion'] = "Address :";
+$lang['idioma.b_ciudad'] = "City :";
+$lang['idioma.b_data_region'] = "Region :";
+
+$lang['idioma.b_patrocinador'] = "Sponsor:";
+$lang['idioma.b_link_patrocinio'] = "Sponsored link";
+$lang['idioma.b_click_nuevo'] = "Click here to add a new Member";
+$lang['idioma.b_nuevos_miembros'] = "New Members";
+$lang['idioma.b_izquierda'] = "Left";
+$lang['idioma.b_derecha'] = "Derecha";
+$lang['idioma.b_equilibrio'] = "Equilibrio";
+$lang['idioma.b_data_region'] = "Guardar Posición";
+
+$lang['idioma.b_billetera_bitcoin'] = "Bitcoin Wallet";
+$lang['idioma.b_guardar'] = "Save";
+$lang['idioma.b_direccion_bitcoin'] = "Bitcoin Address";
+$lang['idioma.b_cambiar_contrasena'] = "Change Password";
+$lang['idioma.b_introduzca_contrasena'] = "Enter your current password.";
+$lang['idioma.b_contrasena_actual'] = "Current Password";
+$lang['idioma.b_nueva_contrasena'] = "New Password";
+$lang['idioma.b_repita_contrasena'] = "Repeat New Password";
+
 
 
 
