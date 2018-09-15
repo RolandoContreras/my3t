@@ -3,10 +3,10 @@
   <section>
       <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-            <h1 class="title text-uppercase"><?php echo "Centro de Información";?></h1>
+            <h1 class="title text-uppercase"><?=lang('idioma.b_centro_informacion');?></h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+            <a class="white"><?=lang('idioma.b_precio_btc');?> <?php echo $price_btc;?></a>
         </div>
     </div> 
       <div class="row">
@@ -20,9 +20,9 @@
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
-                                                <th><b>Tipo</b></th>
-                                                <th><b>Nombre</b></th>
-                                                <th class="text-center"><b>Acción</b></th>
+                                                <th><b><?=lang('idioma.b_tipo');?></b></th>
+                                                <th><b><?=lang('idioma.b_centro_nombre');?></b></th>
+                                                <th class="text-center"><b><?=lang('idioma.b_accion');?></b></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -30,9 +30,9 @@
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Presentación 3T Club - Español</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_presentacion_espanol');?></td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/presentacion_oficial_es.pdf';?>" download="Presentación_3TClub_Es.pdf" class="btn btn-success " title="Descargar Presentación 3T Club"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/presentacion_oficial_es.pdf';?>" download="Presentación_3TClub_Es.pdf" class="btn btn-success " title="Descargar Presentación 3T Club"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
 <!--                                            <tr>
@@ -48,18 +48,18 @@
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Plan de Acción</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_plan_accion');?></td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/plan_de_accion.pdf';?>" download="Plan_accion_3TClub.pdf" class="btn btn-success " title="Plan Accion 3T Club"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/plan_de_accion.pdf';?>" download="Plan_accion_3TClub.pdf" class="btn btn-success " title="Plan Accion 3T Club"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-image-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Ficha RUC (Blu Trading)</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_ruc_blu');?></td>
                                                 <td class="text-center" style="padding: 25px">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/blutrading_ruc.jpg';?>" download="Ficha Ruc Blu Trading.jpg" class="btn btn-success" title="Descargar Ficha Ruc Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/blutrading_ruc.jpg';?>" download="Ficha Ruc Blu Trading.jpg" class="btn btn-success" title="Descargar Ficha Ruc Blu Trading"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
                                             
@@ -67,45 +67,45 @@
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Presentación Blu Trading</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_presentacion_blu');?></td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/blu-trading.pdf';?>" download="Presentación Blu Trading.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/blu-trading.pdf';?>" download="Presentación Blu Trading.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Contrato de Apertura - TIB</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_contrato_apertura');?></td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/contrato_apertura.pdf';?>" download="Contrato de Apertura.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/contrato_apertura.pdf';?>" download="Contrato de Apertura.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Ficha Cliente Natural - TIB</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_ficha_cliente');?></td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/ficha-cliente-natural.pdf';?>" download="Ficha Cliente Natural.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/ficha-cliente-natural.pdf';?>" download="Ficha Cliente Natural.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Power Of Attorney - TIB</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_contrato_poder');?></td>
                                                 <td style="padding: 25px" class="text-center">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/power-of-attorney.pdf';?>" download="Power of Attormey.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/power-of-attorney.pdf';?>" download="Power of Attormey.pdf" class="btn btn-success" title="Descargar Presentación Blu Trading"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="padding: 25px">
                                                     <em class="fa fa-file-image-o fa-2x"/>
                                                 </td>
-                                                <td style="padding: 25px">Ficha RUC (Trade It Broker House)</td>
+                                                <td style="padding: 25px"><?=lang('idioma.b_ruc_trade');?></td>
                                                 <td class="text-center" style="padding: 25px">
-                                                    <a href="<?php echo site_url().'static/backoffice/document/tradeit_ruc.jpg';?>" download="Ficha Ruc Trade It Broker House.jpg" class="btn btn-success" title="Descargar Ficha Ruc Trade It Broker House"><i class="fa fa-download"></i> Descargar</a>
+                                                    <a href="<?php echo site_url().'static/backoffice/document/tradeit_ruc.jpg';?>" download="Ficha Ruc Trade It Broker House.jpg" class="btn btn-success" title="Descargar Ficha Ruc Trade It Broker House"><i class="fa fa-download"></i> <?=lang('idioma.b_descargar');?></a>
                                                 </td>
                                             </tr>
                                         </tbody>

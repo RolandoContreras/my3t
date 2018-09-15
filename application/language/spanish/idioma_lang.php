@@ -235,7 +235,6 @@ $lang['idioma.b_data_direccion'] = "Dirección :";
 $lang['idioma.b_ciudad'] = "Ciudad :";
 $lang['idioma.b_region'] = "Región :";
 $lang['idioma.b_data_region'] = "Región :";
-
 $lang['idioma.b_patrocinador'] = "Patrocinador:";
 $lang['idioma.b_link_patrocinio'] = "Link de Patrocinio";
 $lang['idioma.b_click_nuevo'] = "Click aquí para agregar a un nuevo miembro";
@@ -244,7 +243,6 @@ $lang['idioma.b_izquierda'] = "Izquierda";
 $lang['idioma.b_derecha'] = "Derecha";
 $lang['idioma.b_equilibrio'] = "Equilibrio";
 $lang['idioma.b_data_region'] = "Guardar Posición";
-
 $lang['idioma.b_billetera_bitcoin'] = "Billetera de bitcoin";
 $lang['idioma.b_guardar'] = "Guardar";
 $lang['idioma.b_direccion_bitcoin'] = "Dirección de bitcoin";
@@ -253,6 +251,23 @@ $lang['idioma.b_introduzca_contrasena'] = "Introduzca su contraseña actual.";
 $lang['idioma.b_contrasena_actual'] = "Contraseña Actual";
 $lang['idioma.b_nueva_contrasena'] = "Nueva Contraseña";
 $lang['idioma.b_repita_contrasena'] = "Repita Nueva Contraseña";
+//BACKOFFICE - CENTRO INFORMACION
+$lang['idioma.b_centro_informacion'] = "Centro de Información";  
+$lang['idioma.b_tipo'] = "Tipo";
+$lang['idioma.b_centro_nombre'] = "Nombre";
+$lang['idioma.b_accion'] = "Acción";
+$lang['idioma.b_presentacion_espanol'] = "Presentación 3T Club - Español";
+$lang['idioma.b_plan_accion'] = "Plan de Acción";
+$lang['idioma.b_ruc_blu'] = "Ficha RUC (Blu Trading)";
+$lang['idioma.b_presentacion_blu'] = "Presentación Blu Trading";
+$lang['idioma.b_contrato_apertura'] = "Contrato de Apertura - TIB";
+$lang['idioma.b_ficha_cliente'] = "Ficha Cliente Natural - TIB";
+$lang['idioma.b_contrato_poder'] = "Ficha de Poder - TIB";
+$lang['idioma.b_ruc_trade'] = "Ficha RUC (Trade It Broker House)";
+$lang['idioma.b_descargar'] = "Descargar";
+
+
+
 
 
 
