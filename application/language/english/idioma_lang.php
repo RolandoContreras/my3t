@@ -298,7 +298,70 @@ $lang['idioma.b_descargar'] = "Download";
 $lang['idioma.b_academy_forex'] = "ACADEMY FOREX 3T ";  
 $lang['idioma.b_ir_rci'] = "GO TO RCI";
 $lang['idioma.b_academy_forex'] = "GO TO ACADEMY";  
-$lang['idioma.b_ir_sistema'] = "GO TO SYSTEM";  
+$lang['idioma.b_ir_sistema'] = "GO TO SYSTEM"; 
+//BACKOFFICE - CRECIMIENTO
+$lang['idioma.b_selecciona_paquete'] = "SELECT YOUR PACKAGE OF GROWTH";  
+$lang['idioma.b_seleccionar'] = "Select";
+$lang['idioma.b_monto_disponible'] = "Amount available to activate";
+$lang['idioma.b_nota'] = "Note:";
+$lang['idioma.b_una_vez'] = "Once you select the new package, the old package is removed.";
+$lang['idioma.b_el_contrato'] = "The contract will begin again from day 1.";
+$lang['idioma.b_saldo_disponible'] = "Available in wallet balance:";
+$lang['idioma.b_solicitar_pago'] = "Request Payment";
+//BACKOFFICE - WALLET
+$lang['idioma.b_movimientos'] = "Movements";  
+$lang['idioma.b_fecha'] = "Date";  
+$lang['idioma.b_concepto'] = "Concept";  
+$lang['idioma.b_afiliado'] = "Affiliate";  
+$lang['idioma.b_monto'] = "Amount";  
+$lang['idioma.b_estado'] = "Status";  
+$lang['idioma.b_abonado'] = "Balance";
+$lang['idioma.b_en_espera'] = "Awaiting";
+$lang['idioma.b_pagado'] = "Paid";
+//BACKOFFICE - UNILEVEL
+$lang['idioma.b_voler_inicio'] = "Back to top";  
+$lang['idioma.b_volver_atras'] = "Go back";  
+$lang['idioma.b_directos'] = "Direct sponsorships:";  
+$lang['idioma.b_2_directos'] = "2° Direct sponsorships:";  
+$lang['idioma.b_3_directos'] = "3° Direct sponsorships:";  
+$lang['idioma.b_uni_usuario'] = "Username:";  
+$lang['idioma.b_uni_nombre'] = "Name:";  
+$lang['idioma.b_rango'] = "Range:";  
+//BACKOFFICE - COMISIONES
+$lang['idioma.b_com_comisiones'] = "Commissions";  
+$lang['idioma.b_com_concepto'] = "Concept:";  
+$lang['idioma.b_bono_patrocinio'] = "Sponsorship Bonus";  
+$lang['idioma.b_bono_team'] = "Team Builder Bonus";  
+$lang['idioma.b_bono_productor'] = "Producer Bonus";  
+$lang['idioma.b_bono_rendimiento'] = "Performance Bonus";  
+$lang['idioma.b_bono_unilevel'] = "Unilevel Bonus";  
+$lang['idioma.b_bono_global'] = "Global Bonus";  
+$lang['idioma.b_bono_binario'] = "Binary Bonus";  
+$lang['idioma.b_consultar'] = "Consult";  
+$lang['idioma.b_resultados'] = "Results";  
+$lang['idioma.b_monto_enviando'] = "Amount Sent";  
+//BACKOFFICE - COMISIONES
+$lang['idioma.b_nuevo_ticket'] = "Open a new ticket";  
+$lang['idioma.b_sop_asunto'] = "Subject:";  
+$lang['idioma.b_sop_asunto_sin'] = "Subject";  
+$lang['idioma.b_sop_mensaje'] = "Message";  
+$lang['idioma.b_seleccionar_imagen'] = "Select Image";  
+$lang['idioma.b_cerrar'] = "Close";  
+$lang['idioma.b_crear_ticket'] = "Create Ticket";  
+$lang['idioma.b_sop_list'] = "List";  
+$lang['idioma.b_numero_ticket'] = "Ticket Number";  
+$lang['idioma.b_respuesta'] = "Answer";  
+$lang['idioma.b_abierto'] = "Open";  
+$lang['idioma.b_cerrado'] = "closed";  
+//BACKOFFICE - COMISIONES
+$lang['idioma.b_solicitar_pago'] = "Request Payment";  
+$lang['idioma.b_monto_solicita'] = "Amount Requested:";  
+$lang['idioma.b_los_pedidos_cobro'] = "Los pedidos de cobro se efectúan todos los miércoles";  
+$lang['idioma.b_monto_minimo'] = "The minimum amount for rescue is $10";  
+$lang['idioma.b_seleccionar'] = "***Seleccionar***";  
+$lang['idioma.b_enviar_solicitud'] = "Enviar Solicitud";  
+$lang['idioma.b_pagos_comisiones'] = "Pagos por comisiones";  
+$lang['idioma.b_cancelado'] = "Cancelado";
 
 
 

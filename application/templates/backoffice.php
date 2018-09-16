@@ -167,7 +167,6 @@
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_unilevel;?>"><i class="fa fa-cubes fa-lg"></i><span class="title"><?=lang('idioma.b_unilevel');?></span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/binario'?>" class="<?php echo $style_binario;?>"><i class="fa fa-users fa-lg"></i><span class="title"><?=lang('idioma.b_binario');?></span></a></li>
 			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title"><?=lang('idioma.b_comisiones');?></span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title"><?=lang('idioma.b_billetera');?></span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/soporte'?>" class="<?php echo $style_soporte;?>"><i class="fa fa-cogs"></i><span class="title"><?=lang('idioma.b_soporte');?></span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/cobros'?>" class="<?php echo $style_pagos;?>"><i class="fa fa-university fa-lg"></i><span class="title"><?=lang('idioma.b_cobros');?></span></a></li>
 		</ul>

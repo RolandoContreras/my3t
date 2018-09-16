@@ -95,7 +95,6 @@ $lang['idioma.about_coaching'] = "Coaching";
 $lang['idioma.about_te_damos_entrenamiento'] = "Te damos un entrenamiento exclusivo para que desarrolles el líder que hay en ti, recibe el sistema JAQUEMENTE un sistema probado que está llevando al éxito a cientos de personas haciendo que tengan un crecimiento es su vida.";   
 $lang['idioma.about_inversiones'] = "Inversiones";   
 $lang['idioma.about_fundamentos_basicos'] = "Fundamentos básicos, entrenamientos personalizados, señales, estrategias y la noticia más importante del día tendrás en nuestra academia. Profesionales altamente calificados en manejo y gestión de fondos de inversión con experiencias en compañías prestigiosas en Latinoamérica y Europa forman el staff de 3T ACADEMY.";   
-
 //CONTACT
 $lang['idioma.contact_membresia'] = "Selecciona una membresía";   
 $lang['idioma.contact_compra'] = "Compra una membresía y obtén los beneficios del club.";   
@@ -270,6 +269,71 @@ $lang['idioma.b_academy_forex'] = "3T ACADEMIA FOREX";
 $lang['idioma.b_ir_rci'] = "IR A RCI";
 $lang['idioma.b_academy_forex'] = "IR A ACADEMIA";  
 $lang['idioma.b_ir_sistema'] = "IR AL SISTEMA";  
+//BACKOFFICE - CRECIMIENTO
+$lang['idioma.b_selecciona_paquete'] = "SELECCIONA TU PAQUETE DE CRECIMIENTO";  
+$lang['idioma.b_seleccionar'] = "Seleccionar";
+$lang['idioma.b_monto_disponible'] = "Monto disponible para activar";
+$lang['idioma.b_nota'] = "Nota:";
+$lang['idioma.b_una_vez'] = "Una vez seleccionado el nuevo paquete, el paquete anterior queda eliminado.";
+$lang['idioma.b_el_contrato'] = "El contrato empezará nuevamente desde el día 1.";
+$lang['idioma.b_saldo_disponible'] = "Saldo Disponible en Billetera:";
+//BACKOFFICE - WALLET
+$lang['idioma.b_movimientos'] = "Movimientos";  
+$lang['idioma.b_fecha'] = "Fecha";  
+$lang['idioma.b_concepto'] = "Concepto";  
+$lang['idioma.b_afiliado'] = "Afiliado";  
+$lang['idioma.b_monto'] = "Monto";  
+$lang['idioma.b_estado'] = "Estado";
+$lang['idioma.b_abonado'] = "Abonado";
+$lang['idioma.b_en_espera'] = "En Espera";
+$lang['idioma.b_pagado'] = "Pagado";
+//BACKOFFICE - UNILEVEL
+$lang['idioma.b_voler_inicio'] = "Volver Al Inicio";  
+$lang['idioma.b_volver_atras'] = "Volver Atrás";  
+$lang['idioma.b_directos'] = "Patrocinios Directos:";  
+$lang['idioma.b_2_directos'] = "2° Patrocinios Directos:";  
+$lang['idioma.b_3_directos'] = "3° Patrocinios Directos:";  
+$lang['idioma.b_uni_usuario'] = "Usuario:";  
+$lang['idioma.b_uni_nombre'] = "Nombre:";  
+$lang['idioma.b_rango'] = "Rango:";  
+//BACKOFFICE - COMISIONES
+$lang['idioma.b_com_comisiones'] = "Comisiones";  
+$lang['idioma.b_com_concepto'] = "Concepto:";  
+$lang['idioma.b_bono_patrocinio'] = "Bono Patrocinio";  
+$lang['idioma.b_bono_team'] = "Bono Team Builder";  
+$lang['idioma.b_bono_productor'] = "Bono Productor";  
+$lang['idioma.b_bono_rendimiento'] = "Bono Rendimiento";  
+$lang['idioma.b_bono_unilevel'] = "Bono Unilevel";  
+$lang['idioma.b_bono_global'] = "Bono Global";  
+$lang['idioma.b_bono_binario'] = "Bono Binario";  
+$lang['idioma.b_consultar'] = "Consultar";  
+$lang['idioma.b_resultados'] = "Resultados";  
+$lang['idioma.b_monto_enviando'] = "Monto Enviado";  
+//BACKOFFICE - COMISIONES
+$lang['idioma.b_nuevo_ticket'] = "Abrir un nuevo tiquet";  
+$lang['idioma.b_sop_asunto'] = "Asunto:";  
+$lang['idioma.b_sop_asunto_sin'] = "Asunto";  
+$lang['idioma.b_sop_mensaje'] = "Mensaje";  
+$lang['idioma.b_seleccionar_imagen'] = "Seleccionar imagen:";  
+$lang['idioma.b_cerrar'] = "Cerrar";  
+$lang['idioma.b_crear_ticket'] = "Crear Ticket";  
+$lang['idioma.b_sop_list'] = "Lista";  
+$lang['idioma.b_numero_ticket'] = "Número de Ticket";  
+$lang['idioma.b_respuesta'] = "Respuesta";  
+$lang['idioma.b_abierto'] = "Abierto";  
+$lang['idioma.b_cerrado'] = "Cerrado";  
+//BACKOFFICE - COMISIONES
+$lang['idioma.b_solicitar_pago'] = "Solicitar Pago";  
+$lang['idioma.b_monto_solicita'] = "Monto que Solicita:";  
+$lang['idioma.b_los_pedidos_cobro'] = "Los pedidos de cobro se efectúan todos los miércoles.";  
+$lang['idioma.b_monto_minimo'] = "El monto mínimo para rescate es de $10";  
+$lang['idioma.b_seleccionar'] = "***Seleccionar***";  
+$lang['idioma.b_enviar_solicitud'] = "Enviar Solicitud";  
+$lang['idioma.b_pagos_comisiones'] = "Pagos por comisiones";  
+$lang['idioma.b_cancelado'] = "Cancelado";
+
+
+
 
 
 
