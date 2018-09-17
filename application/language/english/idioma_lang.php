@@ -195,7 +195,10 @@ $lang['idioma.crear_cuenta'] = "Create Account";
 $lang['idioma.b_tablero'] = "Dashboard";  
 $lang['idioma.b_perfil'] = "Mi Profile";  
 $lang['idioma.b_informacion'] = "Information";  
+$lang['idioma.b_puntaje'] = "Score";  
+$lang['idioma.b_activacion'] = "Activation";  
 $lang['idioma.b_productos'] = "Products";  
+$lang['idioma.b_mensajes'] = "Mensajes";  
 $lang['idioma.b_crecimiento'] = "Upgrade";  
 $lang['idioma.b_billetera'] = "Wallet";  
 $lang['idioma.b_unilevel'] = "Unilevel";  
@@ -362,6 +365,32 @@ $lang['idioma.b_seleccionar'] = "***Seleccionar***";
 $lang['idioma.b_enviar_solicitud'] = "Enviar Solicitud";  
 $lang['idioma.b_pagos_comisiones'] = "Pagos por comisiones";  
 $lang['idioma.b_cancelado'] = "Cancelado";
+//BACKOFFICE - PUNTAJE
+$lang['idioma.b_puntos_mes'] = "Points of the Month"; 
+$lang['idioma.b_de'] = "From"; 
+$lang['idioma.b_hasta'] = "Until:"; 
+$lang['idioma.b_consultar'] = "Consult"; 
+$lang['idioma.b_puntos'] = "Points"; 
+//BACKOFFICE - PUNTAJE
+$lang['idioma.b_correo_activacion'] = "Activation mail"; 
+$lang['idioma.b_regresar'] = "Return"; 
+$lang['idioma.b_act_de'] = "From:"; 
+$lang['idioma.b_act_para'] = "To:"; 
+$lang['idioma.b_paquete'] = "Paquete:"; 
+$lang['idioma.b_enviar'] = "Package"; 
+$lang['idioma.b_en_24_horas'] = "In 24 hours we will be activating your package."; 
+$lang['idioma.b_seleccionar_imagen'] = "You must select the image"; 
+$lang['idioma.b_debe_llenar_campo'] = "You must fill out the message field"; 
+//BACKOFFICE - MENSAJE
+$lang['idioma.b_bonos'] = "Bonus"; 
+$lang['idioma.b_soporte'] = "Support"; 
+$lang['idioma.b_social'] = "Social"; 
+$lang['idioma.b_actualizar'] = "Update"; 
+$lang['idioma.b_marcar_leido'] = "Mark as read"; 
+$lang['idioma.b_no_mensajes'] = "There are no messages"; 
+$lang['idioma.b_no_mensajes'] = "Ver Mensaje"; 
+$lang['idioma.b_enviados'] = "Sent"; 
+$lang['idioma.b_etiquetas'] = "Labels"; 
 
 
 

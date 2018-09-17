@@ -70,9 +70,10 @@ class B_messages extends CI_Controller {
         //GET CUSTOMER_ID
         $customer_id = $_SESSION['customer']['customer_id'];
         //GET URL
-        $url = explode("/",uri_string());
-        $type =  $url['2'];
         
+        $url = explode("/",uri_string());
+        $type =  $url['3'];
+                
         switch ($type) {
         case "bonus":
             $type =  1;
@@ -100,11 +101,11 @@ class B_messages extends CI_Controller {
            $obj_message = $this->get_messages($customer_id);
            //GET ALL MESSAGE
           $all_message = $this->get_total_messages($customer_id);
-            
+          
             //IF ISSET MESSAGE_ID
-            if(isset($url['3'])){
+            if(isset($url['4'])){
                 //GET ALL MESAGGE OF TYPE (BONUS - SUPPORT - SOCIAL) FROM MESSAGE_ID
-                $message_id = $url['3'];
+                $message_id = $url['4'];
                 $params = array(
                         "select" =>"messages_id,
                                     customer_id,

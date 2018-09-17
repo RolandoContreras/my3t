@@ -1,10 +1,10 @@
 <section>
           <div class="section-heading row">
             <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                <h1 class="title text-uppercase"><?php echo replace_vocales_voculeshtml("Mensajes");?></h1>
+                <h1 class="title text-uppercase"><?=lang('idioma.b_mensajes');?></h1>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-                <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+                <a class="white"><?=lang('idioma.b_precio_btc');?> <?php echo $price_btc;?></a>
             </div>
         </div><!-- Main content -->
     <div class="main-content">
@@ -19,9 +19,9 @@
 
                             <h3 class="title text-uppercase m-l-20">Etiquetas</h3>
                             <ul class="list-unstyled category-list">
-                                    <li><a href="<?php echo site_url().'backoffice/messages/bonus';?>"> <i class="fa fa-circle text-purple"></i>Bonos</a></li>
-                                    <li><a href="<?php echo site_url().'backoffice/messages/support';?>"> <i class="fa fa-circle text-danger"></i>Soporte</a></li>
-                                    <li><a href="<?php echo site_url().'backoffice/messages/social';?>"> <i class="fa fa-circle text-primary"></i>Social</a></li>
+                                    <li><a href="<?php echo site_url().'backoffice/messages/bonus';?>"> <i class="fa fa-circle text-purple"></i><?=lang('idioma.b_bonos');?></a></li>
+                                    <li><a href="<?php echo site_url().'backoffice/messages/support';?>"> <i class="fa fa-circle text-danger"></i><?=lang('idioma.b_soporte');?></a></li>
+                                    <li><a href="<?php echo site_url().'backoffice/messages/social';?>"> <i class="fa fa-circle text-primary"></i><?=lang('idioma.b_social');?></a></li>
                             </ul>
 
                     </div>
@@ -35,8 +35,8 @@
                                                             <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
                                                             <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
                                                     </div>
-                                                <a href="<?php echo site_url().'backoffice/messages';?>"><button title="Actualizar" data-placement="left" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> Actualizar</button></a>
-                                                <button title="Marcar Leido" data-placement="top" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-eye"></i><?php echo replace_vocales_voculeshtml("Marcar como Leído");?></button>
+                                                <a href="<?php echo site_url().'backoffice/messages';?>"><button title="Actualizar" data-placement="left" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <?=lang('idioma.b_actualizar');?></button></a>
+                                                <button title="Marcar Leido" data-placement="top" data-toggle="tooltip" class="btn btn-white btn-sm"><i class="fa fa-eye"></i><?=lang('idioma.b_marcar_leido');?></button>
                                             </div>
                                     </div>
                                     <div class="table-responsive">
@@ -46,7 +46,7 @@
                                                         if(count($obj_message) == 0){ ?>
                                                             <tr>
                                                                 <td colspan="5" style="text-align: center;">
-                                                                        No hay mensajes
+                                                                       <?=lang('idioma.b_no_mensajes');?>
                                                                 </td>
                                                             </tr>
                                                             
@@ -96,7 +96,7 @@
                                                                 }else{ ?>
                                                                      <tr>
                                                                         <td colspan="5" style="text-align: center;">
-                                                                                No hay mensajes
+                                                                                <?=lang('idioma.b_no_mensajes');?>
                                                                         </td>
                                                                     </tr>
                                                                 <?php } ?>

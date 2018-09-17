@@ -4,10 +4,10 @@
       <section>
           <div class="section-heading row">
             <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                <h1 class="title text-uppercase">Puntaje</h1>
+                <h1 class="title text-uppercase"><?=lang('idioma.b_puntaje');?></h1>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-                <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+                <a class="white"><?=lang('idioma.b_precio_btc');?> <?php echo $price_btc;?></a>
             </div>
         </div>
          <!-- Page content-->
@@ -15,31 +15,31 @@
                <div class="col-lg-12">
                      <div class="panel panel-info">
                         <div class="panel-heading">
-                           Puntos del Mes
+                           <?=lang('idioma.b_puntos_mes');?>
                         </div>
                         <div class="panel-body">
                             <div class="form-inline" >
-                                <div class="col-lg-1"><p>De:</p></div>
+                                <div class="col-lg-1"><p><?=lang('idioma.b_de');?></p></div>
                                 <div class="col-lg-2"><input type="text" id="datepicker1" name="datepicker1"></div>
-                                <div class="col-lg-1"><p>Hasta:</p></div>
+                                <div class="col-lg-1"><p><?=lang('idioma.b_hasta');?></p></div>
                                 <div class="col-lg-2"><input type="text" id="datepicker2" name="datepicker2"></div>
-                                <div class="col-lg-1"><button onclick="consultar_date();" class="btn btn-success">Consultar</button></div>
+                                <div class="col-lg-1"><button onclick="consultar_date();" class="btn btn-success"><?=lang('idioma.b_consultar');?></button></div>
                                 <div class="col-lg-5"></div>
                                     
                             </div>
                             </div>
                          <br/>
                                 <div class="panel-heading">
-                                    Lista
+                                    <?=lang('idioma.b_perfil');?>Lista
                                  </div>
                                 <div role="alert" class="alert alert-success" style="overflow:auto;">
                                     <table id="table" class="display table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Fecha</th>
-                                                <th>Concepto</th>
-                                                <th>Puntos<th>
-                                                <th>Estado<th>
+                                                <th><?=lang('idioma.b_fecha');?></th>
+                                                <th><?=lang('idioma.b_concepto');?></th>
+                                                <th><?=lang('idioma.b_puntos');?><th>
+                                                <th><?=lang('idioma.b_estado');?><th>
                                             </tr>
                                          </thead>
                                  <tbody id="table_data">
@@ -48,7 +48,7 @@
                                             <td><?php echo formato_fecha($value->date);?></td>
                                             <td><?php echo strtoupper($value->name);?></td>
                                             <td><b><?php echo $value->point;?></b></td>
-                                            <td align="center">Abonado</td>
+                                            <td align="center"><?=lang('idioma.b_abonado');?></td>
                                             <td></td>
                                             <td></td>
                                        </tr>
