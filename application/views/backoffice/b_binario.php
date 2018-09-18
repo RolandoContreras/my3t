@@ -1,10 +1,10 @@
 <section>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-            <h1 class="title text-uppercase">Arbol Binario</h1>
+            <h1 class="title text-uppercase"><?=lang('idioma.b_binario');?></h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+            <a class="white"><?=lang('idioma.b_precio_btc');?> <?php echo $price_btc;?></a>
         </div>
     </div>
 <!------------------------------------------->
@@ -22,29 +22,29 @@
                                     <div class="alert alert-inverse pull-left" style="opacity: 0.7;" aria-label="Left Align">
                                         <?php 
                                             if($obj_customer->binaries == 1){ ?>
-                                                <b>CALIFICADO PARA BINARIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                                                <b><?=lang('idioma.b_calificado_binario');?></b>
                                                 <?php }else{ ?>
-                                                <b>PUNTOS DE CALIFICACIÓN</b>
+                                                <b><?=lang('idioma.b_punto_calificacion');?></b>
                                                      <hr>
-                                                    <b>IZQUIERDA: </b> <span class="label label-primary"><?php if($obj_customer->point_calification_left > 0){echo $obj_customer->point_calification_left;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <b>DERECHA: </b><span class="label label-primary"><?php if($obj_customer->point_calification_rigth > 0){echo $obj_customer->point_calification_rigth;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <b><?=lang('idioma.b_bi_izquierda');?>/b> <span class="label label-primary"><?php if($obj_customer->point_calification_left > 0){echo $obj_customer->point_calification_left;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <b><?=lang('idioma.b_bi_derecha');?></b><span class="label label-primary"><?php if($obj_customer->point_calification_rigth > 0){echo $obj_customer->point_calification_rigth;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <?php } ?>
                                     </div>
                                     <div class="alert alert-inverse pull-right" style="opacity: 0.7;" aria-label="Right Align">
-                                        <b>PUNTOS DE BINARIO</b>
+                                        <b><?=lang('idioma.b_puntos_binario');?></b>
                                         <hr>
-                                         <b>IZQUIERDA: </b> 
+                                         <b><?=lang('idioma.b_bi_izquierda');?></b> 
                                          <span class="label label-primary"><?php echo format_number_miles($obj_customer->point_left);?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                         <b>DERECHA: </b><span class="label label-primary"><?php echo format_number_miles($obj_customer->point_rigth);?></span> &nbsp;&nbsp;&nbsp;
+                                         <b><?=lang('idioma.b_bi_derecha');?></b><span class="label label-primary"><?php echo format_number_miles($obj_customer->point_rigth);?></span> &nbsp;&nbsp;&nbsp;
                                     </div>
                                 </div>
                                 <!--//END INFORMATION POINT-->    
                                 <hr>
                                 <div class="clearfix btn-holder">
                                     <a href="<?php echo site_url().'backoffice/binario';?>" class="btn btn-success btn-sm pull-left" aria-label="Left Align">
-                                        <span class="rotate-top-left"><em class="fa fa-circle" aria-hidden="true"></em></span>Volver al inicio
+                                        <span class="rotate-top-left"><em class="fa fa-circle" aria-hidden="true"></em></span><?=lang('idioma.b_voler_inicio');?>
                                     </a>
-                                    <a href="javascript: history.back(-1)" class="btn btn-success btn-sm pull-right" aria-label="Right Align"> Subir un nivel
+                                    <a href="javascript: history.back(-1)" class="btn btn-success btn-sm pull-right" aria-label="Right Align"><?=lang('idioma.b_subir_un_nivel');?>
                                         <span class="rotate-top-right"><em class="fa fa-arrow-down" aria-hidden="true"></em></span>
                                     </a>
                                 </div>
@@ -61,10 +61,10 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo $obj_customer->username;?></b><br/>
-                                                              Nombre: <b><?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></b><br/>
-                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                              Rango: <b><?php echo $obj_customer->rango;?></b><br/>
+                                                              <?=lang('idioma.b_uni_usuario');?> <b><?php echo $obj_customer->username;?></b><br/>
+                                                              <?=lang('idioma.b_uni_nombre');?> <b><?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></b><br/>
+                                                              <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              <?=lang('idioma.b_rango');?> <b><?php echo $obj_customer->rango;?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$obj_customer->img_rango";?>" width="50px" alt="rango"/>
                                                           </p>
                                                       </div>
@@ -81,10 +81,10 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo $n2_iz[6];?></b><br/>
-                                                              Nombre: <b><?php echo $n2_iz[0]." ".$n2_iz[1];?></b><br/>
-                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                              Rango: <b><?php echo $n2_iz[12];?></b><br/>
+                                                              <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n2_iz[6];?></b><br/>
+                                                              <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n2_iz[0]." ".$n2_iz[1];?></b><br/>
+                                                              <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              <?=lang('idioma.b_rango');?> <b><?php echo $n2_iz[12];?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n2_iz[13]";?>" width="50px" alt="<?php echo $n2_iz[13];?>"/>
                                                           </p>
                                                       </div>
@@ -106,10 +106,10 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo $n3_iz[6];?></b><br/>
-                                                              Nombre: <b><?php echo $n3_iz[0]." ".$n3_iz[1];?></b><br/>
-                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                              Rango: <b><?php echo $n3_iz[12];?></b><br/>
+                                                              <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n3_iz[6];?></b><br/>
+                                                              <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n3_iz[0]." ".$n3_iz[1];?></b><br/>
+                                                              <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              <?=lang('idioma.b_rango');?> <b><?php echo $n3_iz[12];?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_iz[13]";?>" width="50px" alt="<?php echo $n3_iz[13];?>"/>
                                                           </p>
                                                       </div>
@@ -132,10 +132,10 @@
                                                                               </a>
                                                                               <div class="push popover__content_left">
                                                                                   <p class="popover__message_left">
-                                                                                      Usuario: <b><?php echo $n4_iz[6];?></b><br/>
-                                                                                      Nombre: <b><?php echo $n4_iz[0]." ".$n4_iz[1];?></b><br/>
-                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                      Rango: <b><?php echo $n4_iz[12];?></b><br/>
+                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_iz[6];?></b><br/>
+                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_iz[0]." ".$n4_iz[1];?></b><br/>
+                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n4_iz[12];?></b><br/>
                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_iz[13]";?>" width="50px" alt="<?php echo $n4_iz[13];?>"/>
                                                                                   </p>
                                                                               </div>
@@ -158,10 +158,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo $n5_iz[6];?></b><br/>
-                                                                                                  Nombre: <b><?php echo $n5_iz[0]." ".$n5_iz[1];?></b><br/>
-                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo $n5_iz[12];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_iz[6];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_iz[0]." ".$n5_iz[1];?></b><br/>
+                                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo $n5_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_iz[13]";?>" width="50px" alt="<?php echo $n5_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -185,10 +185,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo $n5_2_iz[6];?></b><br/>
-                                                                                                  Nombre: <b><?php echo $n5_2_iz[0]." ".$n5_2_iz[1];?></b><br/>
-                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo $n5_2_iz[12];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_2_iz[6];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_2_iz[0]." ".$n5_2_iz[1];?></b><br/>
+                                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo $n5_2_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_2_iz[13]";?>" width="50px" alt="<?php echo $n5_2_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -216,10 +216,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_left">
                                                                                               <p class="popover__message_left">
-                                                                                                  Usuario: <b><?php echo $n4_2_iz[6];?></b><br/>
-                                                                                                  Nombre: <b><?php echo $n4_2_iz[0]." ".$n4_2_iz[1];?></b><br/>
-                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo $n4_2_iz[12];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_2_iz[6];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_2_iz[0]." ".$n4_2_iz[1];?></b><br/>
+                                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo $n4_2_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_2_iz[13]";?>" width="50px" alt="<?php echo $n4_2_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -243,10 +243,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo $n5_3_iz[6];?></b><br/>
-                                                                                                  Nombre: <b><?php echo $n5_3_iz[0]." ".$n5_3_iz[1];?></b><br/>
-                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo $n5_3_iz[12];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_3_iz[6];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_3_iz[0]." ".$n5_3_iz[1];?></b><br/>
+                                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo $n5_3_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_3_iz[13]";?>" width="50px" alt="<?php echo $n5_3_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -271,10 +271,10 @@
                                                                                           </a>
                                                                                           <div class="push popover__content_5left">
                                                                                               <p class="popover__message_5left">
-                                                                                                  Usuario: <b><?php echo $n5_4_iz[6];?></b><br/>
-                                                                                                  Nombre: <b><?php echo $n5_4_iz[0]." ".$n5_4_iz[1];?></b><br/>
-                                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                  Rango: <b><?php echo $n5_4_iz[12];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_4_iz[6];?></b><br/>
+                                                                                                  <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_4_iz[0]." ".$n5_4_iz[1];?></b><br/>
+                                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo $n5_4_iz[12];?></b><br/>
                                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_4_iz[13]";?>" width="50px" alt="<?php echo $n5_4_iz[13];?>"/>
                                                                                               </p>
                                                                                           </div>
@@ -304,10 +304,10 @@
                                                       </a>
                                                       <div class="push popover__content">
                                                           <p class="popover__message">
-                                                              Usuario: <b><?php echo $n3_2_iz[6];?></b><br/>
-                                                              Nombre: <b><?php echo $n3_2_iz[0]." ".$n3_2_iz[1];?></b><br/>
-                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                              Rango: <b><?php echo $n3_2_iz[12];?></b><br/>
+                                                              <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n3_2_iz[6];?></b><br/>
+                                                              <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n3_2_iz[0]." ".$n3_2_iz[1];?></b><br/>
+                                                              <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                              <?=lang('idioma.b_rango');?> <b><?php echo $n3_2_iz[12];?></b><br/>
                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_2_iz[13]";?>" width="50px" alt="<?php echo $n3_2_iz[13];?>"/>
                                                           </p>
                                                       </div>
@@ -330,10 +330,10 @@
                                                                           </a>
                                                                           <div class="push popover__content_left">
                                                                               <p class="popover__message_left">
-                                                                                  Usuario: <b><?php echo $n4_3_iz[6];?></b><br/>
-                                                                                  Nombre: <b><?php echo $n4_3_iz[0]." ".$n4_3_iz[1];?></b><br/>
-                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                  Rango: <b><?php echo $n4_3_iz[12];?></b><br/>
+                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_3_iz[6];?></b><br/>
+                                                                                  <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_3_iz[0]." ".$n4_3_iz[1];?></b><br/>
+                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo $n4_3_iz[12];?></b><br/>
                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_3_iz[13]";?>" width="50px" alt="<?php echo $n4_3_iz[13];?>"/>
                                                                               </p>
                                                                           </div>
@@ -357,10 +357,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo $n5_5_iz[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_5_iz[0]." ".$n5_5_iz[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_5_iz[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_5_iz[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_5_iz[0]." ".$n5_5_iz[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                     <?=lang('idioma.b_rango');?> <b><?php echo $n5_5_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_5_iz[13]";?>" width="50px" alt="<?php echo $n5_5_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -384,10 +384,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo $n5_6_iz[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_6_iz[0]." ".$n5_6_iz[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_6_iz[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_6_iz[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_6_iz[0]." ".$n5_6_iz[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_6_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_6_iz[13]";?>" width="50px" alt="<?php echo $n5_6_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -413,10 +413,10 @@
                                                                       </a>
                                                                       <div class="push popover__content_left">
                                                                           <p class="popover__message_left">
-                                                                              Usuario: <b><?php echo $n4_4_iz[6];?></b><br/>
-                                                                              Nombre: <b><?php echo $n4_4_iz[0]." ".$n4_4_iz[1];?></b><br/>
-                                                                              Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                              Rango: <b><?php echo $n4_4_iz[12];?></b><br/>
+                                                                              <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_4_iz[6];?></b><br/>
+                                                                              <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_4_iz[0]." ".$n4_4_iz[1];?></b><br/>
+                                                                              <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                              <?=lang('idioma.b_rango');?> <b><?php echo $n4_4_iz[12];?></b><br/>
                                                                               <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_4_iz[13]";?>" width="50px" alt="<?php echo $n4_4_iz[13];?>"/>
                                                                           </p>
                                                                       </div>
@@ -440,10 +440,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo $n5_7_iz[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_7_iz[0]." ".$n5_7_iz[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_7_iz[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_7_iz[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_7_iz[0]." ".$n5_7_iz[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_7_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_7_iz[13]";?>" width="50px" alt="<?php echo $n5_7_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -467,10 +467,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5left">
                                                                                                   <p class="popover__message_5left">
-                                                                                                      Usuario: <b><?php echo $n5_8_iz[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_8_iz[0]." ".$n5_8_iz[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_8_iz[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_8_iz[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_8_iz[0]." ".$n5_8_iz[1];?></b><br/>
+                                                                                                     <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_8_iz[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_8_iz[13]";?>" width="50px" alt="<?php echo $n5_8_iz[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -505,10 +505,10 @@
                                                               </a>
                                                               <div class="push popover__content">
                                                                   <p class="popover__message">
-                                                                      Usuario: <b><?php echo $n2_de[6];?></b><br/>
-                                                                      Nombre: <b><?php echo $n2_de[0]." ".$n2_de[1];?></b><br/>
-                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                      Rango: <b><?php echo $n2_de[12];?></b><br/>
+                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n2_de[6];?></b><br/>
+                                                                     <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n2_de[0]." ".$n2_de[1];?></b><br/>
+                                                                     <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                     <?=lang('idioma.b_rango');?> <b><?php echo $n2_de[12];?></b><br/>
                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n2_de[13]";?>" width="50px" alt="<?php echo $n2_de[13];?>"/>
                                                                   </p>
                                                               </div>
@@ -531,10 +531,10 @@
                                                               </a>
                                                               <div class="push popover__content">
                                                                   <p class="popover__message">
-                                                                      Usuario: <b><?php echo $n3_2_de[6];?></b><br/>
-                                                                      Nombre: <b><?php echo $n3_2_de[0]." ".$n3_2_de[1];?></b><br/>
-                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                      Rango: <b><?php echo $n3_2_de[12];?></b><br/>
+                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n3_2_de[6];?></b><br/>
+                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n3_2_de[0]." ".$n3_2_de[1];?></b><br/>
+                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n3_2_de[12];?></b><br/>
                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_2_de[13]";?>" width="50px" alt="<?php echo $n3_2_de[13];?>"/>
                                                                   </p>
                                                               </div>
@@ -557,10 +557,10 @@
                                                                               </a>
                                                                               <div class="push popover__content_right">
                                                                                   <p class="popover__message_right">
-                                                                                      Usuario: <b><?php echo $n4_4_de[6];?></b><br/>
-                                                                                      Nombre: <b><?php echo $n4_4_de[0]." ".$n4_4_de[1];?></b><br/>
-                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                      Rango: <b><?php echo $n4_4_de[12];?></b><br/>
+                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_4_de[6];?></b><br/>
+                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_4_de[0]." ".$n4_4_de[1];?></b><br/>
+                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n4_4_de[12];?></b><br/>
                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_4_de[13]";?>" width="50px" alt="<?php echo $n4_4_de[13];?>"/>
                                                                                   </p>
                                                                               </div>
@@ -583,10 +583,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_8_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_8_de[0]." ".$n5_8_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_8_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_8_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_8_de[0]." ".$n5_8_de[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_8_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_8_de[13]";?>" width="50px" alt="<?php echo $n5_8_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -609,10 +609,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_7_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_7_de[0]." ".$n5_7_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_7_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_7_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_7_de[0]." ".$n5_7_de[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_7_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_7_de[13]";?>" width="50px" alt="<?php echo $n5_7_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -637,10 +637,10 @@
                                                                           </a>
                                                                           <div class="push popover__content_right">
                                                                               <p class="popover__message_right">
-                                                                                  Usuario: <b><?php echo $n4_3_de[6];?></b><br/>
-                                                                                  Nombre: <b><?php echo $n4_3_de[0]." ".$n4_3_de[1];?></b><br/>
-                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                  Rango: <b><?php echo string_to_mayusculas($n4_3_de[12]);?></b><br/>
+                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_3_de[6];?></b><br/>
+                                                                                 <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_3_de[0]." ".$n4_3_de[1];?></b><br/>
+                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo string_to_mayusculas($n4_3_de[12]);?></b><br/>
                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_3_de[13]";?>" width="50px" alt="<?php echo $n4_3_de[13];?>"/>
                                                                               </p>
                                                                           </div>
@@ -663,10 +663,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_6_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_6_de[0]." ".$n5_6_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_6_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_6_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_6_de[0]." ".$n5_6_de[1];?></b><br/>
+                                                                                                     <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_6_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_6_de[13]";?>" width="50px" alt="<?php echo $n5_6_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -689,10 +689,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_5_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_5_de[0]." ".$n5_5_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_5_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_5_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_5_de[0]." ".$n5_5_de[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_5_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_5_de[13]";?>" width="50px" alt="<?php echo $n5_5_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -721,10 +721,10 @@
                                                               </a>
                                                               <div class="push popover__content">
                                                                   <p class="popover__message">
-                                                                      Usuario: <b><?php echo $n3_de[6];?></b><br/>
-                                                                      Nombre: <b><?php echo $n3_de[0]." ".$n3_de[1];?></b><br/>
-                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                      Rango: <b><?php echo $n3_de[12];?></b><br/>
+                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n3_de[6];?></b><br/>
+                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n3_de[0]." ".$n3_de[1];?></b><br/>
+                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n3_de[12];?></b><br/>
                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n3_de[13]";?>" width="50px" alt="<?php echo $n3_de[13];?>"/>
                                                                   </p>
                                                               </div>
@@ -747,10 +747,10 @@
                                                                           </a>
                                                                           <div class="push popover__content_right">
                                                                               <p class="popover__message_right">
-                                                                                  Usuario: <b><?php echo $n4_2_de[6];?></b><br/>
-                                                                                  Nombre: <b><?php echo $n4_2_de[0]." ".$n4_2_de[1];?></b><br/>
-                                                                                  Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                  Rango: <b><?php echo $n4_2_de[12];?></b><br/>
+                                                                                  <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_2_de[6];?></b><br/>
+                                                                                  <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_2_de[0]." ".$n4_2_de[1];?></b><br/>
+                                                                                  <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                  <?=lang('idioma.b_rango');?> <b><?php echo $n4_2_de[12];?></b><br/>
                                                                                   <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_2_de[13]";?>" width="50px" alt="<?php echo $n4_2_de[13];?>"/>
                                                                               </p>
                                                                           </div>
@@ -773,10 +773,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_4_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_4_de[0]." ".$n5_4_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_4_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_4_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_4_de[0]." ".$n5_4_de[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_4_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_4_de[13]";?>" width="50px" alt="<?php echo $n5_4_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -799,10 +799,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_3_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_3_de[0]." ".$n5_3_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_4_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_3_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_3_de[0]." ".$n5_3_de[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_4_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_3_de[13]";?>" width="50px" alt="<?php echo $n5_3_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -828,10 +828,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_right">
                                                                                                   <p class="popover__message_right">
-                                                                                                      Usuario: <b><?php echo $n4_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n4_de[0]." ".$n4_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n4_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n4_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n4_de[0]." ".$n4_de[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n4_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n4_de[13]";?>" width="50px" alt="<?php echo $n4_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -855,10 +855,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_2_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_2_de[0]." ".$n5_2_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_2_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_2_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_2_de[0]." ".$n5_2_de[1];?></b><br/>
+                                                                                                     <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_2_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_2_de[13]";?>" width="50px" alt="<?php echo $n5_2_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>
@@ -881,10 +881,10 @@
                                                                                               </a>
                                                                                               <div class="push popover__content_5right">
                                                                                                   <p class="popover__message_5right">
-                                                                                                      Usuario: <b><?php echo $n5_de[6];?></b><br/>
-                                                                                                      Nombre: <b><?php echo $n5_de[0]." ".$n5_de[1];?></b><br/>
-                                                                                                      Estado: <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
-                                                                                                      Rango: <b><?php echo $n5_de[12];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_usuario');?> <b><?php echo $n5_de[6];?></b><br/>
+                                                                                                      <?=lang('idioma.b_uni_nombre');?> <b><?php echo $n5_de[0]." ".$n5_de[1];?></b><br/>
+                                                                                                      <?=lang('idioma.b_bi_estado');?> <span class="<?php echo $style;?>"><?php echo $text;?></span><br/>
+                                                                                                      <?=lang('idioma.b_rango');?> <b><?php echo $n5_de[12];?></b><br/>
                                                                                                       <img src="<?php echo site_url()."static/backoffice/images/rangos/$n5_de[13]";?>" width="50px" alt="<?php echo $n5_de[13];?>"/>
                                                                                                   </p>
                                                                                               </div>

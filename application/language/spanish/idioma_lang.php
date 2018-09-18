@@ -290,6 +290,14 @@ $lang['idioma.b_estado'] = "Estado";
 $lang['idioma.b_abonado'] = "Abonado";
 $lang['idioma.b_en_espera'] = "En Espera";
 $lang['idioma.b_pagado'] = "Pagado";
+//BACKOFFICE - BINARIO
+$lang['idioma.b_calificado_binario'] = "CALIFICADO PARA BINARIO";  
+$lang['idioma.b_punto_calificacion'] = "PUNTOS DE CALIFICACIÓN";  
+$lang['idioma.b_bi_izquierda'] = "IZQUIERDA:";  
+$lang['idioma.b_bi_derecha'] = "DERECHA: ";  
+$lang['idioma.b_puntos_binario'] = "PUNTOS DE BINARIO";
+$lang['idioma.b_subir_un_nivel'] = "Subir un nivel";  
+$lang['idioma.b_bi_estado'] = "Estado:";  
 //BACKOFFICE - UNILEVEL
 $lang['idioma.b_voler_inicio'] = "Volver Al Inicio";  
 $lang['idioma.b_volver_atras'] = "Volver Atrás";  

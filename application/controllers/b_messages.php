@@ -46,12 +46,10 @@ class B_messages extends CI_Controller {
                                         );
 
             $obj_message = $this->obj_messages->search($params);  
-         
+            
             date_default_timezone_set('America/Lima');
             //GET TOTAL MESSAGE
             $all_message = $this->get_total_messages($customer_id);
-            //GET TOTAL MESSAGE
-            $obj_message = $this->get_messages($customer_id);
             //GET PRICE BTC
             $price_btc = $this->btc_price();
          
@@ -244,7 +242,7 @@ class B_messages extends CI_Controller {
     public function get_total_messages($customer_id){
         $params = array(
                         "select" =>"count(messages_id) as total",
-                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1 and support <> 1",
+                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1",
                         
                                         );
             $obj_message = $this->obj_messages->get_search_row($params);

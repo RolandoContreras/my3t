@@ -321,6 +321,14 @@ $lang['idioma.b_estado'] = "Status";
 $lang['idioma.b_abonado'] = "Balance";
 $lang['idioma.b_en_espera'] = "Awaiting";
 $lang['idioma.b_pagado'] = "Paid";
+//BACKOFFICE - BINARIO
+$lang['idioma.b_calificado_binario'] = "QUALIFIED FOR BINARY";  
+$lang['idioma.b_punto_calificacion'] = "QUALIFICATION POINTS";  
+$lang['idioma.b_bi_izquierda'] = "LEFT:";  
+$lang['idioma.b_bi_derecha'] = "RIGHT: ";  
+$lang['idioma.b_puntos_binario'] = "BINARY POINTS";
+$lang['idioma.b_subir_un_nivel'] = "Move up a level";  
+$lang['idioma.b_bi_estado'] = "Status:";  
 //BACKOFFICE - UNILEVEL
 $lang['idioma.b_voler_inicio'] = "Back to top";  
 $lang['idioma.b_volver_atras'] = "Go back";  
