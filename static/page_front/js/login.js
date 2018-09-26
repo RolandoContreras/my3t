@@ -10,20 +10,25 @@ $(document).ready(function() {
         },
         submitHandler: function(form){
             var dataString = $('#username').val()+'&'+$('#password').val();
-            $.ajax({
-                type: "POST",
-                url: site + "login/validar_customer",
-                data: {dataString : dataString},
-                success: function(data){
-                    if(data == "true"){
-                        $("#alert_message").html('<div class="alert alert-success" style="text-align: center">Welcome</div>');
-                        location.href = site + "backoffice";
-                    }else{
-                        $("#alert_message").html(data);
-                    }
-                    
+            var response = grecaptcha.getResponse();
+                if(response.length == 0){
+                    document.getElementById("message_capcha").style.display = "block";
+                }else{
+                    $.ajax({
+                        type: "POST",
+                        url: site + "login/validar_customer",
+                        data: {dataString : dataString},
+                        success: function(data){
+                            if(data == "true"){
+                                $("#alert_message").html('<div class="alert alert-success" style="text-align: center">Welcome</div>');
+                                location.href = site + "backoffice";
+                            }else{
+                                $("#alert_message").html(data);
+                            }
+
+                        }
+                    });
                 }
-            });
         }
     });
 });

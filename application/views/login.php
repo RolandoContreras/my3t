@@ -87,6 +87,16 @@
                                                                                     
                                                                                 </div>
                                                                             </div>
+                                                                        
+                                                                         <div class="col-sm-12">
+                                                                                <div class="form-group">
+                                                                                    <div class="col-md-3"></div>
+                                                                                    <div class="col-md-9">
+                                                                                        <div class="g-recaptcha" data-sitekey="6LdaVHAUAAAAAMF_YlocobAIEftI1olTSkdxOW3H"></div> 
+                                                                                        <span id="message_capcha" class="alert alert-danger" style="display:none;text-align: center">Captcha no verificado</span>
+                                                                                     </div>
+                                                                            </div>
+                                                                         </div>
                                                                         <div class="col-sm-12">
                                                                             <div class="form-group">
                                                                                 <div class="col-md-12">
@@ -117,12 +127,13 @@
     <div class="vc_row-full-width vc_clearfix"></div>
         <script src="<?php echo site_url().'static/page_front/js/login.js';?>"></script>
     </div>
-</div>
-	</div>	
-	    <!--START FOOTER-->
-            <?php $this->load->view("footer");?>
-            <!--END FOOTER-->
-<link rel='stylesheet' id='vc_tta_style-css'  href='<?php echo site_url().'static/page_front/css/js_composer_tta.min.css?ver=5.3';?>' media='all' />
+  </div>
+</div>	
+    <!--START FOOTER-->
+    <?php $this->load->view("footer");?>
+    <!--END FOOTER-->
+<link rel='stylesheet' id='vc_tta_style-css'  href='<?php echo site_url().'static/page_front/css/js_composer_tta.min.css?ver=5.3';?>' media='all'/>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
 <script src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
 <script src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>

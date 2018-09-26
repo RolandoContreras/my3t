@@ -168,6 +168,13 @@
                                                     <textarea class="form" name="message" id="message"></textarea>
                                               </div>    
                                         </div>
+                                        <div class="col-md-12">
+                                              <div class="col-md-3"></div>
+                                              <div class="col-md-9">
+                                                    <div class="g-recaptcha" data-sitekey="6LdaVHAUAAAAAMF_YlocobAIEftI1olTSkdxOW3H"></div> 
+                                                    <span id="message_capcha" class="alert alert-danger" style="display:none;text-align: center">Captcha no verificado</span>
+                                              </div>    
+                                        </div>
                                     </div>
                             <div class="col-md-12">&nbsp;</div>    
                             <div class="col-md-12">
@@ -227,15 +234,20 @@ $(document).ready(function() {
             message : "<?=lang('idioma.ingrese_mensaje');?>"
         },
         submitHandler: function(form){
-            var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#subject').val()+'&'+$('#message').val();
-            $.ajax({
-                type: "POST",
-                url:"<?php echo site_url().'contact/send_messages';?>",
-                data: {dataString : dataString},
-                success: function(data){
-                    $("#alert_message").html(data);
-                }
-            });
+            var response = grecaptcha.getResponse();
+            if(response.length == 0){
+                document.getElementById("message_capcha").style.display = "block";
+            }else{
+                var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#subject').val()+'&'+$('#message').val();
+                $.ajax({
+                    type: "POST",
+                    url:"<?php echo site_url().'contact/send_messages';?>",
+                    data: {dataString : dataString},
+                    success: function(data){
+                        $("#alert_message").html(data);
+                    }
+                });
+            }
         }
     });
 });
@@ -247,6 +259,7 @@ $(document).ready(function() {
   <style>
     .wrapper {padding-top: 0px !important}
   </style>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
   <script src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
   <script src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
