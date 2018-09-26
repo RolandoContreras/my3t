@@ -92,7 +92,7 @@
                                                                                 <div class="form-group">
                                                                                     <div class="col-md-3"></div>
                                                                                     <div class="col-md-9">
-                                                                                        <div class="g-recaptcha" data-sitekey="6LdaVHAUAAAAAMF_YlocobAIEftI1olTSkdxOW3H"></div> 
+                                                                                        <div class="g-recaptcha" data-sitekey="6LdvUnIUAAAAADGWsENVuQgV8MisyFOvXtJW42J9"></div>
                                                                                         <span id="message_capcha" class="alert alert-danger" style="display:none;text-align: center">Captcha no verificado</span>
                                                                                      </div>
                                                                             </div>
