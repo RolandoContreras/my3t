@@ -19,8 +19,8 @@ class Plan extends CI_Controller {
 	}
         public function packages(){
             $url = explode("/", uri_string());
-            if (isset($url[1])) {
-                $plan = convert_query($url[1]);
+            if (isset($url[2])) {
+                $plan = convert_query($url[2]);
                 
                 //GET DATA FRANCHISE
                 $param = array( "select" =>"franchise_id,name,price,img,description",
