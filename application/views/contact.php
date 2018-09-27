@@ -238,6 +238,7 @@ $(document).ready(function() {
             if(response.length == 0){
                 document.getElementById("message_capcha").style.display = "block";
             }else{
+                document.getElementById("message_capcha").style.display = "none";
                 var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#subject').val()+'&'+$('#message').val();
                 $.ajax({
                     type: "POST",

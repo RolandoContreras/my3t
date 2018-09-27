@@ -246,6 +246,16 @@ labVcMaps.push({
                                                   </div>    
                                             </div>
                                     </div>
+                                     <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-9">
+                                                    <div class="g-recaptcha" data-sitekey="6LdvUnIUAAAAADGWsENVuQgV8MisyFOvXtJW42J9"></div>
+                                                    <span id="message_capcha" class="alert alert-danger" style="display:none;text-align: center">Captcha no verificado</span>
+                                                 </div>
+                                        </div>
+                                     </div>  
+                                      
                                      <br/>
                                     <div class="col-md-12">
                                         <div class="col-md-3">
@@ -267,6 +277,7 @@ labVcMaps.push({
     <!--START FOOTER-->
     <?php $this->load->view("footer");?>
     <!--END FOOTER-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
 <script src='//maps.googleapis.com/maps/api/js?key=AIzaSyDMXJTazGcfmeoXHr6wf96AKergYCwWLTg '></script>
 <script src='<?php echo site_url().'static/page_front/js/maps.js?ver=4.8.2';?>'></script>

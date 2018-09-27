@@ -14,6 +14,7 @@ $(document).ready(function() {
                 if(response.length == 0){
                     document.getElementById("message_capcha").style.display = "block";
                 }else{
+                    document.getElementById("message_capcha").style.display = "none";
                     $.ajax({
                         type: "POST",
                         url: site + "login/validar_customer",
